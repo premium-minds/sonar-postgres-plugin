@@ -12,18 +12,18 @@ public interface BitStringOrBuilder extends
    * string 
    * </pre>
    *
-   * <code>string str = 1;</code>
-   * @return The str.
+   * <code>string bsval = 1;</code>
+   * @return The bsval.
    */
-  java.lang.String getStr();
+  java.lang.String getBsval();
   /**
    * <pre>
    * string 
    * </pre>
    *
-   * <code>string str = 1;</code>
-   * @return The bytes for str.
+   * <code>string bsval = 1;</code>
+   * @return The bytes for bsval.
    */
   com.google.protobuf.ByteString
-      getStrBytes();
+      getBsvalBytes();
 }

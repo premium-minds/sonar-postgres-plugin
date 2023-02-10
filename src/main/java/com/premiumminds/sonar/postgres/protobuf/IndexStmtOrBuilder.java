@@ -212,49 +212,55 @@ public interface IndexStmtOrBuilder extends
   boolean getUnique();
 
   /**
-   * <code>bool primary = 16 [json_name = "primary"];</code>
+   * <code>bool nulls_not_distinct = 16 [json_name = "nulls_not_distinct"];</code>
+   * @return The nullsNotDistinct.
+   */
+  boolean getNullsNotDistinct();
+
+  /**
+   * <code>bool primary = 17 [json_name = "primary"];</code>
    * @return The primary.
    */
   boolean getPrimary();
 
   /**
-   * <code>bool isconstraint = 17 [json_name = "isconstraint"];</code>
+   * <code>bool isconstraint = 18 [json_name = "isconstraint"];</code>
    * @return The isconstraint.
    */
   boolean getIsconstraint();
 
   /**
-   * <code>bool deferrable = 18 [json_name = "deferrable"];</code>
+   * <code>bool deferrable = 19 [json_name = "deferrable"];</code>
    * @return The deferrable.
    */
   boolean getDeferrable();
 
   /**
-   * <code>bool initdeferred = 19 [json_name = "initdeferred"];</code>
+   * <code>bool initdeferred = 20 [json_name = "initdeferred"];</code>
    * @return The initdeferred.
    */
   boolean getInitdeferred();
 
   /**
-   * <code>bool transformed = 20 [json_name = "transformed"];</code>
+   * <code>bool transformed = 21 [json_name = "transformed"];</code>
    * @return The transformed.
    */
   boolean getTransformed();
 
   /**
-   * <code>bool concurrent = 21 [json_name = "concurrent"];</code>
+   * <code>bool concurrent = 22 [json_name = "concurrent"];</code>
    * @return The concurrent.
    */
   boolean getConcurrent();
 
   /**
-   * <code>bool if_not_exists = 22 [json_name = "if_not_exists"];</code>
+   * <code>bool if_not_exists = 23 [json_name = "if_not_exists"];</code>
    * @return The ifNotExists.
    */
   boolean getIfNotExists();
 
   /**
-   * <code>bool reset_default_tblspc = 23 [json_name = "reset_default_tblspc"];</code>
+   * <code>bool reset_default_tblspc = 24 [json_name = "reset_default_tblspc"];</code>
    * @return The resetDefaultTblspc.
    */
   boolean getResetDefaultTblspc();

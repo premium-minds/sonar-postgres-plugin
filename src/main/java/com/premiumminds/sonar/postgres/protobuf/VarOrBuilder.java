@@ -23,7 +23,7 @@ public interface VarOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getXprOrBuilder();
 
   /**
-   * <code>uint32 varno = 2 [json_name = "varno"];</code>
+   * <code>int32 varno = 2 [json_name = "varno"];</code>
    * @return The varno.
    */
   int getVarno();

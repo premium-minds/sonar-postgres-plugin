@@ -116,7 +116,13 @@ public interface CreateStatsStmtOrBuilder extends
       getStxcommentBytes();
 
   /**
-   * <code>bool if_not_exists = 6 [json_name = "if_not_exists"];</code>
+   * <code>bool transformed = 6 [json_name = "transformed"];</code>
+   * @return The transformed.
+   */
+  boolean getTransformed();
+
+  /**
+   * <code>bool if_not_exists = 7 [json_name = "if_not_exists"];</code>
    * @return The ifNotExists.
    */
   boolean getIfNotExists();

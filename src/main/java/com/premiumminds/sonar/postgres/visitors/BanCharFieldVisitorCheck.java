@@ -15,7 +15,7 @@ public class BanCharFieldVisitorCheck extends AbstractVisitorCheck {
 
         final TypeName typeName = columnDef.getTypeName();
         typeName.getNamesList().forEach(name -> {
-            final String str = name.getString().getStr();
+            final String str = name.getString().getSval();
             if ("bpchar".equals(str)){
                 newIssue("Using character is likely a mistake and should almost always be replaced by text or varchar.");
             }

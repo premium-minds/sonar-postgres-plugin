@@ -49,19 +49,19 @@ public interface AlterObjectDependsStmtOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getObjectOrBuilder();
 
   /**
-   * <code>.pg_query.Node extname = 4 [json_name = "extname"];</code>
+   * <code>.pg_query.String extname = 4 [json_name = "extname"];</code>
    * @return Whether the extname field is set.
    */
   boolean hasExtname();
   /**
-   * <code>.pg_query.Node extname = 4 [json_name = "extname"];</code>
+   * <code>.pg_query.String extname = 4 [json_name = "extname"];</code>
    * @return The extname.
    */
-  com.premiumminds.sonar.postgres.protobuf.Node getExtname();
+  com.premiumminds.sonar.postgres.protobuf.String getExtname();
   /**
-   * <code>.pg_query.Node extname = 4 [json_name = "extname"];</code>
+   * <code>.pg_query.String extname = 4 [json_name = "extname"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getExtnameOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.StringOrBuilder getExtnameOrBuilder();
 
   /**
    * <code>bool remove = 5 [json_name = "remove"];</code>

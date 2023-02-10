@@ -64,7 +64,7 @@ public class AddFieldWithDefaultVisitorCheck extends AbstractVisitorCheck {
                     return false;
                 }, Boolean::logicalOr);
 
-        return argsAreVolatile || !nonVolatileFunctions.contains(funcCall.getFuncname(0).getString().getStr());
+        return argsAreVolatile || !nonVolatileFunctions.contains(funcCall.getFuncname(0).getString().getSval());
     }
 
     @Override

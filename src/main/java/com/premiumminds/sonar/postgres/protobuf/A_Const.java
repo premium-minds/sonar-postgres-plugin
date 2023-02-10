@@ -30,63 +30,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private A_Const(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.premiumminds.sonar.postgres.protobuf.Node.Builder subBuilder = null;
-            if (val_ != null) {
-              subBuilder = val_.toBuilder();
-            }
-            val_ = input.readMessage(com.premiumminds.sonar.postgres.protobuf.Node.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(val_);
-              val_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 16: {
-
-            location_ = input.readInt32();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_A_Const_descriptor;
@@ -100,36 +43,223 @@ private static final long serialVersionUID = 0L;
             com.premiumminds.sonar.postgres.protobuf.A_Const.class, com.premiumminds.sonar.postgres.protobuf.A_Const.Builder.class);
   }
 
-  public static final int VAL_FIELD_NUMBER = 1;
-  private com.premiumminds.sonar.postgres.protobuf.Node val_;
-  /**
-   * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
-   * @return Whether the val field is set.
-   */
-  @java.lang.Override
-  public boolean hasVal() {
-    return val_ != null;
-  }
-  /**
-   * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
-   * @return The val.
-   */
-  @java.lang.Override
-  public com.premiumminds.sonar.postgres.protobuf.Node getVal() {
-    return val_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : val_;
-  }
-  /**
-   * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
-   */
-  @java.lang.Override
-  public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getValOrBuilder() {
-    return getVal();
+  private int valCase_ = 0;
+  private java.lang.Object val_;
+  public enum ValCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    IVAL(1),
+    FVAL(2),
+    BOOLVAL(3),
+    SVAL(4),
+    BSVAL(5),
+    VAL_NOT_SET(0);
+    private final int value;
+    private ValCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ValCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ValCase forNumber(int value) {
+      switch (value) {
+        case 1: return IVAL;
+        case 2: return FVAL;
+        case 3: return BOOLVAL;
+        case 4: return SVAL;
+        case 5: return BSVAL;
+        case 0: return VAL_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public ValCase
+  getValCase() {
+    return ValCase.forNumber(
+        valCase_);
   }
 
-  public static final int LOCATION_FIELD_NUMBER = 2;
-  private int location_;
+  public static final int IVAL_FIELD_NUMBER = 1;
   /**
-   * <code>int32 location = 2 [json_name = "location"];</code>
+   * <code>.pg_query.Integer ival = 1;</code>
+   * @return Whether the ival field is set.
+   */
+  @java.lang.Override
+  public boolean hasIval() {
+    return valCase_ == 1;
+  }
+  /**
+   * <code>.pg_query.Integer ival = 1;</code>
+   * @return The ival.
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.Integer getIval() {
+    if (valCase_ == 1) {
+       return (com.premiumminds.sonar.postgres.protobuf.Integer) val_;
+    }
+    return com.premiumminds.sonar.postgres.protobuf.Integer.getDefaultInstance();
+  }
+  /**
+   * <code>.pg_query.Integer ival = 1;</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.IntegerOrBuilder getIvalOrBuilder() {
+    if (valCase_ == 1) {
+       return (com.premiumminds.sonar.postgres.protobuf.Integer) val_;
+    }
+    return com.premiumminds.sonar.postgres.protobuf.Integer.getDefaultInstance();
+  }
+
+  public static final int FVAL_FIELD_NUMBER = 2;
+  /**
+   * <code>.pg_query.Float fval = 2;</code>
+   * @return Whether the fval field is set.
+   */
+  @java.lang.Override
+  public boolean hasFval() {
+    return valCase_ == 2;
+  }
+  /**
+   * <code>.pg_query.Float fval = 2;</code>
+   * @return The fval.
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.Float getFval() {
+    if (valCase_ == 2) {
+       return (com.premiumminds.sonar.postgres.protobuf.Float) val_;
+    }
+    return com.premiumminds.sonar.postgres.protobuf.Float.getDefaultInstance();
+  }
+  /**
+   * <code>.pg_query.Float fval = 2;</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.FloatOrBuilder getFvalOrBuilder() {
+    if (valCase_ == 2) {
+       return (com.premiumminds.sonar.postgres.protobuf.Float) val_;
+    }
+    return com.premiumminds.sonar.postgres.protobuf.Float.getDefaultInstance();
+  }
+
+  public static final int BOOLVAL_FIELD_NUMBER = 3;
+  /**
+   * <code>.pg_query.Boolean boolval = 3;</code>
+   * @return Whether the boolval field is set.
+   */
+  @java.lang.Override
+  public boolean hasBoolval() {
+    return valCase_ == 3;
+  }
+  /**
+   * <code>.pg_query.Boolean boolval = 3;</code>
+   * @return The boolval.
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.Boolean getBoolval() {
+    if (valCase_ == 3) {
+       return (com.premiumminds.sonar.postgres.protobuf.Boolean) val_;
+    }
+    return com.premiumminds.sonar.postgres.protobuf.Boolean.getDefaultInstance();
+  }
+  /**
+   * <code>.pg_query.Boolean boolval = 3;</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.BooleanOrBuilder getBoolvalOrBuilder() {
+    if (valCase_ == 3) {
+       return (com.premiumminds.sonar.postgres.protobuf.Boolean) val_;
+    }
+    return com.premiumminds.sonar.postgres.protobuf.Boolean.getDefaultInstance();
+  }
+
+  public static final int SVAL_FIELD_NUMBER = 4;
+  /**
+   * <code>.pg_query.String sval = 4;</code>
+   * @return Whether the sval field is set.
+   */
+  @java.lang.Override
+  public boolean hasSval() {
+    return valCase_ == 4;
+  }
+  /**
+   * <code>.pg_query.String sval = 4;</code>
+   * @return The sval.
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.String getSval() {
+    if (valCase_ == 4) {
+       return (com.premiumminds.sonar.postgres.protobuf.String) val_;
+    }
+    return com.premiumminds.sonar.postgres.protobuf.String.getDefaultInstance();
+  }
+  /**
+   * <code>.pg_query.String sval = 4;</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.StringOrBuilder getSvalOrBuilder() {
+    if (valCase_ == 4) {
+       return (com.premiumminds.sonar.postgres.protobuf.String) val_;
+    }
+    return com.premiumminds.sonar.postgres.protobuf.String.getDefaultInstance();
+  }
+
+  public static final int BSVAL_FIELD_NUMBER = 5;
+  /**
+   * <code>.pg_query.BitString bsval = 5;</code>
+   * @return Whether the bsval field is set.
+   */
+  @java.lang.Override
+  public boolean hasBsval() {
+    return valCase_ == 5;
+  }
+  /**
+   * <code>.pg_query.BitString bsval = 5;</code>
+   * @return The bsval.
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.BitString getBsval() {
+    if (valCase_ == 5) {
+       return (com.premiumminds.sonar.postgres.protobuf.BitString) val_;
+    }
+    return com.premiumminds.sonar.postgres.protobuf.BitString.getDefaultInstance();
+  }
+  /**
+   * <code>.pg_query.BitString bsval = 5;</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.BitStringOrBuilder getBsvalOrBuilder() {
+    if (valCase_ == 5) {
+       return (com.premiumminds.sonar.postgres.protobuf.BitString) val_;
+    }
+    return com.premiumminds.sonar.postgres.protobuf.BitString.getDefaultInstance();
+  }
+
+  public static final int ISNULL_FIELD_NUMBER = 10;
+  private boolean isnull_ = false;
+  /**
+   * <code>bool isnull = 10;</code>
+   * @return The isnull.
+   */
+  @java.lang.Override
+  public boolean getIsnull() {
+    return isnull_;
+  }
+
+  public static final int LOCATION_FIELD_NUMBER = 11;
+  private int location_ = 0;
+  /**
+   * <code>int32 location = 11;</code>
    * @return The location.
    */
   @java.lang.Override
@@ -151,13 +281,28 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (val_ != null) {
-      output.writeMessage(1, getVal());
+    if (valCase_ == 1) {
+      output.writeMessage(1, (com.premiumminds.sonar.postgres.protobuf.Integer) val_);
+    }
+    if (valCase_ == 2) {
+      output.writeMessage(2, (com.premiumminds.sonar.postgres.protobuf.Float) val_);
+    }
+    if (valCase_ == 3) {
+      output.writeMessage(3, (com.premiumminds.sonar.postgres.protobuf.Boolean) val_);
+    }
+    if (valCase_ == 4) {
+      output.writeMessage(4, (com.premiumminds.sonar.postgres.protobuf.String) val_);
+    }
+    if (valCase_ == 5) {
+      output.writeMessage(5, (com.premiumminds.sonar.postgres.protobuf.BitString) val_);
+    }
+    if (isnull_ != false) {
+      output.writeBool(10, isnull_);
     }
     if (location_ != 0) {
-      output.writeInt32(2, location_);
+      output.writeInt32(11, location_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -166,15 +311,35 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (val_ != null) {
+    if (valCase_ == 1) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getVal());
+        .computeMessageSize(1, (com.premiumminds.sonar.postgres.protobuf.Integer) val_);
+    }
+    if (valCase_ == 2) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.premiumminds.sonar.postgres.protobuf.Float) val_);
+    }
+    if (valCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.premiumminds.sonar.postgres.protobuf.Boolean) val_);
+    }
+    if (valCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.premiumminds.sonar.postgres.protobuf.String) val_);
+    }
+    if (valCase_ == 5) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.premiumminds.sonar.postgres.protobuf.BitString) val_);
+    }
+    if (isnull_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(10, isnull_);
     }
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, location_);
+        .computeInt32Size(11, location_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -189,14 +354,36 @@ private static final long serialVersionUID = 0L;
     }
     com.premiumminds.sonar.postgres.protobuf.A_Const other = (com.premiumminds.sonar.postgres.protobuf.A_Const) obj;
 
-    if (hasVal() != other.hasVal()) return false;
-    if (hasVal()) {
-      if (!getVal()
-          .equals(other.getVal())) return false;
-    }
+    if (getIsnull()
+        != other.getIsnull()) return false;
     if (getLocation()
         != other.getLocation()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getValCase().equals(other.getValCase())) return false;
+    switch (valCase_) {
+      case 1:
+        if (!getIval()
+            .equals(other.getIval())) return false;
+        break;
+      case 2:
+        if (!getFval()
+            .equals(other.getFval())) return false;
+        break;
+      case 3:
+        if (!getBoolval()
+            .equals(other.getBoolval())) return false;
+        break;
+      case 4:
+        if (!getSval()
+            .equals(other.getSval())) return false;
+        break;
+      case 5:
+        if (!getBsval()
+            .equals(other.getBsval())) return false;
+        break;
+      case 0:
+      default:
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -207,13 +394,36 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasVal()) {
-      hash = (37 * hash) + VAL_FIELD_NUMBER;
-      hash = (53 * hash) + getVal().hashCode();
-    }
+    hash = (37 * hash) + ISNULL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsnull());
     hash = (37 * hash) + LOCATION_FIELD_NUMBER;
     hash = (53 * hash) + getLocation();
-    hash = (29 * hash) + unknownFields.hashCode();
+    switch (valCase_) {
+      case 1:
+        hash = (37 * hash) + IVAL_FIELD_NUMBER;
+        hash = (53 * hash) + getIval().hashCode();
+        break;
+      case 2:
+        hash = (37 * hash) + FVAL_FIELD_NUMBER;
+        hash = (53 * hash) + getFval().hashCode();
+        break;
+      case 3:
+        hash = (37 * hash) + BOOLVAL_FIELD_NUMBER;
+        hash = (53 * hash) + getBoolval().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + SVAL_FIELD_NUMBER;
+        hash = (53 * hash) + getSval().hashCode();
+        break;
+      case 5:
+        hash = (37 * hash) + BSVAL_FIELD_NUMBER;
+        hash = (53 * hash) + getBsval().hashCode();
+        break;
+      case 0:
+      default:
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -330,30 +540,37 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.premiumminds.sonar.postgres.protobuf.A_Const.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (valBuilder_ == null) {
-        val_ = null;
-      } else {
-        val_ = null;
-        valBuilder_ = null;
+      bitField0_ = 0;
+      if (ivalBuilder_ != null) {
+        ivalBuilder_.clear();
       }
+      if (fvalBuilder_ != null) {
+        fvalBuilder_.clear();
+      }
+      if (boolvalBuilder_ != null) {
+        boolvalBuilder_.clear();
+      }
+      if (svalBuilder_ != null) {
+        svalBuilder_.clear();
+      }
+      if (bsvalBuilder_ != null) {
+        bsvalBuilder_.clear();
+      }
+      isnull_ = false;
       location_ = 0;
-
+      valCase_ = 0;
+      val_ = null;
       return this;
     }
 
@@ -380,14 +597,45 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.A_Const buildPartial() {
       com.premiumminds.sonar.postgres.protobuf.A_Const result = new com.premiumminds.sonar.postgres.protobuf.A_Const(this);
-      if (valBuilder_ == null) {
-        result.val_ = val_;
-      } else {
-        result.val_ = valBuilder_.build();
-      }
-      result.location_ = location_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.A_Const result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.isnull_ = isnull_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.location_ = location_;
+      }
+    }
+
+    private void buildPartialOneofs(com.premiumminds.sonar.postgres.protobuf.A_Const result) {
+      result.valCase_ = valCase_;
+      result.val_ = this.val_;
+      if (valCase_ == 1 &&
+          ivalBuilder_ != null) {
+        result.val_ = ivalBuilder_.build();
+      }
+      if (valCase_ == 2 &&
+          fvalBuilder_ != null) {
+        result.val_ = fvalBuilder_.build();
+      }
+      if (valCase_ == 3 &&
+          boolvalBuilder_ != null) {
+        result.val_ = boolvalBuilder_.build();
+      }
+      if (valCase_ == 4 &&
+          svalBuilder_ != null) {
+        result.val_ = svalBuilder_.build();
+      }
+      if (valCase_ == 5 &&
+          bsvalBuilder_ != null) {
+        result.val_ = bsvalBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -434,13 +682,38 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.premiumminds.sonar.postgres.protobuf.A_Const other) {
       if (other == com.premiumminds.sonar.postgres.protobuf.A_Const.getDefaultInstance()) return this;
-      if (other.hasVal()) {
-        mergeVal(other.getVal());
+      if (other.getIsnull() != false) {
+        setIsnull(other.getIsnull());
       }
       if (other.getLocation() != 0) {
         setLocation(other.getLocation());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      switch (other.getValCase()) {
+        case IVAL: {
+          mergeIval(other.getIval());
+          break;
+        }
+        case FVAL: {
+          mergeFval(other.getFval());
+          break;
+        }
+        case BOOLVAL: {
+          mergeBoolval(other.getBoolval());
+          break;
+        }
+        case SVAL: {
+          mergeSval(other.getSval());
+          break;
+        }
+        case BSVAL: {
+          mergeBsval(other.getBsval());
+          break;
+        }
+        case VAL_NOT_SET: {
+          break;
+        }
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -455,142 +728,839 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.premiumminds.sonar.postgres.protobuf.A_Const parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getIvalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getFvalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getBoolvalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getSvalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getBsvalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valCase_ = 5;
+              break;
+            } // case 42
+            case 80: {
+              isnull_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 80
+            case 88: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 88
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.premiumminds.sonar.postgres.protobuf.A_Const) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
+      return this;
+    }
+    private int valCase_ = 0;
+    private java.lang.Object val_;
+    public ValCase
+        getValCase() {
+      return ValCase.forNumber(
+          valCase_);
+    }
+
+    public Builder clearVal() {
+      valCase_ = 0;
+      val_ = null;
+      onChanged();
       return this;
     }
 
-    private com.premiumminds.sonar.postgres.protobuf.Node val_;
+    private int bitField0_;
+
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> valBuilder_;
+        com.premiumminds.sonar.postgres.protobuf.Integer, com.premiumminds.sonar.postgres.protobuf.Integer.Builder, com.premiumminds.sonar.postgres.protobuf.IntegerOrBuilder> ivalBuilder_;
     /**
-     * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
-     * @return Whether the val field is set.
+     * <code>.pg_query.Integer ival = 1;</code>
+     * @return Whether the ival field is set.
      */
-    public boolean hasVal() {
-      return valBuilder_ != null || val_ != null;
+    @java.lang.Override
+    public boolean hasIval() {
+      return valCase_ == 1;
     }
     /**
-     * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
-     * @return The val.
+     * <code>.pg_query.Integer ival = 1;</code>
+     * @return The ival.
      */
-    public com.premiumminds.sonar.postgres.protobuf.Node getVal() {
-      if (valBuilder_ == null) {
-        return val_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : val_;
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.Integer getIval() {
+      if (ivalBuilder_ == null) {
+        if (valCase_ == 1) {
+          return (com.premiumminds.sonar.postgres.protobuf.Integer) val_;
+        }
+        return com.premiumminds.sonar.postgres.protobuf.Integer.getDefaultInstance();
       } else {
-        return valBuilder_.getMessage();
+        if (valCase_ == 1) {
+          return ivalBuilder_.getMessage();
+        }
+        return com.premiumminds.sonar.postgres.protobuf.Integer.getDefaultInstance();
       }
     }
     /**
-     * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
+     * <code>.pg_query.Integer ival = 1;</code>
      */
-    public Builder setVal(com.premiumminds.sonar.postgres.protobuf.Node value) {
-      if (valBuilder_ == null) {
+    public Builder setIval(com.premiumminds.sonar.postgres.protobuf.Integer value) {
+      if (ivalBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         val_ = value;
         onChanged();
       } else {
-        valBuilder_.setMessage(value);
+        ivalBuilder_.setMessage(value);
       }
-
+      valCase_ = 1;
       return this;
     }
     /**
-     * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
+     * <code>.pg_query.Integer ival = 1;</code>
      */
-    public Builder setVal(
-        com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
-      if (valBuilder_ == null) {
+    public Builder setIval(
+        com.premiumminds.sonar.postgres.protobuf.Integer.Builder builderForValue) {
+      if (ivalBuilder_ == null) {
         val_ = builderForValue.build();
         onChanged();
       } else {
-        valBuilder_.setMessage(builderForValue.build());
+        ivalBuilder_.setMessage(builderForValue.build());
       }
-
+      valCase_ = 1;
       return this;
     }
     /**
-     * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
+     * <code>.pg_query.Integer ival = 1;</code>
      */
-    public Builder mergeVal(com.premiumminds.sonar.postgres.protobuf.Node value) {
-      if (valBuilder_ == null) {
-        if (val_ != null) {
-          val_ =
-            com.premiumminds.sonar.postgres.protobuf.Node.newBuilder(val_).mergeFrom(value).buildPartial();
+    public Builder mergeIval(com.premiumminds.sonar.postgres.protobuf.Integer value) {
+      if (ivalBuilder_ == null) {
+        if (valCase_ == 1 &&
+            val_ != com.premiumminds.sonar.postgres.protobuf.Integer.getDefaultInstance()) {
+          val_ = com.premiumminds.sonar.postgres.protobuf.Integer.newBuilder((com.premiumminds.sonar.postgres.protobuf.Integer) val_)
+              .mergeFrom(value).buildPartial();
         } else {
           val_ = value;
         }
         onChanged();
       } else {
-        valBuilder_.mergeFrom(value);
+        if (valCase_ == 1) {
+          ivalBuilder_.mergeFrom(value);
+        } else {
+          ivalBuilder_.setMessage(value);
+        }
       }
-
+      valCase_ = 1;
       return this;
     }
     /**
-     * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
+     * <code>.pg_query.Integer ival = 1;</code>
      */
-    public Builder clearVal() {
-      if (valBuilder_ == null) {
-        val_ = null;
-        onChanged();
+    public Builder clearIval() {
+      if (ivalBuilder_ == null) {
+        if (valCase_ == 1) {
+          valCase_ = 0;
+          val_ = null;
+          onChanged();
+        }
       } else {
-        val_ = null;
-        valBuilder_ = null;
+        if (valCase_ == 1) {
+          valCase_ = 0;
+          val_ = null;
+        }
+        ivalBuilder_.clear();
       }
-
       return this;
     }
     /**
-     * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
+     * <code>.pg_query.Integer ival = 1;</code>
      */
-    public com.premiumminds.sonar.postgres.protobuf.Node.Builder getValBuilder() {
-      
-      onChanged();
-      return getValFieldBuilder().getBuilder();
+    public com.premiumminds.sonar.postgres.protobuf.Integer.Builder getIvalBuilder() {
+      return getIvalFieldBuilder().getBuilder();
     }
     /**
-     * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
+     * <code>.pg_query.Integer ival = 1;</code>
      */
-    public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getValOrBuilder() {
-      if (valBuilder_ != null) {
-        return valBuilder_.getMessageOrBuilder();
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.IntegerOrBuilder getIvalOrBuilder() {
+      if ((valCase_ == 1) && (ivalBuilder_ != null)) {
+        return ivalBuilder_.getMessageOrBuilder();
       } else {
-        return val_ == null ?
-            com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : val_;
+        if (valCase_ == 1) {
+          return (com.premiumminds.sonar.postgres.protobuf.Integer) val_;
+        }
+        return com.premiumminds.sonar.postgres.protobuf.Integer.getDefaultInstance();
       }
     }
     /**
-     * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
+     * <code>.pg_query.Integer ival = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-        getValFieldBuilder() {
-      if (valBuilder_ == null) {
-        valBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
-                getVal(),
+        com.premiumminds.sonar.postgres.protobuf.Integer, com.premiumminds.sonar.postgres.protobuf.Integer.Builder, com.premiumminds.sonar.postgres.protobuf.IntegerOrBuilder> 
+        getIvalFieldBuilder() {
+      if (ivalBuilder_ == null) {
+        if (!(valCase_ == 1)) {
+          val_ = com.premiumminds.sonar.postgres.protobuf.Integer.getDefaultInstance();
+        }
+        ivalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.premiumminds.sonar.postgres.protobuf.Integer, com.premiumminds.sonar.postgres.protobuf.Integer.Builder, com.premiumminds.sonar.postgres.protobuf.IntegerOrBuilder>(
+                (com.premiumminds.sonar.postgres.protobuf.Integer) val_,
                 getParentForChildren(),
                 isClean());
         val_ = null;
       }
-      return valBuilder_;
+      valCase_ = 1;
+      onChanged();
+      return ivalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Float, com.premiumminds.sonar.postgres.protobuf.Float.Builder, com.premiumminds.sonar.postgres.protobuf.FloatOrBuilder> fvalBuilder_;
+    /**
+     * <code>.pg_query.Float fval = 2;</code>
+     * @return Whether the fval field is set.
+     */
+    @java.lang.Override
+    public boolean hasFval() {
+      return valCase_ == 2;
+    }
+    /**
+     * <code>.pg_query.Float fval = 2;</code>
+     * @return The fval.
+     */
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.Float getFval() {
+      if (fvalBuilder_ == null) {
+        if (valCase_ == 2) {
+          return (com.premiumminds.sonar.postgres.protobuf.Float) val_;
+        }
+        return com.premiumminds.sonar.postgres.protobuf.Float.getDefaultInstance();
+      } else {
+        if (valCase_ == 2) {
+          return fvalBuilder_.getMessage();
+        }
+        return com.premiumminds.sonar.postgres.protobuf.Float.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.pg_query.Float fval = 2;</code>
+     */
+    public Builder setFval(com.premiumminds.sonar.postgres.protobuf.Float value) {
+      if (fvalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        val_ = value;
+        onChanged();
+      } else {
+        fvalBuilder_.setMessage(value);
+      }
+      valCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.pg_query.Float fval = 2;</code>
+     */
+    public Builder setFval(
+        com.premiumminds.sonar.postgres.protobuf.Float.Builder builderForValue) {
+      if (fvalBuilder_ == null) {
+        val_ = builderForValue.build();
+        onChanged();
+      } else {
+        fvalBuilder_.setMessage(builderForValue.build());
+      }
+      valCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.pg_query.Float fval = 2;</code>
+     */
+    public Builder mergeFval(com.premiumminds.sonar.postgres.protobuf.Float value) {
+      if (fvalBuilder_ == null) {
+        if (valCase_ == 2 &&
+            val_ != com.premiumminds.sonar.postgres.protobuf.Float.getDefaultInstance()) {
+          val_ = com.premiumminds.sonar.postgres.protobuf.Float.newBuilder((com.premiumminds.sonar.postgres.protobuf.Float) val_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          val_ = value;
+        }
+        onChanged();
+      } else {
+        if (valCase_ == 2) {
+          fvalBuilder_.mergeFrom(value);
+        } else {
+          fvalBuilder_.setMessage(value);
+        }
+      }
+      valCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.pg_query.Float fval = 2;</code>
+     */
+    public Builder clearFval() {
+      if (fvalBuilder_ == null) {
+        if (valCase_ == 2) {
+          valCase_ = 0;
+          val_ = null;
+          onChanged();
+        }
+      } else {
+        if (valCase_ == 2) {
+          valCase_ = 0;
+          val_ = null;
+        }
+        fvalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.pg_query.Float fval = 2;</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Float.Builder getFvalBuilder() {
+      return getFvalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.pg_query.Float fval = 2;</code>
+     */
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.FloatOrBuilder getFvalOrBuilder() {
+      if ((valCase_ == 2) && (fvalBuilder_ != null)) {
+        return fvalBuilder_.getMessageOrBuilder();
+      } else {
+        if (valCase_ == 2) {
+          return (com.premiumminds.sonar.postgres.protobuf.Float) val_;
+        }
+        return com.premiumminds.sonar.postgres.protobuf.Float.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.pg_query.Float fval = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Float, com.premiumminds.sonar.postgres.protobuf.Float.Builder, com.premiumminds.sonar.postgres.protobuf.FloatOrBuilder> 
+        getFvalFieldBuilder() {
+      if (fvalBuilder_ == null) {
+        if (!(valCase_ == 2)) {
+          val_ = com.premiumminds.sonar.postgres.protobuf.Float.getDefaultInstance();
+        }
+        fvalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.premiumminds.sonar.postgres.protobuf.Float, com.premiumminds.sonar.postgres.protobuf.Float.Builder, com.premiumminds.sonar.postgres.protobuf.FloatOrBuilder>(
+                (com.premiumminds.sonar.postgres.protobuf.Float) val_,
+                getParentForChildren(),
+                isClean());
+        val_ = null;
+      }
+      valCase_ = 2;
+      onChanged();
+      return fvalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Boolean, com.premiumminds.sonar.postgres.protobuf.Boolean.Builder, com.premiumminds.sonar.postgres.protobuf.BooleanOrBuilder> boolvalBuilder_;
+    /**
+     * <code>.pg_query.Boolean boolval = 3;</code>
+     * @return Whether the boolval field is set.
+     */
+    @java.lang.Override
+    public boolean hasBoolval() {
+      return valCase_ == 3;
+    }
+    /**
+     * <code>.pg_query.Boolean boolval = 3;</code>
+     * @return The boolval.
+     */
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.Boolean getBoolval() {
+      if (boolvalBuilder_ == null) {
+        if (valCase_ == 3) {
+          return (com.premiumminds.sonar.postgres.protobuf.Boolean) val_;
+        }
+        return com.premiumminds.sonar.postgres.protobuf.Boolean.getDefaultInstance();
+      } else {
+        if (valCase_ == 3) {
+          return boolvalBuilder_.getMessage();
+        }
+        return com.premiumminds.sonar.postgres.protobuf.Boolean.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.pg_query.Boolean boolval = 3;</code>
+     */
+    public Builder setBoolval(com.premiumminds.sonar.postgres.protobuf.Boolean value) {
+      if (boolvalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        val_ = value;
+        onChanged();
+      } else {
+        boolvalBuilder_.setMessage(value);
+      }
+      valCase_ = 3;
+      return this;
+    }
+    /**
+     * <code>.pg_query.Boolean boolval = 3;</code>
+     */
+    public Builder setBoolval(
+        com.premiumminds.sonar.postgres.protobuf.Boolean.Builder builderForValue) {
+      if (boolvalBuilder_ == null) {
+        val_ = builderForValue.build();
+        onChanged();
+      } else {
+        boolvalBuilder_.setMessage(builderForValue.build());
+      }
+      valCase_ = 3;
+      return this;
+    }
+    /**
+     * <code>.pg_query.Boolean boolval = 3;</code>
+     */
+    public Builder mergeBoolval(com.premiumminds.sonar.postgres.protobuf.Boolean value) {
+      if (boolvalBuilder_ == null) {
+        if (valCase_ == 3 &&
+            val_ != com.premiumminds.sonar.postgres.protobuf.Boolean.getDefaultInstance()) {
+          val_ = com.premiumminds.sonar.postgres.protobuf.Boolean.newBuilder((com.premiumminds.sonar.postgres.protobuf.Boolean) val_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          val_ = value;
+        }
+        onChanged();
+      } else {
+        if (valCase_ == 3) {
+          boolvalBuilder_.mergeFrom(value);
+        } else {
+          boolvalBuilder_.setMessage(value);
+        }
+      }
+      valCase_ = 3;
+      return this;
+    }
+    /**
+     * <code>.pg_query.Boolean boolval = 3;</code>
+     */
+    public Builder clearBoolval() {
+      if (boolvalBuilder_ == null) {
+        if (valCase_ == 3) {
+          valCase_ = 0;
+          val_ = null;
+          onChanged();
+        }
+      } else {
+        if (valCase_ == 3) {
+          valCase_ = 0;
+          val_ = null;
+        }
+        boolvalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.pg_query.Boolean boolval = 3;</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Boolean.Builder getBoolvalBuilder() {
+      return getBoolvalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.pg_query.Boolean boolval = 3;</code>
+     */
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.BooleanOrBuilder getBoolvalOrBuilder() {
+      if ((valCase_ == 3) && (boolvalBuilder_ != null)) {
+        return boolvalBuilder_.getMessageOrBuilder();
+      } else {
+        if (valCase_ == 3) {
+          return (com.premiumminds.sonar.postgres.protobuf.Boolean) val_;
+        }
+        return com.premiumminds.sonar.postgres.protobuf.Boolean.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.pg_query.Boolean boolval = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Boolean, com.premiumminds.sonar.postgres.protobuf.Boolean.Builder, com.premiumminds.sonar.postgres.protobuf.BooleanOrBuilder> 
+        getBoolvalFieldBuilder() {
+      if (boolvalBuilder_ == null) {
+        if (!(valCase_ == 3)) {
+          val_ = com.premiumminds.sonar.postgres.protobuf.Boolean.getDefaultInstance();
+        }
+        boolvalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.premiumminds.sonar.postgres.protobuf.Boolean, com.premiumminds.sonar.postgres.protobuf.Boolean.Builder, com.premiumminds.sonar.postgres.protobuf.BooleanOrBuilder>(
+                (com.premiumminds.sonar.postgres.protobuf.Boolean) val_,
+                getParentForChildren(),
+                isClean());
+        val_ = null;
+      }
+      valCase_ = 3;
+      onChanged();
+      return boolvalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.String, com.premiumminds.sonar.postgres.protobuf.String.Builder, com.premiumminds.sonar.postgres.protobuf.StringOrBuilder> svalBuilder_;
+    /**
+     * <code>.pg_query.String sval = 4;</code>
+     * @return Whether the sval field is set.
+     */
+    @java.lang.Override
+    public boolean hasSval() {
+      return valCase_ == 4;
+    }
+    /**
+     * <code>.pg_query.String sval = 4;</code>
+     * @return The sval.
+     */
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.String getSval() {
+      if (svalBuilder_ == null) {
+        if (valCase_ == 4) {
+          return (com.premiumminds.sonar.postgres.protobuf.String) val_;
+        }
+        return com.premiumminds.sonar.postgres.protobuf.String.getDefaultInstance();
+      } else {
+        if (valCase_ == 4) {
+          return svalBuilder_.getMessage();
+        }
+        return com.premiumminds.sonar.postgres.protobuf.String.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.pg_query.String sval = 4;</code>
+     */
+    public Builder setSval(com.premiumminds.sonar.postgres.protobuf.String value) {
+      if (svalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        val_ = value;
+        onChanged();
+      } else {
+        svalBuilder_.setMessage(value);
+      }
+      valCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.pg_query.String sval = 4;</code>
+     */
+    public Builder setSval(
+        com.premiumminds.sonar.postgres.protobuf.String.Builder builderForValue) {
+      if (svalBuilder_ == null) {
+        val_ = builderForValue.build();
+        onChanged();
+      } else {
+        svalBuilder_.setMessage(builderForValue.build());
+      }
+      valCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.pg_query.String sval = 4;</code>
+     */
+    public Builder mergeSval(com.premiumminds.sonar.postgres.protobuf.String value) {
+      if (svalBuilder_ == null) {
+        if (valCase_ == 4 &&
+            val_ != com.premiumminds.sonar.postgres.protobuf.String.getDefaultInstance()) {
+          val_ = com.premiumminds.sonar.postgres.protobuf.String.newBuilder((com.premiumminds.sonar.postgres.protobuf.String) val_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          val_ = value;
+        }
+        onChanged();
+      } else {
+        if (valCase_ == 4) {
+          svalBuilder_.mergeFrom(value);
+        } else {
+          svalBuilder_.setMessage(value);
+        }
+      }
+      valCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.pg_query.String sval = 4;</code>
+     */
+    public Builder clearSval() {
+      if (svalBuilder_ == null) {
+        if (valCase_ == 4) {
+          valCase_ = 0;
+          val_ = null;
+          onChanged();
+        }
+      } else {
+        if (valCase_ == 4) {
+          valCase_ = 0;
+          val_ = null;
+        }
+        svalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.pg_query.String sval = 4;</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.String.Builder getSvalBuilder() {
+      return getSvalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.pg_query.String sval = 4;</code>
+     */
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.StringOrBuilder getSvalOrBuilder() {
+      if ((valCase_ == 4) && (svalBuilder_ != null)) {
+        return svalBuilder_.getMessageOrBuilder();
+      } else {
+        if (valCase_ == 4) {
+          return (com.premiumminds.sonar.postgres.protobuf.String) val_;
+        }
+        return com.premiumminds.sonar.postgres.protobuf.String.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.pg_query.String sval = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.String, com.premiumminds.sonar.postgres.protobuf.String.Builder, com.premiumminds.sonar.postgres.protobuf.StringOrBuilder> 
+        getSvalFieldBuilder() {
+      if (svalBuilder_ == null) {
+        if (!(valCase_ == 4)) {
+          val_ = com.premiumminds.sonar.postgres.protobuf.String.getDefaultInstance();
+        }
+        svalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.premiumminds.sonar.postgres.protobuf.String, com.premiumminds.sonar.postgres.protobuf.String.Builder, com.premiumminds.sonar.postgres.protobuf.StringOrBuilder>(
+                (com.premiumminds.sonar.postgres.protobuf.String) val_,
+                getParentForChildren(),
+                isClean());
+        val_ = null;
+      }
+      valCase_ = 4;
+      onChanged();
+      return svalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.BitString, com.premiumminds.sonar.postgres.protobuf.BitString.Builder, com.premiumminds.sonar.postgres.protobuf.BitStringOrBuilder> bsvalBuilder_;
+    /**
+     * <code>.pg_query.BitString bsval = 5;</code>
+     * @return Whether the bsval field is set.
+     */
+    @java.lang.Override
+    public boolean hasBsval() {
+      return valCase_ == 5;
+    }
+    /**
+     * <code>.pg_query.BitString bsval = 5;</code>
+     * @return The bsval.
+     */
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.BitString getBsval() {
+      if (bsvalBuilder_ == null) {
+        if (valCase_ == 5) {
+          return (com.premiumminds.sonar.postgres.protobuf.BitString) val_;
+        }
+        return com.premiumminds.sonar.postgres.protobuf.BitString.getDefaultInstance();
+      } else {
+        if (valCase_ == 5) {
+          return bsvalBuilder_.getMessage();
+        }
+        return com.premiumminds.sonar.postgres.protobuf.BitString.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.pg_query.BitString bsval = 5;</code>
+     */
+    public Builder setBsval(com.premiumminds.sonar.postgres.protobuf.BitString value) {
+      if (bsvalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        val_ = value;
+        onChanged();
+      } else {
+        bsvalBuilder_.setMessage(value);
+      }
+      valCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.pg_query.BitString bsval = 5;</code>
+     */
+    public Builder setBsval(
+        com.premiumminds.sonar.postgres.protobuf.BitString.Builder builderForValue) {
+      if (bsvalBuilder_ == null) {
+        val_ = builderForValue.build();
+        onChanged();
+      } else {
+        bsvalBuilder_.setMessage(builderForValue.build());
+      }
+      valCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.pg_query.BitString bsval = 5;</code>
+     */
+    public Builder mergeBsval(com.premiumminds.sonar.postgres.protobuf.BitString value) {
+      if (bsvalBuilder_ == null) {
+        if (valCase_ == 5 &&
+            val_ != com.premiumminds.sonar.postgres.protobuf.BitString.getDefaultInstance()) {
+          val_ = com.premiumminds.sonar.postgres.protobuf.BitString.newBuilder((com.premiumminds.sonar.postgres.protobuf.BitString) val_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          val_ = value;
+        }
+        onChanged();
+      } else {
+        if (valCase_ == 5) {
+          bsvalBuilder_.mergeFrom(value);
+        } else {
+          bsvalBuilder_.setMessage(value);
+        }
+      }
+      valCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.pg_query.BitString bsval = 5;</code>
+     */
+    public Builder clearBsval() {
+      if (bsvalBuilder_ == null) {
+        if (valCase_ == 5) {
+          valCase_ = 0;
+          val_ = null;
+          onChanged();
+        }
+      } else {
+        if (valCase_ == 5) {
+          valCase_ = 0;
+          val_ = null;
+        }
+        bsvalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.pg_query.BitString bsval = 5;</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.BitString.Builder getBsvalBuilder() {
+      return getBsvalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.pg_query.BitString bsval = 5;</code>
+     */
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.BitStringOrBuilder getBsvalOrBuilder() {
+      if ((valCase_ == 5) && (bsvalBuilder_ != null)) {
+        return bsvalBuilder_.getMessageOrBuilder();
+      } else {
+        if (valCase_ == 5) {
+          return (com.premiumminds.sonar.postgres.protobuf.BitString) val_;
+        }
+        return com.premiumminds.sonar.postgres.protobuf.BitString.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.pg_query.BitString bsval = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.BitString, com.premiumminds.sonar.postgres.protobuf.BitString.Builder, com.premiumminds.sonar.postgres.protobuf.BitStringOrBuilder> 
+        getBsvalFieldBuilder() {
+      if (bsvalBuilder_ == null) {
+        if (!(valCase_ == 5)) {
+          val_ = com.premiumminds.sonar.postgres.protobuf.BitString.getDefaultInstance();
+        }
+        bsvalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.premiumminds.sonar.postgres.protobuf.BitString, com.premiumminds.sonar.postgres.protobuf.BitString.Builder, com.premiumminds.sonar.postgres.protobuf.BitStringOrBuilder>(
+                (com.premiumminds.sonar.postgres.protobuf.BitString) val_,
+                getParentForChildren(),
+                isClean());
+        val_ = null;
+      }
+      valCase_ = 5;
+      onChanged();
+      return bsvalBuilder_;
+    }
+
+    private boolean isnull_ ;
+    /**
+     * <code>bool isnull = 10;</code>
+     * @return The isnull.
+     */
+    @java.lang.Override
+    public boolean getIsnull() {
+      return isnull_;
+    }
+    /**
+     * <code>bool isnull = 10;</code>
+     * @param value The isnull to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsnull(boolean value) {
+      
+      isnull_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool isnull = 10;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsnull() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      isnull_ = false;
+      onChanged();
+      return this;
     }
 
     private int location_ ;
     /**
-     * <code>int32 location = 2 [json_name = "location"];</code>
+     * <code>int32 location = 11;</code>
      * @return The location.
      */
     @java.lang.Override
@@ -598,22 +1568,23 @@ private static final long serialVersionUID = 0L;
       return location_;
     }
     /**
-     * <code>int32 location = 2 [json_name = "location"];</code>
+     * <code>int32 location = 11;</code>
      * @param value The location to set.
      * @return This builder for chaining.
      */
     public Builder setLocation(int value) {
       
       location_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 location = 2 [json_name = "location"];</code>
+     * <code>int32 location = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       location_ = 0;
       onChanged();
       return this;
@@ -651,7 +1622,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new A_Const(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

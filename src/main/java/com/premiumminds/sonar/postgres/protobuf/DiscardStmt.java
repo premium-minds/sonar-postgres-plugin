@@ -31,51 +31,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private DiscardStmt(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            target_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_DiscardStmt_descriptor;
@@ -90,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TARGET_FIELD_NUMBER = 1;
-  private int target_;
+  private int target_ = 0;
   /**
    * <code>.pg_query.DiscardMode target = 1 [json_name = "target"];</code>
    * @return The enum numeric value on the wire for target.
@@ -103,8 +58,7 @@ private static final long serialVersionUID = 0L;
    * @return The target.
    */
   @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.DiscardMode getTarget() {
-    @SuppressWarnings("deprecation")
-    com.premiumminds.sonar.postgres.protobuf.DiscardMode result = com.premiumminds.sonar.postgres.protobuf.DiscardMode.valueOf(target_);
+    com.premiumminds.sonar.postgres.protobuf.DiscardMode result = com.premiumminds.sonar.postgres.protobuf.DiscardMode.forNumber(target_);
     return result == null ? com.premiumminds.sonar.postgres.protobuf.DiscardMode.UNRECOGNIZED : result;
   }
 
@@ -125,7 +79,7 @@ private static final long serialVersionUID = 0L;
     if (target_ != com.premiumminds.sonar.postgres.protobuf.DiscardMode.DISCARD_MODE_UNDEFINED.getNumber()) {
       output.writeEnum(1, target_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -138,7 +92,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, target_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -154,7 +108,7 @@ private static final long serialVersionUID = 0L;
     com.premiumminds.sonar.postgres.protobuf.DiscardStmt other = (com.premiumminds.sonar.postgres.protobuf.DiscardStmt) obj;
 
     if (target_ != other.target_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -167,7 +121,7 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + TARGET_FIELD_NUMBER;
     hash = (53 * hash) + target_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -284,24 +238,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.premiumminds.sonar.postgres.protobuf.DiscardStmt.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       target_ = 0;
-
       return this;
     }
 
@@ -328,9 +277,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.DiscardStmt buildPartial() {
       com.premiumminds.sonar.postgres.protobuf.DiscardStmt result = new com.premiumminds.sonar.postgres.protobuf.DiscardStmt(this);
-      result.target_ = target_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.DiscardStmt result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.target_ = target_;
+      }
     }
 
     @java.lang.Override
@@ -380,7 +336,7 @@ private static final long serialVersionUID = 0L;
       if (other.target_ != 0) {
         setTargetValue(other.getTargetValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -395,19 +351,38 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.premiumminds.sonar.postgres.protobuf.DiscardStmt parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              target_ = input.readEnum();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.premiumminds.sonar.postgres.protobuf.DiscardStmt) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private int target_ = 0;
     /**
@@ -423,8 +398,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetValue(int value) {
-      
       target_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -434,8 +409,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.DiscardMode getTarget() {
-      @SuppressWarnings("deprecation")
-      com.premiumminds.sonar.postgres.protobuf.DiscardMode result = com.premiumminds.sonar.postgres.protobuf.DiscardMode.valueOf(target_);
+      com.premiumminds.sonar.postgres.protobuf.DiscardMode result = com.premiumminds.sonar.postgres.protobuf.DiscardMode.forNumber(target_);
       return result == null ? com.premiumminds.sonar.postgres.protobuf.DiscardMode.UNRECOGNIZED : result;
     }
     /**
@@ -447,7 +421,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       target_ = value.getNumber();
       onChanged();
       return this;
@@ -457,7 +431,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTarget() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       target_ = 0;
       onChanged();
       return this;
@@ -495,7 +469,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DiscardStmt(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

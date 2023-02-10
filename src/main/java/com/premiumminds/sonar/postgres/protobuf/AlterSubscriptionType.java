@@ -21,17 +21,29 @@ public enum AlterSubscriptionType
    */
   ALTER_SUBSCRIPTION_CONNECTION(2),
   /**
-   * <code>ALTER_SUBSCRIPTION_PUBLICATION = 3;</code>
+   * <code>ALTER_SUBSCRIPTION_SET_PUBLICATION = 3;</code>
    */
-  ALTER_SUBSCRIPTION_PUBLICATION(3),
+  ALTER_SUBSCRIPTION_SET_PUBLICATION(3),
   /**
-   * <code>ALTER_SUBSCRIPTION_REFRESH = 4;</code>
+   * <code>ALTER_SUBSCRIPTION_ADD_PUBLICATION = 4;</code>
    */
-  ALTER_SUBSCRIPTION_REFRESH(4),
+  ALTER_SUBSCRIPTION_ADD_PUBLICATION(4),
   /**
-   * <code>ALTER_SUBSCRIPTION_ENABLED = 5;</code>
+   * <code>ALTER_SUBSCRIPTION_DROP_PUBLICATION = 5;</code>
    */
-  ALTER_SUBSCRIPTION_ENABLED(5),
+  ALTER_SUBSCRIPTION_DROP_PUBLICATION(5),
+  /**
+   * <code>ALTER_SUBSCRIPTION_REFRESH = 6;</code>
+   */
+  ALTER_SUBSCRIPTION_REFRESH(6),
+  /**
+   * <code>ALTER_SUBSCRIPTION_ENABLED = 7;</code>
+   */
+  ALTER_SUBSCRIPTION_ENABLED(7),
+  /**
+   * <code>ALTER_SUBSCRIPTION_SKIP = 8;</code>
+   */
+  ALTER_SUBSCRIPTION_SKIP(8),
   UNRECOGNIZED(-1),
   ;
 
@@ -48,17 +60,29 @@ public enum AlterSubscriptionType
    */
   public static final int ALTER_SUBSCRIPTION_CONNECTION_VALUE = 2;
   /**
-   * <code>ALTER_SUBSCRIPTION_PUBLICATION = 3;</code>
+   * <code>ALTER_SUBSCRIPTION_SET_PUBLICATION = 3;</code>
    */
-  public static final int ALTER_SUBSCRIPTION_PUBLICATION_VALUE = 3;
+  public static final int ALTER_SUBSCRIPTION_SET_PUBLICATION_VALUE = 3;
   /**
-   * <code>ALTER_SUBSCRIPTION_REFRESH = 4;</code>
+   * <code>ALTER_SUBSCRIPTION_ADD_PUBLICATION = 4;</code>
    */
-  public static final int ALTER_SUBSCRIPTION_REFRESH_VALUE = 4;
+  public static final int ALTER_SUBSCRIPTION_ADD_PUBLICATION_VALUE = 4;
   /**
-   * <code>ALTER_SUBSCRIPTION_ENABLED = 5;</code>
+   * <code>ALTER_SUBSCRIPTION_DROP_PUBLICATION = 5;</code>
    */
-  public static final int ALTER_SUBSCRIPTION_ENABLED_VALUE = 5;
+  public static final int ALTER_SUBSCRIPTION_DROP_PUBLICATION_VALUE = 5;
+  /**
+   * <code>ALTER_SUBSCRIPTION_REFRESH = 6;</code>
+   */
+  public static final int ALTER_SUBSCRIPTION_REFRESH_VALUE = 6;
+  /**
+   * <code>ALTER_SUBSCRIPTION_ENABLED = 7;</code>
+   */
+  public static final int ALTER_SUBSCRIPTION_ENABLED_VALUE = 7;
+  /**
+   * <code>ALTER_SUBSCRIPTION_SKIP = 8;</code>
+   */
+  public static final int ALTER_SUBSCRIPTION_SKIP_VALUE = 8;
 
 
   public final int getNumber() {
@@ -88,9 +112,12 @@ public enum AlterSubscriptionType
       case 0: return ALTER_SUBSCRIPTION_TYPE_UNDEFINED;
       case 1: return ALTER_SUBSCRIPTION_OPTIONS;
       case 2: return ALTER_SUBSCRIPTION_CONNECTION;
-      case 3: return ALTER_SUBSCRIPTION_PUBLICATION;
-      case 4: return ALTER_SUBSCRIPTION_REFRESH;
-      case 5: return ALTER_SUBSCRIPTION_ENABLED;
+      case 3: return ALTER_SUBSCRIPTION_SET_PUBLICATION;
+      case 4: return ALTER_SUBSCRIPTION_ADD_PUBLICATION;
+      case 5: return ALTER_SUBSCRIPTION_DROP_PUBLICATION;
+      case 6: return ALTER_SUBSCRIPTION_REFRESH;
+      case 7: return ALTER_SUBSCRIPTION_ENABLED;
+      case 8: return ALTER_SUBSCRIPTION_SKIP;
       default: return null;
     }
   }
@@ -121,7 +148,7 @@ public enum AlterSubscriptionType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(30);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(32);
   }
 
   private static final AlterSubscriptionType[] VALUES = values();

@@ -114,12 +114,27 @@ public interface GrantStmtOrBuilder extends
   boolean getGrantOption();
 
   /**
-   * <code>.pg_query.DropBehavior behavior = 8 [json_name = "behavior"];</code>
+   * <code>.pg_query.RoleSpec grantor = 8 [json_name = "grantor"];</code>
+   * @return Whether the grantor field is set.
+   */
+  boolean hasGrantor();
+  /**
+   * <code>.pg_query.RoleSpec grantor = 8 [json_name = "grantor"];</code>
+   * @return The grantor.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RoleSpec getGrantor();
+  /**
+   * <code>.pg_query.RoleSpec grantor = 8 [json_name = "grantor"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RoleSpecOrBuilder getGrantorOrBuilder();
+
+  /**
+   * <code>.pg_query.DropBehavior behavior = 9 [json_name = "behavior"];</code>
    * @return The enum numeric value on the wire for behavior.
    */
   int getBehaviorValue();
   /**
-   * <code>.pg_query.DropBehavior behavior = 8 [json_name = "behavior"];</code>
+   * <code>.pg_query.DropBehavior behavior = 9 [json_name = "behavior"];</code>
    * @return The behavior.
    */
   com.premiumminds.sonar.postgres.protobuf.DropBehavior getBehavior();

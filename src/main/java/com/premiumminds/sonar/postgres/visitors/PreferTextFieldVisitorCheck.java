@@ -14,7 +14,7 @@ public class PreferTextFieldVisitorCheck extends AbstractVisitorCheck {
     public void visit(ColumnDef columnDef) {
         final TypeName typeName = columnDef.getTypeName();
         typeName.getNamesList().forEach(name -> {
-            final String str = name.getString().getStr();
+            final String str = name.getString().getSval();
 
             if ("varchar".equals(str) && typeName.getTypmodsList().size() != 0){
                 newIssue("Changing the size of a varchar field requires an ACCESS EXCLUSIVE lock, that will prevent all reads and writes to the table.");

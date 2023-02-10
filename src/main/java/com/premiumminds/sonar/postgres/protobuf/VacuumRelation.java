@@ -31,76 +31,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private VacuumRelation(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.premiumminds.sonar.postgres.protobuf.RangeVar.Builder subBuilder = null;
-            if (relation_ != null) {
-              subBuilder = relation_.toBuilder();
-            }
-            relation_ = input.readMessage(com.premiumminds.sonar.postgres.protobuf.RangeVar.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(relation_);
-              relation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 16: {
-
-            oid_ = input.readUInt32();
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              vaCols_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            vaCols_.add(
-                input.readMessage(com.premiumminds.sonar.postgres.protobuf.Node.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        vaCols_ = java.util.Collections.unmodifiableList(vaCols_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_VacuumRelation_descriptor;
@@ -137,11 +67,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.RangeVarOrBuilder getRelationOrBuilder() {
-    return getRelation();
+    return relation_ == null ? com.premiumminds.sonar.postgres.protobuf.RangeVar.getDefaultInstance() : relation_;
   }
 
   public static final int OID_FIELD_NUMBER = 2;
-  private int oid_;
+  private int oid_ = 0;
   /**
    * <code>uint32 oid = 2 [json_name = "oid"];</code>
    * @return The oid.
@@ -152,6 +82,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VA_COLS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> vaCols_;
   /**
    * <code>repeated .pg_query.Node va_cols = 3 [json_name = "va_cols"];</code>
@@ -214,7 +145,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < vaCols_.size(); i++) {
       output.writeMessage(3, vaCols_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -235,7 +166,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, vaCols_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -259,7 +190,7 @@ private static final long serialVersionUID = 0L;
         != other.getOid()) return false;
     if (!getVaColsList()
         .equals(other.getVaColsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -280,7 +211,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VA_COLS_FIELD_NUMBER;
       hash = (53 * hash) + getVaColsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -397,37 +328,31 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.premiumminds.sonar.postgres.protobuf.VacuumRelation.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getVaColsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (relationBuilder_ == null) {
-        relation_ = null;
-      } else {
-        relation_ = null;
+      bitField0_ = 0;
+      relation_ = null;
+      if (relationBuilder_ != null) {
+        relationBuilder_.dispose();
         relationBuilder_ = null;
       }
       oid_ = 0;
-
       if (vaColsBuilder_ == null) {
         vaCols_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        vaCols_ = null;
         vaColsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -454,24 +379,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.VacuumRelation buildPartial() {
       com.premiumminds.sonar.postgres.protobuf.VacuumRelation result = new com.premiumminds.sonar.postgres.protobuf.VacuumRelation(this);
-      int from_bitField0_ = bitField0_;
-      if (relationBuilder_ == null) {
-        result.relation_ = relation_;
-      } else {
-        result.relation_ = relationBuilder_.build();
-      }
-      result.oid_ = oid_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.premiumminds.sonar.postgres.protobuf.VacuumRelation result) {
       if (vaColsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           vaCols_ = java.util.Collections.unmodifiableList(vaCols_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.vaCols_ = vaCols_;
       } else {
         result.vaCols_ = vaColsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.VacuumRelation result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.relation_ = relationBuilder_ == null
+            ? relation_
+            : relationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.oid_ = oid_;
+      }
     }
 
     @java.lang.Override
@@ -528,7 +463,7 @@ private static final long serialVersionUID = 0L;
         if (!other.vaCols_.isEmpty()) {
           if (vaCols_.isEmpty()) {
             vaCols_ = other.vaCols_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureVaColsIsMutable();
             vaCols_.addAll(other.vaCols_);
@@ -541,7 +476,7 @@ private static final long serialVersionUID = 0L;
             vaColsBuilder_.dispose();
             vaColsBuilder_ = null;
             vaCols_ = other.vaCols_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             vaColsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getVaColsFieldBuilder() : null;
@@ -550,7 +485,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -565,17 +500,55 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.premiumminds.sonar.postgres.protobuf.VacuumRelation parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getRelationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              oid_ = input.readUInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              com.premiumminds.sonar.postgres.protobuf.Node m =
+                  input.readMessage(
+                      com.premiumminds.sonar.postgres.protobuf.Node.parser(),
+                      extensionRegistry);
+              if (vaColsBuilder_ == null) {
+                ensureVaColsIsMutable();
+                vaCols_.add(m);
+              } else {
+                vaColsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.premiumminds.sonar.postgres.protobuf.VacuumRelation) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -588,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the relation field is set.
      */
     public boolean hasRelation() {
-      return relationBuilder_ != null || relation_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.pg_query.RangeVar relation = 1 [json_name = "relation"];</code>
@@ -610,11 +583,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         relation_ = value;
-        onChanged();
       } else {
         relationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -624,11 +597,11 @@ private static final long serialVersionUID = 0L;
         com.premiumminds.sonar.postgres.protobuf.RangeVar.Builder builderForValue) {
       if (relationBuilder_ == null) {
         relation_ = builderForValue.build();
-        onChanged();
       } else {
         relationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -636,38 +609,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRelation(com.premiumminds.sonar.postgres.protobuf.RangeVar value) {
       if (relationBuilder_ == null) {
-        if (relation_ != null) {
-          relation_ =
-            com.premiumminds.sonar.postgres.protobuf.RangeVar.newBuilder(relation_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          relation_ != null &&
+          relation_ != com.premiumminds.sonar.postgres.protobuf.RangeVar.getDefaultInstance()) {
+          getRelationBuilder().mergeFrom(value);
         } else {
           relation_ = value;
         }
-        onChanged();
       } else {
         relationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.pg_query.RangeVar relation = 1 [json_name = "relation"];</code>
      */
     public Builder clearRelation() {
-      if (relationBuilder_ == null) {
-        relation_ = null;
-        onChanged();
-      } else {
-        relation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      relation_ = null;
+      if (relationBuilder_ != null) {
+        relationBuilder_.dispose();
         relationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.pg_query.RangeVar relation = 1 [json_name = "relation"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.RangeVar.Builder getRelationBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getRelationFieldBuilder().getBuilder();
     }
@@ -716,6 +689,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOid(int value) {
       
       oid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -724,7 +698,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       oid_ = 0;
       onChanged();
       return this;
@@ -733,9 +707,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> vaCols_ =
       java.util.Collections.emptyList();
     private void ensureVaColsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         vaCols_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(vaCols_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -885,7 +859,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearVaCols() {
       if (vaColsBuilder_ == null) {
         vaCols_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         vaColsBuilder_.clear();
@@ -962,7 +936,7 @@ private static final long serialVersionUID = 0L;
         vaColsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
                 vaCols_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         vaCols_ = null;
@@ -1002,7 +976,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new VacuumRelation(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

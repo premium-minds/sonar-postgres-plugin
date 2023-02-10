@@ -121,97 +121,105 @@ public enum ObjectType
    */
   OBJECT_OPFAMILY(27),
   /**
-   * <code>OBJECT_POLICY = 28;</code>
+   * <code>OBJECT_PARAMETER_ACL = 28;</code>
    */
-  OBJECT_POLICY(28),
+  OBJECT_PARAMETER_ACL(28),
   /**
-   * <code>OBJECT_PROCEDURE = 29;</code>
+   * <code>OBJECT_POLICY = 29;</code>
    */
-  OBJECT_PROCEDURE(29),
+  OBJECT_POLICY(29),
   /**
-   * <code>OBJECT_PUBLICATION = 30;</code>
+   * <code>OBJECT_PROCEDURE = 30;</code>
    */
-  OBJECT_PUBLICATION(30),
+  OBJECT_PROCEDURE(30),
   /**
-   * <code>OBJECT_PUBLICATION_REL = 31;</code>
+   * <code>OBJECT_PUBLICATION = 31;</code>
    */
-  OBJECT_PUBLICATION_REL(31),
+  OBJECT_PUBLICATION(31),
   /**
-   * <code>OBJECT_ROLE = 32;</code>
+   * <code>OBJECT_PUBLICATION_NAMESPACE = 32;</code>
    */
-  OBJECT_ROLE(32),
+  OBJECT_PUBLICATION_NAMESPACE(32),
   /**
-   * <code>OBJECT_ROUTINE = 33;</code>
+   * <code>OBJECT_PUBLICATION_REL = 33;</code>
    */
-  OBJECT_ROUTINE(33),
+  OBJECT_PUBLICATION_REL(33),
   /**
-   * <code>OBJECT_RULE = 34;</code>
+   * <code>OBJECT_ROLE = 34;</code>
    */
-  OBJECT_RULE(34),
+  OBJECT_ROLE(34),
   /**
-   * <code>OBJECT_SCHEMA = 35;</code>
+   * <code>OBJECT_ROUTINE = 35;</code>
    */
-  OBJECT_SCHEMA(35),
+  OBJECT_ROUTINE(35),
   /**
-   * <code>OBJECT_SEQUENCE = 36;</code>
+   * <code>OBJECT_RULE = 36;</code>
    */
-  OBJECT_SEQUENCE(36),
+  OBJECT_RULE(36),
   /**
-   * <code>OBJECT_SUBSCRIPTION = 37;</code>
+   * <code>OBJECT_SCHEMA = 37;</code>
    */
-  OBJECT_SUBSCRIPTION(37),
+  OBJECT_SCHEMA(37),
   /**
-   * <code>OBJECT_STATISTIC_EXT = 38;</code>
+   * <code>OBJECT_SEQUENCE = 38;</code>
    */
-  OBJECT_STATISTIC_EXT(38),
+  OBJECT_SEQUENCE(38),
   /**
-   * <code>OBJECT_TABCONSTRAINT = 39;</code>
+   * <code>OBJECT_SUBSCRIPTION = 39;</code>
    */
-  OBJECT_TABCONSTRAINT(39),
+  OBJECT_SUBSCRIPTION(39),
   /**
-   * <code>OBJECT_TABLE = 40;</code>
+   * <code>OBJECT_STATISTIC_EXT = 40;</code>
    */
-  OBJECT_TABLE(40),
+  OBJECT_STATISTIC_EXT(40),
   /**
-   * <code>OBJECT_TABLESPACE = 41;</code>
+   * <code>OBJECT_TABCONSTRAINT = 41;</code>
    */
-  OBJECT_TABLESPACE(41),
+  OBJECT_TABCONSTRAINT(41),
   /**
-   * <code>OBJECT_TRANSFORM = 42;</code>
+   * <code>OBJECT_TABLE = 42;</code>
    */
-  OBJECT_TRANSFORM(42),
+  OBJECT_TABLE(42),
   /**
-   * <code>OBJECT_TRIGGER = 43;</code>
+   * <code>OBJECT_TABLESPACE = 43;</code>
    */
-  OBJECT_TRIGGER(43),
+  OBJECT_TABLESPACE(43),
   /**
-   * <code>OBJECT_TSCONFIGURATION = 44;</code>
+   * <code>OBJECT_TRANSFORM = 44;</code>
    */
-  OBJECT_TSCONFIGURATION(44),
+  OBJECT_TRANSFORM(44),
   /**
-   * <code>OBJECT_TSDICTIONARY = 45;</code>
+   * <code>OBJECT_TRIGGER = 45;</code>
    */
-  OBJECT_TSDICTIONARY(45),
+  OBJECT_TRIGGER(45),
   /**
-   * <code>OBJECT_TSPARSER = 46;</code>
+   * <code>OBJECT_TSCONFIGURATION = 46;</code>
    */
-  OBJECT_TSPARSER(46),
+  OBJECT_TSCONFIGURATION(46),
   /**
-   * <code>OBJECT_TSTEMPLATE = 47;</code>
+   * <code>OBJECT_TSDICTIONARY = 47;</code>
    */
-  OBJECT_TSTEMPLATE(47),
+  OBJECT_TSDICTIONARY(47),
   /**
-   * <code>OBJECT_TYPE = 48;</code>
+   * <code>OBJECT_TSPARSER = 48;</code>
    */
-  OBJECT_TYPE(48),
+  OBJECT_TSPARSER(48),
   /**
-   * <code>OBJECT_USER_MAPPING = 49;</code>
+   * <code>OBJECT_TSTEMPLATE = 49;</code>
    */
-  OBJECT_USER_MAPPING(49),
+  OBJECT_TSTEMPLATE(49),
   /**
-   * <code>OBJECT_VIEW = 50;</code>
+   * <code>OBJECT_TYPE = 50;</code>
    */
-  OBJECT_VIEW(50),
+  OBJECT_TYPE(50),
+  /**
+   * <code>OBJECT_USER_MAPPING = 51;</code>
+   */
+  OBJECT_USER_MAPPING(51),
+  /**
+   * <code>OBJECT_VIEW = 52;</code>
+   */
+  OBJECT_VIEW(52),
   UNRECOGNIZED(-1),
   ;
 
@@ -328,97 +336,105 @@ public enum ObjectType
    */
   public static final int OBJECT_OPFAMILY_VALUE = 27;
   /**
-   * <code>OBJECT_POLICY = 28;</code>
+   * <code>OBJECT_PARAMETER_ACL = 28;</code>
    */
-  public static final int OBJECT_POLICY_VALUE = 28;
+  public static final int OBJECT_PARAMETER_ACL_VALUE = 28;
   /**
-   * <code>OBJECT_PROCEDURE = 29;</code>
+   * <code>OBJECT_POLICY = 29;</code>
    */
-  public static final int OBJECT_PROCEDURE_VALUE = 29;
+  public static final int OBJECT_POLICY_VALUE = 29;
   /**
-   * <code>OBJECT_PUBLICATION = 30;</code>
+   * <code>OBJECT_PROCEDURE = 30;</code>
    */
-  public static final int OBJECT_PUBLICATION_VALUE = 30;
+  public static final int OBJECT_PROCEDURE_VALUE = 30;
   /**
-   * <code>OBJECT_PUBLICATION_REL = 31;</code>
+   * <code>OBJECT_PUBLICATION = 31;</code>
    */
-  public static final int OBJECT_PUBLICATION_REL_VALUE = 31;
+  public static final int OBJECT_PUBLICATION_VALUE = 31;
   /**
-   * <code>OBJECT_ROLE = 32;</code>
+   * <code>OBJECT_PUBLICATION_NAMESPACE = 32;</code>
    */
-  public static final int OBJECT_ROLE_VALUE = 32;
+  public static final int OBJECT_PUBLICATION_NAMESPACE_VALUE = 32;
   /**
-   * <code>OBJECT_ROUTINE = 33;</code>
+   * <code>OBJECT_PUBLICATION_REL = 33;</code>
    */
-  public static final int OBJECT_ROUTINE_VALUE = 33;
+  public static final int OBJECT_PUBLICATION_REL_VALUE = 33;
   /**
-   * <code>OBJECT_RULE = 34;</code>
+   * <code>OBJECT_ROLE = 34;</code>
    */
-  public static final int OBJECT_RULE_VALUE = 34;
+  public static final int OBJECT_ROLE_VALUE = 34;
   /**
-   * <code>OBJECT_SCHEMA = 35;</code>
+   * <code>OBJECT_ROUTINE = 35;</code>
    */
-  public static final int OBJECT_SCHEMA_VALUE = 35;
+  public static final int OBJECT_ROUTINE_VALUE = 35;
   /**
-   * <code>OBJECT_SEQUENCE = 36;</code>
+   * <code>OBJECT_RULE = 36;</code>
    */
-  public static final int OBJECT_SEQUENCE_VALUE = 36;
+  public static final int OBJECT_RULE_VALUE = 36;
   /**
-   * <code>OBJECT_SUBSCRIPTION = 37;</code>
+   * <code>OBJECT_SCHEMA = 37;</code>
    */
-  public static final int OBJECT_SUBSCRIPTION_VALUE = 37;
+  public static final int OBJECT_SCHEMA_VALUE = 37;
   /**
-   * <code>OBJECT_STATISTIC_EXT = 38;</code>
+   * <code>OBJECT_SEQUENCE = 38;</code>
    */
-  public static final int OBJECT_STATISTIC_EXT_VALUE = 38;
+  public static final int OBJECT_SEQUENCE_VALUE = 38;
   /**
-   * <code>OBJECT_TABCONSTRAINT = 39;</code>
+   * <code>OBJECT_SUBSCRIPTION = 39;</code>
    */
-  public static final int OBJECT_TABCONSTRAINT_VALUE = 39;
+  public static final int OBJECT_SUBSCRIPTION_VALUE = 39;
   /**
-   * <code>OBJECT_TABLE = 40;</code>
+   * <code>OBJECT_STATISTIC_EXT = 40;</code>
    */
-  public static final int OBJECT_TABLE_VALUE = 40;
+  public static final int OBJECT_STATISTIC_EXT_VALUE = 40;
   /**
-   * <code>OBJECT_TABLESPACE = 41;</code>
+   * <code>OBJECT_TABCONSTRAINT = 41;</code>
    */
-  public static final int OBJECT_TABLESPACE_VALUE = 41;
+  public static final int OBJECT_TABCONSTRAINT_VALUE = 41;
   /**
-   * <code>OBJECT_TRANSFORM = 42;</code>
+   * <code>OBJECT_TABLE = 42;</code>
    */
-  public static final int OBJECT_TRANSFORM_VALUE = 42;
+  public static final int OBJECT_TABLE_VALUE = 42;
   /**
-   * <code>OBJECT_TRIGGER = 43;</code>
+   * <code>OBJECT_TABLESPACE = 43;</code>
    */
-  public static final int OBJECT_TRIGGER_VALUE = 43;
+  public static final int OBJECT_TABLESPACE_VALUE = 43;
   /**
-   * <code>OBJECT_TSCONFIGURATION = 44;</code>
+   * <code>OBJECT_TRANSFORM = 44;</code>
    */
-  public static final int OBJECT_TSCONFIGURATION_VALUE = 44;
+  public static final int OBJECT_TRANSFORM_VALUE = 44;
   /**
-   * <code>OBJECT_TSDICTIONARY = 45;</code>
+   * <code>OBJECT_TRIGGER = 45;</code>
    */
-  public static final int OBJECT_TSDICTIONARY_VALUE = 45;
+  public static final int OBJECT_TRIGGER_VALUE = 45;
   /**
-   * <code>OBJECT_TSPARSER = 46;</code>
+   * <code>OBJECT_TSCONFIGURATION = 46;</code>
    */
-  public static final int OBJECT_TSPARSER_VALUE = 46;
+  public static final int OBJECT_TSCONFIGURATION_VALUE = 46;
   /**
-   * <code>OBJECT_TSTEMPLATE = 47;</code>
+   * <code>OBJECT_TSDICTIONARY = 47;</code>
    */
-  public static final int OBJECT_TSTEMPLATE_VALUE = 47;
+  public static final int OBJECT_TSDICTIONARY_VALUE = 47;
   /**
-   * <code>OBJECT_TYPE = 48;</code>
+   * <code>OBJECT_TSPARSER = 48;</code>
    */
-  public static final int OBJECT_TYPE_VALUE = 48;
+  public static final int OBJECT_TSPARSER_VALUE = 48;
   /**
-   * <code>OBJECT_USER_MAPPING = 49;</code>
+   * <code>OBJECT_TSTEMPLATE = 49;</code>
    */
-  public static final int OBJECT_USER_MAPPING_VALUE = 49;
+  public static final int OBJECT_TSTEMPLATE_VALUE = 49;
   /**
-   * <code>OBJECT_VIEW = 50;</code>
+   * <code>OBJECT_TYPE = 50;</code>
    */
-  public static final int OBJECT_VIEW_VALUE = 50;
+  public static final int OBJECT_TYPE_VALUE = 50;
+  /**
+   * <code>OBJECT_USER_MAPPING = 51;</code>
+   */
+  public static final int OBJECT_USER_MAPPING_VALUE = 51;
+  /**
+   * <code>OBJECT_VIEW = 52;</code>
+   */
+  public static final int OBJECT_VIEW_VALUE = 52;
 
 
   public final int getNumber() {
@@ -473,29 +489,31 @@ public enum ObjectType
       case 25: return OBJECT_OPCLASS;
       case 26: return OBJECT_OPERATOR;
       case 27: return OBJECT_OPFAMILY;
-      case 28: return OBJECT_POLICY;
-      case 29: return OBJECT_PROCEDURE;
-      case 30: return OBJECT_PUBLICATION;
-      case 31: return OBJECT_PUBLICATION_REL;
-      case 32: return OBJECT_ROLE;
-      case 33: return OBJECT_ROUTINE;
-      case 34: return OBJECT_RULE;
-      case 35: return OBJECT_SCHEMA;
-      case 36: return OBJECT_SEQUENCE;
-      case 37: return OBJECT_SUBSCRIPTION;
-      case 38: return OBJECT_STATISTIC_EXT;
-      case 39: return OBJECT_TABCONSTRAINT;
-      case 40: return OBJECT_TABLE;
-      case 41: return OBJECT_TABLESPACE;
-      case 42: return OBJECT_TRANSFORM;
-      case 43: return OBJECT_TRIGGER;
-      case 44: return OBJECT_TSCONFIGURATION;
-      case 45: return OBJECT_TSDICTIONARY;
-      case 46: return OBJECT_TSPARSER;
-      case 47: return OBJECT_TSTEMPLATE;
-      case 48: return OBJECT_TYPE;
-      case 49: return OBJECT_USER_MAPPING;
-      case 50: return OBJECT_VIEW;
+      case 28: return OBJECT_PARAMETER_ACL;
+      case 29: return OBJECT_POLICY;
+      case 30: return OBJECT_PROCEDURE;
+      case 31: return OBJECT_PUBLICATION;
+      case 32: return OBJECT_PUBLICATION_NAMESPACE;
+      case 33: return OBJECT_PUBLICATION_REL;
+      case 34: return OBJECT_ROLE;
+      case 35: return OBJECT_ROUTINE;
+      case 36: return OBJECT_RULE;
+      case 37: return OBJECT_SCHEMA;
+      case 38: return OBJECT_SEQUENCE;
+      case 39: return OBJECT_SUBSCRIPTION;
+      case 40: return OBJECT_STATISTIC_EXT;
+      case 41: return OBJECT_TABCONSTRAINT;
+      case 42: return OBJECT_TABLE;
+      case 43: return OBJECT_TABLESPACE;
+      case 44: return OBJECT_TRANSFORM;
+      case 45: return OBJECT_TRIGGER;
+      case 46: return OBJECT_TSCONFIGURATION;
+      case 47: return OBJECT_TSDICTIONARY;
+      case 48: return OBJECT_TSPARSER;
+      case 49: return OBJECT_TSTEMPLATE;
+      case 50: return OBJECT_TYPE;
+      case 51: return OBJECT_USER_MAPPING;
+      case 52: return OBJECT_VIEW;
       default: return null;
     }
   }
@@ -526,7 +544,7 @@ public enum ObjectType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(14);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(15);
   }
 
   private static final ObjectType[] VALUES = values();

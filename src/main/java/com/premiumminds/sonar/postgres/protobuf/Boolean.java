@@ -4,25 +4,25 @@
 package com.premiumminds.sonar.postgres.protobuf;
 
 /**
- * Protobuf type {@code pg_query.Expr}
+ * Protobuf type {@code pg_query.Boolean}
  */
-public final class Expr extends
+public final class Boolean extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:pg_query.Expr)
-    ExprOrBuilder {
+    // @@protoc_insertion_point(message_implements:pg_query.Boolean)
+    BooleanOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Expr.newBuilder() to construct.
-  private Expr(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use Boolean.newBuilder() to construct.
+  private Boolean(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Expr() {
+  private Boolean() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Expr();
+    return new Boolean();
   }
 
   @java.lang.Override
@@ -30,56 +30,28 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Expr(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Expr_descriptor;
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Boolean_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Expr_fieldAccessorTable
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Boolean_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.premiumminds.sonar.postgres.protobuf.Expr.class, com.premiumminds.sonar.postgres.protobuf.Expr.Builder.class);
+            com.premiumminds.sonar.postgres.protobuf.Boolean.class, com.premiumminds.sonar.postgres.protobuf.Boolean.Builder.class);
+  }
+
+  public static final int BOOLVAL_FIELD_NUMBER = 1;
+  private boolean boolval_ = false;
+  /**
+   * <code>bool boolval = 1;</code>
+   * @return The boolval.
+   */
+  @java.lang.Override
+  public boolean getBoolval() {
+    return boolval_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -96,7 +68,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    unknownFields.writeTo(output);
+    if (boolval_ != false) {
+      output.writeBool(1, boolval_);
+    }
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -105,7 +80,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    size += unknownFields.getSerializedSize();
+    if (boolval_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(1, boolval_);
+    }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -115,12 +94,14 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.premiumminds.sonar.postgres.protobuf.Expr)) {
+    if (!(obj instanceof com.premiumminds.sonar.postgres.protobuf.Boolean)) {
       return super.equals(obj);
     }
-    com.premiumminds.sonar.postgres.protobuf.Expr other = (com.premiumminds.sonar.postgres.protobuf.Expr) obj;
+    com.premiumminds.sonar.postgres.protobuf.Boolean other = (com.premiumminds.sonar.postgres.protobuf.Boolean) obj;
 
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (getBoolval()
+        != other.getBoolval()) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -131,74 +112,77 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (37 * hash) + BOOLVAL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getBoolval());
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseFrom(
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseFrom(
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseFrom(
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseFrom(
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseFrom(byte[] data)
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseFrom(
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseFrom(java.io.InputStream input)
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseFrom(
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseDelimitedFrom(java.io.InputStream input)
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseDelimitedFrom(
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseFrom(
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.premiumminds.sonar.postgres.protobuf.Expr parseFrom(
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -211,7 +195,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.premiumminds.sonar.postgres.protobuf.Expr prototype) {
+  public static Builder newBuilder(com.premiumminds.sonar.postgres.protobuf.Boolean prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -227,60 +211,57 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code pg_query.Expr}
+   * Protobuf type {@code pg_query.Boolean}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:pg_query.Expr)
-      com.premiumminds.sonar.postgres.protobuf.ExprOrBuilder {
+      // @@protoc_insertion_point(builder_implements:pg_query.Boolean)
+      com.premiumminds.sonar.postgres.protobuf.BooleanOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Expr_descriptor;
+      return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Boolean_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Expr_fieldAccessorTable
+      return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Boolean_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.premiumminds.sonar.postgres.protobuf.Expr.class, com.premiumminds.sonar.postgres.protobuf.Expr.Builder.class);
+              com.premiumminds.sonar.postgres.protobuf.Boolean.class, com.premiumminds.sonar.postgres.protobuf.Boolean.Builder.class);
     }
 
-    // Construct using com.premiumminds.sonar.postgres.protobuf.Expr.newBuilder()
+    // Construct using com.premiumminds.sonar.postgres.protobuf.Boolean.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      boolval_ = false;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Expr_descriptor;
+      return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Boolean_descriptor;
     }
 
     @java.lang.Override
-    public com.premiumminds.sonar.postgres.protobuf.Expr getDefaultInstanceForType() {
-      return com.premiumminds.sonar.postgres.protobuf.Expr.getDefaultInstance();
+    public com.premiumminds.sonar.postgres.protobuf.Boolean getDefaultInstanceForType() {
+      return com.premiumminds.sonar.postgres.protobuf.Boolean.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.premiumminds.sonar.postgres.protobuf.Expr build() {
-      com.premiumminds.sonar.postgres.protobuf.Expr result = buildPartial();
+    public com.premiumminds.sonar.postgres.protobuf.Boolean build() {
+      com.premiumminds.sonar.postgres.protobuf.Boolean result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -288,10 +269,18 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.premiumminds.sonar.postgres.protobuf.Expr buildPartial() {
-      com.premiumminds.sonar.postgres.protobuf.Expr result = new com.premiumminds.sonar.postgres.protobuf.Expr(this);
+    public com.premiumminds.sonar.postgres.protobuf.Boolean buildPartial() {
+      com.premiumminds.sonar.postgres.protobuf.Boolean result = new com.premiumminds.sonar.postgres.protobuf.Boolean(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.Boolean result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.boolval_ = boolval_;
+      }
     }
 
     @java.lang.Override
@@ -328,17 +317,20 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.premiumminds.sonar.postgres.protobuf.Expr) {
-        return mergeFrom((com.premiumminds.sonar.postgres.protobuf.Expr)other);
+      if (other instanceof com.premiumminds.sonar.postgres.protobuf.Boolean) {
+        return mergeFrom((com.premiumminds.sonar.postgres.protobuf.Boolean)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.premiumminds.sonar.postgres.protobuf.Expr other) {
-      if (other == com.premiumminds.sonar.postgres.protobuf.Expr.getDefaultInstance()) return this;
-      this.mergeUnknownFields(other.unknownFields);
+    public Builder mergeFrom(com.premiumminds.sonar.postgres.protobuf.Boolean other) {
+      if (other == com.premiumminds.sonar.postgres.protobuf.Boolean.getDefaultInstance()) return this;
+      if (other.getBoolval() != false) {
+        setBoolval(other.getBoolval());
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -353,17 +345,68 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.premiumminds.sonar.postgres.protobuf.Expr parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              boolval_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.premiumminds.sonar.postgres.protobuf.Expr) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private boolean boolval_ ;
+    /**
+     * <code>bool boolval = 1;</code>
+     * @return The boolval.
+     */
+    @java.lang.Override
+    public boolean getBoolval() {
+      return boolval_;
+    }
+    /**
+     * <code>bool boolval = 1;</code>
+     * @param value The boolval to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBoolval(boolean value) {
+      
+      boolval_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool boolval = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBoolval() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      boolval_ = false;
+      onChanged();
       return this;
     }
     @java.lang.Override
@@ -379,41 +422,52 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:pg_query.Expr)
+    // @@protoc_insertion_point(builder_scope:pg_query.Boolean)
   }
 
-  // @@protoc_insertion_point(class_scope:pg_query.Expr)
-  private static final com.premiumminds.sonar.postgres.protobuf.Expr DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:pg_query.Boolean)
+  private static final com.premiumminds.sonar.postgres.protobuf.Boolean DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.premiumminds.sonar.postgres.protobuf.Expr();
+    DEFAULT_INSTANCE = new com.premiumminds.sonar.postgres.protobuf.Boolean();
   }
 
-  public static com.premiumminds.sonar.postgres.protobuf.Expr getDefaultInstance() {
+  public static com.premiumminds.sonar.postgres.protobuf.Boolean getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Expr>
-      PARSER = new com.google.protobuf.AbstractParser<Expr>() {
+  private static final com.google.protobuf.Parser<Boolean>
+      PARSER = new com.google.protobuf.AbstractParser<Boolean>() {
     @java.lang.Override
-    public Expr parsePartialFrom(
+    public Boolean parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Expr(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 
-  public static com.google.protobuf.Parser<Expr> parser() {
+  public static com.google.protobuf.Parser<Boolean> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Expr> getParserForType() {
+  public com.google.protobuf.Parser<Boolean> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.premiumminds.sonar.postgres.protobuf.Expr getDefaultInstanceForType() {
+  public com.premiumminds.sonar.postgres.protobuf.Boolean getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

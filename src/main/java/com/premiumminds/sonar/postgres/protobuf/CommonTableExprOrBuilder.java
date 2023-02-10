@@ -70,115 +70,145 @@ public interface CommonTableExprOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getCtequeryOrBuilder();
 
   /**
-   * <code>int32 location = 5 [json_name = "location"];</code>
+   * <code>.pg_query.CTESearchClause search_clause = 5 [json_name = "search_clause"];</code>
+   * @return Whether the searchClause field is set.
+   */
+  boolean hasSearchClause();
+  /**
+   * <code>.pg_query.CTESearchClause search_clause = 5 [json_name = "search_clause"];</code>
+   * @return The searchClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CTESearchClause getSearchClause();
+  /**
+   * <code>.pg_query.CTESearchClause search_clause = 5 [json_name = "search_clause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CTESearchClauseOrBuilder getSearchClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.CTECycleClause cycle_clause = 6 [json_name = "cycle_clause"];</code>
+   * @return Whether the cycleClause field is set.
+   */
+  boolean hasCycleClause();
+  /**
+   * <code>.pg_query.CTECycleClause cycle_clause = 6 [json_name = "cycle_clause"];</code>
+   * @return The cycleClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CTECycleClause getCycleClause();
+  /**
+   * <code>.pg_query.CTECycleClause cycle_clause = 6 [json_name = "cycle_clause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CTECycleClauseOrBuilder getCycleClauseOrBuilder();
+
+  /**
+   * <code>int32 location = 7 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();
 
   /**
-   * <code>bool cterecursive = 6 [json_name = "cterecursive"];</code>
+   * <code>bool cterecursive = 8 [json_name = "cterecursive"];</code>
    * @return The cterecursive.
    */
   boolean getCterecursive();
 
   /**
-   * <code>int32 cterefcount = 7 [json_name = "cterefcount"];</code>
+   * <code>int32 cterefcount = 9 [json_name = "cterefcount"];</code>
    * @return The cterefcount.
    */
   int getCterefcount();
 
   /**
-   * <code>repeated .pg_query.Node ctecolnames = 8 [json_name = "ctecolnames"];</code>
+   * <code>repeated .pg_query.Node ctecolnames = 10 [json_name = "ctecolnames"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getCtecolnamesList();
   /**
-   * <code>repeated .pg_query.Node ctecolnames = 8 [json_name = "ctecolnames"];</code>
+   * <code>repeated .pg_query.Node ctecolnames = 10 [json_name = "ctecolnames"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getCtecolnames(int index);
   /**
-   * <code>repeated .pg_query.Node ctecolnames = 8 [json_name = "ctecolnames"];</code>
+   * <code>repeated .pg_query.Node ctecolnames = 10 [json_name = "ctecolnames"];</code>
    */
   int getCtecolnamesCount();
   /**
-   * <code>repeated .pg_query.Node ctecolnames = 8 [json_name = "ctecolnames"];</code>
+   * <code>repeated .pg_query.Node ctecolnames = 10 [json_name = "ctecolnames"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getCtecolnamesOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node ctecolnames = 8 [json_name = "ctecolnames"];</code>
+   * <code>repeated .pg_query.Node ctecolnames = 10 [json_name = "ctecolnames"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getCtecolnamesOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node ctecoltypes = 9 [json_name = "ctecoltypes"];</code>
+   * <code>repeated .pg_query.Node ctecoltypes = 11 [json_name = "ctecoltypes"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getCtecoltypesList();
   /**
-   * <code>repeated .pg_query.Node ctecoltypes = 9 [json_name = "ctecoltypes"];</code>
+   * <code>repeated .pg_query.Node ctecoltypes = 11 [json_name = "ctecoltypes"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getCtecoltypes(int index);
   /**
-   * <code>repeated .pg_query.Node ctecoltypes = 9 [json_name = "ctecoltypes"];</code>
+   * <code>repeated .pg_query.Node ctecoltypes = 11 [json_name = "ctecoltypes"];</code>
    */
   int getCtecoltypesCount();
   /**
-   * <code>repeated .pg_query.Node ctecoltypes = 9 [json_name = "ctecoltypes"];</code>
+   * <code>repeated .pg_query.Node ctecoltypes = 11 [json_name = "ctecoltypes"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getCtecoltypesOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node ctecoltypes = 9 [json_name = "ctecoltypes"];</code>
+   * <code>repeated .pg_query.Node ctecoltypes = 11 [json_name = "ctecoltypes"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getCtecoltypesOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node ctecoltypmods = 10 [json_name = "ctecoltypmods"];</code>
+   * <code>repeated .pg_query.Node ctecoltypmods = 12 [json_name = "ctecoltypmods"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getCtecoltypmodsList();
   /**
-   * <code>repeated .pg_query.Node ctecoltypmods = 10 [json_name = "ctecoltypmods"];</code>
+   * <code>repeated .pg_query.Node ctecoltypmods = 12 [json_name = "ctecoltypmods"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getCtecoltypmods(int index);
   /**
-   * <code>repeated .pg_query.Node ctecoltypmods = 10 [json_name = "ctecoltypmods"];</code>
+   * <code>repeated .pg_query.Node ctecoltypmods = 12 [json_name = "ctecoltypmods"];</code>
    */
   int getCtecoltypmodsCount();
   /**
-   * <code>repeated .pg_query.Node ctecoltypmods = 10 [json_name = "ctecoltypmods"];</code>
+   * <code>repeated .pg_query.Node ctecoltypmods = 12 [json_name = "ctecoltypmods"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getCtecoltypmodsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node ctecoltypmods = 10 [json_name = "ctecoltypmods"];</code>
+   * <code>repeated .pg_query.Node ctecoltypmods = 12 [json_name = "ctecoltypmods"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getCtecoltypmodsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node ctecolcollations = 11 [json_name = "ctecolcollations"];</code>
+   * <code>repeated .pg_query.Node ctecolcollations = 13 [json_name = "ctecolcollations"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getCtecolcollationsList();
   /**
-   * <code>repeated .pg_query.Node ctecolcollations = 11 [json_name = "ctecolcollations"];</code>
+   * <code>repeated .pg_query.Node ctecolcollations = 13 [json_name = "ctecolcollations"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getCtecolcollations(int index);
   /**
-   * <code>repeated .pg_query.Node ctecolcollations = 11 [json_name = "ctecolcollations"];</code>
+   * <code>repeated .pg_query.Node ctecolcollations = 13 [json_name = "ctecolcollations"];</code>
    */
   int getCtecolcollationsCount();
   /**
-   * <code>repeated .pg_query.Node ctecolcollations = 11 [json_name = "ctecolcollations"];</code>
+   * <code>repeated .pg_query.Node ctecolcollations = 13 [json_name = "ctecolcollations"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getCtecolcollationsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node ctecolcollations = 11 [json_name = "ctecolcollations"];</code>
+   * <code>repeated .pg_query.Node ctecolcollations = 13 [json_name = "ctecolcollations"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getCtecolcollationsOrBuilder(
       int index);

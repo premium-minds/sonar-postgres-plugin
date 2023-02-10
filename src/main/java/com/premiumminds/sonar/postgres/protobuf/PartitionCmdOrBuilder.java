@@ -36,4 +36,10 @@ public interface PartitionCmdOrBuilder extends
    * <code>.pg_query.PartitionBoundSpec bound = 2 [json_name = "bound"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionBoundSpecOrBuilder getBoundOrBuilder();
+
+  /**
+   * <code>bool concurrent = 3 [json_name = "concurrent"];</code>
+   * @return The concurrent.
+   */
+  boolean getConcurrent();
 }

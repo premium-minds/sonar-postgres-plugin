@@ -17,37 +17,41 @@ public enum TableLikeOption
    */
   CREATE_TABLE_LIKE_COMMENTS(1),
   /**
-   * <code>CREATE_TABLE_LIKE_CONSTRAINTS = 2;</code>
+   * <code>CREATE_TABLE_LIKE_COMPRESSION = 2;</code>
    */
-  CREATE_TABLE_LIKE_CONSTRAINTS(2),
+  CREATE_TABLE_LIKE_COMPRESSION(2),
   /**
-   * <code>CREATE_TABLE_LIKE_DEFAULTS = 3;</code>
+   * <code>CREATE_TABLE_LIKE_CONSTRAINTS = 3;</code>
    */
-  CREATE_TABLE_LIKE_DEFAULTS(3),
+  CREATE_TABLE_LIKE_CONSTRAINTS(3),
   /**
-   * <code>CREATE_TABLE_LIKE_GENERATED = 4;</code>
+   * <code>CREATE_TABLE_LIKE_DEFAULTS = 4;</code>
    */
-  CREATE_TABLE_LIKE_GENERATED(4),
+  CREATE_TABLE_LIKE_DEFAULTS(4),
   /**
-   * <code>CREATE_TABLE_LIKE_IDENTITY = 5;</code>
+   * <code>CREATE_TABLE_LIKE_GENERATED = 5;</code>
    */
-  CREATE_TABLE_LIKE_IDENTITY(5),
+  CREATE_TABLE_LIKE_GENERATED(5),
   /**
-   * <code>CREATE_TABLE_LIKE_INDEXES = 6;</code>
+   * <code>CREATE_TABLE_LIKE_IDENTITY = 6;</code>
    */
-  CREATE_TABLE_LIKE_INDEXES(6),
+  CREATE_TABLE_LIKE_IDENTITY(6),
   /**
-   * <code>CREATE_TABLE_LIKE_STATISTICS = 7;</code>
+   * <code>CREATE_TABLE_LIKE_INDEXES = 7;</code>
    */
-  CREATE_TABLE_LIKE_STATISTICS(7),
+  CREATE_TABLE_LIKE_INDEXES(7),
   /**
-   * <code>CREATE_TABLE_LIKE_STORAGE = 8;</code>
+   * <code>CREATE_TABLE_LIKE_STATISTICS = 8;</code>
    */
-  CREATE_TABLE_LIKE_STORAGE(8),
+  CREATE_TABLE_LIKE_STATISTICS(8),
   /**
-   * <code>CREATE_TABLE_LIKE_ALL = 9;</code>
+   * <code>CREATE_TABLE_LIKE_STORAGE = 9;</code>
    */
-  CREATE_TABLE_LIKE_ALL(9),
+  CREATE_TABLE_LIKE_STORAGE(9),
+  /**
+   * <code>CREATE_TABLE_LIKE_ALL = 10;</code>
+   */
+  CREATE_TABLE_LIKE_ALL(10),
   UNRECOGNIZED(-1),
   ;
 
@@ -60,37 +64,41 @@ public enum TableLikeOption
    */
   public static final int CREATE_TABLE_LIKE_COMMENTS_VALUE = 1;
   /**
-   * <code>CREATE_TABLE_LIKE_CONSTRAINTS = 2;</code>
+   * <code>CREATE_TABLE_LIKE_COMPRESSION = 2;</code>
    */
-  public static final int CREATE_TABLE_LIKE_CONSTRAINTS_VALUE = 2;
+  public static final int CREATE_TABLE_LIKE_COMPRESSION_VALUE = 2;
   /**
-   * <code>CREATE_TABLE_LIKE_DEFAULTS = 3;</code>
+   * <code>CREATE_TABLE_LIKE_CONSTRAINTS = 3;</code>
    */
-  public static final int CREATE_TABLE_LIKE_DEFAULTS_VALUE = 3;
+  public static final int CREATE_TABLE_LIKE_CONSTRAINTS_VALUE = 3;
   /**
-   * <code>CREATE_TABLE_LIKE_GENERATED = 4;</code>
+   * <code>CREATE_TABLE_LIKE_DEFAULTS = 4;</code>
    */
-  public static final int CREATE_TABLE_LIKE_GENERATED_VALUE = 4;
+  public static final int CREATE_TABLE_LIKE_DEFAULTS_VALUE = 4;
   /**
-   * <code>CREATE_TABLE_LIKE_IDENTITY = 5;</code>
+   * <code>CREATE_TABLE_LIKE_GENERATED = 5;</code>
    */
-  public static final int CREATE_TABLE_LIKE_IDENTITY_VALUE = 5;
+  public static final int CREATE_TABLE_LIKE_GENERATED_VALUE = 5;
   /**
-   * <code>CREATE_TABLE_LIKE_INDEXES = 6;</code>
+   * <code>CREATE_TABLE_LIKE_IDENTITY = 6;</code>
    */
-  public static final int CREATE_TABLE_LIKE_INDEXES_VALUE = 6;
+  public static final int CREATE_TABLE_LIKE_IDENTITY_VALUE = 6;
   /**
-   * <code>CREATE_TABLE_LIKE_STATISTICS = 7;</code>
+   * <code>CREATE_TABLE_LIKE_INDEXES = 7;</code>
    */
-  public static final int CREATE_TABLE_LIKE_STATISTICS_VALUE = 7;
+  public static final int CREATE_TABLE_LIKE_INDEXES_VALUE = 7;
   /**
-   * <code>CREATE_TABLE_LIKE_STORAGE = 8;</code>
+   * <code>CREATE_TABLE_LIKE_STATISTICS = 8;</code>
    */
-  public static final int CREATE_TABLE_LIKE_STORAGE_VALUE = 8;
+  public static final int CREATE_TABLE_LIKE_STATISTICS_VALUE = 8;
   /**
-   * <code>CREATE_TABLE_LIKE_ALL = 9;</code>
+   * <code>CREATE_TABLE_LIKE_STORAGE = 9;</code>
    */
-  public static final int CREATE_TABLE_LIKE_ALL_VALUE = 9;
+  public static final int CREATE_TABLE_LIKE_STORAGE_VALUE = 9;
+  /**
+   * <code>CREATE_TABLE_LIKE_ALL = 10;</code>
+   */
+  public static final int CREATE_TABLE_LIKE_ALL_VALUE = 10;
 
 
   public final int getNumber() {
@@ -119,14 +127,15 @@ public enum TableLikeOption
     switch (value) {
       case 0: return TABLE_LIKE_OPTION_UNDEFINED;
       case 1: return CREATE_TABLE_LIKE_COMMENTS;
-      case 2: return CREATE_TABLE_LIKE_CONSTRAINTS;
-      case 3: return CREATE_TABLE_LIKE_DEFAULTS;
-      case 4: return CREATE_TABLE_LIKE_GENERATED;
-      case 5: return CREATE_TABLE_LIKE_IDENTITY;
-      case 6: return CREATE_TABLE_LIKE_INDEXES;
-      case 7: return CREATE_TABLE_LIKE_STATISTICS;
-      case 8: return CREATE_TABLE_LIKE_STORAGE;
-      case 9: return CREATE_TABLE_LIKE_ALL;
+      case 2: return CREATE_TABLE_LIKE_COMPRESSION;
+      case 3: return CREATE_TABLE_LIKE_CONSTRAINTS;
+      case 4: return CREATE_TABLE_LIKE_DEFAULTS;
+      case 5: return CREATE_TABLE_LIKE_GENERATED;
+      case 6: return CREATE_TABLE_LIKE_IDENTITY;
+      case 7: return CREATE_TABLE_LIKE_INDEXES;
+      case 8: return CREATE_TABLE_LIKE_STATISTICS;
+      case 9: return CREATE_TABLE_LIKE_STORAGE;
+      case 10: return CREATE_TABLE_LIKE_ALL;
       default: return null;
     }
   }
@@ -157,7 +166,7 @@ public enum TableLikeOption
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(6);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(7);
   }
 
   private static final TableLikeOption[] VALUES = values();

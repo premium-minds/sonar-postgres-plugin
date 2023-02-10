@@ -30,103 +30,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Var(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.premiumminds.sonar.postgres.protobuf.Node.Builder subBuilder = null;
-            if (xpr_ != null) {
-              subBuilder = xpr_.toBuilder();
-            }
-            xpr_ = input.readMessage(com.premiumminds.sonar.postgres.protobuf.Node.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(xpr_);
-              xpr_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 16: {
-
-            varno_ = input.readUInt32();
-            break;
-          }
-          case 24: {
-
-            varattno_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            vartype_ = input.readUInt32();
-            break;
-          }
-          case 40: {
-
-            vartypmod_ = input.readInt32();
-            break;
-          }
-          case 48: {
-
-            varcollid_ = input.readUInt32();
-            break;
-          }
-          case 56: {
-
-            varlevelsup_ = input.readUInt32();
-            break;
-          }
-          case 64: {
-
-            varnosyn_ = input.readUInt32();
-            break;
-          }
-          case 72: {
-
-            varattnosyn_ = input.readInt32();
-            break;
-          }
-          case 80: {
-
-            location_ = input.readInt32();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_Var_descriptor;
@@ -163,13 +66,13 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getXprOrBuilder() {
-    return getXpr();
+    return xpr_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : xpr_;
   }
 
   public static final int VARNO_FIELD_NUMBER = 2;
-  private int varno_;
+  private int varno_ = 0;
   /**
-   * <code>uint32 varno = 2 [json_name = "varno"];</code>
+   * <code>int32 varno = 2 [json_name = "varno"];</code>
    * @return The varno.
    */
   @java.lang.Override
@@ -178,7 +81,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VARATTNO_FIELD_NUMBER = 3;
-  private int varattno_;
+  private int varattno_ = 0;
   /**
    * <code>int32 varattno = 3 [json_name = "varattno"];</code>
    * @return The varattno.
@@ -189,7 +92,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VARTYPE_FIELD_NUMBER = 4;
-  private int vartype_;
+  private int vartype_ = 0;
   /**
    * <code>uint32 vartype = 4 [json_name = "vartype"];</code>
    * @return The vartype.
@@ -200,7 +103,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VARTYPMOD_FIELD_NUMBER = 5;
-  private int vartypmod_;
+  private int vartypmod_ = 0;
   /**
    * <code>int32 vartypmod = 5 [json_name = "vartypmod"];</code>
    * @return The vartypmod.
@@ -211,7 +114,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VARCOLLID_FIELD_NUMBER = 6;
-  private int varcollid_;
+  private int varcollid_ = 0;
   /**
    * <code>uint32 varcollid = 6 [json_name = "varcollid"];</code>
    * @return The varcollid.
@@ -222,7 +125,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VARLEVELSUP_FIELD_NUMBER = 7;
-  private int varlevelsup_;
+  private int varlevelsup_ = 0;
   /**
    * <code>uint32 varlevelsup = 7 [json_name = "varlevelsup"];</code>
    * @return The varlevelsup.
@@ -233,7 +136,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VARNOSYN_FIELD_NUMBER = 8;
-  private int varnosyn_;
+  private int varnosyn_ = 0;
   /**
    * <code>uint32 varnosyn = 8 [json_name = "varnosyn"];</code>
    * @return The varnosyn.
@@ -244,7 +147,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VARATTNOSYN_FIELD_NUMBER = 9;
-  private int varattnosyn_;
+  private int varattnosyn_ = 0;
   /**
    * <code>int32 varattnosyn = 9 [json_name = "varattnosyn"];</code>
    * @return The varattnosyn.
@@ -255,7 +158,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCATION_FIELD_NUMBER = 10;
-  private int location_;
+  private int location_ = 0;
   /**
    * <code>int32 location = 10 [json_name = "location"];</code>
    * @return The location.
@@ -283,7 +186,7 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(1, getXpr());
     }
     if (varno_ != 0) {
-      output.writeUInt32(2, varno_);
+      output.writeInt32(2, varno_);
     }
     if (varattno_ != 0) {
       output.writeInt32(3, varattno_);
@@ -309,7 +212,7 @@ private static final long serialVersionUID = 0L;
     if (location_ != 0) {
       output.writeInt32(10, location_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -324,7 +227,7 @@ private static final long serialVersionUID = 0L;
     }
     if (varno_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(2, varno_);
+        .computeInt32Size(2, varno_);
     }
     if (varattno_ != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -358,7 +261,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(10, location_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -396,7 +299,7 @@ private static final long serialVersionUID = 0L;
         != other.getVarattnosyn()) return false;
     if (getLocation()
         != other.getLocation()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -429,7 +332,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getVarattnosyn();
     hash = (37 * hash) + LOCATION_FIELD_NUMBER;
     hash = (53 * hash) + getLocation();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -546,46 +449,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.premiumminds.sonar.postgres.protobuf.Var.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (xprBuilder_ == null) {
-        xpr_ = null;
-      } else {
-        xpr_ = null;
+      bitField0_ = 0;
+      xpr_ = null;
+      if (xprBuilder_ != null) {
+        xprBuilder_.dispose();
         xprBuilder_ = null;
       }
       varno_ = 0;
-
       varattno_ = 0;
-
       vartype_ = 0;
-
       vartypmod_ = 0;
-
       varcollid_ = 0;
-
       varlevelsup_ = 0;
-
       varnosyn_ = 0;
-
       varattnosyn_ = 0;
-
       location_ = 0;
-
       return this;
     }
 
@@ -612,22 +501,45 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.Var buildPartial() {
       com.premiumminds.sonar.postgres.protobuf.Var result = new com.premiumminds.sonar.postgres.protobuf.Var(this);
-      if (xprBuilder_ == null) {
-        result.xpr_ = xpr_;
-      } else {
-        result.xpr_ = xprBuilder_.build();
-      }
-      result.varno_ = varno_;
-      result.varattno_ = varattno_;
-      result.vartype_ = vartype_;
-      result.vartypmod_ = vartypmod_;
-      result.varcollid_ = varcollid_;
-      result.varlevelsup_ = varlevelsup_;
-      result.varnosyn_ = varnosyn_;
-      result.varattnosyn_ = varattnosyn_;
-      result.location_ = location_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.Var result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.xpr_ = xprBuilder_ == null
+            ? xpr_
+            : xprBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.varno_ = varno_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.varattno_ = varattno_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.vartype_ = vartype_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.vartypmod_ = vartypmod_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.varcollid_ = varcollid_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.varlevelsup_ = varlevelsup_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.varnosyn_ = varnosyn_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.varattnosyn_ = varattnosyn_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.location_ = location_;
+      }
     }
 
     @java.lang.Override
@@ -704,7 +616,7 @@ private static final long serialVersionUID = 0L;
       if (other.getLocation() != 0) {
         setLocation(other.getLocation());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -719,19 +631,85 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.premiumminds.sonar.postgres.protobuf.Var parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getXprFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              varno_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              varattno_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              vartype_ = input.readUInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              vartypmod_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              varcollid_ = input.readUInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              varlevelsup_ = input.readUInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              varnosyn_ = input.readUInt32();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              varattnosyn_ = input.readInt32();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 80: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.premiumminds.sonar.postgres.protobuf.Var) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.premiumminds.sonar.postgres.protobuf.Node xpr_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -741,7 +719,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the xpr field is set.
      */
     public boolean hasXpr() {
-      return xprBuilder_ != null || xpr_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.pg_query.Node xpr = 1 [json_name = "xpr"];</code>
@@ -763,11 +741,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         xpr_ = value;
-        onChanged();
       } else {
         xprBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -777,11 +755,11 @@ private static final long serialVersionUID = 0L;
         com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
       if (xprBuilder_ == null) {
         xpr_ = builderForValue.build();
-        onChanged();
       } else {
         xprBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -789,38 +767,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeXpr(com.premiumminds.sonar.postgres.protobuf.Node value) {
       if (xprBuilder_ == null) {
-        if (xpr_ != null) {
-          xpr_ =
-            com.premiumminds.sonar.postgres.protobuf.Node.newBuilder(xpr_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          xpr_ != null &&
+          xpr_ != com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance()) {
+          getXprBuilder().mergeFrom(value);
         } else {
           xpr_ = value;
         }
-        onChanged();
       } else {
         xprBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.pg_query.Node xpr = 1 [json_name = "xpr"];</code>
      */
     public Builder clearXpr() {
-      if (xprBuilder_ == null) {
-        xpr_ = null;
-        onChanged();
-      } else {
-        xpr_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      xpr_ = null;
+      if (xprBuilder_ != null) {
+        xprBuilder_.dispose();
         xprBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.pg_query.Node xpr = 1 [json_name = "xpr"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder getXprBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getXprFieldBuilder().getBuilder();
     }
@@ -854,7 +832,7 @@ private static final long serialVersionUID = 0L;
 
     private int varno_ ;
     /**
-     * <code>uint32 varno = 2 [json_name = "varno"];</code>
+     * <code>int32 varno = 2 [json_name = "varno"];</code>
      * @return The varno.
      */
     @java.lang.Override
@@ -862,22 +840,23 @@ private static final long serialVersionUID = 0L;
       return varno_;
     }
     /**
-     * <code>uint32 varno = 2 [json_name = "varno"];</code>
+     * <code>int32 varno = 2 [json_name = "varno"];</code>
      * @param value The varno to set.
      * @return This builder for chaining.
      */
     public Builder setVarno(int value) {
       
       varno_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 varno = 2 [json_name = "varno"];</code>
+     * <code>int32 varno = 2 [json_name = "varno"];</code>
      * @return This builder for chaining.
      */
     public Builder clearVarno() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       varno_ = 0;
       onChanged();
       return this;
@@ -900,6 +879,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVarattno(int value) {
       
       varattno_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -908,7 +888,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVarattno() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       varattno_ = 0;
       onChanged();
       return this;
@@ -931,6 +911,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVartype(int value) {
       
       vartype_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -939,7 +920,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVartype() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       vartype_ = 0;
       onChanged();
       return this;
@@ -962,6 +943,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVartypmod(int value) {
       
       vartypmod_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -970,7 +952,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVartypmod() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       vartypmod_ = 0;
       onChanged();
       return this;
@@ -993,6 +975,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVarcollid(int value) {
       
       varcollid_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1001,7 +984,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVarcollid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       varcollid_ = 0;
       onChanged();
       return this;
@@ -1024,6 +1007,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVarlevelsup(int value) {
       
       varlevelsup_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1032,7 +1016,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVarlevelsup() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       varlevelsup_ = 0;
       onChanged();
       return this;
@@ -1055,6 +1039,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVarnosyn(int value) {
       
       varnosyn_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1063,7 +1048,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVarnosyn() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       varnosyn_ = 0;
       onChanged();
       return this;
@@ -1086,6 +1071,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVarattnosyn(int value) {
       
       varattnosyn_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1094,7 +1080,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVarattnosyn() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       varattnosyn_ = 0;
       onChanged();
       return this;
@@ -1117,6 +1103,7 @@ private static final long serialVersionUID = 0L;
     public Builder setLocation(int value) {
       
       location_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1125,7 +1112,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       location_ = 0;
       onChanged();
       return this;
@@ -1163,7 +1150,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Var(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

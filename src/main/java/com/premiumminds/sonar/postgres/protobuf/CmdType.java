@@ -33,13 +33,17 @@ public enum CmdType
    */
   CMD_DELETE(5),
   /**
-   * <code>CMD_UTILITY = 6;</code>
+   * <code>CMD_MERGE = 6;</code>
    */
-  CMD_UTILITY(6),
+  CMD_MERGE(6),
   /**
-   * <code>CMD_NOTHING = 7;</code>
+   * <code>CMD_UTILITY = 7;</code>
    */
-  CMD_NOTHING(7),
+  CMD_UTILITY(7),
+  /**
+   * <code>CMD_NOTHING = 8;</code>
+   */
+  CMD_NOTHING(8),
   UNRECOGNIZED(-1),
   ;
 
@@ -68,13 +72,17 @@ public enum CmdType
    */
   public static final int CMD_DELETE_VALUE = 5;
   /**
-   * <code>CMD_UTILITY = 6;</code>
+   * <code>CMD_MERGE = 6;</code>
    */
-  public static final int CMD_UTILITY_VALUE = 6;
+  public static final int CMD_MERGE_VALUE = 6;
   /**
-   * <code>CMD_NOTHING = 7;</code>
+   * <code>CMD_UTILITY = 7;</code>
    */
-  public static final int CMD_NOTHING_VALUE = 7;
+  public static final int CMD_UTILITY_VALUE = 7;
+  /**
+   * <code>CMD_NOTHING = 8;</code>
+   */
+  public static final int CMD_NOTHING_VALUE = 8;
 
 
   public final int getNumber() {
@@ -107,8 +115,9 @@ public enum CmdType
       case 3: return CMD_UPDATE;
       case 4: return CMD_INSERT;
       case 5: return CMD_DELETE;
-      case 6: return CMD_UTILITY;
-      case 7: return CMD_NOTHING;
+      case 6: return CMD_MERGE;
+      case 7: return CMD_UTILITY;
+      case 8: return CMD_NOTHING;
       default: return null;
     }
   }
@@ -139,7 +148,7 @@ public enum CmdType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(44);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(46);
   }
 
   private static final CmdType[] VALUES = values();

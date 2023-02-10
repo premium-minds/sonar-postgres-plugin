@@ -37,12 +37,12 @@ public class RobustStatementsVisitorCheck extends AbstractVisitorCheck {
                 .map(y -> y.getList()
                         .getItemsList())
                 .flatMap(List::stream)
-                .map(x -> x.getString().getStr())
+                .map(x -> x.getString().getSval())
                 .collect(Collectors.toList());
 
         final List<String> schemas = dropStmt.getObjectsList()
                 .stream()
-                .map(y -> y.getString().getStr())
+                .map(y -> y.getString().getSval())
                 .collect(Collectors.toList());
 
         final List<String> domains = dropStmt.getObjectsList()
@@ -50,7 +50,7 @@ public class RobustStatementsVisitorCheck extends AbstractVisitorCheck {
                 .map(y -> y.getTypeName()
                         .getNamesList())
                 .flatMap(List::stream)
-                .map(x -> x.getString().getStr())
+                .map(x -> x.getString().getSval())
                 .collect(Collectors.toList());
 
         if(!dropStmt.getMissingOk()){
@@ -144,7 +144,7 @@ public class RobustStatementsVisitorCheck extends AbstractVisitorCheck {
     @Override
     public void visit(CreateTableAsStmt createTableAsStmt) {
 
-        final ObjectType relkind = createTableAsStmt.getRelkind();
+        final ObjectType relkind = createTableAsStmt.getObjtype();
         if (!createTableAsStmt.getIfNotExists()){
             switch (relkind){
                 case OBJECT_TABLE:
@@ -178,7 +178,7 @@ public class RobustStatementsVisitorCheck extends AbstractVisitorCheck {
     @Override
     public void visit(CreateStatsStmt createStatsStmt) {
         if (!createStatsStmt.getIfNotExists()){
-            final List<String> names = createStatsStmt.getDefnamesList().stream().map(node -> node.getString().getStr()).collect(Collectors.toList());
+            final List<String> names = createStatsStmt.getDefnamesList().stream().map(node -> node.getString().getSval()).collect(Collectors.toList());
             newIssue("Add IF NOT EXISTS to CREATE STATISTICS " + String.join(", ", names) );
         }
         super.visit(createStatsStmt);
@@ -202,7 +202,7 @@ public class RobustStatementsVisitorCheck extends AbstractVisitorCheck {
     @Override
     public void visit(AlterTableStmt alterTableStmt) {
         if(!alterTableStmt.getMissingOk()){
-            final ObjectType relkind = alterTableStmt.getRelkind();
+            final ObjectType relkind = alterTableStmt.getObjtype();
             switch (relkind){
                 case OBJECT_TABLE:
                     newIssue("Add IF EXISTS to ALTER TABLE " + alterTableStmt.getRelation().getRelname());
@@ -232,7 +232,7 @@ public class RobustStatementsVisitorCheck extends AbstractVisitorCheck {
     public void visit(CreateFunctionStmt createFunctionStmt) {
 
         if (!createFunctionStmt.getReplace()){
-            final List<String> names = createFunctionStmt.getFuncnameList().stream().map(x -> x.getString().getStr()).collect(Collectors.toList());
+            final List<String> names = createFunctionStmt.getFuncnameList().stream().map(x -> x.getString().getSval()).collect(Collectors.toList());
             newIssue("Add OR REPLACE to " + String.join(",", names));
         }
         super.visit(createFunctionStmt);

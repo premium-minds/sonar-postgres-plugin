@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private String() {
-    str_ = "";
+    sval_ = "";
   }
 
   @java.lang.Override
@@ -31,51 +31,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private String(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            str_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_String_descriptor;
@@ -89,26 +44,27 @@ private static final long serialVersionUID = 0L;
             com.premiumminds.sonar.postgres.protobuf.String.class, com.premiumminds.sonar.postgres.protobuf.String.Builder.class);
   }
 
-  public static final int STR_FIELD_NUMBER = 1;
-  private volatile java.lang.Object str_;
+  public static final int SVAL_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sval_ = "";
   /**
    * <pre>
    * string 
    * </pre>
    *
-   * <code>string str = 1;</code>
-   * @return The str.
+   * <code>string sval = 1;</code>
+   * @return The sval.
    */
   @java.lang.Override
-  public java.lang.String getStr() {
-    java.lang.Object ref = str_;
+  public java.lang.String getSval() {
+    java.lang.Object ref = sval_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      str_ = s;
+      sval_ = s;
       return s;
     }
   }
@@ -117,18 +73,18 @@ private static final long serialVersionUID = 0L;
    * string 
    * </pre>
    *
-   * <code>string str = 1;</code>
-   * @return The bytes for str.
+   * <code>string sval = 1;</code>
+   * @return The bytes for sval.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getStrBytes() {
-    java.lang.Object ref = str_;
+      getSvalBytes() {
+    java.lang.Object ref = sval_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      str_ = b;
+      sval_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -149,10 +105,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(str_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, str_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sval_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sval_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -161,10 +117,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(str_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, str_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sval_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sval_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -179,9 +135,9 @@ private static final long serialVersionUID = 0L;
     }
     com.premiumminds.sonar.postgres.protobuf.String other = (com.premiumminds.sonar.postgres.protobuf.String) obj;
 
-    if (!getStr()
-        .equals(other.getStr())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getSval()
+        .equals(other.getSval())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -192,9 +148,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + STR_FIELD_NUMBER;
-    hash = (53 * hash) + getStr().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (37 * hash) + SVAL_FIELD_NUMBER;
+    hash = (53 * hash) + getSval().hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -311,24 +267,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.premiumminds.sonar.postgres.protobuf.String.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      str_ = "";
-
+      bitField0_ = 0;
+      sval_ = "";
       return this;
     }
 
@@ -355,9 +306,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.String buildPartial() {
       com.premiumminds.sonar.postgres.protobuf.String result = new com.premiumminds.sonar.postgres.protobuf.String(this);
-      result.str_ = str_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.String result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.sval_ = sval_;
+      }
     }
 
     @java.lang.Override
@@ -404,11 +362,12 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.premiumminds.sonar.postgres.protobuf.String other) {
       if (other == com.premiumminds.sonar.postgres.protobuf.String.getDefaultInstance()) return this;
-      if (!other.getStr().isEmpty()) {
-        str_ = other.str_;
+      if (!other.getSval().isEmpty()) {
+        sval_ = other.sval_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -423,36 +382,55 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.premiumminds.sonar.postgres.protobuf.String parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              sval_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.premiumminds.sonar.postgres.protobuf.String) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
-    private java.lang.Object str_ = "";
+    private java.lang.Object sval_ = "";
     /**
      * <pre>
      * string 
      * </pre>
      *
-     * <code>string str = 1;</code>
-     * @return The str.
+     * <code>string sval = 1;</code>
+     * @return The sval.
      */
-    public java.lang.String getStr() {
-      java.lang.Object ref = str_;
+    public java.lang.String getSval() {
+      java.lang.Object ref = sval_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        str_ = s;
+        sval_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -463,17 +441,17 @@ private static final long serialVersionUID = 0L;
      * string 
      * </pre>
      *
-     * <code>string str = 1;</code>
-     * @return The bytes for str.
+     * <code>string sval = 1;</code>
+     * @return The bytes for sval.
      */
     public com.google.protobuf.ByteString
-        getStrBytes() {
-      java.lang.Object ref = str_;
+        getSvalBytes() {
+      java.lang.Object ref = sval_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        str_ = b;
+        sval_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -484,17 +462,15 @@ private static final long serialVersionUID = 0L;
      * string 
      * </pre>
      *
-     * <code>string str = 1;</code>
-     * @param value The str to set.
+     * <code>string sval = 1;</code>
+     * @param value The sval to set.
      * @return This builder for chaining.
      */
-    public Builder setStr(
+    public Builder setSval(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      str_ = value;
+      if (value == null) { throw new NullPointerException(); }
+      sval_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -503,12 +479,12 @@ private static final long serialVersionUID = 0L;
      * string 
      * </pre>
      *
-     * <code>string str = 1;</code>
+     * <code>string sval = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearStr() {
-      
-      str_ = getDefaultInstance().getStr();
+    public Builder clearSval() {
+      sval_ = getDefaultInstance().getSval();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -517,18 +493,16 @@ private static final long serialVersionUID = 0L;
      * string 
      * </pre>
      *
-     * <code>string str = 1;</code>
-     * @param value The bytes for str to set.
+     * <code>string sval = 1;</code>
+     * @param value The bytes for sval to set.
      * @return This builder for chaining.
      */
-    public Builder setStrBytes(
+    public Builder setSvalBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      str_ = value;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      sval_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -565,7 +539,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new String(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

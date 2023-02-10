@@ -65,221 +65,237 @@ public enum AlterTableType
    */
   AT_SetStorage(13),
   /**
-   * <code>AT_DropColumn = 14;</code>
+   * <code>AT_SetCompression = 14;</code>
    */
-  AT_DropColumn(14),
+  AT_SetCompression(14),
   /**
-   * <code>AT_DropColumnRecurse = 15;</code>
+   * <code>AT_DropColumn = 15;</code>
    */
-  AT_DropColumnRecurse(15),
+  AT_DropColumn(15),
   /**
-   * <code>AT_AddIndex = 16;</code>
+   * <code>AT_DropColumnRecurse = 16;</code>
    */
-  AT_AddIndex(16),
+  AT_DropColumnRecurse(16),
   /**
-   * <code>AT_ReAddIndex = 17;</code>
+   * <code>AT_AddIndex = 17;</code>
    */
-  AT_ReAddIndex(17),
+  AT_AddIndex(17),
   /**
-   * <code>AT_AddConstraint = 18;</code>
+   * <code>AT_ReAddIndex = 18;</code>
    */
-  AT_AddConstraint(18),
+  AT_ReAddIndex(18),
   /**
-   * <code>AT_AddConstraintRecurse = 19;</code>
+   * <code>AT_AddConstraint = 19;</code>
    */
-  AT_AddConstraintRecurse(19),
+  AT_AddConstraint(19),
   /**
-   * <code>AT_ReAddConstraint = 20;</code>
+   * <code>AT_AddConstraintRecurse = 20;</code>
    */
-  AT_ReAddConstraint(20),
+  AT_AddConstraintRecurse(20),
   /**
-   * <code>AT_ReAddDomainConstraint = 21;</code>
+   * <code>AT_ReAddConstraint = 21;</code>
    */
-  AT_ReAddDomainConstraint(21),
+  AT_ReAddConstraint(21),
   /**
-   * <code>AT_AlterConstraint = 22;</code>
+   * <code>AT_ReAddDomainConstraint = 22;</code>
    */
-  AT_AlterConstraint(22),
+  AT_ReAddDomainConstraint(22),
   /**
-   * <code>AT_ValidateConstraint = 23;</code>
+   * <code>AT_AlterConstraint = 23;</code>
    */
-  AT_ValidateConstraint(23),
+  AT_AlterConstraint(23),
   /**
-   * <code>AT_ValidateConstraintRecurse = 24;</code>
+   * <code>AT_ValidateConstraint = 24;</code>
    */
-  AT_ValidateConstraintRecurse(24),
+  AT_ValidateConstraint(24),
   /**
-   * <code>AT_AddIndexConstraint = 25;</code>
+   * <code>AT_ValidateConstraintRecurse = 25;</code>
    */
-  AT_AddIndexConstraint(25),
+  AT_ValidateConstraintRecurse(25),
   /**
-   * <code>AT_DropConstraint = 26;</code>
+   * <code>AT_AddIndexConstraint = 26;</code>
    */
-  AT_DropConstraint(26),
+  AT_AddIndexConstraint(26),
   /**
-   * <code>AT_DropConstraintRecurse = 27;</code>
+   * <code>AT_DropConstraint = 27;</code>
    */
-  AT_DropConstraintRecurse(27),
+  AT_DropConstraint(27),
   /**
-   * <code>AT_ReAddComment = 28;</code>
+   * <code>AT_DropConstraintRecurse = 28;</code>
    */
-  AT_ReAddComment(28),
+  AT_DropConstraintRecurse(28),
   /**
-   * <code>AT_AlterColumnType = 29;</code>
+   * <code>AT_ReAddComment = 29;</code>
    */
-  AT_AlterColumnType(29),
+  AT_ReAddComment(29),
   /**
-   * <code>AT_AlterColumnGenericOptions = 30;</code>
+   * <code>AT_AlterColumnType = 30;</code>
    */
-  AT_AlterColumnGenericOptions(30),
+  AT_AlterColumnType(30),
   /**
-   * <code>AT_ChangeOwner = 31;</code>
+   * <code>AT_AlterColumnGenericOptions = 31;</code>
    */
-  AT_ChangeOwner(31),
+  AT_AlterColumnGenericOptions(31),
   /**
-   * <code>AT_ClusterOn = 32;</code>
+   * <code>AT_ChangeOwner = 32;</code>
    */
-  AT_ClusterOn(32),
+  AT_ChangeOwner(32),
   /**
-   * <code>AT_DropCluster = 33;</code>
+   * <code>AT_ClusterOn = 33;</code>
    */
-  AT_DropCluster(33),
+  AT_ClusterOn(33),
   /**
-   * <code>AT_SetLogged = 34;</code>
+   * <code>AT_DropCluster = 34;</code>
    */
-  AT_SetLogged(34),
+  AT_DropCluster(34),
   /**
-   * <code>AT_SetUnLogged = 35;</code>
+   * <code>AT_SetLogged = 35;</code>
    */
-  AT_SetUnLogged(35),
+  AT_SetLogged(35),
   /**
-   * <code>AT_DropOids = 36;</code>
+   * <code>AT_SetUnLogged = 36;</code>
    */
-  AT_DropOids(36),
+  AT_SetUnLogged(36),
   /**
-   * <code>AT_SetTableSpace = 37;</code>
+   * <code>AT_DropOids = 37;</code>
    */
-  AT_SetTableSpace(37),
+  AT_DropOids(37),
   /**
-   * <code>AT_SetRelOptions = 38;</code>
+   * <code>AT_SetAccessMethod = 38;</code>
    */
-  AT_SetRelOptions(38),
+  AT_SetAccessMethod(38),
   /**
-   * <code>AT_ResetRelOptions = 39;</code>
+   * <code>AT_SetTableSpace = 39;</code>
    */
-  AT_ResetRelOptions(39),
+  AT_SetTableSpace(39),
   /**
-   * <code>AT_ReplaceRelOptions = 40;</code>
+   * <code>AT_SetRelOptions = 40;</code>
    */
-  AT_ReplaceRelOptions(40),
+  AT_SetRelOptions(40),
   /**
-   * <code>AT_EnableTrig = 41;</code>
+   * <code>AT_ResetRelOptions = 41;</code>
    */
-  AT_EnableTrig(41),
+  AT_ResetRelOptions(41),
   /**
-   * <code>AT_EnableAlwaysTrig = 42;</code>
+   * <code>AT_ReplaceRelOptions = 42;</code>
    */
-  AT_EnableAlwaysTrig(42),
+  AT_ReplaceRelOptions(42),
   /**
-   * <code>AT_EnableReplicaTrig = 43;</code>
+   * <code>AT_EnableTrig = 43;</code>
    */
-  AT_EnableReplicaTrig(43),
+  AT_EnableTrig(43),
   /**
-   * <code>AT_DisableTrig = 44;</code>
+   * <code>AT_EnableAlwaysTrig = 44;</code>
    */
-  AT_DisableTrig(44),
+  AT_EnableAlwaysTrig(44),
   /**
-   * <code>AT_EnableTrigAll = 45;</code>
+   * <code>AT_EnableReplicaTrig = 45;</code>
    */
-  AT_EnableTrigAll(45),
+  AT_EnableReplicaTrig(45),
   /**
-   * <code>AT_DisableTrigAll = 46;</code>
+   * <code>AT_DisableTrig = 46;</code>
    */
-  AT_DisableTrigAll(46),
+  AT_DisableTrig(46),
   /**
-   * <code>AT_EnableTrigUser = 47;</code>
+   * <code>AT_EnableTrigAll = 47;</code>
    */
-  AT_EnableTrigUser(47),
+  AT_EnableTrigAll(47),
   /**
-   * <code>AT_DisableTrigUser = 48;</code>
+   * <code>AT_DisableTrigAll = 48;</code>
    */
-  AT_DisableTrigUser(48),
+  AT_DisableTrigAll(48),
   /**
-   * <code>AT_EnableRule = 49;</code>
+   * <code>AT_EnableTrigUser = 49;</code>
    */
-  AT_EnableRule(49),
+  AT_EnableTrigUser(49),
   /**
-   * <code>AT_EnableAlwaysRule = 50;</code>
+   * <code>AT_DisableTrigUser = 50;</code>
    */
-  AT_EnableAlwaysRule(50),
+  AT_DisableTrigUser(50),
   /**
-   * <code>AT_EnableReplicaRule = 51;</code>
+   * <code>AT_EnableRule = 51;</code>
    */
-  AT_EnableReplicaRule(51),
+  AT_EnableRule(51),
   /**
-   * <code>AT_DisableRule = 52;</code>
+   * <code>AT_EnableAlwaysRule = 52;</code>
    */
-  AT_DisableRule(52),
+  AT_EnableAlwaysRule(52),
   /**
-   * <code>AT_AddInherit = 53;</code>
+   * <code>AT_EnableReplicaRule = 53;</code>
    */
-  AT_AddInherit(53),
+  AT_EnableReplicaRule(53),
   /**
-   * <code>AT_DropInherit = 54;</code>
+   * <code>AT_DisableRule = 54;</code>
    */
-  AT_DropInherit(54),
+  AT_DisableRule(54),
   /**
-   * <code>AT_AddOf = 55;</code>
+   * <code>AT_AddInherit = 55;</code>
    */
-  AT_AddOf(55),
+  AT_AddInherit(55),
   /**
-   * <code>AT_DropOf = 56;</code>
+   * <code>AT_DropInherit = 56;</code>
    */
-  AT_DropOf(56),
+  AT_DropInherit(56),
   /**
-   * <code>AT_ReplicaIdentity = 57;</code>
+   * <code>AT_AddOf = 57;</code>
    */
-  AT_ReplicaIdentity(57),
+  AT_AddOf(57),
   /**
-   * <code>AT_EnableRowSecurity = 58;</code>
+   * <code>AT_DropOf = 58;</code>
    */
-  AT_EnableRowSecurity(58),
+  AT_DropOf(58),
   /**
-   * <code>AT_DisableRowSecurity = 59;</code>
+   * <code>AT_ReplicaIdentity = 59;</code>
    */
-  AT_DisableRowSecurity(59),
+  AT_ReplicaIdentity(59),
   /**
-   * <code>AT_ForceRowSecurity = 60;</code>
+   * <code>AT_EnableRowSecurity = 60;</code>
    */
-  AT_ForceRowSecurity(60),
+  AT_EnableRowSecurity(60),
   /**
-   * <code>AT_NoForceRowSecurity = 61;</code>
+   * <code>AT_DisableRowSecurity = 61;</code>
    */
-  AT_NoForceRowSecurity(61),
+  AT_DisableRowSecurity(61),
   /**
-   * <code>AT_GenericOptions = 62;</code>
+   * <code>AT_ForceRowSecurity = 62;</code>
    */
-  AT_GenericOptions(62),
+  AT_ForceRowSecurity(62),
   /**
-   * <code>AT_AttachPartition = 63;</code>
+   * <code>AT_NoForceRowSecurity = 63;</code>
    */
-  AT_AttachPartition(63),
+  AT_NoForceRowSecurity(63),
   /**
-   * <code>AT_DetachPartition = 64;</code>
+   * <code>AT_GenericOptions = 64;</code>
    */
-  AT_DetachPartition(64),
+  AT_GenericOptions(64),
   /**
-   * <code>AT_AddIdentity = 65;</code>
+   * <code>AT_AttachPartition = 65;</code>
    */
-  AT_AddIdentity(65),
+  AT_AttachPartition(65),
   /**
-   * <code>AT_SetIdentity = 66;</code>
+   * <code>AT_DetachPartition = 66;</code>
    */
-  AT_SetIdentity(66),
+  AT_DetachPartition(66),
   /**
-   * <code>AT_DropIdentity = 67;</code>
+   * <code>AT_DetachPartitionFinalize = 67;</code>
    */
-  AT_DropIdentity(67),
+  AT_DetachPartitionFinalize(67),
+  /**
+   * <code>AT_AddIdentity = 68;</code>
+   */
+  AT_AddIdentity(68),
+  /**
+   * <code>AT_SetIdentity = 69;</code>
+   */
+  AT_SetIdentity(69),
+  /**
+   * <code>AT_DropIdentity = 70;</code>
+   */
+  AT_DropIdentity(70),
+  /**
+   * <code>AT_ReAddStatistics = 71;</code>
+   */
+  AT_ReAddStatistics(71),
   UNRECOGNIZED(-1),
   ;
 
@@ -340,221 +356,237 @@ public enum AlterTableType
    */
   public static final int AT_SetStorage_VALUE = 13;
   /**
-   * <code>AT_DropColumn = 14;</code>
+   * <code>AT_SetCompression = 14;</code>
    */
-  public static final int AT_DropColumn_VALUE = 14;
+  public static final int AT_SetCompression_VALUE = 14;
   /**
-   * <code>AT_DropColumnRecurse = 15;</code>
+   * <code>AT_DropColumn = 15;</code>
    */
-  public static final int AT_DropColumnRecurse_VALUE = 15;
+  public static final int AT_DropColumn_VALUE = 15;
   /**
-   * <code>AT_AddIndex = 16;</code>
+   * <code>AT_DropColumnRecurse = 16;</code>
    */
-  public static final int AT_AddIndex_VALUE = 16;
+  public static final int AT_DropColumnRecurse_VALUE = 16;
   /**
-   * <code>AT_ReAddIndex = 17;</code>
+   * <code>AT_AddIndex = 17;</code>
    */
-  public static final int AT_ReAddIndex_VALUE = 17;
+  public static final int AT_AddIndex_VALUE = 17;
   /**
-   * <code>AT_AddConstraint = 18;</code>
+   * <code>AT_ReAddIndex = 18;</code>
    */
-  public static final int AT_AddConstraint_VALUE = 18;
+  public static final int AT_ReAddIndex_VALUE = 18;
   /**
-   * <code>AT_AddConstraintRecurse = 19;</code>
+   * <code>AT_AddConstraint = 19;</code>
    */
-  public static final int AT_AddConstraintRecurse_VALUE = 19;
+  public static final int AT_AddConstraint_VALUE = 19;
   /**
-   * <code>AT_ReAddConstraint = 20;</code>
+   * <code>AT_AddConstraintRecurse = 20;</code>
    */
-  public static final int AT_ReAddConstraint_VALUE = 20;
+  public static final int AT_AddConstraintRecurse_VALUE = 20;
   /**
-   * <code>AT_ReAddDomainConstraint = 21;</code>
+   * <code>AT_ReAddConstraint = 21;</code>
    */
-  public static final int AT_ReAddDomainConstraint_VALUE = 21;
+  public static final int AT_ReAddConstraint_VALUE = 21;
   /**
-   * <code>AT_AlterConstraint = 22;</code>
+   * <code>AT_ReAddDomainConstraint = 22;</code>
    */
-  public static final int AT_AlterConstraint_VALUE = 22;
+  public static final int AT_ReAddDomainConstraint_VALUE = 22;
   /**
-   * <code>AT_ValidateConstraint = 23;</code>
+   * <code>AT_AlterConstraint = 23;</code>
    */
-  public static final int AT_ValidateConstraint_VALUE = 23;
+  public static final int AT_AlterConstraint_VALUE = 23;
   /**
-   * <code>AT_ValidateConstraintRecurse = 24;</code>
+   * <code>AT_ValidateConstraint = 24;</code>
    */
-  public static final int AT_ValidateConstraintRecurse_VALUE = 24;
+  public static final int AT_ValidateConstraint_VALUE = 24;
   /**
-   * <code>AT_AddIndexConstraint = 25;</code>
+   * <code>AT_ValidateConstraintRecurse = 25;</code>
    */
-  public static final int AT_AddIndexConstraint_VALUE = 25;
+  public static final int AT_ValidateConstraintRecurse_VALUE = 25;
   /**
-   * <code>AT_DropConstraint = 26;</code>
+   * <code>AT_AddIndexConstraint = 26;</code>
    */
-  public static final int AT_DropConstraint_VALUE = 26;
+  public static final int AT_AddIndexConstraint_VALUE = 26;
   /**
-   * <code>AT_DropConstraintRecurse = 27;</code>
+   * <code>AT_DropConstraint = 27;</code>
    */
-  public static final int AT_DropConstraintRecurse_VALUE = 27;
+  public static final int AT_DropConstraint_VALUE = 27;
   /**
-   * <code>AT_ReAddComment = 28;</code>
+   * <code>AT_DropConstraintRecurse = 28;</code>
    */
-  public static final int AT_ReAddComment_VALUE = 28;
+  public static final int AT_DropConstraintRecurse_VALUE = 28;
   /**
-   * <code>AT_AlterColumnType = 29;</code>
+   * <code>AT_ReAddComment = 29;</code>
    */
-  public static final int AT_AlterColumnType_VALUE = 29;
+  public static final int AT_ReAddComment_VALUE = 29;
   /**
-   * <code>AT_AlterColumnGenericOptions = 30;</code>
+   * <code>AT_AlterColumnType = 30;</code>
    */
-  public static final int AT_AlterColumnGenericOptions_VALUE = 30;
+  public static final int AT_AlterColumnType_VALUE = 30;
   /**
-   * <code>AT_ChangeOwner = 31;</code>
+   * <code>AT_AlterColumnGenericOptions = 31;</code>
    */
-  public static final int AT_ChangeOwner_VALUE = 31;
+  public static final int AT_AlterColumnGenericOptions_VALUE = 31;
   /**
-   * <code>AT_ClusterOn = 32;</code>
+   * <code>AT_ChangeOwner = 32;</code>
    */
-  public static final int AT_ClusterOn_VALUE = 32;
+  public static final int AT_ChangeOwner_VALUE = 32;
   /**
-   * <code>AT_DropCluster = 33;</code>
+   * <code>AT_ClusterOn = 33;</code>
    */
-  public static final int AT_DropCluster_VALUE = 33;
+  public static final int AT_ClusterOn_VALUE = 33;
   /**
-   * <code>AT_SetLogged = 34;</code>
+   * <code>AT_DropCluster = 34;</code>
    */
-  public static final int AT_SetLogged_VALUE = 34;
+  public static final int AT_DropCluster_VALUE = 34;
   /**
-   * <code>AT_SetUnLogged = 35;</code>
+   * <code>AT_SetLogged = 35;</code>
    */
-  public static final int AT_SetUnLogged_VALUE = 35;
+  public static final int AT_SetLogged_VALUE = 35;
   /**
-   * <code>AT_DropOids = 36;</code>
+   * <code>AT_SetUnLogged = 36;</code>
    */
-  public static final int AT_DropOids_VALUE = 36;
+  public static final int AT_SetUnLogged_VALUE = 36;
   /**
-   * <code>AT_SetTableSpace = 37;</code>
+   * <code>AT_DropOids = 37;</code>
    */
-  public static final int AT_SetTableSpace_VALUE = 37;
+  public static final int AT_DropOids_VALUE = 37;
   /**
-   * <code>AT_SetRelOptions = 38;</code>
+   * <code>AT_SetAccessMethod = 38;</code>
    */
-  public static final int AT_SetRelOptions_VALUE = 38;
+  public static final int AT_SetAccessMethod_VALUE = 38;
   /**
-   * <code>AT_ResetRelOptions = 39;</code>
+   * <code>AT_SetTableSpace = 39;</code>
    */
-  public static final int AT_ResetRelOptions_VALUE = 39;
+  public static final int AT_SetTableSpace_VALUE = 39;
   /**
-   * <code>AT_ReplaceRelOptions = 40;</code>
+   * <code>AT_SetRelOptions = 40;</code>
    */
-  public static final int AT_ReplaceRelOptions_VALUE = 40;
+  public static final int AT_SetRelOptions_VALUE = 40;
   /**
-   * <code>AT_EnableTrig = 41;</code>
+   * <code>AT_ResetRelOptions = 41;</code>
    */
-  public static final int AT_EnableTrig_VALUE = 41;
+  public static final int AT_ResetRelOptions_VALUE = 41;
   /**
-   * <code>AT_EnableAlwaysTrig = 42;</code>
+   * <code>AT_ReplaceRelOptions = 42;</code>
    */
-  public static final int AT_EnableAlwaysTrig_VALUE = 42;
+  public static final int AT_ReplaceRelOptions_VALUE = 42;
   /**
-   * <code>AT_EnableReplicaTrig = 43;</code>
+   * <code>AT_EnableTrig = 43;</code>
    */
-  public static final int AT_EnableReplicaTrig_VALUE = 43;
+  public static final int AT_EnableTrig_VALUE = 43;
   /**
-   * <code>AT_DisableTrig = 44;</code>
+   * <code>AT_EnableAlwaysTrig = 44;</code>
    */
-  public static final int AT_DisableTrig_VALUE = 44;
+  public static final int AT_EnableAlwaysTrig_VALUE = 44;
   /**
-   * <code>AT_EnableTrigAll = 45;</code>
+   * <code>AT_EnableReplicaTrig = 45;</code>
    */
-  public static final int AT_EnableTrigAll_VALUE = 45;
+  public static final int AT_EnableReplicaTrig_VALUE = 45;
   /**
-   * <code>AT_DisableTrigAll = 46;</code>
+   * <code>AT_DisableTrig = 46;</code>
    */
-  public static final int AT_DisableTrigAll_VALUE = 46;
+  public static final int AT_DisableTrig_VALUE = 46;
   /**
-   * <code>AT_EnableTrigUser = 47;</code>
+   * <code>AT_EnableTrigAll = 47;</code>
    */
-  public static final int AT_EnableTrigUser_VALUE = 47;
+  public static final int AT_EnableTrigAll_VALUE = 47;
   /**
-   * <code>AT_DisableTrigUser = 48;</code>
+   * <code>AT_DisableTrigAll = 48;</code>
    */
-  public static final int AT_DisableTrigUser_VALUE = 48;
+  public static final int AT_DisableTrigAll_VALUE = 48;
   /**
-   * <code>AT_EnableRule = 49;</code>
+   * <code>AT_EnableTrigUser = 49;</code>
    */
-  public static final int AT_EnableRule_VALUE = 49;
+  public static final int AT_EnableTrigUser_VALUE = 49;
   /**
-   * <code>AT_EnableAlwaysRule = 50;</code>
+   * <code>AT_DisableTrigUser = 50;</code>
    */
-  public static final int AT_EnableAlwaysRule_VALUE = 50;
+  public static final int AT_DisableTrigUser_VALUE = 50;
   /**
-   * <code>AT_EnableReplicaRule = 51;</code>
+   * <code>AT_EnableRule = 51;</code>
    */
-  public static final int AT_EnableReplicaRule_VALUE = 51;
+  public static final int AT_EnableRule_VALUE = 51;
   /**
-   * <code>AT_DisableRule = 52;</code>
+   * <code>AT_EnableAlwaysRule = 52;</code>
    */
-  public static final int AT_DisableRule_VALUE = 52;
+  public static final int AT_EnableAlwaysRule_VALUE = 52;
   /**
-   * <code>AT_AddInherit = 53;</code>
+   * <code>AT_EnableReplicaRule = 53;</code>
    */
-  public static final int AT_AddInherit_VALUE = 53;
+  public static final int AT_EnableReplicaRule_VALUE = 53;
   /**
-   * <code>AT_DropInherit = 54;</code>
+   * <code>AT_DisableRule = 54;</code>
    */
-  public static final int AT_DropInherit_VALUE = 54;
+  public static final int AT_DisableRule_VALUE = 54;
   /**
-   * <code>AT_AddOf = 55;</code>
+   * <code>AT_AddInherit = 55;</code>
    */
-  public static final int AT_AddOf_VALUE = 55;
+  public static final int AT_AddInherit_VALUE = 55;
   /**
-   * <code>AT_DropOf = 56;</code>
+   * <code>AT_DropInherit = 56;</code>
    */
-  public static final int AT_DropOf_VALUE = 56;
+  public static final int AT_DropInherit_VALUE = 56;
   /**
-   * <code>AT_ReplicaIdentity = 57;</code>
+   * <code>AT_AddOf = 57;</code>
    */
-  public static final int AT_ReplicaIdentity_VALUE = 57;
+  public static final int AT_AddOf_VALUE = 57;
   /**
-   * <code>AT_EnableRowSecurity = 58;</code>
+   * <code>AT_DropOf = 58;</code>
    */
-  public static final int AT_EnableRowSecurity_VALUE = 58;
+  public static final int AT_DropOf_VALUE = 58;
   /**
-   * <code>AT_DisableRowSecurity = 59;</code>
+   * <code>AT_ReplicaIdentity = 59;</code>
    */
-  public static final int AT_DisableRowSecurity_VALUE = 59;
+  public static final int AT_ReplicaIdentity_VALUE = 59;
   /**
-   * <code>AT_ForceRowSecurity = 60;</code>
+   * <code>AT_EnableRowSecurity = 60;</code>
    */
-  public static final int AT_ForceRowSecurity_VALUE = 60;
+  public static final int AT_EnableRowSecurity_VALUE = 60;
   /**
-   * <code>AT_NoForceRowSecurity = 61;</code>
+   * <code>AT_DisableRowSecurity = 61;</code>
    */
-  public static final int AT_NoForceRowSecurity_VALUE = 61;
+  public static final int AT_DisableRowSecurity_VALUE = 61;
   /**
-   * <code>AT_GenericOptions = 62;</code>
+   * <code>AT_ForceRowSecurity = 62;</code>
    */
-  public static final int AT_GenericOptions_VALUE = 62;
+  public static final int AT_ForceRowSecurity_VALUE = 62;
   /**
-   * <code>AT_AttachPartition = 63;</code>
+   * <code>AT_NoForceRowSecurity = 63;</code>
    */
-  public static final int AT_AttachPartition_VALUE = 63;
+  public static final int AT_NoForceRowSecurity_VALUE = 63;
   /**
-   * <code>AT_DetachPartition = 64;</code>
+   * <code>AT_GenericOptions = 64;</code>
    */
-  public static final int AT_DetachPartition_VALUE = 64;
+  public static final int AT_GenericOptions_VALUE = 64;
   /**
-   * <code>AT_AddIdentity = 65;</code>
+   * <code>AT_AttachPartition = 65;</code>
    */
-  public static final int AT_AddIdentity_VALUE = 65;
+  public static final int AT_AttachPartition_VALUE = 65;
   /**
-   * <code>AT_SetIdentity = 66;</code>
+   * <code>AT_DetachPartition = 66;</code>
    */
-  public static final int AT_SetIdentity_VALUE = 66;
+  public static final int AT_DetachPartition_VALUE = 66;
   /**
-   * <code>AT_DropIdentity = 67;</code>
+   * <code>AT_DetachPartitionFinalize = 67;</code>
    */
-  public static final int AT_DropIdentity_VALUE = 67;
+  public static final int AT_DetachPartitionFinalize_VALUE = 67;
+  /**
+   * <code>AT_AddIdentity = 68;</code>
+   */
+  public static final int AT_AddIdentity_VALUE = 68;
+  /**
+   * <code>AT_SetIdentity = 69;</code>
+   */
+  public static final int AT_SetIdentity_VALUE = 69;
+  /**
+   * <code>AT_DropIdentity = 70;</code>
+   */
+  public static final int AT_DropIdentity_VALUE = 70;
+  /**
+   * <code>AT_ReAddStatistics = 71;</code>
+   */
+  public static final int AT_ReAddStatistics_VALUE = 71;
 
 
   public final int getNumber() {
@@ -595,60 +627,64 @@ public enum AlterTableType
       case 11: return AT_SetOptions;
       case 12: return AT_ResetOptions;
       case 13: return AT_SetStorage;
-      case 14: return AT_DropColumn;
-      case 15: return AT_DropColumnRecurse;
-      case 16: return AT_AddIndex;
-      case 17: return AT_ReAddIndex;
-      case 18: return AT_AddConstraint;
-      case 19: return AT_AddConstraintRecurse;
-      case 20: return AT_ReAddConstraint;
-      case 21: return AT_ReAddDomainConstraint;
-      case 22: return AT_AlterConstraint;
-      case 23: return AT_ValidateConstraint;
-      case 24: return AT_ValidateConstraintRecurse;
-      case 25: return AT_AddIndexConstraint;
-      case 26: return AT_DropConstraint;
-      case 27: return AT_DropConstraintRecurse;
-      case 28: return AT_ReAddComment;
-      case 29: return AT_AlterColumnType;
-      case 30: return AT_AlterColumnGenericOptions;
-      case 31: return AT_ChangeOwner;
-      case 32: return AT_ClusterOn;
-      case 33: return AT_DropCluster;
-      case 34: return AT_SetLogged;
-      case 35: return AT_SetUnLogged;
-      case 36: return AT_DropOids;
-      case 37: return AT_SetTableSpace;
-      case 38: return AT_SetRelOptions;
-      case 39: return AT_ResetRelOptions;
-      case 40: return AT_ReplaceRelOptions;
-      case 41: return AT_EnableTrig;
-      case 42: return AT_EnableAlwaysTrig;
-      case 43: return AT_EnableReplicaTrig;
-      case 44: return AT_DisableTrig;
-      case 45: return AT_EnableTrigAll;
-      case 46: return AT_DisableTrigAll;
-      case 47: return AT_EnableTrigUser;
-      case 48: return AT_DisableTrigUser;
-      case 49: return AT_EnableRule;
-      case 50: return AT_EnableAlwaysRule;
-      case 51: return AT_EnableReplicaRule;
-      case 52: return AT_DisableRule;
-      case 53: return AT_AddInherit;
-      case 54: return AT_DropInherit;
-      case 55: return AT_AddOf;
-      case 56: return AT_DropOf;
-      case 57: return AT_ReplicaIdentity;
-      case 58: return AT_EnableRowSecurity;
-      case 59: return AT_DisableRowSecurity;
-      case 60: return AT_ForceRowSecurity;
-      case 61: return AT_NoForceRowSecurity;
-      case 62: return AT_GenericOptions;
-      case 63: return AT_AttachPartition;
-      case 64: return AT_DetachPartition;
-      case 65: return AT_AddIdentity;
-      case 66: return AT_SetIdentity;
-      case 67: return AT_DropIdentity;
+      case 14: return AT_SetCompression;
+      case 15: return AT_DropColumn;
+      case 16: return AT_DropColumnRecurse;
+      case 17: return AT_AddIndex;
+      case 18: return AT_ReAddIndex;
+      case 19: return AT_AddConstraint;
+      case 20: return AT_AddConstraintRecurse;
+      case 21: return AT_ReAddConstraint;
+      case 22: return AT_ReAddDomainConstraint;
+      case 23: return AT_AlterConstraint;
+      case 24: return AT_ValidateConstraint;
+      case 25: return AT_ValidateConstraintRecurse;
+      case 26: return AT_AddIndexConstraint;
+      case 27: return AT_DropConstraint;
+      case 28: return AT_DropConstraintRecurse;
+      case 29: return AT_ReAddComment;
+      case 30: return AT_AlterColumnType;
+      case 31: return AT_AlterColumnGenericOptions;
+      case 32: return AT_ChangeOwner;
+      case 33: return AT_ClusterOn;
+      case 34: return AT_DropCluster;
+      case 35: return AT_SetLogged;
+      case 36: return AT_SetUnLogged;
+      case 37: return AT_DropOids;
+      case 38: return AT_SetAccessMethod;
+      case 39: return AT_SetTableSpace;
+      case 40: return AT_SetRelOptions;
+      case 41: return AT_ResetRelOptions;
+      case 42: return AT_ReplaceRelOptions;
+      case 43: return AT_EnableTrig;
+      case 44: return AT_EnableAlwaysTrig;
+      case 45: return AT_EnableReplicaTrig;
+      case 46: return AT_DisableTrig;
+      case 47: return AT_EnableTrigAll;
+      case 48: return AT_DisableTrigAll;
+      case 49: return AT_EnableTrigUser;
+      case 50: return AT_DisableTrigUser;
+      case 51: return AT_EnableRule;
+      case 52: return AT_EnableAlwaysRule;
+      case 53: return AT_EnableReplicaRule;
+      case 54: return AT_DisableRule;
+      case 55: return AT_AddInherit;
+      case 56: return AT_DropInherit;
+      case 57: return AT_AddOf;
+      case 58: return AT_DropOf;
+      case 59: return AT_ReplicaIdentity;
+      case 60: return AT_EnableRowSecurity;
+      case 61: return AT_DisableRowSecurity;
+      case 62: return AT_ForceRowSecurity;
+      case 63: return AT_NoForceRowSecurity;
+      case 64: return AT_GenericOptions;
+      case 65: return AT_AttachPartition;
+      case 66: return AT_DetachPartition;
+      case 67: return AT_DetachPartitionFinalize;
+      case 68: return AT_AddIdentity;
+      case 69: return AT_SetIdentity;
+      case 70: return AT_DropIdentity;
+      case 71: return AT_ReAddStatistics;
       default: return null;
     }
   }
@@ -679,7 +715,7 @@ public enum AlterTableType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(16);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(17);
   }
 
   private static final AlterTableType[] VALUES = values();

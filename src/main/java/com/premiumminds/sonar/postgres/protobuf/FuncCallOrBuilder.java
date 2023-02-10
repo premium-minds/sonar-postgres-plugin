@@ -95,46 +95,57 @@ public interface FuncCallOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggFilterOrBuilder();
 
   /**
-   * <code>bool agg_within_group = 5 [json_name = "agg_within_group"];</code>
+   * <code>.pg_query.WindowDef over = 5 [json_name = "over"];</code>
+   * @return Whether the over field is set.
+   */
+  boolean hasOver();
+  /**
+   * <code>.pg_query.WindowDef over = 5 [json_name = "over"];</code>
+   * @return The over.
+   */
+  com.premiumminds.sonar.postgres.protobuf.WindowDef getOver();
+  /**
+   * <code>.pg_query.WindowDef over = 5 [json_name = "over"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.WindowDefOrBuilder getOverOrBuilder();
+
+  /**
+   * <code>bool agg_within_group = 6 [json_name = "agg_within_group"];</code>
    * @return The aggWithinGroup.
    */
   boolean getAggWithinGroup();
 
   /**
-   * <code>bool agg_star = 6 [json_name = "agg_star"];</code>
+   * <code>bool agg_star = 7 [json_name = "agg_star"];</code>
    * @return The aggStar.
    */
   boolean getAggStar();
 
   /**
-   * <code>bool agg_distinct = 7 [json_name = "agg_distinct"];</code>
+   * <code>bool agg_distinct = 8 [json_name = "agg_distinct"];</code>
    * @return The aggDistinct.
    */
   boolean getAggDistinct();
 
   /**
-   * <code>bool func_variadic = 8 [json_name = "func_variadic"];</code>
+   * <code>bool func_variadic = 9 [json_name = "func_variadic"];</code>
    * @return The funcVariadic.
    */
   boolean getFuncVariadic();
 
   /**
-   * <code>.pg_query.WindowDef over = 9 [json_name = "over"];</code>
-   * @return Whether the over field is set.
+   * <code>.pg_query.CoercionForm funcformat = 10 [json_name = "funcformat"];</code>
+   * @return The enum numeric value on the wire for funcformat.
    */
-  boolean hasOver();
+  int getFuncformatValue();
   /**
-   * <code>.pg_query.WindowDef over = 9 [json_name = "over"];</code>
-   * @return The over.
+   * <code>.pg_query.CoercionForm funcformat = 10 [json_name = "funcformat"];</code>
+   * @return The funcformat.
    */
-  com.premiumminds.sonar.postgres.protobuf.WindowDef getOver();
-  /**
-   * <code>.pg_query.WindowDef over = 9 [json_name = "over"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.WindowDefOrBuilder getOverOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.CoercionForm getFuncformat();
 
   /**
-   * <code>int32 location = 10 [json_name = "location"];</code>
+   * <code>int32 location = 11 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

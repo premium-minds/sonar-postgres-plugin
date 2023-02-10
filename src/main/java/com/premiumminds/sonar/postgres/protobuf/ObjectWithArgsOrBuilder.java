@@ -56,7 +56,31 @@ public interface ObjectWithArgsOrBuilder extends
       int index);
 
   /**
-   * <code>bool args_unspecified = 3 [json_name = "args_unspecified"];</code>
+   * <code>repeated .pg_query.Node objfuncargs = 3 [json_name = "objfuncargs"];</code>
+   */
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getObjfuncargsList();
+  /**
+   * <code>repeated .pg_query.Node objfuncargs = 3 [json_name = "objfuncargs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getObjfuncargs(int index);
+  /**
+   * <code>repeated .pg_query.Node objfuncargs = 3 [json_name = "objfuncargs"];</code>
+   */
+  int getObjfuncargsCount();
+  /**
+   * <code>repeated .pg_query.Node objfuncargs = 3 [json_name = "objfuncargs"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getObjfuncargsOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node objfuncargs = 3 [json_name = "objfuncargs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getObjfuncargsOrBuilder(
+      int index);
+
+  /**
+   * <code>bool args_unspecified = 4 [json_name = "args_unspecified"];</code>
    * @return The argsUnspecified.
    */
   boolean getArgsUnspecified();

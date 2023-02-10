@@ -32,77 +32,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private AlterFunctionStmt(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            objtype_ = rawValue;
-            break;
-          }
-          case 18: {
-            com.premiumminds.sonar.postgres.protobuf.ObjectWithArgs.Builder subBuilder = null;
-            if (func_ != null) {
-              subBuilder = func_.toBuilder();
-            }
-            func_ = input.readMessage(com.premiumminds.sonar.postgres.protobuf.ObjectWithArgs.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(func_);
-              func_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              actions_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            actions_.add(
-                input.readMessage(com.premiumminds.sonar.postgres.protobuf.Node.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        actions_ = java.util.Collections.unmodifiableList(actions_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_AlterFunctionStmt_descriptor;
@@ -117,7 +46,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OBJTYPE_FIELD_NUMBER = 1;
-  private int objtype_;
+  private int objtype_ = 0;
   /**
    * <code>.pg_query.ObjectType objtype = 1 [json_name = "objtype"];</code>
    * @return The enum numeric value on the wire for objtype.
@@ -130,8 +59,7 @@ private static final long serialVersionUID = 0L;
    * @return The objtype.
    */
   @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.ObjectType getObjtype() {
-    @SuppressWarnings("deprecation")
-    com.premiumminds.sonar.postgres.protobuf.ObjectType result = com.premiumminds.sonar.postgres.protobuf.ObjectType.valueOf(objtype_);
+    com.premiumminds.sonar.postgres.protobuf.ObjectType result = com.premiumminds.sonar.postgres.protobuf.ObjectType.forNumber(objtype_);
     return result == null ? com.premiumminds.sonar.postgres.protobuf.ObjectType.UNRECOGNIZED : result;
   }
 
@@ -158,10 +86,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.ObjectWithArgsOrBuilder getFuncOrBuilder() {
-    return getFunc();
+    return func_ == null ? com.premiumminds.sonar.postgres.protobuf.ObjectWithArgs.getDefaultInstance() : func_;
   }
 
   public static final int ACTIONS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> actions_;
   /**
    * <code>repeated .pg_query.Node actions = 3 [json_name = "actions"];</code>
@@ -224,7 +153,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < actions_.size(); i++) {
       output.writeMessage(3, actions_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -245,7 +174,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, actions_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -268,7 +197,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getActionsList()
         .equals(other.getActionsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -289,7 +218,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ACTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getActionsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -406,37 +335,31 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmt.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getActionsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       objtype_ = 0;
-
-      if (funcBuilder_ == null) {
-        func_ = null;
-      } else {
-        func_ = null;
+      func_ = null;
+      if (funcBuilder_ != null) {
+        funcBuilder_.dispose();
         funcBuilder_ = null;
       }
       if (actionsBuilder_ == null) {
         actions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        actions_ = null;
         actionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -463,24 +386,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmt buildPartial() {
       com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmt result = new com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmt(this);
-      int from_bitField0_ = bitField0_;
-      result.objtype_ = objtype_;
-      if (funcBuilder_ == null) {
-        result.func_ = func_;
-      } else {
-        result.func_ = funcBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmt result) {
       if (actionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           actions_ = java.util.Collections.unmodifiableList(actions_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.actions_ = actions_;
       } else {
         result.actions_ = actionsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmt result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.objtype_ = objtype_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.func_ = funcBuilder_ == null
+            ? func_
+            : funcBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -537,7 +470,7 @@ private static final long serialVersionUID = 0L;
         if (!other.actions_.isEmpty()) {
           if (actions_.isEmpty()) {
             actions_ = other.actions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureActionsIsMutable();
             actions_.addAll(other.actions_);
@@ -550,7 +483,7 @@ private static final long serialVersionUID = 0L;
             actionsBuilder_.dispose();
             actionsBuilder_ = null;
             actions_ = other.actions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             actionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getActionsFieldBuilder() : null;
@@ -559,7 +492,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -574,17 +507,55 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmt parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              objtype_ = input.readEnum();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getFuncFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              com.premiumminds.sonar.postgres.protobuf.Node m =
+                  input.readMessage(
+                      com.premiumminds.sonar.postgres.protobuf.Node.parser(),
+                      extensionRegistry);
+              if (actionsBuilder_ == null) {
+                ensureActionsIsMutable();
+                actions_.add(m);
+              } else {
+                actionsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmt) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -603,8 +574,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setObjtypeValue(int value) {
-      
       objtype_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -614,8 +585,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.ObjectType getObjtype() {
-      @SuppressWarnings("deprecation")
-      com.premiumminds.sonar.postgres.protobuf.ObjectType result = com.premiumminds.sonar.postgres.protobuf.ObjectType.valueOf(objtype_);
+      com.premiumminds.sonar.postgres.protobuf.ObjectType result = com.premiumminds.sonar.postgres.protobuf.ObjectType.forNumber(objtype_);
       return result == null ? com.premiumminds.sonar.postgres.protobuf.ObjectType.UNRECOGNIZED : result;
     }
     /**
@@ -627,7 +597,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       objtype_ = value.getNumber();
       onChanged();
       return this;
@@ -637,7 +607,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearObjtype() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       objtype_ = 0;
       onChanged();
       return this;
@@ -651,7 +621,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the func field is set.
      */
     public boolean hasFunc() {
-      return funcBuilder_ != null || func_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.pg_query.ObjectWithArgs func = 2 [json_name = "func"];</code>
@@ -673,11 +643,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         func_ = value;
-        onChanged();
       } else {
         funcBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -687,11 +657,11 @@ private static final long serialVersionUID = 0L;
         com.premiumminds.sonar.postgres.protobuf.ObjectWithArgs.Builder builderForValue) {
       if (funcBuilder_ == null) {
         func_ = builderForValue.build();
-        onChanged();
       } else {
         funcBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -699,38 +669,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFunc(com.premiumminds.sonar.postgres.protobuf.ObjectWithArgs value) {
       if (funcBuilder_ == null) {
-        if (func_ != null) {
-          func_ =
-            com.premiumminds.sonar.postgres.protobuf.ObjectWithArgs.newBuilder(func_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          func_ != null &&
+          func_ != com.premiumminds.sonar.postgres.protobuf.ObjectWithArgs.getDefaultInstance()) {
+          getFuncBuilder().mergeFrom(value);
         } else {
           func_ = value;
         }
-        onChanged();
       } else {
         funcBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.pg_query.ObjectWithArgs func = 2 [json_name = "func"];</code>
      */
     public Builder clearFunc() {
-      if (funcBuilder_ == null) {
-        func_ = null;
-        onChanged();
-      } else {
-        func_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      func_ = null;
+      if (funcBuilder_ != null) {
+        funcBuilder_.dispose();
         funcBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.pg_query.ObjectWithArgs func = 2 [json_name = "func"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.ObjectWithArgs.Builder getFuncBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getFuncFieldBuilder().getBuilder();
     }
@@ -765,9 +735,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> actions_ =
       java.util.Collections.emptyList();
     private void ensureActionsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         actions_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(actions_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -917,7 +887,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearActions() {
       if (actionsBuilder_ == null) {
         actions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         actionsBuilder_.clear();
@@ -994,7 +964,7 @@ private static final long serialVersionUID = 0L;
         actionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
                 actions_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         actions_ = null;
@@ -1034,7 +1004,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AlterFunctionStmt(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

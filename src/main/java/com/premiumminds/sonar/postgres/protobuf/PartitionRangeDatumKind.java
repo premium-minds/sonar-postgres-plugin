@@ -103,7 +103,7 @@ public enum PartitionRangeDatumKind
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(8);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(9);
   }
 
   private static final PartitionRangeDatumKind[] VALUES = values();

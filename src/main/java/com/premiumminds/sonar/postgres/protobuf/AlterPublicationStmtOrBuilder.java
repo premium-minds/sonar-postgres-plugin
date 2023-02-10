@@ -44,27 +44,27 @@ public interface AlterPublicationStmtOrBuilder extends
       int index);
 
   /**
-   * <code>repeated .pg_query.Node tables = 3 [json_name = "tables"];</code>
+   * <code>repeated .pg_query.Node pubobjects = 3 [json_name = "pubobjects"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
-      getTablesList();
+      getPubobjectsList();
   /**
-   * <code>repeated .pg_query.Node tables = 3 [json_name = "tables"];</code>
+   * <code>repeated .pg_query.Node pubobjects = 3 [json_name = "pubobjects"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.Node getTables(int index);
+  com.premiumminds.sonar.postgres.protobuf.Node getPubobjects(int index);
   /**
-   * <code>repeated .pg_query.Node tables = 3 [json_name = "tables"];</code>
+   * <code>repeated .pg_query.Node pubobjects = 3 [json_name = "pubobjects"];</code>
    */
-  int getTablesCount();
+  int getPubobjectsCount();
   /**
-   * <code>repeated .pg_query.Node tables = 3 [json_name = "tables"];</code>
+   * <code>repeated .pg_query.Node pubobjects = 3 [json_name = "pubobjects"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-      getTablesOrBuilderList();
+      getPubobjectsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node tables = 3 [json_name = "tables"];</code>
+   * <code>repeated .pg_query.Node pubobjects = 3 [json_name = "pubobjects"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getTablesOrBuilder(
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getPubobjectsOrBuilder(
       int index);
 
   /**
@@ -74,13 +74,13 @@ public interface AlterPublicationStmtOrBuilder extends
   boolean getForAllTables();
 
   /**
-   * <code>.pg_query.DefElemAction table_action = 5 [json_name = "tableAction"];</code>
-   * @return The enum numeric value on the wire for tableAction.
+   * <code>.pg_query.AlterPublicationAction action = 5 [json_name = "action"];</code>
+   * @return The enum numeric value on the wire for action.
    */
-  int getTableActionValue();
+  int getActionValue();
   /**
-   * <code>.pg_query.DefElemAction table_action = 5 [json_name = "tableAction"];</code>
-   * @return The tableAction.
+   * <code>.pg_query.AlterPublicationAction action = 5 [json_name = "action"];</code>
+   * @return The action.
    */
-  com.premiumminds.sonar.postgres.protobuf.DefElemAction getTableAction();
+  com.premiumminds.sonar.postgres.protobuf.AlterPublicationAction getAction();
 }

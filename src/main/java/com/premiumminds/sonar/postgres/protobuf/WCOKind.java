@@ -28,6 +28,14 @@ public enum WCOKind
    * <code>WCO_RLS_CONFLICT_CHECK = 4;</code>
    */
   WCO_RLS_CONFLICT_CHECK(4),
+  /**
+   * <code>WCO_RLS_MERGE_UPDATE_CHECK = 5;</code>
+   */
+  WCO_RLS_MERGE_UPDATE_CHECK(5),
+  /**
+   * <code>WCO_RLS_MERGE_DELETE_CHECK = 6;</code>
+   */
+  WCO_RLS_MERGE_DELETE_CHECK(6),
   UNRECOGNIZED(-1),
   ;
 
@@ -51,6 +59,14 @@ public enum WCOKind
    * <code>WCO_RLS_CONFLICT_CHECK = 4;</code>
    */
   public static final int WCO_RLS_CONFLICT_CHECK_VALUE = 4;
+  /**
+   * <code>WCO_RLS_MERGE_UPDATE_CHECK = 5;</code>
+   */
+  public static final int WCO_RLS_MERGE_UPDATE_CHECK_VALUE = 5;
+  /**
+   * <code>WCO_RLS_MERGE_DELETE_CHECK = 6;</code>
+   */
+  public static final int WCO_RLS_MERGE_DELETE_CHECK_VALUE = 6;
 
 
   public final int getNumber() {
@@ -82,6 +98,8 @@ public enum WCOKind
       case 2: return WCO_RLS_INSERT_CHECK;
       case 3: return WCO_RLS_UPDATE_CHECK;
       case 4: return WCO_RLS_CONFLICT_CHECK;
+      case 5: return WCO_RLS_MERGE_UPDATE_CHECK;
+      case 6: return WCO_RLS_MERGE_DELETE_CHECK;
       default: return null;
     }
   }
@@ -112,7 +130,7 @@ public enum WCOKind
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(10);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(11);
   }
 
   private static final WCOKind[] VALUES = values();

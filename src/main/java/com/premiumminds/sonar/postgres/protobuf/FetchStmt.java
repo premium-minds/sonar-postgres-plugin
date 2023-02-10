@@ -32,67 +32,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private FetchStmt(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            direction_ = rawValue;
-            break;
-          }
-          case 16: {
-
-            howMany_ = input.readInt64();
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            portalname_ = s;
-            break;
-          }
-          case 32: {
-
-            ismove_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_FetchStmt_descriptor;
@@ -107,7 +46,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIRECTION_FIELD_NUMBER = 1;
-  private int direction_;
+  private int direction_ = 0;
   /**
    * <code>.pg_query.FetchDirection direction = 1 [json_name = "direction"];</code>
    * @return The enum numeric value on the wire for direction.
@@ -120,13 +59,12 @@ private static final long serialVersionUID = 0L;
    * @return The direction.
    */
   @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.FetchDirection getDirection() {
-    @SuppressWarnings("deprecation")
-    com.premiumminds.sonar.postgres.protobuf.FetchDirection result = com.premiumminds.sonar.postgres.protobuf.FetchDirection.valueOf(direction_);
+    com.premiumminds.sonar.postgres.protobuf.FetchDirection result = com.premiumminds.sonar.postgres.protobuf.FetchDirection.forNumber(direction_);
     return result == null ? com.premiumminds.sonar.postgres.protobuf.FetchDirection.UNRECOGNIZED : result;
   }
 
   public static final int HOW_MANY_FIELD_NUMBER = 2;
-  private long howMany_;
+  private long howMany_ = 0L;
   /**
    * <code>int64 how_many = 2 [json_name = "howMany"];</code>
    * @return The howMany.
@@ -137,7 +75,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PORTALNAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object portalname_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object portalname_ = "";
   /**
    * <code>string portalname = 3 [json_name = "portalname"];</code>
    * @return The portalname.
@@ -175,7 +114,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ISMOVE_FIELD_NUMBER = 4;
-  private boolean ismove_;
+  private boolean ismove_ = false;
   /**
    * <code>bool ismove = 4 [json_name = "ismove"];</code>
    * @return The ismove.
@@ -211,7 +150,7 @@ private static final long serialVersionUID = 0L;
     if (ismove_ != false) {
       output.writeBool(4, ismove_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -235,7 +174,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, ismove_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -257,7 +196,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPortalname())) return false;
     if (getIsmove()
         != other.getIsmove()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -278,7 +217,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ISMOVE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsmove());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -395,30 +334,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.premiumminds.sonar.postgres.protobuf.FetchStmt.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       direction_ = 0;
-
       howMany_ = 0L;
-
       portalname_ = "";
-
       ismove_ = false;
-
       return this;
     }
 
@@ -445,12 +376,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.FetchStmt buildPartial() {
       com.premiumminds.sonar.postgres.protobuf.FetchStmt result = new com.premiumminds.sonar.postgres.protobuf.FetchStmt(this);
-      result.direction_ = direction_;
-      result.howMany_ = howMany_;
-      result.portalname_ = portalname_;
-      result.ismove_ = ismove_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.FetchStmt result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.direction_ = direction_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.howMany_ = howMany_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.portalname_ = portalname_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.ismove_ = ismove_;
+      }
     }
 
     @java.lang.Override
@@ -505,12 +449,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPortalname().isEmpty()) {
         portalname_ = other.portalname_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getIsmove() != false) {
         setIsmove(other.getIsmove());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -525,19 +470,53 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.premiumminds.sonar.postgres.protobuf.FetchStmt parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              direction_ = input.readEnum();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              howMany_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              portalname_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              ismove_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.premiumminds.sonar.postgres.protobuf.FetchStmt) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private int direction_ = 0;
     /**
@@ -553,8 +532,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDirectionValue(int value) {
-      
       direction_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -564,8 +543,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.FetchDirection getDirection() {
-      @SuppressWarnings("deprecation")
-      com.premiumminds.sonar.postgres.protobuf.FetchDirection result = com.premiumminds.sonar.postgres.protobuf.FetchDirection.valueOf(direction_);
+      com.premiumminds.sonar.postgres.protobuf.FetchDirection result = com.premiumminds.sonar.postgres.protobuf.FetchDirection.forNumber(direction_);
       return result == null ? com.premiumminds.sonar.postgres.protobuf.FetchDirection.UNRECOGNIZED : result;
     }
     /**
@@ -577,7 +555,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       direction_ = value.getNumber();
       onChanged();
       return this;
@@ -587,7 +565,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDirection() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       direction_ = 0;
       onChanged();
       return this;
@@ -610,6 +588,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHowMany(long value) {
       
       howMany_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -618,7 +597,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHowMany() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       howMany_ = 0L;
       onChanged();
       return this;
@@ -665,11 +644,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPortalname(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       portalname_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -678,8 +655,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPortalname() {
-      
       portalname_ = getDefaultInstance().getPortalname();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -690,12 +667,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPortalnameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       portalname_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -717,6 +692,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIsmove(boolean value) {
       
       ismove_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -725,7 +701,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsmove() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       ismove_ = false;
       onChanged();
       return this;
@@ -763,7 +739,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new FetchStmt(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

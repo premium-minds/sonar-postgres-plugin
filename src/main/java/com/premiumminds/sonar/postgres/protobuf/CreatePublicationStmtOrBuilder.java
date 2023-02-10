@@ -44,27 +44,27 @@ public interface CreatePublicationStmtOrBuilder extends
       int index);
 
   /**
-   * <code>repeated .pg_query.Node tables = 3 [json_name = "tables"];</code>
+   * <code>repeated .pg_query.Node pubobjects = 3 [json_name = "pubobjects"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
-      getTablesList();
+      getPubobjectsList();
   /**
-   * <code>repeated .pg_query.Node tables = 3 [json_name = "tables"];</code>
+   * <code>repeated .pg_query.Node pubobjects = 3 [json_name = "pubobjects"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.Node getTables(int index);
+  com.premiumminds.sonar.postgres.protobuf.Node getPubobjects(int index);
   /**
-   * <code>repeated .pg_query.Node tables = 3 [json_name = "tables"];</code>
+   * <code>repeated .pg_query.Node pubobjects = 3 [json_name = "pubobjects"];</code>
    */
-  int getTablesCount();
+  int getPubobjectsCount();
   /**
-   * <code>repeated .pg_query.Node tables = 3 [json_name = "tables"];</code>
+   * <code>repeated .pg_query.Node pubobjects = 3 [json_name = "pubobjects"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-      getTablesOrBuilderList();
+      getPubobjectsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node tables = 3 [json_name = "tables"];</code>
+   * <code>repeated .pg_query.Node pubobjects = 3 [json_name = "pubobjects"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getTablesOrBuilder(
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getPubobjectsOrBuilder(
       int index);
 
   /**

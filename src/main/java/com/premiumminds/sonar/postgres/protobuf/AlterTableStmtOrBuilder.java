@@ -47,15 +47,15 @@ public interface AlterTableStmtOrBuilder extends
       int index);
 
   /**
-   * <code>.pg_query.ObjectType relkind = 3 [json_name = "relkind"];</code>
-   * @return The enum numeric value on the wire for relkind.
+   * <code>.pg_query.ObjectType objtype = 3 [json_name = "objtype"];</code>
+   * @return The enum numeric value on the wire for objtype.
    */
-  int getRelkindValue();
+  int getObjtypeValue();
   /**
-   * <code>.pg_query.ObjectType relkind = 3 [json_name = "relkind"];</code>
-   * @return The relkind.
+   * <code>.pg_query.ObjectType objtype = 3 [json_name = "objtype"];</code>
+   * @return The objtype.
    */
-  com.premiumminds.sonar.postgres.protobuf.ObjectType getRelkind();
+  com.premiumminds.sonar.postgres.protobuf.ObjectType getObjtype();
 
   /**
    * <code>bool missing_ok = 4 [json_name = "missing_ok"];</code>

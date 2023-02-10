@@ -105,4 +105,19 @@ public interface CreateFunctionStmtOrBuilder extends
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getOptionsOrBuilder(
       int index);
+
+  /**
+   * <code>.pg_query.Node sql_body = 7 [json_name = "sql_body"];</code>
+   * @return Whether the sqlBody field is set.
+   */
+  boolean hasSqlBody();
+  /**
+   * <code>.pg_query.Node sql_body = 7 [json_name = "sql_body"];</code>
+   * @return The sqlBody.
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getSqlBody();
+  /**
+   * <code>.pg_query.Node sql_body = 7 [json_name = "sql_body"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getSqlBodyOrBuilder();
 }

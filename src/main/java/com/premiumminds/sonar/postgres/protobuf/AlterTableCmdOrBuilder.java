@@ -82,4 +82,10 @@ public interface AlterTableCmdOrBuilder extends
    * @return The missingOk.
    */
   boolean getMissingOk();
+
+  /**
+   * <code>bool recurse = 8 [json_name = "recurse"];</code>
+   * @return The recurse.
+   */
+  boolean getRecurse();
 }

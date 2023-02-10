@@ -37,45 +37,37 @@ public enum A_Expr_Kind
    */
   AEXPR_NULLIF(6),
   /**
-   * <code>AEXPR_OF = 7;</code>
+   * <code>AEXPR_IN = 7;</code>
    */
-  AEXPR_OF(7),
+  AEXPR_IN(7),
   /**
-   * <code>AEXPR_IN = 8;</code>
+   * <code>AEXPR_LIKE = 8;</code>
    */
-  AEXPR_IN(8),
+  AEXPR_LIKE(8),
   /**
-   * <code>AEXPR_LIKE = 9;</code>
+   * <code>AEXPR_ILIKE = 9;</code>
    */
-  AEXPR_LIKE(9),
+  AEXPR_ILIKE(9),
   /**
-   * <code>AEXPR_ILIKE = 10;</code>
+   * <code>AEXPR_SIMILAR = 10;</code>
    */
-  AEXPR_ILIKE(10),
+  AEXPR_SIMILAR(10),
   /**
-   * <code>AEXPR_SIMILAR = 11;</code>
+   * <code>AEXPR_BETWEEN = 11;</code>
    */
-  AEXPR_SIMILAR(11),
+  AEXPR_BETWEEN(11),
   /**
-   * <code>AEXPR_BETWEEN = 12;</code>
+   * <code>AEXPR_NOT_BETWEEN = 12;</code>
    */
-  AEXPR_BETWEEN(12),
+  AEXPR_NOT_BETWEEN(12),
   /**
-   * <code>AEXPR_NOT_BETWEEN = 13;</code>
+   * <code>AEXPR_BETWEEN_SYM = 13;</code>
    */
-  AEXPR_NOT_BETWEEN(13),
+  AEXPR_BETWEEN_SYM(13),
   /**
-   * <code>AEXPR_BETWEEN_SYM = 14;</code>
+   * <code>AEXPR_NOT_BETWEEN_SYM = 14;</code>
    */
-  AEXPR_BETWEEN_SYM(14),
-  /**
-   * <code>AEXPR_NOT_BETWEEN_SYM = 15;</code>
-   */
-  AEXPR_NOT_BETWEEN_SYM(15),
-  /**
-   * <code>AEXPR_PAREN = 16;</code>
-   */
-  AEXPR_PAREN(16),
+  AEXPR_NOT_BETWEEN_SYM(14),
   UNRECOGNIZED(-1),
   ;
 
@@ -108,45 +100,37 @@ public enum A_Expr_Kind
    */
   public static final int AEXPR_NULLIF_VALUE = 6;
   /**
-   * <code>AEXPR_OF = 7;</code>
+   * <code>AEXPR_IN = 7;</code>
    */
-  public static final int AEXPR_OF_VALUE = 7;
+  public static final int AEXPR_IN_VALUE = 7;
   /**
-   * <code>AEXPR_IN = 8;</code>
+   * <code>AEXPR_LIKE = 8;</code>
    */
-  public static final int AEXPR_IN_VALUE = 8;
+  public static final int AEXPR_LIKE_VALUE = 8;
   /**
-   * <code>AEXPR_LIKE = 9;</code>
+   * <code>AEXPR_ILIKE = 9;</code>
    */
-  public static final int AEXPR_LIKE_VALUE = 9;
+  public static final int AEXPR_ILIKE_VALUE = 9;
   /**
-   * <code>AEXPR_ILIKE = 10;</code>
+   * <code>AEXPR_SIMILAR = 10;</code>
    */
-  public static final int AEXPR_ILIKE_VALUE = 10;
+  public static final int AEXPR_SIMILAR_VALUE = 10;
   /**
-   * <code>AEXPR_SIMILAR = 11;</code>
+   * <code>AEXPR_BETWEEN = 11;</code>
    */
-  public static final int AEXPR_SIMILAR_VALUE = 11;
+  public static final int AEXPR_BETWEEN_VALUE = 11;
   /**
-   * <code>AEXPR_BETWEEN = 12;</code>
+   * <code>AEXPR_NOT_BETWEEN = 12;</code>
    */
-  public static final int AEXPR_BETWEEN_VALUE = 12;
+  public static final int AEXPR_NOT_BETWEEN_VALUE = 12;
   /**
-   * <code>AEXPR_NOT_BETWEEN = 13;</code>
+   * <code>AEXPR_BETWEEN_SYM = 13;</code>
    */
-  public static final int AEXPR_NOT_BETWEEN_VALUE = 13;
+  public static final int AEXPR_BETWEEN_SYM_VALUE = 13;
   /**
-   * <code>AEXPR_BETWEEN_SYM = 14;</code>
+   * <code>AEXPR_NOT_BETWEEN_SYM = 14;</code>
    */
-  public static final int AEXPR_BETWEEN_SYM_VALUE = 14;
-  /**
-   * <code>AEXPR_NOT_BETWEEN_SYM = 15;</code>
-   */
-  public static final int AEXPR_NOT_BETWEEN_SYM_VALUE = 15;
-  /**
-   * <code>AEXPR_PAREN = 16;</code>
-   */
-  public static final int AEXPR_PAREN_VALUE = 16;
+  public static final int AEXPR_NOT_BETWEEN_SYM_VALUE = 14;
 
 
   public final int getNumber() {
@@ -180,16 +164,14 @@ public enum A_Expr_Kind
       case 4: return AEXPR_DISTINCT;
       case 5: return AEXPR_NOT_DISTINCT;
       case 6: return AEXPR_NULLIF;
-      case 7: return AEXPR_OF;
-      case 8: return AEXPR_IN;
-      case 9: return AEXPR_LIKE;
-      case 10: return AEXPR_ILIKE;
-      case 11: return AEXPR_SIMILAR;
-      case 12: return AEXPR_BETWEEN;
-      case 13: return AEXPR_NOT_BETWEEN;
-      case 14: return AEXPR_BETWEEN_SYM;
-      case 15: return AEXPR_NOT_BETWEEN_SYM;
-      case 16: return AEXPR_PAREN;
+      case 7: return AEXPR_IN;
+      case 8: return AEXPR_LIKE;
+      case 9: return AEXPR_ILIKE;
+      case 10: return AEXPR_SIMILAR;
+      case 11: return AEXPR_BETWEEN;
+      case 12: return AEXPR_NOT_BETWEEN;
+      case 13: return AEXPR_BETWEEN_SYM;
+      case 14: return AEXPR_NOT_BETWEEN_SYM;
       default: return null;
     }
   }
@@ -220,7 +202,7 @@ public enum A_Expr_Kind
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(4);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(5);
   }
 
   private static final A_Expr_Kind[] VALUES = values();

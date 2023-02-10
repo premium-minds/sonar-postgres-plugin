@@ -14,7 +14,7 @@ public class PreferIdentityVisitorCheck extends AbstractVisitorCheck {
     public void visit(ColumnDef columnDef) {
         final TypeName typeName = columnDef.getTypeName();
         typeName.getNamesList().forEach(name -> {
-            final String str = name.getString().getStr();
+            final String str = name.getString().getSval();
 
             if ("serial".equals(str)){
                 newIssue("For new applications, identity columns should be used instead.");

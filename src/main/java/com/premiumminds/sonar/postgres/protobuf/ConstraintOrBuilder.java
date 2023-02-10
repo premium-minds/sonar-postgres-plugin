@@ -94,295 +94,325 @@ public interface ConstraintOrBuilder extends
       getGeneratedWhenBytes();
 
   /**
-   * <code>repeated .pg_query.Node keys = 10 [json_name = "keys"];</code>
+   * <code>bool nulls_not_distinct = 10 [json_name = "nulls_not_distinct"];</code>
+   * @return The nullsNotDistinct.
+   */
+  boolean getNullsNotDistinct();
+
+  /**
+   * <code>repeated .pg_query.Node keys = 11 [json_name = "keys"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getKeysList();
   /**
-   * <code>repeated .pg_query.Node keys = 10 [json_name = "keys"];</code>
+   * <code>repeated .pg_query.Node keys = 11 [json_name = "keys"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getKeys(int index);
   /**
-   * <code>repeated .pg_query.Node keys = 10 [json_name = "keys"];</code>
+   * <code>repeated .pg_query.Node keys = 11 [json_name = "keys"];</code>
    */
   int getKeysCount();
   /**
-   * <code>repeated .pg_query.Node keys = 10 [json_name = "keys"];</code>
+   * <code>repeated .pg_query.Node keys = 11 [json_name = "keys"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getKeysOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node keys = 10 [json_name = "keys"];</code>
+   * <code>repeated .pg_query.Node keys = 11 [json_name = "keys"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getKeysOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node including = 11 [json_name = "including"];</code>
+   * <code>repeated .pg_query.Node including = 12 [json_name = "including"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getIncludingList();
   /**
-   * <code>repeated .pg_query.Node including = 11 [json_name = "including"];</code>
+   * <code>repeated .pg_query.Node including = 12 [json_name = "including"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getIncluding(int index);
   /**
-   * <code>repeated .pg_query.Node including = 11 [json_name = "including"];</code>
+   * <code>repeated .pg_query.Node including = 12 [json_name = "including"];</code>
    */
   int getIncludingCount();
   /**
-   * <code>repeated .pg_query.Node including = 11 [json_name = "including"];</code>
+   * <code>repeated .pg_query.Node including = 12 [json_name = "including"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getIncludingOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node including = 11 [json_name = "including"];</code>
+   * <code>repeated .pg_query.Node including = 12 [json_name = "including"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getIncludingOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node exclusions = 12 [json_name = "exclusions"];</code>
+   * <code>repeated .pg_query.Node exclusions = 13 [json_name = "exclusions"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getExclusionsList();
   /**
-   * <code>repeated .pg_query.Node exclusions = 12 [json_name = "exclusions"];</code>
+   * <code>repeated .pg_query.Node exclusions = 13 [json_name = "exclusions"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getExclusions(int index);
   /**
-   * <code>repeated .pg_query.Node exclusions = 12 [json_name = "exclusions"];</code>
+   * <code>repeated .pg_query.Node exclusions = 13 [json_name = "exclusions"];</code>
    */
   int getExclusionsCount();
   /**
-   * <code>repeated .pg_query.Node exclusions = 12 [json_name = "exclusions"];</code>
+   * <code>repeated .pg_query.Node exclusions = 13 [json_name = "exclusions"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getExclusionsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node exclusions = 12 [json_name = "exclusions"];</code>
+   * <code>repeated .pg_query.Node exclusions = 13 [json_name = "exclusions"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getExclusionsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node options = 13 [json_name = "options"];</code>
+   * <code>repeated .pg_query.Node options = 14 [json_name = "options"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getOptionsList();
   /**
-   * <code>repeated .pg_query.Node options = 13 [json_name = "options"];</code>
+   * <code>repeated .pg_query.Node options = 14 [json_name = "options"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getOptions(int index);
   /**
-   * <code>repeated .pg_query.Node options = 13 [json_name = "options"];</code>
+   * <code>repeated .pg_query.Node options = 14 [json_name = "options"];</code>
    */
   int getOptionsCount();
   /**
-   * <code>repeated .pg_query.Node options = 13 [json_name = "options"];</code>
+   * <code>repeated .pg_query.Node options = 14 [json_name = "options"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getOptionsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node options = 13 [json_name = "options"];</code>
+   * <code>repeated .pg_query.Node options = 14 [json_name = "options"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getOptionsOrBuilder(
       int index);
 
   /**
-   * <code>string indexname = 14 [json_name = "indexname"];</code>
+   * <code>string indexname = 15 [json_name = "indexname"];</code>
    * @return The indexname.
    */
   java.lang.String getIndexname();
   /**
-   * <code>string indexname = 14 [json_name = "indexname"];</code>
+   * <code>string indexname = 15 [json_name = "indexname"];</code>
    * @return The bytes for indexname.
    */
   com.google.protobuf.ByteString
       getIndexnameBytes();
 
   /**
-   * <code>string indexspace = 15 [json_name = "indexspace"];</code>
+   * <code>string indexspace = 16 [json_name = "indexspace"];</code>
    * @return The indexspace.
    */
   java.lang.String getIndexspace();
   /**
-   * <code>string indexspace = 15 [json_name = "indexspace"];</code>
+   * <code>string indexspace = 16 [json_name = "indexspace"];</code>
    * @return The bytes for indexspace.
    */
   com.google.protobuf.ByteString
       getIndexspaceBytes();
 
   /**
-   * <code>bool reset_default_tblspc = 16 [json_name = "reset_default_tblspc"];</code>
+   * <code>bool reset_default_tblspc = 17 [json_name = "reset_default_tblspc"];</code>
    * @return The resetDefaultTblspc.
    */
   boolean getResetDefaultTblspc();
 
   /**
-   * <code>string access_method = 17 [json_name = "access_method"];</code>
+   * <code>string access_method = 18 [json_name = "access_method"];</code>
    * @return The accessMethod.
    */
   java.lang.String getAccessMethod();
   /**
-   * <code>string access_method = 17 [json_name = "access_method"];</code>
+   * <code>string access_method = 18 [json_name = "access_method"];</code>
    * @return The bytes for accessMethod.
    */
   com.google.protobuf.ByteString
       getAccessMethodBytes();
 
   /**
-   * <code>.pg_query.Node where_clause = 18 [json_name = "where_clause"];</code>
+   * <code>.pg_query.Node where_clause = 19 [json_name = "where_clause"];</code>
    * @return Whether the whereClause field is set.
    */
   boolean hasWhereClause();
   /**
-   * <code>.pg_query.Node where_clause = 18 [json_name = "where_clause"];</code>
+   * <code>.pg_query.Node where_clause = 19 [json_name = "where_clause"];</code>
    * @return The whereClause.
    */
   com.premiumminds.sonar.postgres.protobuf.Node getWhereClause();
   /**
-   * <code>.pg_query.Node where_clause = 18 [json_name = "where_clause"];</code>
+   * <code>.pg_query.Node where_clause = 19 [json_name = "where_clause"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getWhereClauseOrBuilder();
 
   /**
-   * <code>.pg_query.RangeVar pktable = 19 [json_name = "pktable"];</code>
+   * <code>.pg_query.RangeVar pktable = 20 [json_name = "pktable"];</code>
    * @return Whether the pktable field is set.
    */
   boolean hasPktable();
   /**
-   * <code>.pg_query.RangeVar pktable = 19 [json_name = "pktable"];</code>
+   * <code>.pg_query.RangeVar pktable = 20 [json_name = "pktable"];</code>
    * @return The pktable.
    */
   com.premiumminds.sonar.postgres.protobuf.RangeVar getPktable();
   /**
-   * <code>.pg_query.RangeVar pktable = 19 [json_name = "pktable"];</code>
+   * <code>.pg_query.RangeVar pktable = 20 [json_name = "pktable"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.RangeVarOrBuilder getPktableOrBuilder();
 
   /**
-   * <code>repeated .pg_query.Node fk_attrs = 20 [json_name = "fk_attrs"];</code>
+   * <code>repeated .pg_query.Node fk_attrs = 21 [json_name = "fk_attrs"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getFkAttrsList();
   /**
-   * <code>repeated .pg_query.Node fk_attrs = 20 [json_name = "fk_attrs"];</code>
+   * <code>repeated .pg_query.Node fk_attrs = 21 [json_name = "fk_attrs"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getFkAttrs(int index);
   /**
-   * <code>repeated .pg_query.Node fk_attrs = 20 [json_name = "fk_attrs"];</code>
+   * <code>repeated .pg_query.Node fk_attrs = 21 [json_name = "fk_attrs"];</code>
    */
   int getFkAttrsCount();
   /**
-   * <code>repeated .pg_query.Node fk_attrs = 20 [json_name = "fk_attrs"];</code>
+   * <code>repeated .pg_query.Node fk_attrs = 21 [json_name = "fk_attrs"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getFkAttrsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node fk_attrs = 20 [json_name = "fk_attrs"];</code>
+   * <code>repeated .pg_query.Node fk_attrs = 21 [json_name = "fk_attrs"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getFkAttrsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node pk_attrs = 21 [json_name = "pk_attrs"];</code>
+   * <code>repeated .pg_query.Node pk_attrs = 22 [json_name = "pk_attrs"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getPkAttrsList();
   /**
-   * <code>repeated .pg_query.Node pk_attrs = 21 [json_name = "pk_attrs"];</code>
+   * <code>repeated .pg_query.Node pk_attrs = 22 [json_name = "pk_attrs"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getPkAttrs(int index);
   /**
-   * <code>repeated .pg_query.Node pk_attrs = 21 [json_name = "pk_attrs"];</code>
+   * <code>repeated .pg_query.Node pk_attrs = 22 [json_name = "pk_attrs"];</code>
    */
   int getPkAttrsCount();
   /**
-   * <code>repeated .pg_query.Node pk_attrs = 21 [json_name = "pk_attrs"];</code>
+   * <code>repeated .pg_query.Node pk_attrs = 22 [json_name = "pk_attrs"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getPkAttrsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node pk_attrs = 21 [json_name = "pk_attrs"];</code>
+   * <code>repeated .pg_query.Node pk_attrs = 22 [json_name = "pk_attrs"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getPkAttrsOrBuilder(
       int index);
 
   /**
-   * <code>string fk_matchtype = 22 [json_name = "fk_matchtype"];</code>
+   * <code>string fk_matchtype = 23 [json_name = "fk_matchtype"];</code>
    * @return The fkMatchtype.
    */
   java.lang.String getFkMatchtype();
   /**
-   * <code>string fk_matchtype = 22 [json_name = "fk_matchtype"];</code>
+   * <code>string fk_matchtype = 23 [json_name = "fk_matchtype"];</code>
    * @return The bytes for fkMatchtype.
    */
   com.google.protobuf.ByteString
       getFkMatchtypeBytes();
 
   /**
-   * <code>string fk_upd_action = 23 [json_name = "fk_upd_action"];</code>
+   * <code>string fk_upd_action = 24 [json_name = "fk_upd_action"];</code>
    * @return The fkUpdAction.
    */
   java.lang.String getFkUpdAction();
   /**
-   * <code>string fk_upd_action = 23 [json_name = "fk_upd_action"];</code>
+   * <code>string fk_upd_action = 24 [json_name = "fk_upd_action"];</code>
    * @return The bytes for fkUpdAction.
    */
   com.google.protobuf.ByteString
       getFkUpdActionBytes();
 
   /**
-   * <code>string fk_del_action = 24 [json_name = "fk_del_action"];</code>
+   * <code>string fk_del_action = 25 [json_name = "fk_del_action"];</code>
    * @return The fkDelAction.
    */
   java.lang.String getFkDelAction();
   /**
-   * <code>string fk_del_action = 24 [json_name = "fk_del_action"];</code>
+   * <code>string fk_del_action = 25 [json_name = "fk_del_action"];</code>
    * @return The bytes for fkDelAction.
    */
   com.google.protobuf.ByteString
       getFkDelActionBytes();
 
   /**
-   * <code>repeated .pg_query.Node old_conpfeqop = 25 [json_name = "old_conpfeqop"];</code>
+   * <code>repeated .pg_query.Node fk_del_set_cols = 26 [json_name = "fk_del_set_cols"];</code>
+   */
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getFkDelSetColsList();
+  /**
+   * <code>repeated .pg_query.Node fk_del_set_cols = 26 [json_name = "fk_del_set_cols"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getFkDelSetCols(int index);
+  /**
+   * <code>repeated .pg_query.Node fk_del_set_cols = 26 [json_name = "fk_del_set_cols"];</code>
+   */
+  int getFkDelSetColsCount();
+  /**
+   * <code>repeated .pg_query.Node fk_del_set_cols = 26 [json_name = "fk_del_set_cols"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getFkDelSetColsOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node fk_del_set_cols = 26 [json_name = "fk_del_set_cols"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getFkDelSetColsOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .pg_query.Node old_conpfeqop = 27 [json_name = "old_conpfeqop"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getOldConpfeqopList();
   /**
-   * <code>repeated .pg_query.Node old_conpfeqop = 25 [json_name = "old_conpfeqop"];</code>
+   * <code>repeated .pg_query.Node old_conpfeqop = 27 [json_name = "old_conpfeqop"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getOldConpfeqop(int index);
   /**
-   * <code>repeated .pg_query.Node old_conpfeqop = 25 [json_name = "old_conpfeqop"];</code>
+   * <code>repeated .pg_query.Node old_conpfeqop = 27 [json_name = "old_conpfeqop"];</code>
    */
   int getOldConpfeqopCount();
   /**
-   * <code>repeated .pg_query.Node old_conpfeqop = 25 [json_name = "old_conpfeqop"];</code>
+   * <code>repeated .pg_query.Node old_conpfeqop = 27 [json_name = "old_conpfeqop"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getOldConpfeqopOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node old_conpfeqop = 25 [json_name = "old_conpfeqop"];</code>
+   * <code>repeated .pg_query.Node old_conpfeqop = 27 [json_name = "old_conpfeqop"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getOldConpfeqopOrBuilder(
       int index);
 
   /**
-   * <code>uint32 old_pktable_oid = 26 [json_name = "old_pktable_oid"];</code>
+   * <code>uint32 old_pktable_oid = 28 [json_name = "old_pktable_oid"];</code>
    * @return The oldPktableOid.
    */
   int getOldPktableOid();
 
   /**
-   * <code>bool skip_validation = 27 [json_name = "skip_validation"];</code>
+   * <code>bool skip_validation = 29 [json_name = "skip_validation"];</code>
    * @return The skipValidation.
    */
   boolean getSkipValidation();
 
   /**
-   * <code>bool initially_valid = 28 [json_name = "initially_valid"];</code>
+   * <code>bool initially_valid = 30 [json_name = "initially_valid"];</code>
    * @return The initiallyValid.
    */
   boolean getInitiallyValid();

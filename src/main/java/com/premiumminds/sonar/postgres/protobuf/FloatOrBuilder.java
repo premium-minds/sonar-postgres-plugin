@@ -12,18 +12,18 @@ public interface FloatOrBuilder extends
    * string 
    * </pre>
    *
-   * <code>string str = 1;</code>
-   * @return The str.
+   * <code>string fval = 1;</code>
+   * @return The fval.
    */
-  java.lang.String getStr();
+  java.lang.String getFval();
   /**
    * <pre>
    * string 
    * </pre>
    *
-   * <code>string str = 1;</code>
-   * @return The bytes for str.
+   * <code>string fval = 1;</code>
+   * @return The bytes for fval.
    */
   com.google.protobuf.ByteString
-      getStrBytes();
+      getFvalBytes();
 }

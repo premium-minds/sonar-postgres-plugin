@@ -17,17 +17,21 @@ public enum RoleSpecType
    */
   ROLESPEC_CSTRING(1),
   /**
-   * <code>ROLESPEC_CURRENT_USER = 2;</code>
+   * <code>ROLESPEC_CURRENT_ROLE = 2;</code>
    */
-  ROLESPEC_CURRENT_USER(2),
+  ROLESPEC_CURRENT_ROLE(2),
   /**
-   * <code>ROLESPEC_SESSION_USER = 3;</code>
+   * <code>ROLESPEC_CURRENT_USER = 3;</code>
    */
-  ROLESPEC_SESSION_USER(3),
+  ROLESPEC_CURRENT_USER(3),
   /**
-   * <code>ROLESPEC_PUBLIC = 4;</code>
+   * <code>ROLESPEC_SESSION_USER = 4;</code>
    */
-  ROLESPEC_PUBLIC(4),
+  ROLESPEC_SESSION_USER(4),
+  /**
+   * <code>ROLESPEC_PUBLIC = 5;</code>
+   */
+  ROLESPEC_PUBLIC(5),
   UNRECOGNIZED(-1),
   ;
 
@@ -40,17 +44,21 @@ public enum RoleSpecType
    */
   public static final int ROLESPEC_CSTRING_VALUE = 1;
   /**
-   * <code>ROLESPEC_CURRENT_USER = 2;</code>
+   * <code>ROLESPEC_CURRENT_ROLE = 2;</code>
    */
-  public static final int ROLESPEC_CURRENT_USER_VALUE = 2;
+  public static final int ROLESPEC_CURRENT_ROLE_VALUE = 2;
   /**
-   * <code>ROLESPEC_SESSION_USER = 3;</code>
+   * <code>ROLESPEC_CURRENT_USER = 3;</code>
    */
-  public static final int ROLESPEC_SESSION_USER_VALUE = 3;
+  public static final int ROLESPEC_CURRENT_USER_VALUE = 3;
   /**
-   * <code>ROLESPEC_PUBLIC = 4;</code>
+   * <code>ROLESPEC_SESSION_USER = 4;</code>
    */
-  public static final int ROLESPEC_PUBLIC_VALUE = 4;
+  public static final int ROLESPEC_SESSION_USER_VALUE = 4;
+  /**
+   * <code>ROLESPEC_PUBLIC = 5;</code>
+   */
+  public static final int ROLESPEC_PUBLIC_VALUE = 5;
 
 
   public final int getNumber() {
@@ -79,9 +87,10 @@ public enum RoleSpecType
     switch (value) {
       case 0: return ROLE_SPEC_TYPE_UNDEFINED;
       case 1: return ROLESPEC_CSTRING;
-      case 2: return ROLESPEC_CURRENT_USER;
-      case 3: return ROLESPEC_SESSION_USER;
-      case 4: return ROLESPEC_PUBLIC;
+      case 2: return ROLESPEC_CURRENT_ROLE;
+      case 3: return ROLESPEC_CURRENT_USER;
+      case 4: return ROLESPEC_SESSION_USER;
+      case 5: return ROLESPEC_PUBLIC;
       default: return null;
     }
   }
@@ -112,7 +121,7 @@ public enum RoleSpecType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(5);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(6);
   }
 
   private static final RoleSpecType[] VALUES = values();

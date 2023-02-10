@@ -1,6 +1,8 @@
 package com.premiumminds.sonar.postgres.visitors;
 
+import com.premiumminds.sonar.postgres.protobuf.Node;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.premiumminds.sonar.postgres.protobuf.DropStmt;
@@ -24,7 +26,7 @@ public class ConcurrentVisitorCheck extends AbstractVisitorCheck {
                 .map(y -> y.getList()
                         .getItemsList())
                 .flatMap(List::stream)
-                .map(x -> x.getString().getStr())
+                .map(x -> x.getString().getSval())
                 .collect(Collectors.toList());
 
         if (dropStmt.getRemoveType().equals(ObjectType.OBJECT_INDEX) && !dropStmt.getConcurrent()){
@@ -44,9 +46,14 @@ public class ConcurrentVisitorCheck extends AbstractVisitorCheck {
 
     @Override
     public void visit(ReindexStmt reindexStmt) {
-        if (!reindexStmt.getConcurrent()){
+        final Optional<Node> concurrently = reindexStmt.getParamsList()
+                                                       .stream()
+                                                       .filter(x -> "concurrently".equals(x.getDefElem().getDefname()))
+                                                       .findFirst();
+        if (!concurrently.isPresent()){
             newIssue("Add CONCURRENTLY to REINDEX INDEX " + reindexStmt.getRelation().getRelname());
         }
+
         super.visit(reindexStmt);
     }
 

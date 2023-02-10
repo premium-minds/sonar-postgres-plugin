@@ -4,37 +4,45 @@
 package com.premiumminds.sonar.postgres.protobuf;
 
 /**
- * Protobuf enum {@code pg_query.ClusterOption}
+ * Protobuf enum {@code pg_query.SetQuantifier}
  */
-public enum ClusterOption
+public enum SetQuantifier
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>CLUSTER_OPTION_UNDEFINED = 0;</code>
+   * <code>SET_QUANTIFIER_UNDEFINED = 0;</code>
    */
-  CLUSTER_OPTION_UNDEFINED(0),
+  SET_QUANTIFIER_UNDEFINED(0),
   /**
-   * <code>CLUOPT_RECHECK = 1;</code>
+   * <code>SET_QUANTIFIER_DEFAULT = 1;</code>
    */
-  CLUOPT_RECHECK(1),
+  SET_QUANTIFIER_DEFAULT(1),
   /**
-   * <code>CLUOPT_VERBOSE = 2;</code>
+   * <code>SET_QUANTIFIER_ALL = 2;</code>
    */
-  CLUOPT_VERBOSE(2),
+  SET_QUANTIFIER_ALL(2),
+  /**
+   * <code>SET_QUANTIFIER_DISTINCT = 3;</code>
+   */
+  SET_QUANTIFIER_DISTINCT(3),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>CLUSTER_OPTION_UNDEFINED = 0;</code>
+   * <code>SET_QUANTIFIER_UNDEFINED = 0;</code>
    */
-  public static final int CLUSTER_OPTION_UNDEFINED_VALUE = 0;
+  public static final int SET_QUANTIFIER_UNDEFINED_VALUE = 0;
   /**
-   * <code>CLUOPT_RECHECK = 1;</code>
+   * <code>SET_QUANTIFIER_DEFAULT = 1;</code>
    */
-  public static final int CLUOPT_RECHECK_VALUE = 1;
+  public static final int SET_QUANTIFIER_DEFAULT_VALUE = 1;
   /**
-   * <code>CLUOPT_VERBOSE = 2;</code>
+   * <code>SET_QUANTIFIER_ALL = 2;</code>
    */
-  public static final int CLUOPT_VERBOSE_VALUE = 2;
+  public static final int SET_QUANTIFIER_ALL_VALUE = 2;
+  /**
+   * <code>SET_QUANTIFIER_DISTINCT = 3;</code>
+   */
+  public static final int SET_QUANTIFIER_DISTINCT_VALUE = 3;
 
 
   public final int getNumber() {
@@ -51,7 +59,7 @@ public enum ClusterOption
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static ClusterOption valueOf(int value) {
+  public static SetQuantifier valueOf(int value) {
     return forNumber(value);
   }
 
@@ -59,24 +67,25 @@ public enum ClusterOption
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static ClusterOption forNumber(int value) {
+  public static SetQuantifier forNumber(int value) {
     switch (value) {
-      case 0: return CLUSTER_OPTION_UNDEFINED;
-      case 1: return CLUOPT_RECHECK;
-      case 2: return CLUOPT_VERBOSE;
+      case 0: return SET_QUANTIFIER_UNDEFINED;
+      case 1: return SET_QUANTIFIER_DEFAULT;
+      case 2: return SET_QUANTIFIER_ALL;
+      case 3: return SET_QUANTIFIER_DISTINCT;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<ClusterOption>
+  public static com.google.protobuf.Internal.EnumLiteMap<SetQuantifier>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      ClusterOption> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<ClusterOption>() {
-          public ClusterOption findValueByNumber(int number) {
-            return ClusterOption.forNumber(number);
+      SetQuantifier> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<SetQuantifier>() {
+          public SetQuantifier findValueByNumber(int number) {
+            return SetQuantifier.forNumber(number);
           }
         };
 
@@ -94,12 +103,12 @@ public enum ClusterOption
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(26);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(4);
   }
 
-  private static final ClusterOption[] VALUES = values();
+  private static final SetQuantifier[] VALUES = values();
 
-  public static ClusterOption valueOf(
+  public static SetQuantifier valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -113,10 +122,10 @@ public enum ClusterOption
 
   private final int value;
 
-  private ClusterOption(int value) {
+  private SetQuantifier(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:pg_query.ClusterOption)
+  // @@protoc_insertion_point(enum_scope:pg_query.SetQuantifier)
 }
 

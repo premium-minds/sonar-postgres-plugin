@@ -46,14 +46,26 @@ public interface ReindexStmtOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>int32 options = 4 [json_name = "options"];</code>
-   * @return The options.
+   * <code>repeated .pg_query.Node params = 4 [json_name = "params"];</code>
    */
-  int getOptions();
-
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getParamsList();
   /**
-   * <code>bool concurrent = 5 [json_name = "concurrent"];</code>
-   * @return The concurrent.
+   * <code>repeated .pg_query.Node params = 4 [json_name = "params"];</code>
    */
-  boolean getConcurrent();
+  com.premiumminds.sonar.postgres.protobuf.Node getParams(int index);
+  /**
+   * <code>repeated .pg_query.Node params = 4 [json_name = "params"];</code>
+   */
+  int getParamsCount();
+  /**
+   * <code>repeated .pg_query.Node params = 4 [json_name = "params"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getParamsOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node params = 4 [json_name = "params"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getParamsOrBuilder(
+      int index);
 }

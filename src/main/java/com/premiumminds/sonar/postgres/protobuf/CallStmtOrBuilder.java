@@ -36,4 +36,28 @@ public interface CallStmtOrBuilder extends
    * <code>.pg_query.FuncExpr funcexpr = 2 [json_name = "funcexpr"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.FuncExprOrBuilder getFuncexprOrBuilder();
+
+  /**
+   * <code>repeated .pg_query.Node outargs = 3 [json_name = "outargs"];</code>
+   */
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getOutargsList();
+  /**
+   * <code>repeated .pg_query.Node outargs = 3 [json_name = "outargs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getOutargs(int index);
+  /**
+   * <code>repeated .pg_query.Node outargs = 3 [json_name = "outargs"];</code>
+   */
+  int getOutargsCount();
+  /**
+   * <code>repeated .pg_query.Node outargs = 3 [json_name = "outargs"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getOutargsOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node outargs = 3 [json_name = "outargs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getOutargsOrBuilder(
+      int index);
 }

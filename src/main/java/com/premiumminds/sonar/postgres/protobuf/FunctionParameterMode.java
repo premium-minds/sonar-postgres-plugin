@@ -32,6 +32,10 @@ public enum FunctionParameterMode
    * <code>FUNC_PARAM_TABLE = 5;</code>
    */
   FUNC_PARAM_TABLE(5),
+  /**
+   * <code>FUNC_PARAM_DEFAULT = 6;</code>
+   */
+  FUNC_PARAM_DEFAULT(6),
   UNRECOGNIZED(-1),
   ;
 
@@ -59,6 +63,10 @@ public enum FunctionParameterMode
    * <code>FUNC_PARAM_TABLE = 5;</code>
    */
   public static final int FUNC_PARAM_TABLE_VALUE = 5;
+  /**
+   * <code>FUNC_PARAM_DEFAULT = 6;</code>
+   */
+  public static final int FUNC_PARAM_DEFAULT_VALUE = 6;
 
 
   public final int getNumber() {
@@ -91,6 +99,7 @@ public enum FunctionParameterMode
       case 3: return FUNC_PARAM_INOUT;
       case 4: return FUNC_PARAM_VARIADIC;
       case 5: return FUNC_PARAM_TABLE;
+      case 6: return FUNC_PARAM_DEFAULT;
       default: return null;
     }
   }
@@ -121,7 +130,7 @@ public enum FunctionParameterMode
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(23);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(24);
   }
 
   private static final FunctionParameterMode[] VALUES = values();

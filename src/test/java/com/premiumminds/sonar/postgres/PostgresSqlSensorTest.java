@@ -288,7 +288,9 @@ class PostgresSqlSensorTest {
         createFile(contextTester, "file1.sql", "DROP INDEX IF EXISTS idx1, idx2;");
         createFile(contextTester, "file2.sql", "create index if not exists idx1 on foo (id);");
         createFile(contextTester, "file3.sql", "reindex index idx1;");
-        createFile(contextTester, "file4.sql", "REFRESH MATERIALIZED VIEW foo;");
+        createFile(contextTester, "file4-ok.sql", "REINDEX index CONCURRENTLY idx1;");
+        createFile(contextTester, "file5-ok.sql", "REINDEX (CONCURRENTLY) index idx1;");
+        createFile(contextTester, "file6.sql", "REFRESH MATERIALIZED VIEW foo;");
 
         final RuleKey rule = RULE_CONCURRENTLY;
         PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
@@ -308,7 +310,7 @@ class PostgresSqlSensorTest {
                 fileMap.get(":file3.sql").primaryLocation().message());
 
         assertEquals("Add CONCURRENTLY to REFRESH MATERIALIZED VIEW foo",
-                fileMap.get(":file4.sql").primaryLocation().message());
+                fileMap.get(":file6.sql").primaryLocation().message());
 
         assertEquals(4, fileMap.size());
     }

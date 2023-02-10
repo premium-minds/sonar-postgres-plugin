@@ -103,7 +103,7 @@ public enum ImportForeignSchemaType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(20);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(21);
   }
 
   private static final ImportForeignSchemaType[] VALUES = values();

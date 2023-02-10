@@ -79,37 +79,52 @@ public interface JoinExprOrBuilder extends
       int index);
 
   /**
-   * <code>.pg_query.Node quals = 6 [json_name = "quals"];</code>
+   * <code>.pg_query.Alias join_using_alias = 6 [json_name = "join_using_alias"];</code>
+   * @return Whether the joinUsingAlias field is set.
+   */
+  boolean hasJoinUsingAlias();
+  /**
+   * <code>.pg_query.Alias join_using_alias = 6 [json_name = "join_using_alias"];</code>
+   * @return The joinUsingAlias.
+   */
+  com.premiumminds.sonar.postgres.protobuf.Alias getJoinUsingAlias();
+  /**
+   * <code>.pg_query.Alias join_using_alias = 6 [json_name = "join_using_alias"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AliasOrBuilder getJoinUsingAliasOrBuilder();
+
+  /**
+   * <code>.pg_query.Node quals = 7 [json_name = "quals"];</code>
    * @return Whether the quals field is set.
    */
   boolean hasQuals();
   /**
-   * <code>.pg_query.Node quals = 6 [json_name = "quals"];</code>
+   * <code>.pg_query.Node quals = 7 [json_name = "quals"];</code>
    * @return The quals.
    */
   com.premiumminds.sonar.postgres.protobuf.Node getQuals();
   /**
-   * <code>.pg_query.Node quals = 6 [json_name = "quals"];</code>
+   * <code>.pg_query.Node quals = 7 [json_name = "quals"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getQualsOrBuilder();
 
   /**
-   * <code>.pg_query.Alias alias = 7 [json_name = "alias"];</code>
+   * <code>.pg_query.Alias alias = 8 [json_name = "alias"];</code>
    * @return Whether the alias field is set.
    */
   boolean hasAlias();
   /**
-   * <code>.pg_query.Alias alias = 7 [json_name = "alias"];</code>
+   * <code>.pg_query.Alias alias = 8 [json_name = "alias"];</code>
    * @return The alias.
    */
   com.premiumminds.sonar.postgres.protobuf.Alias getAlias();
   /**
-   * <code>.pg_query.Alias alias = 7 [json_name = "alias"];</code>
+   * <code>.pg_query.Alias alias = 8 [json_name = "alias"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.AliasOrBuilder getAliasOrBuilder();
 
   /**
-   * <code>int32 rtindex = 8 [json_name = "rtindex"];</code>
+   * <code>int32 rtindex = 9 [json_name = "rtindex"];</code>
    * @return The rtindex.
    */
   int getRtindex();

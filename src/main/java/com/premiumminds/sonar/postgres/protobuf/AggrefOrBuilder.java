@@ -229,7 +229,19 @@ public interface AggrefOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.AggSplit getAggsplit();
 
   /**
-   * <code>int32 location = 18 [json_name = "location"];</code>
+   * <code>int32 aggno = 18 [json_name = "aggno"];</code>
+   * @return The aggno.
+   */
+  int getAggno();
+
+  /**
+   * <code>int32 aggtransno = 19 [json_name = "aggtransno"];</code>
+   * @return The aggtransno.
+   */
+  int getAggtransno();
+
+  /**
+   * <code>int32 location = 20 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

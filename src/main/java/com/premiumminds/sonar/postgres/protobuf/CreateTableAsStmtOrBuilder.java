@@ -38,15 +38,15 @@ public interface CreateTableAsStmtOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.IntoClauseOrBuilder getIntoOrBuilder();
 
   /**
-   * <code>.pg_query.ObjectType relkind = 3 [json_name = "relkind"];</code>
-   * @return The enum numeric value on the wire for relkind.
+   * <code>.pg_query.ObjectType objtype = 3 [json_name = "objtype"];</code>
+   * @return The enum numeric value on the wire for objtype.
    */
-  int getRelkindValue();
+  int getObjtypeValue();
   /**
-   * <code>.pg_query.ObjectType relkind = 3 [json_name = "relkind"];</code>
-   * @return The relkind.
+   * <code>.pg_query.ObjectType objtype = 3 [json_name = "objtype"];</code>
+   * @return The objtype.
    */
-  com.premiumminds.sonar.postgres.protobuf.ObjectType getRelkind();
+  com.premiumminds.sonar.postgres.protobuf.ObjectType getObjtype();
 
   /**
    * <code>bool is_select_into = 4 [json_name = "is_select_into"];</code>

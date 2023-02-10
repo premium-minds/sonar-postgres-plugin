@@ -8,191 +8,197 @@ public interface CreateTrigStmtOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string trigname = 1 [json_name = "trigname"];</code>
+   * <code>bool replace = 1 [json_name = "replace"];</code>
+   * @return The replace.
+   */
+  boolean getReplace();
+
+  /**
+   * <code>bool isconstraint = 2 [json_name = "isconstraint"];</code>
+   * @return The isconstraint.
+   */
+  boolean getIsconstraint();
+
+  /**
+   * <code>string trigname = 3 [json_name = "trigname"];</code>
    * @return The trigname.
    */
   java.lang.String getTrigname();
   /**
-   * <code>string trigname = 1 [json_name = "trigname"];</code>
+   * <code>string trigname = 3 [json_name = "trigname"];</code>
    * @return The bytes for trigname.
    */
   com.google.protobuf.ByteString
       getTrignameBytes();
 
   /**
-   * <code>.pg_query.RangeVar relation = 2 [json_name = "relation"];</code>
+   * <code>.pg_query.RangeVar relation = 4 [json_name = "relation"];</code>
    * @return Whether the relation field is set.
    */
   boolean hasRelation();
   /**
-   * <code>.pg_query.RangeVar relation = 2 [json_name = "relation"];</code>
+   * <code>.pg_query.RangeVar relation = 4 [json_name = "relation"];</code>
    * @return The relation.
    */
   com.premiumminds.sonar.postgres.protobuf.RangeVar getRelation();
   /**
-   * <code>.pg_query.RangeVar relation = 2 [json_name = "relation"];</code>
+   * <code>.pg_query.RangeVar relation = 4 [json_name = "relation"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.RangeVarOrBuilder getRelationOrBuilder();
 
   /**
-   * <code>repeated .pg_query.Node funcname = 3 [json_name = "funcname"];</code>
+   * <code>repeated .pg_query.Node funcname = 5 [json_name = "funcname"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getFuncnameList();
   /**
-   * <code>repeated .pg_query.Node funcname = 3 [json_name = "funcname"];</code>
+   * <code>repeated .pg_query.Node funcname = 5 [json_name = "funcname"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getFuncname(int index);
   /**
-   * <code>repeated .pg_query.Node funcname = 3 [json_name = "funcname"];</code>
+   * <code>repeated .pg_query.Node funcname = 5 [json_name = "funcname"];</code>
    */
   int getFuncnameCount();
   /**
-   * <code>repeated .pg_query.Node funcname = 3 [json_name = "funcname"];</code>
+   * <code>repeated .pg_query.Node funcname = 5 [json_name = "funcname"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getFuncnameOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node funcname = 3 [json_name = "funcname"];</code>
+   * <code>repeated .pg_query.Node funcname = 5 [json_name = "funcname"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getFuncnameOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node args = 4 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 6 [json_name = "args"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getArgsList();
   /**
-   * <code>repeated .pg_query.Node args = 4 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 6 [json_name = "args"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getArgs(int index);
   /**
-   * <code>repeated .pg_query.Node args = 4 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 6 [json_name = "args"];</code>
    */
   int getArgsCount();
   /**
-   * <code>repeated .pg_query.Node args = 4 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 6 [json_name = "args"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getArgsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node args = 4 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 6 [json_name = "args"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getArgsOrBuilder(
       int index);
 
   /**
-   * <code>bool row = 5 [json_name = "row"];</code>
+   * <code>bool row = 7 [json_name = "row"];</code>
    * @return The row.
    */
   boolean getRow();
 
   /**
-   * <code>int32 timing = 6 [json_name = "timing"];</code>
+   * <code>int32 timing = 8 [json_name = "timing"];</code>
    * @return The timing.
    */
   int getTiming();
 
   /**
-   * <code>int32 events = 7 [json_name = "events"];</code>
+   * <code>int32 events = 9 [json_name = "events"];</code>
    * @return The events.
    */
   int getEvents();
 
   /**
-   * <code>repeated .pg_query.Node columns = 8 [json_name = "columns"];</code>
+   * <code>repeated .pg_query.Node columns = 10 [json_name = "columns"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getColumnsList();
   /**
-   * <code>repeated .pg_query.Node columns = 8 [json_name = "columns"];</code>
+   * <code>repeated .pg_query.Node columns = 10 [json_name = "columns"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getColumns(int index);
   /**
-   * <code>repeated .pg_query.Node columns = 8 [json_name = "columns"];</code>
+   * <code>repeated .pg_query.Node columns = 10 [json_name = "columns"];</code>
    */
   int getColumnsCount();
   /**
-   * <code>repeated .pg_query.Node columns = 8 [json_name = "columns"];</code>
+   * <code>repeated .pg_query.Node columns = 10 [json_name = "columns"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getColumnsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node columns = 8 [json_name = "columns"];</code>
+   * <code>repeated .pg_query.Node columns = 10 [json_name = "columns"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColumnsOrBuilder(
       int index);
 
   /**
-   * <code>.pg_query.Node when_clause = 9 [json_name = "whenClause"];</code>
+   * <code>.pg_query.Node when_clause = 11 [json_name = "whenClause"];</code>
    * @return Whether the whenClause field is set.
    */
   boolean hasWhenClause();
   /**
-   * <code>.pg_query.Node when_clause = 9 [json_name = "whenClause"];</code>
+   * <code>.pg_query.Node when_clause = 11 [json_name = "whenClause"];</code>
    * @return The whenClause.
    */
   com.premiumminds.sonar.postgres.protobuf.Node getWhenClause();
   /**
-   * <code>.pg_query.Node when_clause = 9 [json_name = "whenClause"];</code>
+   * <code>.pg_query.Node when_clause = 11 [json_name = "whenClause"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getWhenClauseOrBuilder();
 
   /**
-   * <code>bool isconstraint = 10 [json_name = "isconstraint"];</code>
-   * @return The isconstraint.
-   */
-  boolean getIsconstraint();
-
-  /**
-   * <code>repeated .pg_query.Node transition_rels = 11 [json_name = "transitionRels"];</code>
+   * <code>repeated .pg_query.Node transition_rels = 12 [json_name = "transitionRels"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getTransitionRelsList();
   /**
-   * <code>repeated .pg_query.Node transition_rels = 11 [json_name = "transitionRels"];</code>
+   * <code>repeated .pg_query.Node transition_rels = 12 [json_name = "transitionRels"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getTransitionRels(int index);
   /**
-   * <code>repeated .pg_query.Node transition_rels = 11 [json_name = "transitionRels"];</code>
+   * <code>repeated .pg_query.Node transition_rels = 12 [json_name = "transitionRels"];</code>
    */
   int getTransitionRelsCount();
   /**
-   * <code>repeated .pg_query.Node transition_rels = 11 [json_name = "transitionRels"];</code>
+   * <code>repeated .pg_query.Node transition_rels = 12 [json_name = "transitionRels"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getTransitionRelsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node transition_rels = 11 [json_name = "transitionRels"];</code>
+   * <code>repeated .pg_query.Node transition_rels = 12 [json_name = "transitionRels"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getTransitionRelsOrBuilder(
       int index);
 
   /**
-   * <code>bool deferrable = 12 [json_name = "deferrable"];</code>
+   * <code>bool deferrable = 13 [json_name = "deferrable"];</code>
    * @return The deferrable.
    */
   boolean getDeferrable();
 
   /**
-   * <code>bool initdeferred = 13 [json_name = "initdeferred"];</code>
+   * <code>bool initdeferred = 14 [json_name = "initdeferred"];</code>
    * @return The initdeferred.
    */
   boolean getInitdeferred();
 
   /**
-   * <code>.pg_query.RangeVar constrrel = 14 [json_name = "constrrel"];</code>
+   * <code>.pg_query.RangeVar constrrel = 15 [json_name = "constrrel"];</code>
    * @return Whether the constrrel field is set.
    */
   boolean hasConstrrel();
   /**
-   * <code>.pg_query.RangeVar constrrel = 14 [json_name = "constrrel"];</code>
+   * <code>.pg_query.RangeVar constrrel = 15 [json_name = "constrrel"];</code>
    * @return The constrrel.
    */
   com.premiumminds.sonar.postgres.protobuf.RangeVar getConstrrel();
   /**
-   * <code>.pg_query.RangeVar constrrel = 14 [json_name = "constrrel"];</code>
+   * <code>.pg_query.RangeVar constrrel = 15 [json_name = "constrrel"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.RangeVarOrBuilder getConstrrelOrBuilder();
 }

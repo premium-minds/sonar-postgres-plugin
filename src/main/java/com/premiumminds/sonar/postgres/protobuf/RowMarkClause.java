@@ -32,67 +32,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private RowMarkClause(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            rti_ = input.readUInt32();
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-
-            strength_ = rawValue;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            waitPolicy_ = rawValue;
-            break;
-          }
-          case 32: {
-
-            pushedDown_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.premiumminds.sonar.postgres.protobuf.PgQuery.internal_static_pg_query_RowMarkClause_descriptor;
@@ -107,7 +46,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RTI_FIELD_NUMBER = 1;
-  private int rti_;
+  private int rti_ = 0;
   /**
    * <code>uint32 rti = 1 [json_name = "rti"];</code>
    * @return The rti.
@@ -118,7 +57,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STRENGTH_FIELD_NUMBER = 2;
-  private int strength_;
+  private int strength_ = 0;
   /**
    * <code>.pg_query.LockClauseStrength strength = 2 [json_name = "strength"];</code>
    * @return The enum numeric value on the wire for strength.
@@ -131,13 +70,12 @@ private static final long serialVersionUID = 0L;
    * @return The strength.
    */
   @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.LockClauseStrength getStrength() {
-    @SuppressWarnings("deprecation")
-    com.premiumminds.sonar.postgres.protobuf.LockClauseStrength result = com.premiumminds.sonar.postgres.protobuf.LockClauseStrength.valueOf(strength_);
+    com.premiumminds.sonar.postgres.protobuf.LockClauseStrength result = com.premiumminds.sonar.postgres.protobuf.LockClauseStrength.forNumber(strength_);
     return result == null ? com.premiumminds.sonar.postgres.protobuf.LockClauseStrength.UNRECOGNIZED : result;
   }
 
   public static final int WAIT_POLICY_FIELD_NUMBER = 3;
-  private int waitPolicy_;
+  private int waitPolicy_ = 0;
   /**
    * <code>.pg_query.LockWaitPolicy wait_policy = 3 [json_name = "waitPolicy"];</code>
    * @return The enum numeric value on the wire for waitPolicy.
@@ -150,13 +88,12 @@ private static final long serialVersionUID = 0L;
    * @return The waitPolicy.
    */
   @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy getWaitPolicy() {
-    @SuppressWarnings("deprecation")
-    com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy result = com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy.valueOf(waitPolicy_);
+    com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy result = com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy.forNumber(waitPolicy_);
     return result == null ? com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy.UNRECOGNIZED : result;
   }
 
   public static final int PUSHED_DOWN_FIELD_NUMBER = 4;
-  private boolean pushedDown_;
+  private boolean pushedDown_ = false;
   /**
    * <code>bool pushed_down = 4 [json_name = "pushedDown"];</code>
    * @return The pushedDown.
@@ -192,7 +129,7 @@ private static final long serialVersionUID = 0L;
     if (pushedDown_ != false) {
       output.writeBool(4, pushedDown_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -217,7 +154,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, pushedDown_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -238,7 +175,7 @@ private static final long serialVersionUID = 0L;
     if (waitPolicy_ != other.waitPolicy_) return false;
     if (getPushedDown()
         != other.getPushedDown()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -258,7 +195,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PUSHED_DOWN_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getPushedDown());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -375,30 +312,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.premiumminds.sonar.postgres.protobuf.RowMarkClause.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       rti_ = 0;
-
       strength_ = 0;
-
       waitPolicy_ = 0;
-
       pushedDown_ = false;
-
       return this;
     }
 
@@ -425,12 +354,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.RowMarkClause buildPartial() {
       com.premiumminds.sonar.postgres.protobuf.RowMarkClause result = new com.premiumminds.sonar.postgres.protobuf.RowMarkClause(this);
-      result.rti_ = rti_;
-      result.strength_ = strength_;
-      result.waitPolicy_ = waitPolicy_;
-      result.pushedDown_ = pushedDown_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.RowMarkClause result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.rti_ = rti_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.strength_ = strength_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.waitPolicy_ = waitPolicy_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.pushedDown_ = pushedDown_;
+      }
     }
 
     @java.lang.Override
@@ -489,7 +431,7 @@ private static final long serialVersionUID = 0L;
       if (other.getPushedDown() != false) {
         setPushedDown(other.getPushedDown());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -504,19 +446,53 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.premiumminds.sonar.postgres.protobuf.RowMarkClause parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              rti_ = input.readUInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              strength_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              waitPolicy_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              pushedDown_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.premiumminds.sonar.postgres.protobuf.RowMarkClause) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private int rti_ ;
     /**
@@ -535,6 +511,7 @@ private static final long serialVersionUID = 0L;
     public Builder setRti(int value) {
       
       rti_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -543,7 +520,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRti() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       rti_ = 0;
       onChanged();
       return this;
@@ -563,8 +540,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStrengthValue(int value) {
-      
       strength_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -574,8 +551,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.LockClauseStrength getStrength() {
-      @SuppressWarnings("deprecation")
-      com.premiumminds.sonar.postgres.protobuf.LockClauseStrength result = com.premiumminds.sonar.postgres.protobuf.LockClauseStrength.valueOf(strength_);
+      com.premiumminds.sonar.postgres.protobuf.LockClauseStrength result = com.premiumminds.sonar.postgres.protobuf.LockClauseStrength.forNumber(strength_);
       return result == null ? com.premiumminds.sonar.postgres.protobuf.LockClauseStrength.UNRECOGNIZED : result;
     }
     /**
@@ -587,7 +563,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       strength_ = value.getNumber();
       onChanged();
       return this;
@@ -597,7 +573,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStrength() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       strength_ = 0;
       onChanged();
       return this;
@@ -617,8 +593,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWaitPolicyValue(int value) {
-      
       waitPolicy_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -628,8 +604,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy getWaitPolicy() {
-      @SuppressWarnings("deprecation")
-      com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy result = com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy.valueOf(waitPolicy_);
+      com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy result = com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy.forNumber(waitPolicy_);
       return result == null ? com.premiumminds.sonar.postgres.protobuf.LockWaitPolicy.UNRECOGNIZED : result;
     }
     /**
@@ -641,7 +616,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       waitPolicy_ = value.getNumber();
       onChanged();
       return this;
@@ -651,7 +626,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWaitPolicy() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       waitPolicy_ = 0;
       onChanged();
       return this;
@@ -674,6 +649,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPushedDown(boolean value) {
       
       pushedDown_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -682,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPushedDown() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       pushedDown_ = false;
       onChanged();
       return this;
@@ -720,7 +696,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RowMarkClause(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

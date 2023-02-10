@@ -12,18 +12,18 @@ public interface StringOrBuilder extends
    * string 
    * </pre>
    *
-   * <code>string str = 1;</code>
-   * @return The str.
+   * <code>string sval = 1;</code>
+   * @return The sval.
    */
-  java.lang.String getStr();
+  java.lang.String getSval();
   /**
    * <pre>
    * string 
    * </pre>
    *
-   * <code>string str = 1;</code>
-   * @return The bytes for str.
+   * <code>string sval = 1;</code>
+   * @return The bytes for sval.
    */
   com.google.protobuf.ByteString
-      getStrBytes();
+      getSvalBytes();
 }

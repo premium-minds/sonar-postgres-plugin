@@ -24,6 +24,10 @@ public enum CoercionForm
    * <code>COERCE_IMPLICIT_CAST = 3;</code>
    */
   COERCE_IMPLICIT_CAST(3),
+  /**
+   * <code>COERCE_SQL_SYNTAX = 4;</code>
+   */
+  COERCE_SQL_SYNTAX(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -43,6 +47,10 @@ public enum CoercionForm
    * <code>COERCE_IMPLICIT_CAST = 3;</code>
    */
   public static final int COERCE_IMPLICIT_CAST_VALUE = 3;
+  /**
+   * <code>COERCE_SQL_SYNTAX = 4;</code>
+   */
+  public static final int COERCE_SQL_SYNTAX_VALUE = 4;
 
 
   public final int getNumber() {
@@ -73,6 +81,7 @@ public enum CoercionForm
       case 1: return COERCE_EXPLICIT_CALL;
       case 2: return COERCE_EXPLICIT_CAST;
       case 3: return COERCE_IMPLICIT_CAST;
+      case 4: return COERCE_SQL_SYNTAX;
       default: return null;
     }
   }
@@ -103,7 +112,7 @@ public enum CoercionForm
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(34);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(36);
   }
 
   private static final CoercionForm[] VALUES = values();

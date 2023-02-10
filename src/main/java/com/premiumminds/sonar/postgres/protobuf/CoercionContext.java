@@ -21,9 +21,13 @@ public enum CoercionContext
    */
   COERCION_ASSIGNMENT(2),
   /**
-   * <code>COERCION_EXPLICIT = 3;</code>
+   * <code>COERCION_PLPGSQL = 3;</code>
    */
-  COERCION_EXPLICIT(3),
+  COERCION_PLPGSQL(3),
+  /**
+   * <code>COERCION_EXPLICIT = 4;</code>
+   */
+  COERCION_EXPLICIT(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -40,9 +44,13 @@ public enum CoercionContext
    */
   public static final int COERCION_ASSIGNMENT_VALUE = 2;
   /**
-   * <code>COERCION_EXPLICIT = 3;</code>
+   * <code>COERCION_PLPGSQL = 3;</code>
    */
-  public static final int COERCION_EXPLICIT_VALUE = 3;
+  public static final int COERCION_PLPGSQL_VALUE = 3;
+  /**
+   * <code>COERCION_EXPLICIT = 4;</code>
+   */
+  public static final int COERCION_EXPLICIT_VALUE = 4;
 
 
   public final int getNumber() {
@@ -72,7 +80,8 @@ public enum CoercionContext
       case 0: return COERCION_CONTEXT_UNDEFINED;
       case 1: return COERCION_IMPLICIT;
       case 2: return COERCION_ASSIGNMENT;
-      case 3: return COERCION_EXPLICIT;
+      case 3: return COERCION_PLPGSQL;
+      case 4: return COERCION_EXPLICIT;
       default: return null;
     }
   }
@@ -103,7 +112,7 @@ public enum CoercionContext
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(33);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(35);
   }
 
   private static final CoercionContext[] VALUES = values();

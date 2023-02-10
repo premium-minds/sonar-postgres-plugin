@@ -8,23 +8,91 @@ public interface A_ConstOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
-   * @return Whether the val field is set.
+   * <code>.pg_query.Integer ival = 1;</code>
+   * @return Whether the ival field is set.
    */
-  boolean hasVal();
+  boolean hasIval();
   /**
-   * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
-   * @return The val.
+   * <code>.pg_query.Integer ival = 1;</code>
+   * @return The ival.
    */
-  com.premiumminds.sonar.postgres.protobuf.Node getVal();
+  com.premiumminds.sonar.postgres.protobuf.Integer getIval();
   /**
-   * <code>.pg_query.Node val = 1 [json_name = "val"];</code>
+   * <code>.pg_query.Integer ival = 1;</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getValOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.IntegerOrBuilder getIvalOrBuilder();
 
   /**
-   * <code>int32 location = 2 [json_name = "location"];</code>
+   * <code>.pg_query.Float fval = 2;</code>
+   * @return Whether the fval field is set.
+   */
+  boolean hasFval();
+  /**
+   * <code>.pg_query.Float fval = 2;</code>
+   * @return The fval.
+   */
+  com.premiumminds.sonar.postgres.protobuf.Float getFval();
+  /**
+   * <code>.pg_query.Float fval = 2;</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.FloatOrBuilder getFvalOrBuilder();
+
+  /**
+   * <code>.pg_query.Boolean boolval = 3;</code>
+   * @return Whether the boolval field is set.
+   */
+  boolean hasBoolval();
+  /**
+   * <code>.pg_query.Boolean boolval = 3;</code>
+   * @return The boolval.
+   */
+  com.premiumminds.sonar.postgres.protobuf.Boolean getBoolval();
+  /**
+   * <code>.pg_query.Boolean boolval = 3;</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.BooleanOrBuilder getBoolvalOrBuilder();
+
+  /**
+   * <code>.pg_query.String sval = 4;</code>
+   * @return Whether the sval field is set.
+   */
+  boolean hasSval();
+  /**
+   * <code>.pg_query.String sval = 4;</code>
+   * @return The sval.
+   */
+  com.premiumminds.sonar.postgres.protobuf.String getSval();
+  /**
+   * <code>.pg_query.String sval = 4;</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.StringOrBuilder getSvalOrBuilder();
+
+  /**
+   * <code>.pg_query.BitString bsval = 5;</code>
+   * @return Whether the bsval field is set.
+   */
+  boolean hasBsval();
+  /**
+   * <code>.pg_query.BitString bsval = 5;</code>
+   * @return The bsval.
+   */
+  com.premiumminds.sonar.postgres.protobuf.BitString getBsval();
+  /**
+   * <code>.pg_query.BitString bsval = 5;</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.BitStringOrBuilder getBsvalOrBuilder();
+
+  /**
+   * <code>bool isnull = 10;</code>
+   * @return The isnull.
+   */
+  boolean getIsnull();
+
+  /**
+   * <code>int32 location = 11;</code>
    * @return The location.
    */
   int getLocation();
+
+  public com.premiumminds.sonar.postgres.protobuf.A_Const.ValCase getValCase();
 }
