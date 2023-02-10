@@ -8,6 +8,7 @@ import com.premiumminds.sonar.postgres.protobuf.ParseResult;
 import com.premiumminds.sonar.postgres.protobuf.ScanResult;
 import com.premiumminds.sonar.postgres.protobuf.Token;
 import com.premiumminds.sonar.postgres.visitors.VisitorCheck;
+import java.util.regex.Pattern;
 import org.sonar.api.batch.fs.FileSystem;
 import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.fs.TextRange;
@@ -25,6 +26,7 @@ import org.sonar.api.utils.log.Loggers;
 
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.REPOSITORY;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_IDENTIFIER_MAX_LENGTH;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_ONLY_LOWER_CASE_NAMES;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_PARSE_ERROR;
 
 public class PostgresSqlSensor implements Sensor {
@@ -86,6 +88,23 @@ public class PostgresSqlSensor implements Sensor {
             return;
         }
         final ScanResult scanResult = ScanResult.parseFrom(result.pbuf.data.getByteArray(0, result.pbuf.len));
+
+        Pattern pattern = Pattern.compile("[a-z0-9_]+");
+        scanResult.getTokensList()
+                  .stream()
+                  .filter(st -> st.getToken().equals(Token.IDENT))
+                  .filter(st -> !pattern.matcher(file.subContents(st.getStart(), st.getEnd())).matches())
+                  .forEach(st -> {
+                      final String identifier = file.subContents(st.getStart(), st.getEnd());
+
+                      final TextRange textRange = file.convertAbsoluteOffsetsToTextRange(st.getStart(), st.getEnd());
+                      final String message = "Identifier '" + identifier + "' is not lower case";
+                      newIssue(context,
+                               file,
+                               message,
+                               textRange,
+                               RULE_ONLY_LOWER_CASE_NAMES);
+                  });
 
         scanResult.getTokensList()
                 .stream()

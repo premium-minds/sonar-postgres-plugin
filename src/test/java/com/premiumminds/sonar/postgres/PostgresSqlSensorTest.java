@@ -33,6 +33,7 @@ import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_DI
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_DROP_CONSTRAINT_DROPS_INDEX;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_IDENTIFIER_MAX_LENGTH;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_ONE_MIGRATION_PER_FILE;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_ONLY_LOWER_CASE_NAMES;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_ONLY_SCHEMA_MIGRATIONS;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_PARSE_ERROR;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_PREFER_IDENTITY_FIELD;
@@ -80,7 +81,7 @@ class PostgresSqlSensorTest {
 
         createFile(contextTester, "file1.sql", "SELECT 1;\r\nSELECT 2;\r\nSELECT 3;");
         createFile(contextTester, "file2.sql", "SELECT 'Évora 1';\nSELECT 'Évora 2';\nSELECT 'Évora 3';");
-        createFile(contextTester, "file3.sql", "INSERT INTO foo VALUES (\"éééééééééééé\"), (\"a\");");
+        createFile(contextTester, "file3.sql", "INSERT INTO foo VALUES ('éééééééééééé'), ('a');");
 
         final RuleKey rule = RULE_PARSE_ERROR;
         PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
@@ -744,6 +745,34 @@ class PostgresSqlSensorTest {
                      fileMap.get(":file3.sql").primaryLocation().message());
         assertEquals("TRUNCATE statements are now allowed",
                      fileMap.get(":file4.sql").primaryLocation().message());
+
+        assertEquals(4, fileMap.size());
+    }
+
+    @Test
+    public void onlyLowerCaseNames() {
+        createFile(contextTester, "file1.sql", "CREATE TABLE Foo (id int);");
+        createFile(contextTester, "file2.sql", "CREATE TABLE \"Foo\" (id int);");
+        createFile(contextTester, "file3.sql", "CREATE TABLE foo (ID int);");
+        createFile(contextTester, "file4-ok.sql", "CREATE TABLE foo_1 (bar_2 int);");
+        createFile(contextTester, "file5.sql", "CREATE MATERIALIZED VIEW Foo AS SELECT 1;");
+
+        final RuleKey rule = RULE_ONLY_LOWER_CASE_NAMES;
+        PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
+        sensor.execute(contextTester);
+
+        final Map<RuleKey, Map<String, Issue>> issueMap = groupByRuleAndFile(contextTester.allIssues());
+
+        final Map<String, Issue> fileMap = issueMap.get(rule);
+
+        assertEquals("Identifier 'Foo' is not lower case",
+                     fileMap.get(":file1.sql").primaryLocation().message());
+        assertEquals("Identifier '\"Foo\"' is not lower case",
+                     fileMap.get(":file2.sql").primaryLocation().message());
+        assertEquals("Identifier 'ID' is not lower case",
+                     fileMap.get(":file3.sql").primaryLocation().message());
+        assertEquals("Identifier 'Foo' is not lower case",
+                     fileMap.get(":file5.sql").primaryLocation().message());
 
         assertEquals(4, fileMap.size());
     }

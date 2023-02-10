@@ -57,6 +57,7 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
     public static final RuleKey RULE_ONE_MIGRATION_PER_FILE = RuleKey.of(REPOSITORY, "one-migration-per-file");
     public static final RuleKey RULE_DISALLOWED_DO = RuleKey.of(REPOSITORY, "disallowed-do");
     public static final RuleKey RULE_ONLY_SCHEMA_MIGRATIONS = RuleKey.of(REPOSITORY, "only-schema-migrations");
+    public static final RuleKey RULE_ONLY_LOWER_CASE_NAMES = RuleKey.of(REPOSITORY, "only-lower-case-names");
 
     @Override
     public void define(Context context) {
@@ -178,6 +179,11 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
                   .setName("only-schema-migrations rule")
                   .setType(RuleType.BUG)
                   .setMarkdownDescription(getClass().getResource("only-schema-migrations.md"));
+
+        repository.createRule(RULE_ONLY_LOWER_CASE_NAMES.rule())
+                  .setName("only-lower-case-names rule")
+                  .setType(RuleType.BUG)
+                  .setMarkdownDescription(getClass().getResource("only-lower-case-names.md"));
 
         repository.done();
     }
