@@ -7,50 +7,9 @@ on:
     branches: [ master ]
 
 jobs:
-  build-libpg-query-x86-64:
-    runs-on: ubuntu-latest
-    container:
-      image: gcc:11
-    steps:
-      - run: |
-          wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/15-4.2.0.zip
-          unzip 15-4.2.0.zip
-          cd libpg_query-15-4.2.0
-          make -j build_shared
-      - name: Upload output file
-        uses: actions/upload-artifact@v3
-        with:
-          name: libpg_query-x86-64
-          path: libpg_query-15-4.2.0/libpg_query.so
-          if-no-files-found: error
-
-  build-libpg-query-aarch64:
-    runs-on: ubuntu-latest
-    container:
-      image: gcc:11
-    steps:
-      - run: |
-          wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/15-4.2.0.zip
-          unzip 15-4.2.0.zip
-          cd libpg_query-15-4.2.0
-          apt update && apt install -y gcc-aarch64-linux-gnu && make build_shared
-          export CC=aarch64-linux-gnu-gcc
-          make -j build_shared
-      - name: Upload output file
-        uses: actions/upload-artifact@v3
-        with:
-          name: libpg_query-aarch64
-          path: libpg_query-15-4.2.0/libpg_query.so
-          if-no-files-found: error
-
   build-jar:
 
     runs-on: ubuntu-latest
-
-    needs: [
-      build-libpg-query-x86-64,
-      build-libpg-query-aarch64,
-    ]
 
     steps:
       - name: Checkout
@@ -60,15 +19,5 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
-      - name: Download x86-64 libpg-query
-        uses: actions/download-artifact@v3
-        with:
-          name: libpg_query-x86-64
-          path: src/main/resources/linux-x86-64
-      - name: Download aarch64 libpg-query
-        uses: actions/download-artifact@v3
-        with:
-          name: libpg_query-aarch64
-          path: src/main/resources/linux-aarch64
       - name: Build with Maven
         run: mvn -B --no-transfer-progress verify --file pom.xml

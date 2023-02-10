@@ -3,8 +3,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-src/main/resources/**/*.so
-
 ### IntelliJ IDEA ###
 .idea/
 *.iws
