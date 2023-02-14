@@ -436,7 +436,12 @@ class PostgresSqlSensorTest {
     public void preferIdentityField() {
 
         createFile(contextTester, "file1.sql", "create table if not exists foo (id serial, name text NOT NULL);");
-        createFile(contextTester, "file2.sql", "ALTER TABLE foo ADD COLUMN id serial PRIMARY KEY;");
+        createFile(contextTester, "file2.sql", "ALTER TABLE foo ADD COLUMN id smallserial PRIMARY KEY;");
+        createFile(contextTester, "file3.sql", "ALTER TABLE foo ADD COLUMN id serial PRIMARY KEY;");
+        createFile(contextTester, "file4.sql", "ALTER TABLE foo ADD COLUMN id bigserial PRIMARY KEY;");
+        createFile(contextTester, "file5.sql", "ALTER TABLE foo ADD COLUMN id serial2 PRIMARY KEY;");
+        createFile(contextTester, "file6.sql", "ALTER TABLE foo ADD COLUMN id serial4 PRIMARY KEY;");
+        createFile(contextTester, "file7.sql", "ALTER TABLE foo ADD COLUMN id serial8 PRIMARY KEY;");
 
         final RuleKey rule = RULE_PREFER_IDENTITY_FIELD;
         PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
@@ -452,8 +457,22 @@ class PostgresSqlSensorTest {
         assertEquals("For new applications, identity columns should be used instead.",
                 fileMap.get(":file2.sql").primaryLocation().message());
 
+        assertEquals("For new applications, identity columns should be used instead.",
+                     fileMap.get(":file3.sql").primaryLocation().message());
 
-        assertEquals(2, fileMap.size());
+        assertEquals("For new applications, identity columns should be used instead.",
+                     fileMap.get(":file4.sql").primaryLocation().message());
+
+        assertEquals("For new applications, identity columns should be used instead.",
+                     fileMap.get(":file5.sql").primaryLocation().message());
+
+        assertEquals("For new applications, identity columns should be used instead.",
+                     fileMap.get(":file6.sql").primaryLocation().message());
+
+        assertEquals("For new applications, identity columns should be used instead.",
+                     fileMap.get(":file7.sql").primaryLocation().message());
+
+        assertEquals(7, fileMap.size());
     }
 
     @Test
