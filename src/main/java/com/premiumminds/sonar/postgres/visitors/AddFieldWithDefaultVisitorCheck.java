@@ -7,9 +7,12 @@ import com.premiumminds.sonar.postgres.protobuf.ConstrType;
 import com.premiumminds.sonar.postgres.protobuf.Constraint;
 import com.premiumminds.sonar.postgres.protobuf.FuncCall;
 import com.premiumminds.sonar.postgres.protobuf.Node;
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
-import org.sonar.api.internal.apachecommons.io.IOUtils;
 import org.sonar.api.rule.RuleKey;
 import org.sonar.check.Rule;
 
@@ -25,8 +28,17 @@ public class AddFieldWithDefaultVisitorCheck extends AbstractVisitorCheck {
 
     static {
         try (InputStream inputStream = AddFieldWithDefaultVisitorCheck.class
-            .getClassLoader().getResourceAsStream(NON_VOLATILE_BUILT_IN_FUNCTIONS)) {
-            nonVolatileFunctions = IOUtils.readLines(inputStream, "UTF-8");
+                .getClassLoader().getResourceAsStream(NON_VOLATILE_BUILT_IN_FUNCTIONS);
+            InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+            BufferedReader bufferedReader = new BufferedReader(reader))
+        {
+            List<String> lines = new ArrayList<>();
+
+            String line;
+            while((line = bufferedReader.readLine()) != null) {
+                lines.add(line);
+            }
+            nonVolatileFunctions = lines;
         } catch (Exception e){
             throw new RuntimeException("Could not load resource " + NON_VOLATILE_BUILT_IN_FUNCTIONS + " from classpath", e);
         }
