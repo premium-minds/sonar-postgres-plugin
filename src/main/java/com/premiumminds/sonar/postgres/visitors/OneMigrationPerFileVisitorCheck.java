@@ -1,13 +1,13 @@
 package com.premiumminds.sonar.postgres.visitors;
 
-import com.premiumminds.sonar.postgres.protobuf.DoStmt;
-import com.premiumminds.sonar.postgres.protobuf.IndexStmt;
 import java.util.List;
 
 import com.premiumminds.sonar.postgres.PostgreSqlFile;
-import com.premiumminds.sonar.postgres.protobuf.AlterTableCmd;
+import com.premiumminds.sonar.postgres.protobuf.AlterTableStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateStmt;
+import com.premiumminds.sonar.postgres.protobuf.DoStmt;
 import com.premiumminds.sonar.postgres.protobuf.DropStmt;
+import com.premiumminds.sonar.postgres.protobuf.IndexStmt;
 import com.premiumminds.sonar.postgres.protobuf.RawStmt;
 import org.sonar.api.batch.sensor.SensorContext;
 import org.sonar.api.rule.RuleKey;
@@ -20,7 +20,7 @@ public class OneMigrationPerFileVisitorCheck extends AbstractVisitorCheck {
 
     private int createIndexCounter = 0;
     private int createStmtCounter = 0;
-    private int alterTableCmdCounter = 0;
+    private int alterTableStmtCounter = 0;
     private int dropStmtCounter = 0;
     private int doStmtCounter = 0;
 
@@ -31,9 +31,9 @@ public class OneMigrationPerFileVisitorCheck extends AbstractVisitorCheck {
     }
 
     @Override
-    public void visit(AlterTableCmd alterTableCmd) {
-        super.visit(alterTableCmd);
-        alterTableCmdCounter++;
+    public void visit(final AlterTableStmt alterTableStmt) {
+        super.visit(alterTableStmt);
+        alterTableStmtCounter++;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class OneMigrationPerFileVisitorCheck extends AbstractVisitorCheck {
     @Override
     public void analyze(SensorContext context, PostgreSqlFile file, List<RawStmt> statements) {
         super.analyze(context, file, statements);
-        if (createStmtCounter + alterTableCmdCounter + dropStmtCounter + createIndexCounter + doStmtCounter > 1){
+        if (createStmtCounter + alterTableStmtCounter + dropStmtCounter + createIndexCounter + doStmtCounter > 1){
             newIssue("Use one migration per file");
         }
     }

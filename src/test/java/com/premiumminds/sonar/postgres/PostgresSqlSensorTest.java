@@ -684,6 +684,7 @@ class PostgresSqlSensorTest {
         createFile(contextTester, "file9.sql", "ALTER TABLE IF EXISTS foo DROP COLUMN baz;" +
             "drop index concurrently idx1;");
         createFile(contextTester, "file10.sql", "DO $$ BEGIN RAISE NOTICE 'foo'; END; $$; DO $$ BEGIN RAISE NOTICE 'bar'; END; $$;");
+        createFile(contextTester, "file11.sql", "ALTER TABLE IF EXISTS foo DROP COLUMN bar, DROP COLUMN baz;");
 
         final RuleKey rule = RULE_ONE_MIGRATION_PER_FILE;
         PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
