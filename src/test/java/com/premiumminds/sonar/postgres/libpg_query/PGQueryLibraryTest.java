@@ -108,7 +108,7 @@ class PGQueryLibraryTest {
         assertNull(result.error);
 
         assertEquals("[\n" +
-                        "{\"PLpgSQL_function\":{\"datums\":[{\"PLpgSQL_var\":{\"refname\":\"v_name\",\"datatype\":{\"PLpgSQL_type\":{\"typname\":\"UNKNOWN\"}}}},{\"PLpgSQL_var\":{\"refname\":\"v_version\",\"datatype\":{\"PLpgSQL_type\":{\"typname\":\"UNKNOWN\"}}}},{\"PLpgSQL_var\":{\"refname\":\"found\",\"datatype\":{\"PLpgSQL_type\":{\"typname\":\"UNKNOWN\"}}}}],\"action\":{\"PLpgSQL_stmt_block\":{\"lineno\":2,\"body\":[{\"PLpgSQL_stmt_if\":{\"lineno\":3,\"cond\":{\"PLpgSQL_expr\":{\"query\":\"v_version IS NULL\"}},\"then_body\":[{\"PLpgSQL_stmt_return\":{\"lineno\":4,\"expr\":{\"PLpgSQL_expr\":{\"query\":\"v_name\"}}}}]}},{\"PLpgSQL_stmt_return\":{\"lineno\":6,\"expr\":{\"PLpgSQL_expr\":{\"query\":\"v_name || '/' || v_version\"}}}}]}}}}\n" +
+                        "{\"PLpgSQL_function\":{\"datums\":[{\"PLpgSQL_var\":{\"refname\":\"v_name\",\"datatype\":{\"PLpgSQL_type\":{\"typname\":\"UNKNOWN\"}}}},{\"PLpgSQL_var\":{\"refname\":\"v_version\",\"datatype\":{\"PLpgSQL_type\":{\"typname\":\"UNKNOWN\"}}}},{\"PLpgSQL_var\":{\"refname\":\"found\",\"datatype\":{\"PLpgSQL_type\":{\"typname\":\"UNKNOWN\"}}}}],\"action\":{\"PLpgSQL_stmt_block\":{\"lineno\":2,\"body\":[{\"PLpgSQL_stmt_if\":{\"lineno\":3,\"cond\":{\"PLpgSQL_expr\":{\"query\":\"v_version IS NULL\",\"parseMode\":2}},\"then_body\":[{\"PLpgSQL_stmt_return\":{\"lineno\":4,\"expr\":{\"PLpgSQL_expr\":{\"query\":\"v_name\",\"parseMode\":2}}}}]}},{\"PLpgSQL_stmt_return\":{\"lineno\":6,\"expr\":{\"PLpgSQL_expr\":{\"query\":\"v_name || '/' || v_version\",\"parseMode\":2}}}}]}}}}\n" +
                         "]",
                 result.plpgsql_funcs.getString(0));
 

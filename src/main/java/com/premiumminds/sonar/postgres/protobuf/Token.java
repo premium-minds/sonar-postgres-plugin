@@ -19,6 +19,14 @@ public enum Token
    * Also see https://www.postgresql.org/docs/12/sql-syntax-lexical.html#SQL-SYNTAX-SPECIAL-CHARS
    * </pre>
    *
+   * <code>ASCII_36 = 36;</code>
+   */
+  ASCII_36(36),
+  /**
+   * <pre>
+   * "%"
+   * </pre>
+   *
    * <code>ASCII_37 = 37;</code>
    */
   ASCII_37(37),
@@ -2134,6 +2142,14 @@ public enum Token
    * Single-character tokens that are returned 1:1 (identical with "self" list in scan.l)
    * Either supporting syntax, or single-character operators (some can be both)
    * Also see https://www.postgresql.org/docs/12/sql-syntax-lexical.html#SQL-SYNTAX-SPECIAL-CHARS
+   * </pre>
+   *
+   * <code>ASCII_36 = 36;</code>
+   */
+  public static final int ASCII_36_VALUE = 36;
+  /**
+   * <pre>
+   * "%"
    * </pre>
    *
    * <code>ASCII_37 = 37;</code>
@@ -4266,6 +4282,7 @@ public enum Token
   public static Token forNumber(int value) {
     switch (value) {
       case 0: return NUL;
+      case 36: return ASCII_36;
       case 37: return ASCII_37;
       case 40: return ASCII_40;
       case 41: return ASCII_41;
