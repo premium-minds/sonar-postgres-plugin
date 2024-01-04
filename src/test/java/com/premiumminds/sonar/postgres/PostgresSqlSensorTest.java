@@ -292,6 +292,7 @@ class PostgresSqlSensorTest {
         createFile(contextTester, "file4-ok.sql", "REINDEX index CONCURRENTLY idx1;");
         createFile(contextTester, "file5-ok.sql", "REINDEX (CONCURRENTLY) index idx1;");
         createFile(contextTester, "file6.sql", "REFRESH MATERIALIZED VIEW foo;");
+        createFile(contextTester, "file7.sql", "DROP INDEX CONCURRENTLY IF EXISTS idx1, idx2;");
 
         final RuleKey rule = RULE_CONCURRENTLY;
         PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
@@ -313,7 +314,10 @@ class PostgresSqlSensorTest {
         assertEquals("Add CONCURRENTLY to REFRESH MATERIALIZED VIEW foo",
                 fileMap.get(":file6.sql").primaryLocation().message());
 
-        assertEquals(4, fileMap.size());
+        assertEquals("DROP INDEX CONCURRENTLY does not support dropping multiple objects (idx1, idx2)",
+                fileMap.get(":file7.sql").primaryLocation().message());
+
+        assertEquals(5, fileMap.size());
     }
 
     @Test

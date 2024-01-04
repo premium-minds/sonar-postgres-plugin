@@ -33,6 +33,10 @@ public class ConcurrentVisitorCheck extends AbstractVisitorCheck {
             newIssue("Add CONCURRENTLY to DROP INDEX " + String.join(", ", names));
         }
 
+        if (dropStmt.getConcurrent() && names.size() != 1){
+            newIssue("DROP INDEX CONCURRENTLY does not support dropping multiple objects (" + String.join(", ", names) + ")");
+        }
+
         super.visit(dropStmt);
     }
 
