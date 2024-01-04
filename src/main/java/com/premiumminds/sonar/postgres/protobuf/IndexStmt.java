@@ -434,15 +434,15 @@ private static final long serialVersionUID = 0L;
     return indexOid_;
   }
 
-  public static final int OLD_NODE_FIELD_NUMBER = 12;
-  private int oldNode_ = 0;
+  public static final int OLD_NUMBER_FIELD_NUMBER = 12;
+  private int oldNumber_ = 0;
   /**
-   * <code>uint32 old_node = 12 [json_name = "oldNode"];</code>
-   * @return The oldNode.
+   * <code>uint32 old_number = 12 [json_name = "oldNumber"];</code>
+   * @return The oldNumber.
    */
   @java.lang.Override
-  public int getOldNode() {
-    return oldNode_;
+  public int getOldNumber() {
+    return oldNumber_;
   }
 
   public static final int OLD_CREATE_SUBID_FIELD_NUMBER = 13;
@@ -456,15 +456,15 @@ private static final long serialVersionUID = 0L;
     return oldCreateSubid_;
   }
 
-  public static final int OLD_FIRST_RELFILENODE_SUBID_FIELD_NUMBER = 14;
-  private int oldFirstRelfilenodeSubid_ = 0;
+  public static final int OLD_FIRST_RELFILELOCATOR_SUBID_FIELD_NUMBER = 14;
+  private int oldFirstRelfilelocatorSubid_ = 0;
   /**
-   * <code>uint32 old_first_relfilenode_subid = 14 [json_name = "oldFirstRelfilenodeSubid"];</code>
-   * @return The oldFirstRelfilenodeSubid.
+   * <code>uint32 old_first_relfilelocator_subid = 14 [json_name = "oldFirstRelfilelocatorSubid"];</code>
+   * @return The oldFirstRelfilelocatorSubid.
    */
   @java.lang.Override
-  public int getOldFirstRelfilenodeSubid() {
-    return oldFirstRelfilenodeSubid_;
+  public int getOldFirstRelfilelocatorSubid() {
+    return oldFirstRelfilelocatorSubid_;
   }
 
   public static final int UNIQUE_FIELD_NUMBER = 15;
@@ -624,14 +624,14 @@ private static final long serialVersionUID = 0L;
     if (indexOid_ != 0) {
       output.writeUInt32(11, indexOid_);
     }
-    if (oldNode_ != 0) {
-      output.writeUInt32(12, oldNode_);
+    if (oldNumber_ != 0) {
+      output.writeUInt32(12, oldNumber_);
     }
     if (oldCreateSubid_ != 0) {
       output.writeUInt32(13, oldCreateSubid_);
     }
-    if (oldFirstRelfilenodeSubid_ != 0) {
-      output.writeUInt32(14, oldFirstRelfilenodeSubid_);
+    if (oldFirstRelfilelocatorSubid_ != 0) {
+      output.writeUInt32(14, oldFirstRelfilelocatorSubid_);
     }
     if (unique_ != false) {
       output.writeBool(15, unique_);
@@ -712,17 +712,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(11, indexOid_);
     }
-    if (oldNode_ != 0) {
+    if (oldNumber_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(12, oldNode_);
+        .computeUInt32Size(12, oldNumber_);
     }
     if (oldCreateSubid_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(13, oldCreateSubid_);
     }
-    if (oldFirstRelfilenodeSubid_ != 0) {
+    if (oldFirstRelfilelocatorSubid_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(14, oldFirstRelfilenodeSubid_);
+        .computeUInt32Size(14, oldFirstRelfilelocatorSubid_);
     }
     if (unique_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -807,12 +807,12 @@ private static final long serialVersionUID = 0L;
         .equals(other.getIdxcomment())) return false;
     if (getIndexOid()
         != other.getIndexOid()) return false;
-    if (getOldNode()
-        != other.getOldNode()) return false;
+    if (getOldNumber()
+        != other.getOldNumber()) return false;
     if (getOldCreateSubid()
         != other.getOldCreateSubid()) return false;
-    if (getOldFirstRelfilenodeSubid()
-        != other.getOldFirstRelfilenodeSubid()) return false;
+    if (getOldFirstRelfilelocatorSubid()
+        != other.getOldFirstRelfilelocatorSubid()) return false;
     if (getUnique()
         != other.getUnique()) return false;
     if (getNullsNotDistinct()
@@ -878,12 +878,12 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getIdxcomment().hashCode();
     hash = (37 * hash) + INDEX_OID_FIELD_NUMBER;
     hash = (53 * hash) + getIndexOid();
-    hash = (37 * hash) + OLD_NODE_FIELD_NUMBER;
-    hash = (53 * hash) + getOldNode();
+    hash = (37 * hash) + OLD_NUMBER_FIELD_NUMBER;
+    hash = (53 * hash) + getOldNumber();
     hash = (37 * hash) + OLD_CREATE_SUBID_FIELD_NUMBER;
     hash = (53 * hash) + getOldCreateSubid();
-    hash = (37 * hash) + OLD_FIRST_RELFILENODE_SUBID_FIELD_NUMBER;
-    hash = (53 * hash) + getOldFirstRelfilenodeSubid();
+    hash = (37 * hash) + OLD_FIRST_RELFILELOCATOR_SUBID_FIELD_NUMBER;
+    hash = (53 * hash) + getOldFirstRelfilelocatorSubid();
     hash = (37 * hash) + UNIQUE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getUnique());
@@ -1086,9 +1086,9 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000100);
       idxcomment_ = "";
       indexOid_ = 0;
-      oldNode_ = 0;
+      oldNumber_ = 0;
       oldCreateSubid_ = 0;
-      oldFirstRelfilenodeSubid_ = 0;
+      oldFirstRelfilelocatorSubid_ = 0;
       unique_ = false;
       nullsNotDistinct_ = false;
       primary_ = false;
@@ -1198,13 +1198,13 @@ private static final long serialVersionUID = 0L;
         result.indexOid_ = indexOid_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.oldNode_ = oldNode_;
+        result.oldNumber_ = oldNumber_;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.oldCreateSubid_ = oldCreateSubid_;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.oldFirstRelfilenodeSubid_ = oldFirstRelfilenodeSubid_;
+        result.oldFirstRelfilelocatorSubid_ = oldFirstRelfilelocatorSubid_;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.unique_ = unique_;
@@ -1415,14 +1415,14 @@ private static final long serialVersionUID = 0L;
       if (other.getIndexOid() != 0) {
         setIndexOid(other.getIndexOid());
       }
-      if (other.getOldNode() != 0) {
-        setOldNode(other.getOldNode());
+      if (other.getOldNumber() != 0) {
+        setOldNumber(other.getOldNumber());
       }
       if (other.getOldCreateSubid() != 0) {
         setOldCreateSubid(other.getOldCreateSubid());
       }
-      if (other.getOldFirstRelfilenodeSubid() != 0) {
-        setOldFirstRelfilenodeSubid(other.getOldFirstRelfilenodeSubid());
+      if (other.getOldFirstRelfilelocatorSubid() != 0) {
+        setOldFirstRelfilelocatorSubid(other.getOldFirstRelfilelocatorSubid());
       }
       if (other.getUnique() != false) {
         setUnique(other.getUnique());
@@ -1572,7 +1572,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 88
             case 96: {
-              oldNode_ = input.readUInt32();
+              oldNumber_ = input.readUInt32();
               bitField0_ |= 0x00000800;
               break;
             } // case 96
@@ -1582,7 +1582,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 104
             case 112: {
-              oldFirstRelfilenodeSubid_ = input.readUInt32();
+              oldFirstRelfilelocatorSubid_ = input.readUInt32();
               bitField0_ |= 0x00002000;
               break;
             } // case 112
@@ -3171,34 +3171,34 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int oldNode_ ;
+    private int oldNumber_ ;
     /**
-     * <code>uint32 old_node = 12 [json_name = "oldNode"];</code>
-     * @return The oldNode.
+     * <code>uint32 old_number = 12 [json_name = "oldNumber"];</code>
+     * @return The oldNumber.
      */
     @java.lang.Override
-    public int getOldNode() {
-      return oldNode_;
+    public int getOldNumber() {
+      return oldNumber_;
     }
     /**
-     * <code>uint32 old_node = 12 [json_name = "oldNode"];</code>
-     * @param value The oldNode to set.
+     * <code>uint32 old_number = 12 [json_name = "oldNumber"];</code>
+     * @param value The oldNumber to set.
      * @return This builder for chaining.
      */
-    public Builder setOldNode(int value) {
+    public Builder setOldNumber(int value) {
       
-      oldNode_ = value;
+      oldNumber_ = value;
       bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 old_node = 12 [json_name = "oldNode"];</code>
+     * <code>uint32 old_number = 12 [json_name = "oldNumber"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearOldNode() {
+    public Builder clearOldNumber() {
       bitField0_ = (bitField0_ & ~0x00000800);
-      oldNode_ = 0;
+      oldNumber_ = 0;
       onChanged();
       return this;
     }
@@ -3235,34 +3235,34 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int oldFirstRelfilenodeSubid_ ;
+    private int oldFirstRelfilelocatorSubid_ ;
     /**
-     * <code>uint32 old_first_relfilenode_subid = 14 [json_name = "oldFirstRelfilenodeSubid"];</code>
-     * @return The oldFirstRelfilenodeSubid.
+     * <code>uint32 old_first_relfilelocator_subid = 14 [json_name = "oldFirstRelfilelocatorSubid"];</code>
+     * @return The oldFirstRelfilelocatorSubid.
      */
     @java.lang.Override
-    public int getOldFirstRelfilenodeSubid() {
-      return oldFirstRelfilenodeSubid_;
+    public int getOldFirstRelfilelocatorSubid() {
+      return oldFirstRelfilelocatorSubid_;
     }
     /**
-     * <code>uint32 old_first_relfilenode_subid = 14 [json_name = "oldFirstRelfilenodeSubid"];</code>
-     * @param value The oldFirstRelfilenodeSubid to set.
+     * <code>uint32 old_first_relfilelocator_subid = 14 [json_name = "oldFirstRelfilelocatorSubid"];</code>
+     * @param value The oldFirstRelfilelocatorSubid to set.
      * @return This builder for chaining.
      */
-    public Builder setOldFirstRelfilenodeSubid(int value) {
+    public Builder setOldFirstRelfilelocatorSubid(int value) {
       
-      oldFirstRelfilenodeSubid_ = value;
+      oldFirstRelfilelocatorSubid_ = value;
       bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 old_first_relfilenode_subid = 14 [json_name = "oldFirstRelfilenodeSubid"];</code>
+     * <code>uint32 old_first_relfilelocator_subid = 14 [json_name = "oldFirstRelfilelocatorSubid"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearOldFirstRelfilenodeSubid() {
+    public Builder clearOldFirstRelfilelocatorSubid() {
       bitField0_ = (bitField0_ & ~0x00002000);
-      oldFirstRelfilenodeSubid_ = 0;
+      oldFirstRelfilelocatorSubid_ = 0;
       onChanged();
       return this;
     }

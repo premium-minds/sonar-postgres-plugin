@@ -29,61 +29,55 @@ public interface NullIfExprOrBuilder extends
   int getOpno();
 
   /**
-   * <code>uint32 opfuncid = 3 [json_name = "opfuncid"];</code>
-   * @return The opfuncid.
-   */
-  int getOpfuncid();
-
-  /**
-   * <code>uint32 opresulttype = 4 [json_name = "opresulttype"];</code>
+   * <code>uint32 opresulttype = 3 [json_name = "opresulttype"];</code>
    * @return The opresulttype.
    */
   int getOpresulttype();
 
   /**
-   * <code>bool opretset = 5 [json_name = "opretset"];</code>
+   * <code>bool opretset = 4 [json_name = "opretset"];</code>
    * @return The opretset.
    */
   boolean getOpretset();
 
   /**
-   * <code>uint32 opcollid = 6 [json_name = "opcollid"];</code>
+   * <code>uint32 opcollid = 5 [json_name = "opcollid"];</code>
    * @return The opcollid.
    */
   int getOpcollid();
 
   /**
-   * <code>uint32 inputcollid = 7 [json_name = "inputcollid"];</code>
+   * <code>uint32 inputcollid = 6 [json_name = "inputcollid"];</code>
    * @return The inputcollid.
    */
   int getInputcollid();
 
   /**
-   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 7 [json_name = "args"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getArgsList();
   /**
-   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 7 [json_name = "args"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getArgs(int index);
   /**
-   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 7 [json_name = "args"];</code>
    */
   int getArgsCount();
   /**
-   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 7 [json_name = "args"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getArgsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 7 [json_name = "args"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getArgsOrBuilder(
       int index);
 
   /**
-   * <code>int32 location = 9 [json_name = "location"];</code>
+   * <code>int32 location = 8 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

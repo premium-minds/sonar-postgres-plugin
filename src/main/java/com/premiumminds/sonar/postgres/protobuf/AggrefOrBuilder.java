@@ -47,201 +47,195 @@ public interface AggrefOrBuilder extends
   int getInputcollid();
 
   /**
-   * <code>uint32 aggtranstype = 6 [json_name = "aggtranstype"];</code>
-   * @return The aggtranstype.
-   */
-  int getAggtranstype();
-
-  /**
-   * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+   * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getAggargtypesList();
   /**
-   * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+   * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getAggargtypes(int index);
   /**
-   * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+   * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
    */
   int getAggargtypesCount();
   /**
-   * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+   * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getAggargtypesOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+   * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggargtypesOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+   * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getAggdirectargsList();
   /**
-   * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+   * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getAggdirectargs(int index);
   /**
-   * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+   * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
    */
   int getAggdirectargsCount();
   /**
-   * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+   * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getAggdirectargsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+   * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggdirectargsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getArgsList();
   /**
-   * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getArgs(int index);
   /**
-   * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
    */
   int getArgsCount();
   /**
-   * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getArgsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getArgsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+   * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getAggorderList();
   /**
-   * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+   * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getAggorder(int index);
   /**
-   * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+   * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
    */
   int getAggorderCount();
   /**
-   * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+   * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getAggorderOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+   * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggorderOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+   * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getAggdistinctList();
   /**
-   * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+   * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getAggdistinct(int index);
   /**
-   * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+   * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
    */
   int getAggdistinctCount();
   /**
-   * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+   * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getAggdistinctOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+   * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggdistinctOrBuilder(
       int index);
 
   /**
-   * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+   * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
    * @return Whether the aggfilter field is set.
    */
   boolean hasAggfilter();
   /**
-   * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+   * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
    * @return The aggfilter.
    */
   com.premiumminds.sonar.postgres.protobuf.Node getAggfilter();
   /**
-   * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+   * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggfilterOrBuilder();
 
   /**
-   * <code>bool aggstar = 13 [json_name = "aggstar"];</code>
+   * <code>bool aggstar = 12 [json_name = "aggstar"];</code>
    * @return The aggstar.
    */
   boolean getAggstar();
 
   /**
-   * <code>bool aggvariadic = 14 [json_name = "aggvariadic"];</code>
+   * <code>bool aggvariadic = 13 [json_name = "aggvariadic"];</code>
    * @return The aggvariadic.
    */
   boolean getAggvariadic();
 
   /**
-   * <code>string aggkind = 15 [json_name = "aggkind"];</code>
+   * <code>string aggkind = 14 [json_name = "aggkind"];</code>
    * @return The aggkind.
    */
   java.lang.String getAggkind();
   /**
-   * <code>string aggkind = 15 [json_name = "aggkind"];</code>
+   * <code>string aggkind = 14 [json_name = "aggkind"];</code>
    * @return The bytes for aggkind.
    */
   com.google.protobuf.ByteString
       getAggkindBytes();
 
   /**
-   * <code>uint32 agglevelsup = 16 [json_name = "agglevelsup"];</code>
+   * <code>uint32 agglevelsup = 15 [json_name = "agglevelsup"];</code>
    * @return The agglevelsup.
    */
   int getAgglevelsup();
 
   /**
-   * <code>.pg_query.AggSplit aggsplit = 17 [json_name = "aggsplit"];</code>
+   * <code>.pg_query.AggSplit aggsplit = 16 [json_name = "aggsplit"];</code>
    * @return The enum numeric value on the wire for aggsplit.
    */
   int getAggsplitValue();
   /**
-   * <code>.pg_query.AggSplit aggsplit = 17 [json_name = "aggsplit"];</code>
+   * <code>.pg_query.AggSplit aggsplit = 16 [json_name = "aggsplit"];</code>
    * @return The aggsplit.
    */
   com.premiumminds.sonar.postgres.protobuf.AggSplit getAggsplit();
 
   /**
-   * <code>int32 aggno = 18 [json_name = "aggno"];</code>
+   * <code>int32 aggno = 17 [json_name = "aggno"];</code>
    * @return The aggno.
    */
   int getAggno();
 
   /**
-   * <code>int32 aggtransno = 19 [json_name = "aggtransno"];</code>
+   * <code>int32 aggtransno = 18 [json_name = "aggtransno"];</code>
    * @return The aggtransno.
    */
   int getAggtransno();
 
   /**
-   * <code>int32 location = 20 [json_name = "location"];</code>
+   * <code>int32 location = 19 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

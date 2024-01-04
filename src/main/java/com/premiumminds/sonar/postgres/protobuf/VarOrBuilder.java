@@ -53,25 +53,30 @@ public interface VarOrBuilder extends
   int getVarcollid();
 
   /**
-   * <code>uint32 varlevelsup = 7 [json_name = "varlevelsup"];</code>
+   * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+   * @return A list containing the varnullingrels.
+   */
+  java.util.List<java.lang.Long> getVarnullingrelsList();
+  /**
+   * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+   * @return The count of varnullingrels.
+   */
+  int getVarnullingrelsCount();
+  /**
+   * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+   * @param index The index of the element to return.
+   * @return The varnullingrels at the given index.
+   */
+  long getVarnullingrels(int index);
+
+  /**
+   * <code>uint32 varlevelsup = 8 [json_name = "varlevelsup"];</code>
    * @return The varlevelsup.
    */
   int getVarlevelsup();
 
   /**
-   * <code>uint32 varnosyn = 8 [json_name = "varnosyn"];</code>
-   * @return The varnosyn.
-   */
-  int getVarnosyn();
-
-  /**
-   * <code>int32 varattnosyn = 9 [json_name = "varattnosyn"];</code>
-   * @return The varattnosyn.
-   */
-  int getVarattnosyn();
-
-  /**
-   * <code>int32 location = 10 [json_name = "location"];</code>
+   * <code>int32 location = 9 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

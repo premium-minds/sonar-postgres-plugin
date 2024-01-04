@@ -29,61 +29,43 @@ public interface ScalarArrayOpExprOrBuilder extends
   int getOpno();
 
   /**
-   * <code>uint32 opfuncid = 3 [json_name = "opfuncid"];</code>
-   * @return The opfuncid.
-   */
-  int getOpfuncid();
-
-  /**
-   * <code>uint32 hashfuncid = 4 [json_name = "hashfuncid"];</code>
-   * @return The hashfuncid.
-   */
-  int getHashfuncid();
-
-  /**
-   * <code>uint32 negfuncid = 5 [json_name = "negfuncid"];</code>
-   * @return The negfuncid.
-   */
-  int getNegfuncid();
-
-  /**
-   * <code>bool use_or = 6 [json_name = "useOr"];</code>
+   * <code>bool use_or = 3 [json_name = "useOr"];</code>
    * @return The useOr.
    */
   boolean getUseOr();
 
   /**
-   * <code>uint32 inputcollid = 7 [json_name = "inputcollid"];</code>
+   * <code>uint32 inputcollid = 4 [json_name = "inputcollid"];</code>
    * @return The inputcollid.
    */
   int getInputcollid();
 
   /**
-   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 5 [json_name = "args"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getArgsList();
   /**
-   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 5 [json_name = "args"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getArgs(int index);
   /**
-   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 5 [json_name = "args"];</code>
    */
   int getArgsCount();
   /**
-   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 5 [json_name = "args"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getArgsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 5 [json_name = "args"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getArgsOrBuilder(
       int index);
 
   /**
-   * <code>int32 location = 9 [json_name = "location"];</code>
+   * <code>int32 location = 6 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

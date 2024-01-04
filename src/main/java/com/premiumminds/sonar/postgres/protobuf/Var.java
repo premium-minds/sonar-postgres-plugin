@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Var() {
+    varnullingrels_ = emptyLongList();
   }
 
   @java.lang.Override
@@ -124,10 +125,39 @@ private static final long serialVersionUID = 0L;
     return varcollid_;
   }
 
-  public static final int VARLEVELSUP_FIELD_NUMBER = 7;
+  public static final int VARNULLINGRELS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList varnullingrels_;
+  /**
+   * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+   * @return A list containing the varnullingrels.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getVarnullingrelsList() {
+    return varnullingrels_;
+  }
+  /**
+   * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+   * @return The count of varnullingrels.
+   */
+  public int getVarnullingrelsCount() {
+    return varnullingrels_.size();
+  }
+  /**
+   * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+   * @param index The index of the element to return.
+   * @return The varnullingrels at the given index.
+   */
+  public long getVarnullingrels(int index) {
+    return varnullingrels_.getLong(index);
+  }
+  private int varnullingrelsMemoizedSerializedSize = -1;
+
+  public static final int VARLEVELSUP_FIELD_NUMBER = 8;
   private int varlevelsup_ = 0;
   /**
-   * <code>uint32 varlevelsup = 7 [json_name = "varlevelsup"];</code>
+   * <code>uint32 varlevelsup = 8 [json_name = "varlevelsup"];</code>
    * @return The varlevelsup.
    */
   @java.lang.Override
@@ -135,32 +165,10 @@ private static final long serialVersionUID = 0L;
     return varlevelsup_;
   }
 
-  public static final int VARNOSYN_FIELD_NUMBER = 8;
-  private int varnosyn_ = 0;
-  /**
-   * <code>uint32 varnosyn = 8 [json_name = "varnosyn"];</code>
-   * @return The varnosyn.
-   */
-  @java.lang.Override
-  public int getVarnosyn() {
-    return varnosyn_;
-  }
-
-  public static final int VARATTNOSYN_FIELD_NUMBER = 9;
-  private int varattnosyn_ = 0;
-  /**
-   * <code>int32 varattnosyn = 9 [json_name = "varattnosyn"];</code>
-   * @return The varattnosyn.
-   */
-  @java.lang.Override
-  public int getVarattnosyn() {
-    return varattnosyn_;
-  }
-
-  public static final int LOCATION_FIELD_NUMBER = 10;
+  public static final int LOCATION_FIELD_NUMBER = 9;
   private int location_ = 0;
   /**
-   * <code>int32 location = 10 [json_name = "location"];</code>
+   * <code>int32 location = 9 [json_name = "location"];</code>
    * @return The location.
    */
   @java.lang.Override
@@ -182,6 +190,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (xpr_ != null) {
       output.writeMessage(1, getXpr());
     }
@@ -200,17 +209,18 @@ private static final long serialVersionUID = 0L;
     if (varcollid_ != 0) {
       output.writeUInt32(6, varcollid_);
     }
+    if (getVarnullingrelsList().size() > 0) {
+      output.writeUInt32NoTag(58);
+      output.writeUInt32NoTag(varnullingrelsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < varnullingrels_.size(); i++) {
+      output.writeUInt64NoTag(varnullingrels_.getLong(i));
+    }
     if (varlevelsup_ != 0) {
-      output.writeUInt32(7, varlevelsup_);
-    }
-    if (varnosyn_ != 0) {
-      output.writeUInt32(8, varnosyn_);
-    }
-    if (varattnosyn_ != 0) {
-      output.writeInt32(9, varattnosyn_);
+      output.writeUInt32(8, varlevelsup_);
     }
     if (location_ != 0) {
-      output.writeInt32(10, location_);
+      output.writeInt32(9, location_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -245,21 +255,27 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(6, varcollid_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < varnullingrels_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeUInt64SizeNoTag(varnullingrels_.getLong(i));
+      }
+      size += dataSize;
+      if (!getVarnullingrelsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      varnullingrelsMemoizedSerializedSize = dataSize;
+    }
     if (varlevelsup_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(7, varlevelsup_);
-    }
-    if (varnosyn_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(8, varnosyn_);
-    }
-    if (varattnosyn_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(9, varattnosyn_);
+        .computeUInt32Size(8, varlevelsup_);
     }
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(10, location_);
+        .computeInt32Size(9, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -291,12 +307,10 @@ private static final long serialVersionUID = 0L;
         != other.getVartypmod()) return false;
     if (getVarcollid()
         != other.getVarcollid()) return false;
+    if (!getVarnullingrelsList()
+        .equals(other.getVarnullingrelsList())) return false;
     if (getVarlevelsup()
         != other.getVarlevelsup()) return false;
-    if (getVarnosyn()
-        != other.getVarnosyn()) return false;
-    if (getVarattnosyn()
-        != other.getVarattnosyn()) return false;
     if (getLocation()
         != other.getLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -324,12 +338,12 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getVartypmod();
     hash = (37 * hash) + VARCOLLID_FIELD_NUMBER;
     hash = (53 * hash) + getVarcollid();
+    if (getVarnullingrelsCount() > 0) {
+      hash = (37 * hash) + VARNULLINGRELS_FIELD_NUMBER;
+      hash = (53 * hash) + getVarnullingrelsList().hashCode();
+    }
     hash = (37 * hash) + VARLEVELSUP_FIELD_NUMBER;
     hash = (53 * hash) + getVarlevelsup();
-    hash = (37 * hash) + VARNOSYN_FIELD_NUMBER;
-    hash = (53 * hash) + getVarnosyn();
-    hash = (37 * hash) + VARATTNOSYN_FIELD_NUMBER;
-    hash = (53 * hash) + getVarattnosyn();
     hash = (37 * hash) + LOCATION_FIELD_NUMBER;
     hash = (53 * hash) + getLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -471,9 +485,8 @@ private static final long serialVersionUID = 0L;
       vartype_ = 0;
       vartypmod_ = 0;
       varcollid_ = 0;
+      varnullingrels_ = emptyLongList();
       varlevelsup_ = 0;
-      varnosyn_ = 0;
-      varattnosyn_ = 0;
       location_ = 0;
       return this;
     }
@@ -501,9 +514,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.premiumminds.sonar.postgres.protobuf.Var buildPartial() {
       com.premiumminds.sonar.postgres.protobuf.Var result = new com.premiumminds.sonar.postgres.protobuf.Var(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.premiumminds.sonar.postgres.protobuf.Var result) {
+      if (((bitField0_ & 0x00000040) != 0)) {
+        varnullingrels_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000040);
+      }
+      result.varnullingrels_ = varnullingrels_;
     }
 
     private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.Var result) {
@@ -528,16 +550,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.varcollid_ = varcollid_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.varlevelsup_ = varlevelsup_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.varnosyn_ = varnosyn_;
-      }
       if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.varattnosyn_ = varattnosyn_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.location_ = location_;
       }
     }
@@ -604,14 +620,18 @@ private static final long serialVersionUID = 0L;
       if (other.getVarcollid() != 0) {
         setVarcollid(other.getVarcollid());
       }
+      if (!other.varnullingrels_.isEmpty()) {
+        if (varnullingrels_.isEmpty()) {
+          varnullingrels_ = other.varnullingrels_;
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          ensureVarnullingrelsIsMutable();
+          varnullingrels_.addAll(other.varnullingrels_);
+        }
+        onChanged();
+      }
       if (other.getVarlevelsup() != 0) {
         setVarlevelsup(other.getVarlevelsup());
-      }
-      if (other.getVarnosyn() != 0) {
-        setVarnosyn(other.getVarnosyn());
-      }
-      if (other.getVarattnosyn() != 0) {
-        setVarattnosyn(other.getVarattnosyn());
       }
       if (other.getLocation() != 0) {
         setLocation(other.getLocation());
@@ -675,25 +695,31 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 48
             case 56: {
-              varlevelsup_ = input.readUInt32();
-              bitField0_ |= 0x00000040;
+              long v = input.readUInt64();
+              ensureVarnullingrelsIsMutable();
+              varnullingrels_.addLong(v);
               break;
             } // case 56
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureVarnullingrelsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                varnullingrels_.addLong(input.readUInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 58
             case 64: {
-              varnosyn_ = input.readUInt32();
+              varlevelsup_ = input.readUInt32();
               bitField0_ |= 0x00000080;
               break;
             } // case 64
             case 72: {
-              varattnosyn_ = input.readInt32();
+              location_ = input.readInt32();
               bitField0_ |= 0x00000100;
               break;
             } // case 72
-            case 80: {
-              location_ = input.readInt32();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -990,9 +1016,90 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.Internal.LongList varnullingrels_ = emptyLongList();
+    private void ensureVarnullingrelsIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        varnullingrels_ = mutableCopy(varnullingrels_);
+        bitField0_ |= 0x00000040;
+      }
+    }
+    /**
+     * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+     * @return A list containing the varnullingrels.
+     */
+    public java.util.List<java.lang.Long>
+        getVarnullingrelsList() {
+      return ((bitField0_ & 0x00000040) != 0) ?
+               java.util.Collections.unmodifiableList(varnullingrels_) : varnullingrels_;
+    }
+    /**
+     * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+     * @return The count of varnullingrels.
+     */
+    public int getVarnullingrelsCount() {
+      return varnullingrels_.size();
+    }
+    /**
+     * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+     * @param index The index of the element to return.
+     * @return The varnullingrels at the given index.
+     */
+    public long getVarnullingrels(int index) {
+      return varnullingrels_.getLong(index);
+    }
+    /**
+     * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+     * @param index The index to set the value at.
+     * @param value The varnullingrels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVarnullingrels(
+        int index, long value) {
+      
+      ensureVarnullingrelsIsMutable();
+      varnullingrels_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+     * @param value The varnullingrels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addVarnullingrels(long value) {
+      
+      ensureVarnullingrelsIsMutable();
+      varnullingrels_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+     * @param values The varnullingrels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllVarnullingrels(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureVarnullingrelsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, varnullingrels_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated uint64 varnullingrels = 7 [json_name = "varnullingrels"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVarnullingrels() {
+      varnullingrels_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+
     private int varlevelsup_ ;
     /**
-     * <code>uint32 varlevelsup = 7 [json_name = "varlevelsup"];</code>
+     * <code>uint32 varlevelsup = 8 [json_name = "varlevelsup"];</code>
      * @return The varlevelsup.
      */
     @java.lang.Override
@@ -1000,95 +1107,31 @@ private static final long serialVersionUID = 0L;
       return varlevelsup_;
     }
     /**
-     * <code>uint32 varlevelsup = 7 [json_name = "varlevelsup"];</code>
+     * <code>uint32 varlevelsup = 8 [json_name = "varlevelsup"];</code>
      * @param value The varlevelsup to set.
      * @return This builder for chaining.
      */
     public Builder setVarlevelsup(int value) {
       
       varlevelsup_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>uint32 varlevelsup = 7 [json_name = "varlevelsup"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearVarlevelsup() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      varlevelsup_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int varnosyn_ ;
-    /**
-     * <code>uint32 varnosyn = 8 [json_name = "varnosyn"];</code>
-     * @return The varnosyn.
-     */
-    @java.lang.Override
-    public int getVarnosyn() {
-      return varnosyn_;
-    }
-    /**
-     * <code>uint32 varnosyn = 8 [json_name = "varnosyn"];</code>
-     * @param value The varnosyn to set.
-     * @return This builder for chaining.
-     */
-    public Builder setVarnosyn(int value) {
-      
-      varnosyn_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 varnosyn = 8 [json_name = "varnosyn"];</code>
+     * <code>uint32 varlevelsup = 8 [json_name = "varlevelsup"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearVarnosyn() {
+    public Builder clearVarlevelsup() {
       bitField0_ = (bitField0_ & ~0x00000080);
-      varnosyn_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int varattnosyn_ ;
-    /**
-     * <code>int32 varattnosyn = 9 [json_name = "varattnosyn"];</code>
-     * @return The varattnosyn.
-     */
-    @java.lang.Override
-    public int getVarattnosyn() {
-      return varattnosyn_;
-    }
-    /**
-     * <code>int32 varattnosyn = 9 [json_name = "varattnosyn"];</code>
-     * @param value The varattnosyn to set.
-     * @return This builder for chaining.
-     */
-    public Builder setVarattnosyn(int value) {
-      
-      varattnosyn_ = value;
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 varattnosyn = 9 [json_name = "varattnosyn"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearVarattnosyn() {
-      bitField0_ = (bitField0_ & ~0x00000100);
-      varattnosyn_ = 0;
+      varlevelsup_ = 0;
       onChanged();
       return this;
     }
 
     private int location_ ;
     /**
-     * <code>int32 location = 10 [json_name = "location"];</code>
+     * <code>int32 location = 9 [json_name = "location"];</code>
      * @return The location.
      */
     @java.lang.Override
@@ -1096,23 +1139,23 @@ private static final long serialVersionUID = 0L;
       return location_;
     }
     /**
-     * <code>int32 location = 10 [json_name = "location"];</code>
+     * <code>int32 location = 9 [json_name = "location"];</code>
      * @param value The location to set.
      * @return This builder for chaining.
      */
     public Builder setLocation(int value) {
       
       location_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 location = 10 [json_name = "location"];</code>
+     * <code>int32 location = 9 [json_name = "location"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000100);
       location_ = 0;
       onChanged();
       return this;

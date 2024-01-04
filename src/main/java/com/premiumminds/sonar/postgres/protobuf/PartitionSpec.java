@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PartitionSpec() {
-    strategy_ = "";
+    strategy_ = 0;
     partParams_ = java.util.Collections.emptyList();
   }
 
@@ -46,42 +46,21 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STRATEGY_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object strategy_ = "";
+  private int strategy_ = 0;
   /**
-   * <code>string strategy = 1 [json_name = "strategy"];</code>
-   * @return The strategy.
+   * <code>.pg_query.PartitionStrategy strategy = 1 [json_name = "strategy"];</code>
+   * @return The enum numeric value on the wire for strategy.
    */
-  @java.lang.Override
-  public java.lang.String getStrategy() {
-    java.lang.Object ref = strategy_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      strategy_ = s;
-      return s;
-    }
+  @java.lang.Override public int getStrategyValue() {
+    return strategy_;
   }
   /**
-   * <code>string strategy = 1 [json_name = "strategy"];</code>
-   * @return The bytes for strategy.
+   * <code>.pg_query.PartitionStrategy strategy = 1 [json_name = "strategy"];</code>
+   * @return The strategy.
    */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getStrategyBytes() {
-    java.lang.Object ref = strategy_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      strategy_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.PartitionStrategy getStrategy() {
+    com.premiumminds.sonar.postgres.protobuf.PartitionStrategy result = com.premiumminds.sonar.postgres.protobuf.PartitionStrategy.forNumber(strategy_);
+    return result == null ? com.premiumminds.sonar.postgres.protobuf.PartitionStrategy.UNRECOGNIZED : result;
   }
 
   public static final int PART_PARAMS_FIELD_NUMBER = 2;
@@ -150,8 +129,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(strategy_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, strategy_);
+    if (strategy_ != com.premiumminds.sonar.postgres.protobuf.PartitionStrategy.PARTITION_STRATEGY_UNDEFINED.getNumber()) {
+      output.writeEnum(1, strategy_);
     }
     for (int i = 0; i < partParams_.size(); i++) {
       output.writeMessage(2, partParams_.get(i));
@@ -168,8 +147,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(strategy_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, strategy_);
+    if (strategy_ != com.premiumminds.sonar.postgres.protobuf.PartitionStrategy.PARTITION_STRATEGY_UNDEFINED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(1, strategy_);
     }
     for (int i = 0; i < partParams_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -194,8 +174,7 @@ private static final long serialVersionUID = 0L;
     }
     com.premiumminds.sonar.postgres.protobuf.PartitionSpec other = (com.premiumminds.sonar.postgres.protobuf.PartitionSpec) obj;
 
-    if (!getStrategy()
-        .equals(other.getStrategy())) return false;
+    if (strategy_ != other.strategy_) return false;
     if (!getPartParamsList()
         .equals(other.getPartParamsList())) return false;
     if (getLocation()
@@ -212,7 +191,7 @@ private static final long serialVersionUID = 0L;
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + STRATEGY_FIELD_NUMBER;
-    hash = (53 * hash) + getStrategy().hashCode();
+    hash = (53 * hash) + strategy_;
     if (getPartParamsCount() > 0) {
       hash = (37 * hash) + PART_PARAMS_FIELD_NUMBER;
       hash = (53 * hash) + getPartParamsList().hashCode();
@@ -348,7 +327,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      strategy_ = "";
+      strategy_ = 0;
       if (partParamsBuilder_ == null) {
         partParams_ = java.util.Collections.emptyList();
       } else {
@@ -455,10 +434,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.premiumminds.sonar.postgres.protobuf.PartitionSpec other) {
       if (other == com.premiumminds.sonar.postgres.protobuf.PartitionSpec.getDefaultInstance()) return this;
-      if (!other.getStrategy().isEmpty()) {
-        strategy_ = other.strategy_;
-        bitField0_ |= 0x00000001;
-        onChanged();
+      if (other.strategy_ != 0) {
+        setStrategyValue(other.getStrategyValue());
       }
       if (partParamsBuilder_ == null) {
         if (!other.partParams_.isEmpty()) {
@@ -515,11 +492,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              strategy_ = input.readStringRequireUtf8();
+            case 8: {
+              strategy_ = input.readEnum();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
+            } // case 8
             case 18: {
               com.premiumminds.sonar.postgres.protobuf.Node m =
                   input.readMessage(
@@ -555,74 +532,55 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object strategy_ = "";
+    private int strategy_ = 0;
     /**
-     * <code>string strategy = 1 [json_name = "strategy"];</code>
+     * <code>.pg_query.PartitionStrategy strategy = 1 [json_name = "strategy"];</code>
+     * @return The enum numeric value on the wire for strategy.
+     */
+    @java.lang.Override public int getStrategyValue() {
+      return strategy_;
+    }
+    /**
+     * <code>.pg_query.PartitionStrategy strategy = 1 [json_name = "strategy"];</code>
+     * @param value The enum numeric value on the wire for strategy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStrategyValue(int value) {
+      strategy_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.pg_query.PartitionStrategy strategy = 1 [json_name = "strategy"];</code>
      * @return The strategy.
      */
-    public java.lang.String getStrategy() {
-      java.lang.Object ref = strategy_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        strategy_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.PartitionStrategy getStrategy() {
+      com.premiumminds.sonar.postgres.protobuf.PartitionStrategy result = com.premiumminds.sonar.postgres.protobuf.PartitionStrategy.forNumber(strategy_);
+      return result == null ? com.premiumminds.sonar.postgres.protobuf.PartitionStrategy.UNRECOGNIZED : result;
     }
     /**
-     * <code>string strategy = 1 [json_name = "strategy"];</code>
-     * @return The bytes for strategy.
-     */
-    public com.google.protobuf.ByteString
-        getStrategyBytes() {
-      java.lang.Object ref = strategy_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        strategy_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string strategy = 1 [json_name = "strategy"];</code>
+     * <code>.pg_query.PartitionStrategy strategy = 1 [json_name = "strategy"];</code>
      * @param value The strategy to set.
      * @return This builder for chaining.
      */
-    public Builder setStrategy(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      strategy_ = value;
+    public Builder setStrategy(com.premiumminds.sonar.postgres.protobuf.PartitionStrategy value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
       bitField0_ |= 0x00000001;
+      strategy_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>string strategy = 1 [json_name = "strategy"];</code>
+     * <code>.pg_query.PartitionStrategy strategy = 1 [json_name = "strategy"];</code>
      * @return This builder for chaining.
      */
     public Builder clearStrategy() {
-      strategy_ = getDefaultInstance().getStrategy();
       bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string strategy = 1 [json_name = "strategy"];</code>
-     * @param value The bytes for strategy to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStrategyBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      strategy_ = value;
-      bitField0_ |= 0x00000001;
+      strategy_ = 0;
       onChanged();
       return this;
     }

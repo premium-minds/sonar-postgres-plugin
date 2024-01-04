@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private GrantRoleStmt() {
     grantedRoles_ = java.util.Collections.emptyList();
     granteeRoles_ = java.util.Collections.emptyList();
+    opt_ = java.util.Collections.emptyList();
     behavior_ = 0;
   }
 
@@ -139,15 +140,45 @@ private static final long serialVersionUID = 0L;
     return isGrant_;
   }
 
-  public static final int ADMIN_OPT_FIELD_NUMBER = 4;
-  private boolean adminOpt_ = false;
+  public static final int OPT_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> opt_;
   /**
-   * <code>bool admin_opt = 4 [json_name = "admin_opt"];</code>
-   * @return The adminOpt.
+   * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
    */
   @java.lang.Override
-  public boolean getAdminOpt() {
-    return adminOpt_;
+  public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getOptList() {
+    return opt_;
+  }
+  /**
+   * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getOptOrBuilderList() {
+    return opt_;
+  }
+  /**
+   * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+   */
+  @java.lang.Override
+  public int getOptCount() {
+    return opt_.size();
+  }
+  /**
+   * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.Node getOpt(int index) {
+    return opt_.get(index);
+  }
+  /**
+   * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getOptOrBuilder(
+      int index) {
+    return opt_.get(index);
   }
 
   public static final int GRANTOR_FIELD_NUMBER = 5;
@@ -217,8 +248,8 @@ private static final long serialVersionUID = 0L;
     if (isGrant_ != false) {
       output.writeBool(3, isGrant_);
     }
-    if (adminOpt_ != false) {
-      output.writeBool(4, adminOpt_);
+    for (int i = 0; i < opt_.size(); i++) {
+      output.writeMessage(4, opt_.get(i));
     }
     if (grantor_ != null) {
       output.writeMessage(5, getGrantor());
@@ -247,9 +278,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, isGrant_);
     }
-    if (adminOpt_ != false) {
+    for (int i = 0; i < opt_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(4, adminOpt_);
+        .computeMessageSize(4, opt_.get(i));
     }
     if (grantor_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -280,8 +311,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getGranteeRolesList())) return false;
     if (getIsGrant()
         != other.getIsGrant()) return false;
-    if (getAdminOpt()
-        != other.getAdminOpt()) return false;
+    if (!getOptList()
+        .equals(other.getOptList())) return false;
     if (hasGrantor() != other.hasGrantor()) return false;
     if (hasGrantor()) {
       if (!getGrantor()
@@ -310,9 +341,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_GRANT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsGrant());
-    hash = (37 * hash) + ADMIN_OPT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getAdminOpt());
+    if (getOptCount() > 0) {
+      hash = (37 * hash) + OPT_FIELD_NUMBER;
+      hash = (53 * hash) + getOptList().hashCode();
+    }
     if (hasGrantor()) {
       hash = (37 * hash) + GRANTOR_FIELD_NUMBER;
       hash = (53 * hash) + getGrantor().hashCode();
@@ -463,7 +495,13 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000002);
       isGrant_ = false;
-      adminOpt_ = false;
+      if (optBuilder_ == null) {
+        opt_ = java.util.Collections.emptyList();
+      } else {
+        opt_ = null;
+        optBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
       grantor_ = null;
       if (grantorBuilder_ != null) {
         grantorBuilder_.dispose();
@@ -521,15 +559,21 @@ private static final long serialVersionUID = 0L;
       } else {
         result.granteeRoles_ = granteeRolesBuilder_.build();
       }
+      if (optBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          opt_ = java.util.Collections.unmodifiableList(opt_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.opt_ = opt_;
+      } else {
+        result.opt_ = optBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.GrantRoleStmt result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.isGrant_ = isGrant_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.adminOpt_ = adminOpt_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.grantor_ = grantorBuilder_ == null
@@ -640,8 +684,31 @@ private static final long serialVersionUID = 0L;
       if (other.getIsGrant() != false) {
         setIsGrant(other.getIsGrant());
       }
-      if (other.getAdminOpt() != false) {
-        setAdminOpt(other.getAdminOpt());
+      if (optBuilder_ == null) {
+        if (!other.opt_.isEmpty()) {
+          if (opt_.isEmpty()) {
+            opt_ = other.opt_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureOptIsMutable();
+            opt_.addAll(other.opt_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.opt_.isEmpty()) {
+          if (optBuilder_.isEmpty()) {
+            optBuilder_.dispose();
+            optBuilder_ = null;
+            opt_ = other.opt_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            optBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getOptFieldBuilder() : null;
+          } else {
+            optBuilder_.addAllMessages(other.opt_);
+          }
+        }
       }
       if (other.hasGrantor()) {
         mergeGrantor(other.getGrantor());
@@ -706,11 +773,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 32: {
-              adminOpt_ = input.readBool();
-              bitField0_ |= 0x00000008;
+            case 34: {
+              com.premiumminds.sonar.postgres.protobuf.Node m =
+                  input.readMessage(
+                      com.premiumminds.sonar.postgres.protobuf.Node.parser(),
+                      extensionRegistry);
+              if (optBuilder_ == null) {
+                ensureOptIsMutable();
+                opt_.add(m);
+              } else {
+                optBuilder_.addMessage(m);
+              }
               break;
-            } // case 32
+            } // case 34
             case 42: {
               input.readMessage(
                   getGrantorFieldBuilder().getBuilder(),
@@ -1252,36 +1327,244 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean adminOpt_ ;
+    private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> opt_ =
+      java.util.Collections.emptyList();
+    private void ensureOptIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        opt_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(opt_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> optBuilder_;
+
     /**
-     * <code>bool admin_opt = 4 [json_name = "admin_opt"];</code>
-     * @return The adminOpt.
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
      */
-    @java.lang.Override
-    public boolean getAdminOpt() {
-      return adminOpt_;
+    public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getOptList() {
+      if (optBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(opt_);
+      } else {
+        return optBuilder_.getMessageList();
+      }
     }
     /**
-     * <code>bool admin_opt = 4 [json_name = "admin_opt"];</code>
-     * @param value The adminOpt to set.
-     * @return This builder for chaining.
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
      */
-    public Builder setAdminOpt(boolean value) {
-      
-      adminOpt_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
+    public int getOptCount() {
+      if (optBuilder_ == null) {
+        return opt_.size();
+      } else {
+        return optBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node getOpt(int index) {
+      if (optBuilder_ == null) {
+        return opt_.get(index);
+      } else {
+        return optBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public Builder setOpt(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (optBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOptIsMutable();
+        opt_.set(index, value);
+        onChanged();
+      } else {
+        optBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
-     * <code>bool admin_opt = 4 [json_name = "admin_opt"];</code>
-     * @return This builder for chaining.
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
      */
-    public Builder clearAdminOpt() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      adminOpt_ = false;
-      onChanged();
+    public Builder setOpt(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+      if (optBuilder_ == null) {
+        ensureOptIsMutable();
+        opt_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        optBuilder_.setMessage(index, builderForValue.build());
+      }
       return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public Builder addOpt(com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (optBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOptIsMutable();
+        opt_.add(value);
+        onChanged();
+      } else {
+        optBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public Builder addOpt(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (optBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOptIsMutable();
+        opt_.add(index, value);
+        onChanged();
+      } else {
+        optBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public Builder addOpt(
+        com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+      if (optBuilder_ == null) {
+        ensureOptIsMutable();
+        opt_.add(builderForValue.build());
+        onChanged();
+      } else {
+        optBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public Builder addOpt(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+      if (optBuilder_ == null) {
+        ensureOptIsMutable();
+        opt_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        optBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public Builder addAllOpt(
+        java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
+      if (optBuilder_ == null) {
+        ensureOptIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, opt_);
+        onChanged();
+      } else {
+        optBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public Builder clearOpt() {
+      if (optBuilder_ == null) {
+        opt_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        optBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public Builder removeOpt(int index) {
+      if (optBuilder_ == null) {
+        ensureOptIsMutable();
+        opt_.remove(index);
+        onChanged();
+      } else {
+        optBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node.Builder getOptBuilder(
+        int index) {
+      return getOptFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getOptOrBuilder(
+        int index) {
+      if (optBuilder_ == null) {
+        return opt_.get(index);  } else {
+        return optBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+         getOptOrBuilderList() {
+      if (optBuilder_ != null) {
+        return optBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(opt_);
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node.Builder addOptBuilder() {
+      return getOptFieldBuilder().addBuilder(
+          com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node.Builder addOptBuilder(
+        int index) {
+      return getOptFieldBuilder().addBuilder(
+          index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+     */
+    public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
+         getOptBuilderList() {
+      return getOptFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+        getOptFieldBuilder() {
+      if (optBuilder_ == null) {
+        optBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
+                opt_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        opt_ = null;
+      }
+      return optBuilder_;
     }
 
     private com.premiumminds.sonar.postgres.protobuf.RoleSpec grantor_;

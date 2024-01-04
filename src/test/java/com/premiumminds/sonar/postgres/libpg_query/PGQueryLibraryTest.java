@@ -25,7 +25,7 @@ class PGQueryLibraryTest {
         final PgQueryParseResult.ByValue result = PGQueryLibrary.INSTANCE.pg_query_parse(query);
         assertNull(result.error);
 
-        assertEquals("{\"version\":150001,\"stmts\":[{\"stmt\":{\"SelectStmt\":{\"targetList\":[{\"ResTarget\":{\"val\":{\"ColumnRef\":{\"fields\":[{\"String\":{\"sval\":\"bar\"}}],\"location\":7}},\"location\":7}}],\"fromClause\":[{\"RangeVar\":{\"relname\":\"foo\",\"inh\":true,\"relpersistence\":\"p\",\"location\":16}}],\"limitOption\":\"LIMIT_OPTION_DEFAULT\",\"op\":\"SETOP_NONE\"}},\"stmt_len\":19}]}",
+        assertEquals("{\"version\":160001,\"stmts\":[{\"stmt\":{\"SelectStmt\":{\"targetList\":[{\"ResTarget\":{\"val\":{\"ColumnRef\":{\"fields\":[{\"String\":{\"sval\":\"bar\"}}],\"location\":7}},\"location\":7}}],\"fromClause\":[{\"RangeVar\":{\"relname\":\"foo\",\"inh\":true,\"relpersistence\":\"p\",\"location\":16}}],\"limitOption\":\"LIMIT_OPTION_DEFAULT\",\"op\":\"SETOP_NONE\"}},\"stmt_len\":19}]}",
                 result.parse_tree.getString(0));
 
         PGQueryLibrary.INSTANCE.pg_query_free_parse_result(result);

@@ -53,3527 +53,3737 @@ public interface NodeOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.TableFuncOrBuilder getTableFuncOrBuilder();
 
   /**
-   * <code>.pg_query.Var var = 4 [json_name = "Var"];</code>
-   * @return Whether the var field is set.
-   */
-  boolean hasVar();
-  /**
-   * <code>.pg_query.Var var = 4 [json_name = "Var"];</code>
-   * @return The var.
-   */
-  com.premiumminds.sonar.postgres.protobuf.Var getVar();
-  /**
-   * <code>.pg_query.Var var = 4 [json_name = "Var"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.VarOrBuilder getVarOrBuilder();
-
-  /**
-   * <code>.pg_query.Param param = 5 [json_name = "Param"];</code>
-   * @return Whether the param field is set.
-   */
-  boolean hasParam();
-  /**
-   * <code>.pg_query.Param param = 5 [json_name = "Param"];</code>
-   * @return The param.
-   */
-  com.premiumminds.sonar.postgres.protobuf.Param getParam();
-  /**
-   * <code>.pg_query.Param param = 5 [json_name = "Param"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ParamOrBuilder getParamOrBuilder();
-
-  /**
-   * <code>.pg_query.Aggref aggref = 6 [json_name = "Aggref"];</code>
-   * @return Whether the aggref field is set.
-   */
-  boolean hasAggref();
-  /**
-   * <code>.pg_query.Aggref aggref = 6 [json_name = "Aggref"];</code>
-   * @return The aggref.
-   */
-  com.premiumminds.sonar.postgres.protobuf.Aggref getAggref();
-  /**
-   * <code>.pg_query.Aggref aggref = 6 [json_name = "Aggref"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AggrefOrBuilder getAggrefOrBuilder();
-
-  /**
-   * <code>.pg_query.GroupingFunc grouping_func = 7 [json_name = "GroupingFunc"];</code>
-   * @return Whether the groupingFunc field is set.
-   */
-  boolean hasGroupingFunc();
-  /**
-   * <code>.pg_query.GroupingFunc grouping_func = 7 [json_name = "GroupingFunc"];</code>
-   * @return The groupingFunc.
-   */
-  com.premiumminds.sonar.postgres.protobuf.GroupingFunc getGroupingFunc();
-  /**
-   * <code>.pg_query.GroupingFunc grouping_func = 7 [json_name = "GroupingFunc"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.GroupingFuncOrBuilder getGroupingFuncOrBuilder();
-
-  /**
-   * <code>.pg_query.WindowFunc window_func = 8 [json_name = "WindowFunc"];</code>
-   * @return Whether the windowFunc field is set.
-   */
-  boolean hasWindowFunc();
-  /**
-   * <code>.pg_query.WindowFunc window_func = 8 [json_name = "WindowFunc"];</code>
-   * @return The windowFunc.
-   */
-  com.premiumminds.sonar.postgres.protobuf.WindowFunc getWindowFunc();
-  /**
-   * <code>.pg_query.WindowFunc window_func = 8 [json_name = "WindowFunc"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.WindowFuncOrBuilder getWindowFuncOrBuilder();
-
-  /**
-   * <code>.pg_query.SubscriptingRef subscripting_ref = 9 [json_name = "SubscriptingRef"];</code>
-   * @return Whether the subscriptingRef field is set.
-   */
-  boolean hasSubscriptingRef();
-  /**
-   * <code>.pg_query.SubscriptingRef subscripting_ref = 9 [json_name = "SubscriptingRef"];</code>
-   * @return The subscriptingRef.
-   */
-  com.premiumminds.sonar.postgres.protobuf.SubscriptingRef getSubscriptingRef();
-  /**
-   * <code>.pg_query.SubscriptingRef subscripting_ref = 9 [json_name = "SubscriptingRef"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.SubscriptingRefOrBuilder getSubscriptingRefOrBuilder();
-
-  /**
-   * <code>.pg_query.FuncExpr func_expr = 10 [json_name = "FuncExpr"];</code>
-   * @return Whether the funcExpr field is set.
-   */
-  boolean hasFuncExpr();
-  /**
-   * <code>.pg_query.FuncExpr func_expr = 10 [json_name = "FuncExpr"];</code>
-   * @return The funcExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.FuncExpr getFuncExpr();
-  /**
-   * <code>.pg_query.FuncExpr func_expr = 10 [json_name = "FuncExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.FuncExprOrBuilder getFuncExprOrBuilder();
-
-  /**
-   * <code>.pg_query.NamedArgExpr named_arg_expr = 11 [json_name = "NamedArgExpr"];</code>
-   * @return Whether the namedArgExpr field is set.
-   */
-  boolean hasNamedArgExpr();
-  /**
-   * <code>.pg_query.NamedArgExpr named_arg_expr = 11 [json_name = "NamedArgExpr"];</code>
-   * @return The namedArgExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.NamedArgExpr getNamedArgExpr();
-  /**
-   * <code>.pg_query.NamedArgExpr named_arg_expr = 11 [json_name = "NamedArgExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.NamedArgExprOrBuilder getNamedArgExprOrBuilder();
-
-  /**
-   * <code>.pg_query.OpExpr op_expr = 12 [json_name = "OpExpr"];</code>
-   * @return Whether the opExpr field is set.
-   */
-  boolean hasOpExpr();
-  /**
-   * <code>.pg_query.OpExpr op_expr = 12 [json_name = "OpExpr"];</code>
-   * @return The opExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.OpExpr getOpExpr();
-  /**
-   * <code>.pg_query.OpExpr op_expr = 12 [json_name = "OpExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.OpExprOrBuilder getOpExprOrBuilder();
-
-  /**
-   * <code>.pg_query.DistinctExpr distinct_expr = 13 [json_name = "DistinctExpr"];</code>
-   * @return Whether the distinctExpr field is set.
-   */
-  boolean hasDistinctExpr();
-  /**
-   * <code>.pg_query.DistinctExpr distinct_expr = 13 [json_name = "DistinctExpr"];</code>
-   * @return The distinctExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DistinctExpr getDistinctExpr();
-  /**
-   * <code>.pg_query.DistinctExpr distinct_expr = 13 [json_name = "DistinctExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DistinctExprOrBuilder getDistinctExprOrBuilder();
-
-  /**
-   * <code>.pg_query.NullIfExpr null_if_expr = 14 [json_name = "NullIfExpr"];</code>
-   * @return Whether the nullIfExpr field is set.
-   */
-  boolean hasNullIfExpr();
-  /**
-   * <code>.pg_query.NullIfExpr null_if_expr = 14 [json_name = "NullIfExpr"];</code>
-   * @return The nullIfExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.NullIfExpr getNullIfExpr();
-  /**
-   * <code>.pg_query.NullIfExpr null_if_expr = 14 [json_name = "NullIfExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.NullIfExprOrBuilder getNullIfExprOrBuilder();
-
-  /**
-   * <code>.pg_query.ScalarArrayOpExpr scalar_array_op_expr = 15 [json_name = "ScalarArrayOpExpr"];</code>
-   * @return Whether the scalarArrayOpExpr field is set.
-   */
-  boolean hasScalarArrayOpExpr();
-  /**
-   * <code>.pg_query.ScalarArrayOpExpr scalar_array_op_expr = 15 [json_name = "ScalarArrayOpExpr"];</code>
-   * @return The scalarArrayOpExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ScalarArrayOpExpr getScalarArrayOpExpr();
-  /**
-   * <code>.pg_query.ScalarArrayOpExpr scalar_array_op_expr = 15 [json_name = "ScalarArrayOpExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ScalarArrayOpExprOrBuilder getScalarArrayOpExprOrBuilder();
-
-  /**
-   * <code>.pg_query.BoolExpr bool_expr = 16 [json_name = "BoolExpr"];</code>
-   * @return Whether the boolExpr field is set.
-   */
-  boolean hasBoolExpr();
-  /**
-   * <code>.pg_query.BoolExpr bool_expr = 16 [json_name = "BoolExpr"];</code>
-   * @return The boolExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.BoolExpr getBoolExpr();
-  /**
-   * <code>.pg_query.BoolExpr bool_expr = 16 [json_name = "BoolExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.BoolExprOrBuilder getBoolExprOrBuilder();
-
-  /**
-   * <code>.pg_query.SubLink sub_link = 17 [json_name = "SubLink"];</code>
-   * @return Whether the subLink field is set.
-   */
-  boolean hasSubLink();
-  /**
-   * <code>.pg_query.SubLink sub_link = 17 [json_name = "SubLink"];</code>
-   * @return The subLink.
-   */
-  com.premiumminds.sonar.postgres.protobuf.SubLink getSubLink();
-  /**
-   * <code>.pg_query.SubLink sub_link = 17 [json_name = "SubLink"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.SubLinkOrBuilder getSubLinkOrBuilder();
-
-  /**
-   * <code>.pg_query.SubPlan sub_plan = 18 [json_name = "SubPlan"];</code>
-   * @return Whether the subPlan field is set.
-   */
-  boolean hasSubPlan();
-  /**
-   * <code>.pg_query.SubPlan sub_plan = 18 [json_name = "SubPlan"];</code>
-   * @return The subPlan.
-   */
-  com.premiumminds.sonar.postgres.protobuf.SubPlan getSubPlan();
-  /**
-   * <code>.pg_query.SubPlan sub_plan = 18 [json_name = "SubPlan"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.SubPlanOrBuilder getSubPlanOrBuilder();
-
-  /**
-   * <code>.pg_query.AlternativeSubPlan alternative_sub_plan = 19 [json_name = "AlternativeSubPlan"];</code>
-   * @return Whether the alternativeSubPlan field is set.
-   */
-  boolean hasAlternativeSubPlan();
-  /**
-   * <code>.pg_query.AlternativeSubPlan alternative_sub_plan = 19 [json_name = "AlternativeSubPlan"];</code>
-   * @return The alternativeSubPlan.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlternativeSubPlan getAlternativeSubPlan();
-  /**
-   * <code>.pg_query.AlternativeSubPlan alternative_sub_plan = 19 [json_name = "AlternativeSubPlan"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlternativeSubPlanOrBuilder getAlternativeSubPlanOrBuilder();
-
-  /**
-   * <code>.pg_query.FieldSelect field_select = 20 [json_name = "FieldSelect"];</code>
-   * @return Whether the fieldSelect field is set.
-   */
-  boolean hasFieldSelect();
-  /**
-   * <code>.pg_query.FieldSelect field_select = 20 [json_name = "FieldSelect"];</code>
-   * @return The fieldSelect.
-   */
-  com.premiumminds.sonar.postgres.protobuf.FieldSelect getFieldSelect();
-  /**
-   * <code>.pg_query.FieldSelect field_select = 20 [json_name = "FieldSelect"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.FieldSelectOrBuilder getFieldSelectOrBuilder();
-
-  /**
-   * <code>.pg_query.FieldStore field_store = 21 [json_name = "FieldStore"];</code>
-   * @return Whether the fieldStore field is set.
-   */
-  boolean hasFieldStore();
-  /**
-   * <code>.pg_query.FieldStore field_store = 21 [json_name = "FieldStore"];</code>
-   * @return The fieldStore.
-   */
-  com.premiumminds.sonar.postgres.protobuf.FieldStore getFieldStore();
-  /**
-   * <code>.pg_query.FieldStore field_store = 21 [json_name = "FieldStore"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.FieldStoreOrBuilder getFieldStoreOrBuilder();
-
-  /**
-   * <code>.pg_query.RelabelType relabel_type = 22 [json_name = "RelabelType"];</code>
-   * @return Whether the relabelType field is set.
-   */
-  boolean hasRelabelType();
-  /**
-   * <code>.pg_query.RelabelType relabel_type = 22 [json_name = "RelabelType"];</code>
-   * @return The relabelType.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RelabelType getRelabelType();
-  /**
-   * <code>.pg_query.RelabelType relabel_type = 22 [json_name = "RelabelType"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RelabelTypeOrBuilder getRelabelTypeOrBuilder();
-
-  /**
-   * <code>.pg_query.CoerceViaIO coerce_via_io = 23 [json_name = "CoerceViaIO"];</code>
-   * @return Whether the coerceViaIo field is set.
-   */
-  boolean hasCoerceViaIo();
-  /**
-   * <code>.pg_query.CoerceViaIO coerce_via_io = 23 [json_name = "CoerceViaIO"];</code>
-   * @return The coerceViaIo.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CoerceViaIO getCoerceViaIo();
-  /**
-   * <code>.pg_query.CoerceViaIO coerce_via_io = 23 [json_name = "CoerceViaIO"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CoerceViaIOOrBuilder getCoerceViaIoOrBuilder();
-
-  /**
-   * <code>.pg_query.ArrayCoerceExpr array_coerce_expr = 24 [json_name = "ArrayCoerceExpr"];</code>
-   * @return Whether the arrayCoerceExpr field is set.
-   */
-  boolean hasArrayCoerceExpr();
-  /**
-   * <code>.pg_query.ArrayCoerceExpr array_coerce_expr = 24 [json_name = "ArrayCoerceExpr"];</code>
-   * @return The arrayCoerceExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ArrayCoerceExpr getArrayCoerceExpr();
-  /**
-   * <code>.pg_query.ArrayCoerceExpr array_coerce_expr = 24 [json_name = "ArrayCoerceExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ArrayCoerceExprOrBuilder getArrayCoerceExprOrBuilder();
-
-  /**
-   * <code>.pg_query.ConvertRowtypeExpr convert_rowtype_expr = 25 [json_name = "ConvertRowtypeExpr"];</code>
-   * @return Whether the convertRowtypeExpr field is set.
-   */
-  boolean hasConvertRowtypeExpr();
-  /**
-   * <code>.pg_query.ConvertRowtypeExpr convert_rowtype_expr = 25 [json_name = "ConvertRowtypeExpr"];</code>
-   * @return The convertRowtypeExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ConvertRowtypeExpr getConvertRowtypeExpr();
-  /**
-   * <code>.pg_query.ConvertRowtypeExpr convert_rowtype_expr = 25 [json_name = "ConvertRowtypeExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ConvertRowtypeExprOrBuilder getConvertRowtypeExprOrBuilder();
-
-  /**
-   * <code>.pg_query.CollateExpr collate_expr = 26 [json_name = "CollateExpr"];</code>
-   * @return Whether the collateExpr field is set.
-   */
-  boolean hasCollateExpr();
-  /**
-   * <code>.pg_query.CollateExpr collate_expr = 26 [json_name = "CollateExpr"];</code>
-   * @return The collateExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CollateExpr getCollateExpr();
-  /**
-   * <code>.pg_query.CollateExpr collate_expr = 26 [json_name = "CollateExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CollateExprOrBuilder getCollateExprOrBuilder();
-
-  /**
-   * <code>.pg_query.CaseExpr case_expr = 27 [json_name = "CaseExpr"];</code>
-   * @return Whether the caseExpr field is set.
-   */
-  boolean hasCaseExpr();
-  /**
-   * <code>.pg_query.CaseExpr case_expr = 27 [json_name = "CaseExpr"];</code>
-   * @return The caseExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CaseExpr getCaseExpr();
-  /**
-   * <code>.pg_query.CaseExpr case_expr = 27 [json_name = "CaseExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CaseExprOrBuilder getCaseExprOrBuilder();
-
-  /**
-   * <code>.pg_query.CaseWhen case_when = 28 [json_name = "CaseWhen"];</code>
-   * @return Whether the caseWhen field is set.
-   */
-  boolean hasCaseWhen();
-  /**
-   * <code>.pg_query.CaseWhen case_when = 28 [json_name = "CaseWhen"];</code>
-   * @return The caseWhen.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CaseWhen getCaseWhen();
-  /**
-   * <code>.pg_query.CaseWhen case_when = 28 [json_name = "CaseWhen"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CaseWhenOrBuilder getCaseWhenOrBuilder();
-
-  /**
-   * <code>.pg_query.CaseTestExpr case_test_expr = 29 [json_name = "CaseTestExpr"];</code>
-   * @return Whether the caseTestExpr field is set.
-   */
-  boolean hasCaseTestExpr();
-  /**
-   * <code>.pg_query.CaseTestExpr case_test_expr = 29 [json_name = "CaseTestExpr"];</code>
-   * @return The caseTestExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CaseTestExpr getCaseTestExpr();
-  /**
-   * <code>.pg_query.CaseTestExpr case_test_expr = 29 [json_name = "CaseTestExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CaseTestExprOrBuilder getCaseTestExprOrBuilder();
-
-  /**
-   * <code>.pg_query.ArrayExpr array_expr = 30 [json_name = "ArrayExpr"];</code>
-   * @return Whether the arrayExpr field is set.
-   */
-  boolean hasArrayExpr();
-  /**
-   * <code>.pg_query.ArrayExpr array_expr = 30 [json_name = "ArrayExpr"];</code>
-   * @return The arrayExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ArrayExpr getArrayExpr();
-  /**
-   * <code>.pg_query.ArrayExpr array_expr = 30 [json_name = "ArrayExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ArrayExprOrBuilder getArrayExprOrBuilder();
-
-  /**
-   * <code>.pg_query.RowExpr row_expr = 31 [json_name = "RowExpr"];</code>
-   * @return Whether the rowExpr field is set.
-   */
-  boolean hasRowExpr();
-  /**
-   * <code>.pg_query.RowExpr row_expr = 31 [json_name = "RowExpr"];</code>
-   * @return The rowExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RowExpr getRowExpr();
-  /**
-   * <code>.pg_query.RowExpr row_expr = 31 [json_name = "RowExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RowExprOrBuilder getRowExprOrBuilder();
-
-  /**
-   * <code>.pg_query.RowCompareExpr row_compare_expr = 32 [json_name = "RowCompareExpr"];</code>
-   * @return Whether the rowCompareExpr field is set.
-   */
-  boolean hasRowCompareExpr();
-  /**
-   * <code>.pg_query.RowCompareExpr row_compare_expr = 32 [json_name = "RowCompareExpr"];</code>
-   * @return The rowCompareExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RowCompareExpr getRowCompareExpr();
-  /**
-   * <code>.pg_query.RowCompareExpr row_compare_expr = 32 [json_name = "RowCompareExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RowCompareExprOrBuilder getRowCompareExprOrBuilder();
-
-  /**
-   * <code>.pg_query.CoalesceExpr coalesce_expr = 33 [json_name = "CoalesceExpr"];</code>
-   * @return Whether the coalesceExpr field is set.
-   */
-  boolean hasCoalesceExpr();
-  /**
-   * <code>.pg_query.CoalesceExpr coalesce_expr = 33 [json_name = "CoalesceExpr"];</code>
-   * @return The coalesceExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CoalesceExpr getCoalesceExpr();
-  /**
-   * <code>.pg_query.CoalesceExpr coalesce_expr = 33 [json_name = "CoalesceExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CoalesceExprOrBuilder getCoalesceExprOrBuilder();
-
-  /**
-   * <code>.pg_query.MinMaxExpr min_max_expr = 34 [json_name = "MinMaxExpr"];</code>
-   * @return Whether the minMaxExpr field is set.
-   */
-  boolean hasMinMaxExpr();
-  /**
-   * <code>.pg_query.MinMaxExpr min_max_expr = 34 [json_name = "MinMaxExpr"];</code>
-   * @return The minMaxExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.MinMaxExpr getMinMaxExpr();
-  /**
-   * <code>.pg_query.MinMaxExpr min_max_expr = 34 [json_name = "MinMaxExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.MinMaxExprOrBuilder getMinMaxExprOrBuilder();
-
-  /**
-   * <code>.pg_query.SQLValueFunction sqlvalue_function = 35 [json_name = "SQLValueFunction"];</code>
-   * @return Whether the sqlvalueFunction field is set.
-   */
-  boolean hasSqlvalueFunction();
-  /**
-   * <code>.pg_query.SQLValueFunction sqlvalue_function = 35 [json_name = "SQLValueFunction"];</code>
-   * @return The sqlvalueFunction.
-   */
-  com.premiumminds.sonar.postgres.protobuf.SQLValueFunction getSqlvalueFunction();
-  /**
-   * <code>.pg_query.SQLValueFunction sqlvalue_function = 35 [json_name = "SQLValueFunction"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.SQLValueFunctionOrBuilder getSqlvalueFunctionOrBuilder();
-
-  /**
-   * <code>.pg_query.XmlExpr xml_expr = 36 [json_name = "XmlExpr"];</code>
-   * @return Whether the xmlExpr field is set.
-   */
-  boolean hasXmlExpr();
-  /**
-   * <code>.pg_query.XmlExpr xml_expr = 36 [json_name = "XmlExpr"];</code>
-   * @return The xmlExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.XmlExpr getXmlExpr();
-  /**
-   * <code>.pg_query.XmlExpr xml_expr = 36 [json_name = "XmlExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.XmlExprOrBuilder getXmlExprOrBuilder();
-
-  /**
-   * <code>.pg_query.NullTest null_test = 37 [json_name = "NullTest"];</code>
-   * @return Whether the nullTest field is set.
-   */
-  boolean hasNullTest();
-  /**
-   * <code>.pg_query.NullTest null_test = 37 [json_name = "NullTest"];</code>
-   * @return The nullTest.
-   */
-  com.premiumminds.sonar.postgres.protobuf.NullTest getNullTest();
-  /**
-   * <code>.pg_query.NullTest null_test = 37 [json_name = "NullTest"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.NullTestOrBuilder getNullTestOrBuilder();
-
-  /**
-   * <code>.pg_query.BooleanTest boolean_test = 38 [json_name = "BooleanTest"];</code>
-   * @return Whether the booleanTest field is set.
-   */
-  boolean hasBooleanTest();
-  /**
-   * <code>.pg_query.BooleanTest boolean_test = 38 [json_name = "BooleanTest"];</code>
-   * @return The booleanTest.
-   */
-  com.premiumminds.sonar.postgres.protobuf.BooleanTest getBooleanTest();
-  /**
-   * <code>.pg_query.BooleanTest boolean_test = 38 [json_name = "BooleanTest"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.BooleanTestOrBuilder getBooleanTestOrBuilder();
-
-  /**
-   * <code>.pg_query.CoerceToDomain coerce_to_domain = 39 [json_name = "CoerceToDomain"];</code>
-   * @return Whether the coerceToDomain field is set.
-   */
-  boolean hasCoerceToDomain();
-  /**
-   * <code>.pg_query.CoerceToDomain coerce_to_domain = 39 [json_name = "CoerceToDomain"];</code>
-   * @return The coerceToDomain.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CoerceToDomain getCoerceToDomain();
-  /**
-   * <code>.pg_query.CoerceToDomain coerce_to_domain = 39 [json_name = "CoerceToDomain"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CoerceToDomainOrBuilder getCoerceToDomainOrBuilder();
-
-  /**
-   * <code>.pg_query.CoerceToDomainValue coerce_to_domain_value = 40 [json_name = "CoerceToDomainValue"];</code>
-   * @return Whether the coerceToDomainValue field is set.
-   */
-  boolean hasCoerceToDomainValue();
-  /**
-   * <code>.pg_query.CoerceToDomainValue coerce_to_domain_value = 40 [json_name = "CoerceToDomainValue"];</code>
-   * @return The coerceToDomainValue.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CoerceToDomainValue getCoerceToDomainValue();
-  /**
-   * <code>.pg_query.CoerceToDomainValue coerce_to_domain_value = 40 [json_name = "CoerceToDomainValue"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CoerceToDomainValueOrBuilder getCoerceToDomainValueOrBuilder();
-
-  /**
-   * <code>.pg_query.SetToDefault set_to_default = 41 [json_name = "SetToDefault"];</code>
-   * @return Whether the setToDefault field is set.
-   */
-  boolean hasSetToDefault();
-  /**
-   * <code>.pg_query.SetToDefault set_to_default = 41 [json_name = "SetToDefault"];</code>
-   * @return The setToDefault.
-   */
-  com.premiumminds.sonar.postgres.protobuf.SetToDefault getSetToDefault();
-  /**
-   * <code>.pg_query.SetToDefault set_to_default = 41 [json_name = "SetToDefault"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.SetToDefaultOrBuilder getSetToDefaultOrBuilder();
-
-  /**
-   * <code>.pg_query.CurrentOfExpr current_of_expr = 42 [json_name = "CurrentOfExpr"];</code>
-   * @return Whether the currentOfExpr field is set.
-   */
-  boolean hasCurrentOfExpr();
-  /**
-   * <code>.pg_query.CurrentOfExpr current_of_expr = 42 [json_name = "CurrentOfExpr"];</code>
-   * @return The currentOfExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CurrentOfExpr getCurrentOfExpr();
-  /**
-   * <code>.pg_query.CurrentOfExpr current_of_expr = 42 [json_name = "CurrentOfExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CurrentOfExprOrBuilder getCurrentOfExprOrBuilder();
-
-  /**
-   * <code>.pg_query.NextValueExpr next_value_expr = 43 [json_name = "NextValueExpr"];</code>
-   * @return Whether the nextValueExpr field is set.
-   */
-  boolean hasNextValueExpr();
-  /**
-   * <code>.pg_query.NextValueExpr next_value_expr = 43 [json_name = "NextValueExpr"];</code>
-   * @return The nextValueExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.NextValueExpr getNextValueExpr();
-  /**
-   * <code>.pg_query.NextValueExpr next_value_expr = 43 [json_name = "NextValueExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.NextValueExprOrBuilder getNextValueExprOrBuilder();
-
-  /**
-   * <code>.pg_query.InferenceElem inference_elem = 44 [json_name = "InferenceElem"];</code>
-   * @return Whether the inferenceElem field is set.
-   */
-  boolean hasInferenceElem();
-  /**
-   * <code>.pg_query.InferenceElem inference_elem = 44 [json_name = "InferenceElem"];</code>
-   * @return The inferenceElem.
-   */
-  com.premiumminds.sonar.postgres.protobuf.InferenceElem getInferenceElem();
-  /**
-   * <code>.pg_query.InferenceElem inference_elem = 44 [json_name = "InferenceElem"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.InferenceElemOrBuilder getInferenceElemOrBuilder();
-
-  /**
-   * <code>.pg_query.TargetEntry target_entry = 45 [json_name = "TargetEntry"];</code>
-   * @return Whether the targetEntry field is set.
-   */
-  boolean hasTargetEntry();
-  /**
-   * <code>.pg_query.TargetEntry target_entry = 45 [json_name = "TargetEntry"];</code>
-   * @return The targetEntry.
-   */
-  com.premiumminds.sonar.postgres.protobuf.TargetEntry getTargetEntry();
-  /**
-   * <code>.pg_query.TargetEntry target_entry = 45 [json_name = "TargetEntry"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.TargetEntryOrBuilder getTargetEntryOrBuilder();
-
-  /**
-   * <code>.pg_query.RangeTblRef range_tbl_ref = 46 [json_name = "RangeTblRef"];</code>
-   * @return Whether the rangeTblRef field is set.
-   */
-  boolean hasRangeTblRef();
-  /**
-   * <code>.pg_query.RangeTblRef range_tbl_ref = 46 [json_name = "RangeTblRef"];</code>
-   * @return The rangeTblRef.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTblRef getRangeTblRef();
-  /**
-   * <code>.pg_query.RangeTblRef range_tbl_ref = 46 [json_name = "RangeTblRef"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTblRefOrBuilder getRangeTblRefOrBuilder();
-
-  /**
-   * <code>.pg_query.JoinExpr join_expr = 47 [json_name = "JoinExpr"];</code>
-   * @return Whether the joinExpr field is set.
-   */
-  boolean hasJoinExpr();
-  /**
-   * <code>.pg_query.JoinExpr join_expr = 47 [json_name = "JoinExpr"];</code>
-   * @return The joinExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.JoinExpr getJoinExpr();
-  /**
-   * <code>.pg_query.JoinExpr join_expr = 47 [json_name = "JoinExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.JoinExprOrBuilder getJoinExprOrBuilder();
-
-  /**
-   * <code>.pg_query.FromExpr from_expr = 48 [json_name = "FromExpr"];</code>
-   * @return Whether the fromExpr field is set.
-   */
-  boolean hasFromExpr();
-  /**
-   * <code>.pg_query.FromExpr from_expr = 48 [json_name = "FromExpr"];</code>
-   * @return The fromExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.FromExpr getFromExpr();
-  /**
-   * <code>.pg_query.FromExpr from_expr = 48 [json_name = "FromExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.FromExprOrBuilder getFromExprOrBuilder();
-
-  /**
-   * <code>.pg_query.OnConflictExpr on_conflict_expr = 49 [json_name = "OnConflictExpr"];</code>
-   * @return Whether the onConflictExpr field is set.
-   */
-  boolean hasOnConflictExpr();
-  /**
-   * <code>.pg_query.OnConflictExpr on_conflict_expr = 49 [json_name = "OnConflictExpr"];</code>
-   * @return The onConflictExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.OnConflictExpr getOnConflictExpr();
-  /**
-   * <code>.pg_query.OnConflictExpr on_conflict_expr = 49 [json_name = "OnConflictExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.OnConflictExprOrBuilder getOnConflictExprOrBuilder();
-
-  /**
-   * <code>.pg_query.IntoClause into_clause = 50 [json_name = "IntoClause"];</code>
+   * <code>.pg_query.IntoClause into_clause = 4 [json_name = "IntoClause"];</code>
    * @return Whether the intoClause field is set.
    */
   boolean hasIntoClause();
   /**
-   * <code>.pg_query.IntoClause into_clause = 50 [json_name = "IntoClause"];</code>
+   * <code>.pg_query.IntoClause into_clause = 4 [json_name = "IntoClause"];</code>
    * @return The intoClause.
    */
   com.premiumminds.sonar.postgres.protobuf.IntoClause getIntoClause();
   /**
-   * <code>.pg_query.IntoClause into_clause = 50 [json_name = "IntoClause"];</code>
+   * <code>.pg_query.IntoClause into_clause = 4 [json_name = "IntoClause"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.IntoClauseOrBuilder getIntoClauseOrBuilder();
 
   /**
-   * <code>.pg_query.MergeAction merge_action = 51 [json_name = "MergeAction"];</code>
-   * @return Whether the mergeAction field is set.
+   * <code>.pg_query.Var var = 5 [json_name = "Var"];</code>
+   * @return Whether the var field is set.
    */
-  boolean hasMergeAction();
+  boolean hasVar();
   /**
-   * <code>.pg_query.MergeAction merge_action = 51 [json_name = "MergeAction"];</code>
-   * @return The mergeAction.
+   * <code>.pg_query.Var var = 5 [json_name = "Var"];</code>
+   * @return The var.
    */
-  com.premiumminds.sonar.postgres.protobuf.MergeAction getMergeAction();
+  com.premiumminds.sonar.postgres.protobuf.Var getVar();
   /**
-   * <code>.pg_query.MergeAction merge_action = 51 [json_name = "MergeAction"];</code>
+   * <code>.pg_query.Var var = 5 [json_name = "Var"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.MergeActionOrBuilder getMergeActionOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.VarOrBuilder getVarOrBuilder();
 
   /**
-   * <code>.pg_query.RawStmt raw_stmt = 52 [json_name = "RawStmt"];</code>
-   * @return Whether the rawStmt field is set.
+   * <code>.pg_query.Param param = 6 [json_name = "Param"];</code>
+   * @return Whether the param field is set.
    */
-  boolean hasRawStmt();
+  boolean hasParam();
   /**
-   * <code>.pg_query.RawStmt raw_stmt = 52 [json_name = "RawStmt"];</code>
-   * @return The rawStmt.
+   * <code>.pg_query.Param param = 6 [json_name = "Param"];</code>
+   * @return The param.
    */
-  com.premiumminds.sonar.postgres.protobuf.RawStmt getRawStmt();
+  com.premiumminds.sonar.postgres.protobuf.Param getParam();
   /**
-   * <code>.pg_query.RawStmt raw_stmt = 52 [json_name = "RawStmt"];</code>
+   * <code>.pg_query.Param param = 6 [json_name = "Param"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.RawStmtOrBuilder getRawStmtOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.ParamOrBuilder getParamOrBuilder();
 
   /**
-   * <code>.pg_query.Query query = 53 [json_name = "Query"];</code>
+   * <code>.pg_query.Aggref aggref = 7 [json_name = "Aggref"];</code>
+   * @return Whether the aggref field is set.
+   */
+  boolean hasAggref();
+  /**
+   * <code>.pg_query.Aggref aggref = 7 [json_name = "Aggref"];</code>
+   * @return The aggref.
+   */
+  com.premiumminds.sonar.postgres.protobuf.Aggref getAggref();
+  /**
+   * <code>.pg_query.Aggref aggref = 7 [json_name = "Aggref"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AggrefOrBuilder getAggrefOrBuilder();
+
+  /**
+   * <code>.pg_query.GroupingFunc grouping_func = 8 [json_name = "GroupingFunc"];</code>
+   * @return Whether the groupingFunc field is set.
+   */
+  boolean hasGroupingFunc();
+  /**
+   * <code>.pg_query.GroupingFunc grouping_func = 8 [json_name = "GroupingFunc"];</code>
+   * @return The groupingFunc.
+   */
+  com.premiumminds.sonar.postgres.protobuf.GroupingFunc getGroupingFunc();
+  /**
+   * <code>.pg_query.GroupingFunc grouping_func = 8 [json_name = "GroupingFunc"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.GroupingFuncOrBuilder getGroupingFuncOrBuilder();
+
+  /**
+   * <code>.pg_query.WindowFunc window_func = 9 [json_name = "WindowFunc"];</code>
+   * @return Whether the windowFunc field is set.
+   */
+  boolean hasWindowFunc();
+  /**
+   * <code>.pg_query.WindowFunc window_func = 9 [json_name = "WindowFunc"];</code>
+   * @return The windowFunc.
+   */
+  com.premiumminds.sonar.postgres.protobuf.WindowFunc getWindowFunc();
+  /**
+   * <code>.pg_query.WindowFunc window_func = 9 [json_name = "WindowFunc"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.WindowFuncOrBuilder getWindowFuncOrBuilder();
+
+  /**
+   * <code>.pg_query.SubscriptingRef subscripting_ref = 10 [json_name = "SubscriptingRef"];</code>
+   * @return Whether the subscriptingRef field is set.
+   */
+  boolean hasSubscriptingRef();
+  /**
+   * <code>.pg_query.SubscriptingRef subscripting_ref = 10 [json_name = "SubscriptingRef"];</code>
+   * @return The subscriptingRef.
+   */
+  com.premiumminds.sonar.postgres.protobuf.SubscriptingRef getSubscriptingRef();
+  /**
+   * <code>.pg_query.SubscriptingRef subscripting_ref = 10 [json_name = "SubscriptingRef"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.SubscriptingRefOrBuilder getSubscriptingRefOrBuilder();
+
+  /**
+   * <code>.pg_query.FuncExpr func_expr = 11 [json_name = "FuncExpr"];</code>
+   * @return Whether the funcExpr field is set.
+   */
+  boolean hasFuncExpr();
+  /**
+   * <code>.pg_query.FuncExpr func_expr = 11 [json_name = "FuncExpr"];</code>
+   * @return The funcExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.FuncExpr getFuncExpr();
+  /**
+   * <code>.pg_query.FuncExpr func_expr = 11 [json_name = "FuncExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.FuncExprOrBuilder getFuncExprOrBuilder();
+
+  /**
+   * <code>.pg_query.NamedArgExpr named_arg_expr = 12 [json_name = "NamedArgExpr"];</code>
+   * @return Whether the namedArgExpr field is set.
+   */
+  boolean hasNamedArgExpr();
+  /**
+   * <code>.pg_query.NamedArgExpr named_arg_expr = 12 [json_name = "NamedArgExpr"];</code>
+   * @return The namedArgExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.NamedArgExpr getNamedArgExpr();
+  /**
+   * <code>.pg_query.NamedArgExpr named_arg_expr = 12 [json_name = "NamedArgExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NamedArgExprOrBuilder getNamedArgExprOrBuilder();
+
+  /**
+   * <code>.pg_query.OpExpr op_expr = 13 [json_name = "OpExpr"];</code>
+   * @return Whether the opExpr field is set.
+   */
+  boolean hasOpExpr();
+  /**
+   * <code>.pg_query.OpExpr op_expr = 13 [json_name = "OpExpr"];</code>
+   * @return The opExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.OpExpr getOpExpr();
+  /**
+   * <code>.pg_query.OpExpr op_expr = 13 [json_name = "OpExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.OpExprOrBuilder getOpExprOrBuilder();
+
+  /**
+   * <code>.pg_query.DistinctExpr distinct_expr = 14 [json_name = "DistinctExpr"];</code>
+   * @return Whether the distinctExpr field is set.
+   */
+  boolean hasDistinctExpr();
+  /**
+   * <code>.pg_query.DistinctExpr distinct_expr = 14 [json_name = "DistinctExpr"];</code>
+   * @return The distinctExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DistinctExpr getDistinctExpr();
+  /**
+   * <code>.pg_query.DistinctExpr distinct_expr = 14 [json_name = "DistinctExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DistinctExprOrBuilder getDistinctExprOrBuilder();
+
+  /**
+   * <code>.pg_query.NullIfExpr null_if_expr = 15 [json_name = "NullIfExpr"];</code>
+   * @return Whether the nullIfExpr field is set.
+   */
+  boolean hasNullIfExpr();
+  /**
+   * <code>.pg_query.NullIfExpr null_if_expr = 15 [json_name = "NullIfExpr"];</code>
+   * @return The nullIfExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.NullIfExpr getNullIfExpr();
+  /**
+   * <code>.pg_query.NullIfExpr null_if_expr = 15 [json_name = "NullIfExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NullIfExprOrBuilder getNullIfExprOrBuilder();
+
+  /**
+   * <code>.pg_query.ScalarArrayOpExpr scalar_array_op_expr = 16 [json_name = "ScalarArrayOpExpr"];</code>
+   * @return Whether the scalarArrayOpExpr field is set.
+   */
+  boolean hasScalarArrayOpExpr();
+  /**
+   * <code>.pg_query.ScalarArrayOpExpr scalar_array_op_expr = 16 [json_name = "ScalarArrayOpExpr"];</code>
+   * @return The scalarArrayOpExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ScalarArrayOpExpr getScalarArrayOpExpr();
+  /**
+   * <code>.pg_query.ScalarArrayOpExpr scalar_array_op_expr = 16 [json_name = "ScalarArrayOpExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ScalarArrayOpExprOrBuilder getScalarArrayOpExprOrBuilder();
+
+  /**
+   * <code>.pg_query.BoolExpr bool_expr = 17 [json_name = "BoolExpr"];</code>
+   * @return Whether the boolExpr field is set.
+   */
+  boolean hasBoolExpr();
+  /**
+   * <code>.pg_query.BoolExpr bool_expr = 17 [json_name = "BoolExpr"];</code>
+   * @return The boolExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.BoolExpr getBoolExpr();
+  /**
+   * <code>.pg_query.BoolExpr bool_expr = 17 [json_name = "BoolExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.BoolExprOrBuilder getBoolExprOrBuilder();
+
+  /**
+   * <code>.pg_query.SubLink sub_link = 18 [json_name = "SubLink"];</code>
+   * @return Whether the subLink field is set.
+   */
+  boolean hasSubLink();
+  /**
+   * <code>.pg_query.SubLink sub_link = 18 [json_name = "SubLink"];</code>
+   * @return The subLink.
+   */
+  com.premiumminds.sonar.postgres.protobuf.SubLink getSubLink();
+  /**
+   * <code>.pg_query.SubLink sub_link = 18 [json_name = "SubLink"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.SubLinkOrBuilder getSubLinkOrBuilder();
+
+  /**
+   * <code>.pg_query.SubPlan sub_plan = 19 [json_name = "SubPlan"];</code>
+   * @return Whether the subPlan field is set.
+   */
+  boolean hasSubPlan();
+  /**
+   * <code>.pg_query.SubPlan sub_plan = 19 [json_name = "SubPlan"];</code>
+   * @return The subPlan.
+   */
+  com.premiumminds.sonar.postgres.protobuf.SubPlan getSubPlan();
+  /**
+   * <code>.pg_query.SubPlan sub_plan = 19 [json_name = "SubPlan"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.SubPlanOrBuilder getSubPlanOrBuilder();
+
+  /**
+   * <code>.pg_query.AlternativeSubPlan alternative_sub_plan = 20 [json_name = "AlternativeSubPlan"];</code>
+   * @return Whether the alternativeSubPlan field is set.
+   */
+  boolean hasAlternativeSubPlan();
+  /**
+   * <code>.pg_query.AlternativeSubPlan alternative_sub_plan = 20 [json_name = "AlternativeSubPlan"];</code>
+   * @return The alternativeSubPlan.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlternativeSubPlan getAlternativeSubPlan();
+  /**
+   * <code>.pg_query.AlternativeSubPlan alternative_sub_plan = 20 [json_name = "AlternativeSubPlan"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlternativeSubPlanOrBuilder getAlternativeSubPlanOrBuilder();
+
+  /**
+   * <code>.pg_query.FieldSelect field_select = 21 [json_name = "FieldSelect"];</code>
+   * @return Whether the fieldSelect field is set.
+   */
+  boolean hasFieldSelect();
+  /**
+   * <code>.pg_query.FieldSelect field_select = 21 [json_name = "FieldSelect"];</code>
+   * @return The fieldSelect.
+   */
+  com.premiumminds.sonar.postgres.protobuf.FieldSelect getFieldSelect();
+  /**
+   * <code>.pg_query.FieldSelect field_select = 21 [json_name = "FieldSelect"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.FieldSelectOrBuilder getFieldSelectOrBuilder();
+
+  /**
+   * <code>.pg_query.FieldStore field_store = 22 [json_name = "FieldStore"];</code>
+   * @return Whether the fieldStore field is set.
+   */
+  boolean hasFieldStore();
+  /**
+   * <code>.pg_query.FieldStore field_store = 22 [json_name = "FieldStore"];</code>
+   * @return The fieldStore.
+   */
+  com.premiumminds.sonar.postgres.protobuf.FieldStore getFieldStore();
+  /**
+   * <code>.pg_query.FieldStore field_store = 22 [json_name = "FieldStore"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.FieldStoreOrBuilder getFieldStoreOrBuilder();
+
+  /**
+   * <code>.pg_query.RelabelType relabel_type = 23 [json_name = "RelabelType"];</code>
+   * @return Whether the relabelType field is set.
+   */
+  boolean hasRelabelType();
+  /**
+   * <code>.pg_query.RelabelType relabel_type = 23 [json_name = "RelabelType"];</code>
+   * @return The relabelType.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RelabelType getRelabelType();
+  /**
+   * <code>.pg_query.RelabelType relabel_type = 23 [json_name = "RelabelType"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RelabelTypeOrBuilder getRelabelTypeOrBuilder();
+
+  /**
+   * <code>.pg_query.CoerceViaIO coerce_via_io = 24 [json_name = "CoerceViaIO"];</code>
+   * @return Whether the coerceViaIo field is set.
+   */
+  boolean hasCoerceViaIo();
+  /**
+   * <code>.pg_query.CoerceViaIO coerce_via_io = 24 [json_name = "CoerceViaIO"];</code>
+   * @return The coerceViaIo.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CoerceViaIO getCoerceViaIo();
+  /**
+   * <code>.pg_query.CoerceViaIO coerce_via_io = 24 [json_name = "CoerceViaIO"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CoerceViaIOOrBuilder getCoerceViaIoOrBuilder();
+
+  /**
+   * <code>.pg_query.ArrayCoerceExpr array_coerce_expr = 25 [json_name = "ArrayCoerceExpr"];</code>
+   * @return Whether the arrayCoerceExpr field is set.
+   */
+  boolean hasArrayCoerceExpr();
+  /**
+   * <code>.pg_query.ArrayCoerceExpr array_coerce_expr = 25 [json_name = "ArrayCoerceExpr"];</code>
+   * @return The arrayCoerceExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ArrayCoerceExpr getArrayCoerceExpr();
+  /**
+   * <code>.pg_query.ArrayCoerceExpr array_coerce_expr = 25 [json_name = "ArrayCoerceExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ArrayCoerceExprOrBuilder getArrayCoerceExprOrBuilder();
+
+  /**
+   * <code>.pg_query.ConvertRowtypeExpr convert_rowtype_expr = 26 [json_name = "ConvertRowtypeExpr"];</code>
+   * @return Whether the convertRowtypeExpr field is set.
+   */
+  boolean hasConvertRowtypeExpr();
+  /**
+   * <code>.pg_query.ConvertRowtypeExpr convert_rowtype_expr = 26 [json_name = "ConvertRowtypeExpr"];</code>
+   * @return The convertRowtypeExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ConvertRowtypeExpr getConvertRowtypeExpr();
+  /**
+   * <code>.pg_query.ConvertRowtypeExpr convert_rowtype_expr = 26 [json_name = "ConvertRowtypeExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ConvertRowtypeExprOrBuilder getConvertRowtypeExprOrBuilder();
+
+  /**
+   * <code>.pg_query.CollateExpr collate_expr = 27 [json_name = "CollateExpr"];</code>
+   * @return Whether the collateExpr field is set.
+   */
+  boolean hasCollateExpr();
+  /**
+   * <code>.pg_query.CollateExpr collate_expr = 27 [json_name = "CollateExpr"];</code>
+   * @return The collateExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CollateExpr getCollateExpr();
+  /**
+   * <code>.pg_query.CollateExpr collate_expr = 27 [json_name = "CollateExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CollateExprOrBuilder getCollateExprOrBuilder();
+
+  /**
+   * <code>.pg_query.CaseExpr case_expr = 28 [json_name = "CaseExpr"];</code>
+   * @return Whether the caseExpr field is set.
+   */
+  boolean hasCaseExpr();
+  /**
+   * <code>.pg_query.CaseExpr case_expr = 28 [json_name = "CaseExpr"];</code>
+   * @return The caseExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CaseExpr getCaseExpr();
+  /**
+   * <code>.pg_query.CaseExpr case_expr = 28 [json_name = "CaseExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CaseExprOrBuilder getCaseExprOrBuilder();
+
+  /**
+   * <code>.pg_query.CaseWhen case_when = 29 [json_name = "CaseWhen"];</code>
+   * @return Whether the caseWhen field is set.
+   */
+  boolean hasCaseWhen();
+  /**
+   * <code>.pg_query.CaseWhen case_when = 29 [json_name = "CaseWhen"];</code>
+   * @return The caseWhen.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CaseWhen getCaseWhen();
+  /**
+   * <code>.pg_query.CaseWhen case_when = 29 [json_name = "CaseWhen"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CaseWhenOrBuilder getCaseWhenOrBuilder();
+
+  /**
+   * <code>.pg_query.CaseTestExpr case_test_expr = 30 [json_name = "CaseTestExpr"];</code>
+   * @return Whether the caseTestExpr field is set.
+   */
+  boolean hasCaseTestExpr();
+  /**
+   * <code>.pg_query.CaseTestExpr case_test_expr = 30 [json_name = "CaseTestExpr"];</code>
+   * @return The caseTestExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CaseTestExpr getCaseTestExpr();
+  /**
+   * <code>.pg_query.CaseTestExpr case_test_expr = 30 [json_name = "CaseTestExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CaseTestExprOrBuilder getCaseTestExprOrBuilder();
+
+  /**
+   * <code>.pg_query.ArrayExpr array_expr = 31 [json_name = "ArrayExpr"];</code>
+   * @return Whether the arrayExpr field is set.
+   */
+  boolean hasArrayExpr();
+  /**
+   * <code>.pg_query.ArrayExpr array_expr = 31 [json_name = "ArrayExpr"];</code>
+   * @return The arrayExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ArrayExpr getArrayExpr();
+  /**
+   * <code>.pg_query.ArrayExpr array_expr = 31 [json_name = "ArrayExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ArrayExprOrBuilder getArrayExprOrBuilder();
+
+  /**
+   * <code>.pg_query.RowExpr row_expr = 32 [json_name = "RowExpr"];</code>
+   * @return Whether the rowExpr field is set.
+   */
+  boolean hasRowExpr();
+  /**
+   * <code>.pg_query.RowExpr row_expr = 32 [json_name = "RowExpr"];</code>
+   * @return The rowExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RowExpr getRowExpr();
+  /**
+   * <code>.pg_query.RowExpr row_expr = 32 [json_name = "RowExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RowExprOrBuilder getRowExprOrBuilder();
+
+  /**
+   * <code>.pg_query.RowCompareExpr row_compare_expr = 33 [json_name = "RowCompareExpr"];</code>
+   * @return Whether the rowCompareExpr field is set.
+   */
+  boolean hasRowCompareExpr();
+  /**
+   * <code>.pg_query.RowCompareExpr row_compare_expr = 33 [json_name = "RowCompareExpr"];</code>
+   * @return The rowCompareExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RowCompareExpr getRowCompareExpr();
+  /**
+   * <code>.pg_query.RowCompareExpr row_compare_expr = 33 [json_name = "RowCompareExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RowCompareExprOrBuilder getRowCompareExprOrBuilder();
+
+  /**
+   * <code>.pg_query.CoalesceExpr coalesce_expr = 34 [json_name = "CoalesceExpr"];</code>
+   * @return Whether the coalesceExpr field is set.
+   */
+  boolean hasCoalesceExpr();
+  /**
+   * <code>.pg_query.CoalesceExpr coalesce_expr = 34 [json_name = "CoalesceExpr"];</code>
+   * @return The coalesceExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CoalesceExpr getCoalesceExpr();
+  /**
+   * <code>.pg_query.CoalesceExpr coalesce_expr = 34 [json_name = "CoalesceExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CoalesceExprOrBuilder getCoalesceExprOrBuilder();
+
+  /**
+   * <code>.pg_query.MinMaxExpr min_max_expr = 35 [json_name = "MinMaxExpr"];</code>
+   * @return Whether the minMaxExpr field is set.
+   */
+  boolean hasMinMaxExpr();
+  /**
+   * <code>.pg_query.MinMaxExpr min_max_expr = 35 [json_name = "MinMaxExpr"];</code>
+   * @return The minMaxExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.MinMaxExpr getMinMaxExpr();
+  /**
+   * <code>.pg_query.MinMaxExpr min_max_expr = 35 [json_name = "MinMaxExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.MinMaxExprOrBuilder getMinMaxExprOrBuilder();
+
+  /**
+   * <code>.pg_query.SQLValueFunction sqlvalue_function = 36 [json_name = "SQLValueFunction"];</code>
+   * @return Whether the sqlvalueFunction field is set.
+   */
+  boolean hasSqlvalueFunction();
+  /**
+   * <code>.pg_query.SQLValueFunction sqlvalue_function = 36 [json_name = "SQLValueFunction"];</code>
+   * @return The sqlvalueFunction.
+   */
+  com.premiumminds.sonar.postgres.protobuf.SQLValueFunction getSqlvalueFunction();
+  /**
+   * <code>.pg_query.SQLValueFunction sqlvalue_function = 36 [json_name = "SQLValueFunction"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.SQLValueFunctionOrBuilder getSqlvalueFunctionOrBuilder();
+
+  /**
+   * <code>.pg_query.XmlExpr xml_expr = 37 [json_name = "XmlExpr"];</code>
+   * @return Whether the xmlExpr field is set.
+   */
+  boolean hasXmlExpr();
+  /**
+   * <code>.pg_query.XmlExpr xml_expr = 37 [json_name = "XmlExpr"];</code>
+   * @return The xmlExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.XmlExpr getXmlExpr();
+  /**
+   * <code>.pg_query.XmlExpr xml_expr = 37 [json_name = "XmlExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.XmlExprOrBuilder getXmlExprOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonFormat json_format = 38 [json_name = "JsonFormat"];</code>
+   * @return Whether the jsonFormat field is set.
+   */
+  boolean hasJsonFormat();
+  /**
+   * <code>.pg_query.JsonFormat json_format = 38 [json_name = "JsonFormat"];</code>
+   * @return The jsonFormat.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonFormat getJsonFormat();
+  /**
+   * <code>.pg_query.JsonFormat json_format = 38 [json_name = "JsonFormat"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonFormatOrBuilder getJsonFormatOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonReturning json_returning = 39 [json_name = "JsonReturning"];</code>
+   * @return Whether the jsonReturning field is set.
+   */
+  boolean hasJsonReturning();
+  /**
+   * <code>.pg_query.JsonReturning json_returning = 39 [json_name = "JsonReturning"];</code>
+   * @return The jsonReturning.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonReturning getJsonReturning();
+  /**
+   * <code>.pg_query.JsonReturning json_returning = 39 [json_name = "JsonReturning"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonReturningOrBuilder getJsonReturningOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonValueExpr json_value_expr = 40 [json_name = "JsonValueExpr"];</code>
+   * @return Whether the jsonValueExpr field is set.
+   */
+  boolean hasJsonValueExpr();
+  /**
+   * <code>.pg_query.JsonValueExpr json_value_expr = 40 [json_name = "JsonValueExpr"];</code>
+   * @return The jsonValueExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonValueExpr getJsonValueExpr();
+  /**
+   * <code>.pg_query.JsonValueExpr json_value_expr = 40 [json_name = "JsonValueExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonValueExprOrBuilder getJsonValueExprOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonConstructorExpr json_constructor_expr = 41 [json_name = "JsonConstructorExpr"];</code>
+   * @return Whether the jsonConstructorExpr field is set.
+   */
+  boolean hasJsonConstructorExpr();
+  /**
+   * <code>.pg_query.JsonConstructorExpr json_constructor_expr = 41 [json_name = "JsonConstructorExpr"];</code>
+   * @return The jsonConstructorExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonConstructorExpr getJsonConstructorExpr();
+  /**
+   * <code>.pg_query.JsonConstructorExpr json_constructor_expr = 41 [json_name = "JsonConstructorExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonConstructorExprOrBuilder getJsonConstructorExprOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonIsPredicate json_is_predicate = 42 [json_name = "JsonIsPredicate"];</code>
+   * @return Whether the jsonIsPredicate field is set.
+   */
+  boolean hasJsonIsPredicate();
+  /**
+   * <code>.pg_query.JsonIsPredicate json_is_predicate = 42 [json_name = "JsonIsPredicate"];</code>
+   * @return The jsonIsPredicate.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonIsPredicate getJsonIsPredicate();
+  /**
+   * <code>.pg_query.JsonIsPredicate json_is_predicate = 42 [json_name = "JsonIsPredicate"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonIsPredicateOrBuilder getJsonIsPredicateOrBuilder();
+
+  /**
+   * <code>.pg_query.NullTest null_test = 43 [json_name = "NullTest"];</code>
+   * @return Whether the nullTest field is set.
+   */
+  boolean hasNullTest();
+  /**
+   * <code>.pg_query.NullTest null_test = 43 [json_name = "NullTest"];</code>
+   * @return The nullTest.
+   */
+  com.premiumminds.sonar.postgres.protobuf.NullTest getNullTest();
+  /**
+   * <code>.pg_query.NullTest null_test = 43 [json_name = "NullTest"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NullTestOrBuilder getNullTestOrBuilder();
+
+  /**
+   * <code>.pg_query.BooleanTest boolean_test = 44 [json_name = "BooleanTest"];</code>
+   * @return Whether the booleanTest field is set.
+   */
+  boolean hasBooleanTest();
+  /**
+   * <code>.pg_query.BooleanTest boolean_test = 44 [json_name = "BooleanTest"];</code>
+   * @return The booleanTest.
+   */
+  com.premiumminds.sonar.postgres.protobuf.BooleanTest getBooleanTest();
+  /**
+   * <code>.pg_query.BooleanTest boolean_test = 44 [json_name = "BooleanTest"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.BooleanTestOrBuilder getBooleanTestOrBuilder();
+
+  /**
+   * <code>.pg_query.CoerceToDomain coerce_to_domain = 45 [json_name = "CoerceToDomain"];</code>
+   * @return Whether the coerceToDomain field is set.
+   */
+  boolean hasCoerceToDomain();
+  /**
+   * <code>.pg_query.CoerceToDomain coerce_to_domain = 45 [json_name = "CoerceToDomain"];</code>
+   * @return The coerceToDomain.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CoerceToDomain getCoerceToDomain();
+  /**
+   * <code>.pg_query.CoerceToDomain coerce_to_domain = 45 [json_name = "CoerceToDomain"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CoerceToDomainOrBuilder getCoerceToDomainOrBuilder();
+
+  /**
+   * <code>.pg_query.CoerceToDomainValue coerce_to_domain_value = 46 [json_name = "CoerceToDomainValue"];</code>
+   * @return Whether the coerceToDomainValue field is set.
+   */
+  boolean hasCoerceToDomainValue();
+  /**
+   * <code>.pg_query.CoerceToDomainValue coerce_to_domain_value = 46 [json_name = "CoerceToDomainValue"];</code>
+   * @return The coerceToDomainValue.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CoerceToDomainValue getCoerceToDomainValue();
+  /**
+   * <code>.pg_query.CoerceToDomainValue coerce_to_domain_value = 46 [json_name = "CoerceToDomainValue"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CoerceToDomainValueOrBuilder getCoerceToDomainValueOrBuilder();
+
+  /**
+   * <code>.pg_query.SetToDefault set_to_default = 47 [json_name = "SetToDefault"];</code>
+   * @return Whether the setToDefault field is set.
+   */
+  boolean hasSetToDefault();
+  /**
+   * <code>.pg_query.SetToDefault set_to_default = 47 [json_name = "SetToDefault"];</code>
+   * @return The setToDefault.
+   */
+  com.premiumminds.sonar.postgres.protobuf.SetToDefault getSetToDefault();
+  /**
+   * <code>.pg_query.SetToDefault set_to_default = 47 [json_name = "SetToDefault"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.SetToDefaultOrBuilder getSetToDefaultOrBuilder();
+
+  /**
+   * <code>.pg_query.CurrentOfExpr current_of_expr = 48 [json_name = "CurrentOfExpr"];</code>
+   * @return Whether the currentOfExpr field is set.
+   */
+  boolean hasCurrentOfExpr();
+  /**
+   * <code>.pg_query.CurrentOfExpr current_of_expr = 48 [json_name = "CurrentOfExpr"];</code>
+   * @return The currentOfExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CurrentOfExpr getCurrentOfExpr();
+  /**
+   * <code>.pg_query.CurrentOfExpr current_of_expr = 48 [json_name = "CurrentOfExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CurrentOfExprOrBuilder getCurrentOfExprOrBuilder();
+
+  /**
+   * <code>.pg_query.NextValueExpr next_value_expr = 49 [json_name = "NextValueExpr"];</code>
+   * @return Whether the nextValueExpr field is set.
+   */
+  boolean hasNextValueExpr();
+  /**
+   * <code>.pg_query.NextValueExpr next_value_expr = 49 [json_name = "NextValueExpr"];</code>
+   * @return The nextValueExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.NextValueExpr getNextValueExpr();
+  /**
+   * <code>.pg_query.NextValueExpr next_value_expr = 49 [json_name = "NextValueExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NextValueExprOrBuilder getNextValueExprOrBuilder();
+
+  /**
+   * <code>.pg_query.InferenceElem inference_elem = 50 [json_name = "InferenceElem"];</code>
+   * @return Whether the inferenceElem field is set.
+   */
+  boolean hasInferenceElem();
+  /**
+   * <code>.pg_query.InferenceElem inference_elem = 50 [json_name = "InferenceElem"];</code>
+   * @return The inferenceElem.
+   */
+  com.premiumminds.sonar.postgres.protobuf.InferenceElem getInferenceElem();
+  /**
+   * <code>.pg_query.InferenceElem inference_elem = 50 [json_name = "InferenceElem"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.InferenceElemOrBuilder getInferenceElemOrBuilder();
+
+  /**
+   * <code>.pg_query.TargetEntry target_entry = 51 [json_name = "TargetEntry"];</code>
+   * @return Whether the targetEntry field is set.
+   */
+  boolean hasTargetEntry();
+  /**
+   * <code>.pg_query.TargetEntry target_entry = 51 [json_name = "TargetEntry"];</code>
+   * @return The targetEntry.
+   */
+  com.premiumminds.sonar.postgres.protobuf.TargetEntry getTargetEntry();
+  /**
+   * <code>.pg_query.TargetEntry target_entry = 51 [json_name = "TargetEntry"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.TargetEntryOrBuilder getTargetEntryOrBuilder();
+
+  /**
+   * <code>.pg_query.RangeTblRef range_tbl_ref = 52 [json_name = "RangeTblRef"];</code>
+   * @return Whether the rangeTblRef field is set.
+   */
+  boolean hasRangeTblRef();
+  /**
+   * <code>.pg_query.RangeTblRef range_tbl_ref = 52 [json_name = "RangeTblRef"];</code>
+   * @return The rangeTblRef.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeTblRef getRangeTblRef();
+  /**
+   * <code>.pg_query.RangeTblRef range_tbl_ref = 52 [json_name = "RangeTblRef"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeTblRefOrBuilder getRangeTblRefOrBuilder();
+
+  /**
+   * <code>.pg_query.JoinExpr join_expr = 53 [json_name = "JoinExpr"];</code>
+   * @return Whether the joinExpr field is set.
+   */
+  boolean hasJoinExpr();
+  /**
+   * <code>.pg_query.JoinExpr join_expr = 53 [json_name = "JoinExpr"];</code>
+   * @return The joinExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JoinExpr getJoinExpr();
+  /**
+   * <code>.pg_query.JoinExpr join_expr = 53 [json_name = "JoinExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JoinExprOrBuilder getJoinExprOrBuilder();
+
+  /**
+   * <code>.pg_query.FromExpr from_expr = 54 [json_name = "FromExpr"];</code>
+   * @return Whether the fromExpr field is set.
+   */
+  boolean hasFromExpr();
+  /**
+   * <code>.pg_query.FromExpr from_expr = 54 [json_name = "FromExpr"];</code>
+   * @return The fromExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.FromExpr getFromExpr();
+  /**
+   * <code>.pg_query.FromExpr from_expr = 54 [json_name = "FromExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.FromExprOrBuilder getFromExprOrBuilder();
+
+  /**
+   * <code>.pg_query.OnConflictExpr on_conflict_expr = 55 [json_name = "OnConflictExpr"];</code>
+   * @return Whether the onConflictExpr field is set.
+   */
+  boolean hasOnConflictExpr();
+  /**
+   * <code>.pg_query.OnConflictExpr on_conflict_expr = 55 [json_name = "OnConflictExpr"];</code>
+   * @return The onConflictExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.OnConflictExpr getOnConflictExpr();
+  /**
+   * <code>.pg_query.OnConflictExpr on_conflict_expr = 55 [json_name = "OnConflictExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.OnConflictExprOrBuilder getOnConflictExprOrBuilder();
+
+  /**
+   * <code>.pg_query.Query query = 56 [json_name = "Query"];</code>
    * @return Whether the query field is set.
    */
   boolean hasQuery();
   /**
-   * <code>.pg_query.Query query = 53 [json_name = "Query"];</code>
+   * <code>.pg_query.Query query = 56 [json_name = "Query"];</code>
    * @return The query.
    */
   com.premiumminds.sonar.postgres.protobuf.Query getQuery();
   /**
-   * <code>.pg_query.Query query = 53 [json_name = "Query"];</code>
+   * <code>.pg_query.Query query = 56 [json_name = "Query"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.QueryOrBuilder getQueryOrBuilder();
 
   /**
-   * <code>.pg_query.InsertStmt insert_stmt = 54 [json_name = "InsertStmt"];</code>
-   * @return Whether the insertStmt field is set.
-   */
-  boolean hasInsertStmt();
-  /**
-   * <code>.pg_query.InsertStmt insert_stmt = 54 [json_name = "InsertStmt"];</code>
-   * @return The insertStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.InsertStmt getInsertStmt();
-  /**
-   * <code>.pg_query.InsertStmt insert_stmt = 54 [json_name = "InsertStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.InsertStmtOrBuilder getInsertStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DeleteStmt delete_stmt = 55 [json_name = "DeleteStmt"];</code>
-   * @return Whether the deleteStmt field is set.
-   */
-  boolean hasDeleteStmt();
-  /**
-   * <code>.pg_query.DeleteStmt delete_stmt = 55 [json_name = "DeleteStmt"];</code>
-   * @return The deleteStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DeleteStmt getDeleteStmt();
-  /**
-   * <code>.pg_query.DeleteStmt delete_stmt = 55 [json_name = "DeleteStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DeleteStmtOrBuilder getDeleteStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.UpdateStmt update_stmt = 56 [json_name = "UpdateStmt"];</code>
-   * @return Whether the updateStmt field is set.
-   */
-  boolean hasUpdateStmt();
-  /**
-   * <code>.pg_query.UpdateStmt update_stmt = 56 [json_name = "UpdateStmt"];</code>
-   * @return The updateStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.UpdateStmt getUpdateStmt();
-  /**
-   * <code>.pg_query.UpdateStmt update_stmt = 56 [json_name = "UpdateStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.UpdateStmtOrBuilder getUpdateStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.MergeStmt merge_stmt = 57 [json_name = "MergeStmt"];</code>
-   * @return Whether the mergeStmt field is set.
-   */
-  boolean hasMergeStmt();
-  /**
-   * <code>.pg_query.MergeStmt merge_stmt = 57 [json_name = "MergeStmt"];</code>
-   * @return The mergeStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.MergeStmt getMergeStmt();
-  /**
-   * <code>.pg_query.MergeStmt merge_stmt = 57 [json_name = "MergeStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.MergeStmtOrBuilder getMergeStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.SelectStmt select_stmt = 58 [json_name = "SelectStmt"];</code>
-   * @return Whether the selectStmt field is set.
-   */
-  boolean hasSelectStmt();
-  /**
-   * <code>.pg_query.SelectStmt select_stmt = 58 [json_name = "SelectStmt"];</code>
-   * @return The selectStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.SelectStmt getSelectStmt();
-  /**
-   * <code>.pg_query.SelectStmt select_stmt = 58 [json_name = "SelectStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.SelectStmtOrBuilder getSelectStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ReturnStmt return_stmt = 59 [json_name = "ReturnStmt"];</code>
-   * @return Whether the returnStmt field is set.
-   */
-  boolean hasReturnStmt();
-  /**
-   * <code>.pg_query.ReturnStmt return_stmt = 59 [json_name = "ReturnStmt"];</code>
-   * @return The returnStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ReturnStmt getReturnStmt();
-  /**
-   * <code>.pg_query.ReturnStmt return_stmt = 59 [json_name = "ReturnStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ReturnStmtOrBuilder getReturnStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.PLAssignStmt plassign_stmt = 60 [json_name = "PLAssignStmt"];</code>
-   * @return Whether the plassignStmt field is set.
-   */
-  boolean hasPlassignStmt();
-  /**
-   * <code>.pg_query.PLAssignStmt plassign_stmt = 60 [json_name = "PLAssignStmt"];</code>
-   * @return The plassignStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.PLAssignStmt getPlassignStmt();
-  /**
-   * <code>.pg_query.PLAssignStmt plassign_stmt = 60 [json_name = "PLAssignStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.PLAssignStmtOrBuilder getPlassignStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterTableStmt alter_table_stmt = 61 [json_name = "AlterTableStmt"];</code>
-   * @return Whether the alterTableStmt field is set.
-   */
-  boolean hasAlterTableStmt();
-  /**
-   * <code>.pg_query.AlterTableStmt alter_table_stmt = 61 [json_name = "AlterTableStmt"];</code>
-   * @return The alterTableStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTableStmt getAlterTableStmt();
-  /**
-   * <code>.pg_query.AlterTableStmt alter_table_stmt = 61 [json_name = "AlterTableStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTableStmtOrBuilder getAlterTableStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterTableCmd alter_table_cmd = 62 [json_name = "AlterTableCmd"];</code>
-   * @return Whether the alterTableCmd field is set.
-   */
-  boolean hasAlterTableCmd();
-  /**
-   * <code>.pg_query.AlterTableCmd alter_table_cmd = 62 [json_name = "AlterTableCmd"];</code>
-   * @return The alterTableCmd.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTableCmd getAlterTableCmd();
-  /**
-   * <code>.pg_query.AlterTableCmd alter_table_cmd = 62 [json_name = "AlterTableCmd"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTableCmdOrBuilder getAlterTableCmdOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterDomainStmt alter_domain_stmt = 63 [json_name = "AlterDomainStmt"];</code>
-   * @return Whether the alterDomainStmt field is set.
-   */
-  boolean hasAlterDomainStmt();
-  /**
-   * <code>.pg_query.AlterDomainStmt alter_domain_stmt = 63 [json_name = "AlterDomainStmt"];</code>
-   * @return The alterDomainStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterDomainStmt getAlterDomainStmt();
-  /**
-   * <code>.pg_query.AlterDomainStmt alter_domain_stmt = 63 [json_name = "AlterDomainStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterDomainStmtOrBuilder getAlterDomainStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.SetOperationStmt set_operation_stmt = 64 [json_name = "SetOperationStmt"];</code>
-   * @return Whether the setOperationStmt field is set.
-   */
-  boolean hasSetOperationStmt();
-  /**
-   * <code>.pg_query.SetOperationStmt set_operation_stmt = 64 [json_name = "SetOperationStmt"];</code>
-   * @return The setOperationStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.SetOperationStmt getSetOperationStmt();
-  /**
-   * <code>.pg_query.SetOperationStmt set_operation_stmt = 64 [json_name = "SetOperationStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.SetOperationStmtOrBuilder getSetOperationStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.GrantStmt grant_stmt = 65 [json_name = "GrantStmt"];</code>
-   * @return Whether the grantStmt field is set.
-   */
-  boolean hasGrantStmt();
-  /**
-   * <code>.pg_query.GrantStmt grant_stmt = 65 [json_name = "GrantStmt"];</code>
-   * @return The grantStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.GrantStmt getGrantStmt();
-  /**
-   * <code>.pg_query.GrantStmt grant_stmt = 65 [json_name = "GrantStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.GrantStmtOrBuilder getGrantStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.GrantRoleStmt grant_role_stmt = 66 [json_name = "GrantRoleStmt"];</code>
-   * @return Whether the grantRoleStmt field is set.
-   */
-  boolean hasGrantRoleStmt();
-  /**
-   * <code>.pg_query.GrantRoleStmt grant_role_stmt = 66 [json_name = "GrantRoleStmt"];</code>
-   * @return The grantRoleStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.GrantRoleStmt getGrantRoleStmt();
-  /**
-   * <code>.pg_query.GrantRoleStmt grant_role_stmt = 66 [json_name = "GrantRoleStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.GrantRoleStmtOrBuilder getGrantRoleStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterDefaultPrivilegesStmt alter_default_privileges_stmt = 67 [json_name = "AlterDefaultPrivilegesStmt"];</code>
-   * @return Whether the alterDefaultPrivilegesStmt field is set.
-   */
-  boolean hasAlterDefaultPrivilegesStmt();
-  /**
-   * <code>.pg_query.AlterDefaultPrivilegesStmt alter_default_privileges_stmt = 67 [json_name = "AlterDefaultPrivilegesStmt"];</code>
-   * @return The alterDefaultPrivilegesStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterDefaultPrivilegesStmt getAlterDefaultPrivilegesStmt();
-  /**
-   * <code>.pg_query.AlterDefaultPrivilegesStmt alter_default_privileges_stmt = 67 [json_name = "AlterDefaultPrivilegesStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterDefaultPrivilegesStmtOrBuilder getAlterDefaultPrivilegesStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ClosePortalStmt close_portal_stmt = 68 [json_name = "ClosePortalStmt"];</code>
-   * @return Whether the closePortalStmt field is set.
-   */
-  boolean hasClosePortalStmt();
-  /**
-   * <code>.pg_query.ClosePortalStmt close_portal_stmt = 68 [json_name = "ClosePortalStmt"];</code>
-   * @return The closePortalStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ClosePortalStmt getClosePortalStmt();
-  /**
-   * <code>.pg_query.ClosePortalStmt close_portal_stmt = 68 [json_name = "ClosePortalStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ClosePortalStmtOrBuilder getClosePortalStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ClusterStmt cluster_stmt = 69 [json_name = "ClusterStmt"];</code>
-   * @return Whether the clusterStmt field is set.
-   */
-  boolean hasClusterStmt();
-  /**
-   * <code>.pg_query.ClusterStmt cluster_stmt = 69 [json_name = "ClusterStmt"];</code>
-   * @return The clusterStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ClusterStmt getClusterStmt();
-  /**
-   * <code>.pg_query.ClusterStmt cluster_stmt = 69 [json_name = "ClusterStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ClusterStmtOrBuilder getClusterStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CopyStmt copy_stmt = 70 [json_name = "CopyStmt"];</code>
-   * @return Whether the copyStmt field is set.
-   */
-  boolean hasCopyStmt();
-  /**
-   * <code>.pg_query.CopyStmt copy_stmt = 70 [json_name = "CopyStmt"];</code>
-   * @return The copyStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CopyStmt getCopyStmt();
-  /**
-   * <code>.pg_query.CopyStmt copy_stmt = 70 [json_name = "CopyStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CopyStmtOrBuilder getCopyStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateStmt create_stmt = 71 [json_name = "CreateStmt"];</code>
-   * @return Whether the createStmt field is set.
-   */
-  boolean hasCreateStmt();
-  /**
-   * <code>.pg_query.CreateStmt create_stmt = 71 [json_name = "CreateStmt"];</code>
-   * @return The createStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateStmt getCreateStmt();
-  /**
-   * <code>.pg_query.CreateStmt create_stmt = 71 [json_name = "CreateStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateStmtOrBuilder getCreateStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DefineStmt define_stmt = 72 [json_name = "DefineStmt"];</code>
-   * @return Whether the defineStmt field is set.
-   */
-  boolean hasDefineStmt();
-  /**
-   * <code>.pg_query.DefineStmt define_stmt = 72 [json_name = "DefineStmt"];</code>
-   * @return The defineStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DefineStmt getDefineStmt();
-  /**
-   * <code>.pg_query.DefineStmt define_stmt = 72 [json_name = "DefineStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DefineStmtOrBuilder getDefineStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DropStmt drop_stmt = 73 [json_name = "DropStmt"];</code>
-   * @return Whether the dropStmt field is set.
-   */
-  boolean hasDropStmt();
-  /**
-   * <code>.pg_query.DropStmt drop_stmt = 73 [json_name = "DropStmt"];</code>
-   * @return The dropStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropStmt getDropStmt();
-  /**
-   * <code>.pg_query.DropStmt drop_stmt = 73 [json_name = "DropStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropStmtOrBuilder getDropStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.TruncateStmt truncate_stmt = 74 [json_name = "TruncateStmt"];</code>
-   * @return Whether the truncateStmt field is set.
-   */
-  boolean hasTruncateStmt();
-  /**
-   * <code>.pg_query.TruncateStmt truncate_stmt = 74 [json_name = "TruncateStmt"];</code>
-   * @return The truncateStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.TruncateStmt getTruncateStmt();
-  /**
-   * <code>.pg_query.TruncateStmt truncate_stmt = 74 [json_name = "TruncateStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.TruncateStmtOrBuilder getTruncateStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CommentStmt comment_stmt = 75 [json_name = "CommentStmt"];</code>
-   * @return Whether the commentStmt field is set.
-   */
-  boolean hasCommentStmt();
-  /**
-   * <code>.pg_query.CommentStmt comment_stmt = 75 [json_name = "CommentStmt"];</code>
-   * @return The commentStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CommentStmt getCommentStmt();
-  /**
-   * <code>.pg_query.CommentStmt comment_stmt = 75 [json_name = "CommentStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CommentStmtOrBuilder getCommentStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.FetchStmt fetch_stmt = 76 [json_name = "FetchStmt"];</code>
-   * @return Whether the fetchStmt field is set.
-   */
-  boolean hasFetchStmt();
-  /**
-   * <code>.pg_query.FetchStmt fetch_stmt = 76 [json_name = "FetchStmt"];</code>
-   * @return The fetchStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.FetchStmt getFetchStmt();
-  /**
-   * <code>.pg_query.FetchStmt fetch_stmt = 76 [json_name = "FetchStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.FetchStmtOrBuilder getFetchStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.IndexStmt index_stmt = 77 [json_name = "IndexStmt"];</code>
-   * @return Whether the indexStmt field is set.
-   */
-  boolean hasIndexStmt();
-  /**
-   * <code>.pg_query.IndexStmt index_stmt = 77 [json_name = "IndexStmt"];</code>
-   * @return The indexStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.IndexStmt getIndexStmt();
-  /**
-   * <code>.pg_query.IndexStmt index_stmt = 77 [json_name = "IndexStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.IndexStmtOrBuilder getIndexStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateFunctionStmt create_function_stmt = 78 [json_name = "CreateFunctionStmt"];</code>
-   * @return Whether the createFunctionStmt field is set.
-   */
-  boolean hasCreateFunctionStmt();
-  /**
-   * <code>.pg_query.CreateFunctionStmt create_function_stmt = 78 [json_name = "CreateFunctionStmt"];</code>
-   * @return The createFunctionStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateFunctionStmt getCreateFunctionStmt();
-  /**
-   * <code>.pg_query.CreateFunctionStmt create_function_stmt = 78 [json_name = "CreateFunctionStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateFunctionStmtOrBuilder getCreateFunctionStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterFunctionStmt alter_function_stmt = 79 [json_name = "AlterFunctionStmt"];</code>
-   * @return Whether the alterFunctionStmt field is set.
-   */
-  boolean hasAlterFunctionStmt();
-  /**
-   * <code>.pg_query.AlterFunctionStmt alter_function_stmt = 79 [json_name = "AlterFunctionStmt"];</code>
-   * @return The alterFunctionStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmt getAlterFunctionStmt();
-  /**
-   * <code>.pg_query.AlterFunctionStmt alter_function_stmt = 79 [json_name = "AlterFunctionStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmtOrBuilder getAlterFunctionStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DoStmt do_stmt = 80 [json_name = "DoStmt"];</code>
-   * @return Whether the doStmt field is set.
-   */
-  boolean hasDoStmt();
-  /**
-   * <code>.pg_query.DoStmt do_stmt = 80 [json_name = "DoStmt"];</code>
-   * @return The doStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DoStmt getDoStmt();
-  /**
-   * <code>.pg_query.DoStmt do_stmt = 80 [json_name = "DoStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DoStmtOrBuilder getDoStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.RenameStmt rename_stmt = 81 [json_name = "RenameStmt"];</code>
-   * @return Whether the renameStmt field is set.
-   */
-  boolean hasRenameStmt();
-  /**
-   * <code>.pg_query.RenameStmt rename_stmt = 81 [json_name = "RenameStmt"];</code>
-   * @return The renameStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RenameStmt getRenameStmt();
-  /**
-   * <code>.pg_query.RenameStmt rename_stmt = 81 [json_name = "RenameStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RenameStmtOrBuilder getRenameStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.RuleStmt rule_stmt = 82 [json_name = "RuleStmt"];</code>
-   * @return Whether the ruleStmt field is set.
-   */
-  boolean hasRuleStmt();
-  /**
-   * <code>.pg_query.RuleStmt rule_stmt = 82 [json_name = "RuleStmt"];</code>
-   * @return The ruleStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RuleStmt getRuleStmt();
-  /**
-   * <code>.pg_query.RuleStmt rule_stmt = 82 [json_name = "RuleStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RuleStmtOrBuilder getRuleStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.NotifyStmt notify_stmt = 83 [json_name = "NotifyStmt"];</code>
-   * @return Whether the notifyStmt field is set.
-   */
-  boolean hasNotifyStmt();
-  /**
-   * <code>.pg_query.NotifyStmt notify_stmt = 83 [json_name = "NotifyStmt"];</code>
-   * @return The notifyStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.NotifyStmt getNotifyStmt();
-  /**
-   * <code>.pg_query.NotifyStmt notify_stmt = 83 [json_name = "NotifyStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.NotifyStmtOrBuilder getNotifyStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ListenStmt listen_stmt = 84 [json_name = "ListenStmt"];</code>
-   * @return Whether the listenStmt field is set.
-   */
-  boolean hasListenStmt();
-  /**
-   * <code>.pg_query.ListenStmt listen_stmt = 84 [json_name = "ListenStmt"];</code>
-   * @return The listenStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ListenStmt getListenStmt();
-  /**
-   * <code>.pg_query.ListenStmt listen_stmt = 84 [json_name = "ListenStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ListenStmtOrBuilder getListenStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.UnlistenStmt unlisten_stmt = 85 [json_name = "UnlistenStmt"];</code>
-   * @return Whether the unlistenStmt field is set.
-   */
-  boolean hasUnlistenStmt();
-  /**
-   * <code>.pg_query.UnlistenStmt unlisten_stmt = 85 [json_name = "UnlistenStmt"];</code>
-   * @return The unlistenStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.UnlistenStmt getUnlistenStmt();
-  /**
-   * <code>.pg_query.UnlistenStmt unlisten_stmt = 85 [json_name = "UnlistenStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.UnlistenStmtOrBuilder getUnlistenStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.TransactionStmt transaction_stmt = 86 [json_name = "TransactionStmt"];</code>
-   * @return Whether the transactionStmt field is set.
-   */
-  boolean hasTransactionStmt();
-  /**
-   * <code>.pg_query.TransactionStmt transaction_stmt = 86 [json_name = "TransactionStmt"];</code>
-   * @return The transactionStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.TransactionStmt getTransactionStmt();
-  /**
-   * <code>.pg_query.TransactionStmt transaction_stmt = 86 [json_name = "TransactionStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.TransactionStmtOrBuilder getTransactionStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ViewStmt view_stmt = 87 [json_name = "ViewStmt"];</code>
-   * @return Whether the viewStmt field is set.
-   */
-  boolean hasViewStmt();
-  /**
-   * <code>.pg_query.ViewStmt view_stmt = 87 [json_name = "ViewStmt"];</code>
-   * @return The viewStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ViewStmt getViewStmt();
-  /**
-   * <code>.pg_query.ViewStmt view_stmt = 87 [json_name = "ViewStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ViewStmtOrBuilder getViewStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.LoadStmt load_stmt = 88 [json_name = "LoadStmt"];</code>
-   * @return Whether the loadStmt field is set.
-   */
-  boolean hasLoadStmt();
-  /**
-   * <code>.pg_query.LoadStmt load_stmt = 88 [json_name = "LoadStmt"];</code>
-   * @return The loadStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.LoadStmt getLoadStmt();
-  /**
-   * <code>.pg_query.LoadStmt load_stmt = 88 [json_name = "LoadStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.LoadStmtOrBuilder getLoadStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateDomainStmt create_domain_stmt = 89 [json_name = "CreateDomainStmt"];</code>
-   * @return Whether the createDomainStmt field is set.
-   */
-  boolean hasCreateDomainStmt();
-  /**
-   * <code>.pg_query.CreateDomainStmt create_domain_stmt = 89 [json_name = "CreateDomainStmt"];</code>
-   * @return The createDomainStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateDomainStmt getCreateDomainStmt();
-  /**
-   * <code>.pg_query.CreateDomainStmt create_domain_stmt = 89 [json_name = "CreateDomainStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateDomainStmtOrBuilder getCreateDomainStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreatedbStmt createdb_stmt = 90 [json_name = "CreatedbStmt"];</code>
-   * @return Whether the createdbStmt field is set.
-   */
-  boolean hasCreatedbStmt();
-  /**
-   * <code>.pg_query.CreatedbStmt createdb_stmt = 90 [json_name = "CreatedbStmt"];</code>
-   * @return The createdbStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreatedbStmt getCreatedbStmt();
-  /**
-   * <code>.pg_query.CreatedbStmt createdb_stmt = 90 [json_name = "CreatedbStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreatedbStmtOrBuilder getCreatedbStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DropdbStmt dropdb_stmt = 91 [json_name = "DropdbStmt"];</code>
-   * @return Whether the dropdbStmt field is set.
-   */
-  boolean hasDropdbStmt();
-  /**
-   * <code>.pg_query.DropdbStmt dropdb_stmt = 91 [json_name = "DropdbStmt"];</code>
-   * @return The dropdbStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropdbStmt getDropdbStmt();
-  /**
-   * <code>.pg_query.DropdbStmt dropdb_stmt = 91 [json_name = "DropdbStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropdbStmtOrBuilder getDropdbStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.VacuumStmt vacuum_stmt = 92 [json_name = "VacuumStmt"];</code>
-   * @return Whether the vacuumStmt field is set.
-   */
-  boolean hasVacuumStmt();
-  /**
-   * <code>.pg_query.VacuumStmt vacuum_stmt = 92 [json_name = "VacuumStmt"];</code>
-   * @return The vacuumStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.VacuumStmt getVacuumStmt();
-  /**
-   * <code>.pg_query.VacuumStmt vacuum_stmt = 92 [json_name = "VacuumStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.VacuumStmtOrBuilder getVacuumStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ExplainStmt explain_stmt = 93 [json_name = "ExplainStmt"];</code>
-   * @return Whether the explainStmt field is set.
-   */
-  boolean hasExplainStmt();
-  /**
-   * <code>.pg_query.ExplainStmt explain_stmt = 93 [json_name = "ExplainStmt"];</code>
-   * @return The explainStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ExplainStmt getExplainStmt();
-  /**
-   * <code>.pg_query.ExplainStmt explain_stmt = 93 [json_name = "ExplainStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ExplainStmtOrBuilder getExplainStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateTableAsStmt create_table_as_stmt = 94 [json_name = "CreateTableAsStmt"];</code>
-   * @return Whether the createTableAsStmt field is set.
-   */
-  boolean hasCreateTableAsStmt();
-  /**
-   * <code>.pg_query.CreateTableAsStmt create_table_as_stmt = 94 [json_name = "CreateTableAsStmt"];</code>
-   * @return The createTableAsStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateTableAsStmt getCreateTableAsStmt();
-  /**
-   * <code>.pg_query.CreateTableAsStmt create_table_as_stmt = 94 [json_name = "CreateTableAsStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateTableAsStmtOrBuilder getCreateTableAsStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateSeqStmt create_seq_stmt = 95 [json_name = "CreateSeqStmt"];</code>
-   * @return Whether the createSeqStmt field is set.
-   */
-  boolean hasCreateSeqStmt();
-  /**
-   * <code>.pg_query.CreateSeqStmt create_seq_stmt = 95 [json_name = "CreateSeqStmt"];</code>
-   * @return The createSeqStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateSeqStmt getCreateSeqStmt();
-  /**
-   * <code>.pg_query.CreateSeqStmt create_seq_stmt = 95 [json_name = "CreateSeqStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateSeqStmtOrBuilder getCreateSeqStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterSeqStmt alter_seq_stmt = 96 [json_name = "AlterSeqStmt"];</code>
-   * @return Whether the alterSeqStmt field is set.
-   */
-  boolean hasAlterSeqStmt();
-  /**
-   * <code>.pg_query.AlterSeqStmt alter_seq_stmt = 96 [json_name = "AlterSeqStmt"];</code>
-   * @return The alterSeqStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterSeqStmt getAlterSeqStmt();
-  /**
-   * <code>.pg_query.AlterSeqStmt alter_seq_stmt = 96 [json_name = "AlterSeqStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterSeqStmtOrBuilder getAlterSeqStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.VariableSetStmt variable_set_stmt = 97 [json_name = "VariableSetStmt"];</code>
-   * @return Whether the variableSetStmt field is set.
-   */
-  boolean hasVariableSetStmt();
-  /**
-   * <code>.pg_query.VariableSetStmt variable_set_stmt = 97 [json_name = "VariableSetStmt"];</code>
-   * @return The variableSetStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.VariableSetStmt getVariableSetStmt();
-  /**
-   * <code>.pg_query.VariableSetStmt variable_set_stmt = 97 [json_name = "VariableSetStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.VariableSetStmtOrBuilder getVariableSetStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.VariableShowStmt variable_show_stmt = 98 [json_name = "VariableShowStmt"];</code>
-   * @return Whether the variableShowStmt field is set.
-   */
-  boolean hasVariableShowStmt();
-  /**
-   * <code>.pg_query.VariableShowStmt variable_show_stmt = 98 [json_name = "VariableShowStmt"];</code>
-   * @return The variableShowStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.VariableShowStmt getVariableShowStmt();
-  /**
-   * <code>.pg_query.VariableShowStmt variable_show_stmt = 98 [json_name = "VariableShowStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.VariableShowStmtOrBuilder getVariableShowStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DiscardStmt discard_stmt = 99 [json_name = "DiscardStmt"];</code>
-   * @return Whether the discardStmt field is set.
-   */
-  boolean hasDiscardStmt();
-  /**
-   * <code>.pg_query.DiscardStmt discard_stmt = 99 [json_name = "DiscardStmt"];</code>
-   * @return The discardStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DiscardStmt getDiscardStmt();
-  /**
-   * <code>.pg_query.DiscardStmt discard_stmt = 99 [json_name = "DiscardStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DiscardStmtOrBuilder getDiscardStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateTrigStmt create_trig_stmt = 100 [json_name = "CreateTrigStmt"];</code>
-   * @return Whether the createTrigStmt field is set.
-   */
-  boolean hasCreateTrigStmt();
-  /**
-   * <code>.pg_query.CreateTrigStmt create_trig_stmt = 100 [json_name = "CreateTrigStmt"];</code>
-   * @return The createTrigStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateTrigStmt getCreateTrigStmt();
-  /**
-   * <code>.pg_query.CreateTrigStmt create_trig_stmt = 100 [json_name = "CreateTrigStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateTrigStmtOrBuilder getCreateTrigStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreatePLangStmt create_plang_stmt = 101 [json_name = "CreatePLangStmt"];</code>
-   * @return Whether the createPlangStmt field is set.
-   */
-  boolean hasCreatePlangStmt();
-  /**
-   * <code>.pg_query.CreatePLangStmt create_plang_stmt = 101 [json_name = "CreatePLangStmt"];</code>
-   * @return The createPlangStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreatePLangStmt getCreatePlangStmt();
-  /**
-   * <code>.pg_query.CreatePLangStmt create_plang_stmt = 101 [json_name = "CreatePLangStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreatePLangStmtOrBuilder getCreatePlangStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateRoleStmt create_role_stmt = 102 [json_name = "CreateRoleStmt"];</code>
-   * @return Whether the createRoleStmt field is set.
-   */
-  boolean hasCreateRoleStmt();
-  /**
-   * <code>.pg_query.CreateRoleStmt create_role_stmt = 102 [json_name = "CreateRoleStmt"];</code>
-   * @return The createRoleStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateRoleStmt getCreateRoleStmt();
-  /**
-   * <code>.pg_query.CreateRoleStmt create_role_stmt = 102 [json_name = "CreateRoleStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateRoleStmtOrBuilder getCreateRoleStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterRoleStmt alter_role_stmt = 103 [json_name = "AlterRoleStmt"];</code>
-   * @return Whether the alterRoleStmt field is set.
-   */
-  boolean hasAlterRoleStmt();
-  /**
-   * <code>.pg_query.AlterRoleStmt alter_role_stmt = 103 [json_name = "AlterRoleStmt"];</code>
-   * @return The alterRoleStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterRoleStmt getAlterRoleStmt();
-  /**
-   * <code>.pg_query.AlterRoleStmt alter_role_stmt = 103 [json_name = "AlterRoleStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterRoleStmtOrBuilder getAlterRoleStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DropRoleStmt drop_role_stmt = 104 [json_name = "DropRoleStmt"];</code>
-   * @return Whether the dropRoleStmt field is set.
-   */
-  boolean hasDropRoleStmt();
-  /**
-   * <code>.pg_query.DropRoleStmt drop_role_stmt = 104 [json_name = "DropRoleStmt"];</code>
-   * @return The dropRoleStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropRoleStmt getDropRoleStmt();
-  /**
-   * <code>.pg_query.DropRoleStmt drop_role_stmt = 104 [json_name = "DropRoleStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropRoleStmtOrBuilder getDropRoleStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.LockStmt lock_stmt = 105 [json_name = "LockStmt"];</code>
-   * @return Whether the lockStmt field is set.
-   */
-  boolean hasLockStmt();
-  /**
-   * <code>.pg_query.LockStmt lock_stmt = 105 [json_name = "LockStmt"];</code>
-   * @return The lockStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.LockStmt getLockStmt();
-  /**
-   * <code>.pg_query.LockStmt lock_stmt = 105 [json_name = "LockStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.LockStmtOrBuilder getLockStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ConstraintsSetStmt constraints_set_stmt = 106 [json_name = "ConstraintsSetStmt"];</code>
-   * @return Whether the constraintsSetStmt field is set.
-   */
-  boolean hasConstraintsSetStmt();
-  /**
-   * <code>.pg_query.ConstraintsSetStmt constraints_set_stmt = 106 [json_name = "ConstraintsSetStmt"];</code>
-   * @return The constraintsSetStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ConstraintsSetStmt getConstraintsSetStmt();
-  /**
-   * <code>.pg_query.ConstraintsSetStmt constraints_set_stmt = 106 [json_name = "ConstraintsSetStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ConstraintsSetStmtOrBuilder getConstraintsSetStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ReindexStmt reindex_stmt = 107 [json_name = "ReindexStmt"];</code>
-   * @return Whether the reindexStmt field is set.
-   */
-  boolean hasReindexStmt();
-  /**
-   * <code>.pg_query.ReindexStmt reindex_stmt = 107 [json_name = "ReindexStmt"];</code>
-   * @return The reindexStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ReindexStmt getReindexStmt();
-  /**
-   * <code>.pg_query.ReindexStmt reindex_stmt = 107 [json_name = "ReindexStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ReindexStmtOrBuilder getReindexStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CheckPointStmt check_point_stmt = 108 [json_name = "CheckPointStmt"];</code>
-   * @return Whether the checkPointStmt field is set.
-   */
-  boolean hasCheckPointStmt();
-  /**
-   * <code>.pg_query.CheckPointStmt check_point_stmt = 108 [json_name = "CheckPointStmt"];</code>
-   * @return The checkPointStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CheckPointStmt getCheckPointStmt();
-  /**
-   * <code>.pg_query.CheckPointStmt check_point_stmt = 108 [json_name = "CheckPointStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CheckPointStmtOrBuilder getCheckPointStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateSchemaStmt create_schema_stmt = 109 [json_name = "CreateSchemaStmt"];</code>
-   * @return Whether the createSchemaStmt field is set.
-   */
-  boolean hasCreateSchemaStmt();
-  /**
-   * <code>.pg_query.CreateSchemaStmt create_schema_stmt = 109 [json_name = "CreateSchemaStmt"];</code>
-   * @return The createSchemaStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateSchemaStmt getCreateSchemaStmt();
-  /**
-   * <code>.pg_query.CreateSchemaStmt create_schema_stmt = 109 [json_name = "CreateSchemaStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateSchemaStmtOrBuilder getCreateSchemaStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterDatabaseStmt alter_database_stmt = 110 [json_name = "AlterDatabaseStmt"];</code>
-   * @return Whether the alterDatabaseStmt field is set.
-   */
-  boolean hasAlterDatabaseStmt();
-  /**
-   * <code>.pg_query.AlterDatabaseStmt alter_database_stmt = 110 [json_name = "AlterDatabaseStmt"];</code>
-   * @return The alterDatabaseStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseStmt getAlterDatabaseStmt();
-  /**
-   * <code>.pg_query.AlterDatabaseStmt alter_database_stmt = 110 [json_name = "AlterDatabaseStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseStmtOrBuilder getAlterDatabaseStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterDatabaseRefreshCollStmt alter_database_refresh_coll_stmt = 111 [json_name = "AlterDatabaseRefreshCollStmt"];</code>
-   * @return Whether the alterDatabaseRefreshCollStmt field is set.
-   */
-  boolean hasAlterDatabaseRefreshCollStmt();
-  /**
-   * <code>.pg_query.AlterDatabaseRefreshCollStmt alter_database_refresh_coll_stmt = 111 [json_name = "AlterDatabaseRefreshCollStmt"];</code>
-   * @return The alterDatabaseRefreshCollStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseRefreshCollStmt getAlterDatabaseRefreshCollStmt();
-  /**
-   * <code>.pg_query.AlterDatabaseRefreshCollStmt alter_database_refresh_coll_stmt = 111 [json_name = "AlterDatabaseRefreshCollStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseRefreshCollStmtOrBuilder getAlterDatabaseRefreshCollStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterDatabaseSetStmt alter_database_set_stmt = 112 [json_name = "AlterDatabaseSetStmt"];</code>
-   * @return Whether the alterDatabaseSetStmt field is set.
-   */
-  boolean hasAlterDatabaseSetStmt();
-  /**
-   * <code>.pg_query.AlterDatabaseSetStmt alter_database_set_stmt = 112 [json_name = "AlterDatabaseSetStmt"];</code>
-   * @return The alterDatabaseSetStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseSetStmt getAlterDatabaseSetStmt();
-  /**
-   * <code>.pg_query.AlterDatabaseSetStmt alter_database_set_stmt = 112 [json_name = "AlterDatabaseSetStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseSetStmtOrBuilder getAlterDatabaseSetStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterRoleSetStmt alter_role_set_stmt = 113 [json_name = "AlterRoleSetStmt"];</code>
-   * @return Whether the alterRoleSetStmt field is set.
-   */
-  boolean hasAlterRoleSetStmt();
-  /**
-   * <code>.pg_query.AlterRoleSetStmt alter_role_set_stmt = 113 [json_name = "AlterRoleSetStmt"];</code>
-   * @return The alterRoleSetStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterRoleSetStmt getAlterRoleSetStmt();
-  /**
-   * <code>.pg_query.AlterRoleSetStmt alter_role_set_stmt = 113 [json_name = "AlterRoleSetStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterRoleSetStmtOrBuilder getAlterRoleSetStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateConversionStmt create_conversion_stmt = 114 [json_name = "CreateConversionStmt"];</code>
-   * @return Whether the createConversionStmt field is set.
-   */
-  boolean hasCreateConversionStmt();
-  /**
-   * <code>.pg_query.CreateConversionStmt create_conversion_stmt = 114 [json_name = "CreateConversionStmt"];</code>
-   * @return The createConversionStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateConversionStmt getCreateConversionStmt();
-  /**
-   * <code>.pg_query.CreateConversionStmt create_conversion_stmt = 114 [json_name = "CreateConversionStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateConversionStmtOrBuilder getCreateConversionStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateCastStmt create_cast_stmt = 115 [json_name = "CreateCastStmt"];</code>
-   * @return Whether the createCastStmt field is set.
-   */
-  boolean hasCreateCastStmt();
-  /**
-   * <code>.pg_query.CreateCastStmt create_cast_stmt = 115 [json_name = "CreateCastStmt"];</code>
-   * @return The createCastStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateCastStmt getCreateCastStmt();
-  /**
-   * <code>.pg_query.CreateCastStmt create_cast_stmt = 115 [json_name = "CreateCastStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateCastStmtOrBuilder getCreateCastStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateOpClassStmt create_op_class_stmt = 116 [json_name = "CreateOpClassStmt"];</code>
-   * @return Whether the createOpClassStmt field is set.
-   */
-  boolean hasCreateOpClassStmt();
-  /**
-   * <code>.pg_query.CreateOpClassStmt create_op_class_stmt = 116 [json_name = "CreateOpClassStmt"];</code>
-   * @return The createOpClassStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateOpClassStmt getCreateOpClassStmt();
-  /**
-   * <code>.pg_query.CreateOpClassStmt create_op_class_stmt = 116 [json_name = "CreateOpClassStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateOpClassStmtOrBuilder getCreateOpClassStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateOpFamilyStmt create_op_family_stmt = 117 [json_name = "CreateOpFamilyStmt"];</code>
-   * @return Whether the createOpFamilyStmt field is set.
-   */
-  boolean hasCreateOpFamilyStmt();
-  /**
-   * <code>.pg_query.CreateOpFamilyStmt create_op_family_stmt = 117 [json_name = "CreateOpFamilyStmt"];</code>
-   * @return The createOpFamilyStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateOpFamilyStmt getCreateOpFamilyStmt();
-  /**
-   * <code>.pg_query.CreateOpFamilyStmt create_op_family_stmt = 117 [json_name = "CreateOpFamilyStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateOpFamilyStmtOrBuilder getCreateOpFamilyStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterOpFamilyStmt alter_op_family_stmt = 118 [json_name = "AlterOpFamilyStmt"];</code>
-   * @return Whether the alterOpFamilyStmt field is set.
-   */
-  boolean hasAlterOpFamilyStmt();
-  /**
-   * <code>.pg_query.AlterOpFamilyStmt alter_op_family_stmt = 118 [json_name = "AlterOpFamilyStmt"];</code>
-   * @return The alterOpFamilyStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterOpFamilyStmt getAlterOpFamilyStmt();
-  /**
-   * <code>.pg_query.AlterOpFamilyStmt alter_op_family_stmt = 118 [json_name = "AlterOpFamilyStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterOpFamilyStmtOrBuilder getAlterOpFamilyStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.PrepareStmt prepare_stmt = 119 [json_name = "PrepareStmt"];</code>
-   * @return Whether the prepareStmt field is set.
-   */
-  boolean hasPrepareStmt();
-  /**
-   * <code>.pg_query.PrepareStmt prepare_stmt = 119 [json_name = "PrepareStmt"];</code>
-   * @return The prepareStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.PrepareStmt getPrepareStmt();
-  /**
-   * <code>.pg_query.PrepareStmt prepare_stmt = 119 [json_name = "PrepareStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.PrepareStmtOrBuilder getPrepareStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ExecuteStmt execute_stmt = 120 [json_name = "ExecuteStmt"];</code>
-   * @return Whether the executeStmt field is set.
-   */
-  boolean hasExecuteStmt();
-  /**
-   * <code>.pg_query.ExecuteStmt execute_stmt = 120 [json_name = "ExecuteStmt"];</code>
-   * @return The executeStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ExecuteStmt getExecuteStmt();
-  /**
-   * <code>.pg_query.ExecuteStmt execute_stmt = 120 [json_name = "ExecuteStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ExecuteStmtOrBuilder getExecuteStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DeallocateStmt deallocate_stmt = 121 [json_name = "DeallocateStmt"];</code>
-   * @return Whether the deallocateStmt field is set.
-   */
-  boolean hasDeallocateStmt();
-  /**
-   * <code>.pg_query.DeallocateStmt deallocate_stmt = 121 [json_name = "DeallocateStmt"];</code>
-   * @return The deallocateStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DeallocateStmt getDeallocateStmt();
-  /**
-   * <code>.pg_query.DeallocateStmt deallocate_stmt = 121 [json_name = "DeallocateStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DeallocateStmtOrBuilder getDeallocateStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DeclareCursorStmt declare_cursor_stmt = 122 [json_name = "DeclareCursorStmt"];</code>
-   * @return Whether the declareCursorStmt field is set.
-   */
-  boolean hasDeclareCursorStmt();
-  /**
-   * <code>.pg_query.DeclareCursorStmt declare_cursor_stmt = 122 [json_name = "DeclareCursorStmt"];</code>
-   * @return The declareCursorStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DeclareCursorStmt getDeclareCursorStmt();
-  /**
-   * <code>.pg_query.DeclareCursorStmt declare_cursor_stmt = 122 [json_name = "DeclareCursorStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DeclareCursorStmtOrBuilder getDeclareCursorStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateTableSpaceStmt create_table_space_stmt = 123 [json_name = "CreateTableSpaceStmt"];</code>
-   * @return Whether the createTableSpaceStmt field is set.
-   */
-  boolean hasCreateTableSpaceStmt();
-  /**
-   * <code>.pg_query.CreateTableSpaceStmt create_table_space_stmt = 123 [json_name = "CreateTableSpaceStmt"];</code>
-   * @return The createTableSpaceStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateTableSpaceStmt getCreateTableSpaceStmt();
-  /**
-   * <code>.pg_query.CreateTableSpaceStmt create_table_space_stmt = 123 [json_name = "CreateTableSpaceStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateTableSpaceStmtOrBuilder getCreateTableSpaceStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DropTableSpaceStmt drop_table_space_stmt = 124 [json_name = "DropTableSpaceStmt"];</code>
-   * @return Whether the dropTableSpaceStmt field is set.
-   */
-  boolean hasDropTableSpaceStmt();
-  /**
-   * <code>.pg_query.DropTableSpaceStmt drop_table_space_stmt = 124 [json_name = "DropTableSpaceStmt"];</code>
-   * @return The dropTableSpaceStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropTableSpaceStmt getDropTableSpaceStmt();
-  /**
-   * <code>.pg_query.DropTableSpaceStmt drop_table_space_stmt = 124 [json_name = "DropTableSpaceStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropTableSpaceStmtOrBuilder getDropTableSpaceStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterObjectDependsStmt alter_object_depends_stmt = 125 [json_name = "AlterObjectDependsStmt"];</code>
-   * @return Whether the alterObjectDependsStmt field is set.
-   */
-  boolean hasAlterObjectDependsStmt();
-  /**
-   * <code>.pg_query.AlterObjectDependsStmt alter_object_depends_stmt = 125 [json_name = "AlterObjectDependsStmt"];</code>
-   * @return The alterObjectDependsStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterObjectDependsStmt getAlterObjectDependsStmt();
-  /**
-   * <code>.pg_query.AlterObjectDependsStmt alter_object_depends_stmt = 125 [json_name = "AlterObjectDependsStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterObjectDependsStmtOrBuilder getAlterObjectDependsStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterObjectSchemaStmt alter_object_schema_stmt = 126 [json_name = "AlterObjectSchemaStmt"];</code>
-   * @return Whether the alterObjectSchemaStmt field is set.
-   */
-  boolean hasAlterObjectSchemaStmt();
-  /**
-   * <code>.pg_query.AlterObjectSchemaStmt alter_object_schema_stmt = 126 [json_name = "AlterObjectSchemaStmt"];</code>
-   * @return The alterObjectSchemaStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterObjectSchemaStmt getAlterObjectSchemaStmt();
-  /**
-   * <code>.pg_query.AlterObjectSchemaStmt alter_object_schema_stmt = 126 [json_name = "AlterObjectSchemaStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterObjectSchemaStmtOrBuilder getAlterObjectSchemaStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterOwnerStmt alter_owner_stmt = 127 [json_name = "AlterOwnerStmt"];</code>
-   * @return Whether the alterOwnerStmt field is set.
-   */
-  boolean hasAlterOwnerStmt();
-  /**
-   * <code>.pg_query.AlterOwnerStmt alter_owner_stmt = 127 [json_name = "AlterOwnerStmt"];</code>
-   * @return The alterOwnerStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterOwnerStmt getAlterOwnerStmt();
-  /**
-   * <code>.pg_query.AlterOwnerStmt alter_owner_stmt = 127 [json_name = "AlterOwnerStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterOwnerStmtOrBuilder getAlterOwnerStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterOperatorStmt alter_operator_stmt = 128 [json_name = "AlterOperatorStmt"];</code>
-   * @return Whether the alterOperatorStmt field is set.
-   */
-  boolean hasAlterOperatorStmt();
-  /**
-   * <code>.pg_query.AlterOperatorStmt alter_operator_stmt = 128 [json_name = "AlterOperatorStmt"];</code>
-   * @return The alterOperatorStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterOperatorStmt getAlterOperatorStmt();
-  /**
-   * <code>.pg_query.AlterOperatorStmt alter_operator_stmt = 128 [json_name = "AlterOperatorStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterOperatorStmtOrBuilder getAlterOperatorStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterTypeStmt alter_type_stmt = 129 [json_name = "AlterTypeStmt"];</code>
-   * @return Whether the alterTypeStmt field is set.
-   */
-  boolean hasAlterTypeStmt();
-  /**
-   * <code>.pg_query.AlterTypeStmt alter_type_stmt = 129 [json_name = "AlterTypeStmt"];</code>
-   * @return The alterTypeStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTypeStmt getAlterTypeStmt();
-  /**
-   * <code>.pg_query.AlterTypeStmt alter_type_stmt = 129 [json_name = "AlterTypeStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTypeStmtOrBuilder getAlterTypeStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DropOwnedStmt drop_owned_stmt = 130 [json_name = "DropOwnedStmt"];</code>
-   * @return Whether the dropOwnedStmt field is set.
-   */
-  boolean hasDropOwnedStmt();
-  /**
-   * <code>.pg_query.DropOwnedStmt drop_owned_stmt = 130 [json_name = "DropOwnedStmt"];</code>
-   * @return The dropOwnedStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropOwnedStmt getDropOwnedStmt();
-  /**
-   * <code>.pg_query.DropOwnedStmt drop_owned_stmt = 130 [json_name = "DropOwnedStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropOwnedStmtOrBuilder getDropOwnedStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ReassignOwnedStmt reassign_owned_stmt = 131 [json_name = "ReassignOwnedStmt"];</code>
-   * @return Whether the reassignOwnedStmt field is set.
-   */
-  boolean hasReassignOwnedStmt();
-  /**
-   * <code>.pg_query.ReassignOwnedStmt reassign_owned_stmt = 131 [json_name = "ReassignOwnedStmt"];</code>
-   * @return The reassignOwnedStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ReassignOwnedStmt getReassignOwnedStmt();
-  /**
-   * <code>.pg_query.ReassignOwnedStmt reassign_owned_stmt = 131 [json_name = "ReassignOwnedStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ReassignOwnedStmtOrBuilder getReassignOwnedStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CompositeTypeStmt composite_type_stmt = 132 [json_name = "CompositeTypeStmt"];</code>
-   * @return Whether the compositeTypeStmt field is set.
-   */
-  boolean hasCompositeTypeStmt();
-  /**
-   * <code>.pg_query.CompositeTypeStmt composite_type_stmt = 132 [json_name = "CompositeTypeStmt"];</code>
-   * @return The compositeTypeStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CompositeTypeStmt getCompositeTypeStmt();
-  /**
-   * <code>.pg_query.CompositeTypeStmt composite_type_stmt = 132 [json_name = "CompositeTypeStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CompositeTypeStmtOrBuilder getCompositeTypeStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateEnumStmt create_enum_stmt = 133 [json_name = "CreateEnumStmt"];</code>
-   * @return Whether the createEnumStmt field is set.
-   */
-  boolean hasCreateEnumStmt();
-  /**
-   * <code>.pg_query.CreateEnumStmt create_enum_stmt = 133 [json_name = "CreateEnumStmt"];</code>
-   * @return The createEnumStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateEnumStmt getCreateEnumStmt();
-  /**
-   * <code>.pg_query.CreateEnumStmt create_enum_stmt = 133 [json_name = "CreateEnumStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateEnumStmtOrBuilder getCreateEnumStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateRangeStmt create_range_stmt = 134 [json_name = "CreateRangeStmt"];</code>
-   * @return Whether the createRangeStmt field is set.
-   */
-  boolean hasCreateRangeStmt();
-  /**
-   * <code>.pg_query.CreateRangeStmt create_range_stmt = 134 [json_name = "CreateRangeStmt"];</code>
-   * @return The createRangeStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateRangeStmt getCreateRangeStmt();
-  /**
-   * <code>.pg_query.CreateRangeStmt create_range_stmt = 134 [json_name = "CreateRangeStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateRangeStmtOrBuilder getCreateRangeStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterEnumStmt alter_enum_stmt = 135 [json_name = "AlterEnumStmt"];</code>
-   * @return Whether the alterEnumStmt field is set.
-   */
-  boolean hasAlterEnumStmt();
-  /**
-   * <code>.pg_query.AlterEnumStmt alter_enum_stmt = 135 [json_name = "AlterEnumStmt"];</code>
-   * @return The alterEnumStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterEnumStmt getAlterEnumStmt();
-  /**
-   * <code>.pg_query.AlterEnumStmt alter_enum_stmt = 135 [json_name = "AlterEnumStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterEnumStmtOrBuilder getAlterEnumStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterTSDictionaryStmt alter_tsdictionary_stmt = 136 [json_name = "AlterTSDictionaryStmt"];</code>
-   * @return Whether the alterTsdictionaryStmt field is set.
-   */
-  boolean hasAlterTsdictionaryStmt();
-  /**
-   * <code>.pg_query.AlterTSDictionaryStmt alter_tsdictionary_stmt = 136 [json_name = "AlterTSDictionaryStmt"];</code>
-   * @return The alterTsdictionaryStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTSDictionaryStmt getAlterTsdictionaryStmt();
-  /**
-   * <code>.pg_query.AlterTSDictionaryStmt alter_tsdictionary_stmt = 136 [json_name = "AlterTSDictionaryStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTSDictionaryStmtOrBuilder getAlterTsdictionaryStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterTSConfigurationStmt alter_tsconfiguration_stmt = 137 [json_name = "AlterTSConfigurationStmt"];</code>
-   * @return Whether the alterTsconfigurationStmt field is set.
-   */
-  boolean hasAlterTsconfigurationStmt();
-  /**
-   * <code>.pg_query.AlterTSConfigurationStmt alter_tsconfiguration_stmt = 137 [json_name = "AlterTSConfigurationStmt"];</code>
-   * @return The alterTsconfigurationStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTSConfigurationStmt getAlterTsconfigurationStmt();
-  /**
-   * <code>.pg_query.AlterTSConfigurationStmt alter_tsconfiguration_stmt = 137 [json_name = "AlterTSConfigurationStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTSConfigurationStmtOrBuilder getAlterTsconfigurationStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateFdwStmt create_fdw_stmt = 138 [json_name = "CreateFdwStmt"];</code>
-   * @return Whether the createFdwStmt field is set.
-   */
-  boolean hasCreateFdwStmt();
-  /**
-   * <code>.pg_query.CreateFdwStmt create_fdw_stmt = 138 [json_name = "CreateFdwStmt"];</code>
-   * @return The createFdwStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateFdwStmt getCreateFdwStmt();
-  /**
-   * <code>.pg_query.CreateFdwStmt create_fdw_stmt = 138 [json_name = "CreateFdwStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateFdwStmtOrBuilder getCreateFdwStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterFdwStmt alter_fdw_stmt = 139 [json_name = "AlterFdwStmt"];</code>
-   * @return Whether the alterFdwStmt field is set.
-   */
-  boolean hasAlterFdwStmt();
-  /**
-   * <code>.pg_query.AlterFdwStmt alter_fdw_stmt = 139 [json_name = "AlterFdwStmt"];</code>
-   * @return The alterFdwStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterFdwStmt getAlterFdwStmt();
-  /**
-   * <code>.pg_query.AlterFdwStmt alter_fdw_stmt = 139 [json_name = "AlterFdwStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterFdwStmtOrBuilder getAlterFdwStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateForeignServerStmt create_foreign_server_stmt = 140 [json_name = "CreateForeignServerStmt"];</code>
-   * @return Whether the createForeignServerStmt field is set.
-   */
-  boolean hasCreateForeignServerStmt();
-  /**
-   * <code>.pg_query.CreateForeignServerStmt create_foreign_server_stmt = 140 [json_name = "CreateForeignServerStmt"];</code>
-   * @return The createForeignServerStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateForeignServerStmt getCreateForeignServerStmt();
-  /**
-   * <code>.pg_query.CreateForeignServerStmt create_foreign_server_stmt = 140 [json_name = "CreateForeignServerStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateForeignServerStmtOrBuilder getCreateForeignServerStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterForeignServerStmt alter_foreign_server_stmt = 141 [json_name = "AlterForeignServerStmt"];</code>
-   * @return Whether the alterForeignServerStmt field is set.
-   */
-  boolean hasAlterForeignServerStmt();
-  /**
-   * <code>.pg_query.AlterForeignServerStmt alter_foreign_server_stmt = 141 [json_name = "AlterForeignServerStmt"];</code>
-   * @return The alterForeignServerStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterForeignServerStmt getAlterForeignServerStmt();
-  /**
-   * <code>.pg_query.AlterForeignServerStmt alter_foreign_server_stmt = 141 [json_name = "AlterForeignServerStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterForeignServerStmtOrBuilder getAlterForeignServerStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateUserMappingStmt create_user_mapping_stmt = 142 [json_name = "CreateUserMappingStmt"];</code>
-   * @return Whether the createUserMappingStmt field is set.
-   */
-  boolean hasCreateUserMappingStmt();
-  /**
-   * <code>.pg_query.CreateUserMappingStmt create_user_mapping_stmt = 142 [json_name = "CreateUserMappingStmt"];</code>
-   * @return The createUserMappingStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateUserMappingStmt getCreateUserMappingStmt();
-  /**
-   * <code>.pg_query.CreateUserMappingStmt create_user_mapping_stmt = 142 [json_name = "CreateUserMappingStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateUserMappingStmtOrBuilder getCreateUserMappingStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterUserMappingStmt alter_user_mapping_stmt = 143 [json_name = "AlterUserMappingStmt"];</code>
-   * @return Whether the alterUserMappingStmt field is set.
-   */
-  boolean hasAlterUserMappingStmt();
-  /**
-   * <code>.pg_query.AlterUserMappingStmt alter_user_mapping_stmt = 143 [json_name = "AlterUserMappingStmt"];</code>
-   * @return The alterUserMappingStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterUserMappingStmt getAlterUserMappingStmt();
-  /**
-   * <code>.pg_query.AlterUserMappingStmt alter_user_mapping_stmt = 143 [json_name = "AlterUserMappingStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterUserMappingStmtOrBuilder getAlterUserMappingStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DropUserMappingStmt drop_user_mapping_stmt = 144 [json_name = "DropUserMappingStmt"];</code>
-   * @return Whether the dropUserMappingStmt field is set.
-   */
-  boolean hasDropUserMappingStmt();
-  /**
-   * <code>.pg_query.DropUserMappingStmt drop_user_mapping_stmt = 144 [json_name = "DropUserMappingStmt"];</code>
-   * @return The dropUserMappingStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropUserMappingStmt getDropUserMappingStmt();
-  /**
-   * <code>.pg_query.DropUserMappingStmt drop_user_mapping_stmt = 144 [json_name = "DropUserMappingStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropUserMappingStmtOrBuilder getDropUserMappingStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterTableSpaceOptionsStmt alter_table_space_options_stmt = 145 [json_name = "AlterTableSpaceOptionsStmt"];</code>
-   * @return Whether the alterTableSpaceOptionsStmt field is set.
-   */
-  boolean hasAlterTableSpaceOptionsStmt();
-  /**
-   * <code>.pg_query.AlterTableSpaceOptionsStmt alter_table_space_options_stmt = 145 [json_name = "AlterTableSpaceOptionsStmt"];</code>
-   * @return The alterTableSpaceOptionsStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTableSpaceOptionsStmt getAlterTableSpaceOptionsStmt();
-  /**
-   * <code>.pg_query.AlterTableSpaceOptionsStmt alter_table_space_options_stmt = 145 [json_name = "AlterTableSpaceOptionsStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTableSpaceOptionsStmtOrBuilder getAlterTableSpaceOptionsStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterTableMoveAllStmt alter_table_move_all_stmt = 146 [json_name = "AlterTableMoveAllStmt"];</code>
-   * @return Whether the alterTableMoveAllStmt field is set.
-   */
-  boolean hasAlterTableMoveAllStmt();
-  /**
-   * <code>.pg_query.AlterTableMoveAllStmt alter_table_move_all_stmt = 146 [json_name = "AlterTableMoveAllStmt"];</code>
-   * @return The alterTableMoveAllStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTableMoveAllStmt getAlterTableMoveAllStmt();
-  /**
-   * <code>.pg_query.AlterTableMoveAllStmt alter_table_move_all_stmt = 146 [json_name = "AlterTableMoveAllStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterTableMoveAllStmtOrBuilder getAlterTableMoveAllStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.SecLabelStmt sec_label_stmt = 147 [json_name = "SecLabelStmt"];</code>
-   * @return Whether the secLabelStmt field is set.
-   */
-  boolean hasSecLabelStmt();
-  /**
-   * <code>.pg_query.SecLabelStmt sec_label_stmt = 147 [json_name = "SecLabelStmt"];</code>
-   * @return The secLabelStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.SecLabelStmt getSecLabelStmt();
-  /**
-   * <code>.pg_query.SecLabelStmt sec_label_stmt = 147 [json_name = "SecLabelStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.SecLabelStmtOrBuilder getSecLabelStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateForeignTableStmt create_foreign_table_stmt = 148 [json_name = "CreateForeignTableStmt"];</code>
-   * @return Whether the createForeignTableStmt field is set.
-   */
-  boolean hasCreateForeignTableStmt();
-  /**
-   * <code>.pg_query.CreateForeignTableStmt create_foreign_table_stmt = 148 [json_name = "CreateForeignTableStmt"];</code>
-   * @return The createForeignTableStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateForeignTableStmt getCreateForeignTableStmt();
-  /**
-   * <code>.pg_query.CreateForeignTableStmt create_foreign_table_stmt = 148 [json_name = "CreateForeignTableStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateForeignTableStmtOrBuilder getCreateForeignTableStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ImportForeignSchemaStmt import_foreign_schema_stmt = 149 [json_name = "ImportForeignSchemaStmt"];</code>
-   * @return Whether the importForeignSchemaStmt field is set.
-   */
-  boolean hasImportForeignSchemaStmt();
-  /**
-   * <code>.pg_query.ImportForeignSchemaStmt import_foreign_schema_stmt = 149 [json_name = "ImportForeignSchemaStmt"];</code>
-   * @return The importForeignSchemaStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ImportForeignSchemaStmt getImportForeignSchemaStmt();
-  /**
-   * <code>.pg_query.ImportForeignSchemaStmt import_foreign_schema_stmt = 149 [json_name = "ImportForeignSchemaStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ImportForeignSchemaStmtOrBuilder getImportForeignSchemaStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateExtensionStmt create_extension_stmt = 150 [json_name = "CreateExtensionStmt"];</code>
-   * @return Whether the createExtensionStmt field is set.
-   */
-  boolean hasCreateExtensionStmt();
-  /**
-   * <code>.pg_query.CreateExtensionStmt create_extension_stmt = 150 [json_name = "CreateExtensionStmt"];</code>
-   * @return The createExtensionStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateExtensionStmt getCreateExtensionStmt();
-  /**
-   * <code>.pg_query.CreateExtensionStmt create_extension_stmt = 150 [json_name = "CreateExtensionStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateExtensionStmtOrBuilder getCreateExtensionStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterExtensionStmt alter_extension_stmt = 151 [json_name = "AlterExtensionStmt"];</code>
-   * @return Whether the alterExtensionStmt field is set.
-   */
-  boolean hasAlterExtensionStmt();
-  /**
-   * <code>.pg_query.AlterExtensionStmt alter_extension_stmt = 151 [json_name = "AlterExtensionStmt"];</code>
-   * @return The alterExtensionStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterExtensionStmt getAlterExtensionStmt();
-  /**
-   * <code>.pg_query.AlterExtensionStmt alter_extension_stmt = 151 [json_name = "AlterExtensionStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterExtensionStmtOrBuilder getAlterExtensionStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterExtensionContentsStmt alter_extension_contents_stmt = 152 [json_name = "AlterExtensionContentsStmt"];</code>
-   * @return Whether the alterExtensionContentsStmt field is set.
-   */
-  boolean hasAlterExtensionContentsStmt();
-  /**
-   * <code>.pg_query.AlterExtensionContentsStmt alter_extension_contents_stmt = 152 [json_name = "AlterExtensionContentsStmt"];</code>
-   * @return The alterExtensionContentsStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterExtensionContentsStmt getAlterExtensionContentsStmt();
-  /**
-   * <code>.pg_query.AlterExtensionContentsStmt alter_extension_contents_stmt = 152 [json_name = "AlterExtensionContentsStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterExtensionContentsStmtOrBuilder getAlterExtensionContentsStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateEventTrigStmt create_event_trig_stmt = 153 [json_name = "CreateEventTrigStmt"];</code>
-   * @return Whether the createEventTrigStmt field is set.
-   */
-  boolean hasCreateEventTrigStmt();
-  /**
-   * <code>.pg_query.CreateEventTrigStmt create_event_trig_stmt = 153 [json_name = "CreateEventTrigStmt"];</code>
-   * @return The createEventTrigStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateEventTrigStmt getCreateEventTrigStmt();
-  /**
-   * <code>.pg_query.CreateEventTrigStmt create_event_trig_stmt = 153 [json_name = "CreateEventTrigStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateEventTrigStmtOrBuilder getCreateEventTrigStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterEventTrigStmt alter_event_trig_stmt = 154 [json_name = "AlterEventTrigStmt"];</code>
-   * @return Whether the alterEventTrigStmt field is set.
-   */
-  boolean hasAlterEventTrigStmt();
-  /**
-   * <code>.pg_query.AlterEventTrigStmt alter_event_trig_stmt = 154 [json_name = "AlterEventTrigStmt"];</code>
-   * @return The alterEventTrigStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterEventTrigStmt getAlterEventTrigStmt();
-  /**
-   * <code>.pg_query.AlterEventTrigStmt alter_event_trig_stmt = 154 [json_name = "AlterEventTrigStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterEventTrigStmtOrBuilder getAlterEventTrigStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.RefreshMatViewStmt refresh_mat_view_stmt = 155 [json_name = "RefreshMatViewStmt"];</code>
-   * @return Whether the refreshMatViewStmt field is set.
-   */
-  boolean hasRefreshMatViewStmt();
-  /**
-   * <code>.pg_query.RefreshMatViewStmt refresh_mat_view_stmt = 155 [json_name = "RefreshMatViewStmt"];</code>
-   * @return The refreshMatViewStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RefreshMatViewStmt getRefreshMatViewStmt();
-  /**
-   * <code>.pg_query.RefreshMatViewStmt refresh_mat_view_stmt = 155 [json_name = "RefreshMatViewStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RefreshMatViewStmtOrBuilder getRefreshMatViewStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.ReplicaIdentityStmt replica_identity_stmt = 156 [json_name = "ReplicaIdentityStmt"];</code>
-   * @return Whether the replicaIdentityStmt field is set.
-   */
-  boolean hasReplicaIdentityStmt();
-  /**
-   * <code>.pg_query.ReplicaIdentityStmt replica_identity_stmt = 156 [json_name = "ReplicaIdentityStmt"];</code>
-   * @return The replicaIdentityStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ReplicaIdentityStmt getReplicaIdentityStmt();
-  /**
-   * <code>.pg_query.ReplicaIdentityStmt replica_identity_stmt = 156 [json_name = "ReplicaIdentityStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ReplicaIdentityStmtOrBuilder getReplicaIdentityStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterSystemStmt alter_system_stmt = 157 [json_name = "AlterSystemStmt"];</code>
-   * @return Whether the alterSystemStmt field is set.
-   */
-  boolean hasAlterSystemStmt();
-  /**
-   * <code>.pg_query.AlterSystemStmt alter_system_stmt = 157 [json_name = "AlterSystemStmt"];</code>
-   * @return The alterSystemStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterSystemStmt getAlterSystemStmt();
-  /**
-   * <code>.pg_query.AlterSystemStmt alter_system_stmt = 157 [json_name = "AlterSystemStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterSystemStmtOrBuilder getAlterSystemStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreatePolicyStmt create_policy_stmt = 158 [json_name = "CreatePolicyStmt"];</code>
-   * @return Whether the createPolicyStmt field is set.
-   */
-  boolean hasCreatePolicyStmt();
-  /**
-   * <code>.pg_query.CreatePolicyStmt create_policy_stmt = 158 [json_name = "CreatePolicyStmt"];</code>
-   * @return The createPolicyStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreatePolicyStmt getCreatePolicyStmt();
-  /**
-   * <code>.pg_query.CreatePolicyStmt create_policy_stmt = 158 [json_name = "CreatePolicyStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreatePolicyStmtOrBuilder getCreatePolicyStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterPolicyStmt alter_policy_stmt = 159 [json_name = "AlterPolicyStmt"];</code>
-   * @return Whether the alterPolicyStmt field is set.
-   */
-  boolean hasAlterPolicyStmt();
-  /**
-   * <code>.pg_query.AlterPolicyStmt alter_policy_stmt = 159 [json_name = "AlterPolicyStmt"];</code>
-   * @return The alterPolicyStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterPolicyStmt getAlterPolicyStmt();
-  /**
-   * <code>.pg_query.AlterPolicyStmt alter_policy_stmt = 159 [json_name = "AlterPolicyStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterPolicyStmtOrBuilder getAlterPolicyStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateTransformStmt create_transform_stmt = 160 [json_name = "CreateTransformStmt"];</code>
-   * @return Whether the createTransformStmt field is set.
-   */
-  boolean hasCreateTransformStmt();
-  /**
-   * <code>.pg_query.CreateTransformStmt create_transform_stmt = 160 [json_name = "CreateTransformStmt"];</code>
-   * @return The createTransformStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateTransformStmt getCreateTransformStmt();
-  /**
-   * <code>.pg_query.CreateTransformStmt create_transform_stmt = 160 [json_name = "CreateTransformStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateTransformStmtOrBuilder getCreateTransformStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateAmStmt create_am_stmt = 161 [json_name = "CreateAmStmt"];</code>
-   * @return Whether the createAmStmt field is set.
-   */
-  boolean hasCreateAmStmt();
-  /**
-   * <code>.pg_query.CreateAmStmt create_am_stmt = 161 [json_name = "CreateAmStmt"];</code>
-   * @return The createAmStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateAmStmt getCreateAmStmt();
-  /**
-   * <code>.pg_query.CreateAmStmt create_am_stmt = 161 [json_name = "CreateAmStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateAmStmtOrBuilder getCreateAmStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreatePublicationStmt create_publication_stmt = 162 [json_name = "CreatePublicationStmt"];</code>
-   * @return Whether the createPublicationStmt field is set.
-   */
-  boolean hasCreatePublicationStmt();
-  /**
-   * <code>.pg_query.CreatePublicationStmt create_publication_stmt = 162 [json_name = "CreatePublicationStmt"];</code>
-   * @return The createPublicationStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreatePublicationStmt getCreatePublicationStmt();
-  /**
-   * <code>.pg_query.CreatePublicationStmt create_publication_stmt = 162 [json_name = "CreatePublicationStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreatePublicationStmtOrBuilder getCreatePublicationStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterPublicationStmt alter_publication_stmt = 163 [json_name = "AlterPublicationStmt"];</code>
-   * @return Whether the alterPublicationStmt field is set.
-   */
-  boolean hasAlterPublicationStmt();
-  /**
-   * <code>.pg_query.AlterPublicationStmt alter_publication_stmt = 163 [json_name = "AlterPublicationStmt"];</code>
-   * @return The alterPublicationStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterPublicationStmt getAlterPublicationStmt();
-  /**
-   * <code>.pg_query.AlterPublicationStmt alter_publication_stmt = 163 [json_name = "AlterPublicationStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterPublicationStmtOrBuilder getAlterPublicationStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateSubscriptionStmt create_subscription_stmt = 164 [json_name = "CreateSubscriptionStmt"];</code>
-   * @return Whether the createSubscriptionStmt field is set.
-   */
-  boolean hasCreateSubscriptionStmt();
-  /**
-   * <code>.pg_query.CreateSubscriptionStmt create_subscription_stmt = 164 [json_name = "CreateSubscriptionStmt"];</code>
-   * @return The createSubscriptionStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateSubscriptionStmt getCreateSubscriptionStmt();
-  /**
-   * <code>.pg_query.CreateSubscriptionStmt create_subscription_stmt = 164 [json_name = "CreateSubscriptionStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateSubscriptionStmtOrBuilder getCreateSubscriptionStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterSubscriptionStmt alter_subscription_stmt = 165 [json_name = "AlterSubscriptionStmt"];</code>
-   * @return Whether the alterSubscriptionStmt field is set.
-   */
-  boolean hasAlterSubscriptionStmt();
-  /**
-   * <code>.pg_query.AlterSubscriptionStmt alter_subscription_stmt = 165 [json_name = "AlterSubscriptionStmt"];</code>
-   * @return The alterSubscriptionStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterSubscriptionStmt getAlterSubscriptionStmt();
-  /**
-   * <code>.pg_query.AlterSubscriptionStmt alter_subscription_stmt = 165 [json_name = "AlterSubscriptionStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterSubscriptionStmtOrBuilder getAlterSubscriptionStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.DropSubscriptionStmt drop_subscription_stmt = 166 [json_name = "DropSubscriptionStmt"];</code>
-   * @return Whether the dropSubscriptionStmt field is set.
-   */
-  boolean hasDropSubscriptionStmt();
-  /**
-   * <code>.pg_query.DropSubscriptionStmt drop_subscription_stmt = 166 [json_name = "DropSubscriptionStmt"];</code>
-   * @return The dropSubscriptionStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropSubscriptionStmt getDropSubscriptionStmt();
-  /**
-   * <code>.pg_query.DropSubscriptionStmt drop_subscription_stmt = 166 [json_name = "DropSubscriptionStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.DropSubscriptionStmtOrBuilder getDropSubscriptionStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateStatsStmt create_stats_stmt = 167 [json_name = "CreateStatsStmt"];</code>
-   * @return Whether the createStatsStmt field is set.
-   */
-  boolean hasCreateStatsStmt();
-  /**
-   * <code>.pg_query.CreateStatsStmt create_stats_stmt = 167 [json_name = "CreateStatsStmt"];</code>
-   * @return The createStatsStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateStatsStmt getCreateStatsStmt();
-  /**
-   * <code>.pg_query.CreateStatsStmt create_stats_stmt = 167 [json_name = "CreateStatsStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateStatsStmtOrBuilder getCreateStatsStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterCollationStmt alter_collation_stmt = 168 [json_name = "AlterCollationStmt"];</code>
-   * @return Whether the alterCollationStmt field is set.
-   */
-  boolean hasAlterCollationStmt();
-  /**
-   * <code>.pg_query.AlterCollationStmt alter_collation_stmt = 168 [json_name = "AlterCollationStmt"];</code>
-   * @return The alterCollationStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterCollationStmt getAlterCollationStmt();
-  /**
-   * <code>.pg_query.AlterCollationStmt alter_collation_stmt = 168 [json_name = "AlterCollationStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterCollationStmtOrBuilder getAlterCollationStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.CallStmt call_stmt = 169 [json_name = "CallStmt"];</code>
-   * @return Whether the callStmt field is set.
-   */
-  boolean hasCallStmt();
-  /**
-   * <code>.pg_query.CallStmt call_stmt = 169 [json_name = "CallStmt"];</code>
-   * @return The callStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CallStmt getCallStmt();
-  /**
-   * <code>.pg_query.CallStmt call_stmt = 169 [json_name = "CallStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CallStmtOrBuilder getCallStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.AlterStatsStmt alter_stats_stmt = 170 [json_name = "AlterStatsStmt"];</code>
-   * @return Whether the alterStatsStmt field is set.
-   */
-  boolean hasAlterStatsStmt();
-  /**
-   * <code>.pg_query.AlterStatsStmt alter_stats_stmt = 170 [json_name = "AlterStatsStmt"];</code>
-   * @return The alterStatsStmt.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterStatsStmt getAlterStatsStmt();
-  /**
-   * <code>.pg_query.AlterStatsStmt alter_stats_stmt = 170 [json_name = "AlterStatsStmt"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AlterStatsStmtOrBuilder getAlterStatsStmtOrBuilder();
-
-  /**
-   * <code>.pg_query.A_Expr a_expr = 171 [json_name = "A_Expr"];</code>
-   * @return Whether the aExpr field is set.
-   */
-  boolean hasAExpr();
-  /**
-   * <code>.pg_query.A_Expr a_expr = 171 [json_name = "A_Expr"];</code>
-   * @return The aExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.A_Expr getAExpr();
-  /**
-   * <code>.pg_query.A_Expr a_expr = 171 [json_name = "A_Expr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.A_ExprOrBuilder getAExprOrBuilder();
-
-  /**
-   * <code>.pg_query.ColumnRef column_ref = 172 [json_name = "ColumnRef"];</code>
-   * @return Whether the columnRef field is set.
-   */
-  boolean hasColumnRef();
-  /**
-   * <code>.pg_query.ColumnRef column_ref = 172 [json_name = "ColumnRef"];</code>
-   * @return The columnRef.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ColumnRef getColumnRef();
-  /**
-   * <code>.pg_query.ColumnRef column_ref = 172 [json_name = "ColumnRef"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ColumnRefOrBuilder getColumnRefOrBuilder();
-
-  /**
-   * <code>.pg_query.ParamRef param_ref = 173 [json_name = "ParamRef"];</code>
-   * @return Whether the paramRef field is set.
-   */
-  boolean hasParamRef();
-  /**
-   * <code>.pg_query.ParamRef param_ref = 173 [json_name = "ParamRef"];</code>
-   * @return The paramRef.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ParamRef getParamRef();
-  /**
-   * <code>.pg_query.ParamRef param_ref = 173 [json_name = "ParamRef"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ParamRefOrBuilder getParamRefOrBuilder();
-
-  /**
-   * <code>.pg_query.FuncCall func_call = 174 [json_name = "FuncCall"];</code>
-   * @return Whether the funcCall field is set.
-   */
-  boolean hasFuncCall();
-  /**
-   * <code>.pg_query.FuncCall func_call = 174 [json_name = "FuncCall"];</code>
-   * @return The funcCall.
-   */
-  com.premiumminds.sonar.postgres.protobuf.FuncCall getFuncCall();
-  /**
-   * <code>.pg_query.FuncCall func_call = 174 [json_name = "FuncCall"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.FuncCallOrBuilder getFuncCallOrBuilder();
-
-  /**
-   * <code>.pg_query.A_Star a_star = 175 [json_name = "A_Star"];</code>
-   * @return Whether the aStar field is set.
-   */
-  boolean hasAStar();
-  /**
-   * <code>.pg_query.A_Star a_star = 175 [json_name = "A_Star"];</code>
-   * @return The aStar.
-   */
-  com.premiumminds.sonar.postgres.protobuf.A_Star getAStar();
-  /**
-   * <code>.pg_query.A_Star a_star = 175 [json_name = "A_Star"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.A_StarOrBuilder getAStarOrBuilder();
-
-  /**
-   * <code>.pg_query.A_Indices a_indices = 176 [json_name = "A_Indices"];</code>
-   * @return Whether the aIndices field is set.
-   */
-  boolean hasAIndices();
-  /**
-   * <code>.pg_query.A_Indices a_indices = 176 [json_name = "A_Indices"];</code>
-   * @return The aIndices.
-   */
-  com.premiumminds.sonar.postgres.protobuf.A_Indices getAIndices();
-  /**
-   * <code>.pg_query.A_Indices a_indices = 176 [json_name = "A_Indices"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.A_IndicesOrBuilder getAIndicesOrBuilder();
-
-  /**
-   * <code>.pg_query.A_Indirection a_indirection = 177 [json_name = "A_Indirection"];</code>
-   * @return Whether the aIndirection field is set.
-   */
-  boolean hasAIndirection();
-  /**
-   * <code>.pg_query.A_Indirection a_indirection = 177 [json_name = "A_Indirection"];</code>
-   * @return The aIndirection.
-   */
-  com.premiumminds.sonar.postgres.protobuf.A_Indirection getAIndirection();
-  /**
-   * <code>.pg_query.A_Indirection a_indirection = 177 [json_name = "A_Indirection"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.A_IndirectionOrBuilder getAIndirectionOrBuilder();
-
-  /**
-   * <code>.pg_query.A_ArrayExpr a_array_expr = 178 [json_name = "A_ArrayExpr"];</code>
-   * @return Whether the aArrayExpr field is set.
-   */
-  boolean hasAArrayExpr();
-  /**
-   * <code>.pg_query.A_ArrayExpr a_array_expr = 178 [json_name = "A_ArrayExpr"];</code>
-   * @return The aArrayExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.A_ArrayExpr getAArrayExpr();
-  /**
-   * <code>.pg_query.A_ArrayExpr a_array_expr = 178 [json_name = "A_ArrayExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.A_ArrayExprOrBuilder getAArrayExprOrBuilder();
-
-  /**
-   * <code>.pg_query.ResTarget res_target = 179 [json_name = "ResTarget"];</code>
-   * @return Whether the resTarget field is set.
-   */
-  boolean hasResTarget();
-  /**
-   * <code>.pg_query.ResTarget res_target = 179 [json_name = "ResTarget"];</code>
-   * @return The resTarget.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ResTarget getResTarget();
-  /**
-   * <code>.pg_query.ResTarget res_target = 179 [json_name = "ResTarget"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ResTargetOrBuilder getResTargetOrBuilder();
-
-  /**
-   * <code>.pg_query.MultiAssignRef multi_assign_ref = 180 [json_name = "MultiAssignRef"];</code>
-   * @return Whether the multiAssignRef field is set.
-   */
-  boolean hasMultiAssignRef();
-  /**
-   * <code>.pg_query.MultiAssignRef multi_assign_ref = 180 [json_name = "MultiAssignRef"];</code>
-   * @return The multiAssignRef.
-   */
-  com.premiumminds.sonar.postgres.protobuf.MultiAssignRef getMultiAssignRef();
-  /**
-   * <code>.pg_query.MultiAssignRef multi_assign_ref = 180 [json_name = "MultiAssignRef"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.MultiAssignRefOrBuilder getMultiAssignRefOrBuilder();
-
-  /**
-   * <code>.pg_query.TypeCast type_cast = 181 [json_name = "TypeCast"];</code>
-   * @return Whether the typeCast field is set.
-   */
-  boolean hasTypeCast();
-  /**
-   * <code>.pg_query.TypeCast type_cast = 181 [json_name = "TypeCast"];</code>
-   * @return The typeCast.
-   */
-  com.premiumminds.sonar.postgres.protobuf.TypeCast getTypeCast();
-  /**
-   * <code>.pg_query.TypeCast type_cast = 181 [json_name = "TypeCast"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.TypeCastOrBuilder getTypeCastOrBuilder();
-
-  /**
-   * <code>.pg_query.CollateClause collate_clause = 182 [json_name = "CollateClause"];</code>
-   * @return Whether the collateClause field is set.
-   */
-  boolean hasCollateClause();
-  /**
-   * <code>.pg_query.CollateClause collate_clause = 182 [json_name = "CollateClause"];</code>
-   * @return The collateClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CollateClause getCollateClause();
-  /**
-   * <code>.pg_query.CollateClause collate_clause = 182 [json_name = "CollateClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CollateClauseOrBuilder getCollateClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.SortBy sort_by = 183 [json_name = "SortBy"];</code>
-   * @return Whether the sortBy field is set.
-   */
-  boolean hasSortBy();
-  /**
-   * <code>.pg_query.SortBy sort_by = 183 [json_name = "SortBy"];</code>
-   * @return The sortBy.
-   */
-  com.premiumminds.sonar.postgres.protobuf.SortBy getSortBy();
-  /**
-   * <code>.pg_query.SortBy sort_by = 183 [json_name = "SortBy"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.SortByOrBuilder getSortByOrBuilder();
-
-  /**
-   * <code>.pg_query.WindowDef window_def = 184 [json_name = "WindowDef"];</code>
-   * @return Whether the windowDef field is set.
-   */
-  boolean hasWindowDef();
-  /**
-   * <code>.pg_query.WindowDef window_def = 184 [json_name = "WindowDef"];</code>
-   * @return The windowDef.
-   */
-  com.premiumminds.sonar.postgres.protobuf.WindowDef getWindowDef();
-  /**
-   * <code>.pg_query.WindowDef window_def = 184 [json_name = "WindowDef"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.WindowDefOrBuilder getWindowDefOrBuilder();
-
-  /**
-   * <code>.pg_query.RangeSubselect range_subselect = 185 [json_name = "RangeSubselect"];</code>
-   * @return Whether the rangeSubselect field is set.
-   */
-  boolean hasRangeSubselect();
-  /**
-   * <code>.pg_query.RangeSubselect range_subselect = 185 [json_name = "RangeSubselect"];</code>
-   * @return The rangeSubselect.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeSubselect getRangeSubselect();
-  /**
-   * <code>.pg_query.RangeSubselect range_subselect = 185 [json_name = "RangeSubselect"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeSubselectOrBuilder getRangeSubselectOrBuilder();
-
-  /**
-   * <code>.pg_query.RangeFunction range_function = 186 [json_name = "RangeFunction"];</code>
-   * @return Whether the rangeFunction field is set.
-   */
-  boolean hasRangeFunction();
-  /**
-   * <code>.pg_query.RangeFunction range_function = 186 [json_name = "RangeFunction"];</code>
-   * @return The rangeFunction.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeFunction getRangeFunction();
-  /**
-   * <code>.pg_query.RangeFunction range_function = 186 [json_name = "RangeFunction"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeFunctionOrBuilder getRangeFunctionOrBuilder();
-
-  /**
-   * <code>.pg_query.RangeTableSample range_table_sample = 187 [json_name = "RangeTableSample"];</code>
-   * @return Whether the rangeTableSample field is set.
-   */
-  boolean hasRangeTableSample();
-  /**
-   * <code>.pg_query.RangeTableSample range_table_sample = 187 [json_name = "RangeTableSample"];</code>
-   * @return The rangeTableSample.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTableSample getRangeTableSample();
-  /**
-   * <code>.pg_query.RangeTableSample range_table_sample = 187 [json_name = "RangeTableSample"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTableSampleOrBuilder getRangeTableSampleOrBuilder();
-
-  /**
-   * <code>.pg_query.RangeTableFunc range_table_func = 188 [json_name = "RangeTableFunc"];</code>
-   * @return Whether the rangeTableFunc field is set.
-   */
-  boolean hasRangeTableFunc();
-  /**
-   * <code>.pg_query.RangeTableFunc range_table_func = 188 [json_name = "RangeTableFunc"];</code>
-   * @return The rangeTableFunc.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTableFunc getRangeTableFunc();
-  /**
-   * <code>.pg_query.RangeTableFunc range_table_func = 188 [json_name = "RangeTableFunc"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTableFuncOrBuilder getRangeTableFuncOrBuilder();
-
-  /**
-   * <code>.pg_query.RangeTableFuncCol range_table_func_col = 189 [json_name = "RangeTableFuncCol"];</code>
-   * @return Whether the rangeTableFuncCol field is set.
-   */
-  boolean hasRangeTableFuncCol();
-  /**
-   * <code>.pg_query.RangeTableFuncCol range_table_func_col = 189 [json_name = "RangeTableFuncCol"];</code>
-   * @return The rangeTableFuncCol.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTableFuncCol getRangeTableFuncCol();
-  /**
-   * <code>.pg_query.RangeTableFuncCol range_table_func_col = 189 [json_name = "RangeTableFuncCol"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTableFuncColOrBuilder getRangeTableFuncColOrBuilder();
-
-  /**
-   * <code>.pg_query.TypeName type_name = 190 [json_name = "TypeName"];</code>
+   * <code>.pg_query.TypeName type_name = 57 [json_name = "TypeName"];</code>
    * @return Whether the typeName field is set.
    */
   boolean hasTypeName();
   /**
-   * <code>.pg_query.TypeName type_name = 190 [json_name = "TypeName"];</code>
+   * <code>.pg_query.TypeName type_name = 57 [json_name = "TypeName"];</code>
    * @return The typeName.
    */
   com.premiumminds.sonar.postgres.protobuf.TypeName getTypeName();
   /**
-   * <code>.pg_query.TypeName type_name = 190 [json_name = "TypeName"];</code>
+   * <code>.pg_query.TypeName type_name = 57 [json_name = "TypeName"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.TypeNameOrBuilder getTypeNameOrBuilder();
 
   /**
-   * <code>.pg_query.ColumnDef column_def = 191 [json_name = "ColumnDef"];</code>
-   * @return Whether the columnDef field is set.
+   * <code>.pg_query.ColumnRef column_ref = 58 [json_name = "ColumnRef"];</code>
+   * @return Whether the columnRef field is set.
    */
-  boolean hasColumnDef();
+  boolean hasColumnRef();
   /**
-   * <code>.pg_query.ColumnDef column_def = 191 [json_name = "ColumnDef"];</code>
-   * @return The columnDef.
+   * <code>.pg_query.ColumnRef column_ref = 58 [json_name = "ColumnRef"];</code>
+   * @return The columnRef.
    */
-  com.premiumminds.sonar.postgres.protobuf.ColumnDef getColumnDef();
+  com.premiumminds.sonar.postgres.protobuf.ColumnRef getColumnRef();
   /**
-   * <code>.pg_query.ColumnDef column_def = 191 [json_name = "ColumnDef"];</code>
+   * <code>.pg_query.ColumnRef column_ref = 58 [json_name = "ColumnRef"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.ColumnDefOrBuilder getColumnDefOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.ColumnRefOrBuilder getColumnRefOrBuilder();
 
   /**
-   * <code>.pg_query.IndexElem index_elem = 192 [json_name = "IndexElem"];</code>
-   * @return Whether the indexElem field is set.
+   * <code>.pg_query.ParamRef param_ref = 59 [json_name = "ParamRef"];</code>
+   * @return Whether the paramRef field is set.
    */
-  boolean hasIndexElem();
+  boolean hasParamRef();
   /**
-   * <code>.pg_query.IndexElem index_elem = 192 [json_name = "IndexElem"];</code>
-   * @return The indexElem.
+   * <code>.pg_query.ParamRef param_ref = 59 [json_name = "ParamRef"];</code>
+   * @return The paramRef.
    */
-  com.premiumminds.sonar.postgres.protobuf.IndexElem getIndexElem();
+  com.premiumminds.sonar.postgres.protobuf.ParamRef getParamRef();
   /**
-   * <code>.pg_query.IndexElem index_elem = 192 [json_name = "IndexElem"];</code>
+   * <code>.pg_query.ParamRef param_ref = 59 [json_name = "ParamRef"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.IndexElemOrBuilder getIndexElemOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.ParamRefOrBuilder getParamRefOrBuilder();
 
   /**
-   * <code>.pg_query.StatsElem stats_elem = 193 [json_name = "StatsElem"];</code>
-   * @return Whether the statsElem field is set.
+   * <code>.pg_query.A_Expr a_expr = 60 [json_name = "A_Expr"];</code>
+   * @return Whether the aExpr field is set.
    */
-  boolean hasStatsElem();
+  boolean hasAExpr();
   /**
-   * <code>.pg_query.StatsElem stats_elem = 193 [json_name = "StatsElem"];</code>
-   * @return The statsElem.
+   * <code>.pg_query.A_Expr a_expr = 60 [json_name = "A_Expr"];</code>
+   * @return The aExpr.
    */
-  com.premiumminds.sonar.postgres.protobuf.StatsElem getStatsElem();
+  com.premiumminds.sonar.postgres.protobuf.A_Expr getAExpr();
   /**
-   * <code>.pg_query.StatsElem stats_elem = 193 [json_name = "StatsElem"];</code>
+   * <code>.pg_query.A_Expr a_expr = 60 [json_name = "A_Expr"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.StatsElemOrBuilder getStatsElemOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.A_ExprOrBuilder getAExprOrBuilder();
 
   /**
-   * <code>.pg_query.Constraint constraint = 194 [json_name = "Constraint"];</code>
-   * @return Whether the constraint field is set.
+   * <code>.pg_query.TypeCast type_cast = 61 [json_name = "TypeCast"];</code>
+   * @return Whether the typeCast field is set.
    */
-  boolean hasConstraint();
+  boolean hasTypeCast();
   /**
-   * <code>.pg_query.Constraint constraint = 194 [json_name = "Constraint"];</code>
-   * @return The constraint.
+   * <code>.pg_query.TypeCast type_cast = 61 [json_name = "TypeCast"];</code>
+   * @return The typeCast.
    */
-  com.premiumminds.sonar.postgres.protobuf.Constraint getConstraint();
+  com.premiumminds.sonar.postgres.protobuf.TypeCast getTypeCast();
   /**
-   * <code>.pg_query.Constraint constraint = 194 [json_name = "Constraint"];</code>
+   * <code>.pg_query.TypeCast type_cast = 61 [json_name = "TypeCast"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.ConstraintOrBuilder getConstraintOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.TypeCastOrBuilder getTypeCastOrBuilder();
 
   /**
-   * <code>.pg_query.DefElem def_elem = 195 [json_name = "DefElem"];</code>
-   * @return Whether the defElem field is set.
+   * <code>.pg_query.CollateClause collate_clause = 62 [json_name = "CollateClause"];</code>
+   * @return Whether the collateClause field is set.
    */
-  boolean hasDefElem();
+  boolean hasCollateClause();
   /**
-   * <code>.pg_query.DefElem def_elem = 195 [json_name = "DefElem"];</code>
-   * @return The defElem.
+   * <code>.pg_query.CollateClause collate_clause = 62 [json_name = "CollateClause"];</code>
+   * @return The collateClause.
    */
-  com.premiumminds.sonar.postgres.protobuf.DefElem getDefElem();
+  com.premiumminds.sonar.postgres.protobuf.CollateClause getCollateClause();
   /**
-   * <code>.pg_query.DefElem def_elem = 195 [json_name = "DefElem"];</code>
+   * <code>.pg_query.CollateClause collate_clause = 62 [json_name = "CollateClause"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.DefElemOrBuilder getDefElemOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.CollateClauseOrBuilder getCollateClauseOrBuilder();
 
   /**
-   * <code>.pg_query.RangeTblEntry range_tbl_entry = 196 [json_name = "RangeTblEntry"];</code>
-   * @return Whether the rangeTblEntry field is set.
-   */
-  boolean hasRangeTblEntry();
-  /**
-   * <code>.pg_query.RangeTblEntry range_tbl_entry = 196 [json_name = "RangeTblEntry"];</code>
-   * @return The rangeTblEntry.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTblEntry getRangeTblEntry();
-  /**
-   * <code>.pg_query.RangeTblEntry range_tbl_entry = 196 [json_name = "RangeTblEntry"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTblEntryOrBuilder getRangeTblEntryOrBuilder();
-
-  /**
-   * <code>.pg_query.RangeTblFunction range_tbl_function = 197 [json_name = "RangeTblFunction"];</code>
-   * @return Whether the rangeTblFunction field is set.
-   */
-  boolean hasRangeTblFunction();
-  /**
-   * <code>.pg_query.RangeTblFunction range_tbl_function = 197 [json_name = "RangeTblFunction"];</code>
-   * @return The rangeTblFunction.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTblFunction getRangeTblFunction();
-  /**
-   * <code>.pg_query.RangeTblFunction range_tbl_function = 197 [json_name = "RangeTblFunction"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RangeTblFunctionOrBuilder getRangeTblFunctionOrBuilder();
-
-  /**
-   * <code>.pg_query.TableSampleClause table_sample_clause = 198 [json_name = "TableSampleClause"];</code>
-   * @return Whether the tableSampleClause field is set.
-   */
-  boolean hasTableSampleClause();
-  /**
-   * <code>.pg_query.TableSampleClause table_sample_clause = 198 [json_name = "TableSampleClause"];</code>
-   * @return The tableSampleClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.TableSampleClause getTableSampleClause();
-  /**
-   * <code>.pg_query.TableSampleClause table_sample_clause = 198 [json_name = "TableSampleClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.TableSampleClauseOrBuilder getTableSampleClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.WithCheckOption with_check_option = 199 [json_name = "WithCheckOption"];</code>
-   * @return Whether the withCheckOption field is set.
-   */
-  boolean hasWithCheckOption();
-  /**
-   * <code>.pg_query.WithCheckOption with_check_option = 199 [json_name = "WithCheckOption"];</code>
-   * @return The withCheckOption.
-   */
-  com.premiumminds.sonar.postgres.protobuf.WithCheckOption getWithCheckOption();
-  /**
-   * <code>.pg_query.WithCheckOption with_check_option = 199 [json_name = "WithCheckOption"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.WithCheckOptionOrBuilder getWithCheckOptionOrBuilder();
-
-  /**
-   * <code>.pg_query.SortGroupClause sort_group_clause = 200 [json_name = "SortGroupClause"];</code>
-   * @return Whether the sortGroupClause field is set.
-   */
-  boolean hasSortGroupClause();
-  /**
-   * <code>.pg_query.SortGroupClause sort_group_clause = 200 [json_name = "SortGroupClause"];</code>
-   * @return The sortGroupClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.SortGroupClause getSortGroupClause();
-  /**
-   * <code>.pg_query.SortGroupClause sort_group_clause = 200 [json_name = "SortGroupClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.SortGroupClauseOrBuilder getSortGroupClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.GroupingSet grouping_set = 201 [json_name = "GroupingSet"];</code>
-   * @return Whether the groupingSet field is set.
-   */
-  boolean hasGroupingSet();
-  /**
-   * <code>.pg_query.GroupingSet grouping_set = 201 [json_name = "GroupingSet"];</code>
-   * @return The groupingSet.
-   */
-  com.premiumminds.sonar.postgres.protobuf.GroupingSet getGroupingSet();
-  /**
-   * <code>.pg_query.GroupingSet grouping_set = 201 [json_name = "GroupingSet"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.GroupingSetOrBuilder getGroupingSetOrBuilder();
-
-  /**
-   * <code>.pg_query.WindowClause window_clause = 202 [json_name = "WindowClause"];</code>
-   * @return Whether the windowClause field is set.
-   */
-  boolean hasWindowClause();
-  /**
-   * <code>.pg_query.WindowClause window_clause = 202 [json_name = "WindowClause"];</code>
-   * @return The windowClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.WindowClause getWindowClause();
-  /**
-   * <code>.pg_query.WindowClause window_clause = 202 [json_name = "WindowClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.WindowClauseOrBuilder getWindowClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.ObjectWithArgs object_with_args = 203 [json_name = "ObjectWithArgs"];</code>
-   * @return Whether the objectWithArgs field is set.
-   */
-  boolean hasObjectWithArgs();
-  /**
-   * <code>.pg_query.ObjectWithArgs object_with_args = 203 [json_name = "ObjectWithArgs"];</code>
-   * @return The objectWithArgs.
-   */
-  com.premiumminds.sonar.postgres.protobuf.ObjectWithArgs getObjectWithArgs();
-  /**
-   * <code>.pg_query.ObjectWithArgs object_with_args = 203 [json_name = "ObjectWithArgs"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.ObjectWithArgsOrBuilder getObjectWithArgsOrBuilder();
-
-  /**
-   * <code>.pg_query.AccessPriv access_priv = 204 [json_name = "AccessPriv"];</code>
-   * @return Whether the accessPriv field is set.
-   */
-  boolean hasAccessPriv();
-  /**
-   * <code>.pg_query.AccessPriv access_priv = 204 [json_name = "AccessPriv"];</code>
-   * @return The accessPriv.
-   */
-  com.premiumminds.sonar.postgres.protobuf.AccessPriv getAccessPriv();
-  /**
-   * <code>.pg_query.AccessPriv access_priv = 204 [json_name = "AccessPriv"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AccessPrivOrBuilder getAccessPrivOrBuilder();
-
-  /**
-   * <code>.pg_query.CreateOpClassItem create_op_class_item = 205 [json_name = "CreateOpClassItem"];</code>
-   * @return Whether the createOpClassItem field is set.
-   */
-  boolean hasCreateOpClassItem();
-  /**
-   * <code>.pg_query.CreateOpClassItem create_op_class_item = 205 [json_name = "CreateOpClassItem"];</code>
-   * @return The createOpClassItem.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateOpClassItem getCreateOpClassItem();
-  /**
-   * <code>.pg_query.CreateOpClassItem create_op_class_item = 205 [json_name = "CreateOpClassItem"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CreateOpClassItemOrBuilder getCreateOpClassItemOrBuilder();
-
-  /**
-   * <code>.pg_query.TableLikeClause table_like_clause = 206 [json_name = "TableLikeClause"];</code>
-   * @return Whether the tableLikeClause field is set.
-   */
-  boolean hasTableLikeClause();
-  /**
-   * <code>.pg_query.TableLikeClause table_like_clause = 206 [json_name = "TableLikeClause"];</code>
-   * @return The tableLikeClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.TableLikeClause getTableLikeClause();
-  /**
-   * <code>.pg_query.TableLikeClause table_like_clause = 206 [json_name = "TableLikeClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.TableLikeClauseOrBuilder getTableLikeClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.FunctionParameter function_parameter = 207 [json_name = "FunctionParameter"];</code>
-   * @return Whether the functionParameter field is set.
-   */
-  boolean hasFunctionParameter();
-  /**
-   * <code>.pg_query.FunctionParameter function_parameter = 207 [json_name = "FunctionParameter"];</code>
-   * @return The functionParameter.
-   */
-  com.premiumminds.sonar.postgres.protobuf.FunctionParameter getFunctionParameter();
-  /**
-   * <code>.pg_query.FunctionParameter function_parameter = 207 [json_name = "FunctionParameter"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.FunctionParameterOrBuilder getFunctionParameterOrBuilder();
-
-  /**
-   * <code>.pg_query.LockingClause locking_clause = 208 [json_name = "LockingClause"];</code>
-   * @return Whether the lockingClause field is set.
-   */
-  boolean hasLockingClause();
-  /**
-   * <code>.pg_query.LockingClause locking_clause = 208 [json_name = "LockingClause"];</code>
-   * @return The lockingClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.LockingClause getLockingClause();
-  /**
-   * <code>.pg_query.LockingClause locking_clause = 208 [json_name = "LockingClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.LockingClauseOrBuilder getLockingClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.RowMarkClause row_mark_clause = 209 [json_name = "RowMarkClause"];</code>
-   * @return Whether the rowMarkClause field is set.
-   */
-  boolean hasRowMarkClause();
-  /**
-   * <code>.pg_query.RowMarkClause row_mark_clause = 209 [json_name = "RowMarkClause"];</code>
-   * @return The rowMarkClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.RowMarkClause getRowMarkClause();
-  /**
-   * <code>.pg_query.RowMarkClause row_mark_clause = 209 [json_name = "RowMarkClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.RowMarkClauseOrBuilder getRowMarkClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.XmlSerialize xml_serialize = 210 [json_name = "XmlSerialize"];</code>
-   * @return Whether the xmlSerialize field is set.
-   */
-  boolean hasXmlSerialize();
-  /**
-   * <code>.pg_query.XmlSerialize xml_serialize = 210 [json_name = "XmlSerialize"];</code>
-   * @return The xmlSerialize.
-   */
-  com.premiumminds.sonar.postgres.protobuf.XmlSerialize getXmlSerialize();
-  /**
-   * <code>.pg_query.XmlSerialize xml_serialize = 210 [json_name = "XmlSerialize"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.XmlSerializeOrBuilder getXmlSerializeOrBuilder();
-
-  /**
-   * <code>.pg_query.WithClause with_clause = 211 [json_name = "WithClause"];</code>
-   * @return Whether the withClause field is set.
-   */
-  boolean hasWithClause();
-  /**
-   * <code>.pg_query.WithClause with_clause = 211 [json_name = "WithClause"];</code>
-   * @return The withClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.WithClause getWithClause();
-  /**
-   * <code>.pg_query.WithClause with_clause = 211 [json_name = "WithClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.WithClauseOrBuilder getWithClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.InferClause infer_clause = 212 [json_name = "InferClause"];</code>
-   * @return Whether the inferClause field is set.
-   */
-  boolean hasInferClause();
-  /**
-   * <code>.pg_query.InferClause infer_clause = 212 [json_name = "InferClause"];</code>
-   * @return The inferClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.InferClause getInferClause();
-  /**
-   * <code>.pg_query.InferClause infer_clause = 212 [json_name = "InferClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.InferClauseOrBuilder getInferClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.OnConflictClause on_conflict_clause = 213 [json_name = "OnConflictClause"];</code>
-   * @return Whether the onConflictClause field is set.
-   */
-  boolean hasOnConflictClause();
-  /**
-   * <code>.pg_query.OnConflictClause on_conflict_clause = 213 [json_name = "OnConflictClause"];</code>
-   * @return The onConflictClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.OnConflictClause getOnConflictClause();
-  /**
-   * <code>.pg_query.OnConflictClause on_conflict_clause = 213 [json_name = "OnConflictClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.OnConflictClauseOrBuilder getOnConflictClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.CTESearchClause ctesearch_clause = 214 [json_name = "CTESearchClause"];</code>
-   * @return Whether the ctesearchClause field is set.
-   */
-  boolean hasCtesearchClause();
-  /**
-   * <code>.pg_query.CTESearchClause ctesearch_clause = 214 [json_name = "CTESearchClause"];</code>
-   * @return The ctesearchClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CTESearchClause getCtesearchClause();
-  /**
-   * <code>.pg_query.CTESearchClause ctesearch_clause = 214 [json_name = "CTESearchClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CTESearchClauseOrBuilder getCtesearchClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.CTECycleClause ctecycle_clause = 215 [json_name = "CTECycleClause"];</code>
-   * @return Whether the ctecycleClause field is set.
-   */
-  boolean hasCtecycleClause();
-  /**
-   * <code>.pg_query.CTECycleClause ctecycle_clause = 215 [json_name = "CTECycleClause"];</code>
-   * @return The ctecycleClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CTECycleClause getCtecycleClause();
-  /**
-   * <code>.pg_query.CTECycleClause ctecycle_clause = 215 [json_name = "CTECycleClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CTECycleClauseOrBuilder getCtecycleClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.CommonTableExpr common_table_expr = 216 [json_name = "CommonTableExpr"];</code>
-   * @return Whether the commonTableExpr field is set.
-   */
-  boolean hasCommonTableExpr();
-  /**
-   * <code>.pg_query.CommonTableExpr common_table_expr = 216 [json_name = "CommonTableExpr"];</code>
-   * @return The commonTableExpr.
-   */
-  com.premiumminds.sonar.postgres.protobuf.CommonTableExpr getCommonTableExpr();
-  /**
-   * <code>.pg_query.CommonTableExpr common_table_expr = 216 [json_name = "CommonTableExpr"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.CommonTableExprOrBuilder getCommonTableExprOrBuilder();
-
-  /**
-   * <code>.pg_query.MergeWhenClause merge_when_clause = 217 [json_name = "MergeWhenClause"];</code>
-   * @return Whether the mergeWhenClause field is set.
-   */
-  boolean hasMergeWhenClause();
-  /**
-   * <code>.pg_query.MergeWhenClause merge_when_clause = 217 [json_name = "MergeWhenClause"];</code>
-   * @return The mergeWhenClause.
-   */
-  com.premiumminds.sonar.postgres.protobuf.MergeWhenClause getMergeWhenClause();
-  /**
-   * <code>.pg_query.MergeWhenClause merge_when_clause = 217 [json_name = "MergeWhenClause"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.MergeWhenClauseOrBuilder getMergeWhenClauseOrBuilder();
-
-  /**
-   * <code>.pg_query.RoleSpec role_spec = 218 [json_name = "RoleSpec"];</code>
+   * <code>.pg_query.RoleSpec role_spec = 63 [json_name = "RoleSpec"];</code>
    * @return Whether the roleSpec field is set.
    */
   boolean hasRoleSpec();
   /**
-   * <code>.pg_query.RoleSpec role_spec = 218 [json_name = "RoleSpec"];</code>
+   * <code>.pg_query.RoleSpec role_spec = 63 [json_name = "RoleSpec"];</code>
    * @return The roleSpec.
    */
   com.premiumminds.sonar.postgres.protobuf.RoleSpec getRoleSpec();
   /**
-   * <code>.pg_query.RoleSpec role_spec = 218 [json_name = "RoleSpec"];</code>
+   * <code>.pg_query.RoleSpec role_spec = 63 [json_name = "RoleSpec"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.RoleSpecOrBuilder getRoleSpecOrBuilder();
 
   /**
-   * <code>.pg_query.TriggerTransition trigger_transition = 219 [json_name = "TriggerTransition"];</code>
-   * @return Whether the triggerTransition field is set.
+   * <code>.pg_query.FuncCall func_call = 64 [json_name = "FuncCall"];</code>
+   * @return Whether the funcCall field is set.
    */
-  boolean hasTriggerTransition();
+  boolean hasFuncCall();
   /**
-   * <code>.pg_query.TriggerTransition trigger_transition = 219 [json_name = "TriggerTransition"];</code>
-   * @return The triggerTransition.
+   * <code>.pg_query.FuncCall func_call = 64 [json_name = "FuncCall"];</code>
+   * @return The funcCall.
    */
-  com.premiumminds.sonar.postgres.protobuf.TriggerTransition getTriggerTransition();
+  com.premiumminds.sonar.postgres.protobuf.FuncCall getFuncCall();
   /**
-   * <code>.pg_query.TriggerTransition trigger_transition = 219 [json_name = "TriggerTransition"];</code>
+   * <code>.pg_query.FuncCall func_call = 64 [json_name = "FuncCall"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.TriggerTransitionOrBuilder getTriggerTransitionOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.FuncCallOrBuilder getFuncCallOrBuilder();
 
   /**
-   * <code>.pg_query.PartitionElem partition_elem = 220 [json_name = "PartitionElem"];</code>
+   * <code>.pg_query.A_Star a_star = 65 [json_name = "A_Star"];</code>
+   * @return Whether the aStar field is set.
+   */
+  boolean hasAStar();
+  /**
+   * <code>.pg_query.A_Star a_star = 65 [json_name = "A_Star"];</code>
+   * @return The aStar.
+   */
+  com.premiumminds.sonar.postgres.protobuf.A_Star getAStar();
+  /**
+   * <code>.pg_query.A_Star a_star = 65 [json_name = "A_Star"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.A_StarOrBuilder getAStarOrBuilder();
+
+  /**
+   * <code>.pg_query.A_Indices a_indices = 66 [json_name = "A_Indices"];</code>
+   * @return Whether the aIndices field is set.
+   */
+  boolean hasAIndices();
+  /**
+   * <code>.pg_query.A_Indices a_indices = 66 [json_name = "A_Indices"];</code>
+   * @return The aIndices.
+   */
+  com.premiumminds.sonar.postgres.protobuf.A_Indices getAIndices();
+  /**
+   * <code>.pg_query.A_Indices a_indices = 66 [json_name = "A_Indices"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.A_IndicesOrBuilder getAIndicesOrBuilder();
+
+  /**
+   * <code>.pg_query.A_Indirection a_indirection = 67 [json_name = "A_Indirection"];</code>
+   * @return Whether the aIndirection field is set.
+   */
+  boolean hasAIndirection();
+  /**
+   * <code>.pg_query.A_Indirection a_indirection = 67 [json_name = "A_Indirection"];</code>
+   * @return The aIndirection.
+   */
+  com.premiumminds.sonar.postgres.protobuf.A_Indirection getAIndirection();
+  /**
+   * <code>.pg_query.A_Indirection a_indirection = 67 [json_name = "A_Indirection"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.A_IndirectionOrBuilder getAIndirectionOrBuilder();
+
+  /**
+   * <code>.pg_query.A_ArrayExpr a_array_expr = 68 [json_name = "A_ArrayExpr"];</code>
+   * @return Whether the aArrayExpr field is set.
+   */
+  boolean hasAArrayExpr();
+  /**
+   * <code>.pg_query.A_ArrayExpr a_array_expr = 68 [json_name = "A_ArrayExpr"];</code>
+   * @return The aArrayExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.A_ArrayExpr getAArrayExpr();
+  /**
+   * <code>.pg_query.A_ArrayExpr a_array_expr = 68 [json_name = "A_ArrayExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.A_ArrayExprOrBuilder getAArrayExprOrBuilder();
+
+  /**
+   * <code>.pg_query.ResTarget res_target = 69 [json_name = "ResTarget"];</code>
+   * @return Whether the resTarget field is set.
+   */
+  boolean hasResTarget();
+  /**
+   * <code>.pg_query.ResTarget res_target = 69 [json_name = "ResTarget"];</code>
+   * @return The resTarget.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ResTarget getResTarget();
+  /**
+   * <code>.pg_query.ResTarget res_target = 69 [json_name = "ResTarget"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ResTargetOrBuilder getResTargetOrBuilder();
+
+  /**
+   * <code>.pg_query.MultiAssignRef multi_assign_ref = 70 [json_name = "MultiAssignRef"];</code>
+   * @return Whether the multiAssignRef field is set.
+   */
+  boolean hasMultiAssignRef();
+  /**
+   * <code>.pg_query.MultiAssignRef multi_assign_ref = 70 [json_name = "MultiAssignRef"];</code>
+   * @return The multiAssignRef.
+   */
+  com.premiumminds.sonar.postgres.protobuf.MultiAssignRef getMultiAssignRef();
+  /**
+   * <code>.pg_query.MultiAssignRef multi_assign_ref = 70 [json_name = "MultiAssignRef"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.MultiAssignRefOrBuilder getMultiAssignRefOrBuilder();
+
+  /**
+   * <code>.pg_query.SortBy sort_by = 71 [json_name = "SortBy"];</code>
+   * @return Whether the sortBy field is set.
+   */
+  boolean hasSortBy();
+  /**
+   * <code>.pg_query.SortBy sort_by = 71 [json_name = "SortBy"];</code>
+   * @return The sortBy.
+   */
+  com.premiumminds.sonar.postgres.protobuf.SortBy getSortBy();
+  /**
+   * <code>.pg_query.SortBy sort_by = 71 [json_name = "SortBy"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.SortByOrBuilder getSortByOrBuilder();
+
+  /**
+   * <code>.pg_query.WindowDef window_def = 72 [json_name = "WindowDef"];</code>
+   * @return Whether the windowDef field is set.
+   */
+  boolean hasWindowDef();
+  /**
+   * <code>.pg_query.WindowDef window_def = 72 [json_name = "WindowDef"];</code>
+   * @return The windowDef.
+   */
+  com.premiumminds.sonar.postgres.protobuf.WindowDef getWindowDef();
+  /**
+   * <code>.pg_query.WindowDef window_def = 72 [json_name = "WindowDef"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.WindowDefOrBuilder getWindowDefOrBuilder();
+
+  /**
+   * <code>.pg_query.RangeSubselect range_subselect = 73 [json_name = "RangeSubselect"];</code>
+   * @return Whether the rangeSubselect field is set.
+   */
+  boolean hasRangeSubselect();
+  /**
+   * <code>.pg_query.RangeSubselect range_subselect = 73 [json_name = "RangeSubselect"];</code>
+   * @return The rangeSubselect.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeSubselect getRangeSubselect();
+  /**
+   * <code>.pg_query.RangeSubselect range_subselect = 73 [json_name = "RangeSubselect"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeSubselectOrBuilder getRangeSubselectOrBuilder();
+
+  /**
+   * <code>.pg_query.RangeFunction range_function = 74 [json_name = "RangeFunction"];</code>
+   * @return Whether the rangeFunction field is set.
+   */
+  boolean hasRangeFunction();
+  /**
+   * <code>.pg_query.RangeFunction range_function = 74 [json_name = "RangeFunction"];</code>
+   * @return The rangeFunction.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeFunction getRangeFunction();
+  /**
+   * <code>.pg_query.RangeFunction range_function = 74 [json_name = "RangeFunction"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeFunctionOrBuilder getRangeFunctionOrBuilder();
+
+  /**
+   * <code>.pg_query.RangeTableFunc range_table_func = 75 [json_name = "RangeTableFunc"];</code>
+   * @return Whether the rangeTableFunc field is set.
+   */
+  boolean hasRangeTableFunc();
+  /**
+   * <code>.pg_query.RangeTableFunc range_table_func = 75 [json_name = "RangeTableFunc"];</code>
+   * @return The rangeTableFunc.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeTableFunc getRangeTableFunc();
+  /**
+   * <code>.pg_query.RangeTableFunc range_table_func = 75 [json_name = "RangeTableFunc"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeTableFuncOrBuilder getRangeTableFuncOrBuilder();
+
+  /**
+   * <code>.pg_query.RangeTableFuncCol range_table_func_col = 76 [json_name = "RangeTableFuncCol"];</code>
+   * @return Whether the rangeTableFuncCol field is set.
+   */
+  boolean hasRangeTableFuncCol();
+  /**
+   * <code>.pg_query.RangeTableFuncCol range_table_func_col = 76 [json_name = "RangeTableFuncCol"];</code>
+   * @return The rangeTableFuncCol.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeTableFuncCol getRangeTableFuncCol();
+  /**
+   * <code>.pg_query.RangeTableFuncCol range_table_func_col = 76 [json_name = "RangeTableFuncCol"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeTableFuncColOrBuilder getRangeTableFuncColOrBuilder();
+
+  /**
+   * <code>.pg_query.RangeTableSample range_table_sample = 77 [json_name = "RangeTableSample"];</code>
+   * @return Whether the rangeTableSample field is set.
+   */
+  boolean hasRangeTableSample();
+  /**
+   * <code>.pg_query.RangeTableSample range_table_sample = 77 [json_name = "RangeTableSample"];</code>
+   * @return The rangeTableSample.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeTableSample getRangeTableSample();
+  /**
+   * <code>.pg_query.RangeTableSample range_table_sample = 77 [json_name = "RangeTableSample"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RangeTableSampleOrBuilder getRangeTableSampleOrBuilder();
+
+  /**
+   * <code>.pg_query.ColumnDef column_def = 78 [json_name = "ColumnDef"];</code>
+   * @return Whether the columnDef field is set.
+   */
+  boolean hasColumnDef();
+  /**
+   * <code>.pg_query.ColumnDef column_def = 78 [json_name = "ColumnDef"];</code>
+   * @return The columnDef.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ColumnDef getColumnDef();
+  /**
+   * <code>.pg_query.ColumnDef column_def = 78 [json_name = "ColumnDef"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ColumnDefOrBuilder getColumnDefOrBuilder();
+
+  /**
+   * <code>.pg_query.TableLikeClause table_like_clause = 79 [json_name = "TableLikeClause"];</code>
+   * @return Whether the tableLikeClause field is set.
+   */
+  boolean hasTableLikeClause();
+  /**
+   * <code>.pg_query.TableLikeClause table_like_clause = 79 [json_name = "TableLikeClause"];</code>
+   * @return The tableLikeClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.TableLikeClause getTableLikeClause();
+  /**
+   * <code>.pg_query.TableLikeClause table_like_clause = 79 [json_name = "TableLikeClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.TableLikeClauseOrBuilder getTableLikeClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.IndexElem index_elem = 80 [json_name = "IndexElem"];</code>
+   * @return Whether the indexElem field is set.
+   */
+  boolean hasIndexElem();
+  /**
+   * <code>.pg_query.IndexElem index_elem = 80 [json_name = "IndexElem"];</code>
+   * @return The indexElem.
+   */
+  com.premiumminds.sonar.postgres.protobuf.IndexElem getIndexElem();
+  /**
+   * <code>.pg_query.IndexElem index_elem = 80 [json_name = "IndexElem"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.IndexElemOrBuilder getIndexElemOrBuilder();
+
+  /**
+   * <code>.pg_query.DefElem def_elem = 81 [json_name = "DefElem"];</code>
+   * @return Whether the defElem field is set.
+   */
+  boolean hasDefElem();
+  /**
+   * <code>.pg_query.DefElem def_elem = 81 [json_name = "DefElem"];</code>
+   * @return The defElem.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DefElem getDefElem();
+  /**
+   * <code>.pg_query.DefElem def_elem = 81 [json_name = "DefElem"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DefElemOrBuilder getDefElemOrBuilder();
+
+  /**
+   * <code>.pg_query.LockingClause locking_clause = 82 [json_name = "LockingClause"];</code>
+   * @return Whether the lockingClause field is set.
+   */
+  boolean hasLockingClause();
+  /**
+   * <code>.pg_query.LockingClause locking_clause = 82 [json_name = "LockingClause"];</code>
+   * @return The lockingClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.LockingClause getLockingClause();
+  /**
+   * <code>.pg_query.LockingClause locking_clause = 82 [json_name = "LockingClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.LockingClauseOrBuilder getLockingClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.XmlSerialize xml_serialize = 83 [json_name = "XmlSerialize"];</code>
+   * @return Whether the xmlSerialize field is set.
+   */
+  boolean hasXmlSerialize();
+  /**
+   * <code>.pg_query.XmlSerialize xml_serialize = 83 [json_name = "XmlSerialize"];</code>
+   * @return The xmlSerialize.
+   */
+  com.premiumminds.sonar.postgres.protobuf.XmlSerialize getXmlSerialize();
+  /**
+   * <code>.pg_query.XmlSerialize xml_serialize = 83 [json_name = "XmlSerialize"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.XmlSerializeOrBuilder getXmlSerializeOrBuilder();
+
+  /**
+   * <code>.pg_query.PartitionElem partition_elem = 84 [json_name = "PartitionElem"];</code>
    * @return Whether the partitionElem field is set.
    */
   boolean hasPartitionElem();
   /**
-   * <code>.pg_query.PartitionElem partition_elem = 220 [json_name = "PartitionElem"];</code>
+   * <code>.pg_query.PartitionElem partition_elem = 84 [json_name = "PartitionElem"];</code>
    * @return The partitionElem.
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionElem getPartitionElem();
   /**
-   * <code>.pg_query.PartitionElem partition_elem = 220 [json_name = "PartitionElem"];</code>
+   * <code>.pg_query.PartitionElem partition_elem = 84 [json_name = "PartitionElem"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionElemOrBuilder getPartitionElemOrBuilder();
 
   /**
-   * <code>.pg_query.PartitionSpec partition_spec = 221 [json_name = "PartitionSpec"];</code>
+   * <code>.pg_query.PartitionSpec partition_spec = 85 [json_name = "PartitionSpec"];</code>
    * @return Whether the partitionSpec field is set.
    */
   boolean hasPartitionSpec();
   /**
-   * <code>.pg_query.PartitionSpec partition_spec = 221 [json_name = "PartitionSpec"];</code>
+   * <code>.pg_query.PartitionSpec partition_spec = 85 [json_name = "PartitionSpec"];</code>
    * @return The partitionSpec.
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionSpec getPartitionSpec();
   /**
-   * <code>.pg_query.PartitionSpec partition_spec = 221 [json_name = "PartitionSpec"];</code>
+   * <code>.pg_query.PartitionSpec partition_spec = 85 [json_name = "PartitionSpec"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionSpecOrBuilder getPartitionSpecOrBuilder();
 
   /**
-   * <code>.pg_query.PartitionBoundSpec partition_bound_spec = 222 [json_name = "PartitionBoundSpec"];</code>
+   * <code>.pg_query.PartitionBoundSpec partition_bound_spec = 86 [json_name = "PartitionBoundSpec"];</code>
    * @return Whether the partitionBoundSpec field is set.
    */
   boolean hasPartitionBoundSpec();
   /**
-   * <code>.pg_query.PartitionBoundSpec partition_bound_spec = 222 [json_name = "PartitionBoundSpec"];</code>
+   * <code>.pg_query.PartitionBoundSpec partition_bound_spec = 86 [json_name = "PartitionBoundSpec"];</code>
    * @return The partitionBoundSpec.
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionBoundSpec getPartitionBoundSpec();
   /**
-   * <code>.pg_query.PartitionBoundSpec partition_bound_spec = 222 [json_name = "PartitionBoundSpec"];</code>
+   * <code>.pg_query.PartitionBoundSpec partition_bound_spec = 86 [json_name = "PartitionBoundSpec"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionBoundSpecOrBuilder getPartitionBoundSpecOrBuilder();
 
   /**
-   * <code>.pg_query.PartitionRangeDatum partition_range_datum = 223 [json_name = "PartitionRangeDatum"];</code>
+   * <code>.pg_query.PartitionRangeDatum partition_range_datum = 87 [json_name = "PartitionRangeDatum"];</code>
    * @return Whether the partitionRangeDatum field is set.
    */
   boolean hasPartitionRangeDatum();
   /**
-   * <code>.pg_query.PartitionRangeDatum partition_range_datum = 223 [json_name = "PartitionRangeDatum"];</code>
+   * <code>.pg_query.PartitionRangeDatum partition_range_datum = 87 [json_name = "PartitionRangeDatum"];</code>
    * @return The partitionRangeDatum.
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionRangeDatum getPartitionRangeDatum();
   /**
-   * <code>.pg_query.PartitionRangeDatum partition_range_datum = 223 [json_name = "PartitionRangeDatum"];</code>
+   * <code>.pg_query.PartitionRangeDatum partition_range_datum = 87 [json_name = "PartitionRangeDatum"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionRangeDatumOrBuilder getPartitionRangeDatumOrBuilder();
 
   /**
-   * <code>.pg_query.PartitionCmd partition_cmd = 224 [json_name = "PartitionCmd"];</code>
+   * <code>.pg_query.PartitionCmd partition_cmd = 88 [json_name = "PartitionCmd"];</code>
    * @return Whether the partitionCmd field is set.
    */
   boolean hasPartitionCmd();
   /**
-   * <code>.pg_query.PartitionCmd partition_cmd = 224 [json_name = "PartitionCmd"];</code>
+   * <code>.pg_query.PartitionCmd partition_cmd = 88 [json_name = "PartitionCmd"];</code>
    * @return The partitionCmd.
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionCmd getPartitionCmd();
   /**
-   * <code>.pg_query.PartitionCmd partition_cmd = 224 [json_name = "PartitionCmd"];</code>
+   * <code>.pg_query.PartitionCmd partition_cmd = 88 [json_name = "PartitionCmd"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.PartitionCmdOrBuilder getPartitionCmdOrBuilder();
 
   /**
-   * <code>.pg_query.VacuumRelation vacuum_relation = 225 [json_name = "VacuumRelation"];</code>
-   * @return Whether the vacuumRelation field is set.
+   * <code>.pg_query.RangeTblEntry range_tbl_entry = 89 [json_name = "RangeTblEntry"];</code>
+   * @return Whether the rangeTblEntry field is set.
    */
-  boolean hasVacuumRelation();
+  boolean hasRangeTblEntry();
   /**
-   * <code>.pg_query.VacuumRelation vacuum_relation = 225 [json_name = "VacuumRelation"];</code>
-   * @return The vacuumRelation.
+   * <code>.pg_query.RangeTblEntry range_tbl_entry = 89 [json_name = "RangeTblEntry"];</code>
+   * @return The rangeTblEntry.
    */
-  com.premiumminds.sonar.postgres.protobuf.VacuumRelation getVacuumRelation();
+  com.premiumminds.sonar.postgres.protobuf.RangeTblEntry getRangeTblEntry();
   /**
-   * <code>.pg_query.VacuumRelation vacuum_relation = 225 [json_name = "VacuumRelation"];</code>
+   * <code>.pg_query.RangeTblEntry range_tbl_entry = 89 [json_name = "RangeTblEntry"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.VacuumRelationOrBuilder getVacuumRelationOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.RangeTblEntryOrBuilder getRangeTblEntryOrBuilder();
 
   /**
-   * <code>.pg_query.PublicationObjSpec publication_obj_spec = 226 [json_name = "PublicationObjSpec"];</code>
-   * @return Whether the publicationObjSpec field is set.
+   * <code>.pg_query.RTEPermissionInfo rtepermission_info = 90 [json_name = "RTEPermissionInfo"];</code>
+   * @return Whether the rtepermissionInfo field is set.
    */
-  boolean hasPublicationObjSpec();
+  boolean hasRtepermissionInfo();
   /**
-   * <code>.pg_query.PublicationObjSpec publication_obj_spec = 226 [json_name = "PublicationObjSpec"];</code>
-   * @return The publicationObjSpec.
+   * <code>.pg_query.RTEPermissionInfo rtepermission_info = 90 [json_name = "RTEPermissionInfo"];</code>
+   * @return The rtepermissionInfo.
    */
-  com.premiumminds.sonar.postgres.protobuf.PublicationObjSpec getPublicationObjSpec();
+  com.premiumminds.sonar.postgres.protobuf.RTEPermissionInfo getRtepermissionInfo();
   /**
-   * <code>.pg_query.PublicationObjSpec publication_obj_spec = 226 [json_name = "PublicationObjSpec"];</code>
+   * <code>.pg_query.RTEPermissionInfo rtepermission_info = 90 [json_name = "RTEPermissionInfo"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.PublicationObjSpecOrBuilder getPublicationObjSpecOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.RTEPermissionInfoOrBuilder getRtepermissionInfoOrBuilder();
 
   /**
-   * <code>.pg_query.PublicationTable publication_table = 227 [json_name = "PublicationTable"];</code>
-   * @return Whether the publicationTable field is set.
+   * <code>.pg_query.RangeTblFunction range_tbl_function = 91 [json_name = "RangeTblFunction"];</code>
+   * @return Whether the rangeTblFunction field is set.
    */
-  boolean hasPublicationTable();
+  boolean hasRangeTblFunction();
   /**
-   * <code>.pg_query.PublicationTable publication_table = 227 [json_name = "PublicationTable"];</code>
-   * @return The publicationTable.
+   * <code>.pg_query.RangeTblFunction range_tbl_function = 91 [json_name = "RangeTblFunction"];</code>
+   * @return The rangeTblFunction.
    */
-  com.premiumminds.sonar.postgres.protobuf.PublicationTable getPublicationTable();
+  com.premiumminds.sonar.postgres.protobuf.RangeTblFunction getRangeTblFunction();
   /**
-   * <code>.pg_query.PublicationTable publication_table = 227 [json_name = "PublicationTable"];</code>
+   * <code>.pg_query.RangeTblFunction range_tbl_function = 91 [json_name = "RangeTblFunction"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.PublicationTableOrBuilder getPublicationTableOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.RangeTblFunctionOrBuilder getRangeTblFunctionOrBuilder();
 
   /**
-   * <code>.pg_query.InlineCodeBlock inline_code_block = 228 [json_name = "InlineCodeBlock"];</code>
+   * <code>.pg_query.TableSampleClause table_sample_clause = 92 [json_name = "TableSampleClause"];</code>
+   * @return Whether the tableSampleClause field is set.
+   */
+  boolean hasTableSampleClause();
+  /**
+   * <code>.pg_query.TableSampleClause table_sample_clause = 92 [json_name = "TableSampleClause"];</code>
+   * @return The tableSampleClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.TableSampleClause getTableSampleClause();
+  /**
+   * <code>.pg_query.TableSampleClause table_sample_clause = 92 [json_name = "TableSampleClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.TableSampleClauseOrBuilder getTableSampleClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.WithCheckOption with_check_option = 93 [json_name = "WithCheckOption"];</code>
+   * @return Whether the withCheckOption field is set.
+   */
+  boolean hasWithCheckOption();
+  /**
+   * <code>.pg_query.WithCheckOption with_check_option = 93 [json_name = "WithCheckOption"];</code>
+   * @return The withCheckOption.
+   */
+  com.premiumminds.sonar.postgres.protobuf.WithCheckOption getWithCheckOption();
+  /**
+   * <code>.pg_query.WithCheckOption with_check_option = 93 [json_name = "WithCheckOption"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.WithCheckOptionOrBuilder getWithCheckOptionOrBuilder();
+
+  /**
+   * <code>.pg_query.SortGroupClause sort_group_clause = 94 [json_name = "SortGroupClause"];</code>
+   * @return Whether the sortGroupClause field is set.
+   */
+  boolean hasSortGroupClause();
+  /**
+   * <code>.pg_query.SortGroupClause sort_group_clause = 94 [json_name = "SortGroupClause"];</code>
+   * @return The sortGroupClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.SortGroupClause getSortGroupClause();
+  /**
+   * <code>.pg_query.SortGroupClause sort_group_clause = 94 [json_name = "SortGroupClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.SortGroupClauseOrBuilder getSortGroupClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.GroupingSet grouping_set = 95 [json_name = "GroupingSet"];</code>
+   * @return Whether the groupingSet field is set.
+   */
+  boolean hasGroupingSet();
+  /**
+   * <code>.pg_query.GroupingSet grouping_set = 95 [json_name = "GroupingSet"];</code>
+   * @return The groupingSet.
+   */
+  com.premiumminds.sonar.postgres.protobuf.GroupingSet getGroupingSet();
+  /**
+   * <code>.pg_query.GroupingSet grouping_set = 95 [json_name = "GroupingSet"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.GroupingSetOrBuilder getGroupingSetOrBuilder();
+
+  /**
+   * <code>.pg_query.WindowClause window_clause = 96 [json_name = "WindowClause"];</code>
+   * @return Whether the windowClause field is set.
+   */
+  boolean hasWindowClause();
+  /**
+   * <code>.pg_query.WindowClause window_clause = 96 [json_name = "WindowClause"];</code>
+   * @return The windowClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.WindowClause getWindowClause();
+  /**
+   * <code>.pg_query.WindowClause window_clause = 96 [json_name = "WindowClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.WindowClauseOrBuilder getWindowClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.RowMarkClause row_mark_clause = 97 [json_name = "RowMarkClause"];</code>
+   * @return Whether the rowMarkClause field is set.
+   */
+  boolean hasRowMarkClause();
+  /**
+   * <code>.pg_query.RowMarkClause row_mark_clause = 97 [json_name = "RowMarkClause"];</code>
+   * @return The rowMarkClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RowMarkClause getRowMarkClause();
+  /**
+   * <code>.pg_query.RowMarkClause row_mark_clause = 97 [json_name = "RowMarkClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RowMarkClauseOrBuilder getRowMarkClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.WithClause with_clause = 98 [json_name = "WithClause"];</code>
+   * @return Whether the withClause field is set.
+   */
+  boolean hasWithClause();
+  /**
+   * <code>.pg_query.WithClause with_clause = 98 [json_name = "WithClause"];</code>
+   * @return The withClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.WithClause getWithClause();
+  /**
+   * <code>.pg_query.WithClause with_clause = 98 [json_name = "WithClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.WithClauseOrBuilder getWithClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.InferClause infer_clause = 99 [json_name = "InferClause"];</code>
+   * @return Whether the inferClause field is set.
+   */
+  boolean hasInferClause();
+  /**
+   * <code>.pg_query.InferClause infer_clause = 99 [json_name = "InferClause"];</code>
+   * @return The inferClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.InferClause getInferClause();
+  /**
+   * <code>.pg_query.InferClause infer_clause = 99 [json_name = "InferClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.InferClauseOrBuilder getInferClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.OnConflictClause on_conflict_clause = 100 [json_name = "OnConflictClause"];</code>
+   * @return Whether the onConflictClause field is set.
+   */
+  boolean hasOnConflictClause();
+  /**
+   * <code>.pg_query.OnConflictClause on_conflict_clause = 100 [json_name = "OnConflictClause"];</code>
+   * @return The onConflictClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.OnConflictClause getOnConflictClause();
+  /**
+   * <code>.pg_query.OnConflictClause on_conflict_clause = 100 [json_name = "OnConflictClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.OnConflictClauseOrBuilder getOnConflictClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.CTESearchClause ctesearch_clause = 101 [json_name = "CTESearchClause"];</code>
+   * @return Whether the ctesearchClause field is set.
+   */
+  boolean hasCtesearchClause();
+  /**
+   * <code>.pg_query.CTESearchClause ctesearch_clause = 101 [json_name = "CTESearchClause"];</code>
+   * @return The ctesearchClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CTESearchClause getCtesearchClause();
+  /**
+   * <code>.pg_query.CTESearchClause ctesearch_clause = 101 [json_name = "CTESearchClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CTESearchClauseOrBuilder getCtesearchClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.CTECycleClause ctecycle_clause = 102 [json_name = "CTECycleClause"];</code>
+   * @return Whether the ctecycleClause field is set.
+   */
+  boolean hasCtecycleClause();
+  /**
+   * <code>.pg_query.CTECycleClause ctecycle_clause = 102 [json_name = "CTECycleClause"];</code>
+   * @return The ctecycleClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CTECycleClause getCtecycleClause();
+  /**
+   * <code>.pg_query.CTECycleClause ctecycle_clause = 102 [json_name = "CTECycleClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CTECycleClauseOrBuilder getCtecycleClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.CommonTableExpr common_table_expr = 103 [json_name = "CommonTableExpr"];</code>
+   * @return Whether the commonTableExpr field is set.
+   */
+  boolean hasCommonTableExpr();
+  /**
+   * <code>.pg_query.CommonTableExpr common_table_expr = 103 [json_name = "CommonTableExpr"];</code>
+   * @return The commonTableExpr.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CommonTableExpr getCommonTableExpr();
+  /**
+   * <code>.pg_query.CommonTableExpr common_table_expr = 103 [json_name = "CommonTableExpr"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CommonTableExprOrBuilder getCommonTableExprOrBuilder();
+
+  /**
+   * <code>.pg_query.MergeWhenClause merge_when_clause = 104 [json_name = "MergeWhenClause"];</code>
+   * @return Whether the mergeWhenClause field is set.
+   */
+  boolean hasMergeWhenClause();
+  /**
+   * <code>.pg_query.MergeWhenClause merge_when_clause = 104 [json_name = "MergeWhenClause"];</code>
+   * @return The mergeWhenClause.
+   */
+  com.premiumminds.sonar.postgres.protobuf.MergeWhenClause getMergeWhenClause();
+  /**
+   * <code>.pg_query.MergeWhenClause merge_when_clause = 104 [json_name = "MergeWhenClause"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.MergeWhenClauseOrBuilder getMergeWhenClauseOrBuilder();
+
+  /**
+   * <code>.pg_query.MergeAction merge_action = 105 [json_name = "MergeAction"];</code>
+   * @return Whether the mergeAction field is set.
+   */
+  boolean hasMergeAction();
+  /**
+   * <code>.pg_query.MergeAction merge_action = 105 [json_name = "MergeAction"];</code>
+   * @return The mergeAction.
+   */
+  com.premiumminds.sonar.postgres.protobuf.MergeAction getMergeAction();
+  /**
+   * <code>.pg_query.MergeAction merge_action = 105 [json_name = "MergeAction"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.MergeActionOrBuilder getMergeActionOrBuilder();
+
+  /**
+   * <code>.pg_query.TriggerTransition trigger_transition = 106 [json_name = "TriggerTransition"];</code>
+   * @return Whether the triggerTransition field is set.
+   */
+  boolean hasTriggerTransition();
+  /**
+   * <code>.pg_query.TriggerTransition trigger_transition = 106 [json_name = "TriggerTransition"];</code>
+   * @return The triggerTransition.
+   */
+  com.premiumminds.sonar.postgres.protobuf.TriggerTransition getTriggerTransition();
+  /**
+   * <code>.pg_query.TriggerTransition trigger_transition = 106 [json_name = "TriggerTransition"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.TriggerTransitionOrBuilder getTriggerTransitionOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonOutput json_output = 107 [json_name = "JsonOutput"];</code>
+   * @return Whether the jsonOutput field is set.
+   */
+  boolean hasJsonOutput();
+  /**
+   * <code>.pg_query.JsonOutput json_output = 107 [json_name = "JsonOutput"];</code>
+   * @return The jsonOutput.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonOutput getJsonOutput();
+  /**
+   * <code>.pg_query.JsonOutput json_output = 107 [json_name = "JsonOutput"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonOutputOrBuilder getJsonOutputOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonKeyValue json_key_value = 108 [json_name = "JsonKeyValue"];</code>
+   * @return Whether the jsonKeyValue field is set.
+   */
+  boolean hasJsonKeyValue();
+  /**
+   * <code>.pg_query.JsonKeyValue json_key_value = 108 [json_name = "JsonKeyValue"];</code>
+   * @return The jsonKeyValue.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonKeyValue getJsonKeyValue();
+  /**
+   * <code>.pg_query.JsonKeyValue json_key_value = 108 [json_name = "JsonKeyValue"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonKeyValueOrBuilder getJsonKeyValueOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonObjectConstructor json_object_constructor = 109 [json_name = "JsonObjectConstructor"];</code>
+   * @return Whether the jsonObjectConstructor field is set.
+   */
+  boolean hasJsonObjectConstructor();
+  /**
+   * <code>.pg_query.JsonObjectConstructor json_object_constructor = 109 [json_name = "JsonObjectConstructor"];</code>
+   * @return The jsonObjectConstructor.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonObjectConstructor getJsonObjectConstructor();
+  /**
+   * <code>.pg_query.JsonObjectConstructor json_object_constructor = 109 [json_name = "JsonObjectConstructor"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonObjectConstructorOrBuilder getJsonObjectConstructorOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonArrayConstructor json_array_constructor = 110 [json_name = "JsonArrayConstructor"];</code>
+   * @return Whether the jsonArrayConstructor field is set.
+   */
+  boolean hasJsonArrayConstructor();
+  /**
+   * <code>.pg_query.JsonArrayConstructor json_array_constructor = 110 [json_name = "JsonArrayConstructor"];</code>
+   * @return The jsonArrayConstructor.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonArrayConstructor getJsonArrayConstructor();
+  /**
+   * <code>.pg_query.JsonArrayConstructor json_array_constructor = 110 [json_name = "JsonArrayConstructor"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonArrayConstructorOrBuilder getJsonArrayConstructorOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonArrayQueryConstructor json_array_query_constructor = 111 [json_name = "JsonArrayQueryConstructor"];</code>
+   * @return Whether the jsonArrayQueryConstructor field is set.
+   */
+  boolean hasJsonArrayQueryConstructor();
+  /**
+   * <code>.pg_query.JsonArrayQueryConstructor json_array_query_constructor = 111 [json_name = "JsonArrayQueryConstructor"];</code>
+   * @return The jsonArrayQueryConstructor.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonArrayQueryConstructor getJsonArrayQueryConstructor();
+  /**
+   * <code>.pg_query.JsonArrayQueryConstructor json_array_query_constructor = 111 [json_name = "JsonArrayQueryConstructor"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonArrayQueryConstructorOrBuilder getJsonArrayQueryConstructorOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonAggConstructor json_agg_constructor = 112 [json_name = "JsonAggConstructor"];</code>
+   * @return Whether the jsonAggConstructor field is set.
+   */
+  boolean hasJsonAggConstructor();
+  /**
+   * <code>.pg_query.JsonAggConstructor json_agg_constructor = 112 [json_name = "JsonAggConstructor"];</code>
+   * @return The jsonAggConstructor.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonAggConstructor getJsonAggConstructor();
+  /**
+   * <code>.pg_query.JsonAggConstructor json_agg_constructor = 112 [json_name = "JsonAggConstructor"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonAggConstructorOrBuilder getJsonAggConstructorOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonObjectAgg json_object_agg = 113 [json_name = "JsonObjectAgg"];</code>
+   * @return Whether the jsonObjectAgg field is set.
+   */
+  boolean hasJsonObjectAgg();
+  /**
+   * <code>.pg_query.JsonObjectAgg json_object_agg = 113 [json_name = "JsonObjectAgg"];</code>
+   * @return The jsonObjectAgg.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonObjectAgg getJsonObjectAgg();
+  /**
+   * <code>.pg_query.JsonObjectAgg json_object_agg = 113 [json_name = "JsonObjectAgg"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonObjectAggOrBuilder getJsonObjectAggOrBuilder();
+
+  /**
+   * <code>.pg_query.JsonArrayAgg json_array_agg = 114 [json_name = "JsonArrayAgg"];</code>
+   * @return Whether the jsonArrayAgg field is set.
+   */
+  boolean hasJsonArrayAgg();
+  /**
+   * <code>.pg_query.JsonArrayAgg json_array_agg = 114 [json_name = "JsonArrayAgg"];</code>
+   * @return The jsonArrayAgg.
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonArrayAgg getJsonArrayAgg();
+  /**
+   * <code>.pg_query.JsonArrayAgg json_array_agg = 114 [json_name = "JsonArrayAgg"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.JsonArrayAggOrBuilder getJsonArrayAggOrBuilder();
+
+  /**
+   * <code>.pg_query.RawStmt raw_stmt = 115 [json_name = "RawStmt"];</code>
+   * @return Whether the rawStmt field is set.
+   */
+  boolean hasRawStmt();
+  /**
+   * <code>.pg_query.RawStmt raw_stmt = 115 [json_name = "RawStmt"];</code>
+   * @return The rawStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RawStmt getRawStmt();
+  /**
+   * <code>.pg_query.RawStmt raw_stmt = 115 [json_name = "RawStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RawStmtOrBuilder getRawStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.InsertStmt insert_stmt = 116 [json_name = "InsertStmt"];</code>
+   * @return Whether the insertStmt field is set.
+   */
+  boolean hasInsertStmt();
+  /**
+   * <code>.pg_query.InsertStmt insert_stmt = 116 [json_name = "InsertStmt"];</code>
+   * @return The insertStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.InsertStmt getInsertStmt();
+  /**
+   * <code>.pg_query.InsertStmt insert_stmt = 116 [json_name = "InsertStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.InsertStmtOrBuilder getInsertStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DeleteStmt delete_stmt = 117 [json_name = "DeleteStmt"];</code>
+   * @return Whether the deleteStmt field is set.
+   */
+  boolean hasDeleteStmt();
+  /**
+   * <code>.pg_query.DeleteStmt delete_stmt = 117 [json_name = "DeleteStmt"];</code>
+   * @return The deleteStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DeleteStmt getDeleteStmt();
+  /**
+   * <code>.pg_query.DeleteStmt delete_stmt = 117 [json_name = "DeleteStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DeleteStmtOrBuilder getDeleteStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.UpdateStmt update_stmt = 118 [json_name = "UpdateStmt"];</code>
+   * @return Whether the updateStmt field is set.
+   */
+  boolean hasUpdateStmt();
+  /**
+   * <code>.pg_query.UpdateStmt update_stmt = 118 [json_name = "UpdateStmt"];</code>
+   * @return The updateStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.UpdateStmt getUpdateStmt();
+  /**
+   * <code>.pg_query.UpdateStmt update_stmt = 118 [json_name = "UpdateStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.UpdateStmtOrBuilder getUpdateStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.MergeStmt merge_stmt = 119 [json_name = "MergeStmt"];</code>
+   * @return Whether the mergeStmt field is set.
+   */
+  boolean hasMergeStmt();
+  /**
+   * <code>.pg_query.MergeStmt merge_stmt = 119 [json_name = "MergeStmt"];</code>
+   * @return The mergeStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.MergeStmt getMergeStmt();
+  /**
+   * <code>.pg_query.MergeStmt merge_stmt = 119 [json_name = "MergeStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.MergeStmtOrBuilder getMergeStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.SelectStmt select_stmt = 120 [json_name = "SelectStmt"];</code>
+   * @return Whether the selectStmt field is set.
+   */
+  boolean hasSelectStmt();
+  /**
+   * <code>.pg_query.SelectStmt select_stmt = 120 [json_name = "SelectStmt"];</code>
+   * @return The selectStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.SelectStmt getSelectStmt();
+  /**
+   * <code>.pg_query.SelectStmt select_stmt = 120 [json_name = "SelectStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.SelectStmtOrBuilder getSelectStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.SetOperationStmt set_operation_stmt = 121 [json_name = "SetOperationStmt"];</code>
+   * @return Whether the setOperationStmt field is set.
+   */
+  boolean hasSetOperationStmt();
+  /**
+   * <code>.pg_query.SetOperationStmt set_operation_stmt = 121 [json_name = "SetOperationStmt"];</code>
+   * @return The setOperationStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.SetOperationStmt getSetOperationStmt();
+  /**
+   * <code>.pg_query.SetOperationStmt set_operation_stmt = 121 [json_name = "SetOperationStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.SetOperationStmtOrBuilder getSetOperationStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ReturnStmt return_stmt = 122 [json_name = "ReturnStmt"];</code>
+   * @return Whether the returnStmt field is set.
+   */
+  boolean hasReturnStmt();
+  /**
+   * <code>.pg_query.ReturnStmt return_stmt = 122 [json_name = "ReturnStmt"];</code>
+   * @return The returnStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ReturnStmt getReturnStmt();
+  /**
+   * <code>.pg_query.ReturnStmt return_stmt = 122 [json_name = "ReturnStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ReturnStmtOrBuilder getReturnStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.PLAssignStmt plassign_stmt = 123 [json_name = "PLAssignStmt"];</code>
+   * @return Whether the plassignStmt field is set.
+   */
+  boolean hasPlassignStmt();
+  /**
+   * <code>.pg_query.PLAssignStmt plassign_stmt = 123 [json_name = "PLAssignStmt"];</code>
+   * @return The plassignStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.PLAssignStmt getPlassignStmt();
+  /**
+   * <code>.pg_query.PLAssignStmt plassign_stmt = 123 [json_name = "PLAssignStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.PLAssignStmtOrBuilder getPlassignStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateSchemaStmt create_schema_stmt = 124 [json_name = "CreateSchemaStmt"];</code>
+   * @return Whether the createSchemaStmt field is set.
+   */
+  boolean hasCreateSchemaStmt();
+  /**
+   * <code>.pg_query.CreateSchemaStmt create_schema_stmt = 124 [json_name = "CreateSchemaStmt"];</code>
+   * @return The createSchemaStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateSchemaStmt getCreateSchemaStmt();
+  /**
+   * <code>.pg_query.CreateSchemaStmt create_schema_stmt = 124 [json_name = "CreateSchemaStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateSchemaStmtOrBuilder getCreateSchemaStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterTableStmt alter_table_stmt = 125 [json_name = "AlterTableStmt"];</code>
+   * @return Whether the alterTableStmt field is set.
+   */
+  boolean hasAlterTableStmt();
+  /**
+   * <code>.pg_query.AlterTableStmt alter_table_stmt = 125 [json_name = "AlterTableStmt"];</code>
+   * @return The alterTableStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTableStmt getAlterTableStmt();
+  /**
+   * <code>.pg_query.AlterTableStmt alter_table_stmt = 125 [json_name = "AlterTableStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTableStmtOrBuilder getAlterTableStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ReplicaIdentityStmt replica_identity_stmt = 126 [json_name = "ReplicaIdentityStmt"];</code>
+   * @return Whether the replicaIdentityStmt field is set.
+   */
+  boolean hasReplicaIdentityStmt();
+  /**
+   * <code>.pg_query.ReplicaIdentityStmt replica_identity_stmt = 126 [json_name = "ReplicaIdentityStmt"];</code>
+   * @return The replicaIdentityStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ReplicaIdentityStmt getReplicaIdentityStmt();
+  /**
+   * <code>.pg_query.ReplicaIdentityStmt replica_identity_stmt = 126 [json_name = "ReplicaIdentityStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ReplicaIdentityStmtOrBuilder getReplicaIdentityStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterTableCmd alter_table_cmd = 127 [json_name = "AlterTableCmd"];</code>
+   * @return Whether the alterTableCmd field is set.
+   */
+  boolean hasAlterTableCmd();
+  /**
+   * <code>.pg_query.AlterTableCmd alter_table_cmd = 127 [json_name = "AlterTableCmd"];</code>
+   * @return The alterTableCmd.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTableCmd getAlterTableCmd();
+  /**
+   * <code>.pg_query.AlterTableCmd alter_table_cmd = 127 [json_name = "AlterTableCmd"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTableCmdOrBuilder getAlterTableCmdOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterCollationStmt alter_collation_stmt = 128 [json_name = "AlterCollationStmt"];</code>
+   * @return Whether the alterCollationStmt field is set.
+   */
+  boolean hasAlterCollationStmt();
+  /**
+   * <code>.pg_query.AlterCollationStmt alter_collation_stmt = 128 [json_name = "AlterCollationStmt"];</code>
+   * @return The alterCollationStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterCollationStmt getAlterCollationStmt();
+  /**
+   * <code>.pg_query.AlterCollationStmt alter_collation_stmt = 128 [json_name = "AlterCollationStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterCollationStmtOrBuilder getAlterCollationStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterDomainStmt alter_domain_stmt = 129 [json_name = "AlterDomainStmt"];</code>
+   * @return Whether the alterDomainStmt field is set.
+   */
+  boolean hasAlterDomainStmt();
+  /**
+   * <code>.pg_query.AlterDomainStmt alter_domain_stmt = 129 [json_name = "AlterDomainStmt"];</code>
+   * @return The alterDomainStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterDomainStmt getAlterDomainStmt();
+  /**
+   * <code>.pg_query.AlterDomainStmt alter_domain_stmt = 129 [json_name = "AlterDomainStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterDomainStmtOrBuilder getAlterDomainStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.GrantStmt grant_stmt = 130 [json_name = "GrantStmt"];</code>
+   * @return Whether the grantStmt field is set.
+   */
+  boolean hasGrantStmt();
+  /**
+   * <code>.pg_query.GrantStmt grant_stmt = 130 [json_name = "GrantStmt"];</code>
+   * @return The grantStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.GrantStmt getGrantStmt();
+  /**
+   * <code>.pg_query.GrantStmt grant_stmt = 130 [json_name = "GrantStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.GrantStmtOrBuilder getGrantStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ObjectWithArgs object_with_args = 131 [json_name = "ObjectWithArgs"];</code>
+   * @return Whether the objectWithArgs field is set.
+   */
+  boolean hasObjectWithArgs();
+  /**
+   * <code>.pg_query.ObjectWithArgs object_with_args = 131 [json_name = "ObjectWithArgs"];</code>
+   * @return The objectWithArgs.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ObjectWithArgs getObjectWithArgs();
+  /**
+   * <code>.pg_query.ObjectWithArgs object_with_args = 131 [json_name = "ObjectWithArgs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ObjectWithArgsOrBuilder getObjectWithArgsOrBuilder();
+
+  /**
+   * <code>.pg_query.AccessPriv access_priv = 132 [json_name = "AccessPriv"];</code>
+   * @return Whether the accessPriv field is set.
+   */
+  boolean hasAccessPriv();
+  /**
+   * <code>.pg_query.AccessPriv access_priv = 132 [json_name = "AccessPriv"];</code>
+   * @return The accessPriv.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AccessPriv getAccessPriv();
+  /**
+   * <code>.pg_query.AccessPriv access_priv = 132 [json_name = "AccessPriv"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AccessPrivOrBuilder getAccessPrivOrBuilder();
+
+  /**
+   * <code>.pg_query.GrantRoleStmt grant_role_stmt = 133 [json_name = "GrantRoleStmt"];</code>
+   * @return Whether the grantRoleStmt field is set.
+   */
+  boolean hasGrantRoleStmt();
+  /**
+   * <code>.pg_query.GrantRoleStmt grant_role_stmt = 133 [json_name = "GrantRoleStmt"];</code>
+   * @return The grantRoleStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.GrantRoleStmt getGrantRoleStmt();
+  /**
+   * <code>.pg_query.GrantRoleStmt grant_role_stmt = 133 [json_name = "GrantRoleStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.GrantRoleStmtOrBuilder getGrantRoleStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterDefaultPrivilegesStmt alter_default_privileges_stmt = 134 [json_name = "AlterDefaultPrivilegesStmt"];</code>
+   * @return Whether the alterDefaultPrivilegesStmt field is set.
+   */
+  boolean hasAlterDefaultPrivilegesStmt();
+  /**
+   * <code>.pg_query.AlterDefaultPrivilegesStmt alter_default_privileges_stmt = 134 [json_name = "AlterDefaultPrivilegesStmt"];</code>
+   * @return The alterDefaultPrivilegesStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterDefaultPrivilegesStmt getAlterDefaultPrivilegesStmt();
+  /**
+   * <code>.pg_query.AlterDefaultPrivilegesStmt alter_default_privileges_stmt = 134 [json_name = "AlterDefaultPrivilegesStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterDefaultPrivilegesStmtOrBuilder getAlterDefaultPrivilegesStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CopyStmt copy_stmt = 135 [json_name = "CopyStmt"];</code>
+   * @return Whether the copyStmt field is set.
+   */
+  boolean hasCopyStmt();
+  /**
+   * <code>.pg_query.CopyStmt copy_stmt = 135 [json_name = "CopyStmt"];</code>
+   * @return The copyStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CopyStmt getCopyStmt();
+  /**
+   * <code>.pg_query.CopyStmt copy_stmt = 135 [json_name = "CopyStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CopyStmtOrBuilder getCopyStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.VariableSetStmt variable_set_stmt = 136 [json_name = "VariableSetStmt"];</code>
+   * @return Whether the variableSetStmt field is set.
+   */
+  boolean hasVariableSetStmt();
+  /**
+   * <code>.pg_query.VariableSetStmt variable_set_stmt = 136 [json_name = "VariableSetStmt"];</code>
+   * @return The variableSetStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.VariableSetStmt getVariableSetStmt();
+  /**
+   * <code>.pg_query.VariableSetStmt variable_set_stmt = 136 [json_name = "VariableSetStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.VariableSetStmtOrBuilder getVariableSetStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.VariableShowStmt variable_show_stmt = 137 [json_name = "VariableShowStmt"];</code>
+   * @return Whether the variableShowStmt field is set.
+   */
+  boolean hasVariableShowStmt();
+  /**
+   * <code>.pg_query.VariableShowStmt variable_show_stmt = 137 [json_name = "VariableShowStmt"];</code>
+   * @return The variableShowStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.VariableShowStmt getVariableShowStmt();
+  /**
+   * <code>.pg_query.VariableShowStmt variable_show_stmt = 137 [json_name = "VariableShowStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.VariableShowStmtOrBuilder getVariableShowStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateStmt create_stmt = 138 [json_name = "CreateStmt"];</code>
+   * @return Whether the createStmt field is set.
+   */
+  boolean hasCreateStmt();
+  /**
+   * <code>.pg_query.CreateStmt create_stmt = 138 [json_name = "CreateStmt"];</code>
+   * @return The createStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateStmt getCreateStmt();
+  /**
+   * <code>.pg_query.CreateStmt create_stmt = 138 [json_name = "CreateStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateStmtOrBuilder getCreateStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.Constraint constraint = 139 [json_name = "Constraint"];</code>
+   * @return Whether the constraint field is set.
+   */
+  boolean hasConstraint();
+  /**
+   * <code>.pg_query.Constraint constraint = 139 [json_name = "Constraint"];</code>
+   * @return The constraint.
+   */
+  com.premiumminds.sonar.postgres.protobuf.Constraint getConstraint();
+  /**
+   * <code>.pg_query.Constraint constraint = 139 [json_name = "Constraint"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ConstraintOrBuilder getConstraintOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateTableSpaceStmt create_table_space_stmt = 140 [json_name = "CreateTableSpaceStmt"];</code>
+   * @return Whether the createTableSpaceStmt field is set.
+   */
+  boolean hasCreateTableSpaceStmt();
+  /**
+   * <code>.pg_query.CreateTableSpaceStmt create_table_space_stmt = 140 [json_name = "CreateTableSpaceStmt"];</code>
+   * @return The createTableSpaceStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateTableSpaceStmt getCreateTableSpaceStmt();
+  /**
+   * <code>.pg_query.CreateTableSpaceStmt create_table_space_stmt = 140 [json_name = "CreateTableSpaceStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateTableSpaceStmtOrBuilder getCreateTableSpaceStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DropTableSpaceStmt drop_table_space_stmt = 141 [json_name = "DropTableSpaceStmt"];</code>
+   * @return Whether the dropTableSpaceStmt field is set.
+   */
+  boolean hasDropTableSpaceStmt();
+  /**
+   * <code>.pg_query.DropTableSpaceStmt drop_table_space_stmt = 141 [json_name = "DropTableSpaceStmt"];</code>
+   * @return The dropTableSpaceStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropTableSpaceStmt getDropTableSpaceStmt();
+  /**
+   * <code>.pg_query.DropTableSpaceStmt drop_table_space_stmt = 141 [json_name = "DropTableSpaceStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropTableSpaceStmtOrBuilder getDropTableSpaceStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterTableSpaceOptionsStmt alter_table_space_options_stmt = 142 [json_name = "AlterTableSpaceOptionsStmt"];</code>
+   * @return Whether the alterTableSpaceOptionsStmt field is set.
+   */
+  boolean hasAlterTableSpaceOptionsStmt();
+  /**
+   * <code>.pg_query.AlterTableSpaceOptionsStmt alter_table_space_options_stmt = 142 [json_name = "AlterTableSpaceOptionsStmt"];</code>
+   * @return The alterTableSpaceOptionsStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTableSpaceOptionsStmt getAlterTableSpaceOptionsStmt();
+  /**
+   * <code>.pg_query.AlterTableSpaceOptionsStmt alter_table_space_options_stmt = 142 [json_name = "AlterTableSpaceOptionsStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTableSpaceOptionsStmtOrBuilder getAlterTableSpaceOptionsStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterTableMoveAllStmt alter_table_move_all_stmt = 143 [json_name = "AlterTableMoveAllStmt"];</code>
+   * @return Whether the alterTableMoveAllStmt field is set.
+   */
+  boolean hasAlterTableMoveAllStmt();
+  /**
+   * <code>.pg_query.AlterTableMoveAllStmt alter_table_move_all_stmt = 143 [json_name = "AlterTableMoveAllStmt"];</code>
+   * @return The alterTableMoveAllStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTableMoveAllStmt getAlterTableMoveAllStmt();
+  /**
+   * <code>.pg_query.AlterTableMoveAllStmt alter_table_move_all_stmt = 143 [json_name = "AlterTableMoveAllStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTableMoveAllStmtOrBuilder getAlterTableMoveAllStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateExtensionStmt create_extension_stmt = 144 [json_name = "CreateExtensionStmt"];</code>
+   * @return Whether the createExtensionStmt field is set.
+   */
+  boolean hasCreateExtensionStmt();
+  /**
+   * <code>.pg_query.CreateExtensionStmt create_extension_stmt = 144 [json_name = "CreateExtensionStmt"];</code>
+   * @return The createExtensionStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateExtensionStmt getCreateExtensionStmt();
+  /**
+   * <code>.pg_query.CreateExtensionStmt create_extension_stmt = 144 [json_name = "CreateExtensionStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateExtensionStmtOrBuilder getCreateExtensionStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterExtensionStmt alter_extension_stmt = 145 [json_name = "AlterExtensionStmt"];</code>
+   * @return Whether the alterExtensionStmt field is set.
+   */
+  boolean hasAlterExtensionStmt();
+  /**
+   * <code>.pg_query.AlterExtensionStmt alter_extension_stmt = 145 [json_name = "AlterExtensionStmt"];</code>
+   * @return The alterExtensionStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterExtensionStmt getAlterExtensionStmt();
+  /**
+   * <code>.pg_query.AlterExtensionStmt alter_extension_stmt = 145 [json_name = "AlterExtensionStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterExtensionStmtOrBuilder getAlterExtensionStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterExtensionContentsStmt alter_extension_contents_stmt = 146 [json_name = "AlterExtensionContentsStmt"];</code>
+   * @return Whether the alterExtensionContentsStmt field is set.
+   */
+  boolean hasAlterExtensionContentsStmt();
+  /**
+   * <code>.pg_query.AlterExtensionContentsStmt alter_extension_contents_stmt = 146 [json_name = "AlterExtensionContentsStmt"];</code>
+   * @return The alterExtensionContentsStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterExtensionContentsStmt getAlterExtensionContentsStmt();
+  /**
+   * <code>.pg_query.AlterExtensionContentsStmt alter_extension_contents_stmt = 146 [json_name = "AlterExtensionContentsStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterExtensionContentsStmtOrBuilder getAlterExtensionContentsStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateFdwStmt create_fdw_stmt = 147 [json_name = "CreateFdwStmt"];</code>
+   * @return Whether the createFdwStmt field is set.
+   */
+  boolean hasCreateFdwStmt();
+  /**
+   * <code>.pg_query.CreateFdwStmt create_fdw_stmt = 147 [json_name = "CreateFdwStmt"];</code>
+   * @return The createFdwStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateFdwStmt getCreateFdwStmt();
+  /**
+   * <code>.pg_query.CreateFdwStmt create_fdw_stmt = 147 [json_name = "CreateFdwStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateFdwStmtOrBuilder getCreateFdwStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterFdwStmt alter_fdw_stmt = 148 [json_name = "AlterFdwStmt"];</code>
+   * @return Whether the alterFdwStmt field is set.
+   */
+  boolean hasAlterFdwStmt();
+  /**
+   * <code>.pg_query.AlterFdwStmt alter_fdw_stmt = 148 [json_name = "AlterFdwStmt"];</code>
+   * @return The alterFdwStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterFdwStmt getAlterFdwStmt();
+  /**
+   * <code>.pg_query.AlterFdwStmt alter_fdw_stmt = 148 [json_name = "AlterFdwStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterFdwStmtOrBuilder getAlterFdwStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateForeignServerStmt create_foreign_server_stmt = 149 [json_name = "CreateForeignServerStmt"];</code>
+   * @return Whether the createForeignServerStmt field is set.
+   */
+  boolean hasCreateForeignServerStmt();
+  /**
+   * <code>.pg_query.CreateForeignServerStmt create_foreign_server_stmt = 149 [json_name = "CreateForeignServerStmt"];</code>
+   * @return The createForeignServerStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateForeignServerStmt getCreateForeignServerStmt();
+  /**
+   * <code>.pg_query.CreateForeignServerStmt create_foreign_server_stmt = 149 [json_name = "CreateForeignServerStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateForeignServerStmtOrBuilder getCreateForeignServerStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterForeignServerStmt alter_foreign_server_stmt = 150 [json_name = "AlterForeignServerStmt"];</code>
+   * @return Whether the alterForeignServerStmt field is set.
+   */
+  boolean hasAlterForeignServerStmt();
+  /**
+   * <code>.pg_query.AlterForeignServerStmt alter_foreign_server_stmt = 150 [json_name = "AlterForeignServerStmt"];</code>
+   * @return The alterForeignServerStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterForeignServerStmt getAlterForeignServerStmt();
+  /**
+   * <code>.pg_query.AlterForeignServerStmt alter_foreign_server_stmt = 150 [json_name = "AlterForeignServerStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterForeignServerStmtOrBuilder getAlterForeignServerStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateForeignTableStmt create_foreign_table_stmt = 151 [json_name = "CreateForeignTableStmt"];</code>
+   * @return Whether the createForeignTableStmt field is set.
+   */
+  boolean hasCreateForeignTableStmt();
+  /**
+   * <code>.pg_query.CreateForeignTableStmt create_foreign_table_stmt = 151 [json_name = "CreateForeignTableStmt"];</code>
+   * @return The createForeignTableStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateForeignTableStmt getCreateForeignTableStmt();
+  /**
+   * <code>.pg_query.CreateForeignTableStmt create_foreign_table_stmt = 151 [json_name = "CreateForeignTableStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateForeignTableStmtOrBuilder getCreateForeignTableStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateUserMappingStmt create_user_mapping_stmt = 152 [json_name = "CreateUserMappingStmt"];</code>
+   * @return Whether the createUserMappingStmt field is set.
+   */
+  boolean hasCreateUserMappingStmt();
+  /**
+   * <code>.pg_query.CreateUserMappingStmt create_user_mapping_stmt = 152 [json_name = "CreateUserMappingStmt"];</code>
+   * @return The createUserMappingStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateUserMappingStmt getCreateUserMappingStmt();
+  /**
+   * <code>.pg_query.CreateUserMappingStmt create_user_mapping_stmt = 152 [json_name = "CreateUserMappingStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateUserMappingStmtOrBuilder getCreateUserMappingStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterUserMappingStmt alter_user_mapping_stmt = 153 [json_name = "AlterUserMappingStmt"];</code>
+   * @return Whether the alterUserMappingStmt field is set.
+   */
+  boolean hasAlterUserMappingStmt();
+  /**
+   * <code>.pg_query.AlterUserMappingStmt alter_user_mapping_stmt = 153 [json_name = "AlterUserMappingStmt"];</code>
+   * @return The alterUserMappingStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterUserMappingStmt getAlterUserMappingStmt();
+  /**
+   * <code>.pg_query.AlterUserMappingStmt alter_user_mapping_stmt = 153 [json_name = "AlterUserMappingStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterUserMappingStmtOrBuilder getAlterUserMappingStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DropUserMappingStmt drop_user_mapping_stmt = 154 [json_name = "DropUserMappingStmt"];</code>
+   * @return Whether the dropUserMappingStmt field is set.
+   */
+  boolean hasDropUserMappingStmt();
+  /**
+   * <code>.pg_query.DropUserMappingStmt drop_user_mapping_stmt = 154 [json_name = "DropUserMappingStmt"];</code>
+   * @return The dropUserMappingStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropUserMappingStmt getDropUserMappingStmt();
+  /**
+   * <code>.pg_query.DropUserMappingStmt drop_user_mapping_stmt = 154 [json_name = "DropUserMappingStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropUserMappingStmtOrBuilder getDropUserMappingStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ImportForeignSchemaStmt import_foreign_schema_stmt = 155 [json_name = "ImportForeignSchemaStmt"];</code>
+   * @return Whether the importForeignSchemaStmt field is set.
+   */
+  boolean hasImportForeignSchemaStmt();
+  /**
+   * <code>.pg_query.ImportForeignSchemaStmt import_foreign_schema_stmt = 155 [json_name = "ImportForeignSchemaStmt"];</code>
+   * @return The importForeignSchemaStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ImportForeignSchemaStmt getImportForeignSchemaStmt();
+  /**
+   * <code>.pg_query.ImportForeignSchemaStmt import_foreign_schema_stmt = 155 [json_name = "ImportForeignSchemaStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ImportForeignSchemaStmtOrBuilder getImportForeignSchemaStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreatePolicyStmt create_policy_stmt = 156 [json_name = "CreatePolicyStmt"];</code>
+   * @return Whether the createPolicyStmt field is set.
+   */
+  boolean hasCreatePolicyStmt();
+  /**
+   * <code>.pg_query.CreatePolicyStmt create_policy_stmt = 156 [json_name = "CreatePolicyStmt"];</code>
+   * @return The createPolicyStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreatePolicyStmt getCreatePolicyStmt();
+  /**
+   * <code>.pg_query.CreatePolicyStmt create_policy_stmt = 156 [json_name = "CreatePolicyStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreatePolicyStmtOrBuilder getCreatePolicyStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterPolicyStmt alter_policy_stmt = 157 [json_name = "AlterPolicyStmt"];</code>
+   * @return Whether the alterPolicyStmt field is set.
+   */
+  boolean hasAlterPolicyStmt();
+  /**
+   * <code>.pg_query.AlterPolicyStmt alter_policy_stmt = 157 [json_name = "AlterPolicyStmt"];</code>
+   * @return The alterPolicyStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterPolicyStmt getAlterPolicyStmt();
+  /**
+   * <code>.pg_query.AlterPolicyStmt alter_policy_stmt = 157 [json_name = "AlterPolicyStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterPolicyStmtOrBuilder getAlterPolicyStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateAmStmt create_am_stmt = 158 [json_name = "CreateAmStmt"];</code>
+   * @return Whether the createAmStmt field is set.
+   */
+  boolean hasCreateAmStmt();
+  /**
+   * <code>.pg_query.CreateAmStmt create_am_stmt = 158 [json_name = "CreateAmStmt"];</code>
+   * @return The createAmStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateAmStmt getCreateAmStmt();
+  /**
+   * <code>.pg_query.CreateAmStmt create_am_stmt = 158 [json_name = "CreateAmStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateAmStmtOrBuilder getCreateAmStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateTrigStmt create_trig_stmt = 159 [json_name = "CreateTrigStmt"];</code>
+   * @return Whether the createTrigStmt field is set.
+   */
+  boolean hasCreateTrigStmt();
+  /**
+   * <code>.pg_query.CreateTrigStmt create_trig_stmt = 159 [json_name = "CreateTrigStmt"];</code>
+   * @return The createTrigStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateTrigStmt getCreateTrigStmt();
+  /**
+   * <code>.pg_query.CreateTrigStmt create_trig_stmt = 159 [json_name = "CreateTrigStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateTrigStmtOrBuilder getCreateTrigStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateEventTrigStmt create_event_trig_stmt = 160 [json_name = "CreateEventTrigStmt"];</code>
+   * @return Whether the createEventTrigStmt field is set.
+   */
+  boolean hasCreateEventTrigStmt();
+  /**
+   * <code>.pg_query.CreateEventTrigStmt create_event_trig_stmt = 160 [json_name = "CreateEventTrigStmt"];</code>
+   * @return The createEventTrigStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateEventTrigStmt getCreateEventTrigStmt();
+  /**
+   * <code>.pg_query.CreateEventTrigStmt create_event_trig_stmt = 160 [json_name = "CreateEventTrigStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateEventTrigStmtOrBuilder getCreateEventTrigStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterEventTrigStmt alter_event_trig_stmt = 161 [json_name = "AlterEventTrigStmt"];</code>
+   * @return Whether the alterEventTrigStmt field is set.
+   */
+  boolean hasAlterEventTrigStmt();
+  /**
+   * <code>.pg_query.AlterEventTrigStmt alter_event_trig_stmt = 161 [json_name = "AlterEventTrigStmt"];</code>
+   * @return The alterEventTrigStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterEventTrigStmt getAlterEventTrigStmt();
+  /**
+   * <code>.pg_query.AlterEventTrigStmt alter_event_trig_stmt = 161 [json_name = "AlterEventTrigStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterEventTrigStmtOrBuilder getAlterEventTrigStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreatePLangStmt create_plang_stmt = 162 [json_name = "CreatePLangStmt"];</code>
+   * @return Whether the createPlangStmt field is set.
+   */
+  boolean hasCreatePlangStmt();
+  /**
+   * <code>.pg_query.CreatePLangStmt create_plang_stmt = 162 [json_name = "CreatePLangStmt"];</code>
+   * @return The createPlangStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreatePLangStmt getCreatePlangStmt();
+  /**
+   * <code>.pg_query.CreatePLangStmt create_plang_stmt = 162 [json_name = "CreatePLangStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreatePLangStmtOrBuilder getCreatePlangStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateRoleStmt create_role_stmt = 163 [json_name = "CreateRoleStmt"];</code>
+   * @return Whether the createRoleStmt field is set.
+   */
+  boolean hasCreateRoleStmt();
+  /**
+   * <code>.pg_query.CreateRoleStmt create_role_stmt = 163 [json_name = "CreateRoleStmt"];</code>
+   * @return The createRoleStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateRoleStmt getCreateRoleStmt();
+  /**
+   * <code>.pg_query.CreateRoleStmt create_role_stmt = 163 [json_name = "CreateRoleStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateRoleStmtOrBuilder getCreateRoleStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterRoleStmt alter_role_stmt = 164 [json_name = "AlterRoleStmt"];</code>
+   * @return Whether the alterRoleStmt field is set.
+   */
+  boolean hasAlterRoleStmt();
+  /**
+   * <code>.pg_query.AlterRoleStmt alter_role_stmt = 164 [json_name = "AlterRoleStmt"];</code>
+   * @return The alterRoleStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterRoleStmt getAlterRoleStmt();
+  /**
+   * <code>.pg_query.AlterRoleStmt alter_role_stmt = 164 [json_name = "AlterRoleStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterRoleStmtOrBuilder getAlterRoleStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterRoleSetStmt alter_role_set_stmt = 165 [json_name = "AlterRoleSetStmt"];</code>
+   * @return Whether the alterRoleSetStmt field is set.
+   */
+  boolean hasAlterRoleSetStmt();
+  /**
+   * <code>.pg_query.AlterRoleSetStmt alter_role_set_stmt = 165 [json_name = "AlterRoleSetStmt"];</code>
+   * @return The alterRoleSetStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterRoleSetStmt getAlterRoleSetStmt();
+  /**
+   * <code>.pg_query.AlterRoleSetStmt alter_role_set_stmt = 165 [json_name = "AlterRoleSetStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterRoleSetStmtOrBuilder getAlterRoleSetStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DropRoleStmt drop_role_stmt = 166 [json_name = "DropRoleStmt"];</code>
+   * @return Whether the dropRoleStmt field is set.
+   */
+  boolean hasDropRoleStmt();
+  /**
+   * <code>.pg_query.DropRoleStmt drop_role_stmt = 166 [json_name = "DropRoleStmt"];</code>
+   * @return The dropRoleStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropRoleStmt getDropRoleStmt();
+  /**
+   * <code>.pg_query.DropRoleStmt drop_role_stmt = 166 [json_name = "DropRoleStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropRoleStmtOrBuilder getDropRoleStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateSeqStmt create_seq_stmt = 167 [json_name = "CreateSeqStmt"];</code>
+   * @return Whether the createSeqStmt field is set.
+   */
+  boolean hasCreateSeqStmt();
+  /**
+   * <code>.pg_query.CreateSeqStmt create_seq_stmt = 167 [json_name = "CreateSeqStmt"];</code>
+   * @return The createSeqStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateSeqStmt getCreateSeqStmt();
+  /**
+   * <code>.pg_query.CreateSeqStmt create_seq_stmt = 167 [json_name = "CreateSeqStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateSeqStmtOrBuilder getCreateSeqStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterSeqStmt alter_seq_stmt = 168 [json_name = "AlterSeqStmt"];</code>
+   * @return Whether the alterSeqStmt field is set.
+   */
+  boolean hasAlterSeqStmt();
+  /**
+   * <code>.pg_query.AlterSeqStmt alter_seq_stmt = 168 [json_name = "AlterSeqStmt"];</code>
+   * @return The alterSeqStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterSeqStmt getAlterSeqStmt();
+  /**
+   * <code>.pg_query.AlterSeqStmt alter_seq_stmt = 168 [json_name = "AlterSeqStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterSeqStmtOrBuilder getAlterSeqStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DefineStmt define_stmt = 169 [json_name = "DefineStmt"];</code>
+   * @return Whether the defineStmt field is set.
+   */
+  boolean hasDefineStmt();
+  /**
+   * <code>.pg_query.DefineStmt define_stmt = 169 [json_name = "DefineStmt"];</code>
+   * @return The defineStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DefineStmt getDefineStmt();
+  /**
+   * <code>.pg_query.DefineStmt define_stmt = 169 [json_name = "DefineStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DefineStmtOrBuilder getDefineStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateDomainStmt create_domain_stmt = 170 [json_name = "CreateDomainStmt"];</code>
+   * @return Whether the createDomainStmt field is set.
+   */
+  boolean hasCreateDomainStmt();
+  /**
+   * <code>.pg_query.CreateDomainStmt create_domain_stmt = 170 [json_name = "CreateDomainStmt"];</code>
+   * @return The createDomainStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateDomainStmt getCreateDomainStmt();
+  /**
+   * <code>.pg_query.CreateDomainStmt create_domain_stmt = 170 [json_name = "CreateDomainStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateDomainStmtOrBuilder getCreateDomainStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateOpClassStmt create_op_class_stmt = 171 [json_name = "CreateOpClassStmt"];</code>
+   * @return Whether the createOpClassStmt field is set.
+   */
+  boolean hasCreateOpClassStmt();
+  /**
+   * <code>.pg_query.CreateOpClassStmt create_op_class_stmt = 171 [json_name = "CreateOpClassStmt"];</code>
+   * @return The createOpClassStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateOpClassStmt getCreateOpClassStmt();
+  /**
+   * <code>.pg_query.CreateOpClassStmt create_op_class_stmt = 171 [json_name = "CreateOpClassStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateOpClassStmtOrBuilder getCreateOpClassStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateOpClassItem create_op_class_item = 172 [json_name = "CreateOpClassItem"];</code>
+   * @return Whether the createOpClassItem field is set.
+   */
+  boolean hasCreateOpClassItem();
+  /**
+   * <code>.pg_query.CreateOpClassItem create_op_class_item = 172 [json_name = "CreateOpClassItem"];</code>
+   * @return The createOpClassItem.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateOpClassItem getCreateOpClassItem();
+  /**
+   * <code>.pg_query.CreateOpClassItem create_op_class_item = 172 [json_name = "CreateOpClassItem"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateOpClassItemOrBuilder getCreateOpClassItemOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateOpFamilyStmt create_op_family_stmt = 173 [json_name = "CreateOpFamilyStmt"];</code>
+   * @return Whether the createOpFamilyStmt field is set.
+   */
+  boolean hasCreateOpFamilyStmt();
+  /**
+   * <code>.pg_query.CreateOpFamilyStmt create_op_family_stmt = 173 [json_name = "CreateOpFamilyStmt"];</code>
+   * @return The createOpFamilyStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateOpFamilyStmt getCreateOpFamilyStmt();
+  /**
+   * <code>.pg_query.CreateOpFamilyStmt create_op_family_stmt = 173 [json_name = "CreateOpFamilyStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateOpFamilyStmtOrBuilder getCreateOpFamilyStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterOpFamilyStmt alter_op_family_stmt = 174 [json_name = "AlterOpFamilyStmt"];</code>
+   * @return Whether the alterOpFamilyStmt field is set.
+   */
+  boolean hasAlterOpFamilyStmt();
+  /**
+   * <code>.pg_query.AlterOpFamilyStmt alter_op_family_stmt = 174 [json_name = "AlterOpFamilyStmt"];</code>
+   * @return The alterOpFamilyStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterOpFamilyStmt getAlterOpFamilyStmt();
+  /**
+   * <code>.pg_query.AlterOpFamilyStmt alter_op_family_stmt = 174 [json_name = "AlterOpFamilyStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterOpFamilyStmtOrBuilder getAlterOpFamilyStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DropStmt drop_stmt = 175 [json_name = "DropStmt"];</code>
+   * @return Whether the dropStmt field is set.
+   */
+  boolean hasDropStmt();
+  /**
+   * <code>.pg_query.DropStmt drop_stmt = 175 [json_name = "DropStmt"];</code>
+   * @return The dropStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropStmt getDropStmt();
+  /**
+   * <code>.pg_query.DropStmt drop_stmt = 175 [json_name = "DropStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropStmtOrBuilder getDropStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.TruncateStmt truncate_stmt = 176 [json_name = "TruncateStmt"];</code>
+   * @return Whether the truncateStmt field is set.
+   */
+  boolean hasTruncateStmt();
+  /**
+   * <code>.pg_query.TruncateStmt truncate_stmt = 176 [json_name = "TruncateStmt"];</code>
+   * @return The truncateStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.TruncateStmt getTruncateStmt();
+  /**
+   * <code>.pg_query.TruncateStmt truncate_stmt = 176 [json_name = "TruncateStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.TruncateStmtOrBuilder getTruncateStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CommentStmt comment_stmt = 177 [json_name = "CommentStmt"];</code>
+   * @return Whether the commentStmt field is set.
+   */
+  boolean hasCommentStmt();
+  /**
+   * <code>.pg_query.CommentStmt comment_stmt = 177 [json_name = "CommentStmt"];</code>
+   * @return The commentStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CommentStmt getCommentStmt();
+  /**
+   * <code>.pg_query.CommentStmt comment_stmt = 177 [json_name = "CommentStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CommentStmtOrBuilder getCommentStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.SecLabelStmt sec_label_stmt = 178 [json_name = "SecLabelStmt"];</code>
+   * @return Whether the secLabelStmt field is set.
+   */
+  boolean hasSecLabelStmt();
+  /**
+   * <code>.pg_query.SecLabelStmt sec_label_stmt = 178 [json_name = "SecLabelStmt"];</code>
+   * @return The secLabelStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.SecLabelStmt getSecLabelStmt();
+  /**
+   * <code>.pg_query.SecLabelStmt sec_label_stmt = 178 [json_name = "SecLabelStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.SecLabelStmtOrBuilder getSecLabelStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DeclareCursorStmt declare_cursor_stmt = 179 [json_name = "DeclareCursorStmt"];</code>
+   * @return Whether the declareCursorStmt field is set.
+   */
+  boolean hasDeclareCursorStmt();
+  /**
+   * <code>.pg_query.DeclareCursorStmt declare_cursor_stmt = 179 [json_name = "DeclareCursorStmt"];</code>
+   * @return The declareCursorStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DeclareCursorStmt getDeclareCursorStmt();
+  /**
+   * <code>.pg_query.DeclareCursorStmt declare_cursor_stmt = 179 [json_name = "DeclareCursorStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DeclareCursorStmtOrBuilder getDeclareCursorStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ClosePortalStmt close_portal_stmt = 180 [json_name = "ClosePortalStmt"];</code>
+   * @return Whether the closePortalStmt field is set.
+   */
+  boolean hasClosePortalStmt();
+  /**
+   * <code>.pg_query.ClosePortalStmt close_portal_stmt = 180 [json_name = "ClosePortalStmt"];</code>
+   * @return The closePortalStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ClosePortalStmt getClosePortalStmt();
+  /**
+   * <code>.pg_query.ClosePortalStmt close_portal_stmt = 180 [json_name = "ClosePortalStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ClosePortalStmtOrBuilder getClosePortalStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.FetchStmt fetch_stmt = 181 [json_name = "FetchStmt"];</code>
+   * @return Whether the fetchStmt field is set.
+   */
+  boolean hasFetchStmt();
+  /**
+   * <code>.pg_query.FetchStmt fetch_stmt = 181 [json_name = "FetchStmt"];</code>
+   * @return The fetchStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.FetchStmt getFetchStmt();
+  /**
+   * <code>.pg_query.FetchStmt fetch_stmt = 181 [json_name = "FetchStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.FetchStmtOrBuilder getFetchStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.IndexStmt index_stmt = 182 [json_name = "IndexStmt"];</code>
+   * @return Whether the indexStmt field is set.
+   */
+  boolean hasIndexStmt();
+  /**
+   * <code>.pg_query.IndexStmt index_stmt = 182 [json_name = "IndexStmt"];</code>
+   * @return The indexStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.IndexStmt getIndexStmt();
+  /**
+   * <code>.pg_query.IndexStmt index_stmt = 182 [json_name = "IndexStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.IndexStmtOrBuilder getIndexStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateStatsStmt create_stats_stmt = 183 [json_name = "CreateStatsStmt"];</code>
+   * @return Whether the createStatsStmt field is set.
+   */
+  boolean hasCreateStatsStmt();
+  /**
+   * <code>.pg_query.CreateStatsStmt create_stats_stmt = 183 [json_name = "CreateStatsStmt"];</code>
+   * @return The createStatsStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateStatsStmt getCreateStatsStmt();
+  /**
+   * <code>.pg_query.CreateStatsStmt create_stats_stmt = 183 [json_name = "CreateStatsStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateStatsStmtOrBuilder getCreateStatsStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.StatsElem stats_elem = 184 [json_name = "StatsElem"];</code>
+   * @return Whether the statsElem field is set.
+   */
+  boolean hasStatsElem();
+  /**
+   * <code>.pg_query.StatsElem stats_elem = 184 [json_name = "StatsElem"];</code>
+   * @return The statsElem.
+   */
+  com.premiumminds.sonar.postgres.protobuf.StatsElem getStatsElem();
+  /**
+   * <code>.pg_query.StatsElem stats_elem = 184 [json_name = "StatsElem"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.StatsElemOrBuilder getStatsElemOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterStatsStmt alter_stats_stmt = 185 [json_name = "AlterStatsStmt"];</code>
+   * @return Whether the alterStatsStmt field is set.
+   */
+  boolean hasAlterStatsStmt();
+  /**
+   * <code>.pg_query.AlterStatsStmt alter_stats_stmt = 185 [json_name = "AlterStatsStmt"];</code>
+   * @return The alterStatsStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterStatsStmt getAlterStatsStmt();
+  /**
+   * <code>.pg_query.AlterStatsStmt alter_stats_stmt = 185 [json_name = "AlterStatsStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterStatsStmtOrBuilder getAlterStatsStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateFunctionStmt create_function_stmt = 186 [json_name = "CreateFunctionStmt"];</code>
+   * @return Whether the createFunctionStmt field is set.
+   */
+  boolean hasCreateFunctionStmt();
+  /**
+   * <code>.pg_query.CreateFunctionStmt create_function_stmt = 186 [json_name = "CreateFunctionStmt"];</code>
+   * @return The createFunctionStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateFunctionStmt getCreateFunctionStmt();
+  /**
+   * <code>.pg_query.CreateFunctionStmt create_function_stmt = 186 [json_name = "CreateFunctionStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateFunctionStmtOrBuilder getCreateFunctionStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.FunctionParameter function_parameter = 187 [json_name = "FunctionParameter"];</code>
+   * @return Whether the functionParameter field is set.
+   */
+  boolean hasFunctionParameter();
+  /**
+   * <code>.pg_query.FunctionParameter function_parameter = 187 [json_name = "FunctionParameter"];</code>
+   * @return The functionParameter.
+   */
+  com.premiumminds.sonar.postgres.protobuf.FunctionParameter getFunctionParameter();
+  /**
+   * <code>.pg_query.FunctionParameter function_parameter = 187 [json_name = "FunctionParameter"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.FunctionParameterOrBuilder getFunctionParameterOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterFunctionStmt alter_function_stmt = 188 [json_name = "AlterFunctionStmt"];</code>
+   * @return Whether the alterFunctionStmt field is set.
+   */
+  boolean hasAlterFunctionStmt();
+  /**
+   * <code>.pg_query.AlterFunctionStmt alter_function_stmt = 188 [json_name = "AlterFunctionStmt"];</code>
+   * @return The alterFunctionStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmt getAlterFunctionStmt();
+  /**
+   * <code>.pg_query.AlterFunctionStmt alter_function_stmt = 188 [json_name = "AlterFunctionStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterFunctionStmtOrBuilder getAlterFunctionStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DoStmt do_stmt = 189 [json_name = "DoStmt"];</code>
+   * @return Whether the doStmt field is set.
+   */
+  boolean hasDoStmt();
+  /**
+   * <code>.pg_query.DoStmt do_stmt = 189 [json_name = "DoStmt"];</code>
+   * @return The doStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DoStmt getDoStmt();
+  /**
+   * <code>.pg_query.DoStmt do_stmt = 189 [json_name = "DoStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DoStmtOrBuilder getDoStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.InlineCodeBlock inline_code_block = 190 [json_name = "InlineCodeBlock"];</code>
    * @return Whether the inlineCodeBlock field is set.
    */
   boolean hasInlineCodeBlock();
   /**
-   * <code>.pg_query.InlineCodeBlock inline_code_block = 228 [json_name = "InlineCodeBlock"];</code>
+   * <code>.pg_query.InlineCodeBlock inline_code_block = 190 [json_name = "InlineCodeBlock"];</code>
    * @return The inlineCodeBlock.
    */
   com.premiumminds.sonar.postgres.protobuf.InlineCodeBlock getInlineCodeBlock();
   /**
-   * <code>.pg_query.InlineCodeBlock inline_code_block = 228 [json_name = "InlineCodeBlock"];</code>
+   * <code>.pg_query.InlineCodeBlock inline_code_block = 190 [json_name = "InlineCodeBlock"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.InlineCodeBlockOrBuilder getInlineCodeBlockOrBuilder();
 
   /**
-   * <code>.pg_query.CallContext call_context = 229 [json_name = "CallContext"];</code>
+   * <code>.pg_query.CallStmt call_stmt = 191 [json_name = "CallStmt"];</code>
+   * @return Whether the callStmt field is set.
+   */
+  boolean hasCallStmt();
+  /**
+   * <code>.pg_query.CallStmt call_stmt = 191 [json_name = "CallStmt"];</code>
+   * @return The callStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CallStmt getCallStmt();
+  /**
+   * <code>.pg_query.CallStmt call_stmt = 191 [json_name = "CallStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CallStmtOrBuilder getCallStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CallContext call_context = 192 [json_name = "CallContext"];</code>
    * @return Whether the callContext field is set.
    */
   boolean hasCallContext();
   /**
-   * <code>.pg_query.CallContext call_context = 229 [json_name = "CallContext"];</code>
+   * <code>.pg_query.CallContext call_context = 192 [json_name = "CallContext"];</code>
    * @return The callContext.
    */
   com.premiumminds.sonar.postgres.protobuf.CallContext getCallContext();
   /**
-   * <code>.pg_query.CallContext call_context = 229 [json_name = "CallContext"];</code>
+   * <code>.pg_query.CallContext call_context = 192 [json_name = "CallContext"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.CallContextOrBuilder getCallContextOrBuilder();
 
   /**
-   * <code>.pg_query.Integer integer = 230 [json_name = "Integer"];</code>
+   * <code>.pg_query.RenameStmt rename_stmt = 193 [json_name = "RenameStmt"];</code>
+   * @return Whether the renameStmt field is set.
+   */
+  boolean hasRenameStmt();
+  /**
+   * <code>.pg_query.RenameStmt rename_stmt = 193 [json_name = "RenameStmt"];</code>
+   * @return The renameStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RenameStmt getRenameStmt();
+  /**
+   * <code>.pg_query.RenameStmt rename_stmt = 193 [json_name = "RenameStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RenameStmtOrBuilder getRenameStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterObjectDependsStmt alter_object_depends_stmt = 194 [json_name = "AlterObjectDependsStmt"];</code>
+   * @return Whether the alterObjectDependsStmt field is set.
+   */
+  boolean hasAlterObjectDependsStmt();
+  /**
+   * <code>.pg_query.AlterObjectDependsStmt alter_object_depends_stmt = 194 [json_name = "AlterObjectDependsStmt"];</code>
+   * @return The alterObjectDependsStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterObjectDependsStmt getAlterObjectDependsStmt();
+  /**
+   * <code>.pg_query.AlterObjectDependsStmt alter_object_depends_stmt = 194 [json_name = "AlterObjectDependsStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterObjectDependsStmtOrBuilder getAlterObjectDependsStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterObjectSchemaStmt alter_object_schema_stmt = 195 [json_name = "AlterObjectSchemaStmt"];</code>
+   * @return Whether the alterObjectSchemaStmt field is set.
+   */
+  boolean hasAlterObjectSchemaStmt();
+  /**
+   * <code>.pg_query.AlterObjectSchemaStmt alter_object_schema_stmt = 195 [json_name = "AlterObjectSchemaStmt"];</code>
+   * @return The alterObjectSchemaStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterObjectSchemaStmt getAlterObjectSchemaStmt();
+  /**
+   * <code>.pg_query.AlterObjectSchemaStmt alter_object_schema_stmt = 195 [json_name = "AlterObjectSchemaStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterObjectSchemaStmtOrBuilder getAlterObjectSchemaStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterOwnerStmt alter_owner_stmt = 196 [json_name = "AlterOwnerStmt"];</code>
+   * @return Whether the alterOwnerStmt field is set.
+   */
+  boolean hasAlterOwnerStmt();
+  /**
+   * <code>.pg_query.AlterOwnerStmt alter_owner_stmt = 196 [json_name = "AlterOwnerStmt"];</code>
+   * @return The alterOwnerStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterOwnerStmt getAlterOwnerStmt();
+  /**
+   * <code>.pg_query.AlterOwnerStmt alter_owner_stmt = 196 [json_name = "AlterOwnerStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterOwnerStmtOrBuilder getAlterOwnerStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterOperatorStmt alter_operator_stmt = 197 [json_name = "AlterOperatorStmt"];</code>
+   * @return Whether the alterOperatorStmt field is set.
+   */
+  boolean hasAlterOperatorStmt();
+  /**
+   * <code>.pg_query.AlterOperatorStmt alter_operator_stmt = 197 [json_name = "AlterOperatorStmt"];</code>
+   * @return The alterOperatorStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterOperatorStmt getAlterOperatorStmt();
+  /**
+   * <code>.pg_query.AlterOperatorStmt alter_operator_stmt = 197 [json_name = "AlterOperatorStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterOperatorStmtOrBuilder getAlterOperatorStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterTypeStmt alter_type_stmt = 198 [json_name = "AlterTypeStmt"];</code>
+   * @return Whether the alterTypeStmt field is set.
+   */
+  boolean hasAlterTypeStmt();
+  /**
+   * <code>.pg_query.AlterTypeStmt alter_type_stmt = 198 [json_name = "AlterTypeStmt"];</code>
+   * @return The alterTypeStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTypeStmt getAlterTypeStmt();
+  /**
+   * <code>.pg_query.AlterTypeStmt alter_type_stmt = 198 [json_name = "AlterTypeStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTypeStmtOrBuilder getAlterTypeStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.RuleStmt rule_stmt = 199 [json_name = "RuleStmt"];</code>
+   * @return Whether the ruleStmt field is set.
+   */
+  boolean hasRuleStmt();
+  /**
+   * <code>.pg_query.RuleStmt rule_stmt = 199 [json_name = "RuleStmt"];</code>
+   * @return The ruleStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RuleStmt getRuleStmt();
+  /**
+   * <code>.pg_query.RuleStmt rule_stmt = 199 [json_name = "RuleStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RuleStmtOrBuilder getRuleStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.NotifyStmt notify_stmt = 200 [json_name = "NotifyStmt"];</code>
+   * @return Whether the notifyStmt field is set.
+   */
+  boolean hasNotifyStmt();
+  /**
+   * <code>.pg_query.NotifyStmt notify_stmt = 200 [json_name = "NotifyStmt"];</code>
+   * @return The notifyStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.NotifyStmt getNotifyStmt();
+  /**
+   * <code>.pg_query.NotifyStmt notify_stmt = 200 [json_name = "NotifyStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NotifyStmtOrBuilder getNotifyStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ListenStmt listen_stmt = 201 [json_name = "ListenStmt"];</code>
+   * @return Whether the listenStmt field is set.
+   */
+  boolean hasListenStmt();
+  /**
+   * <code>.pg_query.ListenStmt listen_stmt = 201 [json_name = "ListenStmt"];</code>
+   * @return The listenStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ListenStmt getListenStmt();
+  /**
+   * <code>.pg_query.ListenStmt listen_stmt = 201 [json_name = "ListenStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ListenStmtOrBuilder getListenStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.UnlistenStmt unlisten_stmt = 202 [json_name = "UnlistenStmt"];</code>
+   * @return Whether the unlistenStmt field is set.
+   */
+  boolean hasUnlistenStmt();
+  /**
+   * <code>.pg_query.UnlistenStmt unlisten_stmt = 202 [json_name = "UnlistenStmt"];</code>
+   * @return The unlistenStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.UnlistenStmt getUnlistenStmt();
+  /**
+   * <code>.pg_query.UnlistenStmt unlisten_stmt = 202 [json_name = "UnlistenStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.UnlistenStmtOrBuilder getUnlistenStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.TransactionStmt transaction_stmt = 203 [json_name = "TransactionStmt"];</code>
+   * @return Whether the transactionStmt field is set.
+   */
+  boolean hasTransactionStmt();
+  /**
+   * <code>.pg_query.TransactionStmt transaction_stmt = 203 [json_name = "TransactionStmt"];</code>
+   * @return The transactionStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.TransactionStmt getTransactionStmt();
+  /**
+   * <code>.pg_query.TransactionStmt transaction_stmt = 203 [json_name = "TransactionStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.TransactionStmtOrBuilder getTransactionStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CompositeTypeStmt composite_type_stmt = 204 [json_name = "CompositeTypeStmt"];</code>
+   * @return Whether the compositeTypeStmt field is set.
+   */
+  boolean hasCompositeTypeStmt();
+  /**
+   * <code>.pg_query.CompositeTypeStmt composite_type_stmt = 204 [json_name = "CompositeTypeStmt"];</code>
+   * @return The compositeTypeStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CompositeTypeStmt getCompositeTypeStmt();
+  /**
+   * <code>.pg_query.CompositeTypeStmt composite_type_stmt = 204 [json_name = "CompositeTypeStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CompositeTypeStmtOrBuilder getCompositeTypeStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateEnumStmt create_enum_stmt = 205 [json_name = "CreateEnumStmt"];</code>
+   * @return Whether the createEnumStmt field is set.
+   */
+  boolean hasCreateEnumStmt();
+  /**
+   * <code>.pg_query.CreateEnumStmt create_enum_stmt = 205 [json_name = "CreateEnumStmt"];</code>
+   * @return The createEnumStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateEnumStmt getCreateEnumStmt();
+  /**
+   * <code>.pg_query.CreateEnumStmt create_enum_stmt = 205 [json_name = "CreateEnumStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateEnumStmtOrBuilder getCreateEnumStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateRangeStmt create_range_stmt = 206 [json_name = "CreateRangeStmt"];</code>
+   * @return Whether the createRangeStmt field is set.
+   */
+  boolean hasCreateRangeStmt();
+  /**
+   * <code>.pg_query.CreateRangeStmt create_range_stmt = 206 [json_name = "CreateRangeStmt"];</code>
+   * @return The createRangeStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateRangeStmt getCreateRangeStmt();
+  /**
+   * <code>.pg_query.CreateRangeStmt create_range_stmt = 206 [json_name = "CreateRangeStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateRangeStmtOrBuilder getCreateRangeStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterEnumStmt alter_enum_stmt = 207 [json_name = "AlterEnumStmt"];</code>
+   * @return Whether the alterEnumStmt field is set.
+   */
+  boolean hasAlterEnumStmt();
+  /**
+   * <code>.pg_query.AlterEnumStmt alter_enum_stmt = 207 [json_name = "AlterEnumStmt"];</code>
+   * @return The alterEnumStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterEnumStmt getAlterEnumStmt();
+  /**
+   * <code>.pg_query.AlterEnumStmt alter_enum_stmt = 207 [json_name = "AlterEnumStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterEnumStmtOrBuilder getAlterEnumStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ViewStmt view_stmt = 208 [json_name = "ViewStmt"];</code>
+   * @return Whether the viewStmt field is set.
+   */
+  boolean hasViewStmt();
+  /**
+   * <code>.pg_query.ViewStmt view_stmt = 208 [json_name = "ViewStmt"];</code>
+   * @return The viewStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ViewStmt getViewStmt();
+  /**
+   * <code>.pg_query.ViewStmt view_stmt = 208 [json_name = "ViewStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ViewStmtOrBuilder getViewStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.LoadStmt load_stmt = 209 [json_name = "LoadStmt"];</code>
+   * @return Whether the loadStmt field is set.
+   */
+  boolean hasLoadStmt();
+  /**
+   * <code>.pg_query.LoadStmt load_stmt = 209 [json_name = "LoadStmt"];</code>
+   * @return The loadStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.LoadStmt getLoadStmt();
+  /**
+   * <code>.pg_query.LoadStmt load_stmt = 209 [json_name = "LoadStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.LoadStmtOrBuilder getLoadStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreatedbStmt createdb_stmt = 210 [json_name = "CreatedbStmt"];</code>
+   * @return Whether the createdbStmt field is set.
+   */
+  boolean hasCreatedbStmt();
+  /**
+   * <code>.pg_query.CreatedbStmt createdb_stmt = 210 [json_name = "CreatedbStmt"];</code>
+   * @return The createdbStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreatedbStmt getCreatedbStmt();
+  /**
+   * <code>.pg_query.CreatedbStmt createdb_stmt = 210 [json_name = "CreatedbStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreatedbStmtOrBuilder getCreatedbStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterDatabaseStmt alter_database_stmt = 211 [json_name = "AlterDatabaseStmt"];</code>
+   * @return Whether the alterDatabaseStmt field is set.
+   */
+  boolean hasAlterDatabaseStmt();
+  /**
+   * <code>.pg_query.AlterDatabaseStmt alter_database_stmt = 211 [json_name = "AlterDatabaseStmt"];</code>
+   * @return The alterDatabaseStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseStmt getAlterDatabaseStmt();
+  /**
+   * <code>.pg_query.AlterDatabaseStmt alter_database_stmt = 211 [json_name = "AlterDatabaseStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseStmtOrBuilder getAlterDatabaseStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterDatabaseRefreshCollStmt alter_database_refresh_coll_stmt = 212 [json_name = "AlterDatabaseRefreshCollStmt"];</code>
+   * @return Whether the alterDatabaseRefreshCollStmt field is set.
+   */
+  boolean hasAlterDatabaseRefreshCollStmt();
+  /**
+   * <code>.pg_query.AlterDatabaseRefreshCollStmt alter_database_refresh_coll_stmt = 212 [json_name = "AlterDatabaseRefreshCollStmt"];</code>
+   * @return The alterDatabaseRefreshCollStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseRefreshCollStmt getAlterDatabaseRefreshCollStmt();
+  /**
+   * <code>.pg_query.AlterDatabaseRefreshCollStmt alter_database_refresh_coll_stmt = 212 [json_name = "AlterDatabaseRefreshCollStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseRefreshCollStmtOrBuilder getAlterDatabaseRefreshCollStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterDatabaseSetStmt alter_database_set_stmt = 213 [json_name = "AlterDatabaseSetStmt"];</code>
+   * @return Whether the alterDatabaseSetStmt field is set.
+   */
+  boolean hasAlterDatabaseSetStmt();
+  /**
+   * <code>.pg_query.AlterDatabaseSetStmt alter_database_set_stmt = 213 [json_name = "AlterDatabaseSetStmt"];</code>
+   * @return The alterDatabaseSetStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseSetStmt getAlterDatabaseSetStmt();
+  /**
+   * <code>.pg_query.AlterDatabaseSetStmt alter_database_set_stmt = 213 [json_name = "AlterDatabaseSetStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterDatabaseSetStmtOrBuilder getAlterDatabaseSetStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DropdbStmt dropdb_stmt = 214 [json_name = "DropdbStmt"];</code>
+   * @return Whether the dropdbStmt field is set.
+   */
+  boolean hasDropdbStmt();
+  /**
+   * <code>.pg_query.DropdbStmt dropdb_stmt = 214 [json_name = "DropdbStmt"];</code>
+   * @return The dropdbStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropdbStmt getDropdbStmt();
+  /**
+   * <code>.pg_query.DropdbStmt dropdb_stmt = 214 [json_name = "DropdbStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropdbStmtOrBuilder getDropdbStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterSystemStmt alter_system_stmt = 215 [json_name = "AlterSystemStmt"];</code>
+   * @return Whether the alterSystemStmt field is set.
+   */
+  boolean hasAlterSystemStmt();
+  /**
+   * <code>.pg_query.AlterSystemStmt alter_system_stmt = 215 [json_name = "AlterSystemStmt"];</code>
+   * @return The alterSystemStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterSystemStmt getAlterSystemStmt();
+  /**
+   * <code>.pg_query.AlterSystemStmt alter_system_stmt = 215 [json_name = "AlterSystemStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterSystemStmtOrBuilder getAlterSystemStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ClusterStmt cluster_stmt = 216 [json_name = "ClusterStmt"];</code>
+   * @return Whether the clusterStmt field is set.
+   */
+  boolean hasClusterStmt();
+  /**
+   * <code>.pg_query.ClusterStmt cluster_stmt = 216 [json_name = "ClusterStmt"];</code>
+   * @return The clusterStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ClusterStmt getClusterStmt();
+  /**
+   * <code>.pg_query.ClusterStmt cluster_stmt = 216 [json_name = "ClusterStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ClusterStmtOrBuilder getClusterStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.VacuumStmt vacuum_stmt = 217 [json_name = "VacuumStmt"];</code>
+   * @return Whether the vacuumStmt field is set.
+   */
+  boolean hasVacuumStmt();
+  /**
+   * <code>.pg_query.VacuumStmt vacuum_stmt = 217 [json_name = "VacuumStmt"];</code>
+   * @return The vacuumStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.VacuumStmt getVacuumStmt();
+  /**
+   * <code>.pg_query.VacuumStmt vacuum_stmt = 217 [json_name = "VacuumStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.VacuumStmtOrBuilder getVacuumStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.VacuumRelation vacuum_relation = 218 [json_name = "VacuumRelation"];</code>
+   * @return Whether the vacuumRelation field is set.
+   */
+  boolean hasVacuumRelation();
+  /**
+   * <code>.pg_query.VacuumRelation vacuum_relation = 218 [json_name = "VacuumRelation"];</code>
+   * @return The vacuumRelation.
+   */
+  com.premiumminds.sonar.postgres.protobuf.VacuumRelation getVacuumRelation();
+  /**
+   * <code>.pg_query.VacuumRelation vacuum_relation = 218 [json_name = "VacuumRelation"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.VacuumRelationOrBuilder getVacuumRelationOrBuilder();
+
+  /**
+   * <code>.pg_query.ExplainStmt explain_stmt = 219 [json_name = "ExplainStmt"];</code>
+   * @return Whether the explainStmt field is set.
+   */
+  boolean hasExplainStmt();
+  /**
+   * <code>.pg_query.ExplainStmt explain_stmt = 219 [json_name = "ExplainStmt"];</code>
+   * @return The explainStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ExplainStmt getExplainStmt();
+  /**
+   * <code>.pg_query.ExplainStmt explain_stmt = 219 [json_name = "ExplainStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ExplainStmtOrBuilder getExplainStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateTableAsStmt create_table_as_stmt = 220 [json_name = "CreateTableAsStmt"];</code>
+   * @return Whether the createTableAsStmt field is set.
+   */
+  boolean hasCreateTableAsStmt();
+  /**
+   * <code>.pg_query.CreateTableAsStmt create_table_as_stmt = 220 [json_name = "CreateTableAsStmt"];</code>
+   * @return The createTableAsStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateTableAsStmt getCreateTableAsStmt();
+  /**
+   * <code>.pg_query.CreateTableAsStmt create_table_as_stmt = 220 [json_name = "CreateTableAsStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateTableAsStmtOrBuilder getCreateTableAsStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.RefreshMatViewStmt refresh_mat_view_stmt = 221 [json_name = "RefreshMatViewStmt"];</code>
+   * @return Whether the refreshMatViewStmt field is set.
+   */
+  boolean hasRefreshMatViewStmt();
+  /**
+   * <code>.pg_query.RefreshMatViewStmt refresh_mat_view_stmt = 221 [json_name = "RefreshMatViewStmt"];</code>
+   * @return The refreshMatViewStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.RefreshMatViewStmt getRefreshMatViewStmt();
+  /**
+   * <code>.pg_query.RefreshMatViewStmt refresh_mat_view_stmt = 221 [json_name = "RefreshMatViewStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.RefreshMatViewStmtOrBuilder getRefreshMatViewStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CheckPointStmt check_point_stmt = 222 [json_name = "CheckPointStmt"];</code>
+   * @return Whether the checkPointStmt field is set.
+   */
+  boolean hasCheckPointStmt();
+  /**
+   * <code>.pg_query.CheckPointStmt check_point_stmt = 222 [json_name = "CheckPointStmt"];</code>
+   * @return The checkPointStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CheckPointStmt getCheckPointStmt();
+  /**
+   * <code>.pg_query.CheckPointStmt check_point_stmt = 222 [json_name = "CheckPointStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CheckPointStmtOrBuilder getCheckPointStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DiscardStmt discard_stmt = 223 [json_name = "DiscardStmt"];</code>
+   * @return Whether the discardStmt field is set.
+   */
+  boolean hasDiscardStmt();
+  /**
+   * <code>.pg_query.DiscardStmt discard_stmt = 223 [json_name = "DiscardStmt"];</code>
+   * @return The discardStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DiscardStmt getDiscardStmt();
+  /**
+   * <code>.pg_query.DiscardStmt discard_stmt = 223 [json_name = "DiscardStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DiscardStmtOrBuilder getDiscardStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.LockStmt lock_stmt = 224 [json_name = "LockStmt"];</code>
+   * @return Whether the lockStmt field is set.
+   */
+  boolean hasLockStmt();
+  /**
+   * <code>.pg_query.LockStmt lock_stmt = 224 [json_name = "LockStmt"];</code>
+   * @return The lockStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.LockStmt getLockStmt();
+  /**
+   * <code>.pg_query.LockStmt lock_stmt = 224 [json_name = "LockStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.LockStmtOrBuilder getLockStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ConstraintsSetStmt constraints_set_stmt = 225 [json_name = "ConstraintsSetStmt"];</code>
+   * @return Whether the constraintsSetStmt field is set.
+   */
+  boolean hasConstraintsSetStmt();
+  /**
+   * <code>.pg_query.ConstraintsSetStmt constraints_set_stmt = 225 [json_name = "ConstraintsSetStmt"];</code>
+   * @return The constraintsSetStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ConstraintsSetStmt getConstraintsSetStmt();
+  /**
+   * <code>.pg_query.ConstraintsSetStmt constraints_set_stmt = 225 [json_name = "ConstraintsSetStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ConstraintsSetStmtOrBuilder getConstraintsSetStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ReindexStmt reindex_stmt = 226 [json_name = "ReindexStmt"];</code>
+   * @return Whether the reindexStmt field is set.
+   */
+  boolean hasReindexStmt();
+  /**
+   * <code>.pg_query.ReindexStmt reindex_stmt = 226 [json_name = "ReindexStmt"];</code>
+   * @return The reindexStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ReindexStmt getReindexStmt();
+  /**
+   * <code>.pg_query.ReindexStmt reindex_stmt = 226 [json_name = "ReindexStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ReindexStmtOrBuilder getReindexStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateConversionStmt create_conversion_stmt = 227 [json_name = "CreateConversionStmt"];</code>
+   * @return Whether the createConversionStmt field is set.
+   */
+  boolean hasCreateConversionStmt();
+  /**
+   * <code>.pg_query.CreateConversionStmt create_conversion_stmt = 227 [json_name = "CreateConversionStmt"];</code>
+   * @return The createConversionStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateConversionStmt getCreateConversionStmt();
+  /**
+   * <code>.pg_query.CreateConversionStmt create_conversion_stmt = 227 [json_name = "CreateConversionStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateConversionStmtOrBuilder getCreateConversionStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateCastStmt create_cast_stmt = 228 [json_name = "CreateCastStmt"];</code>
+   * @return Whether the createCastStmt field is set.
+   */
+  boolean hasCreateCastStmt();
+  /**
+   * <code>.pg_query.CreateCastStmt create_cast_stmt = 228 [json_name = "CreateCastStmt"];</code>
+   * @return The createCastStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateCastStmt getCreateCastStmt();
+  /**
+   * <code>.pg_query.CreateCastStmt create_cast_stmt = 228 [json_name = "CreateCastStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateCastStmtOrBuilder getCreateCastStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateTransformStmt create_transform_stmt = 229 [json_name = "CreateTransformStmt"];</code>
+   * @return Whether the createTransformStmt field is set.
+   */
+  boolean hasCreateTransformStmt();
+  /**
+   * <code>.pg_query.CreateTransformStmt create_transform_stmt = 229 [json_name = "CreateTransformStmt"];</code>
+   * @return The createTransformStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateTransformStmt getCreateTransformStmt();
+  /**
+   * <code>.pg_query.CreateTransformStmt create_transform_stmt = 229 [json_name = "CreateTransformStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateTransformStmtOrBuilder getCreateTransformStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.PrepareStmt prepare_stmt = 230 [json_name = "PrepareStmt"];</code>
+   * @return Whether the prepareStmt field is set.
+   */
+  boolean hasPrepareStmt();
+  /**
+   * <code>.pg_query.PrepareStmt prepare_stmt = 230 [json_name = "PrepareStmt"];</code>
+   * @return The prepareStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.PrepareStmt getPrepareStmt();
+  /**
+   * <code>.pg_query.PrepareStmt prepare_stmt = 230 [json_name = "PrepareStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.PrepareStmtOrBuilder getPrepareStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ExecuteStmt execute_stmt = 231 [json_name = "ExecuteStmt"];</code>
+   * @return Whether the executeStmt field is set.
+   */
+  boolean hasExecuteStmt();
+  /**
+   * <code>.pg_query.ExecuteStmt execute_stmt = 231 [json_name = "ExecuteStmt"];</code>
+   * @return The executeStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ExecuteStmt getExecuteStmt();
+  /**
+   * <code>.pg_query.ExecuteStmt execute_stmt = 231 [json_name = "ExecuteStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ExecuteStmtOrBuilder getExecuteStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DeallocateStmt deallocate_stmt = 232 [json_name = "DeallocateStmt"];</code>
+   * @return Whether the deallocateStmt field is set.
+   */
+  boolean hasDeallocateStmt();
+  /**
+   * <code>.pg_query.DeallocateStmt deallocate_stmt = 232 [json_name = "DeallocateStmt"];</code>
+   * @return The deallocateStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DeallocateStmt getDeallocateStmt();
+  /**
+   * <code>.pg_query.DeallocateStmt deallocate_stmt = 232 [json_name = "DeallocateStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DeallocateStmtOrBuilder getDeallocateStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DropOwnedStmt drop_owned_stmt = 233 [json_name = "DropOwnedStmt"];</code>
+   * @return Whether the dropOwnedStmt field is set.
+   */
+  boolean hasDropOwnedStmt();
+  /**
+   * <code>.pg_query.DropOwnedStmt drop_owned_stmt = 233 [json_name = "DropOwnedStmt"];</code>
+   * @return The dropOwnedStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropOwnedStmt getDropOwnedStmt();
+  /**
+   * <code>.pg_query.DropOwnedStmt drop_owned_stmt = 233 [json_name = "DropOwnedStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropOwnedStmtOrBuilder getDropOwnedStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.ReassignOwnedStmt reassign_owned_stmt = 234 [json_name = "ReassignOwnedStmt"];</code>
+   * @return Whether the reassignOwnedStmt field is set.
+   */
+  boolean hasReassignOwnedStmt();
+  /**
+   * <code>.pg_query.ReassignOwnedStmt reassign_owned_stmt = 234 [json_name = "ReassignOwnedStmt"];</code>
+   * @return The reassignOwnedStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.ReassignOwnedStmt getReassignOwnedStmt();
+  /**
+   * <code>.pg_query.ReassignOwnedStmt reassign_owned_stmt = 234 [json_name = "ReassignOwnedStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.ReassignOwnedStmtOrBuilder getReassignOwnedStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterTSDictionaryStmt alter_tsdictionary_stmt = 235 [json_name = "AlterTSDictionaryStmt"];</code>
+   * @return Whether the alterTsdictionaryStmt field is set.
+   */
+  boolean hasAlterTsdictionaryStmt();
+  /**
+   * <code>.pg_query.AlterTSDictionaryStmt alter_tsdictionary_stmt = 235 [json_name = "AlterTSDictionaryStmt"];</code>
+   * @return The alterTsdictionaryStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTSDictionaryStmt getAlterTsdictionaryStmt();
+  /**
+   * <code>.pg_query.AlterTSDictionaryStmt alter_tsdictionary_stmt = 235 [json_name = "AlterTSDictionaryStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTSDictionaryStmtOrBuilder getAlterTsdictionaryStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterTSConfigurationStmt alter_tsconfiguration_stmt = 236 [json_name = "AlterTSConfigurationStmt"];</code>
+   * @return Whether the alterTsconfigurationStmt field is set.
+   */
+  boolean hasAlterTsconfigurationStmt();
+  /**
+   * <code>.pg_query.AlterTSConfigurationStmt alter_tsconfiguration_stmt = 236 [json_name = "AlterTSConfigurationStmt"];</code>
+   * @return The alterTsconfigurationStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTSConfigurationStmt getAlterTsconfigurationStmt();
+  /**
+   * <code>.pg_query.AlterTSConfigurationStmt alter_tsconfiguration_stmt = 236 [json_name = "AlterTSConfigurationStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterTSConfigurationStmtOrBuilder getAlterTsconfigurationStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.PublicationTable publication_table = 237 [json_name = "PublicationTable"];</code>
+   * @return Whether the publicationTable field is set.
+   */
+  boolean hasPublicationTable();
+  /**
+   * <code>.pg_query.PublicationTable publication_table = 237 [json_name = "PublicationTable"];</code>
+   * @return The publicationTable.
+   */
+  com.premiumminds.sonar.postgres.protobuf.PublicationTable getPublicationTable();
+  /**
+   * <code>.pg_query.PublicationTable publication_table = 237 [json_name = "PublicationTable"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.PublicationTableOrBuilder getPublicationTableOrBuilder();
+
+  /**
+   * <code>.pg_query.PublicationObjSpec publication_obj_spec = 238 [json_name = "PublicationObjSpec"];</code>
+   * @return Whether the publicationObjSpec field is set.
+   */
+  boolean hasPublicationObjSpec();
+  /**
+   * <code>.pg_query.PublicationObjSpec publication_obj_spec = 238 [json_name = "PublicationObjSpec"];</code>
+   * @return The publicationObjSpec.
+   */
+  com.premiumminds.sonar.postgres.protobuf.PublicationObjSpec getPublicationObjSpec();
+  /**
+   * <code>.pg_query.PublicationObjSpec publication_obj_spec = 238 [json_name = "PublicationObjSpec"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.PublicationObjSpecOrBuilder getPublicationObjSpecOrBuilder();
+
+  /**
+   * <code>.pg_query.CreatePublicationStmt create_publication_stmt = 239 [json_name = "CreatePublicationStmt"];</code>
+   * @return Whether the createPublicationStmt field is set.
+   */
+  boolean hasCreatePublicationStmt();
+  /**
+   * <code>.pg_query.CreatePublicationStmt create_publication_stmt = 239 [json_name = "CreatePublicationStmt"];</code>
+   * @return The createPublicationStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreatePublicationStmt getCreatePublicationStmt();
+  /**
+   * <code>.pg_query.CreatePublicationStmt create_publication_stmt = 239 [json_name = "CreatePublicationStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreatePublicationStmtOrBuilder getCreatePublicationStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterPublicationStmt alter_publication_stmt = 240 [json_name = "AlterPublicationStmt"];</code>
+   * @return Whether the alterPublicationStmt field is set.
+   */
+  boolean hasAlterPublicationStmt();
+  /**
+   * <code>.pg_query.AlterPublicationStmt alter_publication_stmt = 240 [json_name = "AlterPublicationStmt"];</code>
+   * @return The alterPublicationStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterPublicationStmt getAlterPublicationStmt();
+  /**
+   * <code>.pg_query.AlterPublicationStmt alter_publication_stmt = 240 [json_name = "AlterPublicationStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterPublicationStmtOrBuilder getAlterPublicationStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.CreateSubscriptionStmt create_subscription_stmt = 241 [json_name = "CreateSubscriptionStmt"];</code>
+   * @return Whether the createSubscriptionStmt field is set.
+   */
+  boolean hasCreateSubscriptionStmt();
+  /**
+   * <code>.pg_query.CreateSubscriptionStmt create_subscription_stmt = 241 [json_name = "CreateSubscriptionStmt"];</code>
+   * @return The createSubscriptionStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateSubscriptionStmt getCreateSubscriptionStmt();
+  /**
+   * <code>.pg_query.CreateSubscriptionStmt create_subscription_stmt = 241 [json_name = "CreateSubscriptionStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.CreateSubscriptionStmtOrBuilder getCreateSubscriptionStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.AlterSubscriptionStmt alter_subscription_stmt = 242 [json_name = "AlterSubscriptionStmt"];</code>
+   * @return Whether the alterSubscriptionStmt field is set.
+   */
+  boolean hasAlterSubscriptionStmt();
+  /**
+   * <code>.pg_query.AlterSubscriptionStmt alter_subscription_stmt = 242 [json_name = "AlterSubscriptionStmt"];</code>
+   * @return The alterSubscriptionStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterSubscriptionStmt getAlterSubscriptionStmt();
+  /**
+   * <code>.pg_query.AlterSubscriptionStmt alter_subscription_stmt = 242 [json_name = "AlterSubscriptionStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AlterSubscriptionStmtOrBuilder getAlterSubscriptionStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.DropSubscriptionStmt drop_subscription_stmt = 243 [json_name = "DropSubscriptionStmt"];</code>
+   * @return Whether the dropSubscriptionStmt field is set.
+   */
+  boolean hasDropSubscriptionStmt();
+  /**
+   * <code>.pg_query.DropSubscriptionStmt drop_subscription_stmt = 243 [json_name = "DropSubscriptionStmt"];</code>
+   * @return The dropSubscriptionStmt.
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropSubscriptionStmt getDropSubscriptionStmt();
+  /**
+   * <code>.pg_query.DropSubscriptionStmt drop_subscription_stmt = 243 [json_name = "DropSubscriptionStmt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.DropSubscriptionStmtOrBuilder getDropSubscriptionStmtOrBuilder();
+
+  /**
+   * <code>.pg_query.Integer integer = 244 [json_name = "Integer"];</code>
    * @return Whether the integer field is set.
    */
   boolean hasInteger();
   /**
-   * <code>.pg_query.Integer integer = 230 [json_name = "Integer"];</code>
+   * <code>.pg_query.Integer integer = 244 [json_name = "Integer"];</code>
    * @return The integer.
    */
   com.premiumminds.sonar.postgres.protobuf.Integer getInteger();
   /**
-   * <code>.pg_query.Integer integer = 230 [json_name = "Integer"];</code>
+   * <code>.pg_query.Integer integer = 244 [json_name = "Integer"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.IntegerOrBuilder getIntegerOrBuilder();
 
   /**
-   * <code>.pg_query.Float float = 231 [json_name = "Float"];</code>
+   * <code>.pg_query.Float float = 245 [json_name = "Float"];</code>
    * @return Whether the float field is set.
    */
   boolean hasFloat();
   /**
-   * <code>.pg_query.Float float = 231 [json_name = "Float"];</code>
+   * <code>.pg_query.Float float = 245 [json_name = "Float"];</code>
    * @return The float.
    */
   com.premiumminds.sonar.postgres.protobuf.Float getFloat();
   /**
-   * <code>.pg_query.Float float = 231 [json_name = "Float"];</code>
+   * <code>.pg_query.Float float = 245 [json_name = "Float"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.FloatOrBuilder getFloatOrBuilder();
 
   /**
-   * <code>.pg_query.Boolean boolean = 232 [json_name = "Boolean"];</code>
+   * <code>.pg_query.Boolean boolean = 246 [json_name = "Boolean"];</code>
    * @return Whether the boolean field is set.
    */
   boolean hasBoolean();
   /**
-   * <code>.pg_query.Boolean boolean = 232 [json_name = "Boolean"];</code>
+   * <code>.pg_query.Boolean boolean = 246 [json_name = "Boolean"];</code>
    * @return The boolean.
    */
   com.premiumminds.sonar.postgres.protobuf.Boolean getBoolean();
   /**
-   * <code>.pg_query.Boolean boolean = 232 [json_name = "Boolean"];</code>
+   * <code>.pg_query.Boolean boolean = 246 [json_name = "Boolean"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.BooleanOrBuilder getBooleanOrBuilder();
 
   /**
-   * <code>.pg_query.String string = 233 [json_name = "String"];</code>
+   * <code>.pg_query.String string = 247 [json_name = "String"];</code>
    * @return Whether the string field is set.
    */
   boolean hasString();
   /**
-   * <code>.pg_query.String string = 233 [json_name = "String"];</code>
+   * <code>.pg_query.String string = 247 [json_name = "String"];</code>
    * @return The string.
    */
   com.premiumminds.sonar.postgres.protobuf.String getString();
   /**
-   * <code>.pg_query.String string = 233 [json_name = "String"];</code>
+   * <code>.pg_query.String string = 247 [json_name = "String"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.StringOrBuilder getStringOrBuilder();
 
   /**
-   * <code>.pg_query.BitString bit_string = 234 [json_name = "BitString"];</code>
+   * <code>.pg_query.BitString bit_string = 248 [json_name = "BitString"];</code>
    * @return Whether the bitString field is set.
    */
   boolean hasBitString();
   /**
-   * <code>.pg_query.BitString bit_string = 234 [json_name = "BitString"];</code>
+   * <code>.pg_query.BitString bit_string = 248 [json_name = "BitString"];</code>
    * @return The bitString.
    */
   com.premiumminds.sonar.postgres.protobuf.BitString getBitString();
   /**
-   * <code>.pg_query.BitString bit_string = 234 [json_name = "BitString"];</code>
+   * <code>.pg_query.BitString bit_string = 248 [json_name = "BitString"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.BitStringOrBuilder getBitStringOrBuilder();
 
   /**
-   * <code>.pg_query.List list = 235 [json_name = "List"];</code>
+   * <code>.pg_query.List list = 249 [json_name = "List"];</code>
    * @return Whether the list field is set.
    */
   boolean hasList();
   /**
-   * <code>.pg_query.List list = 235 [json_name = "List"];</code>
+   * <code>.pg_query.List list = 249 [json_name = "List"];</code>
    * @return The list.
    */
   com.premiumminds.sonar.postgres.protobuf.List getList();
   /**
-   * <code>.pg_query.List list = 235 [json_name = "List"];</code>
+   * <code>.pg_query.List list = 249 [json_name = "List"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.ListOrBuilder getListOrBuilder();
 
   /**
-   * <code>.pg_query.IntList int_list = 236 [json_name = "IntList"];</code>
+   * <code>.pg_query.IntList int_list = 250 [json_name = "IntList"];</code>
    * @return Whether the intList field is set.
    */
   boolean hasIntList();
   /**
-   * <code>.pg_query.IntList int_list = 236 [json_name = "IntList"];</code>
+   * <code>.pg_query.IntList int_list = 250 [json_name = "IntList"];</code>
    * @return The intList.
    */
   com.premiumminds.sonar.postgres.protobuf.IntList getIntList();
   /**
-   * <code>.pg_query.IntList int_list = 236 [json_name = "IntList"];</code>
+   * <code>.pg_query.IntList int_list = 250 [json_name = "IntList"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.IntListOrBuilder getIntListOrBuilder();
 
   /**
-   * <code>.pg_query.OidList oid_list = 237 [json_name = "OidList"];</code>
+   * <code>.pg_query.OidList oid_list = 251 [json_name = "OidList"];</code>
    * @return Whether the oidList field is set.
    */
   boolean hasOidList();
   /**
-   * <code>.pg_query.OidList oid_list = 237 [json_name = "OidList"];</code>
+   * <code>.pg_query.OidList oid_list = 251 [json_name = "OidList"];</code>
    * @return The oidList.
    */
   com.premiumminds.sonar.postgres.protobuf.OidList getOidList();
   /**
-   * <code>.pg_query.OidList oid_list = 237 [json_name = "OidList"];</code>
+   * <code>.pg_query.OidList oid_list = 251 [json_name = "OidList"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.OidListOrBuilder getOidListOrBuilder();
 
   /**
-   * <code>.pg_query.A_Const a_const = 238 [json_name = "A_Const"];</code>
+   * <code>.pg_query.A_Const a_const = 252 [json_name = "A_Const"];</code>
    * @return Whether the aConst field is set.
    */
   boolean hasAConst();
   /**
-   * <code>.pg_query.A_Const a_const = 238 [json_name = "A_Const"];</code>
+   * <code>.pg_query.A_Const a_const = 252 [json_name = "A_Const"];</code>
    * @return The aConst.
    */
   com.premiumminds.sonar.postgres.protobuf.A_Const getAConst();
   /**
-   * <code>.pg_query.A_Const a_const = 238 [json_name = "A_Const"];</code>
+   * <code>.pg_query.A_Const a_const = 252 [json_name = "A_Const"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.A_ConstOrBuilder getAConstOrBuilder();
 

@@ -8,16 +8,15 @@ public interface PartitionSpecOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string strategy = 1 [json_name = "strategy"];</code>
+   * <code>.pg_query.PartitionStrategy strategy = 1 [json_name = "strategy"];</code>
+   * @return The enum numeric value on the wire for strategy.
+   */
+  int getStrategyValue();
+  /**
+   * <code>.pg_query.PartitionStrategy strategy = 1 [json_name = "strategy"];</code>
    * @return The strategy.
    */
-  java.lang.String getStrategy();
-  /**
-   * <code>string strategy = 1 [json_name = "strategy"];</code>
-   * @return The bytes for strategy.
-   */
-  com.google.protobuf.ByteString
-      getStrategyBytes();
+  com.premiumminds.sonar.postgres.protobuf.PartitionStrategy getStrategy();
 
   /**
    * <code>repeated .pg_query.Node part_params = 2 [json_name = "partParams"];</code>

@@ -83,145 +83,157 @@ public interface ColumnDefOrBuilder extends
       getStorageBytes();
 
   /**
-   * <code>.pg_query.Node raw_default = 9 [json_name = "raw_default"];</code>
+   * <code>string storage_name = 9 [json_name = "storage_name"];</code>
+   * @return The storageName.
+   */
+  java.lang.String getStorageName();
+  /**
+   * <code>string storage_name = 9 [json_name = "storage_name"];</code>
+   * @return The bytes for storageName.
+   */
+  com.google.protobuf.ByteString
+      getStorageNameBytes();
+
+  /**
+   * <code>.pg_query.Node raw_default = 10 [json_name = "raw_default"];</code>
    * @return Whether the rawDefault field is set.
    */
   boolean hasRawDefault();
   /**
-   * <code>.pg_query.Node raw_default = 9 [json_name = "raw_default"];</code>
+   * <code>.pg_query.Node raw_default = 10 [json_name = "raw_default"];</code>
    * @return The rawDefault.
    */
   com.premiumminds.sonar.postgres.protobuf.Node getRawDefault();
   /**
-   * <code>.pg_query.Node raw_default = 9 [json_name = "raw_default"];</code>
+   * <code>.pg_query.Node raw_default = 10 [json_name = "raw_default"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getRawDefaultOrBuilder();
 
   /**
-   * <code>.pg_query.Node cooked_default = 10 [json_name = "cooked_default"];</code>
+   * <code>.pg_query.Node cooked_default = 11 [json_name = "cooked_default"];</code>
    * @return Whether the cookedDefault field is set.
    */
   boolean hasCookedDefault();
   /**
-   * <code>.pg_query.Node cooked_default = 10 [json_name = "cooked_default"];</code>
+   * <code>.pg_query.Node cooked_default = 11 [json_name = "cooked_default"];</code>
    * @return The cookedDefault.
    */
   com.premiumminds.sonar.postgres.protobuf.Node getCookedDefault();
   /**
-   * <code>.pg_query.Node cooked_default = 10 [json_name = "cooked_default"];</code>
+   * <code>.pg_query.Node cooked_default = 11 [json_name = "cooked_default"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getCookedDefaultOrBuilder();
 
   /**
-   * <code>string identity = 11 [json_name = "identity"];</code>
+   * <code>string identity = 12 [json_name = "identity"];</code>
    * @return The identity.
    */
   java.lang.String getIdentity();
   /**
-   * <code>string identity = 11 [json_name = "identity"];</code>
+   * <code>string identity = 12 [json_name = "identity"];</code>
    * @return The bytes for identity.
    */
   com.google.protobuf.ByteString
       getIdentityBytes();
 
   /**
-   * <code>.pg_query.RangeVar identity_sequence = 12 [json_name = "identitySequence"];</code>
+   * <code>.pg_query.RangeVar identity_sequence = 13 [json_name = "identitySequence"];</code>
    * @return Whether the identitySequence field is set.
    */
   boolean hasIdentitySequence();
   /**
-   * <code>.pg_query.RangeVar identity_sequence = 12 [json_name = "identitySequence"];</code>
+   * <code>.pg_query.RangeVar identity_sequence = 13 [json_name = "identitySequence"];</code>
    * @return The identitySequence.
    */
   com.premiumminds.sonar.postgres.protobuf.RangeVar getIdentitySequence();
   /**
-   * <code>.pg_query.RangeVar identity_sequence = 12 [json_name = "identitySequence"];</code>
+   * <code>.pg_query.RangeVar identity_sequence = 13 [json_name = "identitySequence"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.RangeVarOrBuilder getIdentitySequenceOrBuilder();
 
   /**
-   * <code>string generated = 13 [json_name = "generated"];</code>
+   * <code>string generated = 14 [json_name = "generated"];</code>
    * @return The generated.
    */
   java.lang.String getGenerated();
   /**
-   * <code>string generated = 13 [json_name = "generated"];</code>
+   * <code>string generated = 14 [json_name = "generated"];</code>
    * @return The bytes for generated.
    */
   com.google.protobuf.ByteString
       getGeneratedBytes();
 
   /**
-   * <code>.pg_query.CollateClause coll_clause = 14 [json_name = "collClause"];</code>
+   * <code>.pg_query.CollateClause coll_clause = 15 [json_name = "collClause"];</code>
    * @return Whether the collClause field is set.
    */
   boolean hasCollClause();
   /**
-   * <code>.pg_query.CollateClause coll_clause = 14 [json_name = "collClause"];</code>
+   * <code>.pg_query.CollateClause coll_clause = 15 [json_name = "collClause"];</code>
    * @return The collClause.
    */
   com.premiumminds.sonar.postgres.protobuf.CollateClause getCollClause();
   /**
-   * <code>.pg_query.CollateClause coll_clause = 14 [json_name = "collClause"];</code>
+   * <code>.pg_query.CollateClause coll_clause = 15 [json_name = "collClause"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.CollateClauseOrBuilder getCollClauseOrBuilder();
 
   /**
-   * <code>uint32 coll_oid = 15 [json_name = "collOid"];</code>
+   * <code>uint32 coll_oid = 16 [json_name = "collOid"];</code>
    * @return The collOid.
    */
   int getCollOid();
 
   /**
-   * <code>repeated .pg_query.Node constraints = 16 [json_name = "constraints"];</code>
+   * <code>repeated .pg_query.Node constraints = 17 [json_name = "constraints"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getConstraintsList();
   /**
-   * <code>repeated .pg_query.Node constraints = 16 [json_name = "constraints"];</code>
+   * <code>repeated .pg_query.Node constraints = 17 [json_name = "constraints"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getConstraints(int index);
   /**
-   * <code>repeated .pg_query.Node constraints = 16 [json_name = "constraints"];</code>
+   * <code>repeated .pg_query.Node constraints = 17 [json_name = "constraints"];</code>
    */
   int getConstraintsCount();
   /**
-   * <code>repeated .pg_query.Node constraints = 16 [json_name = "constraints"];</code>
+   * <code>repeated .pg_query.Node constraints = 17 [json_name = "constraints"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getConstraintsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node constraints = 16 [json_name = "constraints"];</code>
+   * <code>repeated .pg_query.Node constraints = 17 [json_name = "constraints"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getConstraintsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node fdwoptions = 17 [json_name = "fdwoptions"];</code>
+   * <code>repeated .pg_query.Node fdwoptions = 18 [json_name = "fdwoptions"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getFdwoptionsList();
   /**
-   * <code>repeated .pg_query.Node fdwoptions = 17 [json_name = "fdwoptions"];</code>
+   * <code>repeated .pg_query.Node fdwoptions = 18 [json_name = "fdwoptions"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getFdwoptions(int index);
   /**
-   * <code>repeated .pg_query.Node fdwoptions = 17 [json_name = "fdwoptions"];</code>
+   * <code>repeated .pg_query.Node fdwoptions = 18 [json_name = "fdwoptions"];</code>
    */
   int getFdwoptionsCount();
   /**
-   * <code>repeated .pg_query.Node fdwoptions = 17 [json_name = "fdwoptions"];</code>
+   * <code>repeated .pg_query.Node fdwoptions = 18 [json_name = "fdwoptions"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getFdwoptionsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node fdwoptions = 17 [json_name = "fdwoptions"];</code>
+   * <code>repeated .pg_query.Node fdwoptions = 18 [json_name = "fdwoptions"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getFdwoptionsOrBuilder(
       int index);
 
   /**
-   * <code>int32 location = 18 [json_name = "location"];</code>
+   * <code>int32 location = 19 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

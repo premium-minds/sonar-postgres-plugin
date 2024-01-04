@@ -114,10 +114,21 @@ private static final long serialVersionUID = 0L;
     return typeName_ == null ? com.premiumminds.sonar.postgres.protobuf.TypeName.getDefaultInstance() : typeName_;
   }
 
-  public static final int LOCATION_FIELD_NUMBER = 4;
+  public static final int INDENT_FIELD_NUMBER = 4;
+  private boolean indent_ = false;
+  /**
+   * <code>bool indent = 4 [json_name = "indent"];</code>
+   * @return The indent.
+   */
+  @java.lang.Override
+  public boolean getIndent() {
+    return indent_;
+  }
+
+  public static final int LOCATION_FIELD_NUMBER = 5;
   private int location_ = 0;
   /**
-   * <code>int32 location = 4 [json_name = "location"];</code>
+   * <code>int32 location = 5 [json_name = "location"];</code>
    * @return The location.
    */
   @java.lang.Override
@@ -148,8 +159,11 @@ private static final long serialVersionUID = 0L;
     if (typeName_ != null) {
       output.writeMessage(3, getTypeName());
     }
+    if (indent_ != false) {
+      output.writeBool(4, indent_);
+    }
     if (location_ != 0) {
-      output.writeInt32(4, location_);
+      output.writeInt32(5, location_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -172,9 +186,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getTypeName());
     }
+    if (indent_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, indent_);
+    }
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, location_);
+        .computeInt32Size(5, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -202,6 +220,8 @@ private static final long serialVersionUID = 0L;
       if (!getTypeName()
           .equals(other.getTypeName())) return false;
     }
+    if (getIndent()
+        != other.getIndent()) return false;
     if (getLocation()
         != other.getLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -225,6 +245,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TYPE_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getTypeName().hashCode();
     }
+    hash = (37 * hash) + INDENT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIndent());
     hash = (37 * hash) + LOCATION_FIELD_NUMBER;
     hash = (53 * hash) + getLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -367,6 +390,7 @@ private static final long serialVersionUID = 0L;
         typeNameBuilder_.dispose();
         typeNameBuilder_ = null;
       }
+      indent_ = false;
       location_ = 0;
       return this;
     }
@@ -415,6 +439,9 @@ private static final long serialVersionUID = 0L;
             : typeNameBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.indent_ = indent_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.location_ = location_;
       }
     }
@@ -472,6 +499,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasTypeName()) {
         mergeTypeName(other.getTypeName());
       }
+      if (other.getIndent() != false) {
+        setIndent(other.getIndent());
+      }
       if (other.getLocation() != 0) {
         setLocation(other.getLocation());
       }
@@ -521,10 +551,15 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 32: {
-              location_ = input.readInt32();
+              indent_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -833,9 +868,41 @@ private static final long serialVersionUID = 0L;
       return typeNameBuilder_;
     }
 
+    private boolean indent_ ;
+    /**
+     * <code>bool indent = 4 [json_name = "indent"];</code>
+     * @return The indent.
+     */
+    @java.lang.Override
+    public boolean getIndent() {
+      return indent_;
+    }
+    /**
+     * <code>bool indent = 4 [json_name = "indent"];</code>
+     * @param value The indent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIndent(boolean value) {
+      
+      indent_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool indent = 4 [json_name = "indent"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIndent() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      indent_ = false;
+      onChanged();
+      return this;
+    }
+
     private int location_ ;
     /**
-     * <code>int32 location = 4 [json_name = "location"];</code>
+     * <code>int32 location = 5 [json_name = "location"];</code>
      * @return The location.
      */
     @java.lang.Override
@@ -843,23 +910,23 @@ private static final long serialVersionUID = 0L;
       return location_;
     }
     /**
-     * <code>int32 location = 4 [json_name = "location"];</code>
+     * <code>int32 location = 5 [json_name = "location"];</code>
      * @param value The location to set.
      * @return This builder for chaining.
      */
     public Builder setLocation(int value) {
       
       location_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 location = 4 [json_name = "location"];</code>
+     * <code>int32 location = 5 [json_name = "location"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       location_ = 0;
       onChanged();
       return this;

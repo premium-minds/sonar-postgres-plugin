@@ -273,10 +273,21 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.premiumminds.sonar.postgres.protobuf.XmlOptionType.UNRECOGNIZED : result;
   }
 
-  public static final int TYPE_FIELD_NUMBER = 8;
+  public static final int INDENT_FIELD_NUMBER = 8;
+  private boolean indent_ = false;
+  /**
+   * <code>bool indent = 8 [json_name = "indent"];</code>
+   * @return The indent.
+   */
+  @java.lang.Override
+  public boolean getIndent() {
+    return indent_;
+  }
+
+  public static final int TYPE_FIELD_NUMBER = 9;
   private int type_ = 0;
   /**
-   * <code>uint32 type = 8 [json_name = "type"];</code>
+   * <code>uint32 type = 9 [json_name = "type"];</code>
    * @return The type.
    */
   @java.lang.Override
@@ -284,10 +295,10 @@ private static final long serialVersionUID = 0L;
     return type_;
   }
 
-  public static final int TYPMOD_FIELD_NUMBER = 9;
+  public static final int TYPMOD_FIELD_NUMBER = 10;
   private int typmod_ = 0;
   /**
-   * <code>int32 typmod = 9 [json_name = "typmod"];</code>
+   * <code>int32 typmod = 10 [json_name = "typmod"];</code>
    * @return The typmod.
    */
   @java.lang.Override
@@ -295,10 +306,10 @@ private static final long serialVersionUID = 0L;
     return typmod_;
   }
 
-  public static final int LOCATION_FIELD_NUMBER = 10;
+  public static final int LOCATION_FIELD_NUMBER = 11;
   private int location_ = 0;
   /**
-   * <code>int32 location = 10 [json_name = "location"];</code>
+   * <code>int32 location = 11 [json_name = "location"];</code>
    * @return The location.
    */
   @java.lang.Override
@@ -341,14 +352,17 @@ private static final long serialVersionUID = 0L;
     if (xmloption_ != com.premiumminds.sonar.postgres.protobuf.XmlOptionType.XML_OPTION_TYPE_UNDEFINED.getNumber()) {
       output.writeEnum(7, xmloption_);
     }
+    if (indent_ != false) {
+      output.writeBool(8, indent_);
+    }
     if (type_ != 0) {
-      output.writeUInt32(8, type_);
+      output.writeUInt32(9, type_);
     }
     if (typmod_ != 0) {
-      output.writeInt32(9, typmod_);
+      output.writeInt32(10, typmod_);
     }
     if (location_ != 0) {
-      output.writeInt32(10, location_);
+      output.writeInt32(11, location_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -386,17 +400,21 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, xmloption_);
     }
+    if (indent_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, indent_);
+    }
     if (type_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(8, type_);
+        .computeUInt32Size(9, type_);
     }
     if (typmod_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(9, typmod_);
+        .computeInt32Size(10, typmod_);
     }
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(10, location_);
+        .computeInt32Size(11, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -428,6 +446,8 @@ private static final long serialVersionUID = 0L;
     if (!getArgsList()
         .equals(other.getArgsList())) return false;
     if (xmloption_ != other.xmloption_) return false;
+    if (getIndent()
+        != other.getIndent()) return false;
     if (getType()
         != other.getType()) return false;
     if (getTypmod()
@@ -467,6 +487,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + XMLOPTION_FIELD_NUMBER;
     hash = (53 * hash) + xmloption_;
+    hash = (37 * hash) + INDENT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIndent());
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getType();
     hash = (37 * hash) + TYPMOD_FIELD_NUMBER;
@@ -631,6 +654,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000020);
       xmloption_ = 0;
+      indent_ = false;
       type_ = 0;
       typmod_ = 0;
       location_ = 0;
@@ -713,12 +737,15 @@ private static final long serialVersionUID = 0L;
         result.xmloption_ = xmloption_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.type_ = type_;
+        result.indent_ = indent_;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.typmod_ = typmod_;
+        result.type_ = type_;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.typmod_ = typmod_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.location_ = location_;
       }
     }
@@ -859,6 +886,9 @@ private static final long serialVersionUID = 0L;
       if (other.xmloption_ != 0) {
         setXmloptionValue(other.getXmloptionValue());
       }
+      if (other.getIndent() != false) {
+        setIndent(other.getIndent());
+      }
       if (other.getType() != 0) {
         setType(other.getType());
       }
@@ -956,20 +986,25 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 56
             case 64: {
-              type_ = input.readUInt32();
+              indent_ = input.readBool();
               bitField0_ |= 0x00000080;
               break;
             } // case 64
             case 72: {
-              typmod_ = input.readInt32();
+              type_ = input.readUInt32();
               bitField0_ |= 0x00000100;
               break;
             } // case 72
             case 80: {
-              location_ = input.readInt32();
+              typmod_ = input.readInt32();
               bitField0_ |= 0x00000200;
               break;
             } // case 80
+            case 88: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2004,9 +2039,41 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private boolean indent_ ;
+    /**
+     * <code>bool indent = 8 [json_name = "indent"];</code>
+     * @return The indent.
+     */
+    @java.lang.Override
+    public boolean getIndent() {
+      return indent_;
+    }
+    /**
+     * <code>bool indent = 8 [json_name = "indent"];</code>
+     * @param value The indent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIndent(boolean value) {
+      
+      indent_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool indent = 8 [json_name = "indent"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIndent() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      indent_ = false;
+      onChanged();
+      return this;
+    }
+
     private int type_ ;
     /**
-     * <code>uint32 type = 8 [json_name = "type"];</code>
+     * <code>uint32 type = 9 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override
@@ -2014,23 +2081,23 @@ private static final long serialVersionUID = 0L;
       return type_;
     }
     /**
-     * <code>uint32 type = 8 [json_name = "type"];</code>
+     * <code>uint32 type = 9 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
     public Builder setType(int value) {
       
       type_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 type = 8 [json_name = "type"];</code>
+     * <code>uint32 type = 9 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       type_ = 0;
       onChanged();
       return this;
@@ -2038,7 +2105,7 @@ private static final long serialVersionUID = 0L;
 
     private int typmod_ ;
     /**
-     * <code>int32 typmod = 9 [json_name = "typmod"];</code>
+     * <code>int32 typmod = 10 [json_name = "typmod"];</code>
      * @return The typmod.
      */
     @java.lang.Override
@@ -2046,23 +2113,23 @@ private static final long serialVersionUID = 0L;
       return typmod_;
     }
     /**
-     * <code>int32 typmod = 9 [json_name = "typmod"];</code>
+     * <code>int32 typmod = 10 [json_name = "typmod"];</code>
      * @param value The typmod to set.
      * @return This builder for chaining.
      */
     public Builder setTypmod(int value) {
       
       typmod_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 typmod = 9 [json_name = "typmod"];</code>
+     * <code>int32 typmod = 10 [json_name = "typmod"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTypmod() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       typmod_ = 0;
       onChanged();
       return this;
@@ -2070,7 +2137,7 @@ private static final long serialVersionUID = 0L;
 
     private int location_ ;
     /**
-     * <code>int32 location = 10 [json_name = "location"];</code>
+     * <code>int32 location = 11 [json_name = "location"];</code>
      * @return The location.
      */
     @java.lang.Override
@@ -2078,23 +2145,23 @@ private static final long serialVersionUID = 0L;
       return location_;
     }
     /**
-     * <code>int32 location = 10 [json_name = "location"];</code>
+     * <code>int32 location = 11 [json_name = "location"];</code>
      * @param value The location to set.
      * @return This builder for chaining.
      */
     public Builder setLocation(int value) {
       
       location_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 location = 10 [json_name = "location"];</code>
+     * <code>int32 location = 11 [json_name = "location"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       location_ = 0;
       onChanged();
       return this;

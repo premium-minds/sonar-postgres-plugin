@@ -120,29 +120,18 @@ private static final long serialVersionUID = 0L;
     return inputcollid_;
   }
 
-  public static final int AGGTRANSTYPE_FIELD_NUMBER = 6;
-  private int aggtranstype_ = 0;
-  /**
-   * <code>uint32 aggtranstype = 6 [json_name = "aggtranstype"];</code>
-   * @return The aggtranstype.
-   */
-  @java.lang.Override
-  public int getAggtranstype() {
-    return aggtranstype_;
-  }
-
-  public static final int AGGARGTYPES_FIELD_NUMBER = 7;
+  public static final int AGGARGTYPES_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
   private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> aggargtypes_;
   /**
-   * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+   * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
    */
   @java.lang.Override
   public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getAggargtypesList() {
     return aggargtypes_;
   }
   /**
-   * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+   * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
@@ -150,21 +139,21 @@ private static final long serialVersionUID = 0L;
     return aggargtypes_;
   }
   /**
-   * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+   * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
    */
   @java.lang.Override
   public int getAggargtypesCount() {
     return aggargtypes_.size();
   }
   /**
-   * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+   * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.Node getAggargtypes(int index) {
     return aggargtypes_.get(index);
   }
   /**
-   * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+   * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggargtypesOrBuilder(
@@ -172,18 +161,18 @@ private static final long serialVersionUID = 0L;
     return aggargtypes_.get(index);
   }
 
-  public static final int AGGDIRECTARGS_FIELD_NUMBER = 8;
+  public static final int AGGDIRECTARGS_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> aggdirectargs_;
   /**
-   * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+   * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
    */
   @java.lang.Override
   public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getAggdirectargsList() {
     return aggdirectargs_;
   }
   /**
-   * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+   * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
@@ -191,21 +180,21 @@ private static final long serialVersionUID = 0L;
     return aggdirectargs_;
   }
   /**
-   * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+   * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
    */
   @java.lang.Override
   public int getAggdirectargsCount() {
     return aggdirectargs_.size();
   }
   /**
-   * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+   * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.Node getAggdirectargs(int index) {
     return aggdirectargs_.get(index);
   }
   /**
-   * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+   * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggdirectargsOrBuilder(
@@ -213,18 +202,18 @@ private static final long serialVersionUID = 0L;
     return aggdirectargs_.get(index);
   }
 
-  public static final int ARGS_FIELD_NUMBER = 9;
+  public static final int ARGS_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
   private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> args_;
   /**
-   * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
    */
   @java.lang.Override
   public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getArgsList() {
     return args_;
   }
   /**
-   * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
@@ -232,21 +221,21 @@ private static final long serialVersionUID = 0L;
     return args_;
   }
   /**
-   * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
    */
   @java.lang.Override
   public int getArgsCount() {
     return args_.size();
   }
   /**
-   * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.Node getArgs(int index) {
     return args_.get(index);
   }
   /**
-   * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+   * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getArgsOrBuilder(
@@ -254,18 +243,18 @@ private static final long serialVersionUID = 0L;
     return args_.get(index);
   }
 
-  public static final int AGGORDER_FIELD_NUMBER = 10;
+  public static final int AGGORDER_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
   private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> aggorder_;
   /**
-   * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+   * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
    */
   @java.lang.Override
   public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getAggorderList() {
     return aggorder_;
   }
   /**
-   * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+   * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
@@ -273,21 +262,21 @@ private static final long serialVersionUID = 0L;
     return aggorder_;
   }
   /**
-   * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+   * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
    */
   @java.lang.Override
   public int getAggorderCount() {
     return aggorder_.size();
   }
   /**
-   * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+   * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.Node getAggorder(int index) {
     return aggorder_.get(index);
   }
   /**
-   * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+   * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggorderOrBuilder(
@@ -295,18 +284,18 @@ private static final long serialVersionUID = 0L;
     return aggorder_.get(index);
   }
 
-  public static final int AGGDISTINCT_FIELD_NUMBER = 11;
+  public static final int AGGDISTINCT_FIELD_NUMBER = 10;
   @SuppressWarnings("serial")
   private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> aggdistinct_;
   /**
-   * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+   * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
    */
   @java.lang.Override
   public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getAggdistinctList() {
     return aggdistinct_;
   }
   /**
-   * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+   * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
@@ -314,21 +303,21 @@ private static final long serialVersionUID = 0L;
     return aggdistinct_;
   }
   /**
-   * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+   * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
    */
   @java.lang.Override
   public int getAggdistinctCount() {
     return aggdistinct_.size();
   }
   /**
-   * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+   * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.Node getAggdistinct(int index) {
     return aggdistinct_.get(index);
   }
   /**
-   * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+   * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggdistinctOrBuilder(
@@ -336,10 +325,10 @@ private static final long serialVersionUID = 0L;
     return aggdistinct_.get(index);
   }
 
-  public static final int AGGFILTER_FIELD_NUMBER = 12;
+  public static final int AGGFILTER_FIELD_NUMBER = 11;
   private com.premiumminds.sonar.postgres.protobuf.Node aggfilter_;
   /**
-   * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+   * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
    * @return Whether the aggfilter field is set.
    */
   @java.lang.Override
@@ -347,7 +336,7 @@ private static final long serialVersionUID = 0L;
     return aggfilter_ != null;
   }
   /**
-   * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+   * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
    * @return The aggfilter.
    */
   @java.lang.Override
@@ -355,17 +344,17 @@ private static final long serialVersionUID = 0L;
     return aggfilter_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : aggfilter_;
   }
   /**
-   * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+   * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggfilterOrBuilder() {
     return aggfilter_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : aggfilter_;
   }
 
-  public static final int AGGSTAR_FIELD_NUMBER = 13;
+  public static final int AGGSTAR_FIELD_NUMBER = 12;
   private boolean aggstar_ = false;
   /**
-   * <code>bool aggstar = 13 [json_name = "aggstar"];</code>
+   * <code>bool aggstar = 12 [json_name = "aggstar"];</code>
    * @return The aggstar.
    */
   @java.lang.Override
@@ -373,10 +362,10 @@ private static final long serialVersionUID = 0L;
     return aggstar_;
   }
 
-  public static final int AGGVARIADIC_FIELD_NUMBER = 14;
+  public static final int AGGVARIADIC_FIELD_NUMBER = 13;
   private boolean aggvariadic_ = false;
   /**
-   * <code>bool aggvariadic = 14 [json_name = "aggvariadic"];</code>
+   * <code>bool aggvariadic = 13 [json_name = "aggvariadic"];</code>
    * @return The aggvariadic.
    */
   @java.lang.Override
@@ -384,11 +373,11 @@ private static final long serialVersionUID = 0L;
     return aggvariadic_;
   }
 
-  public static final int AGGKIND_FIELD_NUMBER = 15;
+  public static final int AGGKIND_FIELD_NUMBER = 14;
   @SuppressWarnings("serial")
   private volatile java.lang.Object aggkind_ = "";
   /**
-   * <code>string aggkind = 15 [json_name = "aggkind"];</code>
+   * <code>string aggkind = 14 [json_name = "aggkind"];</code>
    * @return The aggkind.
    */
   @java.lang.Override
@@ -405,7 +394,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string aggkind = 15 [json_name = "aggkind"];</code>
+   * <code>string aggkind = 14 [json_name = "aggkind"];</code>
    * @return The bytes for aggkind.
    */
   @java.lang.Override
@@ -423,10 +412,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int AGGLEVELSUP_FIELD_NUMBER = 16;
+  public static final int AGGLEVELSUP_FIELD_NUMBER = 15;
   private int agglevelsup_ = 0;
   /**
-   * <code>uint32 agglevelsup = 16 [json_name = "agglevelsup"];</code>
+   * <code>uint32 agglevelsup = 15 [json_name = "agglevelsup"];</code>
    * @return The agglevelsup.
    */
   @java.lang.Override
@@ -434,17 +423,17 @@ private static final long serialVersionUID = 0L;
     return agglevelsup_;
   }
 
-  public static final int AGGSPLIT_FIELD_NUMBER = 17;
+  public static final int AGGSPLIT_FIELD_NUMBER = 16;
   private int aggsplit_ = 0;
   /**
-   * <code>.pg_query.AggSplit aggsplit = 17 [json_name = "aggsplit"];</code>
+   * <code>.pg_query.AggSplit aggsplit = 16 [json_name = "aggsplit"];</code>
    * @return The enum numeric value on the wire for aggsplit.
    */
   @java.lang.Override public int getAggsplitValue() {
     return aggsplit_;
   }
   /**
-   * <code>.pg_query.AggSplit aggsplit = 17 [json_name = "aggsplit"];</code>
+   * <code>.pg_query.AggSplit aggsplit = 16 [json_name = "aggsplit"];</code>
    * @return The aggsplit.
    */
   @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.AggSplit getAggsplit() {
@@ -452,10 +441,10 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.premiumminds.sonar.postgres.protobuf.AggSplit.UNRECOGNIZED : result;
   }
 
-  public static final int AGGNO_FIELD_NUMBER = 18;
+  public static final int AGGNO_FIELD_NUMBER = 17;
   private int aggno_ = 0;
   /**
-   * <code>int32 aggno = 18 [json_name = "aggno"];</code>
+   * <code>int32 aggno = 17 [json_name = "aggno"];</code>
    * @return The aggno.
    */
   @java.lang.Override
@@ -463,10 +452,10 @@ private static final long serialVersionUID = 0L;
     return aggno_;
   }
 
-  public static final int AGGTRANSNO_FIELD_NUMBER = 19;
+  public static final int AGGTRANSNO_FIELD_NUMBER = 18;
   private int aggtransno_ = 0;
   /**
-   * <code>int32 aggtransno = 19 [json_name = "aggtransno"];</code>
+   * <code>int32 aggtransno = 18 [json_name = "aggtransno"];</code>
    * @return The aggtransno.
    */
   @java.lang.Override
@@ -474,10 +463,10 @@ private static final long serialVersionUID = 0L;
     return aggtransno_;
   }
 
-  public static final int LOCATION_FIELD_NUMBER = 20;
+  public static final int LOCATION_FIELD_NUMBER = 19;
   private int location_ = 0;
   /**
-   * <code>int32 location = 20 [json_name = "location"];</code>
+   * <code>int32 location = 19 [json_name = "location"];</code>
    * @return The location.
    */
   @java.lang.Override
@@ -514,50 +503,47 @@ private static final long serialVersionUID = 0L;
     if (inputcollid_ != 0) {
       output.writeUInt32(5, inputcollid_);
     }
-    if (aggtranstype_ != 0) {
-      output.writeUInt32(6, aggtranstype_);
-    }
     for (int i = 0; i < aggargtypes_.size(); i++) {
-      output.writeMessage(7, aggargtypes_.get(i));
+      output.writeMessage(6, aggargtypes_.get(i));
     }
     for (int i = 0; i < aggdirectargs_.size(); i++) {
-      output.writeMessage(8, aggdirectargs_.get(i));
+      output.writeMessage(7, aggdirectargs_.get(i));
     }
     for (int i = 0; i < args_.size(); i++) {
-      output.writeMessage(9, args_.get(i));
+      output.writeMessage(8, args_.get(i));
     }
     for (int i = 0; i < aggorder_.size(); i++) {
-      output.writeMessage(10, aggorder_.get(i));
+      output.writeMessage(9, aggorder_.get(i));
     }
     for (int i = 0; i < aggdistinct_.size(); i++) {
-      output.writeMessage(11, aggdistinct_.get(i));
+      output.writeMessage(10, aggdistinct_.get(i));
     }
     if (aggfilter_ != null) {
-      output.writeMessage(12, getAggfilter());
+      output.writeMessage(11, getAggfilter());
     }
     if (aggstar_ != false) {
-      output.writeBool(13, aggstar_);
+      output.writeBool(12, aggstar_);
     }
     if (aggvariadic_ != false) {
-      output.writeBool(14, aggvariadic_);
+      output.writeBool(13, aggvariadic_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(aggkind_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, aggkind_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, aggkind_);
     }
     if (agglevelsup_ != 0) {
-      output.writeUInt32(16, agglevelsup_);
+      output.writeUInt32(15, agglevelsup_);
     }
     if (aggsplit_ != com.premiumminds.sonar.postgres.protobuf.AggSplit.AGG_SPLIT_UNDEFINED.getNumber()) {
-      output.writeEnum(17, aggsplit_);
+      output.writeEnum(16, aggsplit_);
     }
     if (aggno_ != 0) {
-      output.writeInt32(18, aggno_);
+      output.writeInt32(17, aggno_);
     }
     if (aggtransno_ != 0) {
-      output.writeInt32(19, aggtransno_);
+      output.writeInt32(18, aggtransno_);
     }
     if (location_ != 0) {
-      output.writeInt32(20, location_);
+      output.writeInt32(19, location_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -588,64 +574,60 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(5, inputcollid_);
     }
-    if (aggtranstype_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(6, aggtranstype_);
-    }
     for (int i = 0; i < aggargtypes_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, aggargtypes_.get(i));
+        .computeMessageSize(6, aggargtypes_.get(i));
     }
     for (int i = 0; i < aggdirectargs_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, aggdirectargs_.get(i));
+        .computeMessageSize(7, aggdirectargs_.get(i));
     }
     for (int i = 0; i < args_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, args_.get(i));
+        .computeMessageSize(8, args_.get(i));
     }
     for (int i = 0; i < aggorder_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(10, aggorder_.get(i));
+        .computeMessageSize(9, aggorder_.get(i));
     }
     for (int i = 0; i < aggdistinct_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(11, aggdistinct_.get(i));
+        .computeMessageSize(10, aggdistinct_.get(i));
     }
     if (aggfilter_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(12, getAggfilter());
+        .computeMessageSize(11, getAggfilter());
     }
     if (aggstar_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(13, aggstar_);
+        .computeBoolSize(12, aggstar_);
     }
     if (aggvariadic_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(14, aggvariadic_);
+        .computeBoolSize(13, aggvariadic_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(aggkind_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, aggkind_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, aggkind_);
     }
     if (agglevelsup_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(16, agglevelsup_);
+        .computeUInt32Size(15, agglevelsup_);
     }
     if (aggsplit_ != com.premiumminds.sonar.postgres.protobuf.AggSplit.AGG_SPLIT_UNDEFINED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(17, aggsplit_);
+        .computeEnumSize(16, aggsplit_);
     }
     if (aggno_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(18, aggno_);
+        .computeInt32Size(17, aggno_);
     }
     if (aggtransno_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(19, aggtransno_);
+        .computeInt32Size(18, aggtransno_);
     }
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(20, location_);
+        .computeInt32Size(19, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -675,8 +657,6 @@ private static final long serialVersionUID = 0L;
         != other.getAggcollid()) return false;
     if (getInputcollid()
         != other.getInputcollid()) return false;
-    if (getAggtranstype()
-        != other.getAggtranstype()) return false;
     if (!getAggargtypesList()
         .equals(other.getAggargtypesList())) return false;
     if (!getAggdirectargsList()
@@ -730,8 +710,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAggcollid();
     hash = (37 * hash) + INPUTCOLLID_FIELD_NUMBER;
     hash = (53 * hash) + getInputcollid();
-    hash = (37 * hash) + AGGTRANSTYPE_FIELD_NUMBER;
-    hash = (53 * hash) + getAggtranstype();
     if (getAggargtypesCount() > 0) {
       hash = (37 * hash) + AGGARGTYPES_FIELD_NUMBER;
       hash = (53 * hash) + getAggargtypesList().hashCode();
@@ -912,42 +890,41 @@ private static final long serialVersionUID = 0L;
       aggtype_ = 0;
       aggcollid_ = 0;
       inputcollid_ = 0;
-      aggtranstype_ = 0;
       if (aggargtypesBuilder_ == null) {
         aggargtypes_ = java.util.Collections.emptyList();
       } else {
         aggargtypes_ = null;
         aggargtypesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       if (aggdirectargsBuilder_ == null) {
         aggdirectargs_ = java.util.Collections.emptyList();
       } else {
         aggdirectargs_ = null;
         aggdirectargsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000040);
       if (argsBuilder_ == null) {
         args_ = java.util.Collections.emptyList();
       } else {
         args_ = null;
         argsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000080);
       if (aggorderBuilder_ == null) {
         aggorder_ = java.util.Collections.emptyList();
       } else {
         aggorder_ = null;
         aggorderBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000100);
       if (aggdistinctBuilder_ == null) {
         aggdistinct_ = java.util.Collections.emptyList();
       } else {
         aggdistinct_ = null;
         aggdistinctBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000200);
       aggfilter_ = null;
       if (aggfilterBuilder_ != null) {
         aggfilterBuilder_.dispose();
@@ -995,45 +972,45 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.premiumminds.sonar.postgres.protobuf.Aggref result) {
       if (aggargtypesBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           aggargtypes_ = java.util.Collections.unmodifiableList(aggargtypes_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.aggargtypes_ = aggargtypes_;
       } else {
         result.aggargtypes_ = aggargtypesBuilder_.build();
       }
       if (aggdirectargsBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           aggdirectargs_ = java.util.Collections.unmodifiableList(aggdirectargs_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.aggdirectargs_ = aggdirectargs_;
       } else {
         result.aggdirectargs_ = aggdirectargsBuilder_.build();
       }
       if (argsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           args_ = java.util.Collections.unmodifiableList(args_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.args_ = args_;
       } else {
         result.args_ = argsBuilder_.build();
       }
       if (aggorderBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000100) != 0)) {
           aggorder_ = java.util.Collections.unmodifiableList(aggorder_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.aggorder_ = aggorder_;
       } else {
         result.aggorder_ = aggorderBuilder_.build();
       }
       if (aggdistinctBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0)) {
+        if (((bitField0_ & 0x00000200) != 0)) {
           aggdistinct_ = java.util.Collections.unmodifiableList(aggdistinct_);
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000200);
         }
         result.aggdistinct_ = aggdistinct_;
       } else {
@@ -1060,36 +1037,33 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.inputcollid_ = inputcollid_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.aggtranstype_ = aggtranstype_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.aggfilter_ = aggfilterBuilder_ == null
             ? aggfilter_
             : aggfilterBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.aggstar_ = aggstar_;
       }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
+      if (((from_bitField0_ & 0x00001000) != 0)) {
         result.aggvariadic_ = aggvariadic_;
       }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.aggkind_ = aggkind_;
       }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
+      if (((from_bitField0_ & 0x00004000) != 0)) {
         result.agglevelsup_ = agglevelsup_;
       }
-      if (((from_bitField0_ & 0x00010000) != 0)) {
+      if (((from_bitField0_ & 0x00008000) != 0)) {
         result.aggsplit_ = aggsplit_;
       }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
+      if (((from_bitField0_ & 0x00010000) != 0)) {
         result.aggno_ = aggno_;
       }
-      if (((from_bitField0_ & 0x00040000) != 0)) {
+      if (((from_bitField0_ & 0x00020000) != 0)) {
         result.aggtransno_ = aggtransno_;
       }
-      if (((from_bitField0_ & 0x00080000) != 0)) {
+      if (((from_bitField0_ & 0x00040000) != 0)) {
         result.location_ = location_;
       }
     }
@@ -1153,14 +1127,11 @@ private static final long serialVersionUID = 0L;
       if (other.getInputcollid() != 0) {
         setInputcollid(other.getInputcollid());
       }
-      if (other.getAggtranstype() != 0) {
-        setAggtranstype(other.getAggtranstype());
-      }
       if (aggargtypesBuilder_ == null) {
         if (!other.aggargtypes_.isEmpty()) {
           if (aggargtypes_.isEmpty()) {
             aggargtypes_ = other.aggargtypes_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureAggargtypesIsMutable();
             aggargtypes_.addAll(other.aggargtypes_);
@@ -1173,7 +1144,7 @@ private static final long serialVersionUID = 0L;
             aggargtypesBuilder_.dispose();
             aggargtypesBuilder_ = null;
             aggargtypes_ = other.aggargtypes_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000020);
             aggargtypesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAggargtypesFieldBuilder() : null;
@@ -1186,7 +1157,7 @@ private static final long serialVersionUID = 0L;
         if (!other.aggdirectargs_.isEmpty()) {
           if (aggdirectargs_.isEmpty()) {
             aggdirectargs_ = other.aggdirectargs_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureAggdirectargsIsMutable();
             aggdirectargs_.addAll(other.aggdirectargs_);
@@ -1199,7 +1170,7 @@ private static final long serialVersionUID = 0L;
             aggdirectargsBuilder_.dispose();
             aggdirectargsBuilder_ = null;
             aggdirectargs_ = other.aggdirectargs_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000040);
             aggdirectargsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAggdirectargsFieldBuilder() : null;
@@ -1212,7 +1183,7 @@ private static final long serialVersionUID = 0L;
         if (!other.args_.isEmpty()) {
           if (args_.isEmpty()) {
             args_ = other.args_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureArgsIsMutable();
             args_.addAll(other.args_);
@@ -1225,7 +1196,7 @@ private static final long serialVersionUID = 0L;
             argsBuilder_.dispose();
             argsBuilder_ = null;
             args_ = other.args_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000080);
             argsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getArgsFieldBuilder() : null;
@@ -1238,7 +1209,7 @@ private static final long serialVersionUID = 0L;
         if (!other.aggorder_.isEmpty()) {
           if (aggorder_.isEmpty()) {
             aggorder_ = other.aggorder_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureAggorderIsMutable();
             aggorder_.addAll(other.aggorder_);
@@ -1251,7 +1222,7 @@ private static final long serialVersionUID = 0L;
             aggorderBuilder_.dispose();
             aggorderBuilder_ = null;
             aggorder_ = other.aggorder_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000100);
             aggorderBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAggorderFieldBuilder() : null;
@@ -1264,7 +1235,7 @@ private static final long serialVersionUID = 0L;
         if (!other.aggdistinct_.isEmpty()) {
           if (aggdistinct_.isEmpty()) {
             aggdistinct_ = other.aggdistinct_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             ensureAggdistinctIsMutable();
             aggdistinct_.addAll(other.aggdistinct_);
@@ -1277,7 +1248,7 @@ private static final long serialVersionUID = 0L;
             aggdistinctBuilder_.dispose();
             aggdistinctBuilder_ = null;
             aggdistinct_ = other.aggdistinct_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000200);
             aggdistinctBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAggdistinctFieldBuilder() : null;
@@ -1297,7 +1268,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getAggkind().isEmpty()) {
         aggkind_ = other.aggkind_;
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00002000;
         onChanged();
       }
       if (other.getAgglevelsup() != 0) {
@@ -1368,12 +1339,7 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
-            case 48: {
-              aggtranstype_ = input.readUInt32();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
-            case 58: {
+            case 50: {
               com.premiumminds.sonar.postgres.protobuf.Node m =
                   input.readMessage(
                       com.premiumminds.sonar.postgres.protobuf.Node.parser(),
@@ -1385,8 +1351,8 @@ private static final long serialVersionUID = 0L;
                 aggargtypesBuilder_.addMessage(m);
               }
               break;
-            } // case 58
-            case 66: {
+            } // case 50
+            case 58: {
               com.premiumminds.sonar.postgres.protobuf.Node m =
                   input.readMessage(
                       com.premiumminds.sonar.postgres.protobuf.Node.parser(),
@@ -1398,8 +1364,8 @@ private static final long serialVersionUID = 0L;
                 aggdirectargsBuilder_.addMessage(m);
               }
               break;
-            } // case 66
-            case 74: {
+            } // case 58
+            case 66: {
               com.premiumminds.sonar.postgres.protobuf.Node m =
                   input.readMessage(
                       com.premiumminds.sonar.postgres.protobuf.Node.parser(),
@@ -1411,8 +1377,8 @@ private static final long serialVersionUID = 0L;
                 argsBuilder_.addMessage(m);
               }
               break;
-            } // case 74
-            case 82: {
+            } // case 66
+            case 74: {
               com.premiumminds.sonar.postgres.protobuf.Node m =
                   input.readMessage(
                       com.premiumminds.sonar.postgres.protobuf.Node.parser(),
@@ -1424,8 +1390,8 @@ private static final long serialVersionUID = 0L;
                 aggorderBuilder_.addMessage(m);
               }
               break;
-            } // case 82
-            case 90: {
+            } // case 74
+            case 82: {
               com.premiumminds.sonar.postgres.protobuf.Node m =
                   input.readMessage(
                       com.premiumminds.sonar.postgres.protobuf.Node.parser(),
@@ -1437,54 +1403,54 @@ private static final long serialVersionUID = 0L;
                 aggdistinctBuilder_.addMessage(m);
               }
               break;
-            } // case 90
-            case 98: {
+            } // case 82
+            case 90: {
               input.readMessage(
                   getAggfilterFieldBuilder().getBuilder(),
                   extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 96: {
+              aggstar_ = input.readBool();
               bitField0_ |= 0x00000800;
               break;
-            } // case 98
+            } // case 96
             case 104: {
-              aggstar_ = input.readBool();
+              aggvariadic_ = input.readBool();
               bitField0_ |= 0x00001000;
               break;
             } // case 104
-            case 112: {
-              aggvariadic_ = input.readBool();
+            case 114: {
+              aggkind_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00002000;
               break;
-            } // case 112
-            case 122: {
-              aggkind_ = input.readStringRequireUtf8();
+            } // case 114
+            case 120: {
+              agglevelsup_ = input.readUInt32();
               bitField0_ |= 0x00004000;
               break;
-            } // case 122
+            } // case 120
             case 128: {
-              agglevelsup_ = input.readUInt32();
+              aggsplit_ = input.readEnum();
               bitField0_ |= 0x00008000;
               break;
             } // case 128
             case 136: {
-              aggsplit_ = input.readEnum();
+              aggno_ = input.readInt32();
               bitField0_ |= 0x00010000;
               break;
             } // case 136
             case 144: {
-              aggno_ = input.readInt32();
+              aggtransno_ = input.readInt32();
               bitField0_ |= 0x00020000;
               break;
             } // case 144
             case 152: {
-              aggtransno_ = input.readInt32();
+              location_ = input.readInt32();
               bitField0_ |= 0x00040000;
               break;
             } // case 152
-            case 160: {
-              location_ = input.readInt32();
-              bitField0_ |= 0x00080000;
-              break;
-            } // case 160
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1749,44 +1715,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int aggtranstype_ ;
-    /**
-     * <code>uint32 aggtranstype = 6 [json_name = "aggtranstype"];</code>
-     * @return The aggtranstype.
-     */
-    @java.lang.Override
-    public int getAggtranstype() {
-      return aggtranstype_;
-    }
-    /**
-     * <code>uint32 aggtranstype = 6 [json_name = "aggtranstype"];</code>
-     * @param value The aggtranstype to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAggtranstype(int value) {
-      
-      aggtranstype_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>uint32 aggtranstype = 6 [json_name = "aggtranstype"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAggtranstype() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      aggtranstype_ = 0;
-      onChanged();
-      return this;
-    }
-
     private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> aggargtypes_ =
       java.util.Collections.emptyList();
     private void ensureAggargtypesIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         aggargtypes_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(aggargtypes_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -1794,7 +1728,7 @@ private static final long serialVersionUID = 0L;
         com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> aggargtypesBuilder_;
 
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getAggargtypesList() {
       if (aggargtypesBuilder_ == null) {
@@ -1804,7 +1738,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public int getAggargtypesCount() {
       if (aggargtypesBuilder_ == null) {
@@ -1814,7 +1748,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node getAggargtypes(int index) {
       if (aggargtypesBuilder_ == null) {
@@ -1824,7 +1758,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public Builder setAggargtypes(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -1841,7 +1775,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public Builder setAggargtypes(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -1855,7 +1789,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public Builder addAggargtypes(com.premiumminds.sonar.postgres.protobuf.Node value) {
       if (aggargtypesBuilder_ == null) {
@@ -1871,7 +1805,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public Builder addAggargtypes(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -1888,7 +1822,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public Builder addAggargtypes(
         com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -1902,7 +1836,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public Builder addAggargtypes(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -1916,7 +1850,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public Builder addAllAggargtypes(
         java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
@@ -1931,12 +1865,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public Builder clearAggargtypes() {
       if (aggargtypesBuilder_ == null) {
         aggargtypes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         aggargtypesBuilder_.clear();
@@ -1944,7 +1878,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public Builder removeAggargtypes(int index) {
       if (aggargtypesBuilder_ == null) {
@@ -1957,14 +1891,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder getAggargtypesBuilder(
         int index) {
       return getAggargtypesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggargtypesOrBuilder(
         int index) {
@@ -1974,7 +1908,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
          getAggargtypesOrBuilderList() {
@@ -1985,14 +1919,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addAggargtypesBuilder() {
       return getAggargtypesFieldBuilder().addBuilder(
           com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addAggargtypesBuilder(
         int index) {
@@ -2000,7 +1934,7 @@ private static final long serialVersionUID = 0L;
           index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node aggargtypes = 7 [json_name = "aggargtypes"];</code>
+     * <code>repeated .pg_query.Node aggargtypes = 6 [json_name = "aggargtypes"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
          getAggargtypesBuilderList() {
@@ -2013,7 +1947,7 @@ private static final long serialVersionUID = 0L;
         aggargtypesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
                 aggargtypes_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         aggargtypes_ = null;
@@ -2024,9 +1958,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> aggdirectargs_ =
       java.util.Collections.emptyList();
     private void ensureAggdirectargsIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         aggdirectargs_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(aggdirectargs_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
        }
     }
 
@@ -2034,7 +1968,7 @@ private static final long serialVersionUID = 0L;
         com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> aggdirectargsBuilder_;
 
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getAggdirectargsList() {
       if (aggdirectargsBuilder_ == null) {
@@ -2044,7 +1978,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public int getAggdirectargsCount() {
       if (aggdirectargsBuilder_ == null) {
@@ -2054,7 +1988,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node getAggdirectargs(int index) {
       if (aggdirectargsBuilder_ == null) {
@@ -2064,7 +1998,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public Builder setAggdirectargs(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -2081,7 +2015,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public Builder setAggdirectargs(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2095,7 +2029,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public Builder addAggdirectargs(com.premiumminds.sonar.postgres.protobuf.Node value) {
       if (aggdirectargsBuilder_ == null) {
@@ -2111,7 +2045,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public Builder addAggdirectargs(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -2128,7 +2062,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public Builder addAggdirectargs(
         com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2142,7 +2076,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public Builder addAggdirectargs(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2156,7 +2090,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public Builder addAllAggdirectargs(
         java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
@@ -2171,12 +2105,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public Builder clearAggdirectargs() {
       if (aggdirectargsBuilder_ == null) {
         aggdirectargs_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
       } else {
         aggdirectargsBuilder_.clear();
@@ -2184,7 +2118,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public Builder removeAggdirectargs(int index) {
       if (aggdirectargsBuilder_ == null) {
@@ -2197,14 +2131,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder getAggdirectargsBuilder(
         int index) {
       return getAggdirectargsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggdirectargsOrBuilder(
         int index) {
@@ -2214,7 +2148,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
          getAggdirectargsOrBuilderList() {
@@ -2225,14 +2159,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addAggdirectargsBuilder() {
       return getAggdirectargsFieldBuilder().addBuilder(
           com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addAggdirectargsBuilder(
         int index) {
@@ -2240,7 +2174,7 @@ private static final long serialVersionUID = 0L;
           index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node aggdirectargs = 8 [json_name = "aggdirectargs"];</code>
+     * <code>repeated .pg_query.Node aggdirectargs = 7 [json_name = "aggdirectargs"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
          getAggdirectargsBuilderList() {
@@ -2253,7 +2187,7 @@ private static final long serialVersionUID = 0L;
         aggdirectargsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
                 aggdirectargs_,
-                ((bitField0_ & 0x00000080) != 0),
+                ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
                 isClean());
         aggdirectargs_ = null;
@@ -2264,9 +2198,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> args_ =
       java.util.Collections.emptyList();
     private void ensureArgsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         args_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(args_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -2274,7 +2208,7 @@ private static final long serialVersionUID = 0L;
         com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> argsBuilder_;
 
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getArgsList() {
       if (argsBuilder_ == null) {
@@ -2284,7 +2218,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public int getArgsCount() {
       if (argsBuilder_ == null) {
@@ -2294,7 +2228,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node getArgs(int index) {
       if (argsBuilder_ == null) {
@@ -2304,7 +2238,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public Builder setArgs(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -2321,7 +2255,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public Builder setArgs(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2335,7 +2269,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public Builder addArgs(com.premiumminds.sonar.postgres.protobuf.Node value) {
       if (argsBuilder_ == null) {
@@ -2351,7 +2285,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public Builder addArgs(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -2368,7 +2302,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public Builder addArgs(
         com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2382,7 +2316,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public Builder addArgs(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2396,7 +2330,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public Builder addAllArgs(
         java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
@@ -2411,12 +2345,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public Builder clearArgs() {
       if (argsBuilder_ == null) {
         args_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         argsBuilder_.clear();
@@ -2424,7 +2358,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public Builder removeArgs(int index) {
       if (argsBuilder_ == null) {
@@ -2437,14 +2371,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder getArgsBuilder(
         int index) {
       return getArgsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getArgsOrBuilder(
         int index) {
@@ -2454,7 +2388,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
          getArgsOrBuilderList() {
@@ -2465,14 +2399,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addArgsBuilder() {
       return getArgsFieldBuilder().addBuilder(
           com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addArgsBuilder(
         int index) {
@@ -2480,7 +2414,7 @@ private static final long serialVersionUID = 0L;
           index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node args = 9 [json_name = "args"];</code>
+     * <code>repeated .pg_query.Node args = 8 [json_name = "args"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
          getArgsBuilderList() {
@@ -2493,7 +2427,7 @@ private static final long serialVersionUID = 0L;
         argsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
                 args_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         args_ = null;
@@ -2504,9 +2438,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> aggorder_ =
       java.util.Collections.emptyList();
     private void ensureAggorderIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000100) != 0)) {
         aggorder_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(aggorder_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000100;
        }
     }
 
@@ -2514,7 +2448,7 @@ private static final long serialVersionUID = 0L;
         com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> aggorderBuilder_;
 
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getAggorderList() {
       if (aggorderBuilder_ == null) {
@@ -2524,7 +2458,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public int getAggorderCount() {
       if (aggorderBuilder_ == null) {
@@ -2534,7 +2468,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node getAggorder(int index) {
       if (aggorderBuilder_ == null) {
@@ -2544,7 +2478,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public Builder setAggorder(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -2561,7 +2495,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public Builder setAggorder(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2575,7 +2509,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public Builder addAggorder(com.premiumminds.sonar.postgres.protobuf.Node value) {
       if (aggorderBuilder_ == null) {
@@ -2591,7 +2525,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public Builder addAggorder(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -2608,7 +2542,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public Builder addAggorder(
         com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2622,7 +2556,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public Builder addAggorder(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2636,7 +2570,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public Builder addAllAggorder(
         java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
@@ -2651,12 +2585,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public Builder clearAggorder() {
       if (aggorderBuilder_ == null) {
         aggorder_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
       } else {
         aggorderBuilder_.clear();
@@ -2664,7 +2598,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public Builder removeAggorder(int index) {
       if (aggorderBuilder_ == null) {
@@ -2677,14 +2611,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder getAggorderBuilder(
         int index) {
       return getAggorderFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggorderOrBuilder(
         int index) {
@@ -2694,7 +2628,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
          getAggorderOrBuilderList() {
@@ -2705,14 +2639,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addAggorderBuilder() {
       return getAggorderFieldBuilder().addBuilder(
           com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addAggorderBuilder(
         int index) {
@@ -2720,7 +2654,7 @@ private static final long serialVersionUID = 0L;
           index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node aggorder = 10 [json_name = "aggorder"];</code>
+     * <code>repeated .pg_query.Node aggorder = 9 [json_name = "aggorder"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
          getAggorderBuilderList() {
@@ -2733,7 +2667,7 @@ private static final long serialVersionUID = 0L;
         aggorderBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
                 aggorder_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000100) != 0),
                 getParentForChildren(),
                 isClean());
         aggorder_ = null;
@@ -2744,9 +2678,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> aggdistinct_ =
       java.util.Collections.emptyList();
     private void ensureAggdistinctIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         aggdistinct_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(aggdistinct_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000200;
        }
     }
 
@@ -2754,7 +2688,7 @@ private static final long serialVersionUID = 0L;
         com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> aggdistinctBuilder_;
 
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getAggdistinctList() {
       if (aggdistinctBuilder_ == null) {
@@ -2764,7 +2698,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public int getAggdistinctCount() {
       if (aggdistinctBuilder_ == null) {
@@ -2774,7 +2708,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node getAggdistinct(int index) {
       if (aggdistinctBuilder_ == null) {
@@ -2784,7 +2718,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public Builder setAggdistinct(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -2801,7 +2735,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public Builder setAggdistinct(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2815,7 +2749,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public Builder addAggdistinct(com.premiumminds.sonar.postgres.protobuf.Node value) {
       if (aggdistinctBuilder_ == null) {
@@ -2831,7 +2765,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public Builder addAggdistinct(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -2848,7 +2782,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public Builder addAggdistinct(
         com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2862,7 +2796,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public Builder addAggdistinct(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -2876,7 +2810,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public Builder addAllAggdistinct(
         java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
@@ -2891,12 +2825,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public Builder clearAggdistinct() {
       if (aggdistinctBuilder_ == null) {
         aggdistinct_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
       } else {
         aggdistinctBuilder_.clear();
@@ -2904,7 +2838,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public Builder removeAggdistinct(int index) {
       if (aggdistinctBuilder_ == null) {
@@ -2917,14 +2851,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder getAggdistinctBuilder(
         int index) {
       return getAggdistinctFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggdistinctOrBuilder(
         int index) {
@@ -2934,7 +2868,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
          getAggdistinctOrBuilderList() {
@@ -2945,14 +2879,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addAggdistinctBuilder() {
       return getAggdistinctFieldBuilder().addBuilder(
           com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addAggdistinctBuilder(
         int index) {
@@ -2960,7 +2894,7 @@ private static final long serialVersionUID = 0L;
           index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node aggdistinct = 11 [json_name = "aggdistinct"];</code>
+     * <code>repeated .pg_query.Node aggdistinct = 10 [json_name = "aggdistinct"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
          getAggdistinctBuilderList() {
@@ -2973,7 +2907,7 @@ private static final long serialVersionUID = 0L;
         aggdistinctBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
                 aggdistinct_,
-                ((bitField0_ & 0x00000400) != 0),
+                ((bitField0_ & 0x00000200) != 0),
                 getParentForChildren(),
                 isClean());
         aggdistinct_ = null;
@@ -2985,14 +2919,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> aggfilterBuilder_;
     /**
-     * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+     * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
      * @return Whether the aggfilter field is set.
      */
     public boolean hasAggfilter() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
-     * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+     * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
      * @return The aggfilter.
      */
     public com.premiumminds.sonar.postgres.protobuf.Node getAggfilter() {
@@ -3003,7 +2937,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+     * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
      */
     public Builder setAggfilter(com.premiumminds.sonar.postgres.protobuf.Node value) {
       if (aggfilterBuilder_ == null) {
@@ -3014,12 +2948,12 @@ private static final long serialVersionUID = 0L;
       } else {
         aggfilterBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
-     * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+     * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
      */
     public Builder setAggfilter(
         com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -3028,16 +2962,16 @@ private static final long serialVersionUID = 0L;
       } else {
         aggfilterBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
-     * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+     * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
      */
     public Builder mergeAggfilter(com.premiumminds.sonar.postgres.protobuf.Node value) {
       if (aggfilterBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0) &&
+        if (((bitField0_ & 0x00000400) != 0) &&
           aggfilter_ != null &&
           aggfilter_ != com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance()) {
           getAggfilterBuilder().mergeFrom(value);
@@ -3047,15 +2981,15 @@ private static final long serialVersionUID = 0L;
       } else {
         aggfilterBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
-     * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+     * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
      */
     public Builder clearAggfilter() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00000400);
       aggfilter_ = null;
       if (aggfilterBuilder_ != null) {
         aggfilterBuilder_.dispose();
@@ -3065,15 +2999,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+     * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder getAggfilterBuilder() {
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       onChanged();
       return getAggfilterFieldBuilder().getBuilder();
     }
     /**
-     * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+     * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggfilterOrBuilder() {
       if (aggfilterBuilder_ != null) {
@@ -3084,7 +3018,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.pg_query.Node aggfilter = 12 [json_name = "aggfilter"];</code>
+     * <code>.pg_query.Node aggfilter = 11 [json_name = "aggfilter"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
@@ -3102,7 +3036,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean aggstar_ ;
     /**
-     * <code>bool aggstar = 13 [json_name = "aggstar"];</code>
+     * <code>bool aggstar = 12 [json_name = "aggstar"];</code>
      * @return The aggstar.
      */
     @java.lang.Override
@@ -3110,23 +3044,23 @@ private static final long serialVersionUID = 0L;
       return aggstar_;
     }
     /**
-     * <code>bool aggstar = 13 [json_name = "aggstar"];</code>
+     * <code>bool aggstar = 12 [json_name = "aggstar"];</code>
      * @param value The aggstar to set.
      * @return This builder for chaining.
      */
     public Builder setAggstar(boolean value) {
       
       aggstar_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
     /**
-     * <code>bool aggstar = 13 [json_name = "aggstar"];</code>
+     * <code>bool aggstar = 12 [json_name = "aggstar"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAggstar() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00000800);
       aggstar_ = false;
       onChanged();
       return this;
@@ -3134,7 +3068,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean aggvariadic_ ;
     /**
-     * <code>bool aggvariadic = 14 [json_name = "aggvariadic"];</code>
+     * <code>bool aggvariadic = 13 [json_name = "aggvariadic"];</code>
      * @return The aggvariadic.
      */
     @java.lang.Override
@@ -3142,23 +3076,23 @@ private static final long serialVersionUID = 0L;
       return aggvariadic_;
     }
     /**
-     * <code>bool aggvariadic = 14 [json_name = "aggvariadic"];</code>
+     * <code>bool aggvariadic = 13 [json_name = "aggvariadic"];</code>
      * @param value The aggvariadic to set.
      * @return This builder for chaining.
      */
     public Builder setAggvariadic(boolean value) {
       
       aggvariadic_ = value;
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
     /**
-     * <code>bool aggvariadic = 14 [json_name = "aggvariadic"];</code>
+     * <code>bool aggvariadic = 13 [json_name = "aggvariadic"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAggvariadic() {
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00001000);
       aggvariadic_ = false;
       onChanged();
       return this;
@@ -3166,7 +3100,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object aggkind_ = "";
     /**
-     * <code>string aggkind = 15 [json_name = "aggkind"];</code>
+     * <code>string aggkind = 14 [json_name = "aggkind"];</code>
      * @return The aggkind.
      */
     public java.lang.String getAggkind() {
@@ -3182,7 +3116,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string aggkind = 15 [json_name = "aggkind"];</code>
+     * <code>string aggkind = 14 [json_name = "aggkind"];</code>
      * @return The bytes for aggkind.
      */
     public com.google.protobuf.ByteString
@@ -3199,7 +3133,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string aggkind = 15 [json_name = "aggkind"];</code>
+     * <code>string aggkind = 14 [json_name = "aggkind"];</code>
      * @param value The aggkind to set.
      * @return This builder for chaining.
      */
@@ -3207,22 +3141,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       aggkind_ = value;
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
     /**
-     * <code>string aggkind = 15 [json_name = "aggkind"];</code>
+     * <code>string aggkind = 14 [json_name = "aggkind"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAggkind() {
       aggkind_ = getDefaultInstance().getAggkind();
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       onChanged();
       return this;
     }
     /**
-     * <code>string aggkind = 15 [json_name = "aggkind"];</code>
+     * <code>string aggkind = 14 [json_name = "aggkind"];</code>
      * @param value The bytes for aggkind to set.
      * @return This builder for chaining.
      */
@@ -3231,14 +3165,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       aggkind_ = value;
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
 
     private int agglevelsup_ ;
     /**
-     * <code>uint32 agglevelsup = 16 [json_name = "agglevelsup"];</code>
+     * <code>uint32 agglevelsup = 15 [json_name = "agglevelsup"];</code>
      * @return The agglevelsup.
      */
     @java.lang.Override
@@ -3246,23 +3180,23 @@ private static final long serialVersionUID = 0L;
       return agglevelsup_;
     }
     /**
-     * <code>uint32 agglevelsup = 16 [json_name = "agglevelsup"];</code>
+     * <code>uint32 agglevelsup = 15 [json_name = "agglevelsup"];</code>
      * @param value The agglevelsup to set.
      * @return This builder for chaining.
      */
     public Builder setAgglevelsup(int value) {
       
       agglevelsup_ = value;
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 agglevelsup = 16 [json_name = "agglevelsup"];</code>
+     * <code>uint32 agglevelsup = 15 [json_name = "agglevelsup"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAgglevelsup() {
-      bitField0_ = (bitField0_ & ~0x00008000);
+      bitField0_ = (bitField0_ & ~0x00004000);
       agglevelsup_ = 0;
       onChanged();
       return this;
@@ -3270,25 +3204,25 @@ private static final long serialVersionUID = 0L;
 
     private int aggsplit_ = 0;
     /**
-     * <code>.pg_query.AggSplit aggsplit = 17 [json_name = "aggsplit"];</code>
+     * <code>.pg_query.AggSplit aggsplit = 16 [json_name = "aggsplit"];</code>
      * @return The enum numeric value on the wire for aggsplit.
      */
     @java.lang.Override public int getAggsplitValue() {
       return aggsplit_;
     }
     /**
-     * <code>.pg_query.AggSplit aggsplit = 17 [json_name = "aggsplit"];</code>
+     * <code>.pg_query.AggSplit aggsplit = 16 [json_name = "aggsplit"];</code>
      * @param value The enum numeric value on the wire for aggsplit to set.
      * @return This builder for chaining.
      */
     public Builder setAggsplitValue(int value) {
       aggsplit_ = value;
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
     /**
-     * <code>.pg_query.AggSplit aggsplit = 17 [json_name = "aggsplit"];</code>
+     * <code>.pg_query.AggSplit aggsplit = 16 [json_name = "aggsplit"];</code>
      * @return The aggsplit.
      */
     @java.lang.Override
@@ -3297,7 +3231,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.premiumminds.sonar.postgres.protobuf.AggSplit.UNRECOGNIZED : result;
     }
     /**
-     * <code>.pg_query.AggSplit aggsplit = 17 [json_name = "aggsplit"];</code>
+     * <code>.pg_query.AggSplit aggsplit = 16 [json_name = "aggsplit"];</code>
      * @param value The aggsplit to set.
      * @return This builder for chaining.
      */
@@ -3305,17 +3239,17 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00008000;
       aggsplit_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.pg_query.AggSplit aggsplit = 17 [json_name = "aggsplit"];</code>
+     * <code>.pg_query.AggSplit aggsplit = 16 [json_name = "aggsplit"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAggsplit() {
-      bitField0_ = (bitField0_ & ~0x00010000);
+      bitField0_ = (bitField0_ & ~0x00008000);
       aggsplit_ = 0;
       onChanged();
       return this;
@@ -3323,7 +3257,7 @@ private static final long serialVersionUID = 0L;
 
     private int aggno_ ;
     /**
-     * <code>int32 aggno = 18 [json_name = "aggno"];</code>
+     * <code>int32 aggno = 17 [json_name = "aggno"];</code>
      * @return The aggno.
      */
     @java.lang.Override
@@ -3331,23 +3265,23 @@ private static final long serialVersionUID = 0L;
       return aggno_;
     }
     /**
-     * <code>int32 aggno = 18 [json_name = "aggno"];</code>
+     * <code>int32 aggno = 17 [json_name = "aggno"];</code>
      * @param value The aggno to set.
      * @return This builder for chaining.
      */
     public Builder setAggno(int value) {
       
       aggno_ = value;
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 aggno = 18 [json_name = "aggno"];</code>
+     * <code>int32 aggno = 17 [json_name = "aggno"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAggno() {
-      bitField0_ = (bitField0_ & ~0x00020000);
+      bitField0_ = (bitField0_ & ~0x00010000);
       aggno_ = 0;
       onChanged();
       return this;
@@ -3355,7 +3289,7 @@ private static final long serialVersionUID = 0L;
 
     private int aggtransno_ ;
     /**
-     * <code>int32 aggtransno = 19 [json_name = "aggtransno"];</code>
+     * <code>int32 aggtransno = 18 [json_name = "aggtransno"];</code>
      * @return The aggtransno.
      */
     @java.lang.Override
@@ -3363,23 +3297,23 @@ private static final long serialVersionUID = 0L;
       return aggtransno_;
     }
     /**
-     * <code>int32 aggtransno = 19 [json_name = "aggtransno"];</code>
+     * <code>int32 aggtransno = 18 [json_name = "aggtransno"];</code>
      * @param value The aggtransno to set.
      * @return This builder for chaining.
      */
     public Builder setAggtransno(int value) {
       
       aggtransno_ = value;
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 aggtransno = 19 [json_name = "aggtransno"];</code>
+     * <code>int32 aggtransno = 18 [json_name = "aggtransno"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAggtransno() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00020000);
       aggtransno_ = 0;
       onChanged();
       return this;
@@ -3387,7 +3321,7 @@ private static final long serialVersionUID = 0L;
 
     private int location_ ;
     /**
-     * <code>int32 location = 20 [json_name = "location"];</code>
+     * <code>int32 location = 19 [json_name = "location"];</code>
      * @return The location.
      */
     @java.lang.Override
@@ -3395,23 +3329,23 @@ private static final long serialVersionUID = 0L;
       return location_;
     }
     /**
-     * <code>int32 location = 20 [json_name = "location"];</code>
+     * <code>int32 location = 19 [json_name = "location"];</code>
      * @param value The location to set.
      * @return This builder for chaining.
      */
     public Builder setLocation(int value) {
       
       location_ = value;
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 location = 20 [json_name = "location"];</code>
+     * <code>int32 location = 19 [json_name = "location"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      bitField0_ = (bitField0_ & ~0x00080000);
+      bitField0_ = (bitField0_ & ~0x00040000);
       location_ = 0;
       onChanged();
       return this;

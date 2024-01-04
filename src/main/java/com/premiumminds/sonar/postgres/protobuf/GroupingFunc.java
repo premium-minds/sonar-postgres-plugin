@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private GroupingFunc() {
     args_ = java.util.Collections.emptyList();
     refs_ = java.util.Collections.emptyList();
-    cols_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -154,51 +153,10 @@ private static final long serialVersionUID = 0L;
     return refs_.get(index);
   }
 
-  public static final int COLS_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> cols_;
-  /**
-   * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getColsList() {
-    return cols_;
-  }
-  /**
-   * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-      getColsOrBuilderList() {
-    return cols_;
-  }
-  /**
-   * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-   */
-  @java.lang.Override
-  public int getColsCount() {
-    return cols_.size();
-  }
-  /**
-   * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-   */
-  @java.lang.Override
-  public com.premiumminds.sonar.postgres.protobuf.Node getCols(int index) {
-    return cols_.get(index);
-  }
-  /**
-   * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-   */
-  @java.lang.Override
-  public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColsOrBuilder(
-      int index) {
-    return cols_.get(index);
-  }
-
-  public static final int AGGLEVELSUP_FIELD_NUMBER = 5;
+  public static final int AGGLEVELSUP_FIELD_NUMBER = 4;
   private int agglevelsup_ = 0;
   /**
-   * <code>uint32 agglevelsup = 5 [json_name = "agglevelsup"];</code>
+   * <code>uint32 agglevelsup = 4 [json_name = "agglevelsup"];</code>
    * @return The agglevelsup.
    */
   @java.lang.Override
@@ -206,10 +164,10 @@ private static final long serialVersionUID = 0L;
     return agglevelsup_;
   }
 
-  public static final int LOCATION_FIELD_NUMBER = 6;
+  public static final int LOCATION_FIELD_NUMBER = 5;
   private int location_ = 0;
   /**
-   * <code>int32 location = 6 [json_name = "location"];</code>
+   * <code>int32 location = 5 [json_name = "location"];</code>
    * @return The location.
    */
   @java.lang.Override
@@ -240,14 +198,11 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < refs_.size(); i++) {
       output.writeMessage(3, refs_.get(i));
     }
-    for (int i = 0; i < cols_.size(); i++) {
-      output.writeMessage(4, cols_.get(i));
-    }
     if (agglevelsup_ != 0) {
-      output.writeUInt32(5, agglevelsup_);
+      output.writeUInt32(4, agglevelsup_);
     }
     if (location_ != 0) {
-      output.writeInt32(6, location_);
+      output.writeInt32(5, location_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -270,17 +225,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, refs_.get(i));
     }
-    for (int i = 0; i < cols_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, cols_.get(i));
-    }
     if (agglevelsup_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(5, agglevelsup_);
+        .computeUInt32Size(4, agglevelsup_);
     }
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(6, location_);
+        .computeInt32Size(5, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -306,8 +257,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getArgsList())) return false;
     if (!getRefsList()
         .equals(other.getRefsList())) return false;
-    if (!getColsList()
-        .equals(other.getColsList())) return false;
     if (getAgglevelsup()
         != other.getAgglevelsup()) return false;
     if (getLocation()
@@ -334,10 +283,6 @@ private static final long serialVersionUID = 0L;
     if (getRefsCount() > 0) {
       hash = (37 * hash) + REFS_FIELD_NUMBER;
       hash = (53 * hash) + getRefsList().hashCode();
-    }
-    if (getColsCount() > 0) {
-      hash = (37 * hash) + COLS_FIELD_NUMBER;
-      hash = (53 * hash) + getColsList().hashCode();
     }
     hash = (37 * hash) + AGGLEVELSUP_FIELD_NUMBER;
     hash = (53 * hash) + getAgglevelsup();
@@ -491,13 +436,6 @@ private static final long serialVersionUID = 0L;
         refsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
-      if (colsBuilder_ == null) {
-        cols_ = java.util.Collections.emptyList();
-      } else {
-        cols_ = null;
-        colsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000008);
       agglevelsup_ = 0;
       location_ = 0;
       return this;
@@ -551,15 +489,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.refs_ = refsBuilder_.build();
       }
-      if (colsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          cols_ = java.util.Collections.unmodifiableList(cols_);
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.cols_ = cols_;
-      } else {
-        result.cols_ = colsBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.GroupingFunc result) {
@@ -569,10 +498,10 @@ private static final long serialVersionUID = 0L;
             ? xpr_
             : xprBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.agglevelsup_ = agglevelsup_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.location_ = location_;
       }
     }
@@ -676,32 +605,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (colsBuilder_ == null) {
-        if (!other.cols_.isEmpty()) {
-          if (cols_.isEmpty()) {
-            cols_ = other.cols_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureColsIsMutable();
-            cols_.addAll(other.cols_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.cols_.isEmpty()) {
-          if (colsBuilder_.isEmpty()) {
-            colsBuilder_.dispose();
-            colsBuilder_ = null;
-            cols_ = other.cols_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-            colsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getColsFieldBuilder() : null;
-          } else {
-            colsBuilder_.addAllMessages(other.cols_);
-          }
-        }
-      }
       if (other.getAgglevelsup() != 0) {
         setAgglevelsup(other.getAgglevelsup());
       }
@@ -767,29 +670,16 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 26
-            case 34: {
-              com.premiumminds.sonar.postgres.protobuf.Node m =
-                  input.readMessage(
-                      com.premiumminds.sonar.postgres.protobuf.Node.parser(),
-                      extensionRegistry);
-              if (colsBuilder_ == null) {
-                ensureColsIsMutable();
-                cols_.add(m);
-              } else {
-                colsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 34
-            case 40: {
+            case 32: {
               agglevelsup_ = input.readUInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              location_ = input.readInt32();
               bitField0_ |= 0x00000010;
               break;
             } // case 40
-            case 48: {
-              location_ = input.readInt32();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1406,249 +1296,9 @@ private static final long serialVersionUID = 0L;
       return refsBuilder_;
     }
 
-    private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> cols_ =
-      java.util.Collections.emptyList();
-    private void ensureColsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
-        cols_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(cols_);
-        bitField0_ |= 0x00000008;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> colsBuilder_;
-
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getColsList() {
-      if (colsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(cols_);
-      } else {
-        return colsBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public int getColsCount() {
-      if (colsBuilder_ == null) {
-        return cols_.size();
-      } else {
-        return colsBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public com.premiumminds.sonar.postgres.protobuf.Node getCols(int index) {
-      if (colsBuilder_ == null) {
-        return cols_.get(index);
-      } else {
-        return colsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public Builder setCols(
-        int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
-      if (colsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureColsIsMutable();
-        cols_.set(index, value);
-        onChanged();
-      } else {
-        colsBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public Builder setCols(
-        int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
-      if (colsBuilder_ == null) {
-        ensureColsIsMutable();
-        cols_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        colsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public Builder addCols(com.premiumminds.sonar.postgres.protobuf.Node value) {
-      if (colsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureColsIsMutable();
-        cols_.add(value);
-        onChanged();
-      } else {
-        colsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public Builder addCols(
-        int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
-      if (colsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureColsIsMutable();
-        cols_.add(index, value);
-        onChanged();
-      } else {
-        colsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public Builder addCols(
-        com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
-      if (colsBuilder_ == null) {
-        ensureColsIsMutable();
-        cols_.add(builderForValue.build());
-        onChanged();
-      } else {
-        colsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public Builder addCols(
-        int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
-      if (colsBuilder_ == null) {
-        ensureColsIsMutable();
-        cols_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        colsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public Builder addAllCols(
-        java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
-      if (colsBuilder_ == null) {
-        ensureColsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, cols_);
-        onChanged();
-      } else {
-        colsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public Builder clearCols() {
-      if (colsBuilder_ == null) {
-        cols_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-      } else {
-        colsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public Builder removeCols(int index) {
-      if (colsBuilder_ == null) {
-        ensureColsIsMutable();
-        cols_.remove(index);
-        onChanged();
-      } else {
-        colsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public com.premiumminds.sonar.postgres.protobuf.Node.Builder getColsBuilder(
-        int index) {
-      return getColsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColsOrBuilder(
-        int index) {
-      if (colsBuilder_ == null) {
-        return cols_.get(index);  } else {
-        return colsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-         getColsOrBuilderList() {
-      if (colsBuilder_ != null) {
-        return colsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(cols_);
-      }
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public com.premiumminds.sonar.postgres.protobuf.Node.Builder addColsBuilder() {
-      return getColsFieldBuilder().addBuilder(
-          com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public com.premiumminds.sonar.postgres.protobuf.Node.Builder addColsBuilder(
-        int index) {
-      return getColsFieldBuilder().addBuilder(
-          index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .pg_query.Node cols = 4 [json_name = "cols"];</code>
-     */
-    public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
-         getColsBuilderList() {
-      return getColsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-        getColsFieldBuilder() {
-      if (colsBuilder_ == null) {
-        colsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
-                cols_,
-                ((bitField0_ & 0x00000008) != 0),
-                getParentForChildren(),
-                isClean());
-        cols_ = null;
-      }
-      return colsBuilder_;
-    }
-
     private int agglevelsup_ ;
     /**
-     * <code>uint32 agglevelsup = 5 [json_name = "agglevelsup"];</code>
+     * <code>uint32 agglevelsup = 4 [json_name = "agglevelsup"];</code>
      * @return The agglevelsup.
      */
     @java.lang.Override
@@ -1656,23 +1306,23 @@ private static final long serialVersionUID = 0L;
       return agglevelsup_;
     }
     /**
-     * <code>uint32 agglevelsup = 5 [json_name = "agglevelsup"];</code>
+     * <code>uint32 agglevelsup = 4 [json_name = "agglevelsup"];</code>
      * @param value The agglevelsup to set.
      * @return This builder for chaining.
      */
     public Builder setAgglevelsup(int value) {
       
       agglevelsup_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 agglevelsup = 5 [json_name = "agglevelsup"];</code>
+     * <code>uint32 agglevelsup = 4 [json_name = "agglevelsup"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAgglevelsup() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       agglevelsup_ = 0;
       onChanged();
       return this;
@@ -1680,7 +1330,7 @@ private static final long serialVersionUID = 0L;
 
     private int location_ ;
     /**
-     * <code>int32 location = 6 [json_name = "location"];</code>
+     * <code>int32 location = 5 [json_name = "location"];</code>
      * @return The location.
      */
     @java.lang.Override
@@ -1688,23 +1338,23 @@ private static final long serialVersionUID = 0L;
       return location_;
     }
     /**
-     * <code>int32 location = 6 [json_name = "location"];</code>
+     * <code>int32 location = 5 [json_name = "location"];</code>
      * @param value The location to set.
      * @return This builder for chaining.
      */
     public Builder setLocation(int value) {
       
       location_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 location = 6 [json_name = "location"];</code>
+     * <code>int32 location = 5 [json_name = "location"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       location_ = 0;
       onChanged();
       return this;

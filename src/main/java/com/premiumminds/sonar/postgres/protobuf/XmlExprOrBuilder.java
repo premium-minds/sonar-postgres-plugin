@@ -129,19 +129,25 @@ public interface XmlExprOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.XmlOptionType getXmloption();
 
   /**
-   * <code>uint32 type = 8 [json_name = "type"];</code>
+   * <code>bool indent = 8 [json_name = "indent"];</code>
+   * @return The indent.
+   */
+  boolean getIndent();
+
+  /**
+   * <code>uint32 type = 9 [json_name = "type"];</code>
    * @return The type.
    */
   int getType();
 
   /**
-   * <code>int32 typmod = 9 [json_name = "typmod"];</code>
+   * <code>int32 typmod = 10 [json_name = "typmod"];</code>
    * @return The typmod.
    */
   int getTypmod();
 
   /**
-   * <code>int32 location = 10 [json_name = "location"];</code>
+   * <code>int32 location = 11 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

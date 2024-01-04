@@ -62,10 +62,28 @@ public interface GrantRoleStmtOrBuilder extends
   boolean getIsGrant();
 
   /**
-   * <code>bool admin_opt = 4 [json_name = "admin_opt"];</code>
-   * @return The adminOpt.
+   * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
    */
-  boolean getAdminOpt();
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getOptList();
+  /**
+   * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getOpt(int index);
+  /**
+   * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+   */
+  int getOptCount();
+  /**
+   * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getOptOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node opt = 4 [json_name = "opt"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getOptOrBuilder(
+      int index);
 
   /**
    * <code>.pg_query.RoleSpec grantor = 5 [json_name = "grantor"];</code>

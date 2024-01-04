@@ -188,10 +188,10 @@ public interface IndexStmtOrBuilder extends
   int getIndexOid();
 
   /**
-   * <code>uint32 old_node = 12 [json_name = "oldNode"];</code>
-   * @return The oldNode.
+   * <code>uint32 old_number = 12 [json_name = "oldNumber"];</code>
+   * @return The oldNumber.
    */
-  int getOldNode();
+  int getOldNumber();
 
   /**
    * <code>uint32 old_create_subid = 13 [json_name = "oldCreateSubid"];</code>
@@ -200,10 +200,10 @@ public interface IndexStmtOrBuilder extends
   int getOldCreateSubid();
 
   /**
-   * <code>uint32 old_first_relfilenode_subid = 14 [json_name = "oldFirstRelfilenodeSubid"];</code>
-   * @return The oldFirstRelfilenodeSubid.
+   * <code>uint32 old_first_relfilelocator_subid = 14 [json_name = "oldFirstRelfilelocatorSubid"];</code>
+   * @return The oldFirstRelfilelocatorSubid.
    */
-  int getOldFirstRelfilenodeSubid();
+  int getOldFirstRelfilelocatorSubid();
 
   /**
    * <code>bool unique = 15 [json_name = "unique"];</code>

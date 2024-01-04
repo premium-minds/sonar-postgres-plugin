@@ -49,7 +49,13 @@ public interface XmlSerializeOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.TypeNameOrBuilder getTypeNameOrBuilder();
 
   /**
-   * <code>int32 location = 4 [json_name = "location"];</code>
+   * <code>bool indent = 4 [json_name = "indent"];</code>
+   * @return The indent.
+   */
+  boolean getIndent();
+
+  /**
+   * <code>int32 location = 5 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();
