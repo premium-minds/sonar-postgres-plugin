@@ -11,14 +11,38 @@ pushd $LIBPG_QUERY_TEMP_DIR
 # compile x86-64
 docker run --name gcc-libpgquery-amd64 \
   gcc:11 \
-  bash -c 'wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/16-5.0.0.zip && unzip 16-5.0.0.zip && cd libpg_query-16-5.0.0 && make -j build_shared'
-docker cp gcc-libpgquery-amd64:libpg_query-16-5.0.0/libpg_query.so $PROJECT_DIR/src/main/resources/linux-x86-64/libpg_query.so
+  bash -c 'wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/16-5.0.0.zip && \
+    unzip 16-5.0.0.zip && \
+    cd libpg_query-16-5.0.0 && \
+    make -j build_shared'
+docker cp gcc-libpgquery-amd64:libpg_query-16-5.0.0/libpg_query.so \
+  $PROJECT_DIR/src/main/resources/linux-x86-64/libpg_query.so
 
 # compile aarch64
 docker run --name gcc-libpgquery-aarch64 \
   gcc:11 \
-  bash -c 'wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/16-5.0.0.zip && unzip 16-5.0.0.zip && cd libpg_query-16-5.0.0 && apt-get update && apt install -y gcc-aarch64-linux-gnu && export CC=aarch64-linux-gnu-gcc && make -j build_shared'
-docker cp gcc-libpgquery-aarch64:libpg_query-16-5.0.0/libpg_query.so $PROJECT_DIR/src/main/resources/linux-aarch64/libpg_query.so
+  bash -c 'wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/16-5.0.0.zip && \
+    unzip 16-5.0.0.zip && \
+    cd libpg_query-16-5.0.0 && \
+    apt-get update && \
+    apt install -y gcc-aarch64-linux-gnu && \
+    export CC=aarch64-linux-gnu-gcc && \
+    make -j build_shared'
+docker cp gcc-libpgquery-aarch64:libpg_query-16-5.0.0/libpg_query.so \
+  $PROJECT_DIR/src/main/resources/linux-aarch64/libpg_query.so
+
+# compile i686
+docker run --name gcc-libpgquery-i686 \
+  gcc:11 \
+  bash -c 'wget -q https://codeload.github.com/pganalyze/libpg_query/zip/refs/heads/32-bit-support && \
+    unzip 32-bit-support && \
+    cd libpg_query-32-bit-support && \
+    apt-get update && \
+    apt install -y gcc-i686-linux-gnu && \
+    export CC=i686-linux-gnu-gcc && \
+    make -j build_shared'
+docker cp gcc-libpgquery-i686:libpg_query-32-bit-support/libpg_query.so \
+  $PROJECT_DIR/src/main/resources/linux-i686/libpg_query.so
 
 # generate java sources
 wget https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip
@@ -39,7 +63,7 @@ bin/protoc \
 
 patch -p1 --directory=$PROJECT_DIR < $PROJECT_DIR/Token.java.patch
 
-docker rm -f gcc-libpgquery-amd64 gcc-libpgquery-aarch64
+docker rm -f gcc-libpgquery-amd64 gcc-libpgquery-aarch64 gcc-libpgquery-i686
 popd
 chmod -R +w $LIBPG_QUERY_TEMP_DIR
 rm -r $LIBPG_QUERY_TEMP_DIR
