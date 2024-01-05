@@ -8,7 +8,7 @@ import static com.premiumminds.sonar.postgres.PostgresSqlLanguage.FILE_EXCLUSION
 import static com.premiumminds.sonar.postgres.PostgresSqlLanguage.FILE_SUFFIXES_DEFAULT_VALUE;
 import static com.premiumminds.sonar.postgres.PostgresSqlLanguage.FILE_SUFFIXES_KEY;
 
-public class PotgresSQLExtension implements Plugin {
+public class PostgresSQLExtension implements Plugin {
 
     private static final String CATEGORY = "PostgreSQL";
     @Override
