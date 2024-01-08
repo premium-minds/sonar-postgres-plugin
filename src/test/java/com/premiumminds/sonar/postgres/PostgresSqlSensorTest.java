@@ -655,6 +655,7 @@ class PostgresSqlSensorTest {
                                                                 "ALTER TABLE IF EXISTS foo " +
                                                                 "   DROP CONSTRAINT IF EXISTS name_constraint," +
                                                                 "   ADD CONSTRAINT name_constraint UNIQUE USING INDEX foo_name_temp_idx;");
+        createFile(contextTester, "file3.sql", "ALTER TABLE IF EXISTS foo ADD COLUMN IF NOT EXISTS bar text CONSTRAINT foo_bar_unique UNIQUE;");
 
         final RuleKey rule = RULE_DISALLOWED_UNIQUE_CONSTRAINT;
         PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
@@ -666,8 +667,10 @@ class PostgresSqlSensorTest {
 
         assertEquals("Adding a UNIQUE constraint requires an ACCESS EXCLUSIVE lock which blocks reads and writes to the table while the index is built.",
                 fileMap.get(":file1.sql").primaryLocation().message());
+        assertEquals("Adding a UNIQUE constraint requires an ACCESS EXCLUSIVE lock which blocks reads and writes to the table while the index is built.",
+                fileMap.get(":file3.sql").primaryLocation().message());
 
-        assertEquals(1, fileMap.size());
+        assertEquals(2, fileMap.size());
     }
 
     @Test
