@@ -24,20 +24,6 @@ public class AddForeignKeyVisitorCheck extends AbstractVisitorCheck {
         super.visitAlterTableColumnConstraint(constraint);
     }
 
-    @Override
-    public void visitCreateTableColumnConstraint(Constraint constraint) {
-        visitConstraint(constraint);
-
-        super.visitCreateTableColumnConstraint(constraint);
-    }
-
-    @Override
-    public void visitCreateTableTableConstraint(Constraint constraint) {
-        visitConstraint(constraint);
-
-        super.visitCreateTableTableConstraint(constraint);
-    }
-
     private void visitConstraint(Constraint constraint) {
         final ConstrType contype = constraint.getContype();
         if (ConstrType.CONSTR_FOREIGN.equals(contype) && constraint.getInitiallyValid() && !constraint.getSkipValidation()){

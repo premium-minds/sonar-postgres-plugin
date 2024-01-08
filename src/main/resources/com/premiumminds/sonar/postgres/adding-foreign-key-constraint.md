@@ -17,6 +17,7 @@ See ["How not valid constraints work"](https://squawkhq.com/docs/constraint-miss
 Instead of:
 
 ``sql
+-- blocks writes to "email" and "user" while Postgres checks rows in "email" have user_id mapping to "user".id (slow)
 ALTER TABLE "email" ADD CONSTRAINT "fk_user"
     FOREIGN KEY ("user_id") REFERENCES "user" ("id");
 ``
@@ -24,20 +25,25 @@ ALTER TABLE "email" ADD CONSTRAINT "fk_user"
 Use:
 
 ``sql
+-- blocks writes to "email" and "user" while Postgres updates table schema (fast)
 ALTER TABLE "email" ADD CONSTRAINT "fk_user"
     FOREIGN KEY ("user_id") REFERENCES "user" ("id") NOT VALID;
+-- non-blocking while existing rows are checked.
 ALTER TABLE "email" VALIDATE CONSTRAINT "fk_user";
 ``
 
-Add the foreign key constraint as ``NOT VALID`` to prevent locking the ``"email"`` and ``"user"`` tables.
+Add the foreign key constraint as ``NOT VALID`` to prevent locking the ``"email"`` and ``"user"`` tables while "email" rows are checked against "user".
 
 Run ``VALIDATE CONSTRAINT`` to scan the ``"email"`` table in the background while reads and writes continue.
 
 === adding constraint to new table
 
-Instead of:
+Both of these examples have the same amount of locking. Since the newly created table has no rows, you don't need to add a foreign key with `NOT VALID`.
+
+Adding foreign key constraint in `create table` statement.
 
 ``sql
+-- blocks writes to "user" while Postgres updates table schema.
 CREATE TABLE email (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
     user_id BIGINT,
@@ -49,9 +55,10 @@ CREATE TABLE email (
 );
 ``
 
-Use:
+Using `not valid...validate`:
 
 ``sql
+-- no references to lock.
 CREATE TABLE email (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
     user_id BIGINT,
@@ -59,9 +66,11 @@ CREATE TABLE email (
     PRIMARY KEY(id)
 );
 
+-- blocks writes to "email" and "user" while Postgres updates table schema (fast)
 ALTER TABLE "email" ADD CONSTRAINT "fk_user"
     FOREIGN KEY ("user_id") REFERENCES "user" ("id") NOT VALID;
+-- non-blocking while existing rows are checked.
 ALTER TABLE "email" VALIDATE CONSTRAINT "fk_user";
 ``
 
-Create the table, add the foreign key constraint as ``NOT VALID``, then ``VALIDATE`` the constraint.
+https://travisofthenorth.com/blog/2017/2/2/postgres-adding-foreign-keys-with-zero-downtime

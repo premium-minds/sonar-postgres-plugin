@@ -83,7 +83,8 @@ class PostgresSqlSensorTest {
 
         createFile(contextTester, "file1.sql", "select 1;");
 
-        PostgresSqlSensor sensor = getPostgresSqlSensor(RULE_PARSE_ERROR,
+        PostgresSqlSensor sensor = getPostgresSqlSensor(
+                RULE_PARSE_ERROR,
                 RULE_PREFER_ROBUST_STMTS,
                 RULE_CONCURRENTLY,
                 RULE_ADD_FIELD_WITH_DEFAULT,
@@ -110,9 +111,15 @@ class PostgresSqlSensorTest {
         );
         sensor.execute(contextTester);
 
-        final Map<RuleKey, Map<String, Issue>> issueMap = groupByRuleAndFile(contextTester.allIssues());
+        contextTester.allIssues()
+                .forEach(issue -> {
+                    final var rule = issue.ruleKey().rule();
+                    final var file = issue.primaryLocation().inputComponent();
+                    final var message = issue.primaryLocation().message();
+                    System.err.println(rule + " " + file + " " + message);
+                });
 
-        assertTrue(issueMap.isEmpty());
+        assertTrue(contextTester.allIssues().isEmpty());
     }
 
     @Test
@@ -398,8 +405,8 @@ class PostgresSqlSensorTest {
     @Test
     public void addingForeignKeyConstraint() {
 
-        createFile(contextTester, "file1.sql", "create table if not exists foo (id int, CONSTRAINT id_fk FOREIGN KEY (id) REFERENCES bar(id) );");
-        createFile(contextTester, "file2.sql", "create table if not exists foo (id int REFERENCES bar(id) );");
+        createFile(contextTester, "file1-ok.sql", "create table if not exists foo (id int, CONSTRAINT id_fk FOREIGN KEY (id) REFERENCES bar(id) );");
+        createFile(contextTester, "file2-ok.sql", "create table if not exists foo (id int REFERENCES bar(id) );");
         createFile(contextTester, "file3.sql", "ALTER TABLE IF EXISTS foo ADD CONSTRAINT fk_bar FOREIGN KEY (bar_id) REFERENCES bar (id);");
         createFile(contextTester, "file4.sql", "ALTER TABLE IF EXISTS foo ADD COLUMN IF NOT EXISTS bar_id int4 REFERENCES bar(id);");
         createFile(contextTester, "file5-ok.sql", "ALTER TABLE IF EXISTS foo ADD CONSTRAINT fk_bar FOREIGN KEY (bar_id) REFERENCES bar (id) NOT VALID;" +
@@ -414,18 +421,12 @@ class PostgresSqlSensorTest {
         final Map<String, Issue> fileMap = issueMap.get(rule);
         
         assertEquals("Adding a foreign key constraint requires a table scan and a SHARE ROW EXCLUSIVE lock on both tables, which blocks writes to each table.",
-                fileMap.get(":file1.sql").primaryLocation().message());
-        
-        assertEquals("Adding a foreign key constraint requires a table scan and a SHARE ROW EXCLUSIVE lock on both tables, which blocks writes to each table.",
-                fileMap.get(":file2.sql").primaryLocation().message());
-        
-        assertEquals("Adding a foreign key constraint requires a table scan and a SHARE ROW EXCLUSIVE lock on both tables, which blocks writes to each table.",
                 fileMap.get(":file3.sql").primaryLocation().message());
         
         assertEquals("Adding a foreign key constraint requires a table scan and a SHARE ROW EXCLUSIVE lock on both tables, which blocks writes to each table.",
                 fileMap.get(":file4.sql").primaryLocation().message());
 
-        assertEquals(4, fileMap.size());
+        assertEquals(2, fileMap.size());
     }
 
     @Test
