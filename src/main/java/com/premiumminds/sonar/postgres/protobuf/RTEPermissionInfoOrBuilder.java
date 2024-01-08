@@ -20,7 +20,7 @@ public interface RTEPermissionInfoOrBuilder extends
   boolean getInh();
 
   /**
-   * <code>int64 required_perms = 3 [json_name = "requiredPerms"];</code>
+   * <code>uint64 required_perms = 3 [json_name = "requiredPerms"];</code>
    * @return The requiredPerms.
    */
   long getRequiredPerms();

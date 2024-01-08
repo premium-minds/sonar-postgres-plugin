@@ -2335,7 +2335,7 @@ public final class PgQuery {
       "nFromCl\0225\n\016security_quals\030  \003(\0132\016.pg_que" +
       "ry.NodeR\rsecurityQuals\"\363\001\n\021RTEPermission" +
       "Info\022\024\n\005relid\030\001 \001(\rR\005relid\022\020\n\003inh\030\002 \001(\010R" +
-      "\003inh\022%\n\016required_perms\030\003 \001(\003R\rrequiredPe" +
+      "\003inh\022%\n\016required_perms\030\003 \001(\004R\rrequiredPe" +
       "rms\022\"\n\rcheck_as_user\030\004 \001(\rR\013checkAsUser\022" +
       "#\n\rselected_cols\030\005 \003(\004R\014selectedCols\022#\n\r" +
       "inserted_cols\030\006 \003(\004R\014insertedCols\022!\n\014upd" +

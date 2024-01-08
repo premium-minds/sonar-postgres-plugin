@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   public static final int REQUIRED_PERMS_FIELD_NUMBER = 3;
   private long requiredPerms_ = 0L;
   /**
-   * <code>int64 required_perms = 3 [json_name = "requiredPerms"];</code>
+   * <code>uint64 required_perms = 3 [json_name = "requiredPerms"];</code>
    * @return The requiredPerms.
    */
   @java.lang.Override
@@ -199,7 +199,7 @@ private static final long serialVersionUID = 0L;
       output.writeBool(2, inh_);
     }
     if (requiredPerms_ != 0L) {
-      output.writeInt64(3, requiredPerms_);
+      output.writeUInt64(3, requiredPerms_);
     }
     if (checkAsUser_ != 0) {
       output.writeUInt32(4, checkAsUser_);
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
     }
     if (requiredPerms_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, requiredPerms_);
+        .computeUInt64Size(3, requiredPerms_);
     }
     if (checkAsUser_ != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -679,7 +679,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 16
             case 24: {
-              requiredPerms_ = input.readInt64();
+              requiredPerms_ = input.readUInt64();
               bitField0_ |= 0x00000004;
               break;
             } // case 24
@@ -819,7 +819,7 @@ private static final long serialVersionUID = 0L;
 
     private long requiredPerms_ ;
     /**
-     * <code>int64 required_perms = 3 [json_name = "requiredPerms"];</code>
+     * <code>uint64 required_perms = 3 [json_name = "requiredPerms"];</code>
      * @return The requiredPerms.
      */
     @java.lang.Override
@@ -827,7 +827,7 @@ private static final long serialVersionUID = 0L;
       return requiredPerms_;
     }
     /**
-     * <code>int64 required_perms = 3 [json_name = "requiredPerms"];</code>
+     * <code>uint64 required_perms = 3 [json_name = "requiredPerms"];</code>
      * @param value The requiredPerms to set.
      * @return This builder for chaining.
      */
@@ -839,7 +839,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 required_perms = 3 [json_name = "requiredPerms"];</code>
+     * <code>uint64 required_perms = 3 [json_name = "requiredPerms"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRequiredPerms() {
