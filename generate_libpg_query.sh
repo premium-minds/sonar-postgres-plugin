@@ -73,7 +73,7 @@ docker cp crossbuild:/work/$SOURCES_DIR/libpg_query.dylib \
 docker rm crossbuild
 
 # generate java sources
-wget https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip
+wget -q https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip
 unzip protoc-21.12-linux-x86_64.zip
 
 rm -rv $PROJECT_DIR/src/main/java/com/premiumminds/sonar/postgres/protobuf/
