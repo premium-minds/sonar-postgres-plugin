@@ -1,0 +1,26 @@
+diff --git a/Makefile b/Makefile
+index 618bade..ecbfdb0 100644
+--- a/Makefile
++++ b/Makefile
+@@ -18,17 +18,10 @@ VERSION_PATCH = $(call word-dot,$(VERSION),3)
+
+ SO_VERSION = $(shell printf '%02d%02d' $(PG_VERSION_MAJOR) $(VERSION_MAJOR)).$(VERSION_MINOR)
+
+-ifeq ($(shell uname -s), Darwin)
+-	SOLIB = lib$(TARGET).dylib
+-	SONAME = lib$(TARGET).$(SO_VERSION).dylib
+-	SOLIBVER = lib$(TARGET).$(SO_VERSION).$(VERSION_PATCH).dylib
+-	SOFLAG = -install_name
+-else
+-	SOLIB = lib$(TARGET).so
+-	SONAME = $(SOLIB).$(SO_VERSION)
+-	SOLIBVER = $(SONAME).$(VERSION_PATCH)
+-	SOFLAG = -soname
+-endif
++SOLIB = lib$(TARGET).dylib
++SONAME = lib$(TARGET).$(SO_VERSION).dylib
++SOLIBVER = lib$(TARGET).$(SO_VERSION).$(VERSION_PATCH).dylib
++SOFLAG = -install_name
+
+ SRC_FILES := $(wildcard src/*.c src/postgres/*.c) vendor/protobuf-c/protobuf-c.c vendor/xxhash/xxhash.c protobuf/pg_query.pb-c.c
+ OBJ_FILES := $(SRC_FILES:.c=.o)

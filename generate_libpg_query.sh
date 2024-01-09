@@ -12,7 +12,7 @@ wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/16-5.1.0.zip
 unzip 16-5.1.0.zip
 SOURCES_DIR=libpg_query-16-5.1.0
 
-# compile x86-64
+echo "compile linux-x86-64"
 docker create \
   --name crossbuild \
   --workdir /work/$SOURCES_DIR \
@@ -24,7 +24,7 @@ docker cp crossbuild:/work/$SOURCES_DIR/libpg_query.so \
   $PROJECT_DIR/src/main/resources/linux-x86-64/libpg_query.so
 docker rm crossbuild
 
-# compile aarch64
+echo "compile linux-aarch64"
 docker create \
   --name crossbuild \
   --workdir /work/$SOURCES_DIR \
@@ -37,7 +37,7 @@ docker cp crossbuild:/work/$SOURCES_DIR/libpg_query.so \
   $PROJECT_DIR/src/main/resources/linux-aarch64/libpg_query.so
 docker rm crossbuild
 
-# compile win32-x86-64
+echo "compile win32-x86-64"
 docker create \
   --name crossbuild \
   --workdir /work/$SOURCES_DIR \
@@ -50,6 +50,16 @@ docker cp crossbuild:/work/$SOURCES_DIR/libpg_query.so \
   $PROJECT_DIR/src/main/resources/win32-x86-64/libpg_query.so.dll
 docker cp crossbuild:/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/libgcc_s_seh-1.dll \
   $PROJECT_DIR/src/main/resources/win32-x86-64/libgcc_s_seh-1.dll
+docker rm crossbuild
+
+echo "compile darwin-x86-64"
+docker build -f $PROJECT_DIR/darwin.Dockerfile -t darwin-build-support $PROJECT_DIR/
+docker create --name crossbuild --workdir /work/$SOURCES_DIR darwin-build-support bash -c 'patch -p1 < /work/darwin.patch; make CC=o64-clang -j build_shared'
+docker cp $SOURCES_DIR crossbuild:/work/
+docker cp $PROJECT_DIR/darwin.patch crossbuild:/work/darwin.patch
+docker start -ai crossbuild
+docker cp crossbuild:/work/$SOURCES_DIR/libpg_query.dylib \
+  $PROJECT_DIR/src/main/resources/darwin-x86-64/liblibpg_query.so.dylib
 docker rm crossbuild
 
 # generate java sources
