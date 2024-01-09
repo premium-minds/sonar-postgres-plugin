@@ -52,14 +52,24 @@ docker cp crossbuild:/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/libgcc_s_seh-1.dl
   $PROJECT_DIR/src/main/resources/win32-x86-64/libgcc_s_seh-1.dll
 docker rm crossbuild
 
-echo "compile darwin-x86-64"
 docker build -f $PROJECT_DIR/darwin.Dockerfile -t darwin-build-support $PROJECT_DIR/
+
+echo "compile darwin-x86-64"
 docker create --name crossbuild --workdir /work/$SOURCES_DIR darwin-build-support bash -c 'patch -p1 < /work/darwin.patch; make CC=o64-clang -j build_shared'
 docker cp $SOURCES_DIR crossbuild:/work/
 docker cp $PROJECT_DIR/darwin.patch crossbuild:/work/darwin.patch
 docker start -ai crossbuild
 docker cp crossbuild:/work/$SOURCES_DIR/libpg_query.dylib \
   $PROJECT_DIR/src/main/resources/darwin-x86-64/liblibpg_query.so.dylib
+docker rm crossbuild
+
+echo "compile darwin-aarch64"
+docker create --name crossbuild --workdir /work/$SOURCES_DIR darwin-build-support bash -c 'patch -p1 < /work/darwin.patch; make CC=aarch64-apple-darwin22.2-cc -j build_shared'
+docker cp $SOURCES_DIR crossbuild:/work/
+docker cp $PROJECT_DIR/darwin.patch crossbuild:/work/darwin.patch
+docker start -ai crossbuild
+docker cp crossbuild:/work/$SOURCES_DIR/libpg_query.dylib \
+  $PROJECT_DIR/src/main/resources/darwin-aarch64/liblibpg_query.so.dylib
 docker rm crossbuild
 
 # generate java sources
