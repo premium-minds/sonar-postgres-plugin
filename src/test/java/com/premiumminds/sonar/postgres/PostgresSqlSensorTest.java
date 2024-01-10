@@ -48,6 +48,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.sonar.api.measures.CoreMetrics.NCLOC;
+import static org.sonar.api.measures.CoreMetrics.NCLOC_DATA;
 
 class PostgresSqlSensorTest {
 
@@ -123,25 +124,39 @@ class PostgresSqlSensorTest {
     }
 
     @Test
-    void parsesOK() {
+    void metricsNcloc() {
 
         createFile(contextTester, "file1.sql", "SELECT 1;\r\nSELECT 2;\r\nSELECT 3;");
         createFile(contextTester, "file2.sql", "SELECT 'Évora 1';\nSELECT 'Évora 2';\nSELECT 'Évora 3';");
         createFile(contextTester, "file3.sql", "INSERT INTO foo VALUES ('éééééééééééé'), ('a');");
 
-        final RuleKey rule = RULE_PARSE_ERROR;
-        PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
+        PostgresSqlSensor sensor = getPostgresSqlSensor();
         sensor.execute(contextTester);
-
-        final Map<RuleKey, Map<String, Issue>> issueMap = groupByRuleAndFile(contextTester.allIssues());
-
-        final Map<String, Issue> fileMap = issueMap.get(rule);
-
-        assertNull(fileMap);
 
         assertEquals(3, contextTester.measure(":file1.sql", NCLOC).value());
         assertEquals(3, contextTester.measure(":file2.sql", NCLOC).value());
         assertEquals(1, contextTester.measure(":file3.sql", NCLOC).value());
+    }
+
+    @Test
+    void metricsNclocData() {
+
+        createFile(contextTester, "file1.sql", "\n" +
+                " select bar from foo;;\n" +
+                " \n" +
+                " select \n" +
+                " \n" +
+                " bar2\n" +
+                " ,\n" +
+                " baz2\n" +
+                " \n" +
+                "  from foo2;\n" +
+                "\n");
+
+        PostgresSqlSensor sensor = getPostgresSqlSensor();
+        sensor.execute(contextTester);
+
+        assertEquals("2=1;4=1;6=1;7=1;8=1;10=1", contextTester.measure(":file1.sql", NCLOC_DATA).value());
     }
 
     @Test

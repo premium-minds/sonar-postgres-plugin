@@ -8,7 +8,11 @@ import com.premiumminds.sonar.postgres.protobuf.ParseResult;
 import com.premiumminds.sonar.postgres.protobuf.ScanResult;
 import com.premiumminds.sonar.postgres.protobuf.Token;
 import com.premiumminds.sonar.postgres.visitors.VisitorCheck;
+
+import java.util.List;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
 import org.sonar.api.batch.fs.FileSystem;
 import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.fs.TextRange;
@@ -60,7 +64,11 @@ public class PostgresSqlSensor implements Sensor {
                 LOGGER.warn("Analysis cancelled");
             }
 
-            context.<Integer>newMeasure().on(file).withValue(file.lines()).forMetric(CoreMetrics.NCLOC).save();
+            context.<Integer>newMeasure()
+                    .on(file)
+                    .withValue(file.lines())
+                    .forMetric(CoreMetrics.NCLOC)
+                    .save();
 
             try {
                 PostgreSqlFile postgreSqlFile = new PostgreSqlFile(file);
@@ -126,6 +134,22 @@ public class PostgresSqlSensor implements Sensor {
                             textRange,
                             RULE_IDENTIFIER_MAX_LENGTH);
                 });
+
+        final var nclocData = scanResult.getTokensList()
+                .stream()
+                .map(st -> {
+                    final TextRange textRange = file.convertAbsoluteOffsetsToTextRange(st.getStart(), st.getEnd());
+                    final var line = textRange.start().line();
+                    return line + "=1";
+                })
+                .distinct()
+                .collect(Collectors.joining(";"));
+
+        context.<String>newMeasure()
+                .on(file.getInputFile())
+                .withValue(nclocData)
+                .forMetric(CoreMetrics.NCLOC_DATA)
+                .save();
 
         PGQueryLibrary.INSTANCE.pg_query_free_scan_result(result);
     }
