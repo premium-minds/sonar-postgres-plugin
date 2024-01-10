@@ -45,7 +45,6 @@ import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_RE
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_SETTING_NOT_NULLABLE_FIELD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_VACUUM_FULL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.sonar.api.measures.CoreMetrics.NCLOC;
 import static org.sonar.api.measures.CoreMetrics.NCLOC_DATA;
@@ -129,6 +128,24 @@ class PostgresSqlSensorTest {
         createFile(contextTester, "file1.sql", "SELECT 1;\r\nSELECT 2;\r\nSELECT 3;");
         createFile(contextTester, "file2.sql", "SELECT 'Évora 1';\nSELECT 'Évora 2';\nSELECT 'Évora 3';");
         createFile(contextTester, "file3.sql", "INSERT INTO foo VALUES ('éééééééééééé'), ('a');");
+        createFile(contextTester, "file4.sql", "--comment\nSELECT 1;");
+        createFile(contextTester, "file5.sql", "\n" +
+                " select bar from foo;;\n" +
+                " \n" +
+                " select \n" +
+                " -- some comment\n" +
+                "    bar2\n" +
+                " ,\n" +
+                " baz2\n" +
+                " /* some other comment */\n" +
+                "  from foo2;\n" +
+                "\n" +
+                "COMMENT ON TABLE mytable IS 'This is my table.';\n" +
+                "\n" +
+                "create table foo (\n" +
+                "    like bar\n" +
+                "    including comments\n" +
+                ");\n");
 
         PostgresSqlSensor sensor = getPostgresSqlSensor();
         sensor.execute(contextTester);
@@ -136,6 +153,8 @@ class PostgresSqlSensorTest {
         assertEquals(3, contextTester.measure(":file1.sql", NCLOC).value());
         assertEquals(3, contextTester.measure(":file2.sql", NCLOC).value());
         assertEquals(1, contextTester.measure(":file3.sql", NCLOC).value());
+        assertEquals(1, contextTester.measure(":file4.sql", NCLOC).value());
+        assertEquals(11, contextTester.measure(":file5.sql", NCLOC).value());
     }
 
     @Test

@@ -64,12 +64,6 @@ public class PostgresSqlSensor implements Sensor {
                 LOGGER.warn("Analysis cancelled");
             }
 
-            context.<Integer>newMeasure()
-                    .on(file)
-                    .withValue(file.lines())
-                    .forMetric(CoreMetrics.NCLOC)
-                    .save();
-
             try {
                 PostgreSqlFile postgreSqlFile = new PostgreSqlFile(file);
                 parseContents(context, postgreSqlFile);
@@ -134,6 +128,23 @@ public class PostgresSqlSensor implements Sensor {
                             textRange,
                             RULE_IDENTIFIER_MAX_LENGTH);
                 });
+
+        final var ncloc = scanResult.getTokensList()
+                .stream()
+                .filter(st -> !st.getToken().equals(Token.SQL_COMMENT))
+                .filter(st -> !st.getToken().equals(Token.C_COMMENT))
+                .map(st -> {
+                    final TextRange textRange = file.convertAbsoluteOffsetsToTextRange(st.getStart(), st.getEnd());
+                    return textRange.start().line();
+                })
+                .distinct()
+                .count();
+
+        context.<Integer>newMeasure()
+                .on(file.getInputFile())
+                .withValue((int) ncloc)
+                .forMetric(CoreMetrics.NCLOC)
+                .save();
 
         final var nclocData = scanResult.getTokensList()
                 .stream()
