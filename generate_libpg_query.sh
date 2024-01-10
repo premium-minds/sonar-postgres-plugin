@@ -76,7 +76,7 @@ docker rm crossbuild
 wget -q https://github.com/protocolbuffers/protobuf/releases/download/v25.1/protoc-25.1-linux-x86_64.zip
 unzip protoc-25.1-linux-x86_64.zip
 
-rm -rv $PROJECT_DIR/src/main/java/com/premiumminds/sonar/postgres/protobuf/
+find $PROJECT_DIR/src/main/java/com/premiumminds/sonar/postgres/protobuf/ -type f -not -name package-info.java -delete
 
 echo 'option java_multiple_files = true;' >> $SOURCES_DIR/protobuf/pg_query.proto
 echo 'option java_package = "com.premiumminds.sonar.postgres.protobuf";' >> $SOURCES_DIR/protobuf/pg_query.proto
