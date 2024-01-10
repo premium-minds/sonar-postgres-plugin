@@ -21,24 +21,20 @@ public class PostgreSqlFile {
     }
 
     private TextPointer convertAbsoluteByteOffsetToTextPointer(int absoluteByteOffset) {
-        try {
-            final String contents = contents();
+        final String contents = contents();
 
-            int runningLines = 1;
-            int runningAbsoluteOffset = 0;
-            for (String line : lines()) {
-                final int lineLength = line.getBytes(charset()).length + 1;
-                if (runningAbsoluteOffset <= absoluteByteOffset && absoluteByteOffset < runningAbsoluteOffset + lineLength){
-                    final String substring = new String(contents.getBytes(charset()), runningAbsoluteOffset, absoluteByteOffset - runningAbsoluteOffset);
-                    return inputFile.newPointer(runningLines, substring.length());
-                }
-                runningLines++;
-                runningAbsoluteOffset += lineLength;
+        int runningLines = 1;
+        int runningAbsoluteOffset = 0;
+        for (String line : lines()) {
+            final int lineLength = line.getBytes(charset()).length + 1;
+            if (runningAbsoluteOffset <= absoluteByteOffset && absoluteByteOffset < runningAbsoluteOffset + lineLength){
+                final String substring = new String(contents.getBytes(charset()), runningAbsoluteOffset, absoluteByteOffset - runningAbsoluteOffset);
+                return inputFile.newPointer(runningLines, substring.length());
             }
-            throw new RuntimeException("offset " + absoluteByteOffset + "outside of contents " + contents);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            runningLines++;
+            runningAbsoluteOffset += lineLength;
         }
+        throw new RuntimeException("offset " + absoluteByteOffset + "outside of contents " + contents);
     }
 
     public TextRange convertAbsoluteOffsetsToTextRange(int start, int end) {
@@ -52,7 +48,7 @@ public class PostgreSqlFile {
         return inputFile.selectLine(textPointer.line());
     }
 
-    private String[] lines() throws IOException {
+    private String[] lines() {
         if (lines == null){
             lines = contents().split("\n");
         }

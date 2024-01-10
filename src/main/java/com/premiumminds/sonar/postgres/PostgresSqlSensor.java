@@ -163,7 +163,7 @@ public class PostgresSqlSensor implements Sensor {
 
     private void parseTree(SensorContext context, PostgreSqlFile file, ParseResult result) {
         final Checks<VisitorCheck> checks = checkFactory.<VisitorCheck>create(REPOSITORY)
-                .addAnnotatedChecks((Iterable<VisitorCheck>) PostgresSqlRulesDefinition.allChecks());
+                .addAnnotatedChecks(PostgresSqlRulesDefinition.allChecks());
 
         checks.all().forEach(check -> check.analyze(context, file, result.getStmtsList()));
     }
