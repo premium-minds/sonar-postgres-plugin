@@ -60,7 +60,7 @@
                 <version>1.23.0.740</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <pluginKey>postgres</pluginKey>
+                    <pluginKey>communitypostgres</pluginKey>
                     <pluginClass>com.premiumminds.sonar.postgres.PostgresSQLExtension</pluginClass>
                 </configuration>
             </plugin>
