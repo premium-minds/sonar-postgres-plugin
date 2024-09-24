@@ -42,9 +42,12 @@ mvn clean package
    - password: admin
 
 ```shell
-docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:lts-community
-docker cp target/sonar-postgres-plugin-1.0-SNAPSHOT.jar sonarqube:/opt/sonarqube/extensions/plugins/
-docker restart sonarqube
+docker run -d \
+    --name sonarqube \
+    -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true \
+    -p 9000:9000 \
+    -v $(pwd)/target/sonar-postgres-plugin-1.2-SNAPSHOT.jar:/opt/sonarqube/extensions/plugins/sonar-postgres-plugin-1.2-SNAPSHOT.jar \
+    sonarqube:lts-community
 xdg-open http://localhost:9000/
 docker logs -f sonarqube
 ```
@@ -61,9 +64,9 @@ mvn sonar:sonar \
 ### SonarScanner
 
 ```shell
-wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.7.0.2747-linux.zip
-unzip sonar-scanner-cli-4.7.0.2747-linux.zip
-cd sonar-scanner-4.7.0.2747-linux
+wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+unzip sonar-scanner-cli-5.0.1.3006-linux.zip
+cd sonar-scanner-5.0.1.3006-linux
 bin/sonar-scanner \
   -Dsonar.login=admin \
   -Dsonar.password=admin1 \

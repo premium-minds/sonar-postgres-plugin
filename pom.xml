@@ -62,6 +62,7 @@
                 <configuration>
                     <pluginKey>communitypostgres</pluginKey>
                     <pluginClass>com.premiumminds.sonar.postgres.PostgresSQLExtension</pluginClass>
+                    <requiredForLanguages>postgres-language</requiredForLanguages>
                 </configuration>
             </plugin>
             <plugin>
