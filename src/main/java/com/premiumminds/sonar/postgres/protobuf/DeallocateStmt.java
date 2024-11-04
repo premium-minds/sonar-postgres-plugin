@@ -79,6 +79,28 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ISALL_FIELD_NUMBER = 2;
+  private boolean isall_ = false;
+  /**
+   * <code>bool isall = 2 [json_name = "isall"];</code>
+   * @return The isall.
+   */
+  @java.lang.Override
+  public boolean getIsall() {
+    return isall_;
+  }
+
+  public static final int LOCATION_FIELD_NUMBER = 3;
+  private int location_ = 0;
+  /**
+   * <code>int32 location = 3 [json_name = "location"];</code>
+   * @return The location.
+   */
+  @java.lang.Override
+  public int getLocation() {
+    return location_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -96,6 +118,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
+    if (isall_ != false) {
+      output.writeBool(2, isall_);
+    }
+    if (location_ != 0) {
+      output.writeInt32(3, location_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -107,6 +135,14 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+    }
+    if (isall_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, isall_);
+    }
+    if (location_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -125,6 +161,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getName()
         .equals(other.getName())) return false;
+    if (getIsall()
+        != other.getIsall()) return false;
+    if (getLocation()
+        != other.getLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -138,6 +178,11 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
+    hash = (37 * hash) + ISALL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsall());
+    hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+    hash = (53 * hash) + getLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -270,6 +315,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       name_ = "";
+      isall_ = false;
+      location_ = 0;
       return this;
     }
 
@@ -305,6 +352,12 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.isall_ = isall_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.location_ = location_;
       }
     }
 
@@ -357,6 +410,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (other.getIsall() != false) {
+        setIsall(other.getIsall());
+      }
+      if (other.getLocation() != 0) {
+        setLocation(other.getLocation());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -388,6 +447,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              isall_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -473,6 +542,70 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       name_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private boolean isall_ ;
+    /**
+     * <code>bool isall = 2 [json_name = "isall"];</code>
+     * @return The isall.
+     */
+    @java.lang.Override
+    public boolean getIsall() {
+      return isall_;
+    }
+    /**
+     * <code>bool isall = 2 [json_name = "isall"];</code>
+     * @param value The isall to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsall(boolean value) {
+
+      isall_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool isall = 2 [json_name = "isall"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsall() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      isall_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int location_ ;
+    /**
+     * <code>int32 location = 3 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public int getLocation() {
+      return location_;
+    }
+    /**
+     * <code>int32 location = 3 [json_name = "location"];</code>
+     * @param value The location to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLocation(int value) {
+
+      location_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 location = 3 [json_name = "location"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLocation() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      location_ = 0;
       onChanged();
       return this;
     }

@@ -1,9 +1,18 @@
 diff --git a/src/main/java/com/premiumminds/sonar/postgres/protobuf/Token.java b/src/main/java/com/premiumminds/sonar/postgres/protobuf/Token.java
-index 0748d8e..4fbf021 100644
+index 13968c6..8ffb3a2 100644
 --- a/src/main/java/com/premiumminds/sonar/postgres/protobuf/Token.java
 +++ b/src/main/java/com/premiumminds/sonar/postgres/protobuf/Token.java
-@@ -4941,7 +4941,7 @@ public enum Token
-     return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(63);
+@@ -3347,7 +3347,7 @@ public enum Token
+   /**
+    * <code>JSON = 485;</code>
+    */
+-  public static final int JSON_VALUE = 485;
++  public static final int JSON_ENUM_VALUE = 485;
+   /**
+    * <code>JSON_ARRAY = 486;</code>
+    */
+@@ -5121,7 +5121,7 @@ public enum Token
+     return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(70);
    }
  
 -  private static final Token[] VALUES = values();
@@ -11,7 +20,7 @@ index 0748d8e..4fbf021 100644
  
    public static Token valueOf(
        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-@@ -4952,7 +4952,7 @@ public enum Token
+@@ -5132,7 +5132,7 @@ public enum Token
      if (desc.getIndex() == -1) {
        return UNRECOGNIZED;
      }

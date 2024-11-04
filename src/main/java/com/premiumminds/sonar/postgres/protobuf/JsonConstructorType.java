@@ -29,6 +29,18 @@ public enum JsonConstructorType
    * <code>JSCTOR_JSON_ARRAYAGG = 4;</code>
    */
   JSCTOR_JSON_ARRAYAGG(4),
+  /**
+   * <code>JSCTOR_JSON_PARSE = 5;</code>
+   */
+  JSCTOR_JSON_PARSE(5),
+  /**
+   * <code>JSCTOR_JSON_SCALAR = 6;</code>
+   */
+  JSCTOR_JSON_SCALAR(6),
+  /**
+   * <code>JSCTOR_JSON_SERIALIZE = 7;</code>
+   */
+  JSCTOR_JSON_SERIALIZE(7),
   UNRECOGNIZED(-1),
   ;
 
@@ -52,6 +64,18 @@ public enum JsonConstructorType
    * <code>JSCTOR_JSON_ARRAYAGG = 4;</code>
    */
   public static final int JSCTOR_JSON_ARRAYAGG_VALUE = 4;
+  /**
+   * <code>JSCTOR_JSON_PARSE = 5;</code>
+   */
+  public static final int JSCTOR_JSON_PARSE_VALUE = 5;
+  /**
+   * <code>JSCTOR_JSON_SCALAR = 6;</code>
+   */
+  public static final int JSCTOR_JSON_SCALAR_VALUE = 6;
+  /**
+   * <code>JSCTOR_JSON_SERIALIZE = 7;</code>
+   */
+  public static final int JSCTOR_JSON_SERIALIZE_VALUE = 7;
 
 
   public final int getNumber() {
@@ -83,6 +107,9 @@ public enum JsonConstructorType
       case 2: return JSCTOR_JSON_ARRAY;
       case 3: return JSCTOR_JSON_OBJECTAGG;
       case 4: return JSCTOR_JSON_ARRAYAGG;
+      case 5: return JSCTOR_JSON_PARSE;
+      case 6: return JSCTOR_JSON_SCALAR;
+      case 7: return JSCTOR_JSON_SERIALIZE;
       default: return null;
     }
   }
@@ -113,7 +140,7 @@ public enum JsonConstructorType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(47);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(50);
   }
 
   private static final JsonConstructorType[] VALUES = values();

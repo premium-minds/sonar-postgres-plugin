@@ -8,9 +8,9 @@ LIBPG_QUERY_TEMP_DIR=$(mktemp --directory)
 
 pushd $LIBPG_QUERY_TEMP_DIR
 
-wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/16-5.1.0.zip
-unzip 16-5.1.0.zip
-SOURCES_DIR=libpg_query-16-5.1.0
+wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/17-6.0.0.zip
+unzip 17-6.0.0.zip
+SOURCES_DIR=libpg_query-17-6.0.0
 
 echo "compile linux-x86-64"
 docker create \
@@ -64,7 +64,7 @@ docker cp crossbuild:/work/$SOURCES_DIR/libpg_query.dylib \
 docker rm crossbuild
 
 echo "compile darwin-aarch64"
-docker create --name crossbuild --workdir /work/$SOURCES_DIR darwin-build-support bash -c 'patch -p1 < /work/darwin.patch; make CC=aarch64-apple-darwin22.2-cc -j build_shared'
+docker create --name crossbuild --workdir /work/$SOURCES_DIR darwin-build-support bash -c 'patch -p1 < /work/darwin.patch; make CC=aarch64-apple-darwin23.6-cc -j build_shared'
 docker cp $SOURCES_DIR crossbuild:/work/
 docker cp $PROJECT_DIR/darwin.patch crossbuild:/work/darwin.patch
 docker start -ai crossbuild

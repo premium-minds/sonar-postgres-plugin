@@ -191,6 +191,17 @@ private static final long serialVersionUID = 0L;
     return chain_;
   }
 
+  public static final int LOCATION_FIELD_NUMBER = 6;
+  private int location_ = 0;
+  /**
+   * <code>int32 location = 6 [json_name = "location"];</code>
+   * @return The location.
+   */
+  @java.lang.Override
+  public int getLocation() {
+    return location_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -220,6 +231,9 @@ private static final long serialVersionUID = 0L;
     if (chain_ != false) {
       output.writeBool(5, chain_);
     }
+    if (location_ != 0) {
+      output.writeInt32(6, location_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -247,6 +261,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, chain_);
     }
+    if (location_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, location_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -271,6 +289,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getGid())) return false;
     if (getChain()
         != other.getChain()) return false;
+    if (getLocation()
+        != other.getLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -295,6 +315,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CHAIN_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getChain());
+    hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+    hash = (53 * hash) + getLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -437,6 +459,7 @@ private static final long serialVersionUID = 0L;
       savepointName_ = "";
       gid_ = "";
       chain_ = false;
+      location_ = 0;
       return this;
     }
 
@@ -494,6 +517,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.chain_ = chain_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.location_ = location_;
       }
     }
 
@@ -583,6 +609,9 @@ private static final long serialVersionUID = 0L;
       if (other.getChain() != false) {
         setChain(other.getChain());
       }
+      if (other.getLocation() != 0) {
+        setLocation(other.getLocation());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -642,6 +671,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 48: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1124,6 +1158,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearChain() {
       bitField0_ = (bitField0_ & ~0x00000010);
       chain_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int location_ ;
+    /**
+     * <code>int32 location = 6 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public int getLocation() {
+      return location_;
+    }
+    /**
+     * <code>int32 location = 6 [json_name = "location"];</code>
+     * @param value The location to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLocation(int value) {
+
+      location_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 location = 6 [json_name = "location"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLocation() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      location_ = 0;
       onChanged();
       return this;
     }

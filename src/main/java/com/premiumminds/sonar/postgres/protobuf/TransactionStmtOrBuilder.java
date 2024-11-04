@@ -72,4 +72,10 @@ public interface TransactionStmtOrBuilder extends
    * @return The chain.
    */
   boolean getChain();
+
+  /**
+   * <code>int32 location = 6 [json_name = "location"];</code>
+   * @return The location.
+   */
+  int getLocation();
 }

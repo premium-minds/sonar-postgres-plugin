@@ -9,252 +9,326 @@ public interface TableFuncOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .pg_query.Node ns_uris = 1 [json_name = "ns_uris"];</code>
+   * <code>.pg_query.TableFuncType functype = 1 [json_name = "functype"];</code>
+   * @return The enum numeric value on the wire for functype.
+   */
+  int getFunctypeValue();
+  /**
+   * <code>.pg_query.TableFuncType functype = 1 [json_name = "functype"];</code>
+   * @return The functype.
+   */
+  com.premiumminds.sonar.postgres.protobuf.TableFuncType getFunctype();
+
+  /**
+   * <code>repeated .pg_query.Node ns_uris = 2 [json_name = "ns_uris"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getNsUrisList();
   /**
-   * <code>repeated .pg_query.Node ns_uris = 1 [json_name = "ns_uris"];</code>
+   * <code>repeated .pg_query.Node ns_uris = 2 [json_name = "ns_uris"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getNsUris(int index);
   /**
-   * <code>repeated .pg_query.Node ns_uris = 1 [json_name = "ns_uris"];</code>
+   * <code>repeated .pg_query.Node ns_uris = 2 [json_name = "ns_uris"];</code>
    */
   int getNsUrisCount();
   /**
-   * <code>repeated .pg_query.Node ns_uris = 1 [json_name = "ns_uris"];</code>
+   * <code>repeated .pg_query.Node ns_uris = 2 [json_name = "ns_uris"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getNsUrisOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node ns_uris = 1 [json_name = "ns_uris"];</code>
+   * <code>repeated .pg_query.Node ns_uris = 2 [json_name = "ns_uris"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getNsUrisOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node ns_names = 2 [json_name = "ns_names"];</code>
+   * <code>repeated .pg_query.Node ns_names = 3 [json_name = "ns_names"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getNsNamesList();
   /**
-   * <code>repeated .pg_query.Node ns_names = 2 [json_name = "ns_names"];</code>
+   * <code>repeated .pg_query.Node ns_names = 3 [json_name = "ns_names"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getNsNames(int index);
   /**
-   * <code>repeated .pg_query.Node ns_names = 2 [json_name = "ns_names"];</code>
+   * <code>repeated .pg_query.Node ns_names = 3 [json_name = "ns_names"];</code>
    */
   int getNsNamesCount();
   /**
-   * <code>repeated .pg_query.Node ns_names = 2 [json_name = "ns_names"];</code>
+   * <code>repeated .pg_query.Node ns_names = 3 [json_name = "ns_names"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getNsNamesOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node ns_names = 2 [json_name = "ns_names"];</code>
+   * <code>repeated .pg_query.Node ns_names = 3 [json_name = "ns_names"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getNsNamesOrBuilder(
       int index);
 
   /**
-   * <code>.pg_query.Node docexpr = 3 [json_name = "docexpr"];</code>
+   * <code>.pg_query.Node docexpr = 4 [json_name = "docexpr"];</code>
    * @return Whether the docexpr field is set.
    */
   boolean hasDocexpr();
   /**
-   * <code>.pg_query.Node docexpr = 3 [json_name = "docexpr"];</code>
+   * <code>.pg_query.Node docexpr = 4 [json_name = "docexpr"];</code>
    * @return The docexpr.
    */
   com.premiumminds.sonar.postgres.protobuf.Node getDocexpr();
   /**
-   * <code>.pg_query.Node docexpr = 3 [json_name = "docexpr"];</code>
+   * <code>.pg_query.Node docexpr = 4 [json_name = "docexpr"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getDocexprOrBuilder();
 
   /**
-   * <code>.pg_query.Node rowexpr = 4 [json_name = "rowexpr"];</code>
+   * <code>.pg_query.Node rowexpr = 5 [json_name = "rowexpr"];</code>
    * @return Whether the rowexpr field is set.
    */
   boolean hasRowexpr();
   /**
-   * <code>.pg_query.Node rowexpr = 4 [json_name = "rowexpr"];</code>
+   * <code>.pg_query.Node rowexpr = 5 [json_name = "rowexpr"];</code>
    * @return The rowexpr.
    */
   com.premiumminds.sonar.postgres.protobuf.Node getRowexpr();
   /**
-   * <code>.pg_query.Node rowexpr = 4 [json_name = "rowexpr"];</code>
+   * <code>.pg_query.Node rowexpr = 5 [json_name = "rowexpr"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getRowexprOrBuilder();
 
   /**
-   * <code>repeated .pg_query.Node colnames = 5 [json_name = "colnames"];</code>
+   * <code>repeated .pg_query.Node colnames = 6 [json_name = "colnames"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getColnamesList();
   /**
-   * <code>repeated .pg_query.Node colnames = 5 [json_name = "colnames"];</code>
+   * <code>repeated .pg_query.Node colnames = 6 [json_name = "colnames"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getColnames(int index);
   /**
-   * <code>repeated .pg_query.Node colnames = 5 [json_name = "colnames"];</code>
+   * <code>repeated .pg_query.Node colnames = 6 [json_name = "colnames"];</code>
    */
   int getColnamesCount();
   /**
-   * <code>repeated .pg_query.Node colnames = 5 [json_name = "colnames"];</code>
+   * <code>repeated .pg_query.Node colnames = 6 [json_name = "colnames"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getColnamesOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node colnames = 5 [json_name = "colnames"];</code>
+   * <code>repeated .pg_query.Node colnames = 6 [json_name = "colnames"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColnamesOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node coltypes = 6 [json_name = "coltypes"];</code>
+   * <code>repeated .pg_query.Node coltypes = 7 [json_name = "coltypes"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getColtypesList();
   /**
-   * <code>repeated .pg_query.Node coltypes = 6 [json_name = "coltypes"];</code>
+   * <code>repeated .pg_query.Node coltypes = 7 [json_name = "coltypes"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getColtypes(int index);
   /**
-   * <code>repeated .pg_query.Node coltypes = 6 [json_name = "coltypes"];</code>
+   * <code>repeated .pg_query.Node coltypes = 7 [json_name = "coltypes"];</code>
    */
   int getColtypesCount();
   /**
-   * <code>repeated .pg_query.Node coltypes = 6 [json_name = "coltypes"];</code>
+   * <code>repeated .pg_query.Node coltypes = 7 [json_name = "coltypes"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getColtypesOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node coltypes = 6 [json_name = "coltypes"];</code>
+   * <code>repeated .pg_query.Node coltypes = 7 [json_name = "coltypes"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColtypesOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node coltypmods = 7 [json_name = "coltypmods"];</code>
+   * <code>repeated .pg_query.Node coltypmods = 8 [json_name = "coltypmods"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getColtypmodsList();
   /**
-   * <code>repeated .pg_query.Node coltypmods = 7 [json_name = "coltypmods"];</code>
+   * <code>repeated .pg_query.Node coltypmods = 8 [json_name = "coltypmods"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getColtypmods(int index);
   /**
-   * <code>repeated .pg_query.Node coltypmods = 7 [json_name = "coltypmods"];</code>
+   * <code>repeated .pg_query.Node coltypmods = 8 [json_name = "coltypmods"];</code>
    */
   int getColtypmodsCount();
   /**
-   * <code>repeated .pg_query.Node coltypmods = 7 [json_name = "coltypmods"];</code>
+   * <code>repeated .pg_query.Node coltypmods = 8 [json_name = "coltypmods"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getColtypmodsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node coltypmods = 7 [json_name = "coltypmods"];</code>
+   * <code>repeated .pg_query.Node coltypmods = 8 [json_name = "coltypmods"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColtypmodsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node colcollations = 8 [json_name = "colcollations"];</code>
+   * <code>repeated .pg_query.Node colcollations = 9 [json_name = "colcollations"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getColcollationsList();
   /**
-   * <code>repeated .pg_query.Node colcollations = 8 [json_name = "colcollations"];</code>
+   * <code>repeated .pg_query.Node colcollations = 9 [json_name = "colcollations"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getColcollations(int index);
   /**
-   * <code>repeated .pg_query.Node colcollations = 8 [json_name = "colcollations"];</code>
+   * <code>repeated .pg_query.Node colcollations = 9 [json_name = "colcollations"];</code>
    */
   int getColcollationsCount();
   /**
-   * <code>repeated .pg_query.Node colcollations = 8 [json_name = "colcollations"];</code>
+   * <code>repeated .pg_query.Node colcollations = 9 [json_name = "colcollations"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getColcollationsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node colcollations = 8 [json_name = "colcollations"];</code>
+   * <code>repeated .pg_query.Node colcollations = 9 [json_name = "colcollations"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColcollationsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node colexprs = 9 [json_name = "colexprs"];</code>
+   * <code>repeated .pg_query.Node colexprs = 10 [json_name = "colexprs"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getColexprsList();
   /**
-   * <code>repeated .pg_query.Node colexprs = 9 [json_name = "colexprs"];</code>
+   * <code>repeated .pg_query.Node colexprs = 10 [json_name = "colexprs"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getColexprs(int index);
   /**
-   * <code>repeated .pg_query.Node colexprs = 9 [json_name = "colexprs"];</code>
+   * <code>repeated .pg_query.Node colexprs = 10 [json_name = "colexprs"];</code>
    */
   int getColexprsCount();
   /**
-   * <code>repeated .pg_query.Node colexprs = 9 [json_name = "colexprs"];</code>
+   * <code>repeated .pg_query.Node colexprs = 10 [json_name = "colexprs"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getColexprsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node colexprs = 9 [json_name = "colexprs"];</code>
+   * <code>repeated .pg_query.Node colexprs = 10 [json_name = "colexprs"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColexprsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node coldefexprs = 10 [json_name = "coldefexprs"];</code>
+   * <code>repeated .pg_query.Node coldefexprs = 11 [json_name = "coldefexprs"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getColdefexprsList();
   /**
-   * <code>repeated .pg_query.Node coldefexprs = 10 [json_name = "coldefexprs"];</code>
+   * <code>repeated .pg_query.Node coldefexprs = 11 [json_name = "coldefexprs"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getColdefexprs(int index);
   /**
-   * <code>repeated .pg_query.Node coldefexprs = 10 [json_name = "coldefexprs"];</code>
+   * <code>repeated .pg_query.Node coldefexprs = 11 [json_name = "coldefexprs"];</code>
    */
   int getColdefexprsCount();
   /**
-   * <code>repeated .pg_query.Node coldefexprs = 10 [json_name = "coldefexprs"];</code>
+   * <code>repeated .pg_query.Node coldefexprs = 11 [json_name = "coldefexprs"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getColdefexprsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node coldefexprs = 10 [json_name = "coldefexprs"];</code>
+   * <code>repeated .pg_query.Node coldefexprs = 11 [json_name = "coldefexprs"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColdefexprsOrBuilder(
       int index);
 
   /**
-   * <code>repeated uint64 notnulls = 11 [json_name = "notnulls"];</code>
+   * <code>repeated .pg_query.Node colvalexprs = 12 [json_name = "colvalexprs"];</code>
+   */
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getColvalexprsList();
+  /**
+   * <code>repeated .pg_query.Node colvalexprs = 12 [json_name = "colvalexprs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getColvalexprs(int index);
+  /**
+   * <code>repeated .pg_query.Node colvalexprs = 12 [json_name = "colvalexprs"];</code>
+   */
+  int getColvalexprsCount();
+  /**
+   * <code>repeated .pg_query.Node colvalexprs = 12 [json_name = "colvalexprs"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getColvalexprsOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node colvalexprs = 12 [json_name = "colvalexprs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColvalexprsOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .pg_query.Node passingvalexprs = 13 [json_name = "passingvalexprs"];</code>
+   */
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getPassingvalexprsList();
+  /**
+   * <code>repeated .pg_query.Node passingvalexprs = 13 [json_name = "passingvalexprs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getPassingvalexprs(int index);
+  /**
+   * <code>repeated .pg_query.Node passingvalexprs = 13 [json_name = "passingvalexprs"];</code>
+   */
+  int getPassingvalexprsCount();
+  /**
+   * <code>repeated .pg_query.Node passingvalexprs = 13 [json_name = "passingvalexprs"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getPassingvalexprsOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node passingvalexprs = 13 [json_name = "passingvalexprs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getPassingvalexprsOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated uint64 notnulls = 14 [json_name = "notnulls"];</code>
    * @return A list containing the notnulls.
    */
   java.util.List<java.lang.Long> getNotnullsList();
   /**
-   * <code>repeated uint64 notnulls = 11 [json_name = "notnulls"];</code>
+   * <code>repeated uint64 notnulls = 14 [json_name = "notnulls"];</code>
    * @return The count of notnulls.
    */
   int getNotnullsCount();
   /**
-   * <code>repeated uint64 notnulls = 11 [json_name = "notnulls"];</code>
+   * <code>repeated uint64 notnulls = 14 [json_name = "notnulls"];</code>
    * @param index The index of the element to return.
    * @return The notnulls at the given index.
    */
   long getNotnulls(int index);
 
   /**
-   * <code>int32 ordinalitycol = 12 [json_name = "ordinalitycol"];</code>
+   * <code>.pg_query.Node plan = 15 [json_name = "plan"];</code>
+   * @return Whether the plan field is set.
+   */
+  boolean hasPlan();
+  /**
+   * <code>.pg_query.Node plan = 15 [json_name = "plan"];</code>
+   * @return The plan.
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getPlan();
+  /**
+   * <code>.pg_query.Node plan = 15 [json_name = "plan"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getPlanOrBuilder();
+
+  /**
+   * <code>int32 ordinalitycol = 16 [json_name = "ordinalitycol"];</code>
    * @return The ordinalitycol.
    */
   int getOrdinalitycol();
 
   /**
-   * <code>int32 location = 13 [json_name = "location"];</code>
+   * <code>int32 location = 17 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

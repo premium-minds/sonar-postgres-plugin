@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MergeAction() {
+    matchKind_ = 0;
     commandType_ = 0;
     override_ = 0;
     targetList_ = java.util.Collections.emptyList();
@@ -44,15 +45,22 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
-  public static final int MATCHED_FIELD_NUMBER = 1;
-  private boolean matched_ = false;
+  public static final int MATCH_KIND_FIELD_NUMBER = 1;
+  private int matchKind_ = 0;
   /**
-   * <code>bool matched = 1 [json_name = "matched"];</code>
-   * @return The matched.
+   * <code>.pg_query.MergeMatchKind match_kind = 1 [json_name = "matchKind"];</code>
+   * @return The enum numeric value on the wire for matchKind.
    */
-  @java.lang.Override
-  public boolean getMatched() {
-    return matched_;
+  @java.lang.Override public int getMatchKindValue() {
+    return matchKind_;
+  }
+  /**
+   * <code>.pg_query.MergeMatchKind match_kind = 1 [json_name = "matchKind"];</code>
+   * @return The matchKind.
+   */
+  @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.MergeMatchKind getMatchKind() {
+    com.premiumminds.sonar.postgres.protobuf.MergeMatchKind result = com.premiumminds.sonar.postgres.protobuf.MergeMatchKind.forNumber(matchKind_);
+    return result == null ? com.premiumminds.sonar.postgres.protobuf.MergeMatchKind.UNRECOGNIZED : result;
   }
 
   public static final int COMMAND_TYPE_FIELD_NUMBER = 2;
@@ -213,8 +221,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (matched_ != false) {
-      output.writeBool(1, matched_);
+    if (matchKind_ != com.premiumminds.sonar.postgres.protobuf.MergeMatchKind.MERGE_MATCH_KIND_UNDEFINED.getNumber()) {
+      output.writeEnum(1, matchKind_);
     }
     if (commandType_ != com.premiumminds.sonar.postgres.protobuf.CmdType.CMD_TYPE_UNDEFINED.getNumber()) {
       output.writeEnum(2, commandType_);
@@ -240,9 +248,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (matched_ != false) {
+    if (matchKind_ != com.premiumminds.sonar.postgres.protobuf.MergeMatchKind.MERGE_MATCH_KIND_UNDEFINED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(1, matched_);
+        .computeEnumSize(1, matchKind_);
     }
     if (commandType_ != com.premiumminds.sonar.postgres.protobuf.CmdType.CMD_TYPE_UNDEFINED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
@@ -279,8 +287,7 @@ private static final long serialVersionUID = 0L;
     }
     com.premiumminds.sonar.postgres.protobuf.MergeAction other = (com.premiumminds.sonar.postgres.protobuf.MergeAction) obj;
 
-    if (getMatched()
-        != other.getMatched()) return false;
+    if (matchKind_ != other.matchKind_) return false;
     if (commandType_ != other.commandType_) return false;
     if (override_ != other.override_) return false;
     if (hasQual() != other.hasQual()) return false;
@@ -303,9 +310,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + MATCHED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getMatched());
+    hash = (37 * hash) + MATCH_KIND_FIELD_NUMBER;
+    hash = (53 * hash) + matchKind_;
     hash = (37 * hash) + COMMAND_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + commandType_;
     hash = (37 * hash) + OVERRIDE_FIELD_NUMBER;
@@ -461,7 +467,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      matched_ = false;
+      matchKind_ = 0;
       commandType_ = 0;
       override_ = 0;
       qual_ = null;
@@ -539,7 +545,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.MergeAction result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.matched_ = matched_;
+        result.matchKind_ = matchKind_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.commandType_ = commandType_;
@@ -601,8 +607,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.premiumminds.sonar.postgres.protobuf.MergeAction other) {
       if (other == com.premiumminds.sonar.postgres.protobuf.MergeAction.getDefaultInstance()) return this;
-      if (other.getMatched() != false) {
-        setMatched(other.getMatched());
+      if (other.matchKind_ != 0) {
+        setMatchKindValue(other.getMatchKindValue());
       }
       if (other.commandType_ != 0) {
         setCommandTypeValue(other.getCommandTypeValue());
@@ -692,7 +698,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              matched_ = input.readBool();
+              matchKind_ = input.readEnum();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
@@ -756,34 +762,55 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private boolean matched_ ;
+    private int matchKind_ = 0;
     /**
-     * <code>bool matched = 1 [json_name = "matched"];</code>
-     * @return The matched.
+     * <code>.pg_query.MergeMatchKind match_kind = 1 [json_name = "matchKind"];</code>
+     * @return The enum numeric value on the wire for matchKind.
      */
-    @java.lang.Override
-    public boolean getMatched() {
-      return matched_;
+    @java.lang.Override public int getMatchKindValue() {
+      return matchKind_;
     }
     /**
-     * <code>bool matched = 1 [json_name = "matched"];</code>
-     * @param value The matched to set.
+     * <code>.pg_query.MergeMatchKind match_kind = 1 [json_name = "matchKind"];</code>
+     * @param value The enum numeric value on the wire for matchKind to set.
      * @return This builder for chaining.
      */
-    public Builder setMatched(boolean value) {
-
-      matched_ = value;
+    public Builder setMatchKindValue(int value) {
+      matchKind_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>bool matched = 1 [json_name = "matched"];</code>
+     * <code>.pg_query.MergeMatchKind match_kind = 1 [json_name = "matchKind"];</code>
+     * @return The matchKind.
+     */
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.MergeMatchKind getMatchKind() {
+      com.premiumminds.sonar.postgres.protobuf.MergeMatchKind result = com.premiumminds.sonar.postgres.protobuf.MergeMatchKind.forNumber(matchKind_);
+      return result == null ? com.premiumminds.sonar.postgres.protobuf.MergeMatchKind.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.pg_query.MergeMatchKind match_kind = 1 [json_name = "matchKind"];</code>
+     * @param value The matchKind to set.
      * @return This builder for chaining.
      */
-    public Builder clearMatched() {
+    public Builder setMatchKind(com.premiumminds.sonar.postgres.protobuf.MergeMatchKind value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000001;
+      matchKind_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.pg_query.MergeMatchKind match_kind = 1 [json_name = "matchKind"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMatchKind() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      matched_ = false;
+      matchKind_ = 0;
       onChanged();
       return this;
     }

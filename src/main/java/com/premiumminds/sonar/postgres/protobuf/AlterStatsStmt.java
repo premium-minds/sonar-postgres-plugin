@@ -40,6 +40,7 @@ private static final long serialVersionUID = 0L;
             com.premiumminds.sonar.postgres.protobuf.AlterStatsStmt.class, com.premiumminds.sonar.postgres.protobuf.AlterStatsStmt.Builder.class);
   }
 
+  private int bitField0_;
   public static final int DEFNAMES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> defnames_;
@@ -82,14 +83,29 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STXSTATTARGET_FIELD_NUMBER = 2;
-  private int stxstattarget_ = 0;
+  private com.premiumminds.sonar.postgres.protobuf.Node stxstattarget_;
   /**
-   * <code>int32 stxstattarget = 2 [json_name = "stxstattarget"];</code>
+   * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+   * @return Whether the stxstattarget field is set.
+   */
+  @java.lang.Override
+  public boolean hasStxstattarget() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
    * @return The stxstattarget.
    */
   @java.lang.Override
-  public int getStxstattarget() {
-    return stxstattarget_;
+  public com.premiumminds.sonar.postgres.protobuf.Node getStxstattarget() {
+    return stxstattarget_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : stxstattarget_;
+  }
+  /**
+   * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getStxstattargetOrBuilder() {
+    return stxstattarget_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : stxstattarget_;
   }
 
   public static final int MISSING_OK_FIELD_NUMBER = 3;
@@ -120,8 +136,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < defnames_.size(); i++) {
       output.writeMessage(1, defnames_.get(i));
     }
-    if (stxstattarget_ != 0) {
-      output.writeInt32(2, stxstattarget_);
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(2, getStxstattarget());
     }
     if (missingOk_ != false) {
       output.writeBool(3, missingOk_);
@@ -139,9 +155,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, defnames_.get(i));
     }
-    if (stxstattarget_ != 0) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, stxstattarget_);
+        .computeMessageSize(2, getStxstattarget());
     }
     if (missingOk_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -164,8 +180,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getDefnamesList()
         .equals(other.getDefnamesList())) return false;
-    if (getStxstattarget()
-        != other.getStxstattarget()) return false;
+    if (hasStxstattarget() != other.hasStxstattarget()) return false;
+    if (hasStxstattarget()) {
+      if (!getStxstattarget()
+          .equals(other.getStxstattarget())) return false;
+    }
     if (getMissingOk()
         != other.getMissingOk()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -183,8 +202,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DEFNAMES_FIELD_NUMBER;
       hash = (53 * hash) + getDefnamesList().hashCode();
     }
-    hash = (37 * hash) + STXSTATTARGET_FIELD_NUMBER;
-    hash = (53 * hash) + getStxstattarget();
+    if (hasStxstattarget()) {
+      hash = (37 * hash) + STXSTATTARGET_FIELD_NUMBER;
+      hash = (53 * hash) + getStxstattarget().hashCode();
+    }
     hash = (37 * hash) + MISSING_OK_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getMissingOk());
@@ -307,13 +328,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.premiumminds.sonar.postgres.protobuf.AlterStatsStmt.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDefnamesFieldBuilder();
+        getStxstattargetFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -326,7 +354,11 @@ private static final long serialVersionUID = 0L;
         defnamesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
-      stxstattarget_ = 0;
+      stxstattarget_ = null;
+      if (stxstattargetBuilder_ != null) {
+        stxstattargetBuilder_.dispose();
+        stxstattargetBuilder_ = null;
+      }
       missingOk_ = false;
       return this;
     }
@@ -374,12 +406,17 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.AlterStatsStmt result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.stxstattarget_ = stxstattarget_;
+        result.stxstattarget_ = stxstattargetBuilder_ == null
+            ? stxstattarget_
+            : stxstattargetBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.missingOk_ = missingOk_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -452,8 +489,8 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.getStxstattarget() != 0) {
-        setStxstattarget(other.getStxstattarget());
+      if (other.hasStxstattarget()) {
+        mergeStxstattarget(other.getStxstattarget());
       }
       if (other.getMissingOk() != false) {
         setMissingOk(other.getMissingOk());
@@ -497,11 +534,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
-            case 16: {
-              stxstattarget_ = input.readInt32();
+            case 18: {
+              input.readMessage(
+                  getStxstattargetFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
+            } // case 18
             case 24: {
               missingOk_ = input.readBool();
               bitField0_ |= 0x00000004;
@@ -764,36 +803,125 @@ private static final long serialVersionUID = 0L;
       return defnamesBuilder_;
     }
 
-    private int stxstattarget_ ;
+    private com.premiumminds.sonar.postgres.protobuf.Node stxstattarget_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> stxstattargetBuilder_;
     /**
-     * <code>int32 stxstattarget = 2 [json_name = "stxstattarget"];</code>
-     * @return The stxstattarget.
+     * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+     * @return Whether the stxstattarget field is set.
      */
-    @java.lang.Override
-    public int getStxstattarget() {
-      return stxstattarget_;
+    public boolean hasStxstattarget() {
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>int32 stxstattarget = 2 [json_name = "stxstattarget"];</code>
-     * @param value The stxstattarget to set.
-     * @return This builder for chaining.
+     * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+     * @return The stxstattarget.
      */
-    public Builder setStxstattarget(int value) {
-
-      stxstattarget_ = value;
+    public com.premiumminds.sonar.postgres.protobuf.Node getStxstattarget() {
+      if (stxstattargetBuilder_ == null) {
+        return stxstattarget_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : stxstattarget_;
+      } else {
+        return stxstattargetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+     */
+    public Builder setStxstattarget(com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (stxstattargetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        stxstattarget_ = value;
+      } else {
+        stxstattargetBuilder_.setMessage(value);
+      }
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 stxstattarget = 2 [json_name = "stxstattarget"];</code>
-     * @return This builder for chaining.
+     * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+     */
+    public Builder setStxstattarget(
+        com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+      if (stxstattargetBuilder_ == null) {
+        stxstattarget_ = builderForValue.build();
+      } else {
+        stxstattargetBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+     */
+    public Builder mergeStxstattarget(com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (stxstattargetBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          stxstattarget_ != null &&
+          stxstattarget_ != com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance()) {
+          getStxstattargetBuilder().mergeFrom(value);
+        } else {
+          stxstattarget_ = value;
+        }
+      } else {
+        stxstattargetBuilder_.mergeFrom(value);
+      }
+      if (stxstattarget_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
      */
     public Builder clearStxstattarget() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      stxstattarget_ = 0;
+      stxstattarget_ = null;
+      if (stxstattargetBuilder_ != null) {
+        stxstattargetBuilder_.dispose();
+        stxstattargetBuilder_ = null;
+      }
       onChanged();
       return this;
+    }
+    /**
+     * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node.Builder getStxstattargetBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getStxstattargetFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getStxstattargetOrBuilder() {
+      if (stxstattargetBuilder_ != null) {
+        return stxstattargetBuilder_.getMessageOrBuilder();
+      } else {
+        return stxstattarget_ == null ?
+            com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : stxstattarget_;
+      }
+    }
+    /**
+     * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+        getStxstattargetFieldBuilder() {
+      if (stxstattargetBuilder_ == null) {
+        stxstattargetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
+                getStxstattarget(),
+                getParentForChildren(),
+                isClean());
+        stxstattarget_ = null;
+      }
+      return stxstattargetBuilder_;
     }
 
     private boolean missingOk_ ;

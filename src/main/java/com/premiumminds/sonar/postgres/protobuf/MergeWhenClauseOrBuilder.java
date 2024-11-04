@@ -9,10 +9,15 @@ public interface MergeWhenClauseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bool matched = 1 [json_name = "matched"];</code>
-   * @return The matched.
+   * <code>.pg_query.MergeMatchKind match_kind = 1 [json_name = "matchKind"];</code>
+   * @return The enum numeric value on the wire for matchKind.
    */
-  boolean getMatched();
+  int getMatchKindValue();
+  /**
+   * <code>.pg_query.MergeMatchKind match_kind = 1 [json_name = "matchKind"];</code>
+   * @return The matchKind.
+   */
+  com.premiumminds.sonar.postgres.protobuf.MergeMatchKind getMatchKind();
 
   /**
    * <code>.pg_query.CmdType command_type = 2 [json_name = "commandType"];</code>

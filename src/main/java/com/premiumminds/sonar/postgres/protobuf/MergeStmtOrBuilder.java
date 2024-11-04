@@ -78,17 +78,41 @@ public interface MergeStmtOrBuilder extends
       int index);
 
   /**
-   * <code>.pg_query.WithClause with_clause = 5 [json_name = "withClause"];</code>
+   * <code>repeated .pg_query.Node returning_list = 5 [json_name = "returningList"];</code>
+   */
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getReturningListList();
+  /**
+   * <code>repeated .pg_query.Node returning_list = 5 [json_name = "returningList"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getReturningList(int index);
+  /**
+   * <code>repeated .pg_query.Node returning_list = 5 [json_name = "returningList"];</code>
+   */
+  int getReturningListCount();
+  /**
+   * <code>repeated .pg_query.Node returning_list = 5 [json_name = "returningList"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getReturningListOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node returning_list = 5 [json_name = "returningList"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getReturningListOrBuilder(
+      int index);
+
+  /**
+   * <code>.pg_query.WithClause with_clause = 6 [json_name = "withClause"];</code>
    * @return Whether the withClause field is set.
    */
   boolean hasWithClause();
   /**
-   * <code>.pg_query.WithClause with_clause = 5 [json_name = "withClause"];</code>
+   * <code>.pg_query.WithClause with_clause = 6 [json_name = "withClause"];</code>
    * @return The withClause.
    */
   com.premiumminds.sonar.postgres.protobuf.WithClause getWithClause();
   /**
-   * <code>.pg_query.WithClause with_clause = 5 [json_name = "withClause"];</code>
+   * <code>.pg_query.WithClause with_clause = 6 [json_name = "withClause"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.WithClauseOrBuilder getWithClauseOrBuilder();
 }

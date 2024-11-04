@@ -528,1661 +528,1741 @@ public enum Token
    */
   CONCURRENTLY(344),
   /**
-   * <code>CONFIGURATION = 345;</code>
+   * <code>CONDITIONAL = 345;</code>
    */
-  CONFIGURATION(345),
+  CONDITIONAL(345),
   /**
-   * <code>CONFLICT = 346;</code>
+   * <code>CONFIGURATION = 346;</code>
    */
-  CONFLICT(346),
+  CONFIGURATION(346),
   /**
-   * <code>CONNECTION = 347;</code>
+   * <code>CONFLICT = 347;</code>
    */
-  CONNECTION(347),
+  CONFLICT(347),
   /**
-   * <code>CONSTRAINT = 348;</code>
+   * <code>CONNECTION = 348;</code>
    */
-  CONSTRAINT(348),
+  CONNECTION(348),
   /**
-   * <code>CONSTRAINTS = 349;</code>
+   * <code>CONSTRAINT = 349;</code>
    */
-  CONSTRAINTS(349),
+  CONSTRAINT(349),
   /**
-   * <code>CONTENT_P = 350;</code>
+   * <code>CONSTRAINTS = 350;</code>
    */
-  CONTENT_P(350),
+  CONSTRAINTS(350),
   /**
-   * <code>CONTINUE_P = 351;</code>
+   * <code>CONTENT_P = 351;</code>
    */
-  CONTINUE_P(351),
+  CONTENT_P(351),
   /**
-   * <code>CONVERSION_P = 352;</code>
+   * <code>CONTINUE_P = 352;</code>
    */
-  CONVERSION_P(352),
+  CONTINUE_P(352),
   /**
-   * <code>COPY = 353;</code>
+   * <code>CONVERSION_P = 353;</code>
    */
-  COPY(353),
+  CONVERSION_P(353),
   /**
-   * <code>COST = 354;</code>
+   * <code>COPY = 354;</code>
    */
-  COST(354),
+  COPY(354),
   /**
-   * <code>CREATE = 355;</code>
+   * <code>COST = 355;</code>
    */
-  CREATE(355),
+  COST(355),
   /**
-   * <code>CROSS = 356;</code>
+   * <code>CREATE = 356;</code>
    */
-  CROSS(356),
+  CREATE(356),
   /**
-   * <code>CSV = 357;</code>
+   * <code>CROSS = 357;</code>
    */
-  CSV(357),
+  CROSS(357),
   /**
-   * <code>CUBE = 358;</code>
+   * <code>CSV = 358;</code>
    */
-  CUBE(358),
+  CSV(358),
   /**
-   * <code>CURRENT_P = 359;</code>
+   * <code>CUBE = 359;</code>
    */
-  CURRENT_P(359),
+  CUBE(359),
   /**
-   * <code>CURRENT_CATALOG = 360;</code>
+   * <code>CURRENT_P = 360;</code>
    */
-  CURRENT_CATALOG(360),
+  CURRENT_P(360),
   /**
-   * <code>CURRENT_DATE = 361;</code>
+   * <code>CURRENT_CATALOG = 361;</code>
    */
-  CURRENT_DATE(361),
+  CURRENT_CATALOG(361),
   /**
-   * <code>CURRENT_ROLE = 362;</code>
+   * <code>CURRENT_DATE = 362;</code>
    */
-  CURRENT_ROLE(362),
+  CURRENT_DATE(362),
   /**
-   * <code>CURRENT_SCHEMA = 363;</code>
+   * <code>CURRENT_ROLE = 363;</code>
    */
-  CURRENT_SCHEMA(363),
+  CURRENT_ROLE(363),
   /**
-   * <code>CURRENT_TIME = 364;</code>
+   * <code>CURRENT_SCHEMA = 364;</code>
    */
-  CURRENT_TIME(364),
+  CURRENT_SCHEMA(364),
   /**
-   * <code>CURRENT_TIMESTAMP = 365;</code>
+   * <code>CURRENT_TIME = 365;</code>
    */
-  CURRENT_TIMESTAMP(365),
+  CURRENT_TIME(365),
   /**
-   * <code>CURRENT_USER = 366;</code>
+   * <code>CURRENT_TIMESTAMP = 366;</code>
    */
-  CURRENT_USER(366),
+  CURRENT_TIMESTAMP(366),
   /**
-   * <code>CURSOR = 367;</code>
+   * <code>CURRENT_USER = 367;</code>
    */
-  CURSOR(367),
+  CURRENT_USER(367),
   /**
-   * <code>CYCLE = 368;</code>
+   * <code>CURSOR = 368;</code>
    */
-  CYCLE(368),
+  CURSOR(368),
   /**
-   * <code>DATA_P = 369;</code>
+   * <code>CYCLE = 369;</code>
    */
-  DATA_P(369),
+  CYCLE(369),
   /**
-   * <code>DATABASE = 370;</code>
+   * <code>DATA_P = 370;</code>
    */
-  DATABASE(370),
+  DATA_P(370),
   /**
-   * <code>DAY_P = 371;</code>
+   * <code>DATABASE = 371;</code>
    */
-  DAY_P(371),
+  DATABASE(371),
   /**
-   * <code>DEALLOCATE = 372;</code>
+   * <code>DAY_P = 372;</code>
    */
-  DEALLOCATE(372),
+  DAY_P(372),
   /**
-   * <code>DEC = 373;</code>
+   * <code>DEALLOCATE = 373;</code>
    */
-  DEC(373),
+  DEALLOCATE(373),
   /**
-   * <code>DECIMAL_P = 374;</code>
+   * <code>DEC = 374;</code>
    */
-  DECIMAL_P(374),
+  DEC(374),
   /**
-   * <code>DECLARE = 375;</code>
+   * <code>DECIMAL_P = 375;</code>
    */
-  DECLARE(375),
+  DECIMAL_P(375),
   /**
-   * <code>DEFAULT = 376;</code>
+   * <code>DECLARE = 376;</code>
    */
-  DEFAULT(376),
+  DECLARE(376),
   /**
-   * <code>DEFAULTS = 377;</code>
+   * <code>DEFAULT = 377;</code>
    */
-  DEFAULTS(377),
+  DEFAULT(377),
   /**
-   * <code>DEFERRABLE = 378;</code>
+   * <code>DEFAULTS = 378;</code>
    */
-  DEFERRABLE(378),
+  DEFAULTS(378),
   /**
-   * <code>DEFERRED = 379;</code>
+   * <code>DEFERRABLE = 379;</code>
    */
-  DEFERRED(379),
+  DEFERRABLE(379),
   /**
-   * <code>DEFINER = 380;</code>
+   * <code>DEFERRED = 380;</code>
    */
-  DEFINER(380),
+  DEFERRED(380),
   /**
-   * <code>DELETE_P = 381;</code>
+   * <code>DEFINER = 381;</code>
    */
-  DELETE_P(381),
+  DEFINER(381),
   /**
-   * <code>DELIMITER = 382;</code>
+   * <code>DELETE_P = 382;</code>
    */
-  DELIMITER(382),
+  DELETE_P(382),
   /**
-   * <code>DELIMITERS = 383;</code>
+   * <code>DELIMITER = 383;</code>
    */
-  DELIMITERS(383),
+  DELIMITER(383),
   /**
-   * <code>DEPENDS = 384;</code>
+   * <code>DELIMITERS = 384;</code>
    */
-  DEPENDS(384),
+  DELIMITERS(384),
   /**
-   * <code>DEPTH = 385;</code>
+   * <code>DEPENDS = 385;</code>
    */
-  DEPTH(385),
+  DEPENDS(385),
   /**
-   * <code>DESC = 386;</code>
+   * <code>DEPTH = 386;</code>
    */
-  DESC(386),
+  DEPTH(386),
   /**
-   * <code>DETACH = 387;</code>
+   * <code>DESC = 387;</code>
    */
-  DETACH(387),
+  DESC(387),
   /**
-   * <code>DICTIONARY = 388;</code>
+   * <code>DETACH = 388;</code>
    */
-  DICTIONARY(388),
+  DETACH(388),
   /**
-   * <code>DISABLE_P = 389;</code>
+   * <code>DICTIONARY = 389;</code>
    */
-  DISABLE_P(389),
+  DICTIONARY(389),
   /**
-   * <code>DISCARD = 390;</code>
+   * <code>DISABLE_P = 390;</code>
    */
-  DISCARD(390),
+  DISABLE_P(390),
   /**
-   * <code>DISTINCT = 391;</code>
+   * <code>DISCARD = 391;</code>
    */
-  DISTINCT(391),
+  DISCARD(391),
   /**
-   * <code>DO = 392;</code>
+   * <code>DISTINCT = 392;</code>
    */
-  DO(392),
+  DISTINCT(392),
   /**
-   * <code>DOCUMENT_P = 393;</code>
+   * <code>DO = 393;</code>
    */
-  DOCUMENT_P(393),
+  DO(393),
   /**
-   * <code>DOMAIN_P = 394;</code>
+   * <code>DOCUMENT_P = 394;</code>
    */
-  DOMAIN_P(394),
+  DOCUMENT_P(394),
   /**
-   * <code>DOUBLE_P = 395;</code>
+   * <code>DOMAIN_P = 395;</code>
    */
-  DOUBLE_P(395),
+  DOMAIN_P(395),
   /**
-   * <code>DROP = 396;</code>
+   * <code>DOUBLE_P = 396;</code>
    */
-  DROP(396),
+  DOUBLE_P(396),
   /**
-   * <code>EACH = 397;</code>
+   * <code>DROP = 397;</code>
    */
-  EACH(397),
+  DROP(397),
   /**
-   * <code>ELSE = 398;</code>
+   * <code>EACH = 398;</code>
    */
-  ELSE(398),
+  EACH(398),
   /**
-   * <code>ENABLE_P = 399;</code>
+   * <code>ELSE = 399;</code>
    */
-  ENABLE_P(399),
+  ELSE(399),
   /**
-   * <code>ENCODING = 400;</code>
+   * <code>EMPTY_P = 400;</code>
    */
-  ENCODING(400),
+  EMPTY_P(400),
   /**
-   * <code>ENCRYPTED = 401;</code>
+   * <code>ENABLE_P = 401;</code>
    */
-  ENCRYPTED(401),
+  ENABLE_P(401),
   /**
-   * <code>END_P = 402;</code>
+   * <code>ENCODING = 402;</code>
    */
-  END_P(402),
+  ENCODING(402),
   /**
-   * <code>ENUM_P = 403;</code>
+   * <code>ENCRYPTED = 403;</code>
    */
-  ENUM_P(403),
+  ENCRYPTED(403),
   /**
-   * <code>ESCAPE = 404;</code>
+   * <code>END_P = 404;</code>
    */
-  ESCAPE(404),
+  END_P(404),
   /**
-   * <code>EVENT = 405;</code>
+   * <code>ENUM_P = 405;</code>
    */
-  EVENT(405),
+  ENUM_P(405),
   /**
-   * <code>EXCEPT = 406;</code>
+   * <code>ERROR_P = 406;</code>
    */
-  EXCEPT(406),
+  ERROR_P(406),
   /**
-   * <code>EXCLUDE = 407;</code>
+   * <code>ESCAPE = 407;</code>
    */
-  EXCLUDE(407),
+  ESCAPE(407),
   /**
-   * <code>EXCLUDING = 408;</code>
+   * <code>EVENT = 408;</code>
    */
-  EXCLUDING(408),
+  EVENT(408),
   /**
-   * <code>EXCLUSIVE = 409;</code>
+   * <code>EXCEPT = 409;</code>
    */
-  EXCLUSIVE(409),
+  EXCEPT(409),
   /**
-   * <code>EXECUTE = 410;</code>
+   * <code>EXCLUDE = 410;</code>
    */
-  EXECUTE(410),
+  EXCLUDE(410),
   /**
-   * <code>EXISTS = 411;</code>
+   * <code>EXCLUDING = 411;</code>
    */
-  EXISTS(411),
+  EXCLUDING(411),
   /**
-   * <code>EXPLAIN = 412;</code>
+   * <code>EXCLUSIVE = 412;</code>
    */
-  EXPLAIN(412),
+  EXCLUSIVE(412),
   /**
-   * <code>EXPRESSION = 413;</code>
+   * <code>EXECUTE = 413;</code>
    */
-  EXPRESSION(413),
+  EXECUTE(413),
   /**
-   * <code>EXTENSION = 414;</code>
+   * <code>EXISTS = 414;</code>
    */
-  EXTENSION(414),
+  EXISTS(414),
   /**
-   * <code>EXTERNAL = 415;</code>
+   * <code>EXPLAIN = 415;</code>
    */
-  EXTERNAL(415),
+  EXPLAIN(415),
   /**
-   * <code>EXTRACT = 416;</code>
+   * <code>EXPRESSION = 416;</code>
    */
-  EXTRACT(416),
+  EXPRESSION(416),
   /**
-   * <code>FALSE_P = 417;</code>
+   * <code>EXTENSION = 417;</code>
    */
-  FALSE_P(417),
+  EXTENSION(417),
   /**
-   * <code>FAMILY = 418;</code>
+   * <code>EXTERNAL = 418;</code>
    */
-  FAMILY(418),
+  EXTERNAL(418),
   /**
-   * <code>FETCH = 419;</code>
+   * <code>EXTRACT = 419;</code>
    */
-  FETCH(419),
+  EXTRACT(419),
   /**
-   * <code>FILTER = 420;</code>
+   * <code>FALSE_P = 420;</code>
    */
-  FILTER(420),
+  FALSE_P(420),
   /**
-   * <code>FINALIZE = 421;</code>
+   * <code>FAMILY = 421;</code>
    */
-  FINALIZE(421),
+  FAMILY(421),
   /**
-   * <code>FIRST_P = 422;</code>
+   * <code>FETCH = 422;</code>
    */
-  FIRST_P(422),
+  FETCH(422),
   /**
-   * <code>FLOAT_P = 423;</code>
+   * <code>FILTER = 423;</code>
    */
-  FLOAT_P(423),
+  FILTER(423),
   /**
-   * <code>FOLLOWING = 424;</code>
+   * <code>FINALIZE = 424;</code>
    */
-  FOLLOWING(424),
+  FINALIZE(424),
   /**
-   * <code>FOR = 425;</code>
+   * <code>FIRST_P = 425;</code>
    */
-  FOR(425),
+  FIRST_P(425),
   /**
-   * <code>FORCE = 426;</code>
+   * <code>FLOAT_P = 426;</code>
    */
-  FORCE(426),
+  FLOAT_P(426),
   /**
-   * <code>FOREIGN = 427;</code>
+   * <code>FOLLOWING = 427;</code>
    */
-  FOREIGN(427),
+  FOLLOWING(427),
   /**
-   * <code>FORMAT = 428;</code>
+   * <code>FOR = 428;</code>
    */
-  FORMAT(428),
+  FOR(428),
   /**
-   * <code>FORWARD = 429;</code>
+   * <code>FORCE = 429;</code>
    */
-  FORWARD(429),
+  FORCE(429),
   /**
-   * <code>FREEZE = 430;</code>
+   * <code>FOREIGN = 430;</code>
    */
-  FREEZE(430),
+  FOREIGN(430),
   /**
-   * <code>FROM = 431;</code>
+   * <code>FORMAT = 431;</code>
    */
-  FROM(431),
+  FORMAT(431),
   /**
-   * <code>FULL = 432;</code>
+   * <code>FORWARD = 432;</code>
    */
-  FULL(432),
+  FORWARD(432),
   /**
-   * <code>FUNCTION = 433;</code>
+   * <code>FREEZE = 433;</code>
    */
-  FUNCTION(433),
+  FREEZE(433),
   /**
-   * <code>FUNCTIONS = 434;</code>
+   * <code>FROM = 434;</code>
    */
-  FUNCTIONS(434),
+  FROM(434),
   /**
-   * <code>GENERATED = 435;</code>
+   * <code>FULL = 435;</code>
    */
-  GENERATED(435),
+  FULL(435),
   /**
-   * <code>GLOBAL = 436;</code>
+   * <code>FUNCTION = 436;</code>
    */
-  GLOBAL(436),
+  FUNCTION(436),
   /**
-   * <code>GRANT = 437;</code>
+   * <code>FUNCTIONS = 437;</code>
    */
-  GRANT(437),
+  FUNCTIONS(437),
   /**
-   * <code>GRANTED = 438;</code>
+   * <code>GENERATED = 438;</code>
    */
-  GRANTED(438),
+  GENERATED(438),
   /**
-   * <code>GREATEST = 439;</code>
+   * <code>GLOBAL = 439;</code>
    */
-  GREATEST(439),
+  GLOBAL(439),
   /**
-   * <code>GROUP_P = 440;</code>
+   * <code>GRANT = 440;</code>
    */
-  GROUP_P(440),
+  GRANT(440),
   /**
-   * <code>GROUPING = 441;</code>
+   * <code>GRANTED = 441;</code>
    */
-  GROUPING(441),
+  GRANTED(441),
   /**
-   * <code>GROUPS = 442;</code>
+   * <code>GREATEST = 442;</code>
    */
-  GROUPS(442),
+  GREATEST(442),
   /**
-   * <code>HANDLER = 443;</code>
+   * <code>GROUP_P = 443;</code>
    */
-  HANDLER(443),
+  GROUP_P(443),
   /**
-   * <code>HAVING = 444;</code>
+   * <code>GROUPING = 444;</code>
    */
-  HAVING(444),
+  GROUPING(444),
   /**
-   * <code>HEADER_P = 445;</code>
+   * <code>GROUPS = 445;</code>
    */
-  HEADER_P(445),
+  GROUPS(445),
   /**
-   * <code>HOLD = 446;</code>
+   * <code>HANDLER = 446;</code>
    */
-  HOLD(446),
+  HANDLER(446),
   /**
-   * <code>HOUR_P = 447;</code>
+   * <code>HAVING = 447;</code>
    */
-  HOUR_P(447),
+  HAVING(447),
   /**
-   * <code>IDENTITY_P = 448;</code>
+   * <code>HEADER_P = 448;</code>
    */
-  IDENTITY_P(448),
+  HEADER_P(448),
   /**
-   * <code>IF_P = 449;</code>
+   * <code>HOLD = 449;</code>
    */
-  IF_P(449),
+  HOLD(449),
   /**
-   * <code>ILIKE = 450;</code>
+   * <code>HOUR_P = 450;</code>
    */
-  ILIKE(450),
+  HOUR_P(450),
   /**
-   * <code>IMMEDIATE = 451;</code>
+   * <code>IDENTITY_P = 451;</code>
    */
-  IMMEDIATE(451),
+  IDENTITY_P(451),
   /**
-   * <code>IMMUTABLE = 452;</code>
+   * <code>IF_P = 452;</code>
    */
-  IMMUTABLE(452),
+  IF_P(452),
   /**
-   * <code>IMPLICIT_P = 453;</code>
+   * <code>ILIKE = 453;</code>
    */
-  IMPLICIT_P(453),
+  ILIKE(453),
   /**
-   * <code>IMPORT_P = 454;</code>
+   * <code>IMMEDIATE = 454;</code>
    */
-  IMPORT_P(454),
+  IMMEDIATE(454),
   /**
-   * <code>IN_P = 455;</code>
+   * <code>IMMUTABLE = 455;</code>
    */
-  IN_P(455),
+  IMMUTABLE(455),
   /**
-   * <code>INCLUDE = 456;</code>
+   * <code>IMPLICIT_P = 456;</code>
    */
-  INCLUDE(456),
+  IMPLICIT_P(456),
   /**
-   * <code>INCLUDING = 457;</code>
+   * <code>IMPORT_P = 457;</code>
    */
-  INCLUDING(457),
+  IMPORT_P(457),
   /**
-   * <code>INCREMENT = 458;</code>
+   * <code>IN_P = 458;</code>
    */
-  INCREMENT(458),
+  IN_P(458),
   /**
-   * <code>INDENT = 459;</code>
+   * <code>INCLUDE = 459;</code>
    */
-  INDENT(459),
+  INCLUDE(459),
   /**
-   * <code>INDEX = 460;</code>
+   * <code>INCLUDING = 460;</code>
    */
-  INDEX(460),
+  INCLUDING(460),
   /**
-   * <code>INDEXES = 461;</code>
+   * <code>INCREMENT = 461;</code>
    */
-  INDEXES(461),
+  INCREMENT(461),
   /**
-   * <code>INHERIT = 462;</code>
+   * <code>INDENT = 462;</code>
    */
-  INHERIT(462),
+  INDENT(462),
   /**
-   * <code>INHERITS = 463;</code>
+   * <code>INDEX = 463;</code>
    */
-  INHERITS(463),
+  INDEX(463),
   /**
-   * <code>INITIALLY = 464;</code>
+   * <code>INDEXES = 464;</code>
    */
-  INITIALLY(464),
+  INDEXES(464),
   /**
-   * <code>INLINE_P = 465;</code>
+   * <code>INHERIT = 465;</code>
    */
-  INLINE_P(465),
+  INHERIT(465),
   /**
-   * <code>INNER_P = 466;</code>
+   * <code>INHERITS = 466;</code>
    */
-  INNER_P(466),
+  INHERITS(466),
   /**
-   * <code>INOUT = 467;</code>
+   * <code>INITIALLY = 467;</code>
    */
-  INOUT(467),
+  INITIALLY(467),
   /**
-   * <code>INPUT_P = 468;</code>
+   * <code>INLINE_P = 468;</code>
    */
-  INPUT_P(468),
+  INLINE_P(468),
   /**
-   * <code>INSENSITIVE = 469;</code>
+   * <code>INNER_P = 469;</code>
    */
-  INSENSITIVE(469),
+  INNER_P(469),
   /**
-   * <code>INSERT = 470;</code>
+   * <code>INOUT = 470;</code>
    */
-  INSERT(470),
+  INOUT(470),
   /**
-   * <code>INSTEAD = 471;</code>
+   * <code>INPUT_P = 471;</code>
    */
-  INSTEAD(471),
+  INPUT_P(471),
   /**
-   * <code>INT_P = 472;</code>
+   * <code>INSENSITIVE = 472;</code>
    */
-  INT_P(472),
+  INSENSITIVE(472),
   /**
-   * <code>INTEGER = 473;</code>
+   * <code>INSERT = 473;</code>
    */
-  INTEGER(473),
+  INSERT(473),
   /**
-   * <code>INTERSECT = 474;</code>
+   * <code>INSTEAD = 474;</code>
    */
-  INTERSECT(474),
+  INSTEAD(474),
   /**
-   * <code>INTERVAL = 475;</code>
+   * <code>INT_P = 475;</code>
    */
-  INTERVAL(475),
+  INT_P(475),
   /**
-   * <code>INTO = 476;</code>
+   * <code>INTEGER = 476;</code>
    */
-  INTO(476),
+  INTEGER(476),
   /**
-   * <code>INVOKER = 477;</code>
+   * <code>INTERSECT = 477;</code>
    */
-  INVOKER(477),
+  INTERSECT(477),
   /**
-   * <code>IS = 478;</code>
+   * <code>INTERVAL = 478;</code>
    */
-  IS(478),
+  INTERVAL(478),
   /**
-   * <code>ISNULL = 479;</code>
+   * <code>INTO = 479;</code>
    */
-  ISNULL(479),
+  INTO(479),
   /**
-   * <code>ISOLATION = 480;</code>
+   * <code>INVOKER = 480;</code>
    */
-  ISOLATION(480),
+  INVOKER(480),
   /**
-   * <code>JOIN = 481;</code>
+   * <code>IS = 481;</code>
    */
-  JOIN(481),
+  IS(481),
   /**
-   * <code>JSON = 482;</code>
+   * <code>ISNULL = 482;</code>
    */
-  JSON(482),
+  ISNULL(482),
   /**
-   * <code>JSON_ARRAY = 483;</code>
+   * <code>ISOLATION = 483;</code>
    */
-  JSON_ARRAY(483),
+  ISOLATION(483),
   /**
-   * <code>JSON_ARRAYAGG = 484;</code>
+   * <code>JOIN = 484;</code>
    */
-  JSON_ARRAYAGG(484),
+  JOIN(484),
   /**
-   * <code>JSON_OBJECT = 485;</code>
+   * <code>JSON = 485;</code>
    */
-  JSON_OBJECT(485),
+  JSON(485),
   /**
-   * <code>JSON_OBJECTAGG = 486;</code>
+   * <code>JSON_ARRAY = 486;</code>
    */
-  JSON_OBJECTAGG(486),
+  JSON_ARRAY(486),
   /**
-   * <code>KEY = 487;</code>
+   * <code>JSON_ARRAYAGG = 487;</code>
    */
-  KEY(487),
+  JSON_ARRAYAGG(487),
   /**
-   * <code>KEYS = 488;</code>
+   * <code>JSON_EXISTS = 488;</code>
    */
-  KEYS(488),
+  JSON_EXISTS(488),
   /**
-   * <code>LABEL = 489;</code>
+   * <code>JSON_OBJECT = 489;</code>
    */
-  LABEL(489),
+  JSON_OBJECT(489),
   /**
-   * <code>LANGUAGE = 490;</code>
+   * <code>JSON_OBJECTAGG = 490;</code>
    */
-  LANGUAGE(490),
+  JSON_OBJECTAGG(490),
   /**
-   * <code>LARGE_P = 491;</code>
+   * <code>JSON_QUERY = 491;</code>
    */
-  LARGE_P(491),
+  JSON_QUERY(491),
   /**
-   * <code>LAST_P = 492;</code>
+   * <code>JSON_SCALAR = 492;</code>
    */
-  LAST_P(492),
+  JSON_SCALAR(492),
   /**
-   * <code>LATERAL_P = 493;</code>
+   * <code>JSON_SERIALIZE = 493;</code>
    */
-  LATERAL_P(493),
+  JSON_SERIALIZE(493),
   /**
-   * <code>LEADING = 494;</code>
+   * <code>JSON_TABLE = 494;</code>
    */
-  LEADING(494),
+  JSON_TABLE(494),
   /**
-   * <code>LEAKPROOF = 495;</code>
+   * <code>JSON_VALUE = 495;</code>
    */
-  LEAKPROOF(495),
+  JSON_VALUE(495),
   /**
-   * <code>LEAST = 496;</code>
+   * <code>KEEP = 496;</code>
    */
-  LEAST(496),
+  KEEP(496),
   /**
-   * <code>LEFT = 497;</code>
+   * <code>KEY = 497;</code>
    */
-  LEFT(497),
+  KEY(497),
   /**
-   * <code>LEVEL = 498;</code>
+   * <code>KEYS = 498;</code>
    */
-  LEVEL(498),
+  KEYS(498),
   /**
-   * <code>LIKE = 499;</code>
+   * <code>LABEL = 499;</code>
    */
-  LIKE(499),
+  LABEL(499),
   /**
-   * <code>LIMIT = 500;</code>
+   * <code>LANGUAGE = 500;</code>
    */
-  LIMIT(500),
+  LANGUAGE(500),
   /**
-   * <code>LISTEN = 501;</code>
+   * <code>LARGE_P = 501;</code>
    */
-  LISTEN(501),
+  LARGE_P(501),
   /**
-   * <code>LOAD = 502;</code>
+   * <code>LAST_P = 502;</code>
    */
-  LOAD(502),
+  LAST_P(502),
   /**
-   * <code>LOCAL = 503;</code>
+   * <code>LATERAL_P = 503;</code>
    */
-  LOCAL(503),
+  LATERAL_P(503),
   /**
-   * <code>LOCALTIME = 504;</code>
+   * <code>LEADING = 504;</code>
    */
-  LOCALTIME(504),
+  LEADING(504),
   /**
-   * <code>LOCALTIMESTAMP = 505;</code>
+   * <code>LEAKPROOF = 505;</code>
    */
-  LOCALTIMESTAMP(505),
+  LEAKPROOF(505),
   /**
-   * <code>LOCATION = 506;</code>
+   * <code>LEAST = 506;</code>
    */
-  LOCATION(506),
+  LEAST(506),
   /**
-   * <code>LOCK_P = 507;</code>
+   * <code>LEFT = 507;</code>
    */
-  LOCK_P(507),
+  LEFT(507),
   /**
-   * <code>LOCKED = 508;</code>
+   * <code>LEVEL = 508;</code>
    */
-  LOCKED(508),
+  LEVEL(508),
   /**
-   * <code>LOGGED = 509;</code>
+   * <code>LIKE = 509;</code>
    */
-  LOGGED(509),
+  LIKE(509),
   /**
-   * <code>MAPPING = 510;</code>
+   * <code>LIMIT = 510;</code>
    */
-  MAPPING(510),
+  LIMIT(510),
   /**
-   * <code>MATCH = 511;</code>
+   * <code>LISTEN = 511;</code>
    */
-  MATCH(511),
+  LISTEN(511),
   /**
-   * <code>MATCHED = 512;</code>
+   * <code>LOAD = 512;</code>
    */
-  MATCHED(512),
+  LOAD(512),
   /**
-   * <code>MATERIALIZED = 513;</code>
+   * <code>LOCAL = 513;</code>
    */
-  MATERIALIZED(513),
+  LOCAL(513),
   /**
-   * <code>MAXVALUE = 514;</code>
+   * <code>LOCALTIME = 514;</code>
    */
-  MAXVALUE(514),
+  LOCALTIME(514),
   /**
-   * <code>MERGE = 515;</code>
+   * <code>LOCALTIMESTAMP = 515;</code>
    */
-  MERGE(515),
+  LOCALTIMESTAMP(515),
   /**
-   * <code>METHOD = 516;</code>
+   * <code>LOCATION = 516;</code>
    */
-  METHOD(516),
+  LOCATION(516),
   /**
-   * <code>MINUTE_P = 517;</code>
+   * <code>LOCK_P = 517;</code>
    */
-  MINUTE_P(517),
+  LOCK_P(517),
   /**
-   * <code>MINVALUE = 518;</code>
+   * <code>LOCKED = 518;</code>
    */
-  MINVALUE(518),
+  LOCKED(518),
   /**
-   * <code>MODE = 519;</code>
+   * <code>LOGGED = 519;</code>
    */
-  MODE(519),
+  LOGGED(519),
   /**
-   * <code>MONTH_P = 520;</code>
+   * <code>MAPPING = 520;</code>
    */
-  MONTH_P(520),
+  MAPPING(520),
   /**
-   * <code>MOVE = 521;</code>
+   * <code>MATCH = 521;</code>
    */
-  MOVE(521),
+  MATCH(521),
   /**
-   * <code>NAME_P = 522;</code>
+   * <code>MATCHED = 522;</code>
    */
-  NAME_P(522),
+  MATCHED(522),
   /**
-   * <code>NAMES = 523;</code>
+   * <code>MATERIALIZED = 523;</code>
    */
-  NAMES(523),
+  MATERIALIZED(523),
   /**
-   * <code>NATIONAL = 524;</code>
+   * <code>MAXVALUE = 524;</code>
    */
-  NATIONAL(524),
+  MAXVALUE(524),
   /**
-   * <code>NATURAL = 525;</code>
+   * <code>MERGE = 525;</code>
    */
-  NATURAL(525),
+  MERGE(525),
   /**
-   * <code>NCHAR = 526;</code>
+   * <code>MERGE_ACTION = 526;</code>
    */
-  NCHAR(526),
+  MERGE_ACTION(526),
   /**
-   * <code>NEW = 527;</code>
+   * <code>METHOD = 527;</code>
    */
-  NEW(527),
+  METHOD(527),
   /**
-   * <code>NEXT = 528;</code>
+   * <code>MINUTE_P = 528;</code>
    */
-  NEXT(528),
+  MINUTE_P(528),
   /**
-   * <code>NFC = 529;</code>
+   * <code>MINVALUE = 529;</code>
    */
-  NFC(529),
+  MINVALUE(529),
   /**
-   * <code>NFD = 530;</code>
+   * <code>MODE = 530;</code>
    */
-  NFD(530),
+  MODE(530),
   /**
-   * <code>NFKC = 531;</code>
+   * <code>MONTH_P = 531;</code>
    */
-  NFKC(531),
+  MONTH_P(531),
   /**
-   * <code>NFKD = 532;</code>
+   * <code>MOVE = 532;</code>
    */
-  NFKD(532),
+  MOVE(532),
   /**
-   * <code>NO = 533;</code>
+   * <code>NAME_P = 533;</code>
    */
-  NO(533),
+  NAME_P(533),
   /**
-   * <code>NONE = 534;</code>
+   * <code>NAMES = 534;</code>
    */
-  NONE(534),
+  NAMES(534),
   /**
-   * <code>NORMALIZE = 535;</code>
+   * <code>NATIONAL = 535;</code>
    */
-  NORMALIZE(535),
+  NATIONAL(535),
   /**
-   * <code>NORMALIZED = 536;</code>
+   * <code>NATURAL = 536;</code>
    */
-  NORMALIZED(536),
+  NATURAL(536),
   /**
-   * <code>NOT = 537;</code>
+   * <code>NCHAR = 537;</code>
    */
-  NOT(537),
+  NCHAR(537),
   /**
-   * <code>NOTHING = 538;</code>
+   * <code>NESTED = 538;</code>
    */
-  NOTHING(538),
+  NESTED(538),
   /**
-   * <code>NOTIFY = 539;</code>
+   * <code>NEW = 539;</code>
    */
-  NOTIFY(539),
+  NEW(539),
   /**
-   * <code>NOTNULL = 540;</code>
+   * <code>NEXT = 540;</code>
    */
-  NOTNULL(540),
+  NEXT(540),
   /**
-   * <code>NOWAIT = 541;</code>
+   * <code>NFC = 541;</code>
    */
-  NOWAIT(541),
+  NFC(541),
   /**
-   * <code>NULL_P = 542;</code>
+   * <code>NFD = 542;</code>
    */
-  NULL_P(542),
+  NFD(542),
   /**
-   * <code>NULLIF = 543;</code>
+   * <code>NFKC = 543;</code>
    */
-  NULLIF(543),
+  NFKC(543),
   /**
-   * <code>NULLS_P = 544;</code>
+   * <code>NFKD = 544;</code>
    */
-  NULLS_P(544),
+  NFKD(544),
   /**
-   * <code>NUMERIC = 545;</code>
+   * <code>NO = 545;</code>
    */
-  NUMERIC(545),
+  NO(545),
   /**
-   * <code>OBJECT_P = 546;</code>
+   * <code>NONE = 546;</code>
    */
-  OBJECT_P(546),
+  NONE(546),
   /**
-   * <code>OF = 547;</code>
+   * <code>NORMALIZE = 547;</code>
    */
-  OF(547),
+  NORMALIZE(547),
   /**
-   * <code>OFF = 548;</code>
+   * <code>NORMALIZED = 548;</code>
    */
-  OFF(548),
+  NORMALIZED(548),
   /**
-   * <code>OFFSET = 549;</code>
+   * <code>NOT = 549;</code>
    */
-  OFFSET(549),
+  NOT(549),
   /**
-   * <code>OIDS = 550;</code>
+   * <code>NOTHING = 550;</code>
    */
-  OIDS(550),
+  NOTHING(550),
   /**
-   * <code>OLD = 551;</code>
+   * <code>NOTIFY = 551;</code>
    */
-  OLD(551),
+  NOTIFY(551),
   /**
-   * <code>ON = 552;</code>
+   * <code>NOTNULL = 552;</code>
    */
-  ON(552),
+  NOTNULL(552),
   /**
-   * <code>ONLY = 553;</code>
+   * <code>NOWAIT = 553;</code>
    */
-  ONLY(553),
+  NOWAIT(553),
   /**
-   * <code>OPERATOR = 554;</code>
+   * <code>NULL_P = 554;</code>
    */
-  OPERATOR(554),
+  NULL_P(554),
   /**
-   * <code>OPTION = 555;</code>
+   * <code>NULLIF = 555;</code>
    */
-  OPTION(555),
+  NULLIF(555),
   /**
-   * <code>OPTIONS = 556;</code>
+   * <code>NULLS_P = 556;</code>
    */
-  OPTIONS(556),
+  NULLS_P(556),
   /**
-   * <code>OR = 557;</code>
+   * <code>NUMERIC = 557;</code>
    */
-  OR(557),
+  NUMERIC(557),
   /**
-   * <code>ORDER = 558;</code>
+   * <code>OBJECT_P = 558;</code>
    */
-  ORDER(558),
+  OBJECT_P(558),
   /**
-   * <code>ORDINALITY = 559;</code>
+   * <code>OF = 559;</code>
    */
-  ORDINALITY(559),
+  OF(559),
   /**
-   * <code>OTHERS = 560;</code>
+   * <code>OFF = 560;</code>
    */
-  OTHERS(560),
+  OFF(560),
   /**
-   * <code>OUT_P = 561;</code>
+   * <code>OFFSET = 561;</code>
    */
-  OUT_P(561),
+  OFFSET(561),
   /**
-   * <code>OUTER_P = 562;</code>
+   * <code>OIDS = 562;</code>
    */
-  OUTER_P(562),
+  OIDS(562),
   /**
-   * <code>OVER = 563;</code>
+   * <code>OLD = 563;</code>
    */
-  OVER(563),
+  OLD(563),
   /**
-   * <code>OVERLAPS = 564;</code>
+   * <code>OMIT = 564;</code>
    */
-  OVERLAPS(564),
+  OMIT(564),
   /**
-   * <code>OVERLAY = 565;</code>
+   * <code>ON = 565;</code>
    */
-  OVERLAY(565),
+  ON(565),
   /**
-   * <code>OVERRIDING = 566;</code>
+   * <code>ONLY = 566;</code>
    */
-  OVERRIDING(566),
+  ONLY(566),
   /**
-   * <code>OWNED = 567;</code>
+   * <code>OPERATOR = 567;</code>
    */
-  OWNED(567),
+  OPERATOR(567),
   /**
-   * <code>OWNER = 568;</code>
+   * <code>OPTION = 568;</code>
    */
-  OWNER(568),
+  OPTION(568),
   /**
-   * <code>PARALLEL = 569;</code>
+   * <code>OPTIONS = 569;</code>
    */
-  PARALLEL(569),
+  OPTIONS(569),
   /**
-   * <code>PARAMETER = 570;</code>
+   * <code>OR = 570;</code>
    */
-  PARAMETER(570),
+  OR(570),
   /**
-   * <code>PARSER = 571;</code>
+   * <code>ORDER = 571;</code>
    */
-  PARSER(571),
+  ORDER(571),
   /**
-   * <code>PARTIAL = 572;</code>
+   * <code>ORDINALITY = 572;</code>
    */
-  PARTIAL(572),
+  ORDINALITY(572),
   /**
-   * <code>PARTITION = 573;</code>
+   * <code>OTHERS = 573;</code>
    */
-  PARTITION(573),
+  OTHERS(573),
   /**
-   * <code>PASSING = 574;</code>
+   * <code>OUT_P = 574;</code>
    */
-  PASSING(574),
+  OUT_P(574),
   /**
-   * <code>PASSWORD = 575;</code>
+   * <code>OUTER_P = 575;</code>
    */
-  PASSWORD(575),
+  OUTER_P(575),
   /**
-   * <code>PLACING = 576;</code>
+   * <code>OVER = 576;</code>
    */
-  PLACING(576),
+  OVER(576),
   /**
-   * <code>PLANS = 577;</code>
+   * <code>OVERLAPS = 577;</code>
    */
-  PLANS(577),
+  OVERLAPS(577),
   /**
-   * <code>POLICY = 578;</code>
+   * <code>OVERLAY = 578;</code>
    */
-  POLICY(578),
+  OVERLAY(578),
   /**
-   * <code>POSITION = 579;</code>
+   * <code>OVERRIDING = 579;</code>
    */
-  POSITION(579),
+  OVERRIDING(579),
   /**
-   * <code>PRECEDING = 580;</code>
+   * <code>OWNED = 580;</code>
    */
-  PRECEDING(580),
+  OWNED(580),
   /**
-   * <code>PRECISION = 581;</code>
+   * <code>OWNER = 581;</code>
    */
-  PRECISION(581),
+  OWNER(581),
   /**
-   * <code>PRESERVE = 582;</code>
+   * <code>PARALLEL = 582;</code>
    */
-  PRESERVE(582),
+  PARALLEL(582),
   /**
-   * <code>PREPARE = 583;</code>
+   * <code>PARAMETER = 583;</code>
    */
-  PREPARE(583),
+  PARAMETER(583),
   /**
-   * <code>PREPARED = 584;</code>
+   * <code>PARSER = 584;</code>
    */
-  PREPARED(584),
+  PARSER(584),
   /**
-   * <code>PRIMARY = 585;</code>
+   * <code>PARTIAL = 585;</code>
    */
-  PRIMARY(585),
+  PARTIAL(585),
   /**
-   * <code>PRIOR = 586;</code>
+   * <code>PARTITION = 586;</code>
    */
-  PRIOR(586),
+  PARTITION(586),
   /**
-   * <code>PRIVILEGES = 587;</code>
+   * <code>PASSING = 587;</code>
    */
-  PRIVILEGES(587),
+  PASSING(587),
   /**
-   * <code>PROCEDURAL = 588;</code>
+   * <code>PASSWORD = 588;</code>
    */
-  PROCEDURAL(588),
+  PASSWORD(588),
   /**
-   * <code>PROCEDURE = 589;</code>
+   * <code>PATH = 589;</code>
    */
-  PROCEDURE(589),
+  PATH(589),
   /**
-   * <code>PROCEDURES = 590;</code>
+   * <code>PLACING = 590;</code>
    */
-  PROCEDURES(590),
+  PLACING(590),
   /**
-   * <code>PROGRAM = 591;</code>
+   * <code>PLAN = 591;</code>
    */
-  PROGRAM(591),
+  PLAN(591),
   /**
-   * <code>PUBLICATION = 592;</code>
+   * <code>PLANS = 592;</code>
    */
-  PUBLICATION(592),
+  PLANS(592),
   /**
-   * <code>QUOTE = 593;</code>
+   * <code>POLICY = 593;</code>
    */
-  QUOTE(593),
+  POLICY(593),
   /**
-   * <code>RANGE = 594;</code>
+   * <code>POSITION = 594;</code>
    */
-  RANGE(594),
+  POSITION(594),
   /**
-   * <code>READ = 595;</code>
+   * <code>PRECEDING = 595;</code>
    */
-  READ(595),
+  PRECEDING(595),
   /**
-   * <code>REAL = 596;</code>
+   * <code>PRECISION = 596;</code>
    */
-  REAL(596),
+  PRECISION(596),
   /**
-   * <code>REASSIGN = 597;</code>
+   * <code>PRESERVE = 597;</code>
    */
-  REASSIGN(597),
+  PRESERVE(597),
   /**
-   * <code>RECHECK = 598;</code>
+   * <code>PREPARE = 598;</code>
    */
-  RECHECK(598),
+  PREPARE(598),
   /**
-   * <code>RECURSIVE = 599;</code>
+   * <code>PREPARED = 599;</code>
    */
-  RECURSIVE(599),
+  PREPARED(599),
   /**
-   * <code>REF_P = 600;</code>
+   * <code>PRIMARY = 600;</code>
    */
-  REF_P(600),
+  PRIMARY(600),
   /**
-   * <code>REFERENCES = 601;</code>
+   * <code>PRIOR = 601;</code>
    */
-  REFERENCES(601),
+  PRIOR(601),
   /**
-   * <code>REFERENCING = 602;</code>
+   * <code>PRIVILEGES = 602;</code>
    */
-  REFERENCING(602),
+  PRIVILEGES(602),
   /**
-   * <code>REFRESH = 603;</code>
+   * <code>PROCEDURAL = 603;</code>
    */
-  REFRESH(603),
+  PROCEDURAL(603),
   /**
-   * <code>REINDEX = 604;</code>
+   * <code>PROCEDURE = 604;</code>
    */
-  REINDEX(604),
+  PROCEDURE(604),
   /**
-   * <code>RELATIVE_P = 605;</code>
+   * <code>PROCEDURES = 605;</code>
    */
-  RELATIVE_P(605),
+  PROCEDURES(605),
   /**
-   * <code>RELEASE = 606;</code>
+   * <code>PROGRAM = 606;</code>
    */
-  RELEASE(606),
+  PROGRAM(606),
   /**
-   * <code>RENAME = 607;</code>
+   * <code>PUBLICATION = 607;</code>
    */
-  RENAME(607),
+  PUBLICATION(607),
   /**
-   * <code>REPEATABLE = 608;</code>
+   * <code>QUOTE = 608;</code>
    */
-  REPEATABLE(608),
+  QUOTE(608),
   /**
-   * <code>REPLACE = 609;</code>
+   * <code>QUOTES = 609;</code>
    */
-  REPLACE(609),
+  QUOTES(609),
   /**
-   * <code>REPLICA = 610;</code>
+   * <code>RANGE = 610;</code>
    */
-  REPLICA(610),
+  RANGE(610),
   /**
-   * <code>RESET = 611;</code>
+   * <code>READ = 611;</code>
    */
-  RESET(611),
+  READ(611),
   /**
-   * <code>RESTART = 612;</code>
+   * <code>REAL = 612;</code>
    */
-  RESTART(612),
+  REAL(612),
   /**
-   * <code>RESTRICT = 613;</code>
+   * <code>REASSIGN = 613;</code>
    */
-  RESTRICT(613),
+  REASSIGN(613),
   /**
-   * <code>RETURN = 614;</code>
+   * <code>RECHECK = 614;</code>
    */
-  RETURN(614),
+  RECHECK(614),
   /**
-   * <code>RETURNING = 615;</code>
+   * <code>RECURSIVE = 615;</code>
    */
-  RETURNING(615),
+  RECURSIVE(615),
   /**
-   * <code>RETURNS = 616;</code>
+   * <code>REF_P = 616;</code>
    */
-  RETURNS(616),
+  REF_P(616),
   /**
-   * <code>REVOKE = 617;</code>
+   * <code>REFERENCES = 617;</code>
    */
-  REVOKE(617),
+  REFERENCES(617),
   /**
-   * <code>RIGHT = 618;</code>
+   * <code>REFERENCING = 618;</code>
    */
-  RIGHT(618),
+  REFERENCING(618),
   /**
-   * <code>ROLE = 619;</code>
+   * <code>REFRESH = 619;</code>
    */
-  ROLE(619),
+  REFRESH(619),
   /**
-   * <code>ROLLBACK = 620;</code>
+   * <code>REINDEX = 620;</code>
    */
-  ROLLBACK(620),
+  REINDEX(620),
   /**
-   * <code>ROLLUP = 621;</code>
+   * <code>RELATIVE_P = 621;</code>
    */
-  ROLLUP(621),
+  RELATIVE_P(621),
   /**
-   * <code>ROUTINE = 622;</code>
+   * <code>RELEASE = 622;</code>
    */
-  ROUTINE(622),
+  RELEASE(622),
   /**
-   * <code>ROUTINES = 623;</code>
+   * <code>RENAME = 623;</code>
    */
-  ROUTINES(623),
+  RENAME(623),
   /**
-   * <code>ROW = 624;</code>
+   * <code>REPEATABLE = 624;</code>
    */
-  ROW(624),
+  REPEATABLE(624),
   /**
-   * <code>ROWS = 625;</code>
+   * <code>REPLACE = 625;</code>
    */
-  ROWS(625),
+  REPLACE(625),
   /**
-   * <code>RULE = 626;</code>
+   * <code>REPLICA = 626;</code>
    */
-  RULE(626),
+  REPLICA(626),
   /**
-   * <code>SAVEPOINT = 627;</code>
+   * <code>RESET = 627;</code>
    */
-  SAVEPOINT(627),
+  RESET(627),
   /**
-   * <code>SCALAR = 628;</code>
+   * <code>RESTART = 628;</code>
    */
-  SCALAR(628),
+  RESTART(628),
   /**
-   * <code>SCHEMA = 629;</code>
+   * <code>RESTRICT = 629;</code>
    */
-  SCHEMA(629),
+  RESTRICT(629),
   /**
-   * <code>SCHEMAS = 630;</code>
+   * <code>RETURN = 630;</code>
    */
-  SCHEMAS(630),
+  RETURN(630),
   /**
-   * <code>SCROLL = 631;</code>
+   * <code>RETURNING = 631;</code>
    */
-  SCROLL(631),
+  RETURNING(631),
   /**
-   * <code>SEARCH = 632;</code>
+   * <code>RETURNS = 632;</code>
    */
-  SEARCH(632),
+  RETURNS(632),
   /**
-   * <code>SECOND_P = 633;</code>
+   * <code>REVOKE = 633;</code>
    */
-  SECOND_P(633),
+  REVOKE(633),
   /**
-   * <code>SECURITY = 634;</code>
+   * <code>RIGHT = 634;</code>
    */
-  SECURITY(634),
+  RIGHT(634),
   /**
-   * <code>SELECT = 635;</code>
+   * <code>ROLE = 635;</code>
    */
-  SELECT(635),
+  ROLE(635),
   /**
-   * <code>SEQUENCE = 636;</code>
+   * <code>ROLLBACK = 636;</code>
    */
-  SEQUENCE(636),
+  ROLLBACK(636),
   /**
-   * <code>SEQUENCES = 637;</code>
+   * <code>ROLLUP = 637;</code>
    */
-  SEQUENCES(637),
+  ROLLUP(637),
   /**
-   * <code>SERIALIZABLE = 638;</code>
+   * <code>ROUTINE = 638;</code>
    */
-  SERIALIZABLE(638),
+  ROUTINE(638),
   /**
-   * <code>SERVER = 639;</code>
+   * <code>ROUTINES = 639;</code>
    */
-  SERVER(639),
+  ROUTINES(639),
   /**
-   * <code>SESSION = 640;</code>
+   * <code>ROW = 640;</code>
    */
-  SESSION(640),
+  ROW(640),
   /**
-   * <code>SESSION_USER = 641;</code>
+   * <code>ROWS = 641;</code>
    */
-  SESSION_USER(641),
+  ROWS(641),
   /**
-   * <code>SET = 642;</code>
+   * <code>RULE = 642;</code>
    */
-  SET(642),
+  RULE(642),
   /**
-   * <code>SETS = 643;</code>
+   * <code>SAVEPOINT = 643;</code>
    */
-  SETS(643),
+  SAVEPOINT(643),
   /**
-   * <code>SETOF = 644;</code>
+   * <code>SCALAR = 644;</code>
    */
-  SETOF(644),
+  SCALAR(644),
   /**
-   * <code>SHARE = 645;</code>
+   * <code>SCHEMA = 645;</code>
    */
-  SHARE(645),
+  SCHEMA(645),
   /**
-   * <code>SHOW = 646;</code>
+   * <code>SCHEMAS = 646;</code>
    */
-  SHOW(646),
+  SCHEMAS(646),
   /**
-   * <code>SIMILAR = 647;</code>
+   * <code>SCROLL = 647;</code>
    */
-  SIMILAR(647),
+  SCROLL(647),
   /**
-   * <code>SIMPLE = 648;</code>
+   * <code>SEARCH = 648;</code>
    */
-  SIMPLE(648),
+  SEARCH(648),
   /**
-   * <code>SKIP = 649;</code>
+   * <code>SECOND_P = 649;</code>
    */
-  SKIP(649),
+  SECOND_P(649),
   /**
-   * <code>SMALLINT = 650;</code>
+   * <code>SECURITY = 650;</code>
    */
-  SMALLINT(650),
+  SECURITY(650),
   /**
-   * <code>SNAPSHOT = 651;</code>
+   * <code>SELECT = 651;</code>
    */
-  SNAPSHOT(651),
+  SELECT(651),
   /**
-   * <code>SOME = 652;</code>
+   * <code>SEQUENCE = 652;</code>
    */
-  SOME(652),
+  SEQUENCE(652),
   /**
-   * <code>SQL_P = 653;</code>
+   * <code>SEQUENCES = 653;</code>
    */
-  SQL_P(653),
+  SEQUENCES(653),
   /**
-   * <code>STABLE = 654;</code>
+   * <code>SERIALIZABLE = 654;</code>
    */
-  STABLE(654),
+  SERIALIZABLE(654),
   /**
-   * <code>STANDALONE_P = 655;</code>
+   * <code>SERVER = 655;</code>
    */
-  STANDALONE_P(655),
+  SERVER(655),
   /**
-   * <code>START = 656;</code>
+   * <code>SESSION = 656;</code>
    */
-  START(656),
+  SESSION(656),
   /**
-   * <code>STATEMENT = 657;</code>
+   * <code>SESSION_USER = 657;</code>
    */
-  STATEMENT(657),
+  SESSION_USER(657),
   /**
-   * <code>STATISTICS = 658;</code>
+   * <code>SET = 658;</code>
    */
-  STATISTICS(658),
+  SET(658),
   /**
-   * <code>STDIN = 659;</code>
+   * <code>SETS = 659;</code>
    */
-  STDIN(659),
+  SETS(659),
   /**
-   * <code>STDOUT = 660;</code>
+   * <code>SETOF = 660;</code>
    */
-  STDOUT(660),
+  SETOF(660),
   /**
-   * <code>STORAGE = 661;</code>
+   * <code>SHARE = 661;</code>
    */
-  STORAGE(661),
+  SHARE(661),
   /**
-   * <code>STORED = 662;</code>
+   * <code>SHOW = 662;</code>
    */
-  STORED(662),
+  SHOW(662),
   /**
-   * <code>STRICT_P = 663;</code>
+   * <code>SIMILAR = 663;</code>
    */
-  STRICT_P(663),
+  SIMILAR(663),
   /**
-   * <code>STRIP_P = 664;</code>
+   * <code>SIMPLE = 664;</code>
    */
-  STRIP_P(664),
+  SIMPLE(664),
   /**
-   * <code>SUBSCRIPTION = 665;</code>
+   * <code>SKIP = 665;</code>
    */
-  SUBSCRIPTION(665),
+  SKIP(665),
   /**
-   * <code>SUBSTRING = 666;</code>
+   * <code>SMALLINT = 666;</code>
    */
-  SUBSTRING(666),
+  SMALLINT(666),
   /**
-   * <code>SUPPORT = 667;</code>
+   * <code>SNAPSHOT = 667;</code>
    */
-  SUPPORT(667),
+  SNAPSHOT(667),
   /**
-   * <code>SYMMETRIC = 668;</code>
+   * <code>SOME = 668;</code>
    */
-  SYMMETRIC(668),
+  SOME(668),
   /**
-   * <code>SYSID = 669;</code>
+   * <code>SOURCE = 669;</code>
    */
-  SYSID(669),
+  SOURCE(669),
   /**
-   * <code>SYSTEM_P = 670;</code>
+   * <code>SQL_P = 670;</code>
    */
-  SYSTEM_P(670),
+  SQL_P(670),
   /**
-   * <code>SYSTEM_USER = 671;</code>
+   * <code>STABLE = 671;</code>
    */
-  SYSTEM_USER(671),
+  STABLE(671),
   /**
-   * <code>TABLE = 672;</code>
+   * <code>STANDALONE_P = 672;</code>
    */
-  TABLE(672),
+  STANDALONE_P(672),
   /**
-   * <code>TABLES = 673;</code>
+   * <code>START = 673;</code>
    */
-  TABLES(673),
+  START(673),
   /**
-   * <code>TABLESAMPLE = 674;</code>
+   * <code>STATEMENT = 674;</code>
    */
-  TABLESAMPLE(674),
+  STATEMENT(674),
   /**
-   * <code>TABLESPACE = 675;</code>
+   * <code>STATISTICS = 675;</code>
    */
-  TABLESPACE(675),
+  STATISTICS(675),
   /**
-   * <code>TEMP = 676;</code>
+   * <code>STDIN = 676;</code>
    */
-  TEMP(676),
+  STDIN(676),
   /**
-   * <code>TEMPLATE = 677;</code>
+   * <code>STDOUT = 677;</code>
    */
-  TEMPLATE(677),
+  STDOUT(677),
   /**
-   * <code>TEMPORARY = 678;</code>
+   * <code>STORAGE = 678;</code>
    */
-  TEMPORARY(678),
+  STORAGE(678),
   /**
-   * <code>TEXT_P = 679;</code>
+   * <code>STORED = 679;</code>
    */
-  TEXT_P(679),
+  STORED(679),
   /**
-   * <code>THEN = 680;</code>
+   * <code>STRICT_P = 680;</code>
    */
-  THEN(680),
+  STRICT_P(680),
   /**
-   * <code>TIES = 681;</code>
+   * <code>STRING_P = 681;</code>
    */
-  TIES(681),
+  STRING_P(681),
   /**
-   * <code>TIME = 682;</code>
+   * <code>STRIP_P = 682;</code>
    */
-  TIME(682),
+  STRIP_P(682),
   /**
-   * <code>TIMESTAMP = 683;</code>
+   * <code>SUBSCRIPTION = 683;</code>
    */
-  TIMESTAMP(683),
+  SUBSCRIPTION(683),
   /**
-   * <code>TO = 684;</code>
+   * <code>SUBSTRING = 684;</code>
    */
-  TO(684),
+  SUBSTRING(684),
   /**
-   * <code>TRAILING = 685;</code>
+   * <code>SUPPORT = 685;</code>
    */
-  TRAILING(685),
+  SUPPORT(685),
   /**
-   * <code>TRANSACTION = 686;</code>
+   * <code>SYMMETRIC = 686;</code>
    */
-  TRANSACTION(686),
+  SYMMETRIC(686),
   /**
-   * <code>TRANSFORM = 687;</code>
+   * <code>SYSID = 687;</code>
    */
-  TRANSFORM(687),
+  SYSID(687),
   /**
-   * <code>TREAT = 688;</code>
+   * <code>SYSTEM_P = 688;</code>
    */
-  TREAT(688),
+  SYSTEM_P(688),
   /**
-   * <code>TRIGGER = 689;</code>
+   * <code>SYSTEM_USER = 689;</code>
    */
-  TRIGGER(689),
+  SYSTEM_USER(689),
   /**
-   * <code>TRIM = 690;</code>
+   * <code>TABLE = 690;</code>
    */
-  TRIM(690),
+  TABLE(690),
   /**
-   * <code>TRUE_P = 691;</code>
+   * <code>TABLES = 691;</code>
    */
-  TRUE_P(691),
+  TABLES(691),
   /**
-   * <code>TRUNCATE = 692;</code>
+   * <code>TABLESAMPLE = 692;</code>
    */
-  TRUNCATE(692),
+  TABLESAMPLE(692),
   /**
-   * <code>TRUSTED = 693;</code>
+   * <code>TABLESPACE = 693;</code>
    */
-  TRUSTED(693),
+  TABLESPACE(693),
   /**
-   * <code>TYPE_P = 694;</code>
+   * <code>TARGET = 694;</code>
    */
-  TYPE_P(694),
+  TARGET(694),
   /**
-   * <code>TYPES_P = 695;</code>
+   * <code>TEMP = 695;</code>
    */
-  TYPES_P(695),
+  TEMP(695),
   /**
-   * <code>UESCAPE = 696;</code>
+   * <code>TEMPLATE = 696;</code>
    */
-  UESCAPE(696),
+  TEMPLATE(696),
   /**
-   * <code>UNBOUNDED = 697;</code>
+   * <code>TEMPORARY = 697;</code>
    */
-  UNBOUNDED(697),
+  TEMPORARY(697),
   /**
-   * <code>UNCOMMITTED = 698;</code>
+   * <code>TEXT_P = 698;</code>
    */
-  UNCOMMITTED(698),
+  TEXT_P(698),
   /**
-   * <code>UNENCRYPTED = 699;</code>
+   * <code>THEN = 699;</code>
    */
-  UNENCRYPTED(699),
+  THEN(699),
   /**
-   * <code>UNION = 700;</code>
+   * <code>TIES = 700;</code>
    */
-  UNION(700),
+  TIES(700),
   /**
-   * <code>UNIQUE = 701;</code>
+   * <code>TIME = 701;</code>
    */
-  UNIQUE(701),
+  TIME(701),
   /**
-   * <code>UNKNOWN = 702;</code>
+   * <code>TIMESTAMP = 702;</code>
    */
-  UNKNOWN(702),
+  TIMESTAMP(702),
   /**
-   * <code>UNLISTEN = 703;</code>
+   * <code>TO = 703;</code>
    */
-  UNLISTEN(703),
+  TO(703),
   /**
-   * <code>UNLOGGED = 704;</code>
+   * <code>TRAILING = 704;</code>
    */
-  UNLOGGED(704),
+  TRAILING(704),
   /**
-   * <code>UNTIL = 705;</code>
+   * <code>TRANSACTION = 705;</code>
    */
-  UNTIL(705),
+  TRANSACTION(705),
   /**
-   * <code>UPDATE = 706;</code>
+   * <code>TRANSFORM = 706;</code>
    */
-  UPDATE(706),
+  TRANSFORM(706),
   /**
-   * <code>USER = 707;</code>
+   * <code>TREAT = 707;</code>
    */
-  USER(707),
+  TREAT(707),
   /**
-   * <code>USING = 708;</code>
+   * <code>TRIGGER = 708;</code>
    */
-  USING(708),
+  TRIGGER(708),
   /**
-   * <code>VACUUM = 709;</code>
+   * <code>TRIM = 709;</code>
    */
-  VACUUM(709),
+  TRIM(709),
   /**
-   * <code>VALID = 710;</code>
+   * <code>TRUE_P = 710;</code>
    */
-  VALID(710),
+  TRUE_P(710),
   /**
-   * <code>VALIDATE = 711;</code>
+   * <code>TRUNCATE = 711;</code>
    */
-  VALIDATE(711),
+  TRUNCATE(711),
   /**
-   * <code>VALIDATOR = 712;</code>
+   * <code>TRUSTED = 712;</code>
    */
-  VALIDATOR(712),
+  TRUSTED(712),
   /**
-   * <code>VALUE_P = 713;</code>
+   * <code>TYPE_P = 713;</code>
    */
-  VALUE_P(713),
+  TYPE_P(713),
   /**
-   * <code>VALUES = 714;</code>
+   * <code>TYPES_P = 714;</code>
    */
-  VALUES(714),
+  TYPES_P(714),
   /**
-   * <code>VARCHAR = 715;</code>
+   * <code>UESCAPE = 715;</code>
    */
-  VARCHAR(715),
+  UESCAPE(715),
   /**
-   * <code>VARIADIC = 716;</code>
+   * <code>UNBOUNDED = 716;</code>
    */
-  VARIADIC(716),
+  UNBOUNDED(716),
   /**
-   * <code>VARYING = 717;</code>
+   * <code>UNCONDITIONAL = 717;</code>
    */
-  VARYING(717),
+  UNCONDITIONAL(717),
   /**
-   * <code>VERBOSE = 718;</code>
+   * <code>UNCOMMITTED = 718;</code>
    */
-  VERBOSE(718),
+  UNCOMMITTED(718),
   /**
-   * <code>VERSION_P = 719;</code>
+   * <code>UNENCRYPTED = 719;</code>
    */
-  VERSION_P(719),
+  UNENCRYPTED(719),
   /**
-   * <code>VIEW = 720;</code>
+   * <code>UNION = 720;</code>
    */
-  VIEW(720),
+  UNION(720),
   /**
-   * <code>VIEWS = 721;</code>
+   * <code>UNIQUE = 721;</code>
    */
-  VIEWS(721),
+  UNIQUE(721),
   /**
-   * <code>VOLATILE = 722;</code>
+   * <code>UNKNOWN = 722;</code>
    */
-  VOLATILE(722),
+  UNKNOWN(722),
   /**
-   * <code>WHEN = 723;</code>
+   * <code>UNLISTEN = 723;</code>
    */
-  WHEN(723),
+  UNLISTEN(723),
   /**
-   * <code>WHERE = 724;</code>
+   * <code>UNLOGGED = 724;</code>
    */
-  WHERE(724),
+  UNLOGGED(724),
   /**
-   * <code>WHITESPACE_P = 725;</code>
+   * <code>UNTIL = 725;</code>
    */
-  WHITESPACE_P(725),
+  UNTIL(725),
   /**
-   * <code>WINDOW = 726;</code>
+   * <code>UPDATE = 726;</code>
    */
-  WINDOW(726),
+  UPDATE(726),
   /**
-   * <code>WITH = 727;</code>
+   * <code>USER = 727;</code>
    */
-  WITH(727),
+  USER(727),
   /**
-   * <code>WITHIN = 728;</code>
+   * <code>USING = 728;</code>
    */
-  WITHIN(728),
+  USING(728),
   /**
-   * <code>WITHOUT = 729;</code>
+   * <code>VACUUM = 729;</code>
    */
-  WITHOUT(729),
+  VACUUM(729),
   /**
-   * <code>WORK = 730;</code>
+   * <code>VALID = 730;</code>
    */
-  WORK(730),
+  VALID(730),
   /**
-   * <code>WRAPPER = 731;</code>
+   * <code>VALIDATE = 731;</code>
    */
-  WRAPPER(731),
+  VALIDATE(731),
   /**
-   * <code>WRITE = 732;</code>
+   * <code>VALIDATOR = 732;</code>
    */
-  WRITE(732),
+  VALIDATOR(732),
   /**
-   * <code>XML_P = 733;</code>
+   * <code>VALUE_P = 733;</code>
    */
-  XML_P(733),
+  VALUE_P(733),
   /**
-   * <code>XMLATTRIBUTES = 734;</code>
+   * <code>VALUES = 734;</code>
    */
-  XMLATTRIBUTES(734),
+  VALUES(734),
   /**
-   * <code>XMLCONCAT = 735;</code>
+   * <code>VARCHAR = 735;</code>
    */
-  XMLCONCAT(735),
+  VARCHAR(735),
   /**
-   * <code>XMLELEMENT = 736;</code>
+   * <code>VARIADIC = 736;</code>
    */
-  XMLELEMENT(736),
+  VARIADIC(736),
   /**
-   * <code>XMLEXISTS = 737;</code>
+   * <code>VARYING = 737;</code>
    */
-  XMLEXISTS(737),
+  VARYING(737),
   /**
-   * <code>XMLFOREST = 738;</code>
+   * <code>VERBOSE = 738;</code>
    */
-  XMLFOREST(738),
+  VERBOSE(738),
   /**
-   * <code>XMLNAMESPACES = 739;</code>
+   * <code>VERSION_P = 739;</code>
    */
-  XMLNAMESPACES(739),
+  VERSION_P(739),
   /**
-   * <code>XMLPARSE = 740;</code>
+   * <code>VIEW = 740;</code>
    */
-  XMLPARSE(740),
+  VIEW(740),
   /**
-   * <code>XMLPI = 741;</code>
+   * <code>VIEWS = 741;</code>
    */
-  XMLPI(741),
+  VIEWS(741),
   /**
-   * <code>XMLROOT = 742;</code>
+   * <code>VOLATILE = 742;</code>
    */
-  XMLROOT(742),
+  VOLATILE(742),
   /**
-   * <code>XMLSERIALIZE = 743;</code>
+   * <code>WHEN = 743;</code>
    */
-  XMLSERIALIZE(743),
+  WHEN(743),
   /**
-   * <code>XMLTABLE = 744;</code>
+   * <code>WHERE = 744;</code>
    */
-  XMLTABLE(744),
+  WHERE(744),
   /**
-   * <code>YEAR_P = 745;</code>
+   * <code>WHITESPACE_P = 745;</code>
    */
-  YEAR_P(745),
+  WHITESPACE_P(745),
   /**
-   * <code>YES_P = 746;</code>
+   * <code>WINDOW = 746;</code>
    */
-  YES_P(746),
+  WINDOW(746),
   /**
-   * <code>ZONE = 747;</code>
+   * <code>WITH = 747;</code>
    */
-  ZONE(747),
+  WITH(747),
   /**
-   * <code>FORMAT_LA = 748;</code>
+   * <code>WITHIN = 748;</code>
    */
-  FORMAT_LA(748),
+  WITHIN(748),
   /**
-   * <code>NOT_LA = 749;</code>
+   * <code>WITHOUT = 749;</code>
    */
-  NOT_LA(749),
+  WITHOUT(749),
   /**
-   * <code>NULLS_LA = 750;</code>
+   * <code>WORK = 750;</code>
    */
-  NULLS_LA(750),
+  WORK(750),
   /**
-   * <code>WITH_LA = 751;</code>
+   * <code>WRAPPER = 751;</code>
    */
-  WITH_LA(751),
+  WRAPPER(751),
   /**
-   * <code>WITHOUT_LA = 752;</code>
+   * <code>WRITE = 752;</code>
    */
-  WITHOUT_LA(752),
+  WRITE(752),
   /**
-   * <code>MODE_TYPE_NAME = 753;</code>
+   * <code>XML_P = 753;</code>
    */
-  MODE_TYPE_NAME(753),
+  XML_P(753),
   /**
-   * <code>MODE_PLPGSQL_EXPR = 754;</code>
+   * <code>XMLATTRIBUTES = 754;</code>
    */
-  MODE_PLPGSQL_EXPR(754),
+  XMLATTRIBUTES(754),
   /**
-   * <code>MODE_PLPGSQL_ASSIGN1 = 755;</code>
+   * <code>XMLCONCAT = 755;</code>
    */
-  MODE_PLPGSQL_ASSIGN1(755),
+  XMLCONCAT(755),
   /**
-   * <code>MODE_PLPGSQL_ASSIGN2 = 756;</code>
+   * <code>XMLELEMENT = 756;</code>
    */
-  MODE_PLPGSQL_ASSIGN2(756),
+  XMLELEMENT(756),
   /**
-   * <code>MODE_PLPGSQL_ASSIGN3 = 757;</code>
+   * <code>XMLEXISTS = 757;</code>
    */
-  MODE_PLPGSQL_ASSIGN3(757),
+  XMLEXISTS(757),
   /**
-   * <code>UMINUS = 758;</code>
+   * <code>XMLFOREST = 758;</code>
    */
-  UMINUS(758),
+  XMLFOREST(758),
+  /**
+   * <code>XMLNAMESPACES = 759;</code>
+   */
+  XMLNAMESPACES(759),
+  /**
+   * <code>XMLPARSE = 760;</code>
+   */
+  XMLPARSE(760),
+  /**
+   * <code>XMLPI = 761;</code>
+   */
+  XMLPI(761),
+  /**
+   * <code>XMLROOT = 762;</code>
+   */
+  XMLROOT(762),
+  /**
+   * <code>XMLSERIALIZE = 763;</code>
+   */
+  XMLSERIALIZE(763),
+  /**
+   * <code>XMLTABLE = 764;</code>
+   */
+  XMLTABLE(764),
+  /**
+   * <code>YEAR_P = 765;</code>
+   */
+  YEAR_P(765),
+  /**
+   * <code>YES_P = 766;</code>
+   */
+  YES_P(766),
+  /**
+   * <code>ZONE = 767;</code>
+   */
+  ZONE(767),
+  /**
+   * <code>FORMAT_LA = 768;</code>
+   */
+  FORMAT_LA(768),
+  /**
+   * <code>NOT_LA = 769;</code>
+   */
+  NOT_LA(769),
+  /**
+   * <code>NULLS_LA = 770;</code>
+   */
+  NULLS_LA(770),
+  /**
+   * <code>WITH_LA = 771;</code>
+   */
+  WITH_LA(771),
+  /**
+   * <code>WITHOUT_LA = 772;</code>
+   */
+  WITHOUT_LA(772),
+  /**
+   * <code>MODE_TYPE_NAME = 773;</code>
+   */
+  MODE_TYPE_NAME(773),
+  /**
+   * <code>MODE_PLPGSQL_EXPR = 774;</code>
+   */
+  MODE_PLPGSQL_EXPR(774),
+  /**
+   * <code>MODE_PLPGSQL_ASSIGN1 = 775;</code>
+   */
+  MODE_PLPGSQL_ASSIGN1(775),
+  /**
+   * <code>MODE_PLPGSQL_ASSIGN2 = 776;</code>
+   */
+  MODE_PLPGSQL_ASSIGN2(776),
+  /**
+   * <code>MODE_PLPGSQL_ASSIGN3 = 777;</code>
+   */
+  MODE_PLPGSQL_ASSIGN3(777),
+  /**
+   * <code>UMINUS = 778;</code>
+   */
+  UMINUS(778),
   UNRECOGNIZED(-1),
   ;
 
@@ -2705,1661 +2785,1741 @@ public enum Token
    */
   public static final int CONCURRENTLY_VALUE = 344;
   /**
-   * <code>CONFIGURATION = 345;</code>
+   * <code>CONDITIONAL = 345;</code>
    */
-  public static final int CONFIGURATION_VALUE = 345;
+  public static final int CONDITIONAL_VALUE = 345;
   /**
-   * <code>CONFLICT = 346;</code>
+   * <code>CONFIGURATION = 346;</code>
    */
-  public static final int CONFLICT_VALUE = 346;
+  public static final int CONFIGURATION_VALUE = 346;
   /**
-   * <code>CONNECTION = 347;</code>
+   * <code>CONFLICT = 347;</code>
    */
-  public static final int CONNECTION_VALUE = 347;
+  public static final int CONFLICT_VALUE = 347;
   /**
-   * <code>CONSTRAINT = 348;</code>
+   * <code>CONNECTION = 348;</code>
    */
-  public static final int CONSTRAINT_VALUE = 348;
+  public static final int CONNECTION_VALUE = 348;
   /**
-   * <code>CONSTRAINTS = 349;</code>
+   * <code>CONSTRAINT = 349;</code>
    */
-  public static final int CONSTRAINTS_VALUE = 349;
+  public static final int CONSTRAINT_VALUE = 349;
   /**
-   * <code>CONTENT_P = 350;</code>
+   * <code>CONSTRAINTS = 350;</code>
    */
-  public static final int CONTENT_P_VALUE = 350;
+  public static final int CONSTRAINTS_VALUE = 350;
   /**
-   * <code>CONTINUE_P = 351;</code>
+   * <code>CONTENT_P = 351;</code>
    */
-  public static final int CONTINUE_P_VALUE = 351;
+  public static final int CONTENT_P_VALUE = 351;
   /**
-   * <code>CONVERSION_P = 352;</code>
+   * <code>CONTINUE_P = 352;</code>
    */
-  public static final int CONVERSION_P_VALUE = 352;
+  public static final int CONTINUE_P_VALUE = 352;
   /**
-   * <code>COPY = 353;</code>
+   * <code>CONVERSION_P = 353;</code>
    */
-  public static final int COPY_VALUE = 353;
+  public static final int CONVERSION_P_VALUE = 353;
   /**
-   * <code>COST = 354;</code>
+   * <code>COPY = 354;</code>
    */
-  public static final int COST_VALUE = 354;
+  public static final int COPY_VALUE = 354;
   /**
-   * <code>CREATE = 355;</code>
+   * <code>COST = 355;</code>
    */
-  public static final int CREATE_VALUE = 355;
+  public static final int COST_VALUE = 355;
   /**
-   * <code>CROSS = 356;</code>
+   * <code>CREATE = 356;</code>
    */
-  public static final int CROSS_VALUE = 356;
+  public static final int CREATE_VALUE = 356;
   /**
-   * <code>CSV = 357;</code>
+   * <code>CROSS = 357;</code>
    */
-  public static final int CSV_VALUE = 357;
+  public static final int CROSS_VALUE = 357;
   /**
-   * <code>CUBE = 358;</code>
+   * <code>CSV = 358;</code>
    */
-  public static final int CUBE_VALUE = 358;
+  public static final int CSV_VALUE = 358;
   /**
-   * <code>CURRENT_P = 359;</code>
+   * <code>CUBE = 359;</code>
    */
-  public static final int CURRENT_P_VALUE = 359;
+  public static final int CUBE_VALUE = 359;
   /**
-   * <code>CURRENT_CATALOG = 360;</code>
+   * <code>CURRENT_P = 360;</code>
    */
-  public static final int CURRENT_CATALOG_VALUE = 360;
+  public static final int CURRENT_P_VALUE = 360;
   /**
-   * <code>CURRENT_DATE = 361;</code>
+   * <code>CURRENT_CATALOG = 361;</code>
    */
-  public static final int CURRENT_DATE_VALUE = 361;
+  public static final int CURRENT_CATALOG_VALUE = 361;
   /**
-   * <code>CURRENT_ROLE = 362;</code>
+   * <code>CURRENT_DATE = 362;</code>
    */
-  public static final int CURRENT_ROLE_VALUE = 362;
+  public static final int CURRENT_DATE_VALUE = 362;
   /**
-   * <code>CURRENT_SCHEMA = 363;</code>
+   * <code>CURRENT_ROLE = 363;</code>
    */
-  public static final int CURRENT_SCHEMA_VALUE = 363;
+  public static final int CURRENT_ROLE_VALUE = 363;
   /**
-   * <code>CURRENT_TIME = 364;</code>
+   * <code>CURRENT_SCHEMA = 364;</code>
    */
-  public static final int CURRENT_TIME_VALUE = 364;
+  public static final int CURRENT_SCHEMA_VALUE = 364;
   /**
-   * <code>CURRENT_TIMESTAMP = 365;</code>
+   * <code>CURRENT_TIME = 365;</code>
    */
-  public static final int CURRENT_TIMESTAMP_VALUE = 365;
+  public static final int CURRENT_TIME_VALUE = 365;
   /**
-   * <code>CURRENT_USER = 366;</code>
+   * <code>CURRENT_TIMESTAMP = 366;</code>
    */
-  public static final int CURRENT_USER_VALUE = 366;
+  public static final int CURRENT_TIMESTAMP_VALUE = 366;
   /**
-   * <code>CURSOR = 367;</code>
+   * <code>CURRENT_USER = 367;</code>
    */
-  public static final int CURSOR_VALUE = 367;
+  public static final int CURRENT_USER_VALUE = 367;
   /**
-   * <code>CYCLE = 368;</code>
+   * <code>CURSOR = 368;</code>
    */
-  public static final int CYCLE_VALUE = 368;
+  public static final int CURSOR_VALUE = 368;
   /**
-   * <code>DATA_P = 369;</code>
+   * <code>CYCLE = 369;</code>
    */
-  public static final int DATA_P_VALUE = 369;
+  public static final int CYCLE_VALUE = 369;
   /**
-   * <code>DATABASE = 370;</code>
+   * <code>DATA_P = 370;</code>
    */
-  public static final int DATABASE_VALUE = 370;
+  public static final int DATA_P_VALUE = 370;
   /**
-   * <code>DAY_P = 371;</code>
+   * <code>DATABASE = 371;</code>
    */
-  public static final int DAY_P_VALUE = 371;
+  public static final int DATABASE_VALUE = 371;
   /**
-   * <code>DEALLOCATE = 372;</code>
+   * <code>DAY_P = 372;</code>
    */
-  public static final int DEALLOCATE_VALUE = 372;
+  public static final int DAY_P_VALUE = 372;
   /**
-   * <code>DEC = 373;</code>
+   * <code>DEALLOCATE = 373;</code>
    */
-  public static final int DEC_VALUE = 373;
+  public static final int DEALLOCATE_VALUE = 373;
   /**
-   * <code>DECIMAL_P = 374;</code>
+   * <code>DEC = 374;</code>
    */
-  public static final int DECIMAL_P_VALUE = 374;
+  public static final int DEC_VALUE = 374;
   /**
-   * <code>DECLARE = 375;</code>
+   * <code>DECIMAL_P = 375;</code>
    */
-  public static final int DECLARE_VALUE = 375;
+  public static final int DECIMAL_P_VALUE = 375;
   /**
-   * <code>DEFAULT = 376;</code>
+   * <code>DECLARE = 376;</code>
    */
-  public static final int DEFAULT_VALUE = 376;
+  public static final int DECLARE_VALUE = 376;
   /**
-   * <code>DEFAULTS = 377;</code>
+   * <code>DEFAULT = 377;</code>
    */
-  public static final int DEFAULTS_VALUE = 377;
+  public static final int DEFAULT_VALUE = 377;
   /**
-   * <code>DEFERRABLE = 378;</code>
+   * <code>DEFAULTS = 378;</code>
    */
-  public static final int DEFERRABLE_VALUE = 378;
+  public static final int DEFAULTS_VALUE = 378;
   /**
-   * <code>DEFERRED = 379;</code>
+   * <code>DEFERRABLE = 379;</code>
    */
-  public static final int DEFERRED_VALUE = 379;
+  public static final int DEFERRABLE_VALUE = 379;
   /**
-   * <code>DEFINER = 380;</code>
+   * <code>DEFERRED = 380;</code>
    */
-  public static final int DEFINER_VALUE = 380;
+  public static final int DEFERRED_VALUE = 380;
   /**
-   * <code>DELETE_P = 381;</code>
+   * <code>DEFINER = 381;</code>
    */
-  public static final int DELETE_P_VALUE = 381;
+  public static final int DEFINER_VALUE = 381;
   /**
-   * <code>DELIMITER = 382;</code>
+   * <code>DELETE_P = 382;</code>
    */
-  public static final int DELIMITER_VALUE = 382;
+  public static final int DELETE_P_VALUE = 382;
   /**
-   * <code>DELIMITERS = 383;</code>
+   * <code>DELIMITER = 383;</code>
    */
-  public static final int DELIMITERS_VALUE = 383;
+  public static final int DELIMITER_VALUE = 383;
   /**
-   * <code>DEPENDS = 384;</code>
+   * <code>DELIMITERS = 384;</code>
    */
-  public static final int DEPENDS_VALUE = 384;
+  public static final int DELIMITERS_VALUE = 384;
   /**
-   * <code>DEPTH = 385;</code>
+   * <code>DEPENDS = 385;</code>
    */
-  public static final int DEPTH_VALUE = 385;
+  public static final int DEPENDS_VALUE = 385;
   /**
-   * <code>DESC = 386;</code>
+   * <code>DEPTH = 386;</code>
    */
-  public static final int DESC_VALUE = 386;
+  public static final int DEPTH_VALUE = 386;
   /**
-   * <code>DETACH = 387;</code>
+   * <code>DESC = 387;</code>
    */
-  public static final int DETACH_VALUE = 387;
+  public static final int DESC_VALUE = 387;
   /**
-   * <code>DICTIONARY = 388;</code>
+   * <code>DETACH = 388;</code>
    */
-  public static final int DICTIONARY_VALUE = 388;
+  public static final int DETACH_VALUE = 388;
   /**
-   * <code>DISABLE_P = 389;</code>
+   * <code>DICTIONARY = 389;</code>
    */
-  public static final int DISABLE_P_VALUE = 389;
+  public static final int DICTIONARY_VALUE = 389;
   /**
-   * <code>DISCARD = 390;</code>
+   * <code>DISABLE_P = 390;</code>
    */
-  public static final int DISCARD_VALUE = 390;
+  public static final int DISABLE_P_VALUE = 390;
   /**
-   * <code>DISTINCT = 391;</code>
+   * <code>DISCARD = 391;</code>
    */
-  public static final int DISTINCT_VALUE = 391;
+  public static final int DISCARD_VALUE = 391;
   /**
-   * <code>DO = 392;</code>
+   * <code>DISTINCT = 392;</code>
    */
-  public static final int DO_VALUE = 392;
+  public static final int DISTINCT_VALUE = 392;
   /**
-   * <code>DOCUMENT_P = 393;</code>
+   * <code>DO = 393;</code>
    */
-  public static final int DOCUMENT_P_VALUE = 393;
+  public static final int DO_VALUE = 393;
   /**
-   * <code>DOMAIN_P = 394;</code>
+   * <code>DOCUMENT_P = 394;</code>
    */
-  public static final int DOMAIN_P_VALUE = 394;
+  public static final int DOCUMENT_P_VALUE = 394;
   /**
-   * <code>DOUBLE_P = 395;</code>
+   * <code>DOMAIN_P = 395;</code>
    */
-  public static final int DOUBLE_P_VALUE = 395;
+  public static final int DOMAIN_P_VALUE = 395;
   /**
-   * <code>DROP = 396;</code>
+   * <code>DOUBLE_P = 396;</code>
    */
-  public static final int DROP_VALUE = 396;
+  public static final int DOUBLE_P_VALUE = 396;
   /**
-   * <code>EACH = 397;</code>
+   * <code>DROP = 397;</code>
    */
-  public static final int EACH_VALUE = 397;
+  public static final int DROP_VALUE = 397;
   /**
-   * <code>ELSE = 398;</code>
+   * <code>EACH = 398;</code>
    */
-  public static final int ELSE_VALUE = 398;
+  public static final int EACH_VALUE = 398;
   /**
-   * <code>ENABLE_P = 399;</code>
+   * <code>ELSE = 399;</code>
    */
-  public static final int ENABLE_P_VALUE = 399;
+  public static final int ELSE_VALUE = 399;
   /**
-   * <code>ENCODING = 400;</code>
+   * <code>EMPTY_P = 400;</code>
    */
-  public static final int ENCODING_VALUE = 400;
+  public static final int EMPTY_P_VALUE = 400;
   /**
-   * <code>ENCRYPTED = 401;</code>
+   * <code>ENABLE_P = 401;</code>
    */
-  public static final int ENCRYPTED_VALUE = 401;
+  public static final int ENABLE_P_VALUE = 401;
   /**
-   * <code>END_P = 402;</code>
+   * <code>ENCODING = 402;</code>
    */
-  public static final int END_P_VALUE = 402;
+  public static final int ENCODING_VALUE = 402;
   /**
-   * <code>ENUM_P = 403;</code>
+   * <code>ENCRYPTED = 403;</code>
    */
-  public static final int ENUM_P_VALUE = 403;
+  public static final int ENCRYPTED_VALUE = 403;
   /**
-   * <code>ESCAPE = 404;</code>
+   * <code>END_P = 404;</code>
    */
-  public static final int ESCAPE_VALUE = 404;
+  public static final int END_P_VALUE = 404;
   /**
-   * <code>EVENT = 405;</code>
+   * <code>ENUM_P = 405;</code>
    */
-  public static final int EVENT_VALUE = 405;
+  public static final int ENUM_P_VALUE = 405;
   /**
-   * <code>EXCEPT = 406;</code>
+   * <code>ERROR_P = 406;</code>
    */
-  public static final int EXCEPT_VALUE = 406;
+  public static final int ERROR_P_VALUE = 406;
   /**
-   * <code>EXCLUDE = 407;</code>
+   * <code>ESCAPE = 407;</code>
    */
-  public static final int EXCLUDE_VALUE = 407;
+  public static final int ESCAPE_VALUE = 407;
   /**
-   * <code>EXCLUDING = 408;</code>
+   * <code>EVENT = 408;</code>
    */
-  public static final int EXCLUDING_VALUE = 408;
+  public static final int EVENT_VALUE = 408;
   /**
-   * <code>EXCLUSIVE = 409;</code>
+   * <code>EXCEPT = 409;</code>
    */
-  public static final int EXCLUSIVE_VALUE = 409;
+  public static final int EXCEPT_VALUE = 409;
   /**
-   * <code>EXECUTE = 410;</code>
+   * <code>EXCLUDE = 410;</code>
    */
-  public static final int EXECUTE_VALUE = 410;
+  public static final int EXCLUDE_VALUE = 410;
   /**
-   * <code>EXISTS = 411;</code>
+   * <code>EXCLUDING = 411;</code>
    */
-  public static final int EXISTS_VALUE = 411;
+  public static final int EXCLUDING_VALUE = 411;
   /**
-   * <code>EXPLAIN = 412;</code>
+   * <code>EXCLUSIVE = 412;</code>
    */
-  public static final int EXPLAIN_VALUE = 412;
+  public static final int EXCLUSIVE_VALUE = 412;
   /**
-   * <code>EXPRESSION = 413;</code>
+   * <code>EXECUTE = 413;</code>
    */
-  public static final int EXPRESSION_VALUE = 413;
+  public static final int EXECUTE_VALUE = 413;
   /**
-   * <code>EXTENSION = 414;</code>
+   * <code>EXISTS = 414;</code>
    */
-  public static final int EXTENSION_VALUE = 414;
+  public static final int EXISTS_VALUE = 414;
   /**
-   * <code>EXTERNAL = 415;</code>
+   * <code>EXPLAIN = 415;</code>
    */
-  public static final int EXTERNAL_VALUE = 415;
+  public static final int EXPLAIN_VALUE = 415;
   /**
-   * <code>EXTRACT = 416;</code>
+   * <code>EXPRESSION = 416;</code>
    */
-  public static final int EXTRACT_VALUE = 416;
+  public static final int EXPRESSION_VALUE = 416;
   /**
-   * <code>FALSE_P = 417;</code>
+   * <code>EXTENSION = 417;</code>
    */
-  public static final int FALSE_P_VALUE = 417;
+  public static final int EXTENSION_VALUE = 417;
   /**
-   * <code>FAMILY = 418;</code>
+   * <code>EXTERNAL = 418;</code>
    */
-  public static final int FAMILY_VALUE = 418;
+  public static final int EXTERNAL_VALUE = 418;
   /**
-   * <code>FETCH = 419;</code>
+   * <code>EXTRACT = 419;</code>
    */
-  public static final int FETCH_VALUE = 419;
+  public static final int EXTRACT_VALUE = 419;
   /**
-   * <code>FILTER = 420;</code>
+   * <code>FALSE_P = 420;</code>
    */
-  public static final int FILTER_VALUE = 420;
+  public static final int FALSE_P_VALUE = 420;
   /**
-   * <code>FINALIZE = 421;</code>
+   * <code>FAMILY = 421;</code>
    */
-  public static final int FINALIZE_VALUE = 421;
+  public static final int FAMILY_VALUE = 421;
   /**
-   * <code>FIRST_P = 422;</code>
+   * <code>FETCH = 422;</code>
    */
-  public static final int FIRST_P_VALUE = 422;
+  public static final int FETCH_VALUE = 422;
   /**
-   * <code>FLOAT_P = 423;</code>
+   * <code>FILTER = 423;</code>
    */
-  public static final int FLOAT_P_VALUE = 423;
+  public static final int FILTER_VALUE = 423;
   /**
-   * <code>FOLLOWING = 424;</code>
+   * <code>FINALIZE = 424;</code>
    */
-  public static final int FOLLOWING_VALUE = 424;
+  public static final int FINALIZE_VALUE = 424;
   /**
-   * <code>FOR = 425;</code>
+   * <code>FIRST_P = 425;</code>
    */
-  public static final int FOR_VALUE = 425;
+  public static final int FIRST_P_VALUE = 425;
   /**
-   * <code>FORCE = 426;</code>
+   * <code>FLOAT_P = 426;</code>
    */
-  public static final int FORCE_VALUE = 426;
+  public static final int FLOAT_P_VALUE = 426;
   /**
-   * <code>FOREIGN = 427;</code>
+   * <code>FOLLOWING = 427;</code>
    */
-  public static final int FOREIGN_VALUE = 427;
+  public static final int FOLLOWING_VALUE = 427;
   /**
-   * <code>FORMAT = 428;</code>
+   * <code>FOR = 428;</code>
    */
-  public static final int FORMAT_VALUE = 428;
+  public static final int FOR_VALUE = 428;
   /**
-   * <code>FORWARD = 429;</code>
+   * <code>FORCE = 429;</code>
    */
-  public static final int FORWARD_VALUE = 429;
+  public static final int FORCE_VALUE = 429;
   /**
-   * <code>FREEZE = 430;</code>
+   * <code>FOREIGN = 430;</code>
    */
-  public static final int FREEZE_VALUE = 430;
+  public static final int FOREIGN_VALUE = 430;
   /**
-   * <code>FROM = 431;</code>
+   * <code>FORMAT = 431;</code>
    */
-  public static final int FROM_VALUE = 431;
+  public static final int FORMAT_VALUE = 431;
   /**
-   * <code>FULL = 432;</code>
+   * <code>FORWARD = 432;</code>
    */
-  public static final int FULL_VALUE = 432;
+  public static final int FORWARD_VALUE = 432;
   /**
-   * <code>FUNCTION = 433;</code>
+   * <code>FREEZE = 433;</code>
    */
-  public static final int FUNCTION_VALUE = 433;
+  public static final int FREEZE_VALUE = 433;
   /**
-   * <code>FUNCTIONS = 434;</code>
+   * <code>FROM = 434;</code>
    */
-  public static final int FUNCTIONS_VALUE = 434;
+  public static final int FROM_VALUE = 434;
   /**
-   * <code>GENERATED = 435;</code>
+   * <code>FULL = 435;</code>
    */
-  public static final int GENERATED_VALUE = 435;
+  public static final int FULL_VALUE = 435;
   /**
-   * <code>GLOBAL = 436;</code>
+   * <code>FUNCTION = 436;</code>
    */
-  public static final int GLOBAL_VALUE = 436;
+  public static final int FUNCTION_VALUE = 436;
   /**
-   * <code>GRANT = 437;</code>
+   * <code>FUNCTIONS = 437;</code>
    */
-  public static final int GRANT_VALUE = 437;
+  public static final int FUNCTIONS_VALUE = 437;
   /**
-   * <code>GRANTED = 438;</code>
+   * <code>GENERATED = 438;</code>
    */
-  public static final int GRANTED_VALUE = 438;
+  public static final int GENERATED_VALUE = 438;
   /**
-   * <code>GREATEST = 439;</code>
+   * <code>GLOBAL = 439;</code>
    */
-  public static final int GREATEST_VALUE = 439;
+  public static final int GLOBAL_VALUE = 439;
   /**
-   * <code>GROUP_P = 440;</code>
+   * <code>GRANT = 440;</code>
    */
-  public static final int GROUP_P_VALUE = 440;
+  public static final int GRANT_VALUE = 440;
   /**
-   * <code>GROUPING = 441;</code>
+   * <code>GRANTED = 441;</code>
    */
-  public static final int GROUPING_VALUE = 441;
+  public static final int GRANTED_VALUE = 441;
   /**
-   * <code>GROUPS = 442;</code>
+   * <code>GREATEST = 442;</code>
    */
-  public static final int GROUPS_VALUE = 442;
+  public static final int GREATEST_VALUE = 442;
   /**
-   * <code>HANDLER = 443;</code>
+   * <code>GROUP_P = 443;</code>
    */
-  public static final int HANDLER_VALUE = 443;
+  public static final int GROUP_P_VALUE = 443;
   /**
-   * <code>HAVING = 444;</code>
+   * <code>GROUPING = 444;</code>
    */
-  public static final int HAVING_VALUE = 444;
+  public static final int GROUPING_VALUE = 444;
   /**
-   * <code>HEADER_P = 445;</code>
+   * <code>GROUPS = 445;</code>
    */
-  public static final int HEADER_P_VALUE = 445;
+  public static final int GROUPS_VALUE = 445;
   /**
-   * <code>HOLD = 446;</code>
+   * <code>HANDLER = 446;</code>
    */
-  public static final int HOLD_VALUE = 446;
+  public static final int HANDLER_VALUE = 446;
   /**
-   * <code>HOUR_P = 447;</code>
+   * <code>HAVING = 447;</code>
    */
-  public static final int HOUR_P_VALUE = 447;
+  public static final int HAVING_VALUE = 447;
   /**
-   * <code>IDENTITY_P = 448;</code>
+   * <code>HEADER_P = 448;</code>
    */
-  public static final int IDENTITY_P_VALUE = 448;
+  public static final int HEADER_P_VALUE = 448;
   /**
-   * <code>IF_P = 449;</code>
+   * <code>HOLD = 449;</code>
    */
-  public static final int IF_P_VALUE = 449;
+  public static final int HOLD_VALUE = 449;
   /**
-   * <code>ILIKE = 450;</code>
+   * <code>HOUR_P = 450;</code>
    */
-  public static final int ILIKE_VALUE = 450;
+  public static final int HOUR_P_VALUE = 450;
   /**
-   * <code>IMMEDIATE = 451;</code>
+   * <code>IDENTITY_P = 451;</code>
    */
-  public static final int IMMEDIATE_VALUE = 451;
+  public static final int IDENTITY_P_VALUE = 451;
   /**
-   * <code>IMMUTABLE = 452;</code>
+   * <code>IF_P = 452;</code>
    */
-  public static final int IMMUTABLE_VALUE = 452;
+  public static final int IF_P_VALUE = 452;
   /**
-   * <code>IMPLICIT_P = 453;</code>
+   * <code>ILIKE = 453;</code>
    */
-  public static final int IMPLICIT_P_VALUE = 453;
+  public static final int ILIKE_VALUE = 453;
   /**
-   * <code>IMPORT_P = 454;</code>
+   * <code>IMMEDIATE = 454;</code>
    */
-  public static final int IMPORT_P_VALUE = 454;
+  public static final int IMMEDIATE_VALUE = 454;
   /**
-   * <code>IN_P = 455;</code>
+   * <code>IMMUTABLE = 455;</code>
    */
-  public static final int IN_P_VALUE = 455;
+  public static final int IMMUTABLE_VALUE = 455;
   /**
-   * <code>INCLUDE = 456;</code>
+   * <code>IMPLICIT_P = 456;</code>
    */
-  public static final int INCLUDE_VALUE = 456;
+  public static final int IMPLICIT_P_VALUE = 456;
   /**
-   * <code>INCLUDING = 457;</code>
+   * <code>IMPORT_P = 457;</code>
    */
-  public static final int INCLUDING_VALUE = 457;
+  public static final int IMPORT_P_VALUE = 457;
   /**
-   * <code>INCREMENT = 458;</code>
+   * <code>IN_P = 458;</code>
    */
-  public static final int INCREMENT_VALUE = 458;
+  public static final int IN_P_VALUE = 458;
   /**
-   * <code>INDENT = 459;</code>
+   * <code>INCLUDE = 459;</code>
    */
-  public static final int INDENT_VALUE = 459;
+  public static final int INCLUDE_VALUE = 459;
   /**
-   * <code>INDEX = 460;</code>
+   * <code>INCLUDING = 460;</code>
    */
-  public static final int INDEX_VALUE = 460;
+  public static final int INCLUDING_VALUE = 460;
   /**
-   * <code>INDEXES = 461;</code>
+   * <code>INCREMENT = 461;</code>
    */
-  public static final int INDEXES_VALUE = 461;
+  public static final int INCREMENT_VALUE = 461;
   /**
-   * <code>INHERIT = 462;</code>
+   * <code>INDENT = 462;</code>
    */
-  public static final int INHERIT_VALUE = 462;
+  public static final int INDENT_VALUE = 462;
   /**
-   * <code>INHERITS = 463;</code>
+   * <code>INDEX = 463;</code>
    */
-  public static final int INHERITS_VALUE = 463;
+  public static final int INDEX_VALUE = 463;
   /**
-   * <code>INITIALLY = 464;</code>
+   * <code>INDEXES = 464;</code>
    */
-  public static final int INITIALLY_VALUE = 464;
+  public static final int INDEXES_VALUE = 464;
   /**
-   * <code>INLINE_P = 465;</code>
+   * <code>INHERIT = 465;</code>
    */
-  public static final int INLINE_P_VALUE = 465;
+  public static final int INHERIT_VALUE = 465;
   /**
-   * <code>INNER_P = 466;</code>
+   * <code>INHERITS = 466;</code>
    */
-  public static final int INNER_P_VALUE = 466;
+  public static final int INHERITS_VALUE = 466;
   /**
-   * <code>INOUT = 467;</code>
+   * <code>INITIALLY = 467;</code>
    */
-  public static final int INOUT_VALUE = 467;
+  public static final int INITIALLY_VALUE = 467;
   /**
-   * <code>INPUT_P = 468;</code>
+   * <code>INLINE_P = 468;</code>
    */
-  public static final int INPUT_P_VALUE = 468;
+  public static final int INLINE_P_VALUE = 468;
   /**
-   * <code>INSENSITIVE = 469;</code>
+   * <code>INNER_P = 469;</code>
    */
-  public static final int INSENSITIVE_VALUE = 469;
+  public static final int INNER_P_VALUE = 469;
   /**
-   * <code>INSERT = 470;</code>
+   * <code>INOUT = 470;</code>
    */
-  public static final int INSERT_VALUE = 470;
+  public static final int INOUT_VALUE = 470;
   /**
-   * <code>INSTEAD = 471;</code>
+   * <code>INPUT_P = 471;</code>
    */
-  public static final int INSTEAD_VALUE = 471;
+  public static final int INPUT_P_VALUE = 471;
   /**
-   * <code>INT_P = 472;</code>
+   * <code>INSENSITIVE = 472;</code>
    */
-  public static final int INT_P_VALUE = 472;
+  public static final int INSENSITIVE_VALUE = 472;
   /**
-   * <code>INTEGER = 473;</code>
+   * <code>INSERT = 473;</code>
    */
-  public static final int INTEGER_VALUE = 473;
+  public static final int INSERT_VALUE = 473;
   /**
-   * <code>INTERSECT = 474;</code>
+   * <code>INSTEAD = 474;</code>
    */
-  public static final int INTERSECT_VALUE = 474;
+  public static final int INSTEAD_VALUE = 474;
   /**
-   * <code>INTERVAL = 475;</code>
+   * <code>INT_P = 475;</code>
    */
-  public static final int INTERVAL_VALUE = 475;
+  public static final int INT_P_VALUE = 475;
   /**
-   * <code>INTO = 476;</code>
+   * <code>INTEGER = 476;</code>
    */
-  public static final int INTO_VALUE = 476;
+  public static final int INTEGER_VALUE = 476;
   /**
-   * <code>INVOKER = 477;</code>
+   * <code>INTERSECT = 477;</code>
    */
-  public static final int INVOKER_VALUE = 477;
+  public static final int INTERSECT_VALUE = 477;
   /**
-   * <code>IS = 478;</code>
+   * <code>INTERVAL = 478;</code>
    */
-  public static final int IS_VALUE = 478;
+  public static final int INTERVAL_VALUE = 478;
   /**
-   * <code>ISNULL = 479;</code>
+   * <code>INTO = 479;</code>
    */
-  public static final int ISNULL_VALUE = 479;
+  public static final int INTO_VALUE = 479;
   /**
-   * <code>ISOLATION = 480;</code>
+   * <code>INVOKER = 480;</code>
    */
-  public static final int ISOLATION_VALUE = 480;
+  public static final int INVOKER_VALUE = 480;
   /**
-   * <code>JOIN = 481;</code>
+   * <code>IS = 481;</code>
    */
-  public static final int JOIN_VALUE = 481;
+  public static final int IS_VALUE = 481;
   /**
-   * <code>JSON = 482;</code>
+   * <code>ISNULL = 482;</code>
    */
-  public static final int JSON_VALUE = 482;
+  public static final int ISNULL_VALUE = 482;
   /**
-   * <code>JSON_ARRAY = 483;</code>
+   * <code>ISOLATION = 483;</code>
    */
-  public static final int JSON_ARRAY_VALUE = 483;
+  public static final int ISOLATION_VALUE = 483;
   /**
-   * <code>JSON_ARRAYAGG = 484;</code>
+   * <code>JOIN = 484;</code>
    */
-  public static final int JSON_ARRAYAGG_VALUE = 484;
+  public static final int JOIN_VALUE = 484;
   /**
-   * <code>JSON_OBJECT = 485;</code>
+   * <code>JSON = 485;</code>
    */
-  public static final int JSON_OBJECT_VALUE = 485;
+  public static final int JSON_ENUM_VALUE = 485;
   /**
-   * <code>JSON_OBJECTAGG = 486;</code>
+   * <code>JSON_ARRAY = 486;</code>
    */
-  public static final int JSON_OBJECTAGG_VALUE = 486;
+  public static final int JSON_ARRAY_VALUE = 486;
   /**
-   * <code>KEY = 487;</code>
+   * <code>JSON_ARRAYAGG = 487;</code>
    */
-  public static final int KEY_VALUE = 487;
+  public static final int JSON_ARRAYAGG_VALUE = 487;
   /**
-   * <code>KEYS = 488;</code>
+   * <code>JSON_EXISTS = 488;</code>
    */
-  public static final int KEYS_VALUE = 488;
+  public static final int JSON_EXISTS_VALUE = 488;
   /**
-   * <code>LABEL = 489;</code>
+   * <code>JSON_OBJECT = 489;</code>
    */
-  public static final int LABEL_VALUE = 489;
+  public static final int JSON_OBJECT_VALUE = 489;
   /**
-   * <code>LANGUAGE = 490;</code>
+   * <code>JSON_OBJECTAGG = 490;</code>
    */
-  public static final int LANGUAGE_VALUE = 490;
+  public static final int JSON_OBJECTAGG_VALUE = 490;
   /**
-   * <code>LARGE_P = 491;</code>
+   * <code>JSON_QUERY = 491;</code>
    */
-  public static final int LARGE_P_VALUE = 491;
+  public static final int JSON_QUERY_VALUE = 491;
   /**
-   * <code>LAST_P = 492;</code>
+   * <code>JSON_SCALAR = 492;</code>
    */
-  public static final int LAST_P_VALUE = 492;
+  public static final int JSON_SCALAR_VALUE = 492;
   /**
-   * <code>LATERAL_P = 493;</code>
+   * <code>JSON_SERIALIZE = 493;</code>
    */
-  public static final int LATERAL_P_VALUE = 493;
+  public static final int JSON_SERIALIZE_VALUE = 493;
   /**
-   * <code>LEADING = 494;</code>
+   * <code>JSON_TABLE = 494;</code>
    */
-  public static final int LEADING_VALUE = 494;
+  public static final int JSON_TABLE_VALUE = 494;
   /**
-   * <code>LEAKPROOF = 495;</code>
+   * <code>JSON_VALUE = 495;</code>
    */
-  public static final int LEAKPROOF_VALUE = 495;
+  public static final int JSON_VALUE_VALUE = 495;
   /**
-   * <code>LEAST = 496;</code>
+   * <code>KEEP = 496;</code>
    */
-  public static final int LEAST_VALUE = 496;
+  public static final int KEEP_VALUE = 496;
   /**
-   * <code>LEFT = 497;</code>
+   * <code>KEY = 497;</code>
    */
-  public static final int LEFT_VALUE = 497;
+  public static final int KEY_VALUE = 497;
   /**
-   * <code>LEVEL = 498;</code>
+   * <code>KEYS = 498;</code>
    */
-  public static final int LEVEL_VALUE = 498;
+  public static final int KEYS_VALUE = 498;
   /**
-   * <code>LIKE = 499;</code>
+   * <code>LABEL = 499;</code>
    */
-  public static final int LIKE_VALUE = 499;
+  public static final int LABEL_VALUE = 499;
   /**
-   * <code>LIMIT = 500;</code>
+   * <code>LANGUAGE = 500;</code>
    */
-  public static final int LIMIT_VALUE = 500;
+  public static final int LANGUAGE_VALUE = 500;
   /**
-   * <code>LISTEN = 501;</code>
+   * <code>LARGE_P = 501;</code>
    */
-  public static final int LISTEN_VALUE = 501;
+  public static final int LARGE_P_VALUE = 501;
   /**
-   * <code>LOAD = 502;</code>
+   * <code>LAST_P = 502;</code>
    */
-  public static final int LOAD_VALUE = 502;
+  public static final int LAST_P_VALUE = 502;
   /**
-   * <code>LOCAL = 503;</code>
+   * <code>LATERAL_P = 503;</code>
    */
-  public static final int LOCAL_VALUE = 503;
+  public static final int LATERAL_P_VALUE = 503;
   /**
-   * <code>LOCALTIME = 504;</code>
+   * <code>LEADING = 504;</code>
    */
-  public static final int LOCALTIME_VALUE = 504;
+  public static final int LEADING_VALUE = 504;
   /**
-   * <code>LOCALTIMESTAMP = 505;</code>
+   * <code>LEAKPROOF = 505;</code>
    */
-  public static final int LOCALTIMESTAMP_VALUE = 505;
+  public static final int LEAKPROOF_VALUE = 505;
   /**
-   * <code>LOCATION = 506;</code>
+   * <code>LEAST = 506;</code>
    */
-  public static final int LOCATION_VALUE = 506;
+  public static final int LEAST_VALUE = 506;
   /**
-   * <code>LOCK_P = 507;</code>
+   * <code>LEFT = 507;</code>
    */
-  public static final int LOCK_P_VALUE = 507;
+  public static final int LEFT_VALUE = 507;
   /**
-   * <code>LOCKED = 508;</code>
+   * <code>LEVEL = 508;</code>
    */
-  public static final int LOCKED_VALUE = 508;
+  public static final int LEVEL_VALUE = 508;
   /**
-   * <code>LOGGED = 509;</code>
+   * <code>LIKE = 509;</code>
    */
-  public static final int LOGGED_VALUE = 509;
+  public static final int LIKE_VALUE = 509;
   /**
-   * <code>MAPPING = 510;</code>
+   * <code>LIMIT = 510;</code>
    */
-  public static final int MAPPING_VALUE = 510;
+  public static final int LIMIT_VALUE = 510;
   /**
-   * <code>MATCH = 511;</code>
+   * <code>LISTEN = 511;</code>
    */
-  public static final int MATCH_VALUE = 511;
+  public static final int LISTEN_VALUE = 511;
   /**
-   * <code>MATCHED = 512;</code>
+   * <code>LOAD = 512;</code>
    */
-  public static final int MATCHED_VALUE = 512;
+  public static final int LOAD_VALUE = 512;
   /**
-   * <code>MATERIALIZED = 513;</code>
+   * <code>LOCAL = 513;</code>
    */
-  public static final int MATERIALIZED_VALUE = 513;
+  public static final int LOCAL_VALUE = 513;
   /**
-   * <code>MAXVALUE = 514;</code>
+   * <code>LOCALTIME = 514;</code>
    */
-  public static final int MAXVALUE_VALUE = 514;
+  public static final int LOCALTIME_VALUE = 514;
   /**
-   * <code>MERGE = 515;</code>
+   * <code>LOCALTIMESTAMP = 515;</code>
    */
-  public static final int MERGE_VALUE = 515;
+  public static final int LOCALTIMESTAMP_VALUE = 515;
   /**
-   * <code>METHOD = 516;</code>
+   * <code>LOCATION = 516;</code>
    */
-  public static final int METHOD_VALUE = 516;
+  public static final int LOCATION_VALUE = 516;
   /**
-   * <code>MINUTE_P = 517;</code>
+   * <code>LOCK_P = 517;</code>
    */
-  public static final int MINUTE_P_VALUE = 517;
+  public static final int LOCK_P_VALUE = 517;
   /**
-   * <code>MINVALUE = 518;</code>
+   * <code>LOCKED = 518;</code>
    */
-  public static final int MINVALUE_VALUE = 518;
+  public static final int LOCKED_VALUE = 518;
   /**
-   * <code>MODE = 519;</code>
+   * <code>LOGGED = 519;</code>
    */
-  public static final int MODE_VALUE = 519;
+  public static final int LOGGED_VALUE = 519;
   /**
-   * <code>MONTH_P = 520;</code>
+   * <code>MAPPING = 520;</code>
    */
-  public static final int MONTH_P_VALUE = 520;
+  public static final int MAPPING_VALUE = 520;
   /**
-   * <code>MOVE = 521;</code>
+   * <code>MATCH = 521;</code>
    */
-  public static final int MOVE_VALUE = 521;
+  public static final int MATCH_VALUE = 521;
   /**
-   * <code>NAME_P = 522;</code>
+   * <code>MATCHED = 522;</code>
    */
-  public static final int NAME_P_VALUE = 522;
+  public static final int MATCHED_VALUE = 522;
   /**
-   * <code>NAMES = 523;</code>
+   * <code>MATERIALIZED = 523;</code>
    */
-  public static final int NAMES_VALUE = 523;
+  public static final int MATERIALIZED_VALUE = 523;
   /**
-   * <code>NATIONAL = 524;</code>
+   * <code>MAXVALUE = 524;</code>
    */
-  public static final int NATIONAL_VALUE = 524;
+  public static final int MAXVALUE_VALUE = 524;
   /**
-   * <code>NATURAL = 525;</code>
+   * <code>MERGE = 525;</code>
    */
-  public static final int NATURAL_VALUE = 525;
+  public static final int MERGE_VALUE = 525;
   /**
-   * <code>NCHAR = 526;</code>
+   * <code>MERGE_ACTION = 526;</code>
    */
-  public static final int NCHAR_VALUE = 526;
+  public static final int MERGE_ACTION_VALUE = 526;
   /**
-   * <code>NEW = 527;</code>
+   * <code>METHOD = 527;</code>
    */
-  public static final int NEW_VALUE = 527;
+  public static final int METHOD_VALUE = 527;
   /**
-   * <code>NEXT = 528;</code>
+   * <code>MINUTE_P = 528;</code>
    */
-  public static final int NEXT_VALUE = 528;
+  public static final int MINUTE_P_VALUE = 528;
   /**
-   * <code>NFC = 529;</code>
+   * <code>MINVALUE = 529;</code>
    */
-  public static final int NFC_VALUE = 529;
+  public static final int MINVALUE_VALUE = 529;
   /**
-   * <code>NFD = 530;</code>
+   * <code>MODE = 530;</code>
    */
-  public static final int NFD_VALUE = 530;
+  public static final int MODE_VALUE = 530;
   /**
-   * <code>NFKC = 531;</code>
+   * <code>MONTH_P = 531;</code>
    */
-  public static final int NFKC_VALUE = 531;
+  public static final int MONTH_P_VALUE = 531;
   /**
-   * <code>NFKD = 532;</code>
+   * <code>MOVE = 532;</code>
    */
-  public static final int NFKD_VALUE = 532;
+  public static final int MOVE_VALUE = 532;
   /**
-   * <code>NO = 533;</code>
+   * <code>NAME_P = 533;</code>
    */
-  public static final int NO_VALUE = 533;
+  public static final int NAME_P_VALUE = 533;
   /**
-   * <code>NONE = 534;</code>
+   * <code>NAMES = 534;</code>
    */
-  public static final int NONE_VALUE = 534;
+  public static final int NAMES_VALUE = 534;
   /**
-   * <code>NORMALIZE = 535;</code>
+   * <code>NATIONAL = 535;</code>
    */
-  public static final int NORMALIZE_VALUE = 535;
+  public static final int NATIONAL_VALUE = 535;
   /**
-   * <code>NORMALIZED = 536;</code>
+   * <code>NATURAL = 536;</code>
    */
-  public static final int NORMALIZED_VALUE = 536;
+  public static final int NATURAL_VALUE = 536;
   /**
-   * <code>NOT = 537;</code>
+   * <code>NCHAR = 537;</code>
    */
-  public static final int NOT_VALUE = 537;
+  public static final int NCHAR_VALUE = 537;
   /**
-   * <code>NOTHING = 538;</code>
+   * <code>NESTED = 538;</code>
    */
-  public static final int NOTHING_VALUE = 538;
+  public static final int NESTED_VALUE = 538;
   /**
-   * <code>NOTIFY = 539;</code>
+   * <code>NEW = 539;</code>
    */
-  public static final int NOTIFY_VALUE = 539;
+  public static final int NEW_VALUE = 539;
   /**
-   * <code>NOTNULL = 540;</code>
+   * <code>NEXT = 540;</code>
    */
-  public static final int NOTNULL_VALUE = 540;
+  public static final int NEXT_VALUE = 540;
   /**
-   * <code>NOWAIT = 541;</code>
+   * <code>NFC = 541;</code>
    */
-  public static final int NOWAIT_VALUE = 541;
+  public static final int NFC_VALUE = 541;
   /**
-   * <code>NULL_P = 542;</code>
+   * <code>NFD = 542;</code>
    */
-  public static final int NULL_P_VALUE = 542;
+  public static final int NFD_VALUE = 542;
   /**
-   * <code>NULLIF = 543;</code>
+   * <code>NFKC = 543;</code>
    */
-  public static final int NULLIF_VALUE = 543;
+  public static final int NFKC_VALUE = 543;
   /**
-   * <code>NULLS_P = 544;</code>
+   * <code>NFKD = 544;</code>
    */
-  public static final int NULLS_P_VALUE = 544;
+  public static final int NFKD_VALUE = 544;
   /**
-   * <code>NUMERIC = 545;</code>
+   * <code>NO = 545;</code>
    */
-  public static final int NUMERIC_VALUE = 545;
+  public static final int NO_VALUE = 545;
   /**
-   * <code>OBJECT_P = 546;</code>
+   * <code>NONE = 546;</code>
    */
-  public static final int OBJECT_P_VALUE = 546;
+  public static final int NONE_VALUE = 546;
   /**
-   * <code>OF = 547;</code>
+   * <code>NORMALIZE = 547;</code>
    */
-  public static final int OF_VALUE = 547;
+  public static final int NORMALIZE_VALUE = 547;
   /**
-   * <code>OFF = 548;</code>
+   * <code>NORMALIZED = 548;</code>
    */
-  public static final int OFF_VALUE = 548;
+  public static final int NORMALIZED_VALUE = 548;
   /**
-   * <code>OFFSET = 549;</code>
+   * <code>NOT = 549;</code>
    */
-  public static final int OFFSET_VALUE = 549;
+  public static final int NOT_VALUE = 549;
   /**
-   * <code>OIDS = 550;</code>
+   * <code>NOTHING = 550;</code>
    */
-  public static final int OIDS_VALUE = 550;
+  public static final int NOTHING_VALUE = 550;
   /**
-   * <code>OLD = 551;</code>
+   * <code>NOTIFY = 551;</code>
    */
-  public static final int OLD_VALUE = 551;
+  public static final int NOTIFY_VALUE = 551;
   /**
-   * <code>ON = 552;</code>
+   * <code>NOTNULL = 552;</code>
    */
-  public static final int ON_VALUE = 552;
+  public static final int NOTNULL_VALUE = 552;
   /**
-   * <code>ONLY = 553;</code>
+   * <code>NOWAIT = 553;</code>
    */
-  public static final int ONLY_VALUE = 553;
+  public static final int NOWAIT_VALUE = 553;
   /**
-   * <code>OPERATOR = 554;</code>
+   * <code>NULL_P = 554;</code>
    */
-  public static final int OPERATOR_VALUE = 554;
+  public static final int NULL_P_VALUE = 554;
   /**
-   * <code>OPTION = 555;</code>
+   * <code>NULLIF = 555;</code>
    */
-  public static final int OPTION_VALUE = 555;
+  public static final int NULLIF_VALUE = 555;
   /**
-   * <code>OPTIONS = 556;</code>
+   * <code>NULLS_P = 556;</code>
    */
-  public static final int OPTIONS_VALUE = 556;
+  public static final int NULLS_P_VALUE = 556;
   /**
-   * <code>OR = 557;</code>
+   * <code>NUMERIC = 557;</code>
    */
-  public static final int OR_VALUE = 557;
+  public static final int NUMERIC_VALUE = 557;
   /**
-   * <code>ORDER = 558;</code>
+   * <code>OBJECT_P = 558;</code>
    */
-  public static final int ORDER_VALUE = 558;
+  public static final int OBJECT_P_VALUE = 558;
   /**
-   * <code>ORDINALITY = 559;</code>
+   * <code>OF = 559;</code>
    */
-  public static final int ORDINALITY_VALUE = 559;
+  public static final int OF_VALUE = 559;
   /**
-   * <code>OTHERS = 560;</code>
+   * <code>OFF = 560;</code>
    */
-  public static final int OTHERS_VALUE = 560;
+  public static final int OFF_VALUE = 560;
   /**
-   * <code>OUT_P = 561;</code>
+   * <code>OFFSET = 561;</code>
    */
-  public static final int OUT_P_VALUE = 561;
+  public static final int OFFSET_VALUE = 561;
   /**
-   * <code>OUTER_P = 562;</code>
+   * <code>OIDS = 562;</code>
    */
-  public static final int OUTER_P_VALUE = 562;
+  public static final int OIDS_VALUE = 562;
   /**
-   * <code>OVER = 563;</code>
+   * <code>OLD = 563;</code>
    */
-  public static final int OVER_VALUE = 563;
+  public static final int OLD_VALUE = 563;
   /**
-   * <code>OVERLAPS = 564;</code>
+   * <code>OMIT = 564;</code>
    */
-  public static final int OVERLAPS_VALUE = 564;
+  public static final int OMIT_VALUE = 564;
   /**
-   * <code>OVERLAY = 565;</code>
+   * <code>ON = 565;</code>
    */
-  public static final int OVERLAY_VALUE = 565;
+  public static final int ON_VALUE = 565;
   /**
-   * <code>OVERRIDING = 566;</code>
+   * <code>ONLY = 566;</code>
    */
-  public static final int OVERRIDING_VALUE = 566;
+  public static final int ONLY_VALUE = 566;
   /**
-   * <code>OWNED = 567;</code>
+   * <code>OPERATOR = 567;</code>
    */
-  public static final int OWNED_VALUE = 567;
+  public static final int OPERATOR_VALUE = 567;
   /**
-   * <code>OWNER = 568;</code>
+   * <code>OPTION = 568;</code>
    */
-  public static final int OWNER_VALUE = 568;
+  public static final int OPTION_VALUE = 568;
   /**
-   * <code>PARALLEL = 569;</code>
+   * <code>OPTIONS = 569;</code>
    */
-  public static final int PARALLEL_VALUE = 569;
+  public static final int OPTIONS_VALUE = 569;
   /**
-   * <code>PARAMETER = 570;</code>
+   * <code>OR = 570;</code>
    */
-  public static final int PARAMETER_VALUE = 570;
+  public static final int OR_VALUE = 570;
   /**
-   * <code>PARSER = 571;</code>
+   * <code>ORDER = 571;</code>
    */
-  public static final int PARSER_VALUE = 571;
+  public static final int ORDER_VALUE = 571;
   /**
-   * <code>PARTIAL = 572;</code>
+   * <code>ORDINALITY = 572;</code>
    */
-  public static final int PARTIAL_VALUE = 572;
+  public static final int ORDINALITY_VALUE = 572;
   /**
-   * <code>PARTITION = 573;</code>
+   * <code>OTHERS = 573;</code>
    */
-  public static final int PARTITION_VALUE = 573;
+  public static final int OTHERS_VALUE = 573;
   /**
-   * <code>PASSING = 574;</code>
+   * <code>OUT_P = 574;</code>
    */
-  public static final int PASSING_VALUE = 574;
+  public static final int OUT_P_VALUE = 574;
   /**
-   * <code>PASSWORD = 575;</code>
+   * <code>OUTER_P = 575;</code>
    */
-  public static final int PASSWORD_VALUE = 575;
+  public static final int OUTER_P_VALUE = 575;
   /**
-   * <code>PLACING = 576;</code>
+   * <code>OVER = 576;</code>
    */
-  public static final int PLACING_VALUE = 576;
+  public static final int OVER_VALUE = 576;
   /**
-   * <code>PLANS = 577;</code>
+   * <code>OVERLAPS = 577;</code>
    */
-  public static final int PLANS_VALUE = 577;
+  public static final int OVERLAPS_VALUE = 577;
   /**
-   * <code>POLICY = 578;</code>
+   * <code>OVERLAY = 578;</code>
    */
-  public static final int POLICY_VALUE = 578;
+  public static final int OVERLAY_VALUE = 578;
   /**
-   * <code>POSITION = 579;</code>
+   * <code>OVERRIDING = 579;</code>
    */
-  public static final int POSITION_VALUE = 579;
+  public static final int OVERRIDING_VALUE = 579;
   /**
-   * <code>PRECEDING = 580;</code>
+   * <code>OWNED = 580;</code>
    */
-  public static final int PRECEDING_VALUE = 580;
+  public static final int OWNED_VALUE = 580;
   /**
-   * <code>PRECISION = 581;</code>
+   * <code>OWNER = 581;</code>
    */
-  public static final int PRECISION_VALUE = 581;
+  public static final int OWNER_VALUE = 581;
   /**
-   * <code>PRESERVE = 582;</code>
+   * <code>PARALLEL = 582;</code>
    */
-  public static final int PRESERVE_VALUE = 582;
+  public static final int PARALLEL_VALUE = 582;
   /**
-   * <code>PREPARE = 583;</code>
+   * <code>PARAMETER = 583;</code>
    */
-  public static final int PREPARE_VALUE = 583;
+  public static final int PARAMETER_VALUE = 583;
   /**
-   * <code>PREPARED = 584;</code>
+   * <code>PARSER = 584;</code>
    */
-  public static final int PREPARED_VALUE = 584;
+  public static final int PARSER_VALUE = 584;
   /**
-   * <code>PRIMARY = 585;</code>
+   * <code>PARTIAL = 585;</code>
    */
-  public static final int PRIMARY_VALUE = 585;
+  public static final int PARTIAL_VALUE = 585;
   /**
-   * <code>PRIOR = 586;</code>
+   * <code>PARTITION = 586;</code>
    */
-  public static final int PRIOR_VALUE = 586;
+  public static final int PARTITION_VALUE = 586;
   /**
-   * <code>PRIVILEGES = 587;</code>
+   * <code>PASSING = 587;</code>
    */
-  public static final int PRIVILEGES_VALUE = 587;
+  public static final int PASSING_VALUE = 587;
   /**
-   * <code>PROCEDURAL = 588;</code>
+   * <code>PASSWORD = 588;</code>
    */
-  public static final int PROCEDURAL_VALUE = 588;
+  public static final int PASSWORD_VALUE = 588;
   /**
-   * <code>PROCEDURE = 589;</code>
+   * <code>PATH = 589;</code>
    */
-  public static final int PROCEDURE_VALUE = 589;
+  public static final int PATH_VALUE = 589;
   /**
-   * <code>PROCEDURES = 590;</code>
+   * <code>PLACING = 590;</code>
    */
-  public static final int PROCEDURES_VALUE = 590;
+  public static final int PLACING_VALUE = 590;
   /**
-   * <code>PROGRAM = 591;</code>
+   * <code>PLAN = 591;</code>
    */
-  public static final int PROGRAM_VALUE = 591;
+  public static final int PLAN_VALUE = 591;
   /**
-   * <code>PUBLICATION = 592;</code>
+   * <code>PLANS = 592;</code>
    */
-  public static final int PUBLICATION_VALUE = 592;
+  public static final int PLANS_VALUE = 592;
   /**
-   * <code>QUOTE = 593;</code>
+   * <code>POLICY = 593;</code>
    */
-  public static final int QUOTE_VALUE = 593;
+  public static final int POLICY_VALUE = 593;
   /**
-   * <code>RANGE = 594;</code>
+   * <code>POSITION = 594;</code>
    */
-  public static final int RANGE_VALUE = 594;
+  public static final int POSITION_VALUE = 594;
   /**
-   * <code>READ = 595;</code>
+   * <code>PRECEDING = 595;</code>
    */
-  public static final int READ_VALUE = 595;
+  public static final int PRECEDING_VALUE = 595;
   /**
-   * <code>REAL = 596;</code>
+   * <code>PRECISION = 596;</code>
    */
-  public static final int REAL_VALUE = 596;
+  public static final int PRECISION_VALUE = 596;
   /**
-   * <code>REASSIGN = 597;</code>
+   * <code>PRESERVE = 597;</code>
    */
-  public static final int REASSIGN_VALUE = 597;
+  public static final int PRESERVE_VALUE = 597;
   /**
-   * <code>RECHECK = 598;</code>
+   * <code>PREPARE = 598;</code>
    */
-  public static final int RECHECK_VALUE = 598;
+  public static final int PREPARE_VALUE = 598;
   /**
-   * <code>RECURSIVE = 599;</code>
+   * <code>PREPARED = 599;</code>
    */
-  public static final int RECURSIVE_VALUE = 599;
+  public static final int PREPARED_VALUE = 599;
   /**
-   * <code>REF_P = 600;</code>
+   * <code>PRIMARY = 600;</code>
    */
-  public static final int REF_P_VALUE = 600;
+  public static final int PRIMARY_VALUE = 600;
   /**
-   * <code>REFERENCES = 601;</code>
+   * <code>PRIOR = 601;</code>
    */
-  public static final int REFERENCES_VALUE = 601;
+  public static final int PRIOR_VALUE = 601;
   /**
-   * <code>REFERENCING = 602;</code>
+   * <code>PRIVILEGES = 602;</code>
    */
-  public static final int REFERENCING_VALUE = 602;
+  public static final int PRIVILEGES_VALUE = 602;
   /**
-   * <code>REFRESH = 603;</code>
+   * <code>PROCEDURAL = 603;</code>
    */
-  public static final int REFRESH_VALUE = 603;
+  public static final int PROCEDURAL_VALUE = 603;
   /**
-   * <code>REINDEX = 604;</code>
+   * <code>PROCEDURE = 604;</code>
    */
-  public static final int REINDEX_VALUE = 604;
+  public static final int PROCEDURE_VALUE = 604;
   /**
-   * <code>RELATIVE_P = 605;</code>
+   * <code>PROCEDURES = 605;</code>
    */
-  public static final int RELATIVE_P_VALUE = 605;
+  public static final int PROCEDURES_VALUE = 605;
   /**
-   * <code>RELEASE = 606;</code>
+   * <code>PROGRAM = 606;</code>
    */
-  public static final int RELEASE_VALUE = 606;
+  public static final int PROGRAM_VALUE = 606;
   /**
-   * <code>RENAME = 607;</code>
+   * <code>PUBLICATION = 607;</code>
    */
-  public static final int RENAME_VALUE = 607;
+  public static final int PUBLICATION_VALUE = 607;
   /**
-   * <code>REPEATABLE = 608;</code>
+   * <code>QUOTE = 608;</code>
    */
-  public static final int REPEATABLE_VALUE = 608;
+  public static final int QUOTE_VALUE = 608;
   /**
-   * <code>REPLACE = 609;</code>
+   * <code>QUOTES = 609;</code>
    */
-  public static final int REPLACE_VALUE = 609;
+  public static final int QUOTES_VALUE = 609;
   /**
-   * <code>REPLICA = 610;</code>
+   * <code>RANGE = 610;</code>
    */
-  public static final int REPLICA_VALUE = 610;
+  public static final int RANGE_VALUE = 610;
   /**
-   * <code>RESET = 611;</code>
+   * <code>READ = 611;</code>
    */
-  public static final int RESET_VALUE = 611;
+  public static final int READ_VALUE = 611;
   /**
-   * <code>RESTART = 612;</code>
+   * <code>REAL = 612;</code>
    */
-  public static final int RESTART_VALUE = 612;
+  public static final int REAL_VALUE = 612;
   /**
-   * <code>RESTRICT = 613;</code>
+   * <code>REASSIGN = 613;</code>
    */
-  public static final int RESTRICT_VALUE = 613;
+  public static final int REASSIGN_VALUE = 613;
   /**
-   * <code>RETURN = 614;</code>
+   * <code>RECHECK = 614;</code>
    */
-  public static final int RETURN_VALUE = 614;
+  public static final int RECHECK_VALUE = 614;
   /**
-   * <code>RETURNING = 615;</code>
+   * <code>RECURSIVE = 615;</code>
    */
-  public static final int RETURNING_VALUE = 615;
+  public static final int RECURSIVE_VALUE = 615;
   /**
-   * <code>RETURNS = 616;</code>
+   * <code>REF_P = 616;</code>
    */
-  public static final int RETURNS_VALUE = 616;
+  public static final int REF_P_VALUE = 616;
   /**
-   * <code>REVOKE = 617;</code>
+   * <code>REFERENCES = 617;</code>
    */
-  public static final int REVOKE_VALUE = 617;
+  public static final int REFERENCES_VALUE = 617;
   /**
-   * <code>RIGHT = 618;</code>
+   * <code>REFERENCING = 618;</code>
    */
-  public static final int RIGHT_VALUE = 618;
+  public static final int REFERENCING_VALUE = 618;
   /**
-   * <code>ROLE = 619;</code>
+   * <code>REFRESH = 619;</code>
    */
-  public static final int ROLE_VALUE = 619;
+  public static final int REFRESH_VALUE = 619;
   /**
-   * <code>ROLLBACK = 620;</code>
+   * <code>REINDEX = 620;</code>
    */
-  public static final int ROLLBACK_VALUE = 620;
+  public static final int REINDEX_VALUE = 620;
   /**
-   * <code>ROLLUP = 621;</code>
+   * <code>RELATIVE_P = 621;</code>
    */
-  public static final int ROLLUP_VALUE = 621;
+  public static final int RELATIVE_P_VALUE = 621;
   /**
-   * <code>ROUTINE = 622;</code>
+   * <code>RELEASE = 622;</code>
    */
-  public static final int ROUTINE_VALUE = 622;
+  public static final int RELEASE_VALUE = 622;
   /**
-   * <code>ROUTINES = 623;</code>
+   * <code>RENAME = 623;</code>
    */
-  public static final int ROUTINES_VALUE = 623;
+  public static final int RENAME_VALUE = 623;
   /**
-   * <code>ROW = 624;</code>
+   * <code>REPEATABLE = 624;</code>
    */
-  public static final int ROW_VALUE = 624;
+  public static final int REPEATABLE_VALUE = 624;
   /**
-   * <code>ROWS = 625;</code>
+   * <code>REPLACE = 625;</code>
    */
-  public static final int ROWS_VALUE = 625;
+  public static final int REPLACE_VALUE = 625;
   /**
-   * <code>RULE = 626;</code>
+   * <code>REPLICA = 626;</code>
    */
-  public static final int RULE_VALUE = 626;
+  public static final int REPLICA_VALUE = 626;
   /**
-   * <code>SAVEPOINT = 627;</code>
+   * <code>RESET = 627;</code>
    */
-  public static final int SAVEPOINT_VALUE = 627;
+  public static final int RESET_VALUE = 627;
   /**
-   * <code>SCALAR = 628;</code>
+   * <code>RESTART = 628;</code>
    */
-  public static final int SCALAR_VALUE = 628;
+  public static final int RESTART_VALUE = 628;
   /**
-   * <code>SCHEMA = 629;</code>
+   * <code>RESTRICT = 629;</code>
    */
-  public static final int SCHEMA_VALUE = 629;
+  public static final int RESTRICT_VALUE = 629;
   /**
-   * <code>SCHEMAS = 630;</code>
+   * <code>RETURN = 630;</code>
    */
-  public static final int SCHEMAS_VALUE = 630;
+  public static final int RETURN_VALUE = 630;
   /**
-   * <code>SCROLL = 631;</code>
+   * <code>RETURNING = 631;</code>
    */
-  public static final int SCROLL_VALUE = 631;
+  public static final int RETURNING_VALUE = 631;
   /**
-   * <code>SEARCH = 632;</code>
+   * <code>RETURNS = 632;</code>
    */
-  public static final int SEARCH_VALUE = 632;
+  public static final int RETURNS_VALUE = 632;
   /**
-   * <code>SECOND_P = 633;</code>
+   * <code>REVOKE = 633;</code>
    */
-  public static final int SECOND_P_VALUE = 633;
+  public static final int REVOKE_VALUE = 633;
   /**
-   * <code>SECURITY = 634;</code>
+   * <code>RIGHT = 634;</code>
    */
-  public static final int SECURITY_VALUE = 634;
+  public static final int RIGHT_VALUE = 634;
   /**
-   * <code>SELECT = 635;</code>
+   * <code>ROLE = 635;</code>
    */
-  public static final int SELECT_VALUE = 635;
+  public static final int ROLE_VALUE = 635;
   /**
-   * <code>SEQUENCE = 636;</code>
+   * <code>ROLLBACK = 636;</code>
    */
-  public static final int SEQUENCE_VALUE = 636;
+  public static final int ROLLBACK_VALUE = 636;
   /**
-   * <code>SEQUENCES = 637;</code>
+   * <code>ROLLUP = 637;</code>
    */
-  public static final int SEQUENCES_VALUE = 637;
+  public static final int ROLLUP_VALUE = 637;
   /**
-   * <code>SERIALIZABLE = 638;</code>
+   * <code>ROUTINE = 638;</code>
    */
-  public static final int SERIALIZABLE_VALUE = 638;
+  public static final int ROUTINE_VALUE = 638;
   /**
-   * <code>SERVER = 639;</code>
+   * <code>ROUTINES = 639;</code>
    */
-  public static final int SERVER_VALUE = 639;
+  public static final int ROUTINES_VALUE = 639;
   /**
-   * <code>SESSION = 640;</code>
+   * <code>ROW = 640;</code>
    */
-  public static final int SESSION_VALUE = 640;
+  public static final int ROW_VALUE = 640;
   /**
-   * <code>SESSION_USER = 641;</code>
+   * <code>ROWS = 641;</code>
    */
-  public static final int SESSION_USER_VALUE = 641;
+  public static final int ROWS_VALUE = 641;
   /**
-   * <code>SET = 642;</code>
+   * <code>RULE = 642;</code>
    */
-  public static final int SET_VALUE = 642;
+  public static final int RULE_VALUE = 642;
   /**
-   * <code>SETS = 643;</code>
+   * <code>SAVEPOINT = 643;</code>
    */
-  public static final int SETS_VALUE = 643;
+  public static final int SAVEPOINT_VALUE = 643;
   /**
-   * <code>SETOF = 644;</code>
+   * <code>SCALAR = 644;</code>
    */
-  public static final int SETOF_VALUE = 644;
+  public static final int SCALAR_VALUE = 644;
   /**
-   * <code>SHARE = 645;</code>
+   * <code>SCHEMA = 645;</code>
    */
-  public static final int SHARE_VALUE = 645;
+  public static final int SCHEMA_VALUE = 645;
   /**
-   * <code>SHOW = 646;</code>
+   * <code>SCHEMAS = 646;</code>
    */
-  public static final int SHOW_VALUE = 646;
+  public static final int SCHEMAS_VALUE = 646;
   /**
-   * <code>SIMILAR = 647;</code>
+   * <code>SCROLL = 647;</code>
    */
-  public static final int SIMILAR_VALUE = 647;
+  public static final int SCROLL_VALUE = 647;
   /**
-   * <code>SIMPLE = 648;</code>
+   * <code>SEARCH = 648;</code>
    */
-  public static final int SIMPLE_VALUE = 648;
+  public static final int SEARCH_VALUE = 648;
   /**
-   * <code>SKIP = 649;</code>
+   * <code>SECOND_P = 649;</code>
    */
-  public static final int SKIP_VALUE = 649;
+  public static final int SECOND_P_VALUE = 649;
   /**
-   * <code>SMALLINT = 650;</code>
+   * <code>SECURITY = 650;</code>
    */
-  public static final int SMALLINT_VALUE = 650;
+  public static final int SECURITY_VALUE = 650;
   /**
-   * <code>SNAPSHOT = 651;</code>
+   * <code>SELECT = 651;</code>
    */
-  public static final int SNAPSHOT_VALUE = 651;
+  public static final int SELECT_VALUE = 651;
   /**
-   * <code>SOME = 652;</code>
+   * <code>SEQUENCE = 652;</code>
    */
-  public static final int SOME_VALUE = 652;
+  public static final int SEQUENCE_VALUE = 652;
   /**
-   * <code>SQL_P = 653;</code>
+   * <code>SEQUENCES = 653;</code>
    */
-  public static final int SQL_P_VALUE = 653;
+  public static final int SEQUENCES_VALUE = 653;
   /**
-   * <code>STABLE = 654;</code>
+   * <code>SERIALIZABLE = 654;</code>
    */
-  public static final int STABLE_VALUE = 654;
+  public static final int SERIALIZABLE_VALUE = 654;
   /**
-   * <code>STANDALONE_P = 655;</code>
+   * <code>SERVER = 655;</code>
    */
-  public static final int STANDALONE_P_VALUE = 655;
+  public static final int SERVER_VALUE = 655;
   /**
-   * <code>START = 656;</code>
+   * <code>SESSION = 656;</code>
    */
-  public static final int START_VALUE = 656;
+  public static final int SESSION_VALUE = 656;
   /**
-   * <code>STATEMENT = 657;</code>
+   * <code>SESSION_USER = 657;</code>
    */
-  public static final int STATEMENT_VALUE = 657;
+  public static final int SESSION_USER_VALUE = 657;
   /**
-   * <code>STATISTICS = 658;</code>
+   * <code>SET = 658;</code>
    */
-  public static final int STATISTICS_VALUE = 658;
+  public static final int SET_VALUE = 658;
   /**
-   * <code>STDIN = 659;</code>
+   * <code>SETS = 659;</code>
    */
-  public static final int STDIN_VALUE = 659;
+  public static final int SETS_VALUE = 659;
   /**
-   * <code>STDOUT = 660;</code>
+   * <code>SETOF = 660;</code>
    */
-  public static final int STDOUT_VALUE = 660;
+  public static final int SETOF_VALUE = 660;
   /**
-   * <code>STORAGE = 661;</code>
+   * <code>SHARE = 661;</code>
    */
-  public static final int STORAGE_VALUE = 661;
+  public static final int SHARE_VALUE = 661;
   /**
-   * <code>STORED = 662;</code>
+   * <code>SHOW = 662;</code>
    */
-  public static final int STORED_VALUE = 662;
+  public static final int SHOW_VALUE = 662;
   /**
-   * <code>STRICT_P = 663;</code>
+   * <code>SIMILAR = 663;</code>
    */
-  public static final int STRICT_P_VALUE = 663;
+  public static final int SIMILAR_VALUE = 663;
   /**
-   * <code>STRIP_P = 664;</code>
+   * <code>SIMPLE = 664;</code>
    */
-  public static final int STRIP_P_VALUE = 664;
+  public static final int SIMPLE_VALUE = 664;
   /**
-   * <code>SUBSCRIPTION = 665;</code>
+   * <code>SKIP = 665;</code>
    */
-  public static final int SUBSCRIPTION_VALUE = 665;
+  public static final int SKIP_VALUE = 665;
   /**
-   * <code>SUBSTRING = 666;</code>
+   * <code>SMALLINT = 666;</code>
    */
-  public static final int SUBSTRING_VALUE = 666;
+  public static final int SMALLINT_VALUE = 666;
   /**
-   * <code>SUPPORT = 667;</code>
+   * <code>SNAPSHOT = 667;</code>
    */
-  public static final int SUPPORT_VALUE = 667;
+  public static final int SNAPSHOT_VALUE = 667;
   /**
-   * <code>SYMMETRIC = 668;</code>
+   * <code>SOME = 668;</code>
    */
-  public static final int SYMMETRIC_VALUE = 668;
+  public static final int SOME_VALUE = 668;
   /**
-   * <code>SYSID = 669;</code>
+   * <code>SOURCE = 669;</code>
    */
-  public static final int SYSID_VALUE = 669;
+  public static final int SOURCE_VALUE = 669;
   /**
-   * <code>SYSTEM_P = 670;</code>
+   * <code>SQL_P = 670;</code>
    */
-  public static final int SYSTEM_P_VALUE = 670;
+  public static final int SQL_P_VALUE = 670;
   /**
-   * <code>SYSTEM_USER = 671;</code>
+   * <code>STABLE = 671;</code>
    */
-  public static final int SYSTEM_USER_VALUE = 671;
+  public static final int STABLE_VALUE = 671;
   /**
-   * <code>TABLE = 672;</code>
+   * <code>STANDALONE_P = 672;</code>
    */
-  public static final int TABLE_VALUE = 672;
+  public static final int STANDALONE_P_VALUE = 672;
   /**
-   * <code>TABLES = 673;</code>
+   * <code>START = 673;</code>
    */
-  public static final int TABLES_VALUE = 673;
+  public static final int START_VALUE = 673;
   /**
-   * <code>TABLESAMPLE = 674;</code>
+   * <code>STATEMENT = 674;</code>
    */
-  public static final int TABLESAMPLE_VALUE = 674;
+  public static final int STATEMENT_VALUE = 674;
   /**
-   * <code>TABLESPACE = 675;</code>
+   * <code>STATISTICS = 675;</code>
    */
-  public static final int TABLESPACE_VALUE = 675;
+  public static final int STATISTICS_VALUE = 675;
   /**
-   * <code>TEMP = 676;</code>
+   * <code>STDIN = 676;</code>
    */
-  public static final int TEMP_VALUE = 676;
+  public static final int STDIN_VALUE = 676;
   /**
-   * <code>TEMPLATE = 677;</code>
+   * <code>STDOUT = 677;</code>
    */
-  public static final int TEMPLATE_VALUE = 677;
+  public static final int STDOUT_VALUE = 677;
   /**
-   * <code>TEMPORARY = 678;</code>
+   * <code>STORAGE = 678;</code>
    */
-  public static final int TEMPORARY_VALUE = 678;
+  public static final int STORAGE_VALUE = 678;
   /**
-   * <code>TEXT_P = 679;</code>
+   * <code>STORED = 679;</code>
    */
-  public static final int TEXT_P_VALUE = 679;
+  public static final int STORED_VALUE = 679;
   /**
-   * <code>THEN = 680;</code>
+   * <code>STRICT_P = 680;</code>
    */
-  public static final int THEN_VALUE = 680;
+  public static final int STRICT_P_VALUE = 680;
   /**
-   * <code>TIES = 681;</code>
+   * <code>STRING_P = 681;</code>
    */
-  public static final int TIES_VALUE = 681;
+  public static final int STRING_P_VALUE = 681;
   /**
-   * <code>TIME = 682;</code>
+   * <code>STRIP_P = 682;</code>
    */
-  public static final int TIME_VALUE = 682;
+  public static final int STRIP_P_VALUE = 682;
   /**
-   * <code>TIMESTAMP = 683;</code>
+   * <code>SUBSCRIPTION = 683;</code>
    */
-  public static final int TIMESTAMP_VALUE = 683;
+  public static final int SUBSCRIPTION_VALUE = 683;
   /**
-   * <code>TO = 684;</code>
+   * <code>SUBSTRING = 684;</code>
    */
-  public static final int TO_VALUE = 684;
+  public static final int SUBSTRING_VALUE = 684;
   /**
-   * <code>TRAILING = 685;</code>
+   * <code>SUPPORT = 685;</code>
    */
-  public static final int TRAILING_VALUE = 685;
+  public static final int SUPPORT_VALUE = 685;
   /**
-   * <code>TRANSACTION = 686;</code>
+   * <code>SYMMETRIC = 686;</code>
    */
-  public static final int TRANSACTION_VALUE = 686;
+  public static final int SYMMETRIC_VALUE = 686;
   /**
-   * <code>TRANSFORM = 687;</code>
+   * <code>SYSID = 687;</code>
    */
-  public static final int TRANSFORM_VALUE = 687;
+  public static final int SYSID_VALUE = 687;
   /**
-   * <code>TREAT = 688;</code>
+   * <code>SYSTEM_P = 688;</code>
    */
-  public static final int TREAT_VALUE = 688;
+  public static final int SYSTEM_P_VALUE = 688;
   /**
-   * <code>TRIGGER = 689;</code>
+   * <code>SYSTEM_USER = 689;</code>
    */
-  public static final int TRIGGER_VALUE = 689;
+  public static final int SYSTEM_USER_VALUE = 689;
   /**
-   * <code>TRIM = 690;</code>
+   * <code>TABLE = 690;</code>
    */
-  public static final int TRIM_VALUE = 690;
+  public static final int TABLE_VALUE = 690;
   /**
-   * <code>TRUE_P = 691;</code>
+   * <code>TABLES = 691;</code>
    */
-  public static final int TRUE_P_VALUE = 691;
+  public static final int TABLES_VALUE = 691;
   /**
-   * <code>TRUNCATE = 692;</code>
+   * <code>TABLESAMPLE = 692;</code>
    */
-  public static final int TRUNCATE_VALUE = 692;
+  public static final int TABLESAMPLE_VALUE = 692;
   /**
-   * <code>TRUSTED = 693;</code>
+   * <code>TABLESPACE = 693;</code>
    */
-  public static final int TRUSTED_VALUE = 693;
+  public static final int TABLESPACE_VALUE = 693;
   /**
-   * <code>TYPE_P = 694;</code>
+   * <code>TARGET = 694;</code>
    */
-  public static final int TYPE_P_VALUE = 694;
+  public static final int TARGET_VALUE = 694;
   /**
-   * <code>TYPES_P = 695;</code>
+   * <code>TEMP = 695;</code>
    */
-  public static final int TYPES_P_VALUE = 695;
+  public static final int TEMP_VALUE = 695;
   /**
-   * <code>UESCAPE = 696;</code>
+   * <code>TEMPLATE = 696;</code>
    */
-  public static final int UESCAPE_VALUE = 696;
+  public static final int TEMPLATE_VALUE = 696;
   /**
-   * <code>UNBOUNDED = 697;</code>
+   * <code>TEMPORARY = 697;</code>
    */
-  public static final int UNBOUNDED_VALUE = 697;
+  public static final int TEMPORARY_VALUE = 697;
   /**
-   * <code>UNCOMMITTED = 698;</code>
+   * <code>TEXT_P = 698;</code>
    */
-  public static final int UNCOMMITTED_VALUE = 698;
+  public static final int TEXT_P_VALUE = 698;
   /**
-   * <code>UNENCRYPTED = 699;</code>
+   * <code>THEN = 699;</code>
    */
-  public static final int UNENCRYPTED_VALUE = 699;
+  public static final int THEN_VALUE = 699;
   /**
-   * <code>UNION = 700;</code>
+   * <code>TIES = 700;</code>
    */
-  public static final int UNION_VALUE = 700;
+  public static final int TIES_VALUE = 700;
   /**
-   * <code>UNIQUE = 701;</code>
+   * <code>TIME = 701;</code>
    */
-  public static final int UNIQUE_VALUE = 701;
+  public static final int TIME_VALUE = 701;
   /**
-   * <code>UNKNOWN = 702;</code>
+   * <code>TIMESTAMP = 702;</code>
    */
-  public static final int UNKNOWN_VALUE = 702;
+  public static final int TIMESTAMP_VALUE = 702;
   /**
-   * <code>UNLISTEN = 703;</code>
+   * <code>TO = 703;</code>
    */
-  public static final int UNLISTEN_VALUE = 703;
+  public static final int TO_VALUE = 703;
   /**
-   * <code>UNLOGGED = 704;</code>
+   * <code>TRAILING = 704;</code>
    */
-  public static final int UNLOGGED_VALUE = 704;
+  public static final int TRAILING_VALUE = 704;
   /**
-   * <code>UNTIL = 705;</code>
+   * <code>TRANSACTION = 705;</code>
    */
-  public static final int UNTIL_VALUE = 705;
+  public static final int TRANSACTION_VALUE = 705;
   /**
-   * <code>UPDATE = 706;</code>
+   * <code>TRANSFORM = 706;</code>
    */
-  public static final int UPDATE_VALUE = 706;
+  public static final int TRANSFORM_VALUE = 706;
   /**
-   * <code>USER = 707;</code>
+   * <code>TREAT = 707;</code>
    */
-  public static final int USER_VALUE = 707;
+  public static final int TREAT_VALUE = 707;
   /**
-   * <code>USING = 708;</code>
+   * <code>TRIGGER = 708;</code>
    */
-  public static final int USING_VALUE = 708;
+  public static final int TRIGGER_VALUE = 708;
   /**
-   * <code>VACUUM = 709;</code>
+   * <code>TRIM = 709;</code>
    */
-  public static final int VACUUM_VALUE = 709;
+  public static final int TRIM_VALUE = 709;
   /**
-   * <code>VALID = 710;</code>
+   * <code>TRUE_P = 710;</code>
    */
-  public static final int VALID_VALUE = 710;
+  public static final int TRUE_P_VALUE = 710;
   /**
-   * <code>VALIDATE = 711;</code>
+   * <code>TRUNCATE = 711;</code>
    */
-  public static final int VALIDATE_VALUE = 711;
+  public static final int TRUNCATE_VALUE = 711;
   /**
-   * <code>VALIDATOR = 712;</code>
+   * <code>TRUSTED = 712;</code>
    */
-  public static final int VALIDATOR_VALUE = 712;
+  public static final int TRUSTED_VALUE = 712;
   /**
-   * <code>VALUE_P = 713;</code>
+   * <code>TYPE_P = 713;</code>
    */
-  public static final int VALUE_P_VALUE = 713;
+  public static final int TYPE_P_VALUE = 713;
   /**
-   * <code>VALUES = 714;</code>
+   * <code>TYPES_P = 714;</code>
    */
-  public static final int VALUES_VALUE = 714;
+  public static final int TYPES_P_VALUE = 714;
   /**
-   * <code>VARCHAR = 715;</code>
+   * <code>UESCAPE = 715;</code>
    */
-  public static final int VARCHAR_VALUE = 715;
+  public static final int UESCAPE_VALUE = 715;
   /**
-   * <code>VARIADIC = 716;</code>
+   * <code>UNBOUNDED = 716;</code>
    */
-  public static final int VARIADIC_VALUE = 716;
+  public static final int UNBOUNDED_VALUE = 716;
   /**
-   * <code>VARYING = 717;</code>
+   * <code>UNCONDITIONAL = 717;</code>
    */
-  public static final int VARYING_VALUE = 717;
+  public static final int UNCONDITIONAL_VALUE = 717;
   /**
-   * <code>VERBOSE = 718;</code>
+   * <code>UNCOMMITTED = 718;</code>
    */
-  public static final int VERBOSE_VALUE = 718;
+  public static final int UNCOMMITTED_VALUE = 718;
   /**
-   * <code>VERSION_P = 719;</code>
+   * <code>UNENCRYPTED = 719;</code>
    */
-  public static final int VERSION_P_VALUE = 719;
+  public static final int UNENCRYPTED_VALUE = 719;
   /**
-   * <code>VIEW = 720;</code>
+   * <code>UNION = 720;</code>
    */
-  public static final int VIEW_VALUE = 720;
+  public static final int UNION_VALUE = 720;
   /**
-   * <code>VIEWS = 721;</code>
+   * <code>UNIQUE = 721;</code>
    */
-  public static final int VIEWS_VALUE = 721;
+  public static final int UNIQUE_VALUE = 721;
   /**
-   * <code>VOLATILE = 722;</code>
+   * <code>UNKNOWN = 722;</code>
    */
-  public static final int VOLATILE_VALUE = 722;
+  public static final int UNKNOWN_VALUE = 722;
   /**
-   * <code>WHEN = 723;</code>
+   * <code>UNLISTEN = 723;</code>
    */
-  public static final int WHEN_VALUE = 723;
+  public static final int UNLISTEN_VALUE = 723;
   /**
-   * <code>WHERE = 724;</code>
+   * <code>UNLOGGED = 724;</code>
    */
-  public static final int WHERE_VALUE = 724;
+  public static final int UNLOGGED_VALUE = 724;
   /**
-   * <code>WHITESPACE_P = 725;</code>
+   * <code>UNTIL = 725;</code>
    */
-  public static final int WHITESPACE_P_VALUE = 725;
+  public static final int UNTIL_VALUE = 725;
   /**
-   * <code>WINDOW = 726;</code>
+   * <code>UPDATE = 726;</code>
    */
-  public static final int WINDOW_VALUE = 726;
+  public static final int UPDATE_VALUE = 726;
   /**
-   * <code>WITH = 727;</code>
+   * <code>USER = 727;</code>
    */
-  public static final int WITH_VALUE = 727;
+  public static final int USER_VALUE = 727;
   /**
-   * <code>WITHIN = 728;</code>
+   * <code>USING = 728;</code>
    */
-  public static final int WITHIN_VALUE = 728;
+  public static final int USING_VALUE = 728;
   /**
-   * <code>WITHOUT = 729;</code>
+   * <code>VACUUM = 729;</code>
    */
-  public static final int WITHOUT_VALUE = 729;
+  public static final int VACUUM_VALUE = 729;
   /**
-   * <code>WORK = 730;</code>
+   * <code>VALID = 730;</code>
    */
-  public static final int WORK_VALUE = 730;
+  public static final int VALID_VALUE = 730;
   /**
-   * <code>WRAPPER = 731;</code>
+   * <code>VALIDATE = 731;</code>
    */
-  public static final int WRAPPER_VALUE = 731;
+  public static final int VALIDATE_VALUE = 731;
   /**
-   * <code>WRITE = 732;</code>
+   * <code>VALIDATOR = 732;</code>
    */
-  public static final int WRITE_VALUE = 732;
+  public static final int VALIDATOR_VALUE = 732;
   /**
-   * <code>XML_P = 733;</code>
+   * <code>VALUE_P = 733;</code>
    */
-  public static final int XML_P_VALUE = 733;
+  public static final int VALUE_P_VALUE = 733;
   /**
-   * <code>XMLATTRIBUTES = 734;</code>
+   * <code>VALUES = 734;</code>
    */
-  public static final int XMLATTRIBUTES_VALUE = 734;
+  public static final int VALUES_VALUE = 734;
   /**
-   * <code>XMLCONCAT = 735;</code>
+   * <code>VARCHAR = 735;</code>
    */
-  public static final int XMLCONCAT_VALUE = 735;
+  public static final int VARCHAR_VALUE = 735;
   /**
-   * <code>XMLELEMENT = 736;</code>
+   * <code>VARIADIC = 736;</code>
    */
-  public static final int XMLELEMENT_VALUE = 736;
+  public static final int VARIADIC_VALUE = 736;
   /**
-   * <code>XMLEXISTS = 737;</code>
+   * <code>VARYING = 737;</code>
    */
-  public static final int XMLEXISTS_VALUE = 737;
+  public static final int VARYING_VALUE = 737;
   /**
-   * <code>XMLFOREST = 738;</code>
+   * <code>VERBOSE = 738;</code>
    */
-  public static final int XMLFOREST_VALUE = 738;
+  public static final int VERBOSE_VALUE = 738;
   /**
-   * <code>XMLNAMESPACES = 739;</code>
+   * <code>VERSION_P = 739;</code>
    */
-  public static final int XMLNAMESPACES_VALUE = 739;
+  public static final int VERSION_P_VALUE = 739;
   /**
-   * <code>XMLPARSE = 740;</code>
+   * <code>VIEW = 740;</code>
    */
-  public static final int XMLPARSE_VALUE = 740;
+  public static final int VIEW_VALUE = 740;
   /**
-   * <code>XMLPI = 741;</code>
+   * <code>VIEWS = 741;</code>
    */
-  public static final int XMLPI_VALUE = 741;
+  public static final int VIEWS_VALUE = 741;
   /**
-   * <code>XMLROOT = 742;</code>
+   * <code>VOLATILE = 742;</code>
    */
-  public static final int XMLROOT_VALUE = 742;
+  public static final int VOLATILE_VALUE = 742;
   /**
-   * <code>XMLSERIALIZE = 743;</code>
+   * <code>WHEN = 743;</code>
    */
-  public static final int XMLSERIALIZE_VALUE = 743;
+  public static final int WHEN_VALUE = 743;
   /**
-   * <code>XMLTABLE = 744;</code>
+   * <code>WHERE = 744;</code>
    */
-  public static final int XMLTABLE_VALUE = 744;
+  public static final int WHERE_VALUE = 744;
   /**
-   * <code>YEAR_P = 745;</code>
+   * <code>WHITESPACE_P = 745;</code>
    */
-  public static final int YEAR_P_VALUE = 745;
+  public static final int WHITESPACE_P_VALUE = 745;
   /**
-   * <code>YES_P = 746;</code>
+   * <code>WINDOW = 746;</code>
    */
-  public static final int YES_P_VALUE = 746;
+  public static final int WINDOW_VALUE = 746;
   /**
-   * <code>ZONE = 747;</code>
+   * <code>WITH = 747;</code>
    */
-  public static final int ZONE_VALUE = 747;
+  public static final int WITH_VALUE = 747;
   /**
-   * <code>FORMAT_LA = 748;</code>
+   * <code>WITHIN = 748;</code>
    */
-  public static final int FORMAT_LA_VALUE = 748;
+  public static final int WITHIN_VALUE = 748;
   /**
-   * <code>NOT_LA = 749;</code>
+   * <code>WITHOUT = 749;</code>
    */
-  public static final int NOT_LA_VALUE = 749;
+  public static final int WITHOUT_VALUE = 749;
   /**
-   * <code>NULLS_LA = 750;</code>
+   * <code>WORK = 750;</code>
    */
-  public static final int NULLS_LA_VALUE = 750;
+  public static final int WORK_VALUE = 750;
   /**
-   * <code>WITH_LA = 751;</code>
+   * <code>WRAPPER = 751;</code>
    */
-  public static final int WITH_LA_VALUE = 751;
+  public static final int WRAPPER_VALUE = 751;
   /**
-   * <code>WITHOUT_LA = 752;</code>
+   * <code>WRITE = 752;</code>
    */
-  public static final int WITHOUT_LA_VALUE = 752;
+  public static final int WRITE_VALUE = 752;
   /**
-   * <code>MODE_TYPE_NAME = 753;</code>
+   * <code>XML_P = 753;</code>
    */
-  public static final int MODE_TYPE_NAME_VALUE = 753;
+  public static final int XML_P_VALUE = 753;
   /**
-   * <code>MODE_PLPGSQL_EXPR = 754;</code>
+   * <code>XMLATTRIBUTES = 754;</code>
    */
-  public static final int MODE_PLPGSQL_EXPR_VALUE = 754;
+  public static final int XMLATTRIBUTES_VALUE = 754;
   /**
-   * <code>MODE_PLPGSQL_ASSIGN1 = 755;</code>
+   * <code>XMLCONCAT = 755;</code>
    */
-  public static final int MODE_PLPGSQL_ASSIGN1_VALUE = 755;
+  public static final int XMLCONCAT_VALUE = 755;
   /**
-   * <code>MODE_PLPGSQL_ASSIGN2 = 756;</code>
+   * <code>XMLELEMENT = 756;</code>
    */
-  public static final int MODE_PLPGSQL_ASSIGN2_VALUE = 756;
+  public static final int XMLELEMENT_VALUE = 756;
   /**
-   * <code>MODE_PLPGSQL_ASSIGN3 = 757;</code>
+   * <code>XMLEXISTS = 757;</code>
    */
-  public static final int MODE_PLPGSQL_ASSIGN3_VALUE = 757;
+  public static final int XMLEXISTS_VALUE = 757;
   /**
-   * <code>UMINUS = 758;</code>
+   * <code>XMLFOREST = 758;</code>
    */
-  public static final int UMINUS_VALUE = 758;
+  public static final int XMLFOREST_VALUE = 758;
+  /**
+   * <code>XMLNAMESPACES = 759;</code>
+   */
+  public static final int XMLNAMESPACES_VALUE = 759;
+  /**
+   * <code>XMLPARSE = 760;</code>
+   */
+  public static final int XMLPARSE_VALUE = 760;
+  /**
+   * <code>XMLPI = 761;</code>
+   */
+  public static final int XMLPI_VALUE = 761;
+  /**
+   * <code>XMLROOT = 762;</code>
+   */
+  public static final int XMLROOT_VALUE = 762;
+  /**
+   * <code>XMLSERIALIZE = 763;</code>
+   */
+  public static final int XMLSERIALIZE_VALUE = 763;
+  /**
+   * <code>XMLTABLE = 764;</code>
+   */
+  public static final int XMLTABLE_VALUE = 764;
+  /**
+   * <code>YEAR_P = 765;</code>
+   */
+  public static final int YEAR_P_VALUE = 765;
+  /**
+   * <code>YES_P = 766;</code>
+   */
+  public static final int YES_P_VALUE = 766;
+  /**
+   * <code>ZONE = 767;</code>
+   */
+  public static final int ZONE_VALUE = 767;
+  /**
+   * <code>FORMAT_LA = 768;</code>
+   */
+  public static final int FORMAT_LA_VALUE = 768;
+  /**
+   * <code>NOT_LA = 769;</code>
+   */
+  public static final int NOT_LA_VALUE = 769;
+  /**
+   * <code>NULLS_LA = 770;</code>
+   */
+  public static final int NULLS_LA_VALUE = 770;
+  /**
+   * <code>WITH_LA = 771;</code>
+   */
+  public static final int WITH_LA_VALUE = 771;
+  /**
+   * <code>WITHOUT_LA = 772;</code>
+   */
+  public static final int WITHOUT_LA_VALUE = 772;
+  /**
+   * <code>MODE_TYPE_NAME = 773;</code>
+   */
+  public static final int MODE_TYPE_NAME_VALUE = 773;
+  /**
+   * <code>MODE_PLPGSQL_EXPR = 774;</code>
+   */
+  public static final int MODE_PLPGSQL_EXPR_VALUE = 774;
+  /**
+   * <code>MODE_PLPGSQL_ASSIGN1 = 775;</code>
+   */
+  public static final int MODE_PLPGSQL_ASSIGN1_VALUE = 775;
+  /**
+   * <code>MODE_PLPGSQL_ASSIGN2 = 776;</code>
+   */
+  public static final int MODE_PLPGSQL_ASSIGN2_VALUE = 776;
+  /**
+   * <code>MODE_PLPGSQL_ASSIGN3 = 777;</code>
+   */
+  public static final int MODE_PLPGSQL_ASSIGN3_VALUE = 777;
+  /**
+   * <code>UMINUS = 778;</code>
+   */
+  public static final int UMINUS_VALUE = 778;
 
 
   public final int getNumber() {
@@ -4494,420 +4654,440 @@ public enum Token
       case 342: return COMMITTED;
       case 343: return COMPRESSION;
       case 344: return CONCURRENTLY;
-      case 345: return CONFIGURATION;
-      case 346: return CONFLICT;
-      case 347: return CONNECTION;
-      case 348: return CONSTRAINT;
-      case 349: return CONSTRAINTS;
-      case 350: return CONTENT_P;
-      case 351: return CONTINUE_P;
-      case 352: return CONVERSION_P;
-      case 353: return COPY;
-      case 354: return COST;
-      case 355: return CREATE;
-      case 356: return CROSS;
-      case 357: return CSV;
-      case 358: return CUBE;
-      case 359: return CURRENT_P;
-      case 360: return CURRENT_CATALOG;
-      case 361: return CURRENT_DATE;
-      case 362: return CURRENT_ROLE;
-      case 363: return CURRENT_SCHEMA;
-      case 364: return CURRENT_TIME;
-      case 365: return CURRENT_TIMESTAMP;
-      case 366: return CURRENT_USER;
-      case 367: return CURSOR;
-      case 368: return CYCLE;
-      case 369: return DATA_P;
-      case 370: return DATABASE;
-      case 371: return DAY_P;
-      case 372: return DEALLOCATE;
-      case 373: return DEC;
-      case 374: return DECIMAL_P;
-      case 375: return DECLARE;
-      case 376: return DEFAULT;
-      case 377: return DEFAULTS;
-      case 378: return DEFERRABLE;
-      case 379: return DEFERRED;
-      case 380: return DEFINER;
-      case 381: return DELETE_P;
-      case 382: return DELIMITER;
-      case 383: return DELIMITERS;
-      case 384: return DEPENDS;
-      case 385: return DEPTH;
-      case 386: return DESC;
-      case 387: return DETACH;
-      case 388: return DICTIONARY;
-      case 389: return DISABLE_P;
-      case 390: return DISCARD;
-      case 391: return DISTINCT;
-      case 392: return DO;
-      case 393: return DOCUMENT_P;
-      case 394: return DOMAIN_P;
-      case 395: return DOUBLE_P;
-      case 396: return DROP;
-      case 397: return EACH;
-      case 398: return ELSE;
-      case 399: return ENABLE_P;
-      case 400: return ENCODING;
-      case 401: return ENCRYPTED;
-      case 402: return END_P;
-      case 403: return ENUM_P;
-      case 404: return ESCAPE;
-      case 405: return EVENT;
-      case 406: return EXCEPT;
-      case 407: return EXCLUDE;
-      case 408: return EXCLUDING;
-      case 409: return EXCLUSIVE;
-      case 410: return EXECUTE;
-      case 411: return EXISTS;
-      case 412: return EXPLAIN;
-      case 413: return EXPRESSION;
-      case 414: return EXTENSION;
-      case 415: return EXTERNAL;
-      case 416: return EXTRACT;
-      case 417: return FALSE_P;
-      case 418: return FAMILY;
-      case 419: return FETCH;
-      case 420: return FILTER;
-      case 421: return FINALIZE;
-      case 422: return FIRST_P;
-      case 423: return FLOAT_P;
-      case 424: return FOLLOWING;
-      case 425: return FOR;
-      case 426: return FORCE;
-      case 427: return FOREIGN;
-      case 428: return FORMAT;
-      case 429: return FORWARD;
-      case 430: return FREEZE;
-      case 431: return FROM;
-      case 432: return FULL;
-      case 433: return FUNCTION;
-      case 434: return FUNCTIONS;
-      case 435: return GENERATED;
-      case 436: return GLOBAL;
-      case 437: return GRANT;
-      case 438: return GRANTED;
-      case 439: return GREATEST;
-      case 440: return GROUP_P;
-      case 441: return GROUPING;
-      case 442: return GROUPS;
-      case 443: return HANDLER;
-      case 444: return HAVING;
-      case 445: return HEADER_P;
-      case 446: return HOLD;
-      case 447: return HOUR_P;
-      case 448: return IDENTITY_P;
-      case 449: return IF_P;
-      case 450: return ILIKE;
-      case 451: return IMMEDIATE;
-      case 452: return IMMUTABLE;
-      case 453: return IMPLICIT_P;
-      case 454: return IMPORT_P;
-      case 455: return IN_P;
-      case 456: return INCLUDE;
-      case 457: return INCLUDING;
-      case 458: return INCREMENT;
-      case 459: return INDENT;
-      case 460: return INDEX;
-      case 461: return INDEXES;
-      case 462: return INHERIT;
-      case 463: return INHERITS;
-      case 464: return INITIALLY;
-      case 465: return INLINE_P;
-      case 466: return INNER_P;
-      case 467: return INOUT;
-      case 468: return INPUT_P;
-      case 469: return INSENSITIVE;
-      case 470: return INSERT;
-      case 471: return INSTEAD;
-      case 472: return INT_P;
-      case 473: return INTEGER;
-      case 474: return INTERSECT;
-      case 475: return INTERVAL;
-      case 476: return INTO;
-      case 477: return INVOKER;
-      case 478: return IS;
-      case 479: return ISNULL;
-      case 480: return ISOLATION;
-      case 481: return JOIN;
-      case 482: return JSON;
-      case 483: return JSON_ARRAY;
-      case 484: return JSON_ARRAYAGG;
-      case 485: return JSON_OBJECT;
-      case 486: return JSON_OBJECTAGG;
-      case 487: return KEY;
-      case 488: return KEYS;
-      case 489: return LABEL;
-      case 490: return LANGUAGE;
-      case 491: return LARGE_P;
-      case 492: return LAST_P;
-      case 493: return LATERAL_P;
-      case 494: return LEADING;
-      case 495: return LEAKPROOF;
-      case 496: return LEAST;
-      case 497: return LEFT;
-      case 498: return LEVEL;
-      case 499: return LIKE;
-      case 500: return LIMIT;
-      case 501: return LISTEN;
-      case 502: return LOAD;
-      case 503: return LOCAL;
-      case 504: return LOCALTIME;
-      case 505: return LOCALTIMESTAMP;
-      case 506: return LOCATION;
-      case 507: return LOCK_P;
-      case 508: return LOCKED;
-      case 509: return LOGGED;
-      case 510: return MAPPING;
-      case 511: return MATCH;
-      case 512: return MATCHED;
-      case 513: return MATERIALIZED;
-      case 514: return MAXVALUE;
-      case 515: return MERGE;
-      case 516: return METHOD;
-      case 517: return MINUTE_P;
-      case 518: return MINVALUE;
-      case 519: return MODE;
-      case 520: return MONTH_P;
-      case 521: return MOVE;
-      case 522: return NAME_P;
-      case 523: return NAMES;
-      case 524: return NATIONAL;
-      case 525: return NATURAL;
-      case 526: return NCHAR;
-      case 527: return NEW;
-      case 528: return NEXT;
-      case 529: return NFC;
-      case 530: return NFD;
-      case 531: return NFKC;
-      case 532: return NFKD;
-      case 533: return NO;
-      case 534: return NONE;
-      case 535: return NORMALIZE;
-      case 536: return NORMALIZED;
-      case 537: return NOT;
-      case 538: return NOTHING;
-      case 539: return NOTIFY;
-      case 540: return NOTNULL;
-      case 541: return NOWAIT;
-      case 542: return NULL_P;
-      case 543: return NULLIF;
-      case 544: return NULLS_P;
-      case 545: return NUMERIC;
-      case 546: return OBJECT_P;
-      case 547: return OF;
-      case 548: return OFF;
-      case 549: return OFFSET;
-      case 550: return OIDS;
-      case 551: return OLD;
-      case 552: return ON;
-      case 553: return ONLY;
-      case 554: return OPERATOR;
-      case 555: return OPTION;
-      case 556: return OPTIONS;
-      case 557: return OR;
-      case 558: return ORDER;
-      case 559: return ORDINALITY;
-      case 560: return OTHERS;
-      case 561: return OUT_P;
-      case 562: return OUTER_P;
-      case 563: return OVER;
-      case 564: return OVERLAPS;
-      case 565: return OVERLAY;
-      case 566: return OVERRIDING;
-      case 567: return OWNED;
-      case 568: return OWNER;
-      case 569: return PARALLEL;
-      case 570: return PARAMETER;
-      case 571: return PARSER;
-      case 572: return PARTIAL;
-      case 573: return PARTITION;
-      case 574: return PASSING;
-      case 575: return PASSWORD;
-      case 576: return PLACING;
-      case 577: return PLANS;
-      case 578: return POLICY;
-      case 579: return POSITION;
-      case 580: return PRECEDING;
-      case 581: return PRECISION;
-      case 582: return PRESERVE;
-      case 583: return PREPARE;
-      case 584: return PREPARED;
-      case 585: return PRIMARY;
-      case 586: return PRIOR;
-      case 587: return PRIVILEGES;
-      case 588: return PROCEDURAL;
-      case 589: return PROCEDURE;
-      case 590: return PROCEDURES;
-      case 591: return PROGRAM;
-      case 592: return PUBLICATION;
-      case 593: return QUOTE;
-      case 594: return RANGE;
-      case 595: return READ;
-      case 596: return REAL;
-      case 597: return REASSIGN;
-      case 598: return RECHECK;
-      case 599: return RECURSIVE;
-      case 600: return REF_P;
-      case 601: return REFERENCES;
-      case 602: return REFERENCING;
-      case 603: return REFRESH;
-      case 604: return REINDEX;
-      case 605: return RELATIVE_P;
-      case 606: return RELEASE;
-      case 607: return RENAME;
-      case 608: return REPEATABLE;
-      case 609: return REPLACE;
-      case 610: return REPLICA;
-      case 611: return RESET;
-      case 612: return RESTART;
-      case 613: return RESTRICT;
-      case 614: return RETURN;
-      case 615: return RETURNING;
-      case 616: return RETURNS;
-      case 617: return REVOKE;
-      case 618: return RIGHT;
-      case 619: return ROLE;
-      case 620: return ROLLBACK;
-      case 621: return ROLLUP;
-      case 622: return ROUTINE;
-      case 623: return ROUTINES;
-      case 624: return ROW;
-      case 625: return ROWS;
-      case 626: return RULE;
-      case 627: return SAVEPOINT;
-      case 628: return SCALAR;
-      case 629: return SCHEMA;
-      case 630: return SCHEMAS;
-      case 631: return SCROLL;
-      case 632: return SEARCH;
-      case 633: return SECOND_P;
-      case 634: return SECURITY;
-      case 635: return SELECT;
-      case 636: return SEQUENCE;
-      case 637: return SEQUENCES;
-      case 638: return SERIALIZABLE;
-      case 639: return SERVER;
-      case 640: return SESSION;
-      case 641: return SESSION_USER;
-      case 642: return SET;
-      case 643: return SETS;
-      case 644: return SETOF;
-      case 645: return SHARE;
-      case 646: return SHOW;
-      case 647: return SIMILAR;
-      case 648: return SIMPLE;
-      case 649: return SKIP;
-      case 650: return SMALLINT;
-      case 651: return SNAPSHOT;
-      case 652: return SOME;
-      case 653: return SQL_P;
-      case 654: return STABLE;
-      case 655: return STANDALONE_P;
-      case 656: return START;
-      case 657: return STATEMENT;
-      case 658: return STATISTICS;
-      case 659: return STDIN;
-      case 660: return STDOUT;
-      case 661: return STORAGE;
-      case 662: return STORED;
-      case 663: return STRICT_P;
-      case 664: return STRIP_P;
-      case 665: return SUBSCRIPTION;
-      case 666: return SUBSTRING;
-      case 667: return SUPPORT;
-      case 668: return SYMMETRIC;
-      case 669: return SYSID;
-      case 670: return SYSTEM_P;
-      case 671: return SYSTEM_USER;
-      case 672: return TABLE;
-      case 673: return TABLES;
-      case 674: return TABLESAMPLE;
-      case 675: return TABLESPACE;
-      case 676: return TEMP;
-      case 677: return TEMPLATE;
-      case 678: return TEMPORARY;
-      case 679: return TEXT_P;
-      case 680: return THEN;
-      case 681: return TIES;
-      case 682: return TIME;
-      case 683: return TIMESTAMP;
-      case 684: return TO;
-      case 685: return TRAILING;
-      case 686: return TRANSACTION;
-      case 687: return TRANSFORM;
-      case 688: return TREAT;
-      case 689: return TRIGGER;
-      case 690: return TRIM;
-      case 691: return TRUE_P;
-      case 692: return TRUNCATE;
-      case 693: return TRUSTED;
-      case 694: return TYPE_P;
-      case 695: return TYPES_P;
-      case 696: return UESCAPE;
-      case 697: return UNBOUNDED;
-      case 698: return UNCOMMITTED;
-      case 699: return UNENCRYPTED;
-      case 700: return UNION;
-      case 701: return UNIQUE;
-      case 702: return UNKNOWN;
-      case 703: return UNLISTEN;
-      case 704: return UNLOGGED;
-      case 705: return UNTIL;
-      case 706: return UPDATE;
-      case 707: return USER;
-      case 708: return USING;
-      case 709: return VACUUM;
-      case 710: return VALID;
-      case 711: return VALIDATE;
-      case 712: return VALIDATOR;
-      case 713: return VALUE_P;
-      case 714: return VALUES;
-      case 715: return VARCHAR;
-      case 716: return VARIADIC;
-      case 717: return VARYING;
-      case 718: return VERBOSE;
-      case 719: return VERSION_P;
-      case 720: return VIEW;
-      case 721: return VIEWS;
-      case 722: return VOLATILE;
-      case 723: return WHEN;
-      case 724: return WHERE;
-      case 725: return WHITESPACE_P;
-      case 726: return WINDOW;
-      case 727: return WITH;
-      case 728: return WITHIN;
-      case 729: return WITHOUT;
-      case 730: return WORK;
-      case 731: return WRAPPER;
-      case 732: return WRITE;
-      case 733: return XML_P;
-      case 734: return XMLATTRIBUTES;
-      case 735: return XMLCONCAT;
-      case 736: return XMLELEMENT;
-      case 737: return XMLEXISTS;
-      case 738: return XMLFOREST;
-      case 739: return XMLNAMESPACES;
-      case 740: return XMLPARSE;
-      case 741: return XMLPI;
-      case 742: return XMLROOT;
-      case 743: return XMLSERIALIZE;
-      case 744: return XMLTABLE;
-      case 745: return YEAR_P;
-      case 746: return YES_P;
-      case 747: return ZONE;
-      case 748: return FORMAT_LA;
-      case 749: return NOT_LA;
-      case 750: return NULLS_LA;
-      case 751: return WITH_LA;
-      case 752: return WITHOUT_LA;
-      case 753: return MODE_TYPE_NAME;
-      case 754: return MODE_PLPGSQL_EXPR;
-      case 755: return MODE_PLPGSQL_ASSIGN1;
-      case 756: return MODE_PLPGSQL_ASSIGN2;
-      case 757: return MODE_PLPGSQL_ASSIGN3;
-      case 758: return UMINUS;
+      case 345: return CONDITIONAL;
+      case 346: return CONFIGURATION;
+      case 347: return CONFLICT;
+      case 348: return CONNECTION;
+      case 349: return CONSTRAINT;
+      case 350: return CONSTRAINTS;
+      case 351: return CONTENT_P;
+      case 352: return CONTINUE_P;
+      case 353: return CONVERSION_P;
+      case 354: return COPY;
+      case 355: return COST;
+      case 356: return CREATE;
+      case 357: return CROSS;
+      case 358: return CSV;
+      case 359: return CUBE;
+      case 360: return CURRENT_P;
+      case 361: return CURRENT_CATALOG;
+      case 362: return CURRENT_DATE;
+      case 363: return CURRENT_ROLE;
+      case 364: return CURRENT_SCHEMA;
+      case 365: return CURRENT_TIME;
+      case 366: return CURRENT_TIMESTAMP;
+      case 367: return CURRENT_USER;
+      case 368: return CURSOR;
+      case 369: return CYCLE;
+      case 370: return DATA_P;
+      case 371: return DATABASE;
+      case 372: return DAY_P;
+      case 373: return DEALLOCATE;
+      case 374: return DEC;
+      case 375: return DECIMAL_P;
+      case 376: return DECLARE;
+      case 377: return DEFAULT;
+      case 378: return DEFAULTS;
+      case 379: return DEFERRABLE;
+      case 380: return DEFERRED;
+      case 381: return DEFINER;
+      case 382: return DELETE_P;
+      case 383: return DELIMITER;
+      case 384: return DELIMITERS;
+      case 385: return DEPENDS;
+      case 386: return DEPTH;
+      case 387: return DESC;
+      case 388: return DETACH;
+      case 389: return DICTIONARY;
+      case 390: return DISABLE_P;
+      case 391: return DISCARD;
+      case 392: return DISTINCT;
+      case 393: return DO;
+      case 394: return DOCUMENT_P;
+      case 395: return DOMAIN_P;
+      case 396: return DOUBLE_P;
+      case 397: return DROP;
+      case 398: return EACH;
+      case 399: return ELSE;
+      case 400: return EMPTY_P;
+      case 401: return ENABLE_P;
+      case 402: return ENCODING;
+      case 403: return ENCRYPTED;
+      case 404: return END_P;
+      case 405: return ENUM_P;
+      case 406: return ERROR_P;
+      case 407: return ESCAPE;
+      case 408: return EVENT;
+      case 409: return EXCEPT;
+      case 410: return EXCLUDE;
+      case 411: return EXCLUDING;
+      case 412: return EXCLUSIVE;
+      case 413: return EXECUTE;
+      case 414: return EXISTS;
+      case 415: return EXPLAIN;
+      case 416: return EXPRESSION;
+      case 417: return EXTENSION;
+      case 418: return EXTERNAL;
+      case 419: return EXTRACT;
+      case 420: return FALSE_P;
+      case 421: return FAMILY;
+      case 422: return FETCH;
+      case 423: return FILTER;
+      case 424: return FINALIZE;
+      case 425: return FIRST_P;
+      case 426: return FLOAT_P;
+      case 427: return FOLLOWING;
+      case 428: return FOR;
+      case 429: return FORCE;
+      case 430: return FOREIGN;
+      case 431: return FORMAT;
+      case 432: return FORWARD;
+      case 433: return FREEZE;
+      case 434: return FROM;
+      case 435: return FULL;
+      case 436: return FUNCTION;
+      case 437: return FUNCTIONS;
+      case 438: return GENERATED;
+      case 439: return GLOBAL;
+      case 440: return GRANT;
+      case 441: return GRANTED;
+      case 442: return GREATEST;
+      case 443: return GROUP_P;
+      case 444: return GROUPING;
+      case 445: return GROUPS;
+      case 446: return HANDLER;
+      case 447: return HAVING;
+      case 448: return HEADER_P;
+      case 449: return HOLD;
+      case 450: return HOUR_P;
+      case 451: return IDENTITY_P;
+      case 452: return IF_P;
+      case 453: return ILIKE;
+      case 454: return IMMEDIATE;
+      case 455: return IMMUTABLE;
+      case 456: return IMPLICIT_P;
+      case 457: return IMPORT_P;
+      case 458: return IN_P;
+      case 459: return INCLUDE;
+      case 460: return INCLUDING;
+      case 461: return INCREMENT;
+      case 462: return INDENT;
+      case 463: return INDEX;
+      case 464: return INDEXES;
+      case 465: return INHERIT;
+      case 466: return INHERITS;
+      case 467: return INITIALLY;
+      case 468: return INLINE_P;
+      case 469: return INNER_P;
+      case 470: return INOUT;
+      case 471: return INPUT_P;
+      case 472: return INSENSITIVE;
+      case 473: return INSERT;
+      case 474: return INSTEAD;
+      case 475: return INT_P;
+      case 476: return INTEGER;
+      case 477: return INTERSECT;
+      case 478: return INTERVAL;
+      case 479: return INTO;
+      case 480: return INVOKER;
+      case 481: return IS;
+      case 482: return ISNULL;
+      case 483: return ISOLATION;
+      case 484: return JOIN;
+      case 485: return JSON;
+      case 486: return JSON_ARRAY;
+      case 487: return JSON_ARRAYAGG;
+      case 488: return JSON_EXISTS;
+      case 489: return JSON_OBJECT;
+      case 490: return JSON_OBJECTAGG;
+      case 491: return JSON_QUERY;
+      case 492: return JSON_SCALAR;
+      case 493: return JSON_SERIALIZE;
+      case 494: return JSON_TABLE;
+      case 495: return JSON_VALUE;
+      case 496: return KEEP;
+      case 497: return KEY;
+      case 498: return KEYS;
+      case 499: return LABEL;
+      case 500: return LANGUAGE;
+      case 501: return LARGE_P;
+      case 502: return LAST_P;
+      case 503: return LATERAL_P;
+      case 504: return LEADING;
+      case 505: return LEAKPROOF;
+      case 506: return LEAST;
+      case 507: return LEFT;
+      case 508: return LEVEL;
+      case 509: return LIKE;
+      case 510: return LIMIT;
+      case 511: return LISTEN;
+      case 512: return LOAD;
+      case 513: return LOCAL;
+      case 514: return LOCALTIME;
+      case 515: return LOCALTIMESTAMP;
+      case 516: return LOCATION;
+      case 517: return LOCK_P;
+      case 518: return LOCKED;
+      case 519: return LOGGED;
+      case 520: return MAPPING;
+      case 521: return MATCH;
+      case 522: return MATCHED;
+      case 523: return MATERIALIZED;
+      case 524: return MAXVALUE;
+      case 525: return MERGE;
+      case 526: return MERGE_ACTION;
+      case 527: return METHOD;
+      case 528: return MINUTE_P;
+      case 529: return MINVALUE;
+      case 530: return MODE;
+      case 531: return MONTH_P;
+      case 532: return MOVE;
+      case 533: return NAME_P;
+      case 534: return NAMES;
+      case 535: return NATIONAL;
+      case 536: return NATURAL;
+      case 537: return NCHAR;
+      case 538: return NESTED;
+      case 539: return NEW;
+      case 540: return NEXT;
+      case 541: return NFC;
+      case 542: return NFD;
+      case 543: return NFKC;
+      case 544: return NFKD;
+      case 545: return NO;
+      case 546: return NONE;
+      case 547: return NORMALIZE;
+      case 548: return NORMALIZED;
+      case 549: return NOT;
+      case 550: return NOTHING;
+      case 551: return NOTIFY;
+      case 552: return NOTNULL;
+      case 553: return NOWAIT;
+      case 554: return NULL_P;
+      case 555: return NULLIF;
+      case 556: return NULLS_P;
+      case 557: return NUMERIC;
+      case 558: return OBJECT_P;
+      case 559: return OF;
+      case 560: return OFF;
+      case 561: return OFFSET;
+      case 562: return OIDS;
+      case 563: return OLD;
+      case 564: return OMIT;
+      case 565: return ON;
+      case 566: return ONLY;
+      case 567: return OPERATOR;
+      case 568: return OPTION;
+      case 569: return OPTIONS;
+      case 570: return OR;
+      case 571: return ORDER;
+      case 572: return ORDINALITY;
+      case 573: return OTHERS;
+      case 574: return OUT_P;
+      case 575: return OUTER_P;
+      case 576: return OVER;
+      case 577: return OVERLAPS;
+      case 578: return OVERLAY;
+      case 579: return OVERRIDING;
+      case 580: return OWNED;
+      case 581: return OWNER;
+      case 582: return PARALLEL;
+      case 583: return PARAMETER;
+      case 584: return PARSER;
+      case 585: return PARTIAL;
+      case 586: return PARTITION;
+      case 587: return PASSING;
+      case 588: return PASSWORD;
+      case 589: return PATH;
+      case 590: return PLACING;
+      case 591: return PLAN;
+      case 592: return PLANS;
+      case 593: return POLICY;
+      case 594: return POSITION;
+      case 595: return PRECEDING;
+      case 596: return PRECISION;
+      case 597: return PRESERVE;
+      case 598: return PREPARE;
+      case 599: return PREPARED;
+      case 600: return PRIMARY;
+      case 601: return PRIOR;
+      case 602: return PRIVILEGES;
+      case 603: return PROCEDURAL;
+      case 604: return PROCEDURE;
+      case 605: return PROCEDURES;
+      case 606: return PROGRAM;
+      case 607: return PUBLICATION;
+      case 608: return QUOTE;
+      case 609: return QUOTES;
+      case 610: return RANGE;
+      case 611: return READ;
+      case 612: return REAL;
+      case 613: return REASSIGN;
+      case 614: return RECHECK;
+      case 615: return RECURSIVE;
+      case 616: return REF_P;
+      case 617: return REFERENCES;
+      case 618: return REFERENCING;
+      case 619: return REFRESH;
+      case 620: return REINDEX;
+      case 621: return RELATIVE_P;
+      case 622: return RELEASE;
+      case 623: return RENAME;
+      case 624: return REPEATABLE;
+      case 625: return REPLACE;
+      case 626: return REPLICA;
+      case 627: return RESET;
+      case 628: return RESTART;
+      case 629: return RESTRICT;
+      case 630: return RETURN;
+      case 631: return RETURNING;
+      case 632: return RETURNS;
+      case 633: return REVOKE;
+      case 634: return RIGHT;
+      case 635: return ROLE;
+      case 636: return ROLLBACK;
+      case 637: return ROLLUP;
+      case 638: return ROUTINE;
+      case 639: return ROUTINES;
+      case 640: return ROW;
+      case 641: return ROWS;
+      case 642: return RULE;
+      case 643: return SAVEPOINT;
+      case 644: return SCALAR;
+      case 645: return SCHEMA;
+      case 646: return SCHEMAS;
+      case 647: return SCROLL;
+      case 648: return SEARCH;
+      case 649: return SECOND_P;
+      case 650: return SECURITY;
+      case 651: return SELECT;
+      case 652: return SEQUENCE;
+      case 653: return SEQUENCES;
+      case 654: return SERIALIZABLE;
+      case 655: return SERVER;
+      case 656: return SESSION;
+      case 657: return SESSION_USER;
+      case 658: return SET;
+      case 659: return SETS;
+      case 660: return SETOF;
+      case 661: return SHARE;
+      case 662: return SHOW;
+      case 663: return SIMILAR;
+      case 664: return SIMPLE;
+      case 665: return SKIP;
+      case 666: return SMALLINT;
+      case 667: return SNAPSHOT;
+      case 668: return SOME;
+      case 669: return SOURCE;
+      case 670: return SQL_P;
+      case 671: return STABLE;
+      case 672: return STANDALONE_P;
+      case 673: return START;
+      case 674: return STATEMENT;
+      case 675: return STATISTICS;
+      case 676: return STDIN;
+      case 677: return STDOUT;
+      case 678: return STORAGE;
+      case 679: return STORED;
+      case 680: return STRICT_P;
+      case 681: return STRING_P;
+      case 682: return STRIP_P;
+      case 683: return SUBSCRIPTION;
+      case 684: return SUBSTRING;
+      case 685: return SUPPORT;
+      case 686: return SYMMETRIC;
+      case 687: return SYSID;
+      case 688: return SYSTEM_P;
+      case 689: return SYSTEM_USER;
+      case 690: return TABLE;
+      case 691: return TABLES;
+      case 692: return TABLESAMPLE;
+      case 693: return TABLESPACE;
+      case 694: return TARGET;
+      case 695: return TEMP;
+      case 696: return TEMPLATE;
+      case 697: return TEMPORARY;
+      case 698: return TEXT_P;
+      case 699: return THEN;
+      case 700: return TIES;
+      case 701: return TIME;
+      case 702: return TIMESTAMP;
+      case 703: return TO;
+      case 704: return TRAILING;
+      case 705: return TRANSACTION;
+      case 706: return TRANSFORM;
+      case 707: return TREAT;
+      case 708: return TRIGGER;
+      case 709: return TRIM;
+      case 710: return TRUE_P;
+      case 711: return TRUNCATE;
+      case 712: return TRUSTED;
+      case 713: return TYPE_P;
+      case 714: return TYPES_P;
+      case 715: return UESCAPE;
+      case 716: return UNBOUNDED;
+      case 717: return UNCONDITIONAL;
+      case 718: return UNCOMMITTED;
+      case 719: return UNENCRYPTED;
+      case 720: return UNION;
+      case 721: return UNIQUE;
+      case 722: return UNKNOWN;
+      case 723: return UNLISTEN;
+      case 724: return UNLOGGED;
+      case 725: return UNTIL;
+      case 726: return UPDATE;
+      case 727: return USER;
+      case 728: return USING;
+      case 729: return VACUUM;
+      case 730: return VALID;
+      case 731: return VALIDATE;
+      case 732: return VALIDATOR;
+      case 733: return VALUE_P;
+      case 734: return VALUES;
+      case 735: return VARCHAR;
+      case 736: return VARIADIC;
+      case 737: return VARYING;
+      case 738: return VERBOSE;
+      case 739: return VERSION_P;
+      case 740: return VIEW;
+      case 741: return VIEWS;
+      case 742: return VOLATILE;
+      case 743: return WHEN;
+      case 744: return WHERE;
+      case 745: return WHITESPACE_P;
+      case 746: return WINDOW;
+      case 747: return WITH;
+      case 748: return WITHIN;
+      case 749: return WITHOUT;
+      case 750: return WORK;
+      case 751: return WRAPPER;
+      case 752: return WRITE;
+      case 753: return XML_P;
+      case 754: return XMLATTRIBUTES;
+      case 755: return XMLCONCAT;
+      case 756: return XMLELEMENT;
+      case 757: return XMLEXISTS;
+      case 758: return XMLFOREST;
+      case 759: return XMLNAMESPACES;
+      case 760: return XMLPARSE;
+      case 761: return XMLPI;
+      case 762: return XMLROOT;
+      case 763: return XMLSERIALIZE;
+      case 764: return XMLTABLE;
+      case 765: return YEAR_P;
+      case 766: return YES_P;
+      case 767: return ZONE;
+      case 768: return FORMAT_LA;
+      case 769: return NOT_LA;
+      case 770: return NULLS_LA;
+      case 771: return WITH_LA;
+      case 772: return WITHOUT_LA;
+      case 773: return MODE_TYPE_NAME;
+      case 774: return MODE_PLPGSQL_EXPR;
+      case 775: return MODE_PLPGSQL_ASSIGN1;
+      case 776: return MODE_PLPGSQL_ASSIGN2;
+      case 777: return MODE_PLPGSQL_ASSIGN3;
+      case 778: return UMINUS;
       default: return null;
     }
   }
@@ -4938,7 +5118,7 @@ public enum Token
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(63);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(70);
   }
 
   private static final Token[] INTERNAL_VALUES = values();

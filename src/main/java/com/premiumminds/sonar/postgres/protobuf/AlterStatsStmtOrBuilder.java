@@ -33,10 +33,19 @@ public interface AlterStatsStmtOrBuilder extends
       int index);
 
   /**
-   * <code>int32 stxstattarget = 2 [json_name = "stxstattarget"];</code>
+   * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+   * @return Whether the stxstattarget field is set.
+   */
+  boolean hasStxstattarget();
+  /**
+   * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
    * @return The stxstattarget.
    */
-  int getStxstattarget();
+  com.premiumminds.sonar.postgres.protobuf.Node getStxstattarget();
+  /**
+   * <code>.pg_query.Node stxstattarget = 2 [json_name = "stxstattarget"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getStxstattargetOrBuilder();
 
   /**
    * <code>bool missing_ok = 3 [json_name = "missing_ok"];</code>

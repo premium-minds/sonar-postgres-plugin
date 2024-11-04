@@ -87,25 +87,49 @@ public interface WindowFuncOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getAggfilterOrBuilder();
 
   /**
-   * <code>uint32 winref = 8 [json_name = "winref"];</code>
+   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+   */
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getRunConditionList();
+  /**
+   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getRunCondition(int index);
+  /**
+   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+   */
+  int getRunConditionCount();
+  /**
+   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getRunConditionOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getRunConditionOrBuilder(
+      int index);
+
+  /**
+   * <code>uint32 winref = 9 [json_name = "winref"];</code>
    * @return The winref.
    */
   int getWinref();
 
   /**
-   * <code>bool winstar = 9 [json_name = "winstar"];</code>
+   * <code>bool winstar = 10 [json_name = "winstar"];</code>
    * @return The winstar.
    */
   boolean getWinstar();
 
   /**
-   * <code>bool winagg = 10 [json_name = "winagg"];</code>
+   * <code>bool winagg = 11 [json_name = "winagg"];</code>
    * @return The winagg.
    */
   boolean getWinagg();
 
   /**
-   * <code>int32 location = 11 [json_name = "location"];</code>
+   * <code>int32 location = 12 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

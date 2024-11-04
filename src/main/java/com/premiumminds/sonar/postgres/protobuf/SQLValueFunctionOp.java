@@ -212,7 +212,7 @@ public enum SQLValueFunctionOp
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(42);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(45);
   }
 
   private static final SQLValueFunctionOp[] VALUES = values();

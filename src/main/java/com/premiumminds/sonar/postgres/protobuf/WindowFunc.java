@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   }
   private WindowFunc() {
     args_ = java.util.Collections.emptyList();
+    runCondition_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -178,10 +179,51 @@ private static final long serialVersionUID = 0L;
     return aggfilter_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : aggfilter_;
   }
 
-  public static final int WINREF_FIELD_NUMBER = 8;
+  public static final int RUN_CONDITION_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> runCondition_;
+  /**
+   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getRunConditionList() {
+    return runCondition_;
+  }
+  /**
+   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getRunConditionOrBuilderList() {
+    return runCondition_;
+  }
+  /**
+   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+   */
+  @java.lang.Override
+  public int getRunConditionCount() {
+    return runCondition_.size();
+  }
+  /**
+   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.Node getRunCondition(int index) {
+    return runCondition_.get(index);
+  }
+  /**
+   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getRunConditionOrBuilder(
+      int index) {
+    return runCondition_.get(index);
+  }
+
+  public static final int WINREF_FIELD_NUMBER = 9;
   private int winref_ = 0;
   /**
-   * <code>uint32 winref = 8 [json_name = "winref"];</code>
+   * <code>uint32 winref = 9 [json_name = "winref"];</code>
    * @return The winref.
    */
   @java.lang.Override
@@ -189,10 +231,10 @@ private static final long serialVersionUID = 0L;
     return winref_;
   }
 
-  public static final int WINSTAR_FIELD_NUMBER = 9;
+  public static final int WINSTAR_FIELD_NUMBER = 10;
   private boolean winstar_ = false;
   /**
-   * <code>bool winstar = 9 [json_name = "winstar"];</code>
+   * <code>bool winstar = 10 [json_name = "winstar"];</code>
    * @return The winstar.
    */
   @java.lang.Override
@@ -200,10 +242,10 @@ private static final long serialVersionUID = 0L;
     return winstar_;
   }
 
-  public static final int WINAGG_FIELD_NUMBER = 10;
+  public static final int WINAGG_FIELD_NUMBER = 11;
   private boolean winagg_ = false;
   /**
-   * <code>bool winagg = 10 [json_name = "winagg"];</code>
+   * <code>bool winagg = 11 [json_name = "winagg"];</code>
    * @return The winagg.
    */
   @java.lang.Override
@@ -211,10 +253,10 @@ private static final long serialVersionUID = 0L;
     return winagg_;
   }
 
-  public static final int LOCATION_FIELD_NUMBER = 11;
+  public static final int LOCATION_FIELD_NUMBER = 12;
   private int location_ = 0;
   /**
-   * <code>int32 location = 11 [json_name = "location"];</code>
+   * <code>int32 location = 12 [json_name = "location"];</code>
    * @return The location.
    */
   @java.lang.Override
@@ -257,17 +299,20 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(7, getAggfilter());
     }
+    for (int i = 0; i < runCondition_.size(); i++) {
+      output.writeMessage(8, runCondition_.get(i));
+    }
     if (winref_ != 0) {
-      output.writeUInt32(8, winref_);
+      output.writeUInt32(9, winref_);
     }
     if (winstar_ != false) {
-      output.writeBool(9, winstar_);
+      output.writeBool(10, winstar_);
     }
     if (winagg_ != false) {
-      output.writeBool(10, winagg_);
+      output.writeBool(11, winagg_);
     }
     if (location_ != 0) {
-      output.writeInt32(11, location_);
+      output.writeInt32(12, location_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -306,21 +351,25 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getAggfilter());
     }
+    for (int i = 0; i < runCondition_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, runCondition_.get(i));
+    }
     if (winref_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(8, winref_);
+        .computeUInt32Size(9, winref_);
     }
     if (winstar_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(9, winstar_);
+        .computeBoolSize(10, winstar_);
     }
     if (winagg_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(10, winagg_);
+        .computeBoolSize(11, winagg_);
     }
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(11, location_);
+        .computeInt32Size(12, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -357,6 +406,8 @@ private static final long serialVersionUID = 0L;
       if (!getAggfilter()
           .equals(other.getAggfilter())) return false;
     }
+    if (!getRunConditionList()
+        .equals(other.getRunConditionList())) return false;
     if (getWinref()
         != other.getWinref()) return false;
     if (getWinstar()
@@ -395,6 +446,10 @@ private static final long serialVersionUID = 0L;
     if (hasAggfilter()) {
       hash = (37 * hash) + AGGFILTER_FIELD_NUMBER;
       hash = (53 * hash) + getAggfilter().hashCode();
+    }
+    if (getRunConditionCount() > 0) {
+      hash = (37 * hash) + RUN_CONDITION_FIELD_NUMBER;
+      hash = (53 * hash) + getRunConditionList().hashCode();
     }
     hash = (37 * hash) + WINREF_FIELD_NUMBER;
     hash = (53 * hash) + getWinref();
@@ -539,6 +594,7 @@ private static final long serialVersionUID = 0L;
         getXprFieldBuilder();
         getArgsFieldBuilder();
         getAggfilterFieldBuilder();
+        getRunConditionFieldBuilder();
       }
     }
     @java.lang.Override
@@ -566,6 +622,13 @@ private static final long serialVersionUID = 0L;
         aggfilterBuilder_.dispose();
         aggfilterBuilder_ = null;
       }
+      if (runConditionBuilder_ == null) {
+        runCondition_ = java.util.Collections.emptyList();
+      } else {
+        runCondition_ = null;
+        runConditionBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000080);
       winref_ = 0;
       winstar_ = false;
       winagg_ = false;
@@ -612,6 +675,15 @@ private static final long serialVersionUID = 0L;
       } else {
         result.args_ = argsBuilder_.build();
       }
+      if (runConditionBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          runCondition_ = java.util.Collections.unmodifiableList(runCondition_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.runCondition_ = runCondition_;
+      } else {
+        result.runCondition_ = runConditionBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.WindowFunc result) {
@@ -641,16 +713,16 @@ private static final long serialVersionUID = 0L;
             : aggfilterBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.winref_ = winref_;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.winstar_ = winstar_;
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.winagg_ = winagg_;
       }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.location_ = location_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -744,6 +816,32 @@ private static final long serialVersionUID = 0L;
       if (other.hasAggfilter()) {
         mergeAggfilter(other.getAggfilter());
       }
+      if (runConditionBuilder_ == null) {
+        if (!other.runCondition_.isEmpty()) {
+          if (runCondition_.isEmpty()) {
+            runCondition_ = other.runCondition_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureRunConditionIsMutable();
+            runCondition_.addAll(other.runCondition_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.runCondition_.isEmpty()) {
+          if (runConditionBuilder_.isEmpty()) {
+            runConditionBuilder_.dispose();
+            runConditionBuilder_ = null;
+            runCondition_ = other.runCondition_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+            runConditionBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getRunConditionFieldBuilder() : null;
+          } else {
+            runConditionBuilder_.addAllMessages(other.runCondition_);
+          }
+        }
+      }
       if (other.getWinref() != 0) {
         setWinref(other.getWinref());
       }
@@ -829,26 +927,39 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
-            case 64: {
-              winref_ = input.readUInt32();
-              bitField0_ |= 0x00000080;
+            case 66: {
+              com.premiumminds.sonar.postgres.protobuf.Node m =
+                  input.readMessage(
+                      com.premiumminds.sonar.postgres.protobuf.Node.parser(),
+                      extensionRegistry);
+              if (runConditionBuilder_ == null) {
+                ensureRunConditionIsMutable();
+                runCondition_.add(m);
+              } else {
+                runConditionBuilder_.addMessage(m);
+              }
               break;
-            } // case 64
+            } // case 66
             case 72: {
-              winstar_ = input.readBool();
+              winref_ = input.readUInt32();
               bitField0_ |= 0x00000100;
               break;
             } // case 72
             case 80: {
-              winagg_ = input.readBool();
+              winstar_ = input.readBool();
               bitField0_ |= 0x00000200;
               break;
             } // case 80
             case 88: {
-              location_ = input.readInt32();
+              winagg_ = input.readBool();
               bitField0_ |= 0x00000400;
               break;
             } // case 88
+            case 96: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 96
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1476,9 +1587,249 @@ private static final long serialVersionUID = 0L;
       return aggfilterBuilder_;
     }
 
+    private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> runCondition_ =
+      java.util.Collections.emptyList();
+    private void ensureRunConditionIsMutable() {
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        runCondition_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(runCondition_);
+        bitField0_ |= 0x00000080;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> runConditionBuilder_;
+
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getRunConditionList() {
+      if (runConditionBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(runCondition_);
+      } else {
+        return runConditionBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public int getRunConditionCount() {
+      if (runConditionBuilder_ == null) {
+        return runCondition_.size();
+      } else {
+        return runConditionBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node getRunCondition(int index) {
+      if (runConditionBuilder_ == null) {
+        return runCondition_.get(index);
+      } else {
+        return runConditionBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public Builder setRunCondition(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (runConditionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRunConditionIsMutable();
+        runCondition_.set(index, value);
+        onChanged();
+      } else {
+        runConditionBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public Builder setRunCondition(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+      if (runConditionBuilder_ == null) {
+        ensureRunConditionIsMutable();
+        runCondition_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        runConditionBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public Builder addRunCondition(com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (runConditionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRunConditionIsMutable();
+        runCondition_.add(value);
+        onChanged();
+      } else {
+        runConditionBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public Builder addRunCondition(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (runConditionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRunConditionIsMutable();
+        runCondition_.add(index, value);
+        onChanged();
+      } else {
+        runConditionBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public Builder addRunCondition(
+        com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+      if (runConditionBuilder_ == null) {
+        ensureRunConditionIsMutable();
+        runCondition_.add(builderForValue.build());
+        onChanged();
+      } else {
+        runConditionBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public Builder addRunCondition(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+      if (runConditionBuilder_ == null) {
+        ensureRunConditionIsMutable();
+        runCondition_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        runConditionBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public Builder addAllRunCondition(
+        java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
+      if (runConditionBuilder_ == null) {
+        ensureRunConditionIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, runCondition_);
+        onChanged();
+      } else {
+        runConditionBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public Builder clearRunCondition() {
+      if (runConditionBuilder_ == null) {
+        runCondition_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+      } else {
+        runConditionBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public Builder removeRunCondition(int index) {
+      if (runConditionBuilder_ == null) {
+        ensureRunConditionIsMutable();
+        runCondition_.remove(index);
+        onChanged();
+      } else {
+        runConditionBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node.Builder getRunConditionBuilder(
+        int index) {
+      return getRunConditionFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getRunConditionOrBuilder(
+        int index) {
+      if (runConditionBuilder_ == null) {
+        return runCondition_.get(index);  } else {
+        return runConditionBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+         getRunConditionOrBuilderList() {
+      if (runConditionBuilder_ != null) {
+        return runConditionBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(runCondition_);
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node.Builder addRunConditionBuilder() {
+      return getRunConditionFieldBuilder().addBuilder(
+          com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node.Builder addRunConditionBuilder(
+        int index) {
+      return getRunConditionFieldBuilder().addBuilder(
+          index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
+     */
+    public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
+         getRunConditionBuilderList() {
+      return getRunConditionFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+        getRunConditionFieldBuilder() {
+      if (runConditionBuilder_ == null) {
+        runConditionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
+                runCondition_,
+                ((bitField0_ & 0x00000080) != 0),
+                getParentForChildren(),
+                isClean());
+        runCondition_ = null;
+      }
+      return runConditionBuilder_;
+    }
+
     private int winref_ ;
     /**
-     * <code>uint32 winref = 8 [json_name = "winref"];</code>
+     * <code>uint32 winref = 9 [json_name = "winref"];</code>
      * @return The winref.
      */
     @java.lang.Override
@@ -1486,23 +1837,23 @@ private static final long serialVersionUID = 0L;
       return winref_;
     }
     /**
-     * <code>uint32 winref = 8 [json_name = "winref"];</code>
+     * <code>uint32 winref = 9 [json_name = "winref"];</code>
      * @param value The winref to set.
      * @return This builder for chaining.
      */
     public Builder setWinref(int value) {
 
       winref_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 winref = 8 [json_name = "winref"];</code>
+     * <code>uint32 winref = 9 [json_name = "winref"];</code>
      * @return This builder for chaining.
      */
     public Builder clearWinref() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       winref_ = 0;
       onChanged();
       return this;
@@ -1510,7 +1861,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean winstar_ ;
     /**
-     * <code>bool winstar = 9 [json_name = "winstar"];</code>
+     * <code>bool winstar = 10 [json_name = "winstar"];</code>
      * @return The winstar.
      */
     @java.lang.Override
@@ -1518,23 +1869,23 @@ private static final long serialVersionUID = 0L;
       return winstar_;
     }
     /**
-     * <code>bool winstar = 9 [json_name = "winstar"];</code>
+     * <code>bool winstar = 10 [json_name = "winstar"];</code>
      * @param value The winstar to set.
      * @return This builder for chaining.
      */
     public Builder setWinstar(boolean value) {
 
       winstar_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
     /**
-     * <code>bool winstar = 9 [json_name = "winstar"];</code>
+     * <code>bool winstar = 10 [json_name = "winstar"];</code>
      * @return This builder for chaining.
      */
     public Builder clearWinstar() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       winstar_ = false;
       onChanged();
       return this;
@@ -1542,7 +1893,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean winagg_ ;
     /**
-     * <code>bool winagg = 10 [json_name = "winagg"];</code>
+     * <code>bool winagg = 11 [json_name = "winagg"];</code>
      * @return The winagg.
      */
     @java.lang.Override
@@ -1550,23 +1901,23 @@ private static final long serialVersionUID = 0L;
       return winagg_;
     }
     /**
-     * <code>bool winagg = 10 [json_name = "winagg"];</code>
+     * <code>bool winagg = 11 [json_name = "winagg"];</code>
      * @param value The winagg to set.
      * @return This builder for chaining.
      */
     public Builder setWinagg(boolean value) {
 
       winagg_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
-     * <code>bool winagg = 10 [json_name = "winagg"];</code>
+     * <code>bool winagg = 11 [json_name = "winagg"];</code>
      * @return This builder for chaining.
      */
     public Builder clearWinagg() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       winagg_ = false;
       onChanged();
       return this;
@@ -1574,7 +1925,7 @@ private static final long serialVersionUID = 0L;
 
     private int location_ ;
     /**
-     * <code>int32 location = 11 [json_name = "location"];</code>
+     * <code>int32 location = 12 [json_name = "location"];</code>
      * @return The location.
      */
     @java.lang.Override
@@ -1582,23 +1933,23 @@ private static final long serialVersionUID = 0L;
       return location_;
     }
     /**
-     * <code>int32 location = 11 [json_name = "location"];</code>
+     * <code>int32 location = 12 [json_name = "location"];</code>
      * @param value The location to set.
      * @return This builder for chaining.
      */
     public Builder setLocation(int value) {
 
       location_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 location = 11 [json_name = "location"];</code>
+     * <code>int32 location = 12 [json_name = "location"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000800);
       location_ = 0;
       onChanged();
       return this;

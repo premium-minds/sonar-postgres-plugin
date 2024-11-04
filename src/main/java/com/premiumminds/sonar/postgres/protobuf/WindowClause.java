@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
     refname_ = "";
     partitionClause_ = java.util.Collections.emptyList();
     orderClause_ = java.util.Collections.emptyList();
-    runCondition_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -268,51 +267,10 @@ private static final long serialVersionUID = 0L;
     return endOffset_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : endOffset_;
   }
 
-  public static final int RUN_CONDITION_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> runCondition_;
-  /**
-   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getRunConditionList() {
-    return runCondition_;
-  }
-  /**
-   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-      getRunConditionOrBuilderList() {
-    return runCondition_;
-  }
-  /**
-   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-   */
-  @java.lang.Override
-  public int getRunConditionCount() {
-    return runCondition_.size();
-  }
-  /**
-   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-   */
-  @java.lang.Override
-  public com.premiumminds.sonar.postgres.protobuf.Node getRunCondition(int index) {
-    return runCondition_.get(index);
-  }
-  /**
-   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-   */
-  @java.lang.Override
-  public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getRunConditionOrBuilder(
-      int index) {
-    return runCondition_.get(index);
-  }
-
-  public static final int START_IN_RANGE_FUNC_FIELD_NUMBER = 9;
+  public static final int START_IN_RANGE_FUNC_FIELD_NUMBER = 8;
   private int startInRangeFunc_ = 0;
   /**
-   * <code>uint32 start_in_range_func = 9 [json_name = "startInRangeFunc"];</code>
+   * <code>uint32 start_in_range_func = 8 [json_name = "startInRangeFunc"];</code>
    * @return The startInRangeFunc.
    */
   @java.lang.Override
@@ -320,10 +278,10 @@ private static final long serialVersionUID = 0L;
     return startInRangeFunc_;
   }
 
-  public static final int END_IN_RANGE_FUNC_FIELD_NUMBER = 10;
+  public static final int END_IN_RANGE_FUNC_FIELD_NUMBER = 9;
   private int endInRangeFunc_ = 0;
   /**
-   * <code>uint32 end_in_range_func = 10 [json_name = "endInRangeFunc"];</code>
+   * <code>uint32 end_in_range_func = 9 [json_name = "endInRangeFunc"];</code>
    * @return The endInRangeFunc.
    */
   @java.lang.Override
@@ -331,10 +289,10 @@ private static final long serialVersionUID = 0L;
     return endInRangeFunc_;
   }
 
-  public static final int IN_RANGE_COLL_FIELD_NUMBER = 11;
+  public static final int IN_RANGE_COLL_FIELD_NUMBER = 10;
   private int inRangeColl_ = 0;
   /**
-   * <code>uint32 in_range_coll = 11 [json_name = "inRangeColl"];</code>
+   * <code>uint32 in_range_coll = 10 [json_name = "inRangeColl"];</code>
    * @return The inRangeColl.
    */
   @java.lang.Override
@@ -342,10 +300,10 @@ private static final long serialVersionUID = 0L;
     return inRangeColl_;
   }
 
-  public static final int IN_RANGE_ASC_FIELD_NUMBER = 12;
+  public static final int IN_RANGE_ASC_FIELD_NUMBER = 11;
   private boolean inRangeAsc_ = false;
   /**
-   * <code>bool in_range_asc = 12 [json_name = "inRangeAsc"];</code>
+   * <code>bool in_range_asc = 11 [json_name = "inRangeAsc"];</code>
    * @return The inRangeAsc.
    */
   @java.lang.Override
@@ -353,10 +311,10 @@ private static final long serialVersionUID = 0L;
     return inRangeAsc_;
   }
 
-  public static final int IN_RANGE_NULLS_FIRST_FIELD_NUMBER = 13;
+  public static final int IN_RANGE_NULLS_FIRST_FIELD_NUMBER = 12;
   private boolean inRangeNullsFirst_ = false;
   /**
-   * <code>bool in_range_nulls_first = 13 [json_name = "inRangeNullsFirst"];</code>
+   * <code>bool in_range_nulls_first = 12 [json_name = "inRangeNullsFirst"];</code>
    * @return The inRangeNullsFirst.
    */
   @java.lang.Override
@@ -364,10 +322,10 @@ private static final long serialVersionUID = 0L;
     return inRangeNullsFirst_;
   }
 
-  public static final int WINREF_FIELD_NUMBER = 14;
+  public static final int WINREF_FIELD_NUMBER = 13;
   private int winref_ = 0;
   /**
-   * <code>uint32 winref = 14 [json_name = "winref"];</code>
+   * <code>uint32 winref = 13 [json_name = "winref"];</code>
    * @return The winref.
    */
   @java.lang.Override
@@ -375,10 +333,10 @@ private static final long serialVersionUID = 0L;
     return winref_;
   }
 
-  public static final int COPIED_ORDER_FIELD_NUMBER = 15;
+  public static final int COPIED_ORDER_FIELD_NUMBER = 14;
   private boolean copiedOrder_ = false;
   /**
-   * <code>bool copied_order = 15 [json_name = "copiedOrder"];</code>
+   * <code>bool copied_order = 14 [json_name = "copiedOrder"];</code>
    * @return The copiedOrder.
    */
   @java.lang.Override
@@ -421,29 +379,26 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(7, getEndOffset());
     }
-    for (int i = 0; i < runCondition_.size(); i++) {
-      output.writeMessage(8, runCondition_.get(i));
-    }
     if (startInRangeFunc_ != 0) {
-      output.writeUInt32(9, startInRangeFunc_);
+      output.writeUInt32(8, startInRangeFunc_);
     }
     if (endInRangeFunc_ != 0) {
-      output.writeUInt32(10, endInRangeFunc_);
+      output.writeUInt32(9, endInRangeFunc_);
     }
     if (inRangeColl_ != 0) {
-      output.writeUInt32(11, inRangeColl_);
+      output.writeUInt32(10, inRangeColl_);
     }
     if (inRangeAsc_ != false) {
-      output.writeBool(12, inRangeAsc_);
+      output.writeBool(11, inRangeAsc_);
     }
     if (inRangeNullsFirst_ != false) {
-      output.writeBool(13, inRangeNullsFirst_);
+      output.writeBool(12, inRangeNullsFirst_);
     }
     if (winref_ != 0) {
-      output.writeUInt32(14, winref_);
+      output.writeUInt32(13, winref_);
     }
     if (copiedOrder_ != false) {
-      output.writeBool(15, copiedOrder_);
+      output.writeBool(14, copiedOrder_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -480,37 +435,33 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getEndOffset());
     }
-    for (int i = 0; i < runCondition_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, runCondition_.get(i));
-    }
     if (startInRangeFunc_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(9, startInRangeFunc_);
+        .computeUInt32Size(8, startInRangeFunc_);
     }
     if (endInRangeFunc_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(10, endInRangeFunc_);
+        .computeUInt32Size(9, endInRangeFunc_);
     }
     if (inRangeColl_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(11, inRangeColl_);
+        .computeUInt32Size(10, inRangeColl_);
     }
     if (inRangeAsc_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(12, inRangeAsc_);
+        .computeBoolSize(11, inRangeAsc_);
     }
     if (inRangeNullsFirst_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(13, inRangeNullsFirst_);
+        .computeBoolSize(12, inRangeNullsFirst_);
     }
     if (winref_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(14, winref_);
+        .computeUInt32Size(13, winref_);
     }
     if (copiedOrder_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(15, copiedOrder_);
+        .computeBoolSize(14, copiedOrder_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -547,8 +498,6 @@ private static final long serialVersionUID = 0L;
       if (!getEndOffset()
           .equals(other.getEndOffset())) return false;
     }
-    if (!getRunConditionList()
-        .equals(other.getRunConditionList())) return false;
     if (getStartInRangeFunc()
         != other.getStartInRangeFunc()) return false;
     if (getEndInRangeFunc()
@@ -595,10 +544,6 @@ private static final long serialVersionUID = 0L;
     if (hasEndOffset()) {
       hash = (37 * hash) + END_OFFSET_FIELD_NUMBER;
       hash = (53 * hash) + getEndOffset().hashCode();
-    }
-    if (getRunConditionCount() > 0) {
-      hash = (37 * hash) + RUN_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getRunConditionList().hashCode();
     }
     hash = (37 * hash) + START_IN_RANGE_FUNC_FIELD_NUMBER;
     hash = (53 * hash) + getStartInRangeFunc();
@@ -751,7 +696,6 @@ private static final long serialVersionUID = 0L;
         getOrderClauseFieldBuilder();
         getStartOffsetFieldBuilder();
         getEndOffsetFieldBuilder();
-        getRunConditionFieldBuilder();
       }
     }
     @java.lang.Override
@@ -785,13 +729,6 @@ private static final long serialVersionUID = 0L;
         endOffsetBuilder_.dispose();
         endOffsetBuilder_ = null;
       }
-      if (runConditionBuilder_ == null) {
-        runCondition_ = java.util.Collections.emptyList();
-      } else {
-        runCondition_ = null;
-        runConditionBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000080);
       startInRangeFunc_ = 0;
       endInRangeFunc_ = 0;
       inRangeColl_ = 0;
@@ -850,15 +787,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.orderClause_ = orderClauseBuilder_.build();
       }
-      if (runConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
-          runCondition_ = java.util.Collections.unmodifiableList(runCondition_);
-          bitField0_ = (bitField0_ & ~0x00000080);
-        }
-        result.runCondition_ = runCondition_;
-      } else {
-        result.runCondition_ = runConditionBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.WindowClause result) {
@@ -885,25 +813,25 @@ private static final long serialVersionUID = 0L;
             : endOffsetBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.startInRangeFunc_ = startInRangeFunc_;
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.endInRangeFunc_ = endInRangeFunc_;
       }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.inRangeColl_ = inRangeColl_;
       }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.inRangeAsc_ = inRangeAsc_;
       }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.inRangeNullsFirst_ = inRangeNullsFirst_;
       }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
+      if (((from_bitField0_ & 0x00001000) != 0)) {
         result.winref_ = winref_;
       }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.copiedOrder_ = copiedOrder_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -1024,32 +952,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasEndOffset()) {
         mergeEndOffset(other.getEndOffset());
       }
-      if (runConditionBuilder_ == null) {
-        if (!other.runCondition_.isEmpty()) {
-          if (runCondition_.isEmpty()) {
-            runCondition_ = other.runCondition_;
-            bitField0_ = (bitField0_ & ~0x00000080);
-          } else {
-            ensureRunConditionIsMutable();
-            runCondition_.addAll(other.runCondition_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.runCondition_.isEmpty()) {
-          if (runConditionBuilder_.isEmpty()) {
-            runConditionBuilder_.dispose();
-            runConditionBuilder_ = null;
-            runCondition_ = other.runCondition_;
-            bitField0_ = (bitField0_ & ~0x00000080);
-            runConditionBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getRunConditionFieldBuilder() : null;
-          } else {
-            runConditionBuilder_.addAllMessages(other.runCondition_);
-          }
-        }
-      }
       if (other.getStartInRangeFunc() != 0) {
         setStartInRangeFunc(other.getStartInRangeFunc());
       }
@@ -1152,54 +1054,41 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
-            case 66: {
-              com.premiumminds.sonar.postgres.protobuf.Node m =
-                  input.readMessage(
-                      com.premiumminds.sonar.postgres.protobuf.Node.parser(),
-                      extensionRegistry);
-              if (runConditionBuilder_ == null) {
-                ensureRunConditionIsMutable();
-                runCondition_.add(m);
-              } else {
-                runConditionBuilder_.addMessage(m);
-              }
-              break;
-            } // case 66
-            case 72: {
+            case 64: {
               startInRangeFunc_ = input.readUInt32();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              endInRangeFunc_ = input.readUInt32();
               bitField0_ |= 0x00000100;
               break;
             } // case 72
             case 80: {
-              endInRangeFunc_ = input.readUInt32();
+              inRangeColl_ = input.readUInt32();
               bitField0_ |= 0x00000200;
               break;
             } // case 80
             case 88: {
-              inRangeColl_ = input.readUInt32();
+              inRangeAsc_ = input.readBool();
               bitField0_ |= 0x00000400;
               break;
             } // case 88
             case 96: {
-              inRangeAsc_ = input.readBool();
+              inRangeNullsFirst_ = input.readBool();
               bitField0_ |= 0x00000800;
               break;
             } // case 96
             case 104: {
-              inRangeNullsFirst_ = input.readBool();
+              winref_ = input.readUInt32();
               bitField0_ |= 0x00001000;
               break;
             } // case 104
             case 112: {
-              winref_ = input.readUInt32();
+              copiedOrder_ = input.readBool();
               bitField0_ |= 0x00002000;
               break;
             } // case 112
-            case 120: {
-              copiedOrder_ = input.readBool();
-              bitField0_ |= 0x00004000;
-              break;
-            } // case 120
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2115,249 +2004,9 @@ private static final long serialVersionUID = 0L;
       return endOffsetBuilder_;
     }
 
-    private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> runCondition_ =
-      java.util.Collections.emptyList();
-    private void ensureRunConditionIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
-        runCondition_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(runCondition_);
-        bitField0_ |= 0x00000080;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> runConditionBuilder_;
-
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getRunConditionList() {
-      if (runConditionBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(runCondition_);
-      } else {
-        return runConditionBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public int getRunConditionCount() {
-      if (runConditionBuilder_ == null) {
-        return runCondition_.size();
-      } else {
-        return runConditionBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public com.premiumminds.sonar.postgres.protobuf.Node getRunCondition(int index) {
-      if (runConditionBuilder_ == null) {
-        return runCondition_.get(index);
-      } else {
-        return runConditionBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public Builder setRunCondition(
-        int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
-      if (runConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureRunConditionIsMutable();
-        runCondition_.set(index, value);
-        onChanged();
-      } else {
-        runConditionBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public Builder setRunCondition(
-        int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
-      if (runConditionBuilder_ == null) {
-        ensureRunConditionIsMutable();
-        runCondition_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        runConditionBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public Builder addRunCondition(com.premiumminds.sonar.postgres.protobuf.Node value) {
-      if (runConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureRunConditionIsMutable();
-        runCondition_.add(value);
-        onChanged();
-      } else {
-        runConditionBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public Builder addRunCondition(
-        int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
-      if (runConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureRunConditionIsMutable();
-        runCondition_.add(index, value);
-        onChanged();
-      } else {
-        runConditionBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public Builder addRunCondition(
-        com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
-      if (runConditionBuilder_ == null) {
-        ensureRunConditionIsMutable();
-        runCondition_.add(builderForValue.build());
-        onChanged();
-      } else {
-        runConditionBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public Builder addRunCondition(
-        int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
-      if (runConditionBuilder_ == null) {
-        ensureRunConditionIsMutable();
-        runCondition_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        runConditionBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public Builder addAllRunCondition(
-        java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
-      if (runConditionBuilder_ == null) {
-        ensureRunConditionIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, runCondition_);
-        onChanged();
-      } else {
-        runConditionBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public Builder clearRunCondition() {
-      if (runConditionBuilder_ == null) {
-        runCondition_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
-        onChanged();
-      } else {
-        runConditionBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public Builder removeRunCondition(int index) {
-      if (runConditionBuilder_ == null) {
-        ensureRunConditionIsMutable();
-        runCondition_.remove(index);
-        onChanged();
-      } else {
-        runConditionBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public com.premiumminds.sonar.postgres.protobuf.Node.Builder getRunConditionBuilder(
-        int index) {
-      return getRunConditionFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getRunConditionOrBuilder(
-        int index) {
-      if (runConditionBuilder_ == null) {
-        return runCondition_.get(index);  } else {
-        return runConditionBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-         getRunConditionOrBuilderList() {
-      if (runConditionBuilder_ != null) {
-        return runConditionBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(runCondition_);
-      }
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public com.premiumminds.sonar.postgres.protobuf.Node.Builder addRunConditionBuilder() {
-      return getRunConditionFieldBuilder().addBuilder(
-          com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public com.premiumminds.sonar.postgres.protobuf.Node.Builder addRunConditionBuilder(
-        int index) {
-      return getRunConditionFieldBuilder().addBuilder(
-          index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-     */
-    public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
-         getRunConditionBuilderList() {
-      return getRunConditionFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-        getRunConditionFieldBuilder() {
-      if (runConditionBuilder_ == null) {
-        runConditionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
-                runCondition_,
-                ((bitField0_ & 0x00000080) != 0),
-                getParentForChildren(),
-                isClean());
-        runCondition_ = null;
-      }
-      return runConditionBuilder_;
-    }
-
     private int startInRangeFunc_ ;
     /**
-     * <code>uint32 start_in_range_func = 9 [json_name = "startInRangeFunc"];</code>
+     * <code>uint32 start_in_range_func = 8 [json_name = "startInRangeFunc"];</code>
      * @return The startInRangeFunc.
      */
     @java.lang.Override
@@ -2365,23 +2014,23 @@ private static final long serialVersionUID = 0L;
       return startInRangeFunc_;
     }
     /**
-     * <code>uint32 start_in_range_func = 9 [json_name = "startInRangeFunc"];</code>
+     * <code>uint32 start_in_range_func = 8 [json_name = "startInRangeFunc"];</code>
      * @param value The startInRangeFunc to set.
      * @return This builder for chaining.
      */
     public Builder setStartInRangeFunc(int value) {
 
       startInRangeFunc_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 start_in_range_func = 9 [json_name = "startInRangeFunc"];</code>
+     * <code>uint32 start_in_range_func = 8 [json_name = "startInRangeFunc"];</code>
      * @return This builder for chaining.
      */
     public Builder clearStartInRangeFunc() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000080);
       startInRangeFunc_ = 0;
       onChanged();
       return this;
@@ -2389,7 +2038,7 @@ private static final long serialVersionUID = 0L;
 
     private int endInRangeFunc_ ;
     /**
-     * <code>uint32 end_in_range_func = 10 [json_name = "endInRangeFunc"];</code>
+     * <code>uint32 end_in_range_func = 9 [json_name = "endInRangeFunc"];</code>
      * @return The endInRangeFunc.
      */
     @java.lang.Override
@@ -2397,23 +2046,23 @@ private static final long serialVersionUID = 0L;
       return endInRangeFunc_;
     }
     /**
-     * <code>uint32 end_in_range_func = 10 [json_name = "endInRangeFunc"];</code>
+     * <code>uint32 end_in_range_func = 9 [json_name = "endInRangeFunc"];</code>
      * @param value The endInRangeFunc to set.
      * @return This builder for chaining.
      */
     public Builder setEndInRangeFunc(int value) {
 
       endInRangeFunc_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 end_in_range_func = 10 [json_name = "endInRangeFunc"];</code>
+     * <code>uint32 end_in_range_func = 9 [json_name = "endInRangeFunc"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEndInRangeFunc() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000100);
       endInRangeFunc_ = 0;
       onChanged();
       return this;
@@ -2421,7 +2070,7 @@ private static final long serialVersionUID = 0L;
 
     private int inRangeColl_ ;
     /**
-     * <code>uint32 in_range_coll = 11 [json_name = "inRangeColl"];</code>
+     * <code>uint32 in_range_coll = 10 [json_name = "inRangeColl"];</code>
      * @return The inRangeColl.
      */
     @java.lang.Override
@@ -2429,23 +2078,23 @@ private static final long serialVersionUID = 0L;
       return inRangeColl_;
     }
     /**
-     * <code>uint32 in_range_coll = 11 [json_name = "inRangeColl"];</code>
+     * <code>uint32 in_range_coll = 10 [json_name = "inRangeColl"];</code>
      * @param value The inRangeColl to set.
      * @return This builder for chaining.
      */
     public Builder setInRangeColl(int value) {
 
       inRangeColl_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 in_range_coll = 11 [json_name = "inRangeColl"];</code>
+     * <code>uint32 in_range_coll = 10 [json_name = "inRangeColl"];</code>
      * @return This builder for chaining.
      */
     public Builder clearInRangeColl() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000200);
       inRangeColl_ = 0;
       onChanged();
       return this;
@@ -2453,7 +2102,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean inRangeAsc_ ;
     /**
-     * <code>bool in_range_asc = 12 [json_name = "inRangeAsc"];</code>
+     * <code>bool in_range_asc = 11 [json_name = "inRangeAsc"];</code>
      * @return The inRangeAsc.
      */
     @java.lang.Override
@@ -2461,23 +2110,23 @@ private static final long serialVersionUID = 0L;
       return inRangeAsc_;
     }
     /**
-     * <code>bool in_range_asc = 12 [json_name = "inRangeAsc"];</code>
+     * <code>bool in_range_asc = 11 [json_name = "inRangeAsc"];</code>
      * @param value The inRangeAsc to set.
      * @return This builder for chaining.
      */
     public Builder setInRangeAsc(boolean value) {
 
       inRangeAsc_ = value;
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
-     * <code>bool in_range_asc = 12 [json_name = "inRangeAsc"];</code>
+     * <code>bool in_range_asc = 11 [json_name = "inRangeAsc"];</code>
      * @return This builder for chaining.
      */
     public Builder clearInRangeAsc() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00000400);
       inRangeAsc_ = false;
       onChanged();
       return this;
@@ -2485,7 +2134,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean inRangeNullsFirst_ ;
     /**
-     * <code>bool in_range_nulls_first = 13 [json_name = "inRangeNullsFirst"];</code>
+     * <code>bool in_range_nulls_first = 12 [json_name = "inRangeNullsFirst"];</code>
      * @return The inRangeNullsFirst.
      */
     @java.lang.Override
@@ -2493,23 +2142,23 @@ private static final long serialVersionUID = 0L;
       return inRangeNullsFirst_;
     }
     /**
-     * <code>bool in_range_nulls_first = 13 [json_name = "inRangeNullsFirst"];</code>
+     * <code>bool in_range_nulls_first = 12 [json_name = "inRangeNullsFirst"];</code>
      * @param value The inRangeNullsFirst to set.
      * @return This builder for chaining.
      */
     public Builder setInRangeNullsFirst(boolean value) {
 
       inRangeNullsFirst_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
     /**
-     * <code>bool in_range_nulls_first = 13 [json_name = "inRangeNullsFirst"];</code>
+     * <code>bool in_range_nulls_first = 12 [json_name = "inRangeNullsFirst"];</code>
      * @return This builder for chaining.
      */
     public Builder clearInRangeNullsFirst() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00000800);
       inRangeNullsFirst_ = false;
       onChanged();
       return this;
@@ -2517,7 +2166,7 @@ private static final long serialVersionUID = 0L;
 
     private int winref_ ;
     /**
-     * <code>uint32 winref = 14 [json_name = "winref"];</code>
+     * <code>uint32 winref = 13 [json_name = "winref"];</code>
      * @return The winref.
      */
     @java.lang.Override
@@ -2525,23 +2174,23 @@ private static final long serialVersionUID = 0L;
       return winref_;
     }
     /**
-     * <code>uint32 winref = 14 [json_name = "winref"];</code>
+     * <code>uint32 winref = 13 [json_name = "winref"];</code>
      * @param value The winref to set.
      * @return This builder for chaining.
      */
     public Builder setWinref(int value) {
 
       winref_ = value;
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 winref = 14 [json_name = "winref"];</code>
+     * <code>uint32 winref = 13 [json_name = "winref"];</code>
      * @return This builder for chaining.
      */
     public Builder clearWinref() {
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00001000);
       winref_ = 0;
       onChanged();
       return this;
@@ -2549,7 +2198,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean copiedOrder_ ;
     /**
-     * <code>bool copied_order = 15 [json_name = "copiedOrder"];</code>
+     * <code>bool copied_order = 14 [json_name = "copiedOrder"];</code>
      * @return The copiedOrder.
      */
     @java.lang.Override
@@ -2557,23 +2206,23 @@ private static final long serialVersionUID = 0L;
       return copiedOrder_;
     }
     /**
-     * <code>bool copied_order = 15 [json_name = "copiedOrder"];</code>
+     * <code>bool copied_order = 14 [json_name = "copiedOrder"];</code>
      * @param value The copiedOrder to set.
      * @return This builder for chaining.
      */
     public Builder setCopiedOrder(boolean value) {
 
       copiedOrder_ = value;
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
     /**
-     * <code>bool copied_order = 15 [json_name = "copiedOrder"];</code>
+     * <code>bool copied_order = 14 [json_name = "copiedOrder"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCopiedOrder() {
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       copiedOrder_ = false;
       onChanged();
       return this;

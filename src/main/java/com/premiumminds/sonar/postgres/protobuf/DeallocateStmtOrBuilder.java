@@ -19,4 +19,16 @@ public interface DeallocateStmtOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNameBytes();
+
+  /**
+   * <code>bool isall = 2 [json_name = "isall"];</code>
+   * @return The isall.
+   */
+  boolean getIsall();
+
+  /**
+   * <code>int32 location = 3 [json_name = "location"];</code>
+   * @return The location.
+   */
+  int getLocation();
 }

@@ -117,67 +117,43 @@ public interface WindowClauseOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getEndOffsetOrBuilder();
 
   /**
-   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-   */
-  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
-      getRunConditionList();
-  /**
-   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.Node getRunCondition(int index);
-  /**
-   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-   */
-  int getRunConditionCount();
-  /**
-   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-   */
-  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-      getRunConditionOrBuilderList();
-  /**
-   * <code>repeated .pg_query.Node run_condition = 8 [json_name = "runCondition"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getRunConditionOrBuilder(
-      int index);
-
-  /**
-   * <code>uint32 start_in_range_func = 9 [json_name = "startInRangeFunc"];</code>
+   * <code>uint32 start_in_range_func = 8 [json_name = "startInRangeFunc"];</code>
    * @return The startInRangeFunc.
    */
   int getStartInRangeFunc();
 
   /**
-   * <code>uint32 end_in_range_func = 10 [json_name = "endInRangeFunc"];</code>
+   * <code>uint32 end_in_range_func = 9 [json_name = "endInRangeFunc"];</code>
    * @return The endInRangeFunc.
    */
   int getEndInRangeFunc();
 
   /**
-   * <code>uint32 in_range_coll = 11 [json_name = "inRangeColl"];</code>
+   * <code>uint32 in_range_coll = 10 [json_name = "inRangeColl"];</code>
    * @return The inRangeColl.
    */
   int getInRangeColl();
 
   /**
-   * <code>bool in_range_asc = 12 [json_name = "inRangeAsc"];</code>
+   * <code>bool in_range_asc = 11 [json_name = "inRangeAsc"];</code>
    * @return The inRangeAsc.
    */
   boolean getInRangeAsc();
 
   /**
-   * <code>bool in_range_nulls_first = 13 [json_name = "inRangeNullsFirst"];</code>
+   * <code>bool in_range_nulls_first = 12 [json_name = "inRangeNullsFirst"];</code>
    * @return The inRangeNullsFirst.
    */
   boolean getInRangeNullsFirst();
 
   /**
-   * <code>uint32 winref = 14 [json_name = "winref"];</code>
+   * <code>uint32 winref = 13 [json_name = "winref"];</code>
    * @return The winref.
    */
   int getWinref();
 
   /**
-   * <code>bool copied_order = 15 [json_name = "copiedOrder"];</code>
+   * <code>bool copied_order = 14 [json_name = "copiedOrder"];</code>
    * @return The copiedOrder.
    */
   boolean getCopiedOrder();

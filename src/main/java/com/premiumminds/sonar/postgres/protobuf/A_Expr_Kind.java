@@ -203,7 +203,7 @@ public enum A_Expr_Kind
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(5);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(4);
   }
 
   private static final A_Expr_Kind[] VALUES = values();

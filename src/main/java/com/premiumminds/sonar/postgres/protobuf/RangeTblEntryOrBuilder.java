@@ -9,410 +9,410 @@ public interface RangeTblEntryOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.pg_query.RTEKind rtekind = 1 [json_name = "rtekind"];</code>
+   * <code>.pg_query.Alias alias = 1 [json_name = "alias"];</code>
+   * @return Whether the alias field is set.
+   */
+  boolean hasAlias();
+  /**
+   * <code>.pg_query.Alias alias = 1 [json_name = "alias"];</code>
+   * @return The alias.
+   */
+  com.premiumminds.sonar.postgres.protobuf.Alias getAlias();
+  /**
+   * <code>.pg_query.Alias alias = 1 [json_name = "alias"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AliasOrBuilder getAliasOrBuilder();
+
+  /**
+   * <code>.pg_query.Alias eref = 2 [json_name = "eref"];</code>
+   * @return Whether the eref field is set.
+   */
+  boolean hasEref();
+  /**
+   * <code>.pg_query.Alias eref = 2 [json_name = "eref"];</code>
+   * @return The eref.
+   */
+  com.premiumminds.sonar.postgres.protobuf.Alias getEref();
+  /**
+   * <code>.pg_query.Alias eref = 2 [json_name = "eref"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.AliasOrBuilder getErefOrBuilder();
+
+  /**
+   * <code>.pg_query.RTEKind rtekind = 3 [json_name = "rtekind"];</code>
    * @return The enum numeric value on the wire for rtekind.
    */
   int getRtekindValue();
   /**
-   * <code>.pg_query.RTEKind rtekind = 1 [json_name = "rtekind"];</code>
+   * <code>.pg_query.RTEKind rtekind = 3 [json_name = "rtekind"];</code>
    * @return The rtekind.
    */
   com.premiumminds.sonar.postgres.protobuf.RTEKind getRtekind();
 
   /**
-   * <code>uint32 relid = 2 [json_name = "relid"];</code>
+   * <code>uint32 relid = 4 [json_name = "relid"];</code>
    * @return The relid.
    */
   int getRelid();
 
   /**
-   * <code>string relkind = 3 [json_name = "relkind"];</code>
+   * <code>bool inh = 5 [json_name = "inh"];</code>
+   * @return The inh.
+   */
+  boolean getInh();
+
+  /**
+   * <code>string relkind = 6 [json_name = "relkind"];</code>
    * @return The relkind.
    */
   java.lang.String getRelkind();
   /**
-   * <code>string relkind = 3 [json_name = "relkind"];</code>
+   * <code>string relkind = 6 [json_name = "relkind"];</code>
    * @return The bytes for relkind.
    */
   com.google.protobuf.ByteString
       getRelkindBytes();
 
   /**
-   * <code>int32 rellockmode = 4 [json_name = "rellockmode"];</code>
+   * <code>int32 rellockmode = 7 [json_name = "rellockmode"];</code>
    * @return The rellockmode.
    */
   int getRellockmode();
 
   /**
-   * <code>.pg_query.TableSampleClause tablesample = 5 [json_name = "tablesample"];</code>
-   * @return Whether the tablesample field is set.
-   */
-  boolean hasTablesample();
-  /**
-   * <code>.pg_query.TableSampleClause tablesample = 5 [json_name = "tablesample"];</code>
-   * @return The tablesample.
-   */
-  com.premiumminds.sonar.postgres.protobuf.TableSampleClause getTablesample();
-  /**
-   * <code>.pg_query.TableSampleClause tablesample = 5 [json_name = "tablesample"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.TableSampleClauseOrBuilder getTablesampleOrBuilder();
-
-  /**
-   * <code>uint32 perminfoindex = 6 [json_name = "perminfoindex"];</code>
+   * <code>uint32 perminfoindex = 8 [json_name = "perminfoindex"];</code>
    * @return The perminfoindex.
    */
   int getPerminfoindex();
 
   /**
-   * <code>.pg_query.Query subquery = 7 [json_name = "subquery"];</code>
+   * <code>.pg_query.TableSampleClause tablesample = 9 [json_name = "tablesample"];</code>
+   * @return Whether the tablesample field is set.
+   */
+  boolean hasTablesample();
+  /**
+   * <code>.pg_query.TableSampleClause tablesample = 9 [json_name = "tablesample"];</code>
+   * @return The tablesample.
+   */
+  com.premiumminds.sonar.postgres.protobuf.TableSampleClause getTablesample();
+  /**
+   * <code>.pg_query.TableSampleClause tablesample = 9 [json_name = "tablesample"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.TableSampleClauseOrBuilder getTablesampleOrBuilder();
+
+  /**
+   * <code>.pg_query.Query subquery = 10 [json_name = "subquery"];</code>
    * @return Whether the subquery field is set.
    */
   boolean hasSubquery();
   /**
-   * <code>.pg_query.Query subquery = 7 [json_name = "subquery"];</code>
+   * <code>.pg_query.Query subquery = 10 [json_name = "subquery"];</code>
    * @return The subquery.
    */
   com.premiumminds.sonar.postgres.protobuf.Query getSubquery();
   /**
-   * <code>.pg_query.Query subquery = 7 [json_name = "subquery"];</code>
+   * <code>.pg_query.Query subquery = 10 [json_name = "subquery"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.QueryOrBuilder getSubqueryOrBuilder();
 
   /**
-   * <code>bool security_barrier = 8 [json_name = "security_barrier"];</code>
+   * <code>bool security_barrier = 11 [json_name = "security_barrier"];</code>
    * @return The securityBarrier.
    */
   boolean getSecurityBarrier();
 
   /**
-   * <code>.pg_query.JoinType jointype = 9 [json_name = "jointype"];</code>
+   * <code>.pg_query.JoinType jointype = 12 [json_name = "jointype"];</code>
    * @return The enum numeric value on the wire for jointype.
    */
   int getJointypeValue();
   /**
-   * <code>.pg_query.JoinType jointype = 9 [json_name = "jointype"];</code>
+   * <code>.pg_query.JoinType jointype = 12 [json_name = "jointype"];</code>
    * @return The jointype.
    */
   com.premiumminds.sonar.postgres.protobuf.JoinType getJointype();
 
   /**
-   * <code>int32 joinmergedcols = 10 [json_name = "joinmergedcols"];</code>
+   * <code>int32 joinmergedcols = 13 [json_name = "joinmergedcols"];</code>
    * @return The joinmergedcols.
    */
   int getJoinmergedcols();
 
   /**
-   * <code>repeated .pg_query.Node joinaliasvars = 11 [json_name = "joinaliasvars"];</code>
+   * <code>repeated .pg_query.Node joinaliasvars = 14 [json_name = "joinaliasvars"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getJoinaliasvarsList();
   /**
-   * <code>repeated .pg_query.Node joinaliasvars = 11 [json_name = "joinaliasvars"];</code>
+   * <code>repeated .pg_query.Node joinaliasvars = 14 [json_name = "joinaliasvars"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getJoinaliasvars(int index);
   /**
-   * <code>repeated .pg_query.Node joinaliasvars = 11 [json_name = "joinaliasvars"];</code>
+   * <code>repeated .pg_query.Node joinaliasvars = 14 [json_name = "joinaliasvars"];</code>
    */
   int getJoinaliasvarsCount();
   /**
-   * <code>repeated .pg_query.Node joinaliasvars = 11 [json_name = "joinaliasvars"];</code>
+   * <code>repeated .pg_query.Node joinaliasvars = 14 [json_name = "joinaliasvars"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getJoinaliasvarsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node joinaliasvars = 11 [json_name = "joinaliasvars"];</code>
+   * <code>repeated .pg_query.Node joinaliasvars = 14 [json_name = "joinaliasvars"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getJoinaliasvarsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node joinleftcols = 12 [json_name = "joinleftcols"];</code>
+   * <code>repeated .pg_query.Node joinleftcols = 15 [json_name = "joinleftcols"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getJoinleftcolsList();
   /**
-   * <code>repeated .pg_query.Node joinleftcols = 12 [json_name = "joinleftcols"];</code>
+   * <code>repeated .pg_query.Node joinleftcols = 15 [json_name = "joinleftcols"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getJoinleftcols(int index);
   /**
-   * <code>repeated .pg_query.Node joinleftcols = 12 [json_name = "joinleftcols"];</code>
+   * <code>repeated .pg_query.Node joinleftcols = 15 [json_name = "joinleftcols"];</code>
    */
   int getJoinleftcolsCount();
   /**
-   * <code>repeated .pg_query.Node joinleftcols = 12 [json_name = "joinleftcols"];</code>
+   * <code>repeated .pg_query.Node joinleftcols = 15 [json_name = "joinleftcols"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getJoinleftcolsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node joinleftcols = 12 [json_name = "joinleftcols"];</code>
+   * <code>repeated .pg_query.Node joinleftcols = 15 [json_name = "joinleftcols"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getJoinleftcolsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node joinrightcols = 13 [json_name = "joinrightcols"];</code>
+   * <code>repeated .pg_query.Node joinrightcols = 16 [json_name = "joinrightcols"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getJoinrightcolsList();
   /**
-   * <code>repeated .pg_query.Node joinrightcols = 13 [json_name = "joinrightcols"];</code>
+   * <code>repeated .pg_query.Node joinrightcols = 16 [json_name = "joinrightcols"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getJoinrightcols(int index);
   /**
-   * <code>repeated .pg_query.Node joinrightcols = 13 [json_name = "joinrightcols"];</code>
+   * <code>repeated .pg_query.Node joinrightcols = 16 [json_name = "joinrightcols"];</code>
    */
   int getJoinrightcolsCount();
   /**
-   * <code>repeated .pg_query.Node joinrightcols = 13 [json_name = "joinrightcols"];</code>
+   * <code>repeated .pg_query.Node joinrightcols = 16 [json_name = "joinrightcols"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getJoinrightcolsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node joinrightcols = 13 [json_name = "joinrightcols"];</code>
+   * <code>repeated .pg_query.Node joinrightcols = 16 [json_name = "joinrightcols"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getJoinrightcolsOrBuilder(
       int index);
 
   /**
-   * <code>.pg_query.Alias join_using_alias = 14 [json_name = "join_using_alias"];</code>
+   * <code>.pg_query.Alias join_using_alias = 17 [json_name = "join_using_alias"];</code>
    * @return Whether the joinUsingAlias field is set.
    */
   boolean hasJoinUsingAlias();
   /**
-   * <code>.pg_query.Alias join_using_alias = 14 [json_name = "join_using_alias"];</code>
+   * <code>.pg_query.Alias join_using_alias = 17 [json_name = "join_using_alias"];</code>
    * @return The joinUsingAlias.
    */
   com.premiumminds.sonar.postgres.protobuf.Alias getJoinUsingAlias();
   /**
-   * <code>.pg_query.Alias join_using_alias = 14 [json_name = "join_using_alias"];</code>
+   * <code>.pg_query.Alias join_using_alias = 17 [json_name = "join_using_alias"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.AliasOrBuilder getJoinUsingAliasOrBuilder();
 
   /**
-   * <code>repeated .pg_query.Node functions = 15 [json_name = "functions"];</code>
+   * <code>repeated .pg_query.Node functions = 18 [json_name = "functions"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getFunctionsList();
   /**
-   * <code>repeated .pg_query.Node functions = 15 [json_name = "functions"];</code>
+   * <code>repeated .pg_query.Node functions = 18 [json_name = "functions"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getFunctions(int index);
   /**
-   * <code>repeated .pg_query.Node functions = 15 [json_name = "functions"];</code>
+   * <code>repeated .pg_query.Node functions = 18 [json_name = "functions"];</code>
    */
   int getFunctionsCount();
   /**
-   * <code>repeated .pg_query.Node functions = 15 [json_name = "functions"];</code>
+   * <code>repeated .pg_query.Node functions = 18 [json_name = "functions"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getFunctionsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node functions = 15 [json_name = "functions"];</code>
+   * <code>repeated .pg_query.Node functions = 18 [json_name = "functions"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getFunctionsOrBuilder(
       int index);
 
   /**
-   * <code>bool funcordinality = 16 [json_name = "funcordinality"];</code>
+   * <code>bool funcordinality = 19 [json_name = "funcordinality"];</code>
    * @return The funcordinality.
    */
   boolean getFuncordinality();
 
   /**
-   * <code>.pg_query.TableFunc tablefunc = 17 [json_name = "tablefunc"];</code>
+   * <code>.pg_query.TableFunc tablefunc = 20 [json_name = "tablefunc"];</code>
    * @return Whether the tablefunc field is set.
    */
   boolean hasTablefunc();
   /**
-   * <code>.pg_query.TableFunc tablefunc = 17 [json_name = "tablefunc"];</code>
+   * <code>.pg_query.TableFunc tablefunc = 20 [json_name = "tablefunc"];</code>
    * @return The tablefunc.
    */
   com.premiumminds.sonar.postgres.protobuf.TableFunc getTablefunc();
   /**
-   * <code>.pg_query.TableFunc tablefunc = 17 [json_name = "tablefunc"];</code>
+   * <code>.pg_query.TableFunc tablefunc = 20 [json_name = "tablefunc"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.TableFuncOrBuilder getTablefuncOrBuilder();
 
   /**
-   * <code>repeated .pg_query.Node values_lists = 18 [json_name = "values_lists"];</code>
+   * <code>repeated .pg_query.Node values_lists = 21 [json_name = "values_lists"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getValuesListsList();
   /**
-   * <code>repeated .pg_query.Node values_lists = 18 [json_name = "values_lists"];</code>
+   * <code>repeated .pg_query.Node values_lists = 21 [json_name = "values_lists"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getValuesLists(int index);
   /**
-   * <code>repeated .pg_query.Node values_lists = 18 [json_name = "values_lists"];</code>
+   * <code>repeated .pg_query.Node values_lists = 21 [json_name = "values_lists"];</code>
    */
   int getValuesListsCount();
   /**
-   * <code>repeated .pg_query.Node values_lists = 18 [json_name = "values_lists"];</code>
+   * <code>repeated .pg_query.Node values_lists = 21 [json_name = "values_lists"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getValuesListsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node values_lists = 18 [json_name = "values_lists"];</code>
+   * <code>repeated .pg_query.Node values_lists = 21 [json_name = "values_lists"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getValuesListsOrBuilder(
       int index);
 
   /**
-   * <code>string ctename = 19 [json_name = "ctename"];</code>
+   * <code>string ctename = 22 [json_name = "ctename"];</code>
    * @return The ctename.
    */
   java.lang.String getCtename();
   /**
-   * <code>string ctename = 19 [json_name = "ctename"];</code>
+   * <code>string ctename = 22 [json_name = "ctename"];</code>
    * @return The bytes for ctename.
    */
   com.google.protobuf.ByteString
       getCtenameBytes();
 
   /**
-   * <code>uint32 ctelevelsup = 20 [json_name = "ctelevelsup"];</code>
+   * <code>uint32 ctelevelsup = 23 [json_name = "ctelevelsup"];</code>
    * @return The ctelevelsup.
    */
   int getCtelevelsup();
 
   /**
-   * <code>bool self_reference = 21 [json_name = "self_reference"];</code>
+   * <code>bool self_reference = 24 [json_name = "self_reference"];</code>
    * @return The selfReference.
    */
   boolean getSelfReference();
 
   /**
-   * <code>repeated .pg_query.Node coltypes = 22 [json_name = "coltypes"];</code>
+   * <code>repeated .pg_query.Node coltypes = 25 [json_name = "coltypes"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getColtypesList();
   /**
-   * <code>repeated .pg_query.Node coltypes = 22 [json_name = "coltypes"];</code>
+   * <code>repeated .pg_query.Node coltypes = 25 [json_name = "coltypes"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getColtypes(int index);
   /**
-   * <code>repeated .pg_query.Node coltypes = 22 [json_name = "coltypes"];</code>
+   * <code>repeated .pg_query.Node coltypes = 25 [json_name = "coltypes"];</code>
    */
   int getColtypesCount();
   /**
-   * <code>repeated .pg_query.Node coltypes = 22 [json_name = "coltypes"];</code>
+   * <code>repeated .pg_query.Node coltypes = 25 [json_name = "coltypes"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getColtypesOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node coltypes = 22 [json_name = "coltypes"];</code>
+   * <code>repeated .pg_query.Node coltypes = 25 [json_name = "coltypes"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColtypesOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node coltypmods = 23 [json_name = "coltypmods"];</code>
+   * <code>repeated .pg_query.Node coltypmods = 26 [json_name = "coltypmods"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getColtypmodsList();
   /**
-   * <code>repeated .pg_query.Node coltypmods = 23 [json_name = "coltypmods"];</code>
+   * <code>repeated .pg_query.Node coltypmods = 26 [json_name = "coltypmods"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getColtypmods(int index);
   /**
-   * <code>repeated .pg_query.Node coltypmods = 23 [json_name = "coltypmods"];</code>
+   * <code>repeated .pg_query.Node coltypmods = 26 [json_name = "coltypmods"];</code>
    */
   int getColtypmodsCount();
   /**
-   * <code>repeated .pg_query.Node coltypmods = 23 [json_name = "coltypmods"];</code>
+   * <code>repeated .pg_query.Node coltypmods = 26 [json_name = "coltypmods"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getColtypmodsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node coltypmods = 23 [json_name = "coltypmods"];</code>
+   * <code>repeated .pg_query.Node coltypmods = 26 [json_name = "coltypmods"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColtypmodsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .pg_query.Node colcollations = 24 [json_name = "colcollations"];</code>
+   * <code>repeated .pg_query.Node colcollations = 27 [json_name = "colcollations"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getColcollationsList();
   /**
-   * <code>repeated .pg_query.Node colcollations = 24 [json_name = "colcollations"];</code>
+   * <code>repeated .pg_query.Node colcollations = 27 [json_name = "colcollations"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getColcollations(int index);
   /**
-   * <code>repeated .pg_query.Node colcollations = 24 [json_name = "colcollations"];</code>
+   * <code>repeated .pg_query.Node colcollations = 27 [json_name = "colcollations"];</code>
    */
   int getColcollationsCount();
   /**
-   * <code>repeated .pg_query.Node colcollations = 24 [json_name = "colcollations"];</code>
+   * <code>repeated .pg_query.Node colcollations = 27 [json_name = "colcollations"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getColcollationsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node colcollations = 24 [json_name = "colcollations"];</code>
+   * <code>repeated .pg_query.Node colcollations = 27 [json_name = "colcollations"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getColcollationsOrBuilder(
       int index);
 
   /**
-   * <code>string enrname = 25 [json_name = "enrname"];</code>
+   * <code>string enrname = 28 [json_name = "enrname"];</code>
    * @return The enrname.
    */
   java.lang.String getEnrname();
   /**
-   * <code>string enrname = 25 [json_name = "enrname"];</code>
+   * <code>string enrname = 28 [json_name = "enrname"];</code>
    * @return The bytes for enrname.
    */
   com.google.protobuf.ByteString
       getEnrnameBytes();
 
   /**
-   * <code>double enrtuples = 26 [json_name = "enrtuples"];</code>
+   * <code>double enrtuples = 29 [json_name = "enrtuples"];</code>
    * @return The enrtuples.
    */
   double getEnrtuples();
 
   /**
-   * <code>.pg_query.Alias alias = 27 [json_name = "alias"];</code>
-   * @return Whether the alias field is set.
-   */
-  boolean hasAlias();
-  /**
-   * <code>.pg_query.Alias alias = 27 [json_name = "alias"];</code>
-   * @return The alias.
-   */
-  com.premiumminds.sonar.postgres.protobuf.Alias getAlias();
-  /**
-   * <code>.pg_query.Alias alias = 27 [json_name = "alias"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AliasOrBuilder getAliasOrBuilder();
-
-  /**
-   * <code>.pg_query.Alias eref = 28 [json_name = "eref"];</code>
-   * @return Whether the eref field is set.
-   */
-  boolean hasEref();
-  /**
-   * <code>.pg_query.Alias eref = 28 [json_name = "eref"];</code>
-   * @return The eref.
-   */
-  com.premiumminds.sonar.postgres.protobuf.Alias getEref();
-  /**
-   * <code>.pg_query.Alias eref = 28 [json_name = "eref"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.AliasOrBuilder getErefOrBuilder();
-
-  /**
-   * <code>bool lateral = 29 [json_name = "lateral"];</code>
+   * <code>bool lateral = 30 [json_name = "lateral"];</code>
    * @return The lateral.
    */
   boolean getLateral();
-
-  /**
-   * <code>bool inh = 30 [json_name = "inh"];</code>
-   * @return The inh.
-   */
-  boolean getInh();
 
   /**
    * <code>bool in_from_cl = 31 [json_name = "inFromCl"];</code>
