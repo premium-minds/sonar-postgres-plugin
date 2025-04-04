@@ -6,7 +6,9 @@ import java.util.List;
 import com.premiumminds.sonar.postgres.visitors.AddFieldWithDefaultVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.AddForeignKeyVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.AddingSerialPrimaryKeyfieldvisitorCheck;
+import com.premiumminds.sonar.postgres.visitors.BanAlterDomainWithConstraintCheck;
 import com.premiumminds.sonar.postgres.visitors.BanCharFieldVisitorCheck;
+import com.premiumminds.sonar.postgres.visitors.BanCreateDomainWithConstraintCheck;
 import com.premiumminds.sonar.postgres.visitors.BanDropDatabaseVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.ChangingColumnTypeVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.ClusterVisitorCheck;
@@ -42,6 +44,8 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
     public static final RuleKey RULE_SETTING_NOT_NULLABLE_FIELD = RuleKey.of(REPOSITORY, "setting-not-nullable-field");
     public static final RuleKey RULE_ADDING_SERIAL_PRIMARY_KEY_FIELD = RuleKey.of(REPOSITORY, "adding-serial-primary-key-field");
     public static final RuleKey RULE_BAN_CHAR_FIELD = RuleKey.of(REPOSITORY, "ban-char-field");
+    public static final RuleKey RULE_BAN_CREATE_DOMAIN_WITH_CONSTRAINT = RuleKey.of(REPOSITORY, "ban-create-domain-with-constraint");
+    public static final RuleKey RULE_BAN_ALTER_DOMAIN_WITH_CONSTRAINT = RuleKey.of(REPOSITORY, "ban-alter-domain-with-add-constraint");
     public static final RuleKey RULE_BAN_DROP_DATABASE = RuleKey.of(REPOSITORY, "ban-drop-database");
     public static final RuleKey RULE_CHANGING_COLUMN_TYPE = RuleKey.of(REPOSITORY, "changing-column-type");
     public static final RuleKey RULE_CONSTRAINT_MISSING_NOT_VALID = RuleKey.of(REPOSITORY, "constraint-missing-not-valid");
@@ -104,6 +108,16 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
                 .setName("ban-char-field rule")
                 .setType(RuleType.BUG)
                 .setMarkdownDescription(getClass().getResource("ban-char-field.md"));
+
+        repository.createRule(RULE_BAN_CREATE_DOMAIN_WITH_CONSTRAINT.rule())
+                .setName("ban-create-domain-with-constraint")
+                .setType(RuleType.BUG)
+                .setMarkdownDescription(getClass().getResource("ban-create-domain-with-constraint.md"));
+
+        repository.createRule(RULE_BAN_ALTER_DOMAIN_WITH_CONSTRAINT.rule())
+                .setName("ban-alter-domain-with-add-constraint")
+                .setType(RuleType.BUG)
+                .setMarkdownDescription(getClass().getResource("ban-alter-domain-with-add-constraint.md"));
 
         repository.createRule(RULE_BAN_DROP_DATABASE.rule())
                 .setName("ban-drop-database rule")
@@ -204,6 +218,8 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
                 new AddForeignKeyVisitorCheck(),
                 new AddFieldWithDefaultVisitorCheck(),
                 new BanCharFieldVisitorCheck(),
+                new BanCreateDomainWithConstraintCheck(),
+                new BanAlterDomainWithConstraintCheck(),
                 new PreferTextFieldVisitorCheck(),
                 new VacuumFullVisitorCheck(),
                 new ClusterVisitorCheck(),

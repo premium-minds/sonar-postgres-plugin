@@ -6,7 +6,9 @@ import org.sonar.api.server.profile.BuiltInQualityProfilesDefinition;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_ADDING_SERIAL_PRIMARY_KEY_FIELD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_ADD_FIELD_WITH_DEFAULT;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_ADD_FOREIGN_KEY;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_ALTER_DOMAIN_WITH_CONSTRAINT;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_CHAR_FIELD;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_CREATE_DOMAIN_WITH_CONSTRAINT;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_DROP_DATABASE;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_CHANGING_COLUMN_TYPE;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_CLUSTER;
@@ -42,6 +44,8 @@ public class PostgresSqlQualityProfile implements BuiltInQualityProfilesDefiniti
         activateRule(profile, RULE_SETTING_NOT_NULLABLE_FIELD);
         activateRule(profile, RULE_ADDING_SERIAL_PRIMARY_KEY_FIELD);
         activateRule(profile, RULE_BAN_CHAR_FIELD);
+        activateRule(profile, RULE_BAN_ALTER_DOMAIN_WITH_CONSTRAINT);
+        activateRule(profile, RULE_BAN_CREATE_DOMAIN_WITH_CONSTRAINT);
         activateRule(profile, RULE_BAN_DROP_DATABASE);
         activateRule(profile, RULE_CHANGING_COLUMN_TYPE);
         activateRule(profile, RULE_CONSTRAINT_MISSING_NOT_VALID);

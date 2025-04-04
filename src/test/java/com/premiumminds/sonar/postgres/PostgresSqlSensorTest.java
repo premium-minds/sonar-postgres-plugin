@@ -23,7 +23,9 @@ import org.sonar.api.rule.RuleKey;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_ADDING_SERIAL_PRIMARY_KEY_FIELD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_ADD_FIELD_WITH_DEFAULT;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_ADD_FOREIGN_KEY;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_ALTER_DOMAIN_WITH_CONSTRAINT;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_CHAR_FIELD;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_CREATE_DOMAIN_WITH_CONSTRAINT;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_DROP_DATABASE;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_CHANGING_COLUMN_TYPE;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_CLUSTER;
@@ -93,6 +95,8 @@ class PostgresSqlSensorTest {
                 RULE_ADDING_SERIAL_PRIMARY_KEY_FIELD,
                 RULE_BAN_CHAR_FIELD,
                 RULE_BAN_DROP_DATABASE,
+                RULE_BAN_CREATE_DOMAIN_WITH_CONSTRAINT,
+                RULE_BAN_ALTER_DOMAIN_WITH_CONSTRAINT,
                 RULE_CHANGING_COLUMN_TYPE,
                 RULE_CONSTRAINT_MISSING_NOT_VALID,
                 RULE_DISALLOWED_UNIQUE_CONSTRAINT,
@@ -888,6 +892,51 @@ class PostgresSqlSensorTest {
                      fileMap.get(":file5.sql").primaryLocation().message());
 
         assertEquals(4, fileMap.size());
+    }
+
+    @Test
+    void banCreateDomainWithConstraints() {
+        createFile(contextTester, "file1-ok.sql", "CREATE DOMAIN domain_name_1 AS TEXT;");
+        createFile(contextTester, "file2.sql", "CREATE DOMAIN domain_name_3 AS NUMERIC(15,5) CHECK (value > 0);");
+
+        final RuleKey rule = RULE_BAN_CREATE_DOMAIN_WITH_CONSTRAINT;
+        PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
+        sensor.execute(contextTester);
+
+        final Map<RuleKey, Map<String, Issue>> issueMap = groupByRuleAndFile(contextTester.allIssues());
+
+        final Map<String, Issue> fileMap = issueMap.get(rule);
+
+        assertEquals("Domains with constraints have poor support for online migrations",
+                     fileMap.get(":file2.sql").primaryLocation().message());
+
+        assertEquals(1, fileMap.size());
+    }
+
+    @Test
+    void banAlterDomainWithConstraints() {
+        createFile(contextTester, "file1-ok.sql", "ALTER DOMAIN domain_name_1 SET DEFAULT 1;");
+        createFile(contextTester, "file2-ok.sql", "ALTER DOMAIN domain_name_2 SET NOT NULL;");
+        createFile(contextTester, "file3-ok.sql", "ALTER DOMAIN domain_name_3 DROP CONSTRAINT other_domain_name;");
+        createFile(contextTester, "file4-ok.sql", "ALTER DOMAIN domain_name_4 RENAME CONSTRAINT constraint_name TO other_constraint_name;");
+        createFile(contextTester, "file5-ok.sql", "ALTER DOMAIN domain_name_5 RENAME TO other_domain_name;");
+        createFile(contextTester, "file6-ok.sql", "ALTER DOMAIN domain_name_6 VALIDATE CONSTRAINT constraint_name;");
+        createFile(contextTester, "file7-ok.sql", "ALTER DOMAIN domain_name_7 OWNER TO you;");
+        createFile(contextTester, "file8-ok.sql", "ALTER DOMAIN domain_name_8 SET SCHEMA foo;");
+        createFile(contextTester, "file9.sql", "ALTER DOMAIN domain_name ADD CONSTRAINT constraint_name CHECK (value > 0);");
+
+        final RuleKey rule = RULE_BAN_ALTER_DOMAIN_WITH_CONSTRAINT;
+        PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
+        sensor.execute(contextTester);
+
+        final Map<RuleKey, Map<String, Issue>> issueMap = groupByRuleAndFile(contextTester.allIssues());
+
+        final Map<String, Issue> fileMap = issueMap.get(rule);
+
+        assertEquals("Domains with constraints have poor support for online migrations",
+                     fileMap.get(":file9.sql").primaryLocation().message());
+
+        assertEquals(1, fileMap.size());
     }
 
     private PostgresSqlSensor getPostgresSqlSensor(RuleKey... ruleKey) {

@@ -1,0 +1,1 @@
+ALTER DOMAIN domain_name_1 SET DEFAULT 1;

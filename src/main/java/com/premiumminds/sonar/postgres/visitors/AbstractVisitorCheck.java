@@ -12,6 +12,7 @@ import com.premiumminds.sonar.postgres.protobuf.AlterTableType;
 import com.premiumminds.sonar.postgres.protobuf.ClusterStmt;
 import com.premiumminds.sonar.postgres.protobuf.ColumnDef;
 import com.premiumminds.sonar.postgres.protobuf.Constraint;
+import com.premiumminds.sonar.postgres.protobuf.CreateDomainStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateExtensionStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateFunctionStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateSchemaStmt;
@@ -109,6 +110,11 @@ public abstract class AbstractVisitorCheck implements VisitorCheck {
 
     @Override
     public void visit(CreateSchemaStmt createSchemaStmt) {
+
+    }
+
+    @Override
+    public void visit(CreateDomainStmt createDomainStmt) {
 
     }
 
@@ -253,6 +259,8 @@ public abstract class AbstractVisitorCheck implements VisitorCheck {
             visit(stmt.getAlterSeqStmt());
         } else if (stmt.hasCreateSchemaStmt()){
             visit(stmt.getCreateSchemaStmt());
+        } else if (stmt.hasCreateDomainStmt()) {
+            visit(stmt.getCreateDomainStmt());
         } else if (stmt.hasAlterDomainStmt()) {
             visit(stmt.getAlterDomainStmt());
         } else if (stmt.hasCreateTableAsStmt()){

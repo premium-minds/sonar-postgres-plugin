@@ -1,0 +1,1 @@
+CREATE DOMAIN domain_name_1 AS TEXT;

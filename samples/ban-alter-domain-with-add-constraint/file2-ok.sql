@@ -1,0 +1,1 @@
+ALTER DOMAIN domain_name_2 SET NOT NULL;
