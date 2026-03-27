@@ -45,6 +45,7 @@ import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_PR
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_PREFER_TEXT_FIELD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_RENAMING_COLUMN;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_RENAMING_TABLE;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_REQUIRE_ENUM_VALUE_ORDERING;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_SETTING_NOT_NULLABLE_FIELD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_VACUUM_FULL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -113,7 +114,8 @@ class PostgresSqlSensorTest {
                 RULE_ONE_MIGRATION_PER_FILE,
                 RULE_DISALLOWED_DO,
                 RULE_ONLY_SCHEMA_MIGRATIONS,
-                RULE_ONLY_LOWER_CASE_NAMES
+                RULE_ONLY_LOWER_CASE_NAMES,
+                RULE_REQUIRE_ENUM_VALUE_ORDERING
         );
         sensor.execute(contextTester);
 
@@ -958,6 +960,29 @@ class PostgresSqlSensorTest {
                      fileMap.get(":file1.sql").primaryLocation().message());
 
         assertEquals(1, fileMap.size());
+    }
+
+    @Test
+    void requireEnumValueOrdering() {
+        createFile(contextTester, "file1.sql", "ALTER TYPE my_enum ADD VALUE 'new_value';");
+        createFile(contextTester, "file2.sql", "ALTER TYPE my_enum ADD VALUE IF NOT EXISTS 'new_value';");
+        createFile(contextTester, "file3-ok.sql", "ALTER TYPE my_enum ADD VALUE 'new_value' BEFORE 'existing_value';");
+        createFile(contextTester, "file4-ok.sql", "ALTER TYPE my_enum ADD VALUE 'new_value' AFTER 'existing_value';");
+
+        final RuleKey rule = RULE_REQUIRE_ENUM_VALUE_ORDERING;
+        PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
+        sensor.execute(contextTester);
+
+        final Map<RuleKey, Map<String, Issue>> issueMap = groupByRuleAndFile(contextTester.allIssues());
+
+        final Map<String, Issue> fileMap = issueMap.get(rule);
+
+        assertEquals("ADD VALUE without BEFORE or AFTER appends the value to the end of the enum, which may result in unexpected ordering.",
+                     fileMap.get(":file1.sql").primaryLocation().message());
+        assertEquals("ADD VALUE without BEFORE or AFTER appends the value to the end of the enum, which may result in unexpected ordering.",
+                     fileMap.get(":file2.sql").primaryLocation().message());
+
+        assertEquals(2, fileMap.size());
     }
 
     private PostgresSqlSensor getPostgresSqlSensor(RuleKey... ruleKey) {

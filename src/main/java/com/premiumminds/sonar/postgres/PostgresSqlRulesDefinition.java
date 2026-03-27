@@ -24,6 +24,7 @@ import com.premiumminds.sonar.postgres.visitors.PreferIdentityVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.PreferTextFieldVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.RenameColumnVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.RenameTableVisitorCheck;
+import com.premiumminds.sonar.postgres.visitors.RequireEnumValueOrderingCheck;
 import com.premiumminds.sonar.postgres.visitors.RobustStatementsVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.SettingNotNullVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.VacuumFullVisitorCheck;
@@ -64,6 +65,7 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
     public static final RuleKey RULE_DISALLOWED_DO = RuleKey.of(REPOSITORY, "disallowed-do");
     public static final RuleKey RULE_ONLY_SCHEMA_MIGRATIONS = RuleKey.of(REPOSITORY, "only-schema-migrations");
     public static final RuleKey RULE_ONLY_LOWER_CASE_NAMES = RuleKey.of(REPOSITORY, "only-lower-case-names");
+    public static final RuleKey RULE_REQUIRE_ENUM_VALUE_ORDERING = RuleKey.of(REPOSITORY, "require-enum-value-ordering");
 
     @Override
     public void define(Context context) {
@@ -206,6 +208,11 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
                   .setType(RuleType.BUG)
                   .setMarkdownDescription(getClass().getResource("only-lower-case-names.md"));
 
+        repository.createRule(RULE_REQUIRE_ENUM_VALUE_ORDERING.rule())
+                  .setName("require-enum-value-ordering rule")
+                  .setType(RuleType.BUG)
+                  .setMarkdownDescription(getClass().getResource("require-enum-value-ordering.md"));
+
         repository.done();
     }
 
@@ -234,6 +241,7 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
                 new PreferIdentityVisitorCheck(),
                 new DisallowedDoVisitorCheck(),
                 new OneMigrationPerFileVisitorCheck(),
-                new OnlySchemaMigrationsVisitorCheck());
+                new OnlySchemaMigrationsVisitorCheck(),
+                new RequireEnumValueOrderingCheck());
     }
 }
