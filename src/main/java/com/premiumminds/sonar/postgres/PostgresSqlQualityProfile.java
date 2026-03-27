@@ -28,6 +28,7 @@ import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_PR
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_PREFER_TEXT_FIELD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_RENAMING_COLUMN;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_RENAMING_TABLE;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_REQUIRE_ENUM_VALUE_ORDERING;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_SETTING_NOT_NULLABLE_FIELD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_VACUUM_FULL;
 
@@ -64,6 +65,7 @@ public class PostgresSqlQualityProfile implements BuiltInQualityProfilesDefiniti
         activateRule(profile, RULE_DISALLOWED_DO);
         activateRule(profile, RULE_ONLY_SCHEMA_MIGRATIONS);
         activateRule(profile, RULE_ONLY_LOWER_CASE_NAMES);
+        activateRule(profile, RULE_REQUIRE_ENUM_VALUE_ORDERING);
 
         profile.done();
     }
