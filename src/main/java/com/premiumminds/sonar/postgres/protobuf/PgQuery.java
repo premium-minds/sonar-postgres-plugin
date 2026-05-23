@@ -1375,6 +1375,31 @@ public final class PgQuery {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pg_query_ScanToken_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pg_query_SummaryResult_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pg_query_SummaryResult_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pg_query_SummaryResult_Table_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pg_query_SummaryResult_Table_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pg_query_SummaryResult_AliasesEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pg_query_SummaryResult_AliasesEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pg_query_SummaryResult_Function_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pg_query_SummaryResult_Function_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pg_query_SummaryResult_FilterColumn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pg_query_SummaryResult_FilterColumn_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3322,7 +3347,25 @@ public final class PgQuery {
       "\001(\0162\026.pg_query.DropBehaviorR\010behavior\"t\n" +
       "\tScanToken\022\r\n\005start\030\001 \001(\005\022\013\n\003end\030\002 \001(\005\022\036" +
       "\n\005token\030\004 \001(\0162\017.pg_query.Token\022+\n\014keywor" +
-      "d_kind\030\005 \001(\0162\025.pg_query.KeywordKind*\233\001\n\013" +
+      "d_kind\030\005 \001(\0162\025.pg_query.KeywordKind\"\315\005\n\r" +
+      "SummaryResult\022-\n\006tables\030\001 \003(\0132\035.pg_query" +
+      ".SummaryResult.Table\0225\n\007aliases\030\002 \003(\0132$." +
+      "pg_query.SummaryResult.AliasesEntry\022\021\n\tc" +
+      "te_names\030\003 \003(\t\0223\n\tfunctions\030\004 \003(\0132 .pg_q" +
+      "uery.SummaryResult.Function\022<\n\016filter_co" +
+      "lumns\030\005 \003(\0132$.pg_query.SummaryResult.Fil" +
+      "terColumn\022\027\n\017statement_types\030\006 \003(\t\022\027\n\017tr" +
+      "uncated_query\030\007 \001(\t\032p\n\005Table\022\014\n\004name\030\001 \001" +
+      "(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_name\030\003 " +
+      "\001(\t\0220\n\007context\030\004 \001(\0162\037.pg_query.SummaryR" +
+      "esult.Context\032.\n\014AliasesEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032v\n\010Function\022\014\n\004nam" +
+      "e\030\001 \001(\t\022\025\n\rfunction_name\030\002 \001(\t\022\023\n\013schema" +
+      "_name\030\003 \001(\t\0220\n\007context\030\004 \001(\0162\037.pg_query." +
+      "SummaryResult.Context\032G\n\014FilterColumn\022\023\n" +
+      "\013schema_name\030\001 \001(\t\022\022\n\ntable_name\030\002 \001(\t\022\016" +
+      "\n\006column\030\003 \001(\t\";\n\007Context\022\010\n\004None\020\000\022\n\n\006S" +
+      "elect\020\001\022\007\n\003DML\020\002\022\007\n\003DDL\020\003\022\010\n\004Call\020\004*\233\001\n\013" +
       "QuerySource\022\032\n\026QUERY_SOURCE_UNDEFINED\020\000\022" +
       "\021\n\rQSRC_ORIGINAL\020\001\022\017\n\013QSRC_PARSER\020\002\022\025\n\021Q" +
       "SRC_INSTEAD_RULE\020\003\022\032\n\026QSRC_QUAL_INSTEAD_" +
@@ -3365,7 +3408,7 @@ public final class PgQuery {
       "RATEGY_LIST\020\001\022\034\n\030PARTITION_STRATEGY_RANG" +
       "E\020\002\022\033\n\027PARTITION_STRATEGY_HASH\020\003*\254\001\n\027Par" +
       "titionRangeDatumKind\022(\n$PARTITION_RANGE_" +
-      "DATUM_KIND_UNDEFINED\020\000\022\"\n\036PARTITION_RANG" +
+      "DATUM_KIND_UNDEFINED\020\000\022\"\n\036PARTITION_RANG",
       "E_DATUM_MINVALUE\020\001\022\037\n\033PARTITION_RANGE_DA" +
       "TUM_VALUE\020\002\022\"\n\036PARTITION_RANGE_DATUM_MAX" +
       "VALUE\020\003*\275\001\n\007RTEKind\022\025\n\021RTEKIND_UNDEFINED" +
@@ -3383,7 +3426,7 @@ public final class PgQuery {
       "ROUPING_SET_SIMPLE\020\002\022\027\n\023GROUPING_SET_ROL" +
       "LUP\020\003\022\025\n\021GROUPING_SET_CUBE\020\004\022\025\n\021GROUPING" +
       "_SET_SETS\020\005*|\n\016CTEMaterialize\022\034\n\030CTEMATE" +
-      "RIALIZE_UNDEFINED\020\000\022\031\n\025CTEMaterializeDef",
+      "RIALIZE_UNDEFINED\020\000\022\031\n\025CTEMaterializeDef" +
       "ault\020\001\022\030\n\024CTEMaterializeAlways\020\002\022\027\n\023CTEM" +
       "aterializeNever\020\003*e\n\nJsonQuotes\022\031\n\025JSON_" +
       "QUOTES_UNDEFINED\020\000\022\024\n\020JS_QUOTES_UNSPEC\020\001" +
@@ -3765,7 +3808,7 @@ public final class PgQuery {
       "\n\005LIMIT\020\376\003\022\013\n\006LISTEN\020\377\003\022\t\n\004LOAD\020\200\004\022\n\n\005LO" +
       "CAL\020\201\004\022\016\n\tLOCALTIME\020\202\004\022\023\n\016LOCALTIMESTAMP" +
       "\020\203\004\022\r\n\010LOCATION\020\204\004\022\013\n\006LOCK_P\020\205\004\022\013\n\006LOCKE" +
-      "D\020\206\004\022\013\n\006LOGGED\020\207\004\022\014\n\007MAPPING\020\210\004\022\n\n\005MATCH" +
+      "D\020\206\004\022\013\n\006LOGGED\020\207\004\022\014\n\007MAPPING\020\210\004\022\n\n\005MATCH",
       "\020\211\004\022\014\n\007MATCHED\020\212\004\022\021\n\014MATERIALIZED\020\213\004\022\r\n\010" +
       "MAXVALUE\020\214\004\022\n\n\005MERGE\020\215\004\022\021\n\014MERGE_ACTION\020" +
       "\216\004\022\013\n\006METHOD\020\217\004\022\r\n\010MINUTE_P\020\220\004\022\r\n\010MINVAL" +
@@ -3783,7 +3826,7 @@ public final class PgQuery {
       "\265\004\022\t\n\004ONLY\020\266\004\022\r\n\010OPERATOR\020\267\004\022\013\n\006OPTION\020\270" +
       "\004\022\014\n\007OPTIONS\020\271\004\022\007\n\002OR\020\272\004\022\n\n\005ORDER\020\273\004\022\017\n\n" +
       "ORDINALITY\020\274\004\022\013\n\006OTHERS\020\275\004\022\n\n\005OUT_P\020\276\004\022\014" +
-      "\n\007OUTER_P\020\277\004\022\t\n\004OVER\020\300\004\022\r\n\010OVERLAPS\020\301\004\022\014",
+      "\n\007OUTER_P\020\277\004\022\t\n\004OVER\020\300\004\022\r\n\010OVERLAPS\020\301\004\022\014" +
       "\n\007OVERLAY\020\302\004\022\017\n\nOVERRIDING\020\303\004\022\n\n\005OWNED\020\304" +
       "\004\022\n\n\005OWNER\020\305\004\022\r\n\010PARALLEL\020\306\004\022\016\n\tPARAMETE" +
       "R\020\307\004\022\013\n\006PARSER\020\310\004\022\014\n\007PARTIAL\020\311\004\022\016\n\tPARTI" +
@@ -5495,6 +5538,36 @@ public final class PgQuery {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ScanToken_descriptor,
         new java.lang.String[] { "Start", "End", "Token", "KeywordKind", });
+    internal_static_pg_query_SummaryResult_descriptor =
+      getDescriptor().getMessageTypes().get(272);
+    internal_static_pg_query_SummaryResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pg_query_SummaryResult_descriptor,
+        new java.lang.String[] { "Tables", "Aliases", "CteNames", "Functions", "FilterColumns", "StatementTypes", "TruncatedQuery", });
+    internal_static_pg_query_SummaryResult_Table_descriptor =
+      internal_static_pg_query_SummaryResult_descriptor.getNestedTypes().get(0);
+    internal_static_pg_query_SummaryResult_Table_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pg_query_SummaryResult_Table_descriptor,
+        new java.lang.String[] { "Name", "SchemaName", "TableName", "Context", });
+    internal_static_pg_query_SummaryResult_AliasesEntry_descriptor =
+      internal_static_pg_query_SummaryResult_descriptor.getNestedTypes().get(1);
+    internal_static_pg_query_SummaryResult_AliasesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pg_query_SummaryResult_AliasesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_pg_query_SummaryResult_Function_descriptor =
+      internal_static_pg_query_SummaryResult_descriptor.getNestedTypes().get(2);
+    internal_static_pg_query_SummaryResult_Function_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pg_query_SummaryResult_Function_descriptor,
+        new java.lang.String[] { "Name", "FunctionName", "SchemaName", "Context", });
+    internal_static_pg_query_SummaryResult_FilterColumn_descriptor =
+      internal_static_pg_query_SummaryResult_descriptor.getNestedTypes().get(3);
+    internal_static_pg_query_SummaryResult_FilterColumn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pg_query_SummaryResult_FilterColumn_descriptor,
+        new java.lang.String[] { "SchemaName", "TableName", "Column", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

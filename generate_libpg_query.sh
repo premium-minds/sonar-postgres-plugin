@@ -8,9 +8,9 @@ LIBPG_QUERY_TEMP_DIR=$(mktemp --directory)
 
 pushd $LIBPG_QUERY_TEMP_DIR
 
-wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/17-6.0.0.zip
-unzip 17-6.0.0.zip
-SOURCES_DIR=libpg_query-17-6.0.0
+wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/17-6.2.2.zip
+unzip 17-6.2.2.zip
+SOURCES_DIR=libpg_query-17-6.2.2
 
 echo "compile linux-x86-64"
 docker create \
