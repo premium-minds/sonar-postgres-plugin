@@ -64,7 +64,7 @@ docker cp crossbuild:/work/$SOURCES_DIR/libpg_query.dylib \
 docker rm crossbuild
 
 echo "compile darwin-aarch64"
-docker create --name crossbuild --workdir /work/$SOURCES_DIR darwin-build-support bash -c 'patch -p1 < /work/darwin.patch; make CC=aarch64-apple-darwin23.6-cc -j build_shared'
+docker create --name crossbuild --workdir /work/$SOURCES_DIR darwin-build-support bash -c 'patch -p1 < /work/darwin.patch; make CC=aarch64-apple-darwin25.1-cc -j build_shared'
 docker cp $SOURCES_DIR crossbuild:/work/
 docker cp $PROJECT_DIR/darwin.patch crossbuild:/work/darwin.patch
 docker start -ai crossbuild
@@ -92,4 +92,4 @@ popd
 chmod -R +w $LIBPG_QUERY_TEMP_DIR
 rm -r $LIBPG_QUERY_TEMP_DIR
 
-
+echo "Done!"
