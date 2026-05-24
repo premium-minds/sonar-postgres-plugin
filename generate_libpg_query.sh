@@ -46,9 +46,9 @@ echo 6ad7783f272acfd116455c66a03298a0cac9a9168281df547969219112f0260f  18.0.0.ta
 tar -zxf 18.0.0.tar.gz
 SOURCES_DIR=libpg_query-18.0.0
 
-wget -q https://github.com/protocolbuffers/protobuf/releases/download/v25.1/protoc-25.1-linux-x86_64.zip
-echo ed8fca87a11c888fed329d6a59c34c7d436165f662a2c875246ddb1ac2b6dd50  protoc-25.1-linux-x86_64.zip | sha256sum -c
-unzip protoc-25.1-linux-x86_64.zip
+wget -q https://github.com/protocolbuffers/protobuf/releases/download/v35.0/protoc-35.0-linux-x86_64.zip
+echo a45cda0989c17dd950db55f6fbe1e5814c50fda08e87aa422980ac1f89dddbbc  protoc-35.0-linux-x86_64.zip | sha256sum -c
+unzip protoc-35.0-linux-x86_64.zip
 
 find $PROJECT_DIR/src/main/java/com/premiumminds/sonar/postgres/protobuf/ -type f -not -name package-info.java -delete
 
