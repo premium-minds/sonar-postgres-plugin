@@ -26,6 +26,8 @@ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp -e CC=aarch64-linux-g
 cp libpg_query.so src/main/resources/linux-aarch64/
 ```
 
+Script [generate_libpg_query.sh](generate_libpg_query.sh) compiles for linux-x86-64, linux-aarch64, win32-x86-64, darwin-x86-64 and darwin-aarch64.
+
 ### plugin
 
 ```shell

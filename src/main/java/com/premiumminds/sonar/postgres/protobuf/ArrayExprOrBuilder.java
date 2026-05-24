@@ -72,7 +72,19 @@ public interface ArrayExprOrBuilder extends
   boolean getMultidims();
 
   /**
-   * <code>int32 location = 7 [json_name = "location"];</code>
+   * <code>int32 list_start = 7 [json_name = "list_start"];</code>
+   * @return The listStart.
+   */
+  int getListStart();
+
+  /**
+   * <code>int32 list_end = 8 [json_name = "list_end"];</code>
+   * @return The listEnd.
+   */
+  int getListEnd();
+
+  /**
+   * <code>int32 location = 9 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

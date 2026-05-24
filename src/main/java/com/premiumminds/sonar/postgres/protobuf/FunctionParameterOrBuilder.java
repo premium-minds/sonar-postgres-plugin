@@ -60,4 +60,10 @@ public interface FunctionParameterOrBuilder extends
    * <code>.pg_query.Node defexpr = 4 [json_name = "defexpr"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getDefexprOrBuilder();
+
+  /**
+   * <code>int32 location = 5 [json_name = "location"];</code>
+   * @return The location.
+   */
+  int getLocation();
 }

@@ -151,6 +151,17 @@ private static final long serialVersionUID = 0L;
     return defexpr_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : defexpr_;
   }
 
+  public static final int LOCATION_FIELD_NUMBER = 5;
+  private int location_ = 0;
+  /**
+   * <code>int32 location = 5 [json_name = "location"];</code>
+   * @return The location.
+   */
+  @java.lang.Override
+  public int getLocation() {
+    return location_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -177,6 +188,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getDefexpr());
     }
+    if (location_ != 0) {
+      output.writeInt32(5, location_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -200,6 +214,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDefexpr());
+    }
+    if (location_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(5, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -229,6 +247,8 @@ private static final long serialVersionUID = 0L;
       if (!getDefexpr()
           .equals(other.getDefexpr())) return false;
     }
+    if (getLocation()
+        != other.getLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -252,6 +272,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DEFEXPR_FIELD_NUMBER;
       hash = (53 * hash) + getDefexpr().hashCode();
     }
+    hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+    hash = (53 * hash) + getLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -402,6 +424,7 @@ private static final long serialVersionUID = 0L;
         defexprBuilder_.dispose();
         defexprBuilder_ = null;
       }
+      location_ = 0;
       return this;
     }
 
@@ -453,6 +476,9 @@ private static final long serialVersionUID = 0L;
             ? defexpr_
             : defexprBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.location_ = location_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -515,6 +541,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasDefexpr()) {
         mergeDefexpr(other.getDefexpr());
       }
+      if (other.getLocation() != 0) {
+        setLocation(other.getLocation());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -565,6 +594,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 40: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -947,6 +981,38 @@ private static final long serialVersionUID = 0L;
         defexpr_ = null;
       }
       return defexprBuilder_;
+    }
+
+    private int location_ ;
+    /**
+     * <code>int32 location = 5 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public int getLocation() {
+      return location_;
+    }
+    /**
+     * <code>int32 location = 5 [json_name = "location"];</code>
+     * @param value The location to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLocation(int value) {
+
+      location_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 location = 5 [json_name = "location"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLocation() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      location_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

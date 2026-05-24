@@ -104,7 +104,7 @@ public enum AlterPublicationAction
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(33);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(34);
   }
 
   private static final AlterPublicationAction[] VALUES = values();

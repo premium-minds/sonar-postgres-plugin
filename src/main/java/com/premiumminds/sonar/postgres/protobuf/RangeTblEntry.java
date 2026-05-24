@@ -30,6 +30,7 @@ private static final long serialVersionUID = 0L;
     coltypmods_ = java.util.Collections.emptyList();
     colcollations_ = java.util.Collections.emptyList();
     enrname_ = "";
+    groupexprs_ = java.util.Collections.emptyList();
     securityQuals_ = java.util.Collections.emptyList();
   }
 
@@ -801,10 +802,51 @@ private static final long serialVersionUID = 0L;
     return enrtuples_;
   }
 
-  public static final int LATERAL_FIELD_NUMBER = 30;
+  public static final int GROUPEXPRS_FIELD_NUMBER = 30;
+  @SuppressWarnings("serial")
+  private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> groupexprs_;
+  /**
+   * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getGroupexprsList() {
+    return groupexprs_;
+  }
+  /**
+   * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getGroupexprsOrBuilderList() {
+    return groupexprs_;
+  }
+  /**
+   * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+   */
+  @java.lang.Override
+  public int getGroupexprsCount() {
+    return groupexprs_.size();
+  }
+  /**
+   * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.Node getGroupexprs(int index) {
+    return groupexprs_.get(index);
+  }
+  /**
+   * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+   */
+  @java.lang.Override
+  public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getGroupexprsOrBuilder(
+      int index) {
+    return groupexprs_.get(index);
+  }
+
+  public static final int LATERAL_FIELD_NUMBER = 31;
   private boolean lateral_ = false;
   /**
-   * <code>bool lateral = 30 [json_name = "lateral"];</code>
+   * <code>bool lateral = 31 [json_name = "lateral"];</code>
    * @return The lateral.
    */
   @java.lang.Override
@@ -812,10 +854,10 @@ private static final long serialVersionUID = 0L;
     return lateral_;
   }
 
-  public static final int IN_FROM_CL_FIELD_NUMBER = 31;
+  public static final int IN_FROM_CL_FIELD_NUMBER = 32;
   private boolean inFromCl_ = false;
   /**
-   * <code>bool in_from_cl = 31 [json_name = "inFromCl"];</code>
+   * <code>bool in_from_cl = 32 [json_name = "inFromCl"];</code>
    * @return The inFromCl.
    */
   @java.lang.Override
@@ -823,18 +865,18 @@ private static final long serialVersionUID = 0L;
     return inFromCl_;
   }
 
-  public static final int SECURITY_QUALS_FIELD_NUMBER = 32;
+  public static final int SECURITY_QUALS_FIELD_NUMBER = 33;
   @SuppressWarnings("serial")
   private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> securityQuals_;
   /**
-   * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+   * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
    */
   @java.lang.Override
   public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getSecurityQualsList() {
     return securityQuals_;
   }
   /**
-   * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+   * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
@@ -842,21 +884,21 @@ private static final long serialVersionUID = 0L;
     return securityQuals_;
   }
   /**
-   * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+   * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
    */
   @java.lang.Override
   public int getSecurityQualsCount() {
     return securityQuals_.size();
   }
   /**
-   * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+   * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.Node getSecurityQuals(int index) {
     return securityQuals_.get(index);
   }
   /**
-   * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+   * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
    */
   @java.lang.Override
   public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getSecurityQualsOrBuilder(
@@ -965,14 +1007,17 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToRawLongBits(enrtuples_) != 0) {
       output.writeDouble(29, enrtuples_);
     }
+    for (int i = 0; i < groupexprs_.size(); i++) {
+      output.writeMessage(30, groupexprs_.get(i));
+    }
     if (lateral_ != false) {
-      output.writeBool(30, lateral_);
+      output.writeBool(31, lateral_);
     }
     if (inFromCl_ != false) {
-      output.writeBool(31, inFromCl_);
+      output.writeBool(32, inFromCl_);
     }
     for (int i = 0; i < securityQuals_.size(); i++) {
-      output.writeMessage(32, securityQuals_.get(i));
+      output.writeMessage(33, securityQuals_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1096,17 +1141,21 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(29, enrtuples_);
     }
+    for (int i = 0; i < groupexprs_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(30, groupexprs_.get(i));
+    }
     if (lateral_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(30, lateral_);
+        .computeBoolSize(31, lateral_);
     }
     if (inFromCl_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(31, inFromCl_);
+        .computeBoolSize(32, inFromCl_);
     }
     for (int i = 0; i < securityQuals_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(32, securityQuals_.get(i));
+        .computeMessageSize(33, securityQuals_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1198,6 +1247,8 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToLongBits(getEnrtuples())
         != java.lang.Double.doubleToLongBits(
             other.getEnrtuples())) return false;
+    if (!getGroupexprsList()
+        .equals(other.getGroupexprsList())) return false;
     if (getLateral()
         != other.getLateral()) return false;
     if (getInFromCl()
@@ -1306,6 +1357,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ENRTUPLES_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getEnrtuples()));
+    if (getGroupexprsCount() > 0) {
+      hash = (37 * hash) + GROUPEXPRS_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupexprsList().hashCode();
+    }
     hash = (37 * hash) + LATERAL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getLateral());
@@ -1460,6 +1515,7 @@ private static final long serialVersionUID = 0L;
         getColtypesFieldBuilder();
         getColtypmodsFieldBuilder();
         getColcollationsFieldBuilder();
+        getGroupexprsFieldBuilder();
         getSecurityQualsFieldBuilder();
       }
     }
@@ -1467,6 +1523,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      bitField1_ = 0;
       alias_ = null;
       if (aliasBuilder_ != null) {
         aliasBuilder_.dispose();
@@ -1568,6 +1625,13 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x04000000);
       enrname_ = "";
       enrtuples_ = 0D;
+      if (groupexprsBuilder_ == null) {
+        groupexprs_ = java.util.Collections.emptyList();
+      } else {
+        groupexprs_ = null;
+        groupexprsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x20000000);
       lateral_ = false;
       inFromCl_ = false;
       if (securityQualsBuilder_ == null) {
@@ -1576,7 +1640,7 @@ private static final long serialVersionUID = 0L;
         securityQuals_ = null;
         securityQualsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x80000000);
+      bitField1_ = (bitField1_ & ~0x00000001);
       return this;
     }
 
@@ -1605,6 +1669,7 @@ private static final long serialVersionUID = 0L;
       com.premiumminds.sonar.postgres.protobuf.RangeTblEntry result = new com.premiumminds.sonar.postgres.protobuf.RangeTblEntry(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
       onBuilt();
       return result;
     }
@@ -1682,10 +1747,19 @@ private static final long serialVersionUID = 0L;
       } else {
         result.colcollations_ = colcollationsBuilder_.build();
       }
+      if (groupexprsBuilder_ == null) {
+        if (((bitField0_ & 0x20000000) != 0)) {
+          groupexprs_ = java.util.Collections.unmodifiableList(groupexprs_);
+          bitField0_ = (bitField0_ & ~0x20000000);
+        }
+        result.groupexprs_ = groupexprs_;
+      } else {
+        result.groupexprs_ = groupexprsBuilder_.build();
+      }
       if (securityQualsBuilder_ == null) {
-        if (((bitField0_ & 0x80000000) != 0)) {
+        if (((bitField1_ & 0x00000001) != 0)) {
           securityQuals_ = java.util.Collections.unmodifiableList(securityQuals_);
-          bitField0_ = (bitField0_ & ~0x80000000);
+          bitField1_ = (bitField1_ & ~0x00000001);
         }
         result.securityQuals_ = securityQuals_;
       } else {
@@ -1777,13 +1851,17 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x10000000) != 0)) {
         result.enrtuples_ = enrtuples_;
       }
-      if (((from_bitField0_ & 0x20000000) != 0)) {
+      if (((from_bitField0_ & 0x40000000) != 0)) {
         result.lateral_ = lateral_;
       }
-      if (((from_bitField0_ & 0x40000000) != 0)) {
+      if (((from_bitField0_ & 0x80000000) != 0)) {
         result.inFromCl_ = inFromCl_;
       }
       result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartial1(com.premiumminds.sonar.postgres.protobuf.RangeTblEntry result) {
+      int from_bitField1_ = bitField1_;
     }
 
     @java.lang.Override
@@ -2107,6 +2185,32 @@ private static final long serialVersionUID = 0L;
       if (other.getEnrtuples() != 0D) {
         setEnrtuples(other.getEnrtuples());
       }
+      if (groupexprsBuilder_ == null) {
+        if (!other.groupexprs_.isEmpty()) {
+          if (groupexprs_.isEmpty()) {
+            groupexprs_ = other.groupexprs_;
+            bitField0_ = (bitField0_ & ~0x20000000);
+          } else {
+            ensureGroupexprsIsMutable();
+            groupexprs_.addAll(other.groupexprs_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.groupexprs_.isEmpty()) {
+          if (groupexprsBuilder_.isEmpty()) {
+            groupexprsBuilder_.dispose();
+            groupexprsBuilder_ = null;
+            groupexprs_ = other.groupexprs_;
+            bitField0_ = (bitField0_ & ~0x20000000);
+            groupexprsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getGroupexprsFieldBuilder() : null;
+          } else {
+            groupexprsBuilder_.addAllMessages(other.groupexprs_);
+          }
+        }
+      }
       if (other.getLateral() != false) {
         setLateral(other.getLateral());
       }
@@ -2117,7 +2221,7 @@ private static final long serialVersionUID = 0L;
         if (!other.securityQuals_.isEmpty()) {
           if (securityQuals_.isEmpty()) {
             securityQuals_ = other.securityQuals_;
-            bitField0_ = (bitField0_ & ~0x80000000);
+            bitField1_ = (bitField1_ & ~0x00000001);
           } else {
             ensureSecurityQualsIsMutable();
             securityQuals_.addAll(other.securityQuals_);
@@ -2130,7 +2234,7 @@ private static final long serialVersionUID = 0L;
             securityQualsBuilder_.dispose();
             securityQualsBuilder_ = null;
             securityQuals_ = other.securityQuals_;
-            bitField0_ = (bitField0_ & ~0x80000000);
+            bitField1_ = (bitField1_ & ~0x00000001);
             securityQualsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSecurityQualsFieldBuilder() : null;
@@ -2386,17 +2490,30 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x10000000;
               break;
             } // case 233
-            case 240: {
-              lateral_ = input.readBool();
-              bitField0_ |= 0x20000000;
+            case 242: {
+              com.premiumminds.sonar.postgres.protobuf.Node m =
+                  input.readMessage(
+                      com.premiumminds.sonar.postgres.protobuf.Node.parser(),
+                      extensionRegistry);
+              if (groupexprsBuilder_ == null) {
+                ensureGroupexprsIsMutable();
+                groupexprs_.add(m);
+              } else {
+                groupexprsBuilder_.addMessage(m);
+              }
               break;
-            } // case 240
+            } // case 242
             case 248: {
-              inFromCl_ = input.readBool();
+              lateral_ = input.readBool();
               bitField0_ |= 0x40000000;
               break;
             } // case 248
-            case 258: {
+            case 256: {
+              inFromCl_ = input.readBool();
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 256
+            case 266: {
               com.premiumminds.sonar.postgres.protobuf.Node m =
                   input.readMessage(
                       com.premiumminds.sonar.postgres.protobuf.Node.parser(),
@@ -2408,7 +2525,7 @@ private static final long serialVersionUID = 0L;
                 securityQualsBuilder_.addMessage(m);
               }
               break;
-            } // case 258
+            } // case 266
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2425,6 +2542,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
+    private int bitField1_;
 
     private com.premiumminds.sonar.postgres.protobuf.Alias alias_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -5714,9 +5832,249 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> groupexprs_ =
+      java.util.Collections.emptyList();
+    private void ensureGroupexprsIsMutable() {
+      if (!((bitField0_ & 0x20000000) != 0)) {
+        groupexprs_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(groupexprs_);
+        bitField0_ |= 0x20000000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> groupexprsBuilder_;
+
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getGroupexprsList() {
+      if (groupexprsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(groupexprs_);
+      } else {
+        return groupexprsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public int getGroupexprsCount() {
+      if (groupexprsBuilder_ == null) {
+        return groupexprs_.size();
+      } else {
+        return groupexprsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node getGroupexprs(int index) {
+      if (groupexprsBuilder_ == null) {
+        return groupexprs_.get(index);
+      } else {
+        return groupexprsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public Builder setGroupexprs(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (groupexprsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGroupexprsIsMutable();
+        groupexprs_.set(index, value);
+        onChanged();
+      } else {
+        groupexprsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public Builder setGroupexprs(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+      if (groupexprsBuilder_ == null) {
+        ensureGroupexprsIsMutable();
+        groupexprs_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        groupexprsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public Builder addGroupexprs(com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (groupexprsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGroupexprsIsMutable();
+        groupexprs_.add(value);
+        onChanged();
+      } else {
+        groupexprsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public Builder addGroupexprs(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
+      if (groupexprsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGroupexprsIsMutable();
+        groupexprs_.add(index, value);
+        onChanged();
+      } else {
+        groupexprsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public Builder addGroupexprs(
+        com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+      if (groupexprsBuilder_ == null) {
+        ensureGroupexprsIsMutable();
+        groupexprs_.add(builderForValue.build());
+        onChanged();
+      } else {
+        groupexprsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public Builder addGroupexprs(
+        int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+      if (groupexprsBuilder_ == null) {
+        ensureGroupexprsIsMutable();
+        groupexprs_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        groupexprsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public Builder addAllGroupexprs(
+        java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
+      if (groupexprsBuilder_ == null) {
+        ensureGroupexprsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, groupexprs_);
+        onChanged();
+      } else {
+        groupexprsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public Builder clearGroupexprs() {
+      if (groupexprsBuilder_ == null) {
+        groupexprs_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x20000000);
+        onChanged();
+      } else {
+        groupexprsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public Builder removeGroupexprs(int index) {
+      if (groupexprsBuilder_ == null) {
+        ensureGroupexprsIsMutable();
+        groupexprs_.remove(index);
+        onChanged();
+      } else {
+        groupexprsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node.Builder getGroupexprsBuilder(
+        int index) {
+      return getGroupexprsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getGroupexprsOrBuilder(
+        int index) {
+      if (groupexprsBuilder_ == null) {
+        return groupexprs_.get(index);  } else {
+        return groupexprsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+         getGroupexprsOrBuilderList() {
+      if (groupexprsBuilder_ != null) {
+        return groupexprsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(groupexprs_);
+      }
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node.Builder addGroupexprsBuilder() {
+      return getGroupexprsFieldBuilder().addBuilder(
+          com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public com.premiumminds.sonar.postgres.protobuf.Node.Builder addGroupexprsBuilder(
+        int index) {
+      return getGroupexprsFieldBuilder().addBuilder(
+          index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+     */
+    public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
+         getGroupexprsBuilderList() {
+      return getGroupexprsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+        getGroupexprsFieldBuilder() {
+      if (groupexprsBuilder_ == null) {
+        groupexprsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
+                groupexprs_,
+                ((bitField0_ & 0x20000000) != 0),
+                getParentForChildren(),
+                isClean());
+        groupexprs_ = null;
+      }
+      return groupexprsBuilder_;
+    }
+
     private boolean lateral_ ;
     /**
-     * <code>bool lateral = 30 [json_name = "lateral"];</code>
+     * <code>bool lateral = 31 [json_name = "lateral"];</code>
      * @return The lateral.
      */
     @java.lang.Override
@@ -5724,23 +6082,23 @@ private static final long serialVersionUID = 0L;
       return lateral_;
     }
     /**
-     * <code>bool lateral = 30 [json_name = "lateral"];</code>
+     * <code>bool lateral = 31 [json_name = "lateral"];</code>
      * @param value The lateral to set.
      * @return This builder for chaining.
      */
     public Builder setLateral(boolean value) {
 
       lateral_ = value;
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
     /**
-     * <code>bool lateral = 30 [json_name = "lateral"];</code>
+     * <code>bool lateral = 31 [json_name = "lateral"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLateral() {
-      bitField0_ = (bitField0_ & ~0x20000000);
+      bitField0_ = (bitField0_ & ~0x40000000);
       lateral_ = false;
       onChanged();
       return this;
@@ -5748,7 +6106,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean inFromCl_ ;
     /**
-     * <code>bool in_from_cl = 31 [json_name = "inFromCl"];</code>
+     * <code>bool in_from_cl = 32 [json_name = "inFromCl"];</code>
      * @return The inFromCl.
      */
     @java.lang.Override
@@ -5756,23 +6114,23 @@ private static final long serialVersionUID = 0L;
       return inFromCl_;
     }
     /**
-     * <code>bool in_from_cl = 31 [json_name = "inFromCl"];</code>
+     * <code>bool in_from_cl = 32 [json_name = "inFromCl"];</code>
      * @param value The inFromCl to set.
      * @return This builder for chaining.
      */
     public Builder setInFromCl(boolean value) {
 
       inFromCl_ = value;
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x80000000;
       onChanged();
       return this;
     }
     /**
-     * <code>bool in_from_cl = 31 [json_name = "inFromCl"];</code>
+     * <code>bool in_from_cl = 32 [json_name = "inFromCl"];</code>
      * @return This builder for chaining.
      */
     public Builder clearInFromCl() {
-      bitField0_ = (bitField0_ & ~0x40000000);
+      bitField0_ = (bitField0_ & ~0x80000000);
       inFromCl_ = false;
       onChanged();
       return this;
@@ -5781,9 +6139,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> securityQuals_ =
       java.util.Collections.emptyList();
     private void ensureSecurityQualsIsMutable() {
-      if (!((bitField0_ & 0x80000000) != 0)) {
+      if (!((bitField1_ & 0x00000001) != 0)) {
         securityQuals_ = new java.util.ArrayList<com.premiumminds.sonar.postgres.protobuf.Node>(securityQuals_);
-        bitField0_ |= 0x80000000;
+        bitField1_ |= 0x00000001;
        }
     }
 
@@ -5791,7 +6149,7 @@ private static final long serialVersionUID = 0L;
         com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> securityQualsBuilder_;
 
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> getSecurityQualsList() {
       if (securityQualsBuilder_ == null) {
@@ -5801,7 +6159,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public int getSecurityQualsCount() {
       if (securityQualsBuilder_ == null) {
@@ -5811,7 +6169,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node getSecurityQuals(int index) {
       if (securityQualsBuilder_ == null) {
@@ -5821,7 +6179,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public Builder setSecurityQuals(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -5838,7 +6196,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public Builder setSecurityQuals(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -5852,7 +6210,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public Builder addSecurityQuals(com.premiumminds.sonar.postgres.protobuf.Node value) {
       if (securityQualsBuilder_ == null) {
@@ -5868,7 +6226,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public Builder addSecurityQuals(
         int index, com.premiumminds.sonar.postgres.protobuf.Node value) {
@@ -5885,7 +6243,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public Builder addSecurityQuals(
         com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -5899,7 +6257,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public Builder addSecurityQuals(
         int index, com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
@@ -5913,7 +6271,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public Builder addAllSecurityQuals(
         java.lang.Iterable<? extends com.premiumminds.sonar.postgres.protobuf.Node> values) {
@@ -5928,12 +6286,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public Builder clearSecurityQuals() {
       if (securityQualsBuilder_ == null) {
         securityQuals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x80000000);
+        bitField1_ = (bitField1_ & ~0x00000001);
         onChanged();
       } else {
         securityQualsBuilder_.clear();
@@ -5941,7 +6299,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public Builder removeSecurityQuals(int index) {
       if (securityQualsBuilder_ == null) {
@@ -5954,14 +6312,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder getSecurityQualsBuilder(
         int index) {
       return getSecurityQualsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getSecurityQualsOrBuilder(
         int index) {
@@ -5971,7 +6329,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
          getSecurityQualsOrBuilderList() {
@@ -5982,14 +6340,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addSecurityQualsBuilder() {
       return getSecurityQualsFieldBuilder().addBuilder(
           com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public com.premiumminds.sonar.postgres.protobuf.Node.Builder addSecurityQualsBuilder(
         int index) {
@@ -5997,7 +6355,7 @@ private static final long serialVersionUID = 0L;
           index, com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance());
     }
     /**
-     * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+     * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
      */
     public java.util.List<com.premiumminds.sonar.postgres.protobuf.Node.Builder> 
          getSecurityQualsBuilderList() {
@@ -6010,7 +6368,7 @@ private static final long serialVersionUID = 0L;
         securityQualsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
                 securityQuals_,
-                ((bitField0_ & 0x80000000) != 0),
+                ((bitField1_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         securityQuals_ = null;

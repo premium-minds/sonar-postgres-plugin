@@ -27,13 +27,19 @@ public interface SortGroupClauseOrBuilder extends
   int getSortop();
 
   /**
-   * <code>bool nulls_first = 4 [json_name = "nulls_first"];</code>
+   * <code>bool reverse_sort = 4 [json_name = "reverse_sort"];</code>
+   * @return The reverseSort.
+   */
+  boolean getReverseSort();
+
+  /**
+   * <code>bool nulls_first = 5 [json_name = "nulls_first"];</code>
    * @return The nullsFirst.
    */
   boolean getNullsFirst();
 
   /**
-   * <code>bool hashable = 5 [json_name = "hashable"];</code>
+   * <code>bool hashable = 6 [json_name = "hashable"];</code>
    * @return The hashable.
    */
   boolean getHashable();

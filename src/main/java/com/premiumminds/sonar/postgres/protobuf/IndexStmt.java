@@ -508,10 +508,21 @@ private static final long serialVersionUID = 0L;
     return isconstraint_;
   }
 
-  public static final int DEFERRABLE_FIELD_NUMBER = 19;
+  public static final int ISWITHOUTOVERLAPS_FIELD_NUMBER = 19;
+  private boolean iswithoutoverlaps_ = false;
+  /**
+   * <code>bool iswithoutoverlaps = 19 [json_name = "iswithoutoverlaps"];</code>
+   * @return The iswithoutoverlaps.
+   */
+  @java.lang.Override
+  public boolean getIswithoutoverlaps() {
+    return iswithoutoverlaps_;
+  }
+
+  public static final int DEFERRABLE_FIELD_NUMBER = 20;
   private boolean deferrable_ = false;
   /**
-   * <code>bool deferrable = 19 [json_name = "deferrable"];</code>
+   * <code>bool deferrable = 20 [json_name = "deferrable"];</code>
    * @return The deferrable.
    */
   @java.lang.Override
@@ -519,10 +530,10 @@ private static final long serialVersionUID = 0L;
     return deferrable_;
   }
 
-  public static final int INITDEFERRED_FIELD_NUMBER = 20;
+  public static final int INITDEFERRED_FIELD_NUMBER = 21;
   private boolean initdeferred_ = false;
   /**
-   * <code>bool initdeferred = 20 [json_name = "initdeferred"];</code>
+   * <code>bool initdeferred = 21 [json_name = "initdeferred"];</code>
    * @return The initdeferred.
    */
   @java.lang.Override
@@ -530,10 +541,10 @@ private static final long serialVersionUID = 0L;
     return initdeferred_;
   }
 
-  public static final int TRANSFORMED_FIELD_NUMBER = 21;
+  public static final int TRANSFORMED_FIELD_NUMBER = 22;
   private boolean transformed_ = false;
   /**
-   * <code>bool transformed = 21 [json_name = "transformed"];</code>
+   * <code>bool transformed = 22 [json_name = "transformed"];</code>
    * @return The transformed.
    */
   @java.lang.Override
@@ -541,10 +552,10 @@ private static final long serialVersionUID = 0L;
     return transformed_;
   }
 
-  public static final int CONCURRENT_FIELD_NUMBER = 22;
+  public static final int CONCURRENT_FIELD_NUMBER = 23;
   private boolean concurrent_ = false;
   /**
-   * <code>bool concurrent = 22 [json_name = "concurrent"];</code>
+   * <code>bool concurrent = 23 [json_name = "concurrent"];</code>
    * @return The concurrent.
    */
   @java.lang.Override
@@ -552,10 +563,10 @@ private static final long serialVersionUID = 0L;
     return concurrent_;
   }
 
-  public static final int IF_NOT_EXISTS_FIELD_NUMBER = 23;
+  public static final int IF_NOT_EXISTS_FIELD_NUMBER = 24;
   private boolean ifNotExists_ = false;
   /**
-   * <code>bool if_not_exists = 23 [json_name = "if_not_exists"];</code>
+   * <code>bool if_not_exists = 24 [json_name = "if_not_exists"];</code>
    * @return The ifNotExists.
    */
   @java.lang.Override
@@ -563,10 +574,10 @@ private static final long serialVersionUID = 0L;
     return ifNotExists_;
   }
 
-  public static final int RESET_DEFAULT_TBLSPC_FIELD_NUMBER = 24;
+  public static final int RESET_DEFAULT_TBLSPC_FIELD_NUMBER = 25;
   private boolean resetDefaultTblspc_ = false;
   /**
-   * <code>bool reset_default_tblspc = 24 [json_name = "reset_default_tblspc"];</code>
+   * <code>bool reset_default_tblspc = 25 [json_name = "reset_default_tblspc"];</code>
    * @return The resetDefaultTblspc.
    */
   @java.lang.Override
@@ -642,23 +653,26 @@ private static final long serialVersionUID = 0L;
     if (isconstraint_ != false) {
       output.writeBool(18, isconstraint_);
     }
+    if (iswithoutoverlaps_ != false) {
+      output.writeBool(19, iswithoutoverlaps_);
+    }
     if (deferrable_ != false) {
-      output.writeBool(19, deferrable_);
+      output.writeBool(20, deferrable_);
     }
     if (initdeferred_ != false) {
-      output.writeBool(20, initdeferred_);
+      output.writeBool(21, initdeferred_);
     }
     if (transformed_ != false) {
-      output.writeBool(21, transformed_);
+      output.writeBool(22, transformed_);
     }
     if (concurrent_ != false) {
-      output.writeBool(22, concurrent_);
+      output.writeBool(23, concurrent_);
     }
     if (ifNotExists_ != false) {
-      output.writeBool(23, ifNotExists_);
+      output.writeBool(24, ifNotExists_);
     }
     if (resetDefaultTblspc_ != false) {
-      output.writeBool(24, resetDefaultTblspc_);
+      output.writeBool(25, resetDefaultTblspc_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -737,29 +751,33 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(18, isconstraint_);
     }
+    if (iswithoutoverlaps_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(19, iswithoutoverlaps_);
+    }
     if (deferrable_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(19, deferrable_);
+        .computeBoolSize(20, deferrable_);
     }
     if (initdeferred_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(20, initdeferred_);
+        .computeBoolSize(21, initdeferred_);
     }
     if (transformed_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(21, transformed_);
+        .computeBoolSize(22, transformed_);
     }
     if (concurrent_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(22, concurrent_);
+        .computeBoolSize(23, concurrent_);
     }
     if (ifNotExists_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(23, ifNotExists_);
+        .computeBoolSize(24, ifNotExists_);
     }
     if (resetDefaultTblspc_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(24, resetDefaultTblspc_);
+        .computeBoolSize(25, resetDefaultTblspc_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -818,6 +836,8 @@ private static final long serialVersionUID = 0L;
         != other.getPrimary()) return false;
     if (getIsconstraint()
         != other.getIsconstraint()) return false;
+    if (getIswithoutoverlaps()
+        != other.getIswithoutoverlaps()) return false;
     if (getDeferrable()
         != other.getDeferrable()) return false;
     if (getInitdeferred()
@@ -893,6 +913,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ISCONSTRAINT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsconstraint());
+    hash = (37 * hash) + ISWITHOUTOVERLAPS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIswithoutoverlaps());
     hash = (37 * hash) + DEFERRABLE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDeferrable());
@@ -1103,6 +1126,7 @@ private static final long serialVersionUID = 0L;
       nullsNotDistinct_ = false;
       primary_ = false;
       isconstraint_ = false;
+      iswithoutoverlaps_ = false;
       deferrable_ = false;
       initdeferred_ = false;
       transformed_ = false;
@@ -1232,21 +1256,24 @@ private static final long serialVersionUID = 0L;
         result.isconstraint_ = isconstraint_;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
-        result.deferrable_ = deferrable_;
+        result.iswithoutoverlaps_ = iswithoutoverlaps_;
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
-        result.initdeferred_ = initdeferred_;
+        result.deferrable_ = deferrable_;
       }
       if (((from_bitField0_ & 0x00100000) != 0)) {
-        result.transformed_ = transformed_;
+        result.initdeferred_ = initdeferred_;
       }
       if (((from_bitField0_ & 0x00200000) != 0)) {
-        result.concurrent_ = concurrent_;
+        result.transformed_ = transformed_;
       }
       if (((from_bitField0_ & 0x00400000) != 0)) {
-        result.ifNotExists_ = ifNotExists_;
+        result.concurrent_ = concurrent_;
       }
       if (((from_bitField0_ & 0x00800000) != 0)) {
+        result.ifNotExists_ = ifNotExists_;
+      }
+      if (((from_bitField0_ & 0x01000000) != 0)) {
         result.resetDefaultTblspc_ = resetDefaultTblspc_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -1450,6 +1477,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIsconstraint() != false) {
         setIsconstraint(other.getIsconstraint());
       }
+      if (other.getIswithoutoverlaps() != false) {
+        setIswithoutoverlaps(other.getIswithoutoverlaps());
+      }
       if (other.getDeferrable() != false) {
         setDeferrable(other.getDeferrable());
       }
@@ -1621,35 +1651,40 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 144
             case 152: {
-              deferrable_ = input.readBool();
+              iswithoutoverlaps_ = input.readBool();
               bitField0_ |= 0x00040000;
               break;
             } // case 152
             case 160: {
-              initdeferred_ = input.readBool();
+              deferrable_ = input.readBool();
               bitField0_ |= 0x00080000;
               break;
             } // case 160
             case 168: {
-              transformed_ = input.readBool();
+              initdeferred_ = input.readBool();
               bitField0_ |= 0x00100000;
               break;
             } // case 168
             case 176: {
-              concurrent_ = input.readBool();
+              transformed_ = input.readBool();
               bitField0_ |= 0x00200000;
               break;
             } // case 176
             case 184: {
-              ifNotExists_ = input.readBool();
+              concurrent_ = input.readBool();
               bitField0_ |= 0x00400000;
               break;
             } // case 184
             case 192: {
-              resetDefaultTblspc_ = input.readBool();
+              ifNotExists_ = input.readBool();
               bitField0_ |= 0x00800000;
               break;
             } // case 192
+            case 200: {
+              resetDefaultTblspc_ = input.readBool();
+              bitField0_ |= 0x01000000;
+              break;
+            } // case 200
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3413,9 +3448,41 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private boolean iswithoutoverlaps_ ;
+    /**
+     * <code>bool iswithoutoverlaps = 19 [json_name = "iswithoutoverlaps"];</code>
+     * @return The iswithoutoverlaps.
+     */
+    @java.lang.Override
+    public boolean getIswithoutoverlaps() {
+      return iswithoutoverlaps_;
+    }
+    /**
+     * <code>bool iswithoutoverlaps = 19 [json_name = "iswithoutoverlaps"];</code>
+     * @param value The iswithoutoverlaps to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIswithoutoverlaps(boolean value) {
+
+      iswithoutoverlaps_ = value;
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool iswithoutoverlaps = 19 [json_name = "iswithoutoverlaps"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIswithoutoverlaps() {
+      bitField0_ = (bitField0_ & ~0x00040000);
+      iswithoutoverlaps_ = false;
+      onChanged();
+      return this;
+    }
+
     private boolean deferrable_ ;
     /**
-     * <code>bool deferrable = 19 [json_name = "deferrable"];</code>
+     * <code>bool deferrable = 20 [json_name = "deferrable"];</code>
      * @return The deferrable.
      */
     @java.lang.Override
@@ -3423,23 +3490,23 @@ private static final long serialVersionUID = 0L;
       return deferrable_;
     }
     /**
-     * <code>bool deferrable = 19 [json_name = "deferrable"];</code>
+     * <code>bool deferrable = 20 [json_name = "deferrable"];</code>
      * @param value The deferrable to set.
      * @return This builder for chaining.
      */
     public Builder setDeferrable(boolean value) {
 
       deferrable_ = value;
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
     /**
-     * <code>bool deferrable = 19 [json_name = "deferrable"];</code>
+     * <code>bool deferrable = 20 [json_name = "deferrable"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDeferrable() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00080000);
       deferrable_ = false;
       onChanged();
       return this;
@@ -3447,7 +3514,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean initdeferred_ ;
     /**
-     * <code>bool initdeferred = 20 [json_name = "initdeferred"];</code>
+     * <code>bool initdeferred = 21 [json_name = "initdeferred"];</code>
      * @return The initdeferred.
      */
     @java.lang.Override
@@ -3455,23 +3522,23 @@ private static final long serialVersionUID = 0L;
       return initdeferred_;
     }
     /**
-     * <code>bool initdeferred = 20 [json_name = "initdeferred"];</code>
+     * <code>bool initdeferred = 21 [json_name = "initdeferred"];</code>
      * @param value The initdeferred to set.
      * @return This builder for chaining.
      */
     public Builder setInitdeferred(boolean value) {
 
       initdeferred_ = value;
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
     /**
-     * <code>bool initdeferred = 20 [json_name = "initdeferred"];</code>
+     * <code>bool initdeferred = 21 [json_name = "initdeferred"];</code>
      * @return This builder for chaining.
      */
     public Builder clearInitdeferred() {
-      bitField0_ = (bitField0_ & ~0x00080000);
+      bitField0_ = (bitField0_ & ~0x00100000);
       initdeferred_ = false;
       onChanged();
       return this;
@@ -3479,7 +3546,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean transformed_ ;
     /**
-     * <code>bool transformed = 21 [json_name = "transformed"];</code>
+     * <code>bool transformed = 22 [json_name = "transformed"];</code>
      * @return The transformed.
      */
     @java.lang.Override
@@ -3487,23 +3554,23 @@ private static final long serialVersionUID = 0L;
       return transformed_;
     }
     /**
-     * <code>bool transformed = 21 [json_name = "transformed"];</code>
+     * <code>bool transformed = 22 [json_name = "transformed"];</code>
      * @param value The transformed to set.
      * @return This builder for chaining.
      */
     public Builder setTransformed(boolean value) {
 
       transformed_ = value;
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
     /**
-     * <code>bool transformed = 21 [json_name = "transformed"];</code>
+     * <code>bool transformed = 22 [json_name = "transformed"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTransformed() {
-      bitField0_ = (bitField0_ & ~0x00100000);
+      bitField0_ = (bitField0_ & ~0x00200000);
       transformed_ = false;
       onChanged();
       return this;
@@ -3511,7 +3578,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean concurrent_ ;
     /**
-     * <code>bool concurrent = 22 [json_name = "concurrent"];</code>
+     * <code>bool concurrent = 23 [json_name = "concurrent"];</code>
      * @return The concurrent.
      */
     @java.lang.Override
@@ -3519,23 +3586,23 @@ private static final long serialVersionUID = 0L;
       return concurrent_;
     }
     /**
-     * <code>bool concurrent = 22 [json_name = "concurrent"];</code>
+     * <code>bool concurrent = 23 [json_name = "concurrent"];</code>
      * @param value The concurrent to set.
      * @return This builder for chaining.
      */
     public Builder setConcurrent(boolean value) {
 
       concurrent_ = value;
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
     /**
-     * <code>bool concurrent = 22 [json_name = "concurrent"];</code>
+     * <code>bool concurrent = 23 [json_name = "concurrent"];</code>
      * @return This builder for chaining.
      */
     public Builder clearConcurrent() {
-      bitField0_ = (bitField0_ & ~0x00200000);
+      bitField0_ = (bitField0_ & ~0x00400000);
       concurrent_ = false;
       onChanged();
       return this;
@@ -3543,7 +3610,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean ifNotExists_ ;
     /**
-     * <code>bool if_not_exists = 23 [json_name = "if_not_exists"];</code>
+     * <code>bool if_not_exists = 24 [json_name = "if_not_exists"];</code>
      * @return The ifNotExists.
      */
     @java.lang.Override
@@ -3551,23 +3618,23 @@ private static final long serialVersionUID = 0L;
       return ifNotExists_;
     }
     /**
-     * <code>bool if_not_exists = 23 [json_name = "if_not_exists"];</code>
+     * <code>bool if_not_exists = 24 [json_name = "if_not_exists"];</code>
      * @param value The ifNotExists to set.
      * @return This builder for chaining.
      */
     public Builder setIfNotExists(boolean value) {
 
       ifNotExists_ = value;
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
     /**
-     * <code>bool if_not_exists = 23 [json_name = "if_not_exists"];</code>
+     * <code>bool if_not_exists = 24 [json_name = "if_not_exists"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIfNotExists() {
-      bitField0_ = (bitField0_ & ~0x00400000);
+      bitField0_ = (bitField0_ & ~0x00800000);
       ifNotExists_ = false;
       onChanged();
       return this;
@@ -3575,7 +3642,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean resetDefaultTblspc_ ;
     /**
-     * <code>bool reset_default_tblspc = 24 [json_name = "reset_default_tblspc"];</code>
+     * <code>bool reset_default_tblspc = 25 [json_name = "reset_default_tblspc"];</code>
      * @return The resetDefaultTblspc.
      */
     @java.lang.Override
@@ -3583,23 +3650,23 @@ private static final long serialVersionUID = 0L;
       return resetDefaultTblspc_;
     }
     /**
-     * <code>bool reset_default_tblspc = 24 [json_name = "reset_default_tblspc"];</code>
+     * <code>bool reset_default_tblspc = 25 [json_name = "reset_default_tblspc"];</code>
      * @param value The resetDefaultTblspc to set.
      * @return This builder for chaining.
      */
     public Builder setResetDefaultTblspc(boolean value) {
 
       resetDefaultTblspc_ = value;
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
     /**
-     * <code>bool reset_default_tblspc = 24 [json_name = "reset_default_tblspc"];</code>
+     * <code>bool reset_default_tblspc = 25 [json_name = "reset_default_tblspc"];</code>
      * @return This builder for chaining.
      */
     public Builder clearResetDefaultTblspc() {
-      bitField0_ = (bitField0_ & ~0x00800000);
+      bitField0_ = (bitField0_ & ~0x01000000);
       resetDefaultTblspc_ = false;
       onChanged();
       return this;

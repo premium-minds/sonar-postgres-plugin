@@ -131,7 +131,7 @@ public enum VariableSetKind
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(21);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(22);
   }
 
   private static final VariableSetKind[] VALUES = values();

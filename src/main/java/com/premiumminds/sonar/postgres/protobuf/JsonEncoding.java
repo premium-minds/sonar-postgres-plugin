@@ -113,7 +113,7 @@ public enum JsonEncoding
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(48);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(49);
   }
 
   private static final JsonEncoding[] VALUES = values();

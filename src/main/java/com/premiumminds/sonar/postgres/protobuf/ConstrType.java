@@ -69,6 +69,14 @@ public enum ConstrType
    * <code>CONSTR_ATTR_IMMEDIATE = 14;</code>
    */
   CONSTR_ATTR_IMMEDIATE(14),
+  /**
+   * <code>CONSTR_ATTR_ENFORCED = 15;</code>
+   */
+  CONSTR_ATTR_ENFORCED(15),
+  /**
+   * <code>CONSTR_ATTR_NOT_ENFORCED = 16;</code>
+   */
+  CONSTR_ATTR_NOT_ENFORCED(16),
   UNRECOGNIZED(-1),
   ;
 
@@ -132,6 +140,14 @@ public enum ConstrType
    * <code>CONSTR_ATTR_IMMEDIATE = 14;</code>
    */
   public static final int CONSTR_ATTR_IMMEDIATE_VALUE = 14;
+  /**
+   * <code>CONSTR_ATTR_ENFORCED = 15;</code>
+   */
+  public static final int CONSTR_ATTR_ENFORCED_VALUE = 15;
+  /**
+   * <code>CONSTR_ATTR_NOT_ENFORCED = 16;</code>
+   */
+  public static final int CONSTR_ATTR_NOT_ENFORCED_VALUE = 16;
 
 
   public final int getNumber() {
@@ -173,6 +189,8 @@ public enum ConstrType
       case 12: return CONSTR_ATTR_NOT_DEFERRABLE;
       case 13: return CONSTR_ATTR_DEFERRED;
       case 14: return CONSTR_ATTR_IMMEDIATE;
+      case 15: return CONSTR_ATTR_ENFORCED;
+      case 16: return CONSTR_ATTR_NOT_ENFORCED;
       default: return null;
     }
   }
@@ -203,7 +221,7 @@ public enum ConstrType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(22);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(23);
   }
 
   private static final ConstrType[] VALUES = values();

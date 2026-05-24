@@ -72,10 +72,21 @@ private static final long serialVersionUID = 0L;
     return sortop_;
   }
 
-  public static final int NULLS_FIRST_FIELD_NUMBER = 4;
+  public static final int REVERSE_SORT_FIELD_NUMBER = 4;
+  private boolean reverseSort_ = false;
+  /**
+   * <code>bool reverse_sort = 4 [json_name = "reverse_sort"];</code>
+   * @return The reverseSort.
+   */
+  @java.lang.Override
+  public boolean getReverseSort() {
+    return reverseSort_;
+  }
+
+  public static final int NULLS_FIRST_FIELD_NUMBER = 5;
   private boolean nullsFirst_ = false;
   /**
-   * <code>bool nulls_first = 4 [json_name = "nulls_first"];</code>
+   * <code>bool nulls_first = 5 [json_name = "nulls_first"];</code>
    * @return The nullsFirst.
    */
   @java.lang.Override
@@ -83,10 +94,10 @@ private static final long serialVersionUID = 0L;
     return nullsFirst_;
   }
 
-  public static final int HASHABLE_FIELD_NUMBER = 5;
+  public static final int HASHABLE_FIELD_NUMBER = 6;
   private boolean hashable_ = false;
   /**
-   * <code>bool hashable = 5 [json_name = "hashable"];</code>
+   * <code>bool hashable = 6 [json_name = "hashable"];</code>
    * @return The hashable.
    */
   @java.lang.Override
@@ -117,11 +128,14 @@ private static final long serialVersionUID = 0L;
     if (sortop_ != 0) {
       output.writeUInt32(3, sortop_);
     }
+    if (reverseSort_ != false) {
+      output.writeBool(4, reverseSort_);
+    }
     if (nullsFirst_ != false) {
-      output.writeBool(4, nullsFirst_);
+      output.writeBool(5, nullsFirst_);
     }
     if (hashable_ != false) {
-      output.writeBool(5, hashable_);
+      output.writeBool(6, hashable_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -144,13 +158,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(3, sortop_);
     }
+    if (reverseSort_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, reverseSort_);
+    }
     if (nullsFirst_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(4, nullsFirst_);
+        .computeBoolSize(5, nullsFirst_);
     }
     if (hashable_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(5, hashable_);
+        .computeBoolSize(6, hashable_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -173,6 +191,8 @@ private static final long serialVersionUID = 0L;
         != other.getEqop()) return false;
     if (getSortop()
         != other.getSortop()) return false;
+    if (getReverseSort()
+        != other.getReverseSort()) return false;
     if (getNullsFirst()
         != other.getNullsFirst()) return false;
     if (getHashable()
@@ -194,6 +214,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getEqop();
     hash = (37 * hash) + SORTOP_FIELD_NUMBER;
     hash = (53 * hash) + getSortop();
+    hash = (37 * hash) + REVERSE_SORT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getReverseSort());
     hash = (37 * hash) + NULLS_FIRST_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getNullsFirst());
@@ -334,6 +357,7 @@ private static final long serialVersionUID = 0L;
       tleSortGroupRef_ = 0;
       eqop_ = 0;
       sortop_ = 0;
+      reverseSort_ = false;
       nullsFirst_ = false;
       hashable_ = false;
       return this;
@@ -379,9 +403,12 @@ private static final long serialVersionUID = 0L;
         result.sortop_ = sortop_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.nullsFirst_ = nullsFirst_;
+        result.reverseSort_ = reverseSort_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.nullsFirst_ = nullsFirst_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.hashable_ = hashable_;
       }
     }
@@ -439,6 +466,9 @@ private static final long serialVersionUID = 0L;
       if (other.getSortop() != 0) {
         setSortop(other.getSortop());
       }
+      if (other.getReverseSort() != false) {
+        setReverseSort(other.getReverseSort());
+      }
       if (other.getNullsFirst() != false) {
         setNullsFirst(other.getNullsFirst());
       }
@@ -487,15 +517,20 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 24
             case 32: {
-              nullsFirst_ = input.readBool();
+              reverseSort_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
-              hashable_ = input.readBool();
+              nullsFirst_ = input.readBool();
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 48: {
+              hashable_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -609,9 +644,41 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private boolean reverseSort_ ;
+    /**
+     * <code>bool reverse_sort = 4 [json_name = "reverse_sort"];</code>
+     * @return The reverseSort.
+     */
+    @java.lang.Override
+    public boolean getReverseSort() {
+      return reverseSort_;
+    }
+    /**
+     * <code>bool reverse_sort = 4 [json_name = "reverse_sort"];</code>
+     * @param value The reverseSort to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReverseSort(boolean value) {
+
+      reverseSort_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool reverse_sort = 4 [json_name = "reverse_sort"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReverseSort() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      reverseSort_ = false;
+      onChanged();
+      return this;
+    }
+
     private boolean nullsFirst_ ;
     /**
-     * <code>bool nulls_first = 4 [json_name = "nulls_first"];</code>
+     * <code>bool nulls_first = 5 [json_name = "nulls_first"];</code>
      * @return The nullsFirst.
      */
     @java.lang.Override
@@ -619,23 +686,23 @@ private static final long serialVersionUID = 0L;
       return nullsFirst_;
     }
     /**
-     * <code>bool nulls_first = 4 [json_name = "nulls_first"];</code>
+     * <code>bool nulls_first = 5 [json_name = "nulls_first"];</code>
      * @param value The nullsFirst to set.
      * @return This builder for chaining.
      */
     public Builder setNullsFirst(boolean value) {
 
       nullsFirst_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>bool nulls_first = 4 [json_name = "nulls_first"];</code>
+     * <code>bool nulls_first = 5 [json_name = "nulls_first"];</code>
      * @return This builder for chaining.
      */
     public Builder clearNullsFirst() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       nullsFirst_ = false;
       onChanged();
       return this;
@@ -643,7 +710,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean hashable_ ;
     /**
-     * <code>bool hashable = 5 [json_name = "hashable"];</code>
+     * <code>bool hashable = 6 [json_name = "hashable"];</code>
      * @return The hashable.
      */
     @java.lang.Override
@@ -651,23 +718,23 @@ private static final long serialVersionUID = 0L;
       return hashable_;
     }
     /**
-     * <code>bool hashable = 5 [json_name = "hashable"];</code>
+     * <code>bool hashable = 6 [json_name = "hashable"];</code>
      * @param value The hashable to set.
      * @return This builder for chaining.
      */
     public Builder setHashable(boolean value) {
 
       hashable_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <code>bool hashable = 5 [json_name = "hashable"];</code>
+     * <code>bool hashable = 6 [json_name = "hashable"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHashable() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       hashable_ = false;
       onChanged();
       return this;

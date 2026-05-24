@@ -74,7 +74,19 @@ public interface A_ExprOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getRexprOrBuilder();
 
   /**
-   * <code>int32 location = 5 [json_name = "location"];</code>
+   * <code>int32 rexpr_list_start = 5 [json_name = "rexpr_list_start"];</code>
+   * @return The rexprListStart.
+   */
+  int getRexprListStart();
+
+  /**
+   * <code>int32 rexpr_list_end = 6 [json_name = "rexpr_list_end"];</code>
+   * @return The rexprListEnd.
+   */
+  int getRexprListEnd();
+
+  /**
+   * <code>int32 location = 7 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

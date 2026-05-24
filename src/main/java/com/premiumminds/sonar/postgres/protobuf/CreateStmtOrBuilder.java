@@ -141,66 +141,90 @@ public interface CreateStmtOrBuilder extends
       int index);
 
   /**
-   * <code>repeated .pg_query.Node options = 8 [json_name = "options"];</code>
+   * <code>repeated .pg_query.Node nnconstraints = 8 [json_name = "nnconstraints"];</code>
+   */
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getNnconstraintsList();
+  /**
+   * <code>repeated .pg_query.Node nnconstraints = 8 [json_name = "nnconstraints"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getNnconstraints(int index);
+  /**
+   * <code>repeated .pg_query.Node nnconstraints = 8 [json_name = "nnconstraints"];</code>
+   */
+  int getNnconstraintsCount();
+  /**
+   * <code>repeated .pg_query.Node nnconstraints = 8 [json_name = "nnconstraints"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getNnconstraintsOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node nnconstraints = 8 [json_name = "nnconstraints"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getNnconstraintsOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .pg_query.Node options = 9 [json_name = "options"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getOptionsList();
   /**
-   * <code>repeated .pg_query.Node options = 8 [json_name = "options"];</code>
+   * <code>repeated .pg_query.Node options = 9 [json_name = "options"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getOptions(int index);
   /**
-   * <code>repeated .pg_query.Node options = 8 [json_name = "options"];</code>
+   * <code>repeated .pg_query.Node options = 9 [json_name = "options"];</code>
    */
   int getOptionsCount();
   /**
-   * <code>repeated .pg_query.Node options = 8 [json_name = "options"];</code>
+   * <code>repeated .pg_query.Node options = 9 [json_name = "options"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getOptionsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node options = 8 [json_name = "options"];</code>
+   * <code>repeated .pg_query.Node options = 9 [json_name = "options"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getOptionsOrBuilder(
       int index);
 
   /**
-   * <code>.pg_query.OnCommitAction oncommit = 9 [json_name = "oncommit"];</code>
+   * <code>.pg_query.OnCommitAction oncommit = 10 [json_name = "oncommit"];</code>
    * @return The enum numeric value on the wire for oncommit.
    */
   int getOncommitValue();
   /**
-   * <code>.pg_query.OnCommitAction oncommit = 9 [json_name = "oncommit"];</code>
+   * <code>.pg_query.OnCommitAction oncommit = 10 [json_name = "oncommit"];</code>
    * @return The oncommit.
    */
   com.premiumminds.sonar.postgres.protobuf.OnCommitAction getOncommit();
 
   /**
-   * <code>string tablespacename = 10 [json_name = "tablespacename"];</code>
+   * <code>string tablespacename = 11 [json_name = "tablespacename"];</code>
    * @return The tablespacename.
    */
   java.lang.String getTablespacename();
   /**
-   * <code>string tablespacename = 10 [json_name = "tablespacename"];</code>
+   * <code>string tablespacename = 11 [json_name = "tablespacename"];</code>
    * @return The bytes for tablespacename.
    */
   com.google.protobuf.ByteString
       getTablespacenameBytes();
 
   /**
-   * <code>string access_method = 11 [json_name = "accessMethod"];</code>
+   * <code>string access_method = 12 [json_name = "accessMethod"];</code>
    * @return The accessMethod.
    */
   java.lang.String getAccessMethod();
   /**
-   * <code>string access_method = 11 [json_name = "accessMethod"];</code>
+   * <code>string access_method = 12 [json_name = "accessMethod"];</code>
    * @return The bytes for accessMethod.
    */
   com.google.protobuf.ByteString
       getAccessMethodBytes();
 
   /**
-   * <code>bool if_not_exists = 12 [json_name = "if_not_exists"];</code>
+   * <code>bool if_not_exists = 13 [json_name = "if_not_exists"];</code>
    * @return The ifNotExists.
    */
   boolean getIfNotExists();

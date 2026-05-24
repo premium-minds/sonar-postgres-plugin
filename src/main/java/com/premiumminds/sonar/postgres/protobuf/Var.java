@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   }
   private Var() {
     varnullingrels_ = emptyLongList();
+    varreturningtype_ = 0;
   }
 
   @java.lang.Override
@@ -163,10 +164,28 @@ private static final long serialVersionUID = 0L;
     return varlevelsup_;
   }
 
-  public static final int LOCATION_FIELD_NUMBER = 9;
+  public static final int VARRETURNINGTYPE_FIELD_NUMBER = 9;
+  private int varreturningtype_ = 0;
+  /**
+   * <code>.pg_query.VarReturningType varreturningtype = 9 [json_name = "varreturningtype"];</code>
+   * @return The enum numeric value on the wire for varreturningtype.
+   */
+  @java.lang.Override public int getVarreturningtypeValue() {
+    return varreturningtype_;
+  }
+  /**
+   * <code>.pg_query.VarReturningType varreturningtype = 9 [json_name = "varreturningtype"];</code>
+   * @return The varreturningtype.
+   */
+  @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.VarReturningType getVarreturningtype() {
+    com.premiumminds.sonar.postgres.protobuf.VarReturningType result = com.premiumminds.sonar.postgres.protobuf.VarReturningType.forNumber(varreturningtype_);
+    return result == null ? com.premiumminds.sonar.postgres.protobuf.VarReturningType.UNRECOGNIZED : result;
+  }
+
+  public static final int LOCATION_FIELD_NUMBER = 10;
   private int location_ = 0;
   /**
-   * <code>int32 location = 9 [json_name = "location"];</code>
+   * <code>int32 location = 10 [json_name = "location"];</code>
    * @return The location.
    */
   @java.lang.Override
@@ -217,8 +236,11 @@ private static final long serialVersionUID = 0L;
     if (varlevelsup_ != 0) {
       output.writeUInt32(8, varlevelsup_);
     }
+    if (varreturningtype_ != com.premiumminds.sonar.postgres.protobuf.VarReturningType.VAR_RETURNING_TYPE_UNDEFINED.getNumber()) {
+      output.writeEnum(9, varreturningtype_);
+    }
     if (location_ != 0) {
-      output.writeInt32(9, location_);
+      output.writeInt32(10, location_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -271,9 +293,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(8, varlevelsup_);
     }
+    if (varreturningtype_ != com.premiumminds.sonar.postgres.protobuf.VarReturningType.VAR_RETURNING_TYPE_UNDEFINED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(9, varreturningtype_);
+    }
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(9, location_);
+        .computeInt32Size(10, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -309,6 +335,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getVarnullingrelsList())) return false;
     if (getVarlevelsup()
         != other.getVarlevelsup()) return false;
+    if (varreturningtype_ != other.varreturningtype_) return false;
     if (getLocation()
         != other.getLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -342,6 +369,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + VARLEVELSUP_FIELD_NUMBER;
     hash = (53 * hash) + getVarlevelsup();
+    hash = (37 * hash) + VARRETURNINGTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + varreturningtype_;
     hash = (37 * hash) + LOCATION_FIELD_NUMBER;
     hash = (53 * hash) + getLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -493,6 +522,7 @@ private static final long serialVersionUID = 0L;
       varcollid_ = 0;
       varnullingrels_ = emptyLongList();
       varlevelsup_ = 0;
+      varreturningtype_ = 0;
       location_ = 0;
       return this;
     }
@@ -557,6 +587,9 @@ private static final long serialVersionUID = 0L;
         result.varlevelsup_ = varlevelsup_;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.varreturningtype_ = varreturningtype_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.location_ = location_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -637,6 +670,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getVarlevelsup() != 0) {
         setVarlevelsup(other.getVarlevelsup());
+      }
+      if (other.varreturningtype_ != 0) {
+        setVarreturningtypeValue(other.getVarreturningtypeValue());
       }
       if (other.getLocation() != 0) {
         setLocation(other.getLocation());
@@ -721,10 +757,15 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 64
             case 72: {
-              location_ = input.readInt32();
+              varreturningtype_ = input.readEnum();
               bitField0_ |= 0x00000100;
               break;
             } // case 72
+            case 80: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1139,9 +1180,62 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int varreturningtype_ = 0;
+    /**
+     * <code>.pg_query.VarReturningType varreturningtype = 9 [json_name = "varreturningtype"];</code>
+     * @return The enum numeric value on the wire for varreturningtype.
+     */
+    @java.lang.Override public int getVarreturningtypeValue() {
+      return varreturningtype_;
+    }
+    /**
+     * <code>.pg_query.VarReturningType varreturningtype = 9 [json_name = "varreturningtype"];</code>
+     * @param value The enum numeric value on the wire for varreturningtype to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVarreturningtypeValue(int value) {
+      varreturningtype_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.pg_query.VarReturningType varreturningtype = 9 [json_name = "varreturningtype"];</code>
+     * @return The varreturningtype.
+     */
+    @java.lang.Override
+    public com.premiumminds.sonar.postgres.protobuf.VarReturningType getVarreturningtype() {
+      com.premiumminds.sonar.postgres.protobuf.VarReturningType result = com.premiumminds.sonar.postgres.protobuf.VarReturningType.forNumber(varreturningtype_);
+      return result == null ? com.premiumminds.sonar.postgres.protobuf.VarReturningType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.pg_query.VarReturningType varreturningtype = 9 [json_name = "varreturningtype"];</code>
+     * @param value The varreturningtype to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVarreturningtype(com.premiumminds.sonar.postgres.protobuf.VarReturningType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000100;
+      varreturningtype_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.pg_query.VarReturningType varreturningtype = 9 [json_name = "varreturningtype"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVarreturningtype() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      varreturningtype_ = 0;
+      onChanged();
+      return this;
+    }
+
     private int location_ ;
     /**
-     * <code>int32 location = 9 [json_name = "location"];</code>
+     * <code>int32 location = 10 [json_name = "location"];</code>
      * @return The location.
      */
     @java.lang.Override
@@ -1149,23 +1243,23 @@ private static final long serialVersionUID = 0L;
       return location_;
     }
     /**
-     * <code>int32 location = 9 [json_name = "location"];</code>
+     * <code>int32 location = 10 [json_name = "location"];</code>
      * @param value The location to set.
      * @return This builder for chaining.
      */
     public Builder setLocation(int value) {
 
       location_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 location = 9 [json_name = "location"];</code>
+     * <code>int32 location = 10 [json_name = "location"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       location_ = 0;
       onChanged();
       return this;

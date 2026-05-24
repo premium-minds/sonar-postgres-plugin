@@ -81,10 +81,32 @@ private static final long serialVersionUID = 0L;
     return elements_.get(index);
   }
 
-  public static final int LOCATION_FIELD_NUMBER = 2;
+  public static final int LIST_START_FIELD_NUMBER = 2;
+  private int listStart_ = 0;
+  /**
+   * <code>int32 list_start = 2 [json_name = "list_start"];</code>
+   * @return The listStart.
+   */
+  @java.lang.Override
+  public int getListStart() {
+    return listStart_;
+  }
+
+  public static final int LIST_END_FIELD_NUMBER = 3;
+  private int listEnd_ = 0;
+  /**
+   * <code>int32 list_end = 3 [json_name = "list_end"];</code>
+   * @return The listEnd.
+   */
+  @java.lang.Override
+  public int getListEnd() {
+    return listEnd_;
+  }
+
+  public static final int LOCATION_FIELD_NUMBER = 4;
   private int location_ = 0;
   /**
-   * <code>int32 location = 2 [json_name = "location"];</code>
+   * <code>int32 location = 4 [json_name = "location"];</code>
    * @return The location.
    */
   @java.lang.Override
@@ -109,8 +131,14 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < elements_.size(); i++) {
       output.writeMessage(1, elements_.get(i));
     }
+    if (listStart_ != 0) {
+      output.writeInt32(2, listStart_);
+    }
+    if (listEnd_ != 0) {
+      output.writeInt32(3, listEnd_);
+    }
     if (location_ != 0) {
-      output.writeInt32(2, location_);
+      output.writeInt32(4, location_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -125,9 +153,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, elements_.get(i));
     }
+    if (listStart_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(2, listStart_);
+    }
+    if (listEnd_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, listEnd_);
+    }
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, location_);
+        .computeInt32Size(4, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -146,6 +182,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getElementsList()
         .equals(other.getElementsList())) return false;
+    if (getListStart()
+        != other.getListStart()) return false;
+    if (getListEnd()
+        != other.getListEnd()) return false;
     if (getLocation()
         != other.getLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -163,6 +203,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ELEMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getElementsList().hashCode();
     }
+    hash = (37 * hash) + LIST_START_FIELD_NUMBER;
+    hash = (53 * hash) + getListStart();
+    hash = (37 * hash) + LIST_END_FIELD_NUMBER;
+    hash = (53 * hash) + getListEnd();
     hash = (37 * hash) + LOCATION_FIELD_NUMBER;
     hash = (53 * hash) + getLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -303,6 +347,8 @@ private static final long serialVersionUID = 0L;
         elementsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      listStart_ = 0;
+      listEnd_ = 0;
       location_ = 0;
       return this;
     }
@@ -351,6 +397,12 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.premiumminds.sonar.postgres.protobuf.A_ArrayExpr result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.listStart_ = listStart_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.listEnd_ = listEnd_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.location_ = location_;
       }
     }
@@ -425,6 +477,12 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getListStart() != 0) {
+        setListStart(other.getListStart());
+      }
+      if (other.getListEnd() != 0) {
+        setListEnd(other.getListEnd());
+      }
       if (other.getLocation() != 0) {
         setLocation(other.getLocation());
       }
@@ -468,10 +526,20 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 16: {
-              location_ = input.readInt32();
+              listStart_ = input.readInt32();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              listEnd_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -729,9 +797,73 @@ private static final long serialVersionUID = 0L;
       return elementsBuilder_;
     }
 
+    private int listStart_ ;
+    /**
+     * <code>int32 list_start = 2 [json_name = "list_start"];</code>
+     * @return The listStart.
+     */
+    @java.lang.Override
+    public int getListStart() {
+      return listStart_;
+    }
+    /**
+     * <code>int32 list_start = 2 [json_name = "list_start"];</code>
+     * @param value The listStart to set.
+     * @return This builder for chaining.
+     */
+    public Builder setListStart(int value) {
+
+      listStart_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 list_start = 2 [json_name = "list_start"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearListStart() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      listStart_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int listEnd_ ;
+    /**
+     * <code>int32 list_end = 3 [json_name = "list_end"];</code>
+     * @return The listEnd.
+     */
+    @java.lang.Override
+    public int getListEnd() {
+      return listEnd_;
+    }
+    /**
+     * <code>int32 list_end = 3 [json_name = "list_end"];</code>
+     * @param value The listEnd to set.
+     * @return This builder for chaining.
+     */
+    public Builder setListEnd(int value) {
+
+      listEnd_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 list_end = 3 [json_name = "list_end"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearListEnd() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      listEnd_ = 0;
+      onChanged();
+      return this;
+    }
+
     private int location_ ;
     /**
-     * <code>int32 location = 2 [json_name = "location"];</code>
+     * <code>int32 location = 4 [json_name = "location"];</code>
      * @return The location.
      */
     @java.lang.Override
@@ -739,23 +871,23 @@ private static final long serialVersionUID = 0L;
       return location_;
     }
     /**
-     * <code>int32 location = 2 [json_name = "location"];</code>
+     * <code>int32 location = 4 [json_name = "location"];</code>
      * @param value The location to set.
      * @return This builder for chaining.
      */
     public Builder setLocation(int value) {
 
       location_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 location = 2 [json_name = "location"];</code>
+     * <code>int32 location = 4 [json_name = "location"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000008);
       location_ = 0;
       onChanged();
       return this;

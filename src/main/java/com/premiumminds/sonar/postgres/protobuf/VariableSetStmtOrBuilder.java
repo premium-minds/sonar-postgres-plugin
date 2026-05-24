@@ -56,8 +56,20 @@ public interface VariableSetStmtOrBuilder extends
       int index);
 
   /**
-   * <code>bool is_local = 4 [json_name = "is_local"];</code>
+   * <code>bool jumble_args = 4 [json_name = "jumble_args"];</code>
+   * @return The jumbleArgs.
+   */
+  boolean getJumbleArgs();
+
+  /**
+   * <code>bool is_local = 5 [json_name = "is_local"];</code>
    * @return The isLocal.
    */
   boolean getIsLocal();
+
+  /**
+   * <code>int32 location = 6 [json_name = "location"];</code>
+   * @return The location.
+   */
+  int getLocation();
 }

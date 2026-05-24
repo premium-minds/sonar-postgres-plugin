@@ -77,7 +77,18 @@ public interface VarOrBuilder extends
   int getVarlevelsup();
 
   /**
-   * <code>int32 location = 9 [json_name = "location"];</code>
+   * <code>.pg_query.VarReturningType varreturningtype = 9 [json_name = "varreturningtype"];</code>
+   * @return The enum numeric value on the wire for varreturningtype.
+   */
+  int getVarreturningtypeValue();
+  /**
+   * <code>.pg_query.VarReturningType varreturningtype = 9 [json_name = "varreturningtype"];</code>
+   * @return The varreturningtype.
+   */
+  com.premiumminds.sonar.postgres.protobuf.VarReturningType getVarreturningtype();
+
+  /**
+   * <code>int32 location = 10 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();

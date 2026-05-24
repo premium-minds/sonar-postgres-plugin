@@ -366,6 +366,11 @@ public final class PgQuery {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pg_query_InferenceElem_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pg_query_ReturningExpr_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pg_query_ReturningExpr_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pg_query_TargetEntry_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -551,11 +556,6 @@ public final class PgQuery {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pg_query_PartitionRangeDatum_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pg_query_SinglePartitionSpec_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_pg_query_SinglePartitionSpec_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pg_query_PartitionCmd_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -640,6 +640,16 @@ public final class PgQuery {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pg_query_MergeWhenClause_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pg_query_ReturningOption_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pg_query_ReturningOption_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pg_query_ReturningClause_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pg_query_ReturningClause_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pg_query_TriggerTransition_descriptor;
   static final 
@@ -781,15 +791,20 @@ public final class PgQuery {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pg_query_AlterTableStmt_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pg_query_ReplicaIdentityStmt_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_pg_query_ReplicaIdentityStmt_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pg_query_AlterTableCmd_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pg_query_AlterTableCmd_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pg_query_ATAlterConstraint_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pg_query_ATAlterConstraint_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pg_query_ReplicaIdentityStmt_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pg_query_ReplicaIdentityStmt_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pg_query_AlterCollationStmt_descriptor;
   static final 
@@ -1413,7 +1428,7 @@ public final class PgQuery {
       "t\022\017\n\007version\030\001 \001(\005\022 \n\005stmts\030\002 \003(\0132\021.pg_q" +
       "uery.RawStmt\"B\n\nScanResult\022\017\n\007version\030\001 " +
       "\001(\005\022#\n\006tokens\030\002 \003(\0132\023.pg_query.ScanToken" +
-      "\"\325\216\001\n\004Node\022\'\n\005alias\030\001 \001(\0132\017.pg_query.Ali" +
+      "\"\243\220\001\n\004Node\022\'\n\005alias\030\001 \001(\0132\017.pg_query.Ali" +
       "asH\000R\005Alias\0221\n\trange_var\030\002 \001(\0132\022.pg_quer" +
       "y.RangeVarH\000R\010RangeVar\0224\n\ntable_func\030\003 \001" +
       "(\0132\023.pg_query.TableFuncH\000R\tTableFunc\0227\n\013" +
@@ -1503,2404 +1518,2459 @@ public final class PgQuery {
       "\017next_value_expr\0309 \001(\0132\027.pg_query.NextVa" +
       "lueExprH\000R\rNextValueExpr\022@\n\016inference_el" +
       "em\030: \001(\0132\027.pg_query.InferenceElemH\000R\rInf" +
-      "erenceElem\022:\n\014target_entry\030; \001(\0132\025.pg_qu" +
-      "ery.TargetEntryH\000R\013TargetEntry\022;\n\rrange_" +
-      "tbl_ref\030< \001(\0132\025.pg_query.RangeTblRefH\000R\013" +
-      "RangeTblRef\0221\n\tjoin_expr\030= \001(\0132\022.pg_quer" +
-      "y.JoinExprH\000R\010JoinExpr\0221\n\tfrom_expr\030> \001(" +
-      "\0132\022.pg_query.FromExprH\000R\010FromExpr\022D\n\020on_" +
-      "conflict_expr\030? \001(\0132\030.pg_query.OnConflic" +
-      "tExprH\000R\016OnConflictExpr\022\'\n\005query\030@ \001(\0132\017" +
-      ".pg_query.QueryH\000R\005Query\0221\n\ttype_name\030A " +
-      "\001(\0132\022.pg_query.TypeNameH\000R\010TypeName\0224\n\nc" +
-      "olumn_ref\030B \001(\0132\023.pg_query.ColumnRefH\000R\t" +
-      "ColumnRef\0221\n\tparam_ref\030C \001(\0132\022.pg_query." +
-      "ParamRefH\000R\010ParamRef\022*\n\006a_expr\030D \001(\0132\020.p" +
-      "g_query.A_ExprH\000R\006A_Expr\0221\n\ttype_cast\030E " +
-      "\001(\0132\022.pg_query.TypeCastH\000R\010TypeCast\022@\n\016c" +
-      "ollate_clause\030F \001(\0132\027.pg_query.CollateCl" +
-      "auseH\000R\rCollateClause\0221\n\trole_spec\030G \001(\013" +
-      "2\022.pg_query.RoleSpecH\000R\010RoleSpec\0221\n\tfunc" +
-      "_call\030H \001(\0132\022.pg_query.FuncCallH\000R\010FuncC" +
-      "all\022*\n\006a_star\030I \001(\0132\020.pg_query.A_StarH\000R" +
-      "\006A_Star\0223\n\ta_indices\030J \001(\0132\023.pg_query.A_" +
-      "IndicesH\000R\tA_Indices\022?\n\ra_indirection\030K " +
-      "\001(\0132\027.pg_query.A_IndirectionH\000R\rA_Indire" +
-      "ction\022:\n\014a_array_expr\030L \001(\0132\025.pg_query.A" +
-      "_ArrayExprH\000R\013A_ArrayExpr\0224\n\nres_target\030" +
-      "M \001(\0132\023.pg_query.ResTargetH\000R\tResTarget\022" +
-      "D\n\020multi_assign_ref\030N \001(\0132\030.pg_query.Mul" +
-      "tiAssignRefH\000R\016MultiAssignRef\022+\n\007sort_by" +
-      "\030O \001(\0132\020.pg_query.SortByH\000R\006SortBy\0224\n\nwi" +
-      "ndow_def\030P \001(\0132\023.pg_query.WindowDefH\000R\tW" +
-      "indowDef\022C\n\017range_subselect\030Q \001(\0132\030.pg_q" +
-      "uery.RangeSubselectH\000R\016RangeSubselect\022@\n" +
-      "\016range_function\030R \001(\0132\027.pg_query.RangeFu" +
-      "nctionH\000R\rRangeFunction\022D\n\020range_table_f" +
-      "unc\030S \001(\0132\030.pg_query.RangeTableFuncH\000R\016R" +
-      "angeTableFunc\022N\n\024range_table_func_col\030T " +
-      "\001(\0132\033.pg_query.RangeTableFuncColH\000R\021Rang" +
-      "eTableFuncCol\022J\n\022range_table_sample\030U \001(" +
-      "\0132\032.pg_query.RangeTableSampleH\000R\020RangeTa" +
-      "bleSample\0224\n\ncolumn_def\030V \001(\0132\023.pg_query" +
-      ".ColumnDefH\000R\tColumnDef\022G\n\021table_like_cl" +
-      "ause\030W \001(\0132\031.pg_query.TableLikeClauseH\000R" +
-      "\017TableLikeClause\0224\n\nindex_elem\030X \001(\0132\023.p" +
-      "g_query.IndexElemH\000R\tIndexElem\022.\n\010def_el" +
-      "em\030Y \001(\0132\021.pg_query.DefElemH\000R\007DefElem\022@" +
-      "\n\016locking_clause\030Z \001(\0132\027.pg_query.Lockin" +
-      "gClauseH\000R\rLockingClause\022=\n\rxml_serializ" +
-      "e\030[ \001(\0132\026.pg_query.XmlSerializeH\000R\014XmlSe" +
-      "rialize\022@\n\016partition_elem\030\\ \001(\0132\027.pg_que" +
-      "ry.PartitionElemH\000R\rPartitionElem\022@\n\016par" +
-      "tition_spec\030] \001(\0132\027.pg_query.PartitionSp" +
-      "ecH\000R\rPartitionSpec\022P\n\024partition_bound_s" +
-      "pec\030^ \001(\0132\034.pg_query.PartitionBoundSpecH" +
-      "\000R\022PartitionBoundSpec\022S\n\025partition_range" +
-      "_datum\030_ \001(\0132\035.pg_query.PartitionRangeDa" +
-      "tumH\000R\023PartitionRangeDatum\022S\n\025single_par" +
-      "tition_spec\030` \001(\0132\035.pg_query.SingleParti" +
-      "tionSpecH\000R\023SinglePartitionSpec\022=\n\rparti" +
-      "tion_cmd\030a \001(\0132\026.pg_query.PartitionCmdH\000" +
-      "R\014PartitionCmd\022A\n\017range_tbl_entry\030b \001(\0132" +
-      "\027.pg_query.RangeTblEntryH\000R\rRangeTblEntr" +
-      "y\022L\n\022rtepermission_info\030c \001(\0132\033.pg_query" +
-      ".RTEPermissionInfoH\000R\021RTEPermissionInfo\022" +
-      "J\n\022range_tbl_function\030d \001(\0132\032.pg_query.R" +
-      "angeTblFunctionH\000R\020RangeTblFunction\022M\n\023t" +
-      "able_sample_clause\030e \001(\0132\033.pg_query.Tabl" +
-      "eSampleClauseH\000R\021TableSampleClause\022G\n\021wi" +
-      "th_check_option\030f \001(\0132\031.pg_query.WithChe" +
-      "ckOptionH\000R\017WithCheckOption\022G\n\021sort_grou" +
-      "p_clause\030g \001(\0132\031.pg_query.SortGroupClaus" +
-      "eH\000R\017SortGroupClause\022:\n\014grouping_set\030h \001" +
-      "(\0132\025.pg_query.GroupingSetH\000R\013GroupingSet" +
-      "\022=\n\rwindow_clause\030i \001(\0132\026.pg_query.Windo" +
-      "wClauseH\000R\014WindowClause\022A\n\017row_mark_clau" +
-      "se\030j \001(\0132\027.pg_query.RowMarkClauseH\000R\rRow" +
-      "MarkClause\0227\n\013with_clause\030k \001(\0132\024.pg_que" +
-      "ry.WithClauseH\000R\nWithClause\022:\n\014infer_cla" +
-      "use\030l \001(\0132\025.pg_query.InferClauseH\000R\013Infe" +
-      "rClause\022J\n\022on_conflict_clause\030m \001(\0132\032.pg" +
-      "_query.OnConflictClauseH\000R\020OnConflictCla" +
-      "use\022F\n\020ctesearch_clause\030n \001(\0132\031.pg_query" +
-      ".CTESearchClauseH\000R\017CTESearchClause\022C\n\017c" +
-      "tecycle_clause\030o \001(\0132\030.pg_query.CTECycle" +
-      "ClauseH\000R\016CTECycleClause\022G\n\021common_table" +
-      "_expr\030p \001(\0132\031.pg_query.CommonTableExprH\000" +
-      "R\017CommonTableExpr\022G\n\021merge_when_clause\030q" +
-      " \001(\0132\031.pg_query.MergeWhenClauseH\000R\017Merge" +
-      "WhenClause\022L\n\022trigger_transition\030r \001(\0132\033" +
-      ".pg_query.TriggerTransitionH\000R\021TriggerTr" +
-      "ansition\0227\n\013json_output\030s \001(\0132\024.pg_query" +
-      ".JsonOutputH\000R\nJsonOutput\022=\n\rjson_argume" +
-      "nt\030t \001(\0132\026.pg_query.JsonArgumentH\000R\014Json" +
-      "Argument\022>\n\016json_func_expr\030u \001(\0132\026.pg_qu" +
-      "ery.JsonFuncExprH\000R\014JsonFuncExpr\022N\n\024json" +
-      "_table_path_spec\030v \001(\0132\033.pg_query.JsonTa" +
-      "blePathSpecH\000R\021JsonTablePathSpec\0224\n\njson" +
-      "_table\030w \001(\0132\023.pg_query.JsonTableH\000R\tJso" +
-      "nTable\022G\n\021json_table_column\030x \001(\0132\031.pg_q" +
-      "uery.JsonTableColumnH\000R\017JsonTableColumn\022" +
-      ">\n\016json_key_value\030y \001(\0132\026.pg_query.JsonK" +
-      "eyValueH\000R\014JsonKeyValue\022A\n\017json_parse_ex" +
-      "pr\030z \001(\0132\027.pg_query.JsonParseExprH\000R\rJso" +
-      "nParseExpr\022D\n\020json_scalar_expr\030{ \001(\0132\030.p" +
-      "g_query.JsonScalarExprH\000R\016JsonScalarExpr" +
-      "\022M\n\023json_serialize_expr\030| \001(\0132\033.pg_query" +
-      ".JsonSerializeExprH\000R\021JsonSerializeExpr\022" +
-      "Y\n\027json_object_constructor\030} \001(\0132\037.pg_qu" +
-      "ery.JsonObjectConstructorH\000R\025JsonObjectC" +
-      "onstructor\022V\n\026json_array_constructor\030~ \001" +
-      "(\0132\036.pg_query.JsonArrayConstructorH\000R\024Js" +
-      "onArrayConstructor\022f\n\034json_array_query_c" +
-      "onstructor\030\177 \001(\0132#.pg_query.JsonArrayQue" +
-      "ryConstructorH\000R\031JsonArrayQueryConstruct" +
-      "or\022Q\n\024json_agg_constructor\030\200\001 \001(\0132\034.pg_q" +
-      "uery.JsonAggConstructorH\000R\022JsonAggConstr" +
-      "uctor\022B\n\017json_object_agg\030\201\001 \001(\0132\027.pg_que" +
-      "ry.JsonObjectAggH\000R\rJsonObjectAgg\022?\n\016jso" +
-      "n_array_agg\030\202\001 \001(\0132\026.pg_query.JsonArrayA" +
-      "ggH\000R\014JsonArrayAgg\022/\n\010raw_stmt\030\203\001 \001(\0132\021." +
-      "pg_query.RawStmtH\000R\007RawStmt\0228\n\013insert_st" +
-      "mt\030\204\001 \001(\0132\024.pg_query.InsertStmtH\000R\nInser" +
-      "tStmt\0228\n\013delete_stmt\030\205\001 \001(\0132\024.pg_query.D" +
-      "eleteStmtH\000R\nDeleteStmt\0228\n\013update_stmt\030\206" +
-      "\001 \001(\0132\024.pg_query.UpdateStmtH\000R\nUpdateStm" +
-      "t\0225\n\nmerge_stmt\030\207\001 \001(\0132\023.pg_query.MergeS" +
-      "tmtH\000R\tMergeStmt\0228\n\013select_stmt\030\210\001 \001(\0132\024" +
-      ".pg_query.SelectStmtH\000R\nSelectStmt\022K\n\022se" +
-      "t_operation_stmt\030\211\001 \001(\0132\032.pg_query.SetOp" +
-      "erationStmtH\000R\020SetOperationStmt\0228\n\013retur" +
-      "n_stmt\030\212\001 \001(\0132\024.pg_query.ReturnStmtH\000R\nR" +
-      "eturnStmt\022>\n\rplassign_stmt\030\213\001 \001(\0132\026.pg_q" +
-      "uery.PLAssignStmtH\000R\014PLAssignStmt\022K\n\022cre" +
-      "ate_schema_stmt\030\214\001 \001(\0132\032.pg_query.Create" +
-      "SchemaStmtH\000R\020CreateSchemaStmt\022E\n\020alter_" +
-      "table_stmt\030\215\001 \001(\0132\030.pg_query.AlterTableS" +
-      "tmtH\000R\016AlterTableStmt\022T\n\025replica_identit" +
-      "y_stmt\030\216\001 \001(\0132\035.pg_query.ReplicaIdentity" +
-      "StmtH\000R\023ReplicaIdentityStmt\022B\n\017alter_tab" +
-      "le_cmd\030\217\001 \001(\0132\027.pg_query.AlterTableCmdH\000" +
-      "R\rAlterTableCmd\022Q\n\024alter_collation_stmt\030" +
-      "\220\001 \001(\0132\034.pg_query.AlterCollationStmtH\000R\022" +
-      "AlterCollationStmt\022H\n\021alter_domain_stmt\030" +
-      "\221\001 \001(\0132\031.pg_query.AlterDomainStmtH\000R\017Alt" +
-      "erDomainStmt\0225\n\ngrant_stmt\030\222\001 \001(\0132\023.pg_q" +
-      "uery.GrantStmtH\000R\tGrantStmt\022E\n\020object_wi" +
-      "th_args\030\223\001 \001(\0132\030.pg_query.ObjectWithArgs" +
-      "H\000R\016ObjectWithArgs\0228\n\013access_priv\030\224\001 \001(\013" +
-      "2\024.pg_query.AccessPrivH\000R\nAccessPriv\022B\n\017" +
-      "grant_role_stmt\030\225\001 \001(\0132\027.pg_query.GrantR" +
-      "oleStmtH\000R\rGrantRoleStmt\022j\n\035alter_defaul" +
-      "t_privileges_stmt\030\226\001 \001(\0132$.pg_query.Alte" +
-      "rDefaultPrivilegesStmtH\000R\032AlterDefaultPr" +
-      "ivilegesStmt\0222\n\tcopy_stmt\030\227\001 \001(\0132\022.pg_qu" +
-      "ery.CopyStmtH\000R\010CopyStmt\022H\n\021variable_set" +
-      "_stmt\030\230\001 \001(\0132\031.pg_query.VariableSetStmtH" +
-      "\000R\017VariableSetStmt\022K\n\022variable_show_stmt" +
-      "\030\231\001 \001(\0132\032.pg_query.VariableShowStmtH\000R\020V" +
-      "ariableShowStmt\0228\n\013create_stmt\030\232\001 \001(\0132\024." +
-      "pg_query.CreateStmtH\000R\nCreateStmt\0227\n\ncon" +
-      "straint\030\233\001 \001(\0132\024.pg_query.ConstraintH\000R\n" +
-      "Constraint\022X\n\027create_table_space_stmt\030\234\001" +
-      " \001(\0132\036.pg_query.CreateTableSpaceStmtH\000R\024" +
-      "CreateTableSpaceStmt\022R\n\025drop_table_space" +
-      "_stmt\030\235\001 \001(\0132\034.pg_query.DropTableSpaceSt" +
-      "mtH\000R\022DropTableSpaceStmt\022k\n\036alter_table_" +
-      "space_options_stmt\030\236\001 \001(\0132$.pg_query.Alt" +
-      "erTableSpaceOptionsStmtH\000R\032AlterTableSpa" +
-      "ceOptionsStmt\022\\\n\031alter_table_move_all_st" +
-      "mt\030\237\001 \001(\0132\037.pg_query.AlterTableMoveAllSt" +
-      "mtH\000R\025AlterTableMoveAllStmt\022T\n\025create_ex" +
-      "tension_stmt\030\240\001 \001(\0132\035.pg_query.CreateExt" +
-      "ensionStmtH\000R\023CreateExtensionStmt\022Q\n\024alt" +
-      "er_extension_stmt\030\241\001 \001(\0132\034.pg_query.Alte" +
-      "rExtensionStmtH\000R\022AlterExtensionStmt\022j\n\035" +
-      "alter_extension_contents_stmt\030\242\001 \001(\0132$.p" +
-      "g_query.AlterExtensionContentsStmtH\000R\032Al" +
-      "terExtensionContentsStmt\022B\n\017create_fdw_s" +
-      "tmt\030\243\001 \001(\0132\027.pg_query.CreateFdwStmtH\000R\rC" +
-      "reateFdwStmt\022?\n\016alter_fdw_stmt\030\244\001 \001(\0132\026." +
-      "pg_query.AlterFdwStmtH\000R\014AlterFdwStmt\022a\n" +
-      "\032create_foreign_server_stmt\030\245\001 \001(\0132!.pg_" +
-      "query.CreateForeignServerStmtH\000R\027CreateF" +
-      "oreignServerStmt\022^\n\031alter_foreign_server" +
-      "_stmt\030\246\001 \001(\0132 .pg_query.AlterForeignServ" +
-      "erStmtH\000R\026AlterForeignServerStmt\022^\n\031crea" +
-      "te_foreign_table_stmt\030\247\001 \001(\0132 .pg_query." +
-      "CreateForeignTableStmtH\000R\026CreateForeignT" +
-      "ableStmt\022[\n\030create_user_mapping_stmt\030\250\001 " +
-      "\001(\0132\037.pg_query.CreateUserMappingStmtH\000R\025" +
-      "CreateUserMappingStmt\022X\n\027alter_user_mapp" +
-      "ing_stmt\030\251\001 \001(\0132\036.pg_query.AlterUserMapp" +
-      "ingStmtH\000R\024AlterUserMappingStmt\022U\n\026drop_" +
-      "user_mapping_stmt\030\252\001 \001(\0132\035.pg_query.Drop" +
-      "UserMappingStmtH\000R\023DropUserMappingStmt\022a" +
-      "\n\032import_foreign_schema_stmt\030\253\001 \001(\0132!.pg" +
-      "_query.ImportForeignSchemaStmtH\000R\027Import" +
-      "ForeignSchemaStmt\022K\n\022create_policy_stmt\030" +
-      "\254\001 \001(\0132\032.pg_query.CreatePolicyStmtH\000R\020Cr" +
-      "eatePolicyStmt\022H\n\021alter_policy_stmt\030\255\001 \001" +
-      "(\0132\031.pg_query.AlterPolicyStmtH\000R\017AlterPo" +
-      "licyStmt\022?\n\016create_am_stmt\030\256\001 \001(\0132\026.pg_q" +
-      "uery.CreateAmStmtH\000R\014CreateAmStmt\022E\n\020cre" +
-      "ate_trig_stmt\030\257\001 \001(\0132\030.pg_query.CreateTr" +
-      "igStmtH\000R\016CreateTrigStmt\022U\n\026create_event" +
-      "_trig_stmt\030\260\001 \001(\0132\035.pg_query.CreateEvent" +
-      "TrigStmtH\000R\023CreateEventTrigStmt\022R\n\025alter" +
-      "_event_trig_stmt\030\261\001 \001(\0132\034.pg_query.Alter" +
-      "EventTrigStmtH\000R\022AlterEventTrigStmt\022H\n\021c" +
-      "reate_plang_stmt\030\262\001 \001(\0132\031.pg_query.Creat" +
-      "ePLangStmtH\000R\017CreatePLangStmt\022E\n\020create_" +
-      "role_stmt\030\263\001 \001(\0132\030.pg_query.CreateRoleSt" +
-      "mtH\000R\016CreateRoleStmt\022B\n\017alter_role_stmt\030" +
-      "\264\001 \001(\0132\027.pg_query.AlterRoleStmtH\000R\rAlter" +
-      "RoleStmt\022L\n\023alter_role_set_stmt\030\265\001 \001(\0132\032" +
-      ".pg_query.AlterRoleSetStmtH\000R\020AlterRoleS" +
-      "etStmt\022?\n\016drop_role_stmt\030\266\001 \001(\0132\026.pg_que" +
-      "ry.DropRoleStmtH\000R\014DropRoleStmt\022B\n\017creat" +
-      "e_seq_stmt\030\267\001 \001(\0132\027.pg_query.CreateSeqSt" +
-      "mtH\000R\rCreateSeqStmt\022?\n\016alter_seq_stmt\030\270\001" +
-      " \001(\0132\026.pg_query.AlterSeqStmtH\000R\014AlterSeq" +
-      "Stmt\0228\n\013define_stmt\030\271\001 \001(\0132\024.pg_query.De" +
-      "fineStmtH\000R\nDefineStmt\022K\n\022create_domain_" +
-      "stmt\030\272\001 \001(\0132\032.pg_query.CreateDomainStmtH" +
-      "\000R\020CreateDomainStmt\022O\n\024create_op_class_s" +
-      "tmt\030\273\001 \001(\0132\033.pg_query.CreateOpClassStmtH" +
-      "\000R\021CreateOpClassStmt\022O\n\024create_op_class_" +
-      "item\030\274\001 \001(\0132\033.pg_query.CreateOpClassItem" +
-      "H\000R\021CreateOpClassItem\022R\n\025create_op_famil" +
-      "y_stmt\030\275\001 \001(\0132\034.pg_query.CreateOpFamilyS" +
-      "tmtH\000R\022CreateOpFamilyStmt\022O\n\024alter_op_fa" +
-      "mily_stmt\030\276\001 \001(\0132\033.pg_query.AlterOpFamil" +
-      "yStmtH\000R\021AlterOpFamilyStmt\0222\n\tdrop_stmt\030" +
-      "\277\001 \001(\0132\022.pg_query.DropStmtH\000R\010DropStmt\022>" +
-      "\n\rtruncate_stmt\030\300\001 \001(\0132\026.pg_query.Trunca" +
-      "teStmtH\000R\014TruncateStmt\022;\n\014comment_stmt\030\301" +
-      "\001 \001(\0132\025.pg_query.CommentStmtH\000R\013CommentS" +
-      "tmt\022?\n\016sec_label_stmt\030\302\001 \001(\0132\026.pg_query." +
-      "SecLabelStmtH\000R\014SecLabelStmt\022N\n\023declare_" +
-      "cursor_stmt\030\303\001 \001(\0132\033.pg_query.DeclareCur" +
-      "sorStmtH\000R\021DeclareCursorStmt\022H\n\021close_po" +
-      "rtal_stmt\030\304\001 \001(\0132\031.pg_query.ClosePortalS" +
-      "tmtH\000R\017ClosePortalStmt\0225\n\nfetch_stmt\030\305\001 " +
-      "\001(\0132\023.pg_query.FetchStmtH\000R\tFetchStmt\0225\n" +
-      "\nindex_stmt\030\306\001 \001(\0132\023.pg_query.IndexStmtH" +
-      "\000R\tIndexStmt\022H\n\021create_stats_stmt\030\307\001 \001(\013" +
-      "2\031.pg_query.CreateStatsStmtH\000R\017CreateSta" +
-      "tsStmt\0225\n\nstats_elem\030\310\001 \001(\0132\023.pg_query.S" +
-      "tatsElemH\000R\tStatsElem\022E\n\020alter_stats_stm" +
-      "t\030\311\001 \001(\0132\030.pg_query.AlterStatsStmtH\000R\016Al" +
-      "terStatsStmt\022Q\n\024create_function_stmt\030\312\001 " +
-      "\001(\0132\034.pg_query.CreateFunctionStmtH\000R\022Cre" +
-      "ateFunctionStmt\022M\n\022function_parameter\030\313\001" +
-      " \001(\0132\033.pg_query.FunctionParameterH\000R\021Fun" +
-      "ctionParameter\022N\n\023alter_function_stmt\030\314\001" +
-      " \001(\0132\033.pg_query.AlterFunctionStmtH\000R\021Alt" +
-      "erFunctionStmt\022,\n\007do_stmt\030\315\001 \001(\0132\020.pg_qu" +
-      "ery.DoStmtH\000R\006DoStmt\022H\n\021inline_code_bloc" +
-      "k\030\316\001 \001(\0132\031.pg_query.InlineCodeBlockH\000R\017I" +
-      "nlineCodeBlock\0222\n\tcall_stmt\030\317\001 \001(\0132\022.pg_" +
-      "query.CallStmtH\000R\010CallStmt\022;\n\014call_conte" +
-      "xt\030\320\001 \001(\0132\025.pg_query.CallContextH\000R\013Call" +
-      "Context\0228\n\013rename_stmt\030\321\001 \001(\0132\024.pg_query" +
-      ".RenameStmtH\000R\nRenameStmt\022^\n\031alter_objec" +
-      "t_depends_stmt\030\322\001 \001(\0132 .pg_query.AlterOb" +
-      "jectDependsStmtH\000R\026AlterObjectDependsStm" +
-      "t\022[\n\030alter_object_schema_stmt\030\323\001 \001(\0132\037.p" +
-      "g_query.AlterObjectSchemaStmtH\000R\025AlterOb" +
-      "jectSchemaStmt\022E\n\020alter_owner_stmt\030\324\001 \001(" +
-      "\0132\030.pg_query.AlterOwnerStmtH\000R\016AlterOwne" +
-      "rStmt\022N\n\023alter_operator_stmt\030\325\001 \001(\0132\033.pg" +
-      "_query.AlterOperatorStmtH\000R\021AlterOperato" +
-      "rStmt\022B\n\017alter_type_stmt\030\326\001 \001(\0132\027.pg_que" +
-      "ry.AlterTypeStmtH\000R\rAlterTypeStmt\0222\n\trul" +
-      "e_stmt\030\327\001 \001(\0132\022.pg_query.RuleStmtH\000R\010Rul" +
-      "eStmt\0228\n\013notify_stmt\030\330\001 \001(\0132\024.pg_query.N" +
-      "otifyStmtH\000R\nNotifyStmt\0228\n\013listen_stmt\030\331" +
-      "\001 \001(\0132\024.pg_query.ListenStmtH\000R\nListenStm" +
-      "t\022>\n\runlisten_stmt\030\332\001 \001(\0132\026.pg_query.Unl" +
-      "istenStmtH\000R\014UnlistenStmt\022G\n\020transaction" +
-      "_stmt\030\333\001 \001(\0132\031.pg_query.TransactionStmtH" +
-      "\000R\017TransactionStmt\022N\n\023composite_type_stm" +
-      "t\030\334\001 \001(\0132\033.pg_query.CompositeTypeStmtH\000R" +
-      "\021CompositeTypeStmt\022E\n\020create_enum_stmt\030\335" +
-      "\001 \001(\0132\030.pg_query.CreateEnumStmtH\000R\016Creat" +
-      "eEnumStmt\022H\n\021create_range_stmt\030\336\001 \001(\0132\031." +
-      "pg_query.CreateRangeStmtH\000R\017CreateRangeS" +
-      "tmt\022B\n\017alter_enum_stmt\030\337\001 \001(\0132\027.pg_query" +
-      ".AlterEnumStmtH\000R\rAlterEnumStmt\0222\n\tview_" +
-      "stmt\030\340\001 \001(\0132\022.pg_query.ViewStmtH\000R\010ViewS" +
-      "tmt\0222\n\tload_stmt\030\341\001 \001(\0132\022.pg_query.LoadS" +
-      "tmtH\000R\010LoadStmt\022>\n\rcreatedb_stmt\030\342\001 \001(\0132" +
-      "\026.pg_query.CreatedbStmtH\000R\014CreatedbStmt\022" +
-      "N\n\023alter_database_stmt\030\343\001 \001(\0132\033.pg_query" +
-      ".AlterDatabaseStmtH\000R\021AlterDatabaseStmt\022" +
-      "q\n alter_database_refresh_coll_stmt\030\344\001 \001" +
-      "(\0132&.pg_query.AlterDatabaseRefreshCollSt" +
-      "mtH\000R\034AlterDatabaseRefreshCollStmt\022X\n\027al" +
-      "ter_database_set_stmt\030\345\001 \001(\0132\036.pg_query." +
-      "AlterDatabaseSetStmtH\000R\024AlterDatabaseSet" +
-      "Stmt\0228\n\013dropdb_stmt\030\346\001 \001(\0132\024.pg_query.Dr" +
-      "opdbStmtH\000R\nDropdbStmt\022H\n\021alter_system_s" +
-      "tmt\030\347\001 \001(\0132\031.pg_query.AlterSystemStmtH\000R" +
-      "\017AlterSystemStmt\022;\n\014cluster_stmt\030\350\001 \001(\0132" +
-      "\025.pg_query.ClusterStmtH\000R\013ClusterStmt\0228\n" +
-      "\013vacuum_stmt\030\351\001 \001(\0132\024.pg_query.VacuumStm" +
-      "tH\000R\nVacuumStmt\022D\n\017vacuum_relation\030\352\001 \001(",
-      "\0132\030.pg_query.VacuumRelationH\000R\016VacuumRel" +
-      "ation\022;\n\014explain_stmt\030\353\001 \001(\0132\025.pg_query." +
-      "ExplainStmtH\000R\013ExplainStmt\022O\n\024create_tab" +
-      "le_as_stmt\030\354\001 \001(\0132\033.pg_query.CreateTable" +
-      "AsStmtH\000R\021CreateTableAsStmt\022R\n\025refresh_m" +
-      "at_view_stmt\030\355\001 \001(\0132\034.pg_query.RefreshMa" +
-      "tViewStmtH\000R\022RefreshMatViewStmt\022E\n\020check" +
-      "_point_stmt\030\356\001 \001(\0132\030.pg_query.CheckPoint" +
-      "StmtH\000R\016CheckPointStmt\022;\n\014discard_stmt\030\357" +
-      "\001 \001(\0132\025.pg_query.DiscardStmtH\000R\013DiscardS" +
-      "tmt\0222\n\tlock_stmt\030\360\001 \001(\0132\022.pg_query.LockS" +
-      "tmtH\000R\010LockStmt\022Q\n\024constraints_set_stmt\030" +
-      "\361\001 \001(\0132\034.pg_query.ConstraintsSetStmtH\000R\022" +
-      "ConstraintsSetStmt\022;\n\014reindex_stmt\030\362\001 \001(" +
-      "\0132\025.pg_query.ReindexStmtH\000R\013ReindexStmt\022" +
-      "W\n\026create_conversion_stmt\030\363\001 \001(\0132\036.pg_qu" +
-      "ery.CreateConversionStmtH\000R\024CreateConver" +
-      "sionStmt\022E\n\020create_cast_stmt\030\364\001 \001(\0132\030.pg" +
-      "_query.CreateCastStmtH\000R\016CreateCastStmt\022" +
-      "T\n\025create_transform_stmt\030\365\001 \001(\0132\035.pg_que" +
-      "ry.CreateTransformStmtH\000R\023CreateTransfor" +
-      "mStmt\022;\n\014prepare_stmt\030\366\001 \001(\0132\025.pg_query." +
-      "PrepareStmtH\000R\013PrepareStmt\022;\n\014execute_st" +
-      "mt\030\367\001 \001(\0132\025.pg_query.ExecuteStmtH\000R\013Exec" +
-      "uteStmt\022D\n\017deallocate_stmt\030\370\001 \001(\0132\030.pg_q" +
-      "uery.DeallocateStmtH\000R\016DeallocateStmt\022B\n" +
-      "\017drop_owned_stmt\030\371\001 \001(\0132\027.pg_query.DropO" +
-      "wnedStmtH\000R\rDropOwnedStmt\022N\n\023reassign_ow" +
-      "ned_stmt\030\372\001 \001(\0132\033.pg_query.ReassignOwned" +
-      "StmtH\000R\021ReassignOwnedStmt\022Z\n\027alter_tsdic" +
-      "tionary_stmt\030\373\001 \001(\0132\037.pg_query.AlterTSDi" +
-      "ctionaryStmtH\000R\025AlterTSDictionaryStmt\022c\n" +
-      "\032alter_tsconfiguration_stmt\030\374\001 \001(\0132\".pg_" +
-      "query.AlterTSConfigurationStmtH\000R\030AlterT" +
-      "SConfigurationStmt\022J\n\021publication_table\030" +
-      "\375\001 \001(\0132\032.pg_query.PublicationTableH\000R\020Pu" +
-      "blicationTable\022Q\n\024publication_obj_spec\030\376" +
-      "\001 \001(\0132\034.pg_query.PublicationObjSpecH\000R\022P" +
-      "ublicationObjSpec\022Z\n\027create_publication_" +
-      "stmt\030\377\001 \001(\0132\037.pg_query.CreatePublication" +
-      "StmtH\000R\025CreatePublicationStmt\022W\n\026alter_p" +
-      "ublication_stmt\030\200\002 \001(\0132\036.pg_query.AlterP" +
-      "ublicationStmtH\000R\024AlterPublicationStmt\022]" +
-      "\n\030create_subscription_stmt\030\201\002 \001(\0132 .pg_q" +
-      "uery.CreateSubscriptionStmtH\000R\026CreateSub" +
-      "scriptionStmt\022Z\n\027alter_subscription_stmt" +
-      "\030\202\002 \001(\0132\037.pg_query.AlterSubscriptionStmt" +
-      "H\000R\025AlterSubscriptionStmt\022W\n\026drop_subscr" +
-      "iption_stmt\030\203\002 \001(\0132\036.pg_query.DropSubscr" +
-      "iptionStmtH\000R\024DropSubscriptionStmt\022.\n\007in" +
-      "teger\030\204\002 \001(\0132\021.pg_query.IntegerH\000R\007Integ" +
-      "er\022(\n\005float\030\205\002 \001(\0132\017.pg_query.FloatH\000R\005F" +
-      "loat\022.\n\007boolean\030\206\002 \001(\0132\021.pg_query.Boolea" +
-      "nH\000R\007Boolean\022+\n\006string\030\207\002 \001(\0132\020.pg_query" +
-      ".StringH\000R\006String\0225\n\nbit_string\030\210\002 \001(\0132\023" +
-      ".pg_query.BitStringH\000R\tBitString\022%\n\004list" +
-      "\030\211\002 \001(\0132\016.pg_query.ListH\000R\004List\022/\n\010int_l" +
-      "ist\030\212\002 \001(\0132\021.pg_query.IntListH\000R\007IntList" +
-      "\022/\n\010oid_list\030\213\002 \001(\0132\021.pg_query.OidListH\000" +
-      "R\007OidList\022.\n\007a_const\030\214\002 \001(\0132\021.pg_query.A" +
-      "_ConstH\000R\007A_ConstB\006\n\004node\"\027\n\007Integer\022\014\n\004" +
-      "ival\030\001 \001(\005\"\025\n\005Float\022\014\n\004fval\030\001 \001(\t\"\032\n\007Boo" +
-      "lean\022\017\n\007boolval\030\001 \001(\010\"\026\n\006String\022\014\n\004sval\030" +
-      "\001 \001(\t\"\032\n\tBitString\022\r\n\005bsval\030\001 \001(\t\"%\n\004Lis" +
-      "t\022\035\n\005items\030\001 \003(\0132\016.pg_query.Node\"(\n\007OidL" +
-      "ist\022\035\n\005items\030\001 \003(\0132\016.pg_query.Node\"(\n\007In" +
-      "tList\022\035\n\005items\030\001 \003(\0132\016.pg_query.Node\"\344\001\n" +
-      "\007A_Const\022!\n\004ival\030\001 \001(\0132\021.pg_query.Intege" +
-      "rH\000\022\037\n\004fval\030\002 \001(\0132\017.pg_query.FloatH\000\022$\n\007" +
-      "boolval\030\003 \001(\0132\021.pg_query.BooleanH\000\022 \n\004sv" +
-      "al\030\004 \001(\0132\020.pg_query.StringH\000\022$\n\005bsval\030\005 " +
-      "\001(\0132\023.pg_query.BitStringH\000\022\016\n\006isnull\030\n \001" +
-      "(\010\022\020\n\010location\030\013 \001(\005B\005\n\003val\"Q\n\005Alias\022\034\n\t" +
-      "aliasname\030\001 \001(\tR\taliasname\022*\n\010colnames\030\002" +
-      " \003(\0132\016.pg_query.NodeR\010colnames\"\343\001\n\010Range" +
-      "Var\022 \n\013catalogname\030\001 \001(\tR\013catalogname\022\036\n" +
-      "\nschemaname\030\002 \001(\tR\nschemaname\022\030\n\007relname" +
-      "\030\003 \001(\tR\007relname\022\020\n\003inh\030\004 \001(\010R\003inh\022&\n\016rel" +
-      "persistence\030\005 \001(\tR\016relpersistence\022%\n\005ali" +
-      "as\030\006 \001(\0132\017.pg_query.AliasR\005alias\022\032\n\010loca" +
-      "tion\030\007 \001(\005R\010location\"\364\005\n\tTableFunc\0223\n\010fu" +
-      "nctype\030\001 \001(\0162\027.pg_query.TableFuncTypeR\010f" +
-      "unctype\022(\n\007ns_uris\030\002 \003(\0132\016.pg_query.Node" +
-      "R\007ns_uris\022*\n\010ns_names\030\003 \003(\0132\016.pg_query.N" +
-      "odeR\010ns_names\022(\n\007docexpr\030\004 \001(\0132\016.pg_quer" +
-      "y.NodeR\007docexpr\022(\n\007rowexpr\030\005 \001(\0132\016.pg_qu" +
-      "ery.NodeR\007rowexpr\022*\n\010colnames\030\006 \003(\0132\016.pg" +
-      "_query.NodeR\010colnames\022*\n\010coltypes\030\007 \003(\0132" +
-      "\016.pg_query.NodeR\010coltypes\022.\n\ncoltypmods\030" +
-      "\010 \003(\0132\016.pg_query.NodeR\ncoltypmods\0224\n\rcol" +
-      "collations\030\t \003(\0132\016.pg_query.NodeR\rcolcol" +
-      "lations\022*\n\010colexprs\030\n \003(\0132\016.pg_query.Nod" +
-      "eR\010colexprs\0220\n\013coldefexprs\030\013 \003(\0132\016.pg_qu" +
-      "ery.NodeR\013coldefexprs\0220\n\013colvalexprs\030\014 \003" +
-      "(\0132\016.pg_query.NodeR\013colvalexprs\0228\n\017passi" +
-      "ngvalexprs\030\r \003(\0132\016.pg_query.NodeR\017passin" +
-      "gvalexprs\022\032\n\010notnulls\030\016 \003(\004R\010notnulls\022\"\n" +
-      "\004plan\030\017 \001(\0132\016.pg_query.NodeR\004plan\022$\n\rord" +
-      "inalitycol\030\020 \001(\005R\rordinalitycol\022\032\n\010locat" +
-      "ion\030\021 \001(\005R\010location\"\333\002\n\nIntoClause\022$\n\003re" +
-      "l\030\001 \001(\0132\022.pg_query.RangeVarR\003rel\022+\n\tcol_" +
-      "names\030\002 \003(\0132\016.pg_query.NodeR\010colNames\022#\n" +
-      "\raccess_method\030\003 \001(\tR\014accessMethod\022(\n\007op" +
-      "tions\030\004 \003(\0132\016.pg_query.NodeR\007options\0225\n\t" +
-      "on_commit\030\005 \001(\0162\030.pg_query.OnCommitActio" +
-      "nR\010onCommit\022(\n\020table_space_name\030\006 \001(\tR\016t" +
-      "ableSpaceName\022-\n\nview_query\030\007 \001(\0132\016.pg_q" +
-      "uery.NodeR\tviewQuery\022\033\n\tskip_data\030\010 \001(\010R" +
-      "\010skipData\"\225\002\n\003Var\022 \n\003xpr\030\001 \001(\0132\016.pg_quer" +
-      "y.NodeR\003xpr\022\024\n\005varno\030\002 \001(\005R\005varno\022\032\n\010var" +
-      "attno\030\003 \001(\005R\010varattno\022\030\n\007vartype\030\004 \001(\rR\007" +
-      "vartype\022\034\n\tvartypmod\030\005 \001(\005R\tvartypmod\022\034\n" +
-      "\tvarcollid\030\006 \001(\rR\tvarcollid\022&\n\016varnullin" +
-      "grels\030\007 \003(\004R\016varnullingrels\022 \n\013varlevels" +
-      "up\030\010 \001(\rR\013varlevelsup\022\032\n\010location\030\t \001(\005R" +
-      "\010location\"\364\001\n\005Param\022 \n\003xpr\030\001 \001(\0132\016.pg_qu" +
-      "ery.NodeR\003xpr\0221\n\tparamkind\030\002 \001(\0162\023.pg_qu" +
-      "ery.ParamKindR\tparamkind\022\030\n\007paramid\030\003 \001(" +
-      "\005R\007paramid\022\034\n\tparamtype\030\004 \001(\rR\tparamtype" +
-      "\022 \n\013paramtypmod\030\005 \001(\005R\013paramtypmod\022 \n\013pa" +
-      "ramcollid\030\006 \001(\rR\013paramcollid\022\032\n\010location" +
-      "\030\007 \001(\005R\010location\"\262\005\n\006Aggref\022 \n\003xpr\030\001 \001(\013" +
-      "2\016.pg_query.NodeR\003xpr\022\032\n\010aggfnoid\030\002 \001(\rR" +
-      "\010aggfnoid\022\030\n\007aggtype\030\003 \001(\rR\007aggtype\022\034\n\ta" +
-      "ggcollid\030\004 \001(\rR\taggcollid\022 \n\013inputcollid" +
-      "\030\005 \001(\rR\013inputcollid\0220\n\013aggargtypes\030\006 \003(\013" +
-      "2\016.pg_query.NodeR\013aggargtypes\0224\n\raggdire" +
-      "ctargs\030\007 \003(\0132\016.pg_query.NodeR\raggdirecta" +
-      "rgs\022\"\n\004args\030\010 \003(\0132\016.pg_query.NodeR\004args\022" +
-      "*\n\010aggorder\030\t \003(\0132\016.pg_query.NodeR\010aggor" +
-      "der\0220\n\013aggdistinct\030\n \003(\0132\016.pg_query.Node" +
-      "R\013aggdistinct\022,\n\taggfilter\030\013 \001(\0132\016.pg_qu" +
-      "ery.NodeR\taggfilter\022\030\n\007aggstar\030\014 \001(\010R\007ag" +
-      "gstar\022 \n\013aggvariadic\030\r \001(\010R\013aggvariadic\022" +
-      "\030\n\007aggkind\030\016 \001(\tR\007aggkind\022 \n\013agglevelsup" +
-      "\030\017 \001(\rR\013agglevelsup\022.\n\010aggsplit\030\020 \001(\0162\022." +
-      "pg_query.AggSplitR\010aggsplit\022\024\n\005aggno\030\021 \001" +
-      "(\005R\005aggno\022\036\n\naggtransno\030\022 \001(\005R\naggtransn" +
-      "o\022\032\n\010location\030\023 \001(\005R\010location\"\266\001\n\014Groupi" +
-      "ngFunc\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr" +
-      "\022\"\n\004args\030\002 \003(\0132\016.pg_query.NodeR\004args\022\"\n\004" +
-      "refs\030\003 \003(\0132\016.pg_query.NodeR\004refs\022 \n\013aggl" +
-      "evelsup\030\004 \001(\rR\013agglevelsup\022\032\n\010location\030\005" +
-      " \001(\005R\010location\"\221\003\n\nWindowFunc\022 \n\003xpr\030\001 \001" +
-      "(\0132\016.pg_query.NodeR\003xpr\022\032\n\010winfnoid\030\002 \001(" +
-      "\rR\010winfnoid\022\030\n\007wintype\030\003 \001(\rR\007wintype\022\034\n" +
-      "\twincollid\030\004 \001(\rR\twincollid\022 \n\013inputcoll" +
-      "id\030\005 \001(\rR\013inputcollid\022\"\n\004args\030\006 \003(\0132\016.pg" +
-      "_query.NodeR\004args\022,\n\taggfilter\030\007 \001(\0132\016.p" +
-      "g_query.NodeR\taggfilter\0223\n\rrun_condition" +
-      "\030\010 \003(\0132\016.pg_query.NodeR\014runCondition\022\026\n\006" +
-      "winref\030\t \001(\rR\006winref\022\030\n\007winstar\030\n \001(\010R\007w" +
-      "instar\022\026\n\006winagg\030\013 \001(\010R\006winagg\022\032\n\010locati" +
-      "on\030\014 \001(\005R\010location\"\262\001\n\026WindowFuncRunCond" +
-      "ition\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022" +
-      "\022\n\004opno\030\002 \001(\rR\004opno\022 \n\013inputcollid\030\003 \001(\r" +
-      "R\013inputcollid\022\036\n\nwfunc_left\030\004 \001(\010R\nwfunc" +
-      "_left\022 \n\003arg\030\005 \001(\0132\016.pg_query.NodeR\003arg\"" +
-      "\210\001\n\020MergeSupportFunc\022 \n\003xpr\030\001 \001(\0132\016.pg_q" +
-      "uery.NodeR\003xpr\022\030\n\007msftype\030\002 \001(\rR\007msftype" +
-      "\022\034\n\tmsfcollid\030\003 \001(\rR\tmsfcollid\022\032\n\010locati" +
-      "on\030\004 \001(\005R\010location\"\257\003\n\017SubscriptingRef\022 " +
-      "\n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022*\n\020refc" +
-      "ontainertype\030\002 \001(\rR\020refcontainertype\022 \n\013" +
-      "refelemtype\030\003 \001(\rR\013refelemtype\022\036\n\nrefres" +
-      "type\030\004 \001(\rR\nrefrestype\022\034\n\treftypmod\030\005 \001(" +
-      "\005R\treftypmod\022\034\n\trefcollid\030\006 \001(\rR\trefcoll" +
-      "id\0228\n\017refupperindexpr\030\007 \003(\0132\016.pg_query.N" +
-      "odeR\017refupperindexpr\0228\n\017reflowerindexpr\030" +
-      "\010 \003(\0132\016.pg_query.NodeR\017reflowerindexpr\022(" +
-      "\n\007refexpr\030\t \001(\0132\016.pg_query.NodeR\007refexpr" +
-      "\0222\n\014refassgnexpr\030\n \001(\0132\016.pg_query.NodeR\014" +
-      "refassgnexpr\"\352\002\n\010FuncExpr\022 \n\003xpr\030\001 \001(\0132\016" +
-      ".pg_query.NodeR\003xpr\022\026\n\006funcid\030\002 \001(\rR\006fun" +
-      "cid\022&\n\016funcresulttype\030\003 \001(\rR\016funcresultt" +
-      "ype\022\036\n\nfuncretset\030\004 \001(\010R\nfuncretset\022\"\n\014f" +
-      "uncvariadic\030\005 \001(\010R\014funcvariadic\0226\n\nfuncf" +
-      "ormat\030\006 \001(\0162\026.pg_query.CoercionFormR\nfun" +
-      "cformat\022\036\n\nfunccollid\030\007 \001(\rR\nfunccollid\022" +
-      " \n\013inputcollid\030\010 \001(\rR\013inputcollid\022\"\n\004arg" +
-      "s\030\t \003(\0132\016.pg_query.NodeR\004args\022\032\n\010locatio" +
-      "n\030\n \001(\005R\010location\"\240\001\n\014NamedArgExpr\022 \n\003xp" +
-      "r\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 \n\003arg\030\002 \001(" +
-      "\0132\016.pg_query.NodeR\003arg\022\022\n\004name\030\003 \001(\tR\004na" +
-      "me\022\034\n\targnumber\030\004 \001(\005R\targnumber\022\032\n\010loca" +
-      "tion\030\005 \001(\005R\010location\"\374\001\n\006OpExpr\022 \n\003xpr\030\001" +
-      " \001(\0132\016.pg_query.NodeR\003xpr\022\022\n\004opno\030\002 \001(\rR" +
-      "\004opno\022\"\n\014opresulttype\030\003 \001(\rR\014opresulttyp" +
-      "e\022\032\n\010opretset\030\004 \001(\010R\010opretset\022\032\n\010opcolli" +
-      "d\030\005 \001(\rR\010opcollid\022 \n\013inputcollid\030\006 \001(\rR\013" +
-      "inputcollid\022\"\n\004args\030\007 \003(\0132\016.pg_query.Nod" +
-      "eR\004args\022\032\n\010location\030\010 \001(\005R\010location\"\202\002\n\014" +
-      "DistinctExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.Nod" +
-      "eR\003xpr\022\022\n\004opno\030\002 \001(\rR\004opno\022\"\n\014opresultty" +
-      "pe\030\003 \001(\rR\014opresulttype\022\032\n\010opretset\030\004 \001(\010" +
-      "R\010opretset\022\032\n\010opcollid\030\005 \001(\rR\010opcollid\022 " +
-      "\n\013inputcollid\030\006 \001(\rR\013inputcollid\022\"\n\004args" +
-      "\030\007 \003(\0132\016.pg_query.NodeR\004args\022\032\n\010location" +
-      "\030\010 \001(\005R\010location\"\200\002\n\nNullIfExpr\022 \n\003xpr\030\001" +
-      " \001(\0132\016.pg_query.NodeR\003xpr\022\022\n\004opno\030\002 \001(\rR" +
-      "\004opno\022\"\n\014opresulttype\030\003 \001(\rR\014opresulttyp" +
-      "e\022\032\n\010opretset\030\004 \001(\010R\010opretset\022\032\n\010opcolli" +
-      "d\030\005 \001(\rR\010opcollid\022 \n\013inputcollid\030\006 \001(\rR\013" +
-      "inputcollid\022\"\n\004args\030\007 \003(\0132\016.pg_query.Nod" +
-      "eR\004args\022\032\n\010location\030\010 \001(\005R\010location\"\302\001\n\021" +
-      "ScalarArrayOpExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_quer" +
-      "y.NodeR\003xpr\022\022\n\004opno\030\002 \001(\rR\004opno\022\025\n\006use_o" +
-      "r\030\003 \001(\010R\005useOr\022 \n\013inputcollid\030\004 \001(\rR\013inp" +
-      "utcollid\022\"\n\004args\030\005 \003(\0132\016.pg_query.NodeR\004" +
-      "args\022\032\n\010location\030\006 \001(\005R\010location\"\234\001\n\010Boo" +
-      "lExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022" +
-      ".\n\006boolop\030\002 \001(\0162\026.pg_query.BoolExprTypeR" +
-      "\006boolop\022\"\n\004args\030\003 \003(\0132\016.pg_query.NodeR\004a" +
-      "rgs\022\032\n\010location\030\004 \001(\005R\010location\"\251\002\n\007SubL" +
-      "ink\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\0229\n" +
-      "\rsub_link_type\030\002 \001(\0162\025.pg_query.SubLinkT" +
-      "ypeR\013subLinkType\022\036\n\013sub_link_id\030\003 \001(\005R\ts" +
-      "ubLinkId\022*\n\010testexpr\030\004 \001(\0132\016.pg_query.No" +
-      "deR\010testexpr\022+\n\toper_name\030\005 \003(\0132\016.pg_que" +
-      "ry.NodeR\010operName\022,\n\tsubselect\030\006 \001(\0132\016.p" +
-      "g_query.NodeR\tsubselect\022\032\n\010location\030\007 \001(" +
-      "\005R\010location\"\265\005\n\007SubPlan\022 \n\003xpr\030\001 \001(\0132\016.p" +
-      "g_query.NodeR\003xpr\0229\n\rsub_link_type\030\002 \001(\016" +
-      "2\025.pg_query.SubLinkTypeR\013subLinkType\022*\n\010" +
-      "testexpr\030\003 \001(\0132\016.pg_query.NodeR\010testexpr" +
-      "\022+\n\tparam_ids\030\004 \003(\0132\016.pg_query.NodeR\010par" +
-      "amIds\022\030\n\007plan_id\030\005 \001(\005R\007plan_id\022\034\n\tplan_" +
-      "name\030\006 \001(\tR\tplan_name\022$\n\016first_col_type\030" +
-      "\007 \001(\rR\014firstColType\022(\n\020first_col_typmod\030" +
-      "\010 \001(\005R\016firstColTypmod\022.\n\023first_col_colla" +
-      "tion\030\t \001(\rR\021firstColCollation\022$\n\016use_has" +
-      "h_table\030\n \001(\010R\014useHashTable\022(\n\020unknown_e" +
-      "q_false\030\013 \001(\010R\016unknownEqFalse\022$\n\rparalle" +
-      "l_safe\030\014 \001(\010R\rparallel_safe\022+\n\tset_param" +
-      "\030\r \003(\0132\016.pg_query.NodeR\010setParam\022+\n\tpar_" +
-      "param\030\016 \003(\0132\016.pg_query.NodeR\010parParam\022\"\n" +
-      "\004args\030\017 \003(\0132\016.pg_query.NodeR\004args\022\"\n\014sta" +
-      "rtup_cost\030\020 \001(\001R\014startup_cost\022$\n\rper_cal" +
-      "l_cost\030\021 \001(\001R\rper_call_cost\"b\n\022Alternati" +
-      "veSubPlan\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003" +
-      "xpr\022*\n\010subplans\030\002 \003(\0132\016.pg_query.NodeR\010s" +
-      "ubplans\"\325\001\n\013FieldSelect\022 \n\003xpr\030\001 \001(\0132\016.p" +
-      "g_query.NodeR\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg_quer" +
-      "y.NodeR\003arg\022\032\n\010fieldnum\030\003 \001(\005R\010fieldnum\022" +
-      "\036\n\nresulttype\030\004 \001(\rR\nresulttype\022\"\n\014resul" +
-      "ttypmod\030\005 \001(\005R\014resulttypmod\022\"\n\014resultcol" +
-      "lid\030\006 \001(\rR\014resultcollid\"\310\001\n\nFieldStore\022 " +
-      "\n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 \n\003arg\030" +
-      "\002 \001(\0132\016.pg_query.NodeR\003arg\022(\n\007newvals\030\003 " +
-      "\003(\0132\016.pg_query.NodeR\007newvals\022,\n\tfieldnum" +
-      "s\030\004 \003(\0132\016.pg_query.NodeR\tfieldnums\022\036\n\nre" +
-      "sulttype\030\005 \001(\rR\nresulttype\"\223\002\n\013RelabelTy" +
-      "pe\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 \n\003" +
+      "erenceElem\022@\n\016returning_expr\030; \001(\0132\027.pg_" +
+      "query.ReturningExprH\000R\rReturningExpr\022:\n\014" +
+      "target_entry\030< \001(\0132\025.pg_query.TargetEntr" +
+      "yH\000R\013TargetEntry\022;\n\rrange_tbl_ref\030= \001(\0132" +
+      "\025.pg_query.RangeTblRefH\000R\013RangeTblRef\0221\n" +
+      "\tjoin_expr\030> \001(\0132\022.pg_query.JoinExprH\000R\010" +
+      "JoinExpr\0221\n\tfrom_expr\030? \001(\0132\022.pg_query.F" +
+      "romExprH\000R\010FromExpr\022D\n\020on_conflict_expr\030" +
+      "@ \001(\0132\030.pg_query.OnConflictExprH\000R\016OnCon" +
+      "flictExpr\022\'\n\005query\030A \001(\0132\017.pg_query.Quer" +
+      "yH\000R\005Query\0221\n\ttype_name\030B \001(\0132\022.pg_query" +
+      ".TypeNameH\000R\010TypeName\0224\n\ncolumn_ref\030C \001(" +
+      "\0132\023.pg_query.ColumnRefH\000R\tColumnRef\0221\n\tp" +
+      "aram_ref\030D \001(\0132\022.pg_query.ParamRefH\000R\010Pa" +
+      "ramRef\022*\n\006a_expr\030E \001(\0132\020.pg_query.A_Expr" +
+      "H\000R\006A_Expr\0221\n\ttype_cast\030F \001(\0132\022.pg_query" +
+      ".TypeCastH\000R\010TypeCast\022@\n\016collate_clause\030" +
+      "G \001(\0132\027.pg_query.CollateClauseH\000R\rCollat" +
+      "eClause\0221\n\trole_spec\030H \001(\0132\022.pg_query.Ro" +
+      "leSpecH\000R\010RoleSpec\0221\n\tfunc_call\030I \001(\0132\022." +
+      "pg_query.FuncCallH\000R\010FuncCall\022*\n\006a_star\030" +
+      "J \001(\0132\020.pg_query.A_StarH\000R\006A_Star\0223\n\ta_i" +
+      "ndices\030K \001(\0132\023.pg_query.A_IndicesH\000R\tA_I" +
+      "ndices\022?\n\ra_indirection\030L \001(\0132\027.pg_query" +
+      ".A_IndirectionH\000R\rA_Indirection\022:\n\014a_arr" +
+      "ay_expr\030M \001(\0132\025.pg_query.A_ArrayExprH\000R\013" +
+      "A_ArrayExpr\0224\n\nres_target\030N \001(\0132\023.pg_que" +
+      "ry.ResTargetH\000R\tResTarget\022D\n\020multi_assig" +
+      "n_ref\030O \001(\0132\030.pg_query.MultiAssignRefH\000R" +
+      "\016MultiAssignRef\022+\n\007sort_by\030P \001(\0132\020.pg_qu" +
+      "ery.SortByH\000R\006SortBy\0224\n\nwindow_def\030Q \001(\013" +
+      "2\023.pg_query.WindowDefH\000R\tWindowDef\022C\n\017ra" +
+      "nge_subselect\030R \001(\0132\030.pg_query.RangeSubs" +
+      "electH\000R\016RangeSubselect\022@\n\016range_functio" +
+      "n\030S \001(\0132\027.pg_query.RangeFunctionH\000R\rRang" +
+      "eFunction\022D\n\020range_table_func\030T \001(\0132\030.pg" +
+      "_query.RangeTableFuncH\000R\016RangeTableFunc\022" +
+      "N\n\024range_table_func_col\030U \001(\0132\033.pg_query" +
+      ".RangeTableFuncColH\000R\021RangeTableFuncCol\022" +
+      "J\n\022range_table_sample\030V \001(\0132\032.pg_query.R" +
+      "angeTableSampleH\000R\020RangeTableSample\0224\n\nc" +
+      "olumn_def\030W \001(\0132\023.pg_query.ColumnDefH\000R\t" +
+      "ColumnDef\022G\n\021table_like_clause\030X \001(\0132\031.p" +
+      "g_query.TableLikeClauseH\000R\017TableLikeClau" +
+      "se\0224\n\nindex_elem\030Y \001(\0132\023.pg_query.IndexE" +
+      "lemH\000R\tIndexElem\022.\n\010def_elem\030Z \001(\0132\021.pg_" +
+      "query.DefElemH\000R\007DefElem\022@\n\016locking_clau" +
+      "se\030[ \001(\0132\027.pg_query.LockingClauseH\000R\rLoc" +
+      "kingClause\022=\n\rxml_serialize\030\\ \001(\0132\026.pg_q" +
+      "uery.XmlSerializeH\000R\014XmlSerialize\022@\n\016par" +
+      "tition_elem\030] \001(\0132\027.pg_query.PartitionEl" +
+      "emH\000R\rPartitionElem\022@\n\016partition_spec\030^ " +
+      "\001(\0132\027.pg_query.PartitionSpecH\000R\rPartitio" +
+      "nSpec\022P\n\024partition_bound_spec\030_ \001(\0132\034.pg" +
+      "_query.PartitionBoundSpecH\000R\022PartitionBo" +
+      "undSpec\022S\n\025partition_range_datum\030` \001(\0132\035" +
+      ".pg_query.PartitionRangeDatumH\000R\023Partiti" +
+      "onRangeDatum\022=\n\rpartition_cmd\030a \001(\0132\026.pg" +
+      "_query.PartitionCmdH\000R\014PartitionCmd\022A\n\017r" +
+      "ange_tbl_entry\030b \001(\0132\027.pg_query.RangeTbl" +
+      "EntryH\000R\rRangeTblEntry\022L\n\022rtepermission_" +
+      "info\030c \001(\0132\033.pg_query.RTEPermissionInfoH" +
+      "\000R\021RTEPermissionInfo\022J\n\022range_tbl_functi" +
+      "on\030d \001(\0132\032.pg_query.RangeTblFunctionH\000R\020" +
+      "RangeTblFunction\022M\n\023table_sample_clause\030" +
+      "e \001(\0132\033.pg_query.TableSampleClauseH\000R\021Ta" +
+      "bleSampleClause\022G\n\021with_check_option\030f \001" +
+      "(\0132\031.pg_query.WithCheckOptionH\000R\017WithChe" +
+      "ckOption\022G\n\021sort_group_clause\030g \001(\0132\031.pg" +
+      "_query.SortGroupClauseH\000R\017SortGroupClaus" +
+      "e\022:\n\014grouping_set\030h \001(\0132\025.pg_query.Group" +
+      "ingSetH\000R\013GroupingSet\022=\n\rwindow_clause\030i" +
+      " \001(\0132\026.pg_query.WindowClauseH\000R\014WindowCl" +
+      "ause\022A\n\017row_mark_clause\030j \001(\0132\027.pg_query" +
+      ".RowMarkClauseH\000R\rRowMarkClause\0227\n\013with_" +
+      "clause\030k \001(\0132\024.pg_query.WithClauseH\000R\nWi" +
+      "thClause\022:\n\014infer_clause\030l \001(\0132\025.pg_quer" +
+      "y.InferClauseH\000R\013InferClause\022J\n\022on_confl" +
+      "ict_clause\030m \001(\0132\032.pg_query.OnConflictCl" +
+      "auseH\000R\020OnConflictClause\022F\n\020ctesearch_cl" +
+      "ause\030n \001(\0132\031.pg_query.CTESearchClauseH\000R" +
+      "\017CTESearchClause\022C\n\017ctecycle_clause\030o \001(" +
+      "\0132\030.pg_query.CTECycleClauseH\000R\016CTECycleC" +
+      "lause\022G\n\021common_table_expr\030p \001(\0132\031.pg_qu" +
+      "ery.CommonTableExprH\000R\017CommonTableExpr\022G" +
+      "\n\021merge_when_clause\030q \001(\0132\031.pg_query.Mer" +
+      "geWhenClauseH\000R\017MergeWhenClause\022F\n\020retur" +
+      "ning_option\030r \001(\0132\031.pg_query.ReturningOp" +
+      "tionH\000R\017ReturningOption\022F\n\020returning_cla" +
+      "use\030s \001(\0132\031.pg_query.ReturningClauseH\000R\017" +
+      "ReturningClause\022L\n\022trigger_transition\030t " +
+      "\001(\0132\033.pg_query.TriggerTransitionH\000R\021Trig" +
+      "gerTransition\0227\n\013json_output\030u \001(\0132\024.pg_" +
+      "query.JsonOutputH\000R\nJsonOutput\022=\n\rjson_a" +
+      "rgument\030v \001(\0132\026.pg_query.JsonArgumentH\000R" +
+      "\014JsonArgument\022>\n\016json_func_expr\030w \001(\0132\026." +
+      "pg_query.JsonFuncExprH\000R\014JsonFuncExpr\022N\n" +
+      "\024json_table_path_spec\030x \001(\0132\033.pg_query.J" +
+      "sonTablePathSpecH\000R\021JsonTablePathSpec\0224\n" +
+      "\njson_table\030y \001(\0132\023.pg_query.JsonTableH\000" +
+      "R\tJsonTable\022G\n\021json_table_column\030z \001(\0132\031" +
+      ".pg_query.JsonTableColumnH\000R\017JsonTableCo" +
+      "lumn\022>\n\016json_key_value\030{ \001(\0132\026.pg_query." +
+      "JsonKeyValueH\000R\014JsonKeyValue\022A\n\017json_par" +
+      "se_expr\030| \001(\0132\027.pg_query.JsonParseExprH\000" +
+      "R\rJsonParseExpr\022D\n\020json_scalar_expr\030} \001(" +
+      "\0132\030.pg_query.JsonScalarExprH\000R\016JsonScala" +
+      "rExpr\022M\n\023json_serialize_expr\030~ \001(\0132\033.pg_" +
+      "query.JsonSerializeExprH\000R\021JsonSerialize" +
+      "Expr\022Y\n\027json_object_constructor\030\177 \001(\0132\037." +
+      "pg_query.JsonObjectConstructorH\000R\025JsonOb" +
+      "jectConstructor\022W\n\026json_array_constructo" +
+      "r\030\200\001 \001(\0132\036.pg_query.JsonArrayConstructor" +
+      "H\000R\024JsonArrayConstructor\022g\n\034json_array_q" +
+      "uery_constructor\030\201\001 \001(\0132#.pg_query.JsonA" +
+      "rrayQueryConstructorH\000R\031JsonArrayQueryCo" +
+      "nstructor\022Q\n\024json_agg_constructor\030\202\001 \001(\013" +
+      "2\034.pg_query.JsonAggConstructorH\000R\022JsonAg" +
+      "gConstructor\022B\n\017json_object_agg\030\203\001 \001(\0132\027" +
+      ".pg_query.JsonObjectAggH\000R\rJsonObjectAgg" +
+      "\022?\n\016json_array_agg\030\204\001 \001(\0132\026.pg_query.Jso" +
+      "nArrayAggH\000R\014JsonArrayAgg\022/\n\010raw_stmt\030\205\001" +
+      " \001(\0132\021.pg_query.RawStmtH\000R\007RawStmt\0228\n\013in" +
+      "sert_stmt\030\206\001 \001(\0132\024.pg_query.InsertStmtH\000" +
+      "R\nInsertStmt\0228\n\013delete_stmt\030\207\001 \001(\0132\024.pg_" +
+      "query.DeleteStmtH\000R\nDeleteStmt\0228\n\013update" +
+      "_stmt\030\210\001 \001(\0132\024.pg_query.UpdateStmtH\000R\nUp" +
+      "dateStmt\0225\n\nmerge_stmt\030\211\001 \001(\0132\023.pg_query" +
+      ".MergeStmtH\000R\tMergeStmt\0228\n\013select_stmt\030\212" +
+      "\001 \001(\0132\024.pg_query.SelectStmtH\000R\nSelectStm" +
+      "t\022K\n\022set_operation_stmt\030\213\001 \001(\0132\032.pg_quer" +
+      "y.SetOperationStmtH\000R\020SetOperationStmt\0228" +
+      "\n\013return_stmt\030\214\001 \001(\0132\024.pg_query.ReturnSt" +
+      "mtH\000R\nReturnStmt\022>\n\rplassign_stmt\030\215\001 \001(\013" +
+      "2\026.pg_query.PLAssignStmtH\000R\014PLAssignStmt" +
+      "\022K\n\022create_schema_stmt\030\216\001 \001(\0132\032.pg_query" +
+      ".CreateSchemaStmtH\000R\020CreateSchemaStmt\022E\n" +
+      "\020alter_table_stmt\030\217\001 \001(\0132\030.pg_query.Alte" +
+      "rTableStmtH\000R\016AlterTableStmt\022B\n\017alter_ta" +
+      "ble_cmd\030\220\001 \001(\0132\027.pg_query.AlterTableCmdH" +
+      "\000R\rAlterTableCmd\022M\n\022atalter_constraint\030\221" +
+      "\001 \001(\0132\033.pg_query.ATAlterConstraintH\000R\021AT" +
+      "AlterConstraint\022T\n\025replica_identity_stmt" +
+      "\030\222\001 \001(\0132\035.pg_query.ReplicaIdentityStmtH\000" +
+      "R\023ReplicaIdentityStmt\022Q\n\024alter_collation" +
+      "_stmt\030\223\001 \001(\0132\034.pg_query.AlterCollationSt" +
+      "mtH\000R\022AlterCollationStmt\022H\n\021alter_domain" +
+      "_stmt\030\224\001 \001(\0132\031.pg_query.AlterDomainStmtH" +
+      "\000R\017AlterDomainStmt\0225\n\ngrant_stmt\030\225\001 \001(\0132" +
+      "\023.pg_query.GrantStmtH\000R\tGrantStmt\022E\n\020obj" +
+      "ect_with_args\030\226\001 \001(\0132\030.pg_query.ObjectWi" +
+      "thArgsH\000R\016ObjectWithArgs\0228\n\013access_priv\030" +
+      "\227\001 \001(\0132\024.pg_query.AccessPrivH\000R\nAccessPr" +
+      "iv\022B\n\017grant_role_stmt\030\230\001 \001(\0132\027.pg_query." +
+      "GrantRoleStmtH\000R\rGrantRoleStmt\022j\n\035alter_" +
+      "default_privileges_stmt\030\231\001 \001(\0132$.pg_quer" +
+      "y.AlterDefaultPrivilegesStmtH\000R\032AlterDef" +
+      "aultPrivilegesStmt\0222\n\tcopy_stmt\030\232\001 \001(\0132\022" +
+      ".pg_query.CopyStmtH\000R\010CopyStmt\022H\n\021variab" +
+      "le_set_stmt\030\233\001 \001(\0132\031.pg_query.VariableSe" +
+      "tStmtH\000R\017VariableSetStmt\022K\n\022variable_sho" +
+      "w_stmt\030\234\001 \001(\0132\032.pg_query.VariableShowStm" +
+      "tH\000R\020VariableShowStmt\0228\n\013create_stmt\030\235\001 " +
+      "\001(\0132\024.pg_query.CreateStmtH\000R\nCreateStmt\022" +
+      "7\n\nconstraint\030\236\001 \001(\0132\024.pg_query.Constrai" +
+      "ntH\000R\nConstraint\022X\n\027create_table_space_s" +
+      "tmt\030\237\001 \001(\0132\036.pg_query.CreateTableSpaceSt" +
+      "mtH\000R\024CreateTableSpaceStmt\022R\n\025drop_table" +
+      "_space_stmt\030\240\001 \001(\0132\034.pg_query.DropTableS" +
+      "paceStmtH\000R\022DropTableSpaceStmt\022k\n\036alter_" +
+      "table_space_options_stmt\030\241\001 \001(\0132$.pg_que" +
+      "ry.AlterTableSpaceOptionsStmtH\000R\032AlterTa" +
+      "bleSpaceOptionsStmt\022\\\n\031alter_table_move_" +
+      "all_stmt\030\242\001 \001(\0132\037.pg_query.AlterTableMov" +
+      "eAllStmtH\000R\025AlterTableMoveAllStmt\022T\n\025cre" +
+      "ate_extension_stmt\030\243\001 \001(\0132\035.pg_query.Cre" +
+      "ateExtensionStmtH\000R\023CreateExtensionStmt\022" +
+      "Q\n\024alter_extension_stmt\030\244\001 \001(\0132\034.pg_quer" +
+      "y.AlterExtensionStmtH\000R\022AlterExtensionSt" +
+      "mt\022j\n\035alter_extension_contents_stmt\030\245\001 \001" +
+      "(\0132$.pg_query.AlterExtensionContentsStmt" +
+      "H\000R\032AlterExtensionContentsStmt\022B\n\017create" +
+      "_fdw_stmt\030\246\001 \001(\0132\027.pg_query.CreateFdwStm" +
+      "tH\000R\rCreateFdwStmt\022?\n\016alter_fdw_stmt\030\247\001 " +
+      "\001(\0132\026.pg_query.AlterFdwStmtH\000R\014AlterFdwS" +
+      "tmt\022a\n\032create_foreign_server_stmt\030\250\001 \001(\013" +
+      "2!.pg_query.CreateForeignServerStmtH\000R\027C" +
+      "reateForeignServerStmt\022^\n\031alter_foreign_" +
+      "server_stmt\030\251\001 \001(\0132 .pg_query.AlterForei" +
+      "gnServerStmtH\000R\026AlterForeignServerStmt\022^" +
+      "\n\031create_foreign_table_stmt\030\252\001 \001(\0132 .pg_" +
+      "query.CreateForeignTableStmtH\000R\026CreateFo" +
+      "reignTableStmt\022[\n\030create_user_mapping_st" +
+      "mt\030\253\001 \001(\0132\037.pg_query.CreateUserMappingSt" +
+      "mtH\000R\025CreateUserMappingStmt\022X\n\027alter_use" +
+      "r_mapping_stmt\030\254\001 \001(\0132\036.pg_query.AlterUs" +
+      "erMappingStmtH\000R\024AlterUserMappingStmt\022U\n" +
+      "\026drop_user_mapping_stmt\030\255\001 \001(\0132\035.pg_quer" +
+      "y.DropUserMappingStmtH\000R\023DropUserMapping" +
+      "Stmt\022a\n\032import_foreign_schema_stmt\030\256\001 \001(" +
+      "\0132!.pg_query.ImportForeignSchemaStmtH\000R\027" +
+      "ImportForeignSchemaStmt\022K\n\022create_policy" +
+      "_stmt\030\257\001 \001(\0132\032.pg_query.CreatePolicyStmt" +
+      "H\000R\020CreatePolicyStmt\022H\n\021alter_policy_stm" +
+      "t\030\260\001 \001(\0132\031.pg_query.AlterPolicyStmtH\000R\017A" +
+      "lterPolicyStmt\022?\n\016create_am_stmt\030\261\001 \001(\0132" +
+      "\026.pg_query.CreateAmStmtH\000R\014CreateAmStmt\022" +
+      "E\n\020create_trig_stmt\030\262\001 \001(\0132\030.pg_query.Cr" +
+      "eateTrigStmtH\000R\016CreateTrigStmt\022U\n\026create" +
+      "_event_trig_stmt\030\263\001 \001(\0132\035.pg_query.Creat" +
+      "eEventTrigStmtH\000R\023CreateEventTrigStmt\022R\n" +
+      "\025alter_event_trig_stmt\030\264\001 \001(\0132\034.pg_query" +
+      ".AlterEventTrigStmtH\000R\022AlterEventTrigStm" +
+      "t\022H\n\021create_plang_stmt\030\265\001 \001(\0132\031.pg_query" +
+      ".CreatePLangStmtH\000R\017CreatePLangStmt\022E\n\020c" +
+      "reate_role_stmt\030\266\001 \001(\0132\030.pg_query.Create" +
+      "RoleStmtH\000R\016CreateRoleStmt\022B\n\017alter_role" +
+      "_stmt\030\267\001 \001(\0132\027.pg_query.AlterRoleStmtH\000R" +
+      "\rAlterRoleStmt\022L\n\023alter_role_set_stmt\030\270\001" +
+      " \001(\0132\032.pg_query.AlterRoleSetStmtH\000R\020Alte" +
+      "rRoleSetStmt\022?\n\016drop_role_stmt\030\271\001 \001(\0132\026." +
+      "pg_query.DropRoleStmtH\000R\014DropRoleStmt\022B\n" +
+      "\017create_seq_stmt\030\272\001 \001(\0132\027.pg_query.Creat" +
+      "eSeqStmtH\000R\rCreateSeqStmt\022?\n\016alter_seq_s" +
+      "tmt\030\273\001 \001(\0132\026.pg_query.AlterSeqStmtH\000R\014Al" +
+      "terSeqStmt\0228\n\013define_stmt\030\274\001 \001(\0132\024.pg_qu" +
+      "ery.DefineStmtH\000R\nDefineStmt\022K\n\022create_d" +
+      "omain_stmt\030\275\001 \001(\0132\032.pg_query.CreateDomai" +
+      "nStmtH\000R\020CreateDomainStmt\022O\n\024create_op_c" +
+      "lass_stmt\030\276\001 \001(\0132\033.pg_query.CreateOpClas" +
+      "sStmtH\000R\021CreateOpClassStmt\022O\n\024create_op_" +
+      "class_item\030\277\001 \001(\0132\033.pg_query.CreateOpCla" +
+      "ssItemH\000R\021CreateOpClassItem\022R\n\025create_op" +
+      "_family_stmt\030\300\001 \001(\0132\034.pg_query.CreateOpF" +
+      "amilyStmtH\000R\022CreateOpFamilyStmt\022O\n\024alter" +
+      "_op_family_stmt\030\301\001 \001(\0132\033.pg_query.AlterO" +
+      "pFamilyStmtH\000R\021AlterOpFamilyStmt\0222\n\tdrop" +
+      "_stmt\030\302\001 \001(\0132\022.pg_query.DropStmtH\000R\010Drop" +
+      "Stmt\022>\n\rtruncate_stmt\030\303\001 \001(\0132\026.pg_query." +
+      "TruncateStmtH\000R\014TruncateStmt\022;\n\014comment_" +
+      "stmt\030\304\001 \001(\0132\025.pg_query.CommentStmtH\000R\013Co" +
+      "mmentStmt\022?\n\016sec_label_stmt\030\305\001 \001(\0132\026.pg_" +
+      "query.SecLabelStmtH\000R\014SecLabelStmt\022N\n\023de" +
+      "clare_cursor_stmt\030\306\001 \001(\0132\033.pg_query.Decl" +
+      "areCursorStmtH\000R\021DeclareCursorStmt\022H\n\021cl" +
+      "ose_portal_stmt\030\307\001 \001(\0132\031.pg_query.CloseP" +
+      "ortalStmtH\000R\017ClosePortalStmt\0225\n\nfetch_st" +
+      "mt\030\310\001 \001(\0132\023.pg_query.FetchStmtH\000R\tFetchS" +
+      "tmt\0225\n\nindex_stmt\030\311\001 \001(\0132\023.pg_query.Inde" +
+      "xStmtH\000R\tIndexStmt\022H\n\021create_stats_stmt\030" +
+      "\312\001 \001(\0132\031.pg_query.CreateStatsStmtH\000R\017Cre" +
+      "ateStatsStmt\0225\n\nstats_elem\030\313\001 \001(\0132\023.pg_q" +
+      "uery.StatsElemH\000R\tStatsElem\022E\n\020alter_sta" +
+      "ts_stmt\030\314\001 \001(\0132\030.pg_query.AlterStatsStmt" +
+      "H\000R\016AlterStatsStmt\022Q\n\024create_function_st" +
+      "mt\030\315\001 \001(\0132\034.pg_query.CreateFunctionStmtH" +
+      "\000R\022CreateFunctionStmt\022M\n\022function_parame" +
+      "ter\030\316\001 \001(\0132\033.pg_query.FunctionParameterH" +
+      "\000R\021FunctionParameter\022N\n\023alter_function_s" +
+      "tmt\030\317\001 \001(\0132\033.pg_query.AlterFunctionStmtH" +
+      "\000R\021AlterFunctionStmt\022,\n\007do_stmt\030\320\001 \001(\0132\020" +
+      ".pg_query.DoStmtH\000R\006DoStmt\022H\n\021inline_cod" +
+      "e_block\030\321\001 \001(\0132\031.pg_query.InlineCodeBloc" +
+      "kH\000R\017InlineCodeBlock\0222\n\tcall_stmt\030\322\001 \001(\013" +
+      "2\022.pg_query.CallStmtH\000R\010CallStmt\022;\n\014call" +
+      "_context\030\323\001 \001(\0132\025.pg_query.CallContextH\000" +
+      "R\013CallContext\0228\n\013rename_stmt\030\324\001 \001(\0132\024.pg" +
+      "_query.RenameStmtH\000R\nRenameStmt\022^\n\031alter" +
+      "_object_depends_stmt\030\325\001 \001(\0132 .pg_query.A" +
+      "lterObjectDependsStmtH\000R\026AlterObjectDepe" +
+      "ndsStmt\022[\n\030alter_object_schema_stmt\030\326\001 \001" +
+      "(\0132\037.pg_query.AlterObjectSchemaStmtH\000R\025A" +
+      "lterObjectSchemaStmt\022E\n\020alter_owner_stmt" +
+      "\030\327\001 \001(\0132\030.pg_query.AlterOwnerStmtH\000R\016Alt" +
+      "erOwnerStmt\022N\n\023alter_operator_stmt\030\330\001 \001(" +
+      "\0132\033.pg_query.AlterOperatorStmtH\000R\021AlterO" +
+      "peratorStmt\022B\n\017alter_type_stmt\030\331\001 \001(\0132\027." +
+      "pg_query.AlterTypeStmtH\000R\rAlterTypeStmt\022" +
+      "2\n\trule_stmt\030\332\001 \001(\0132\022.pg_query.RuleStmtH" +
+      "\000R\010RuleStmt\0228\n\013notify_stmt\030\333\001 \001(\0132\024.pg_q" +
+      "uery.NotifyStmtH\000R\nNotifyStmt\0228\n\013listen_" +
+      "stmt\030\334\001 \001(\0132\024.pg_query.ListenStmtH\000R\nLis" +
+      "tenStmt\022>\n\runlisten_stmt\030\335\001 \001(\0132\026.pg_que" +
+      "ry.UnlistenStmtH\000R\014UnlistenStmt\022G\n\020trans" +
+      "action_stmt\030\336\001 \001(\0132\031.pg_query.Transactio" +
+      "nStmtH\000R\017TransactionStmt\022N\n\023composite_ty" +
+      "pe_stmt\030\337\001 \001(\0132\033.pg_query.CompositeTypeS" +
+      "tmtH\000R\021CompositeTypeStmt\022E\n\020create_enum_" +
+      "stmt\030\340\001 \001(\0132\030.pg_query.CreateEnumStmtH\000R" +
+      "\016CreateEnumStmt\022H\n\021create_range_stmt\030\341\001 " +
+      "\001(\0132\031.pg_query.CreateRangeStmtH\000R\017Create" +
+      "RangeStmt\022B\n\017alter_enum_stmt\030\342\001 \001(\0132\027.pg" +
+      "_query.AlterEnumStmtH\000R\rAlterEnumStmt\0222\n" +
+      "\tview_stmt\030\343\001 \001(\0132\022.pg_query.ViewStmtH\000R" +
+      "\010ViewStmt\0222\n\tload_stmt\030\344\001 \001(\0132\022.pg_query" +
+      ".LoadStmtH\000R\010LoadStmt\022>\n\rcreatedb_stmt\030\345" +
+      "\001 \001(\0132\026.pg_query.CreatedbStmtH\000R\014Created" +
+      "bStmt\022N\n\023alter_database_stmt\030\346\001 \001(\0132\033.pg" +
+      "_query.AlterDatabaseStmtH\000R\021AlterDatabas" +
+      "eStmt\022q\n alter_database_refresh_coll_stm" +
+      "t\030\347\001 \001(\0132&.pg_query.AlterDatabaseRefresh" +
+      "CollStmtH\000R\034AlterDatabaseRefreshCollStmt" +
+      "\022X\n\027alter_database_set_stmt\030\350\001 \001(\0132\036.pg_" +
+      "query.AlterDatabaseSetStmtH\000R\024AlterDatab" +
+      "aseSetStmt\0228\n\013dropdb_stmt\030\351\001 \001(\0132\024.pg_qu" +
+      "ery.DropdbStmtH\000R\nDropdbStmt\022H\n\021alter_sy",
+      "stem_stmt\030\352\001 \001(\0132\031.pg_query.AlterSystemS" +
+      "tmtH\000R\017AlterSystemStmt\022;\n\014cluster_stmt\030\353" +
+      "\001 \001(\0132\025.pg_query.ClusterStmtH\000R\013ClusterS" +
+      "tmt\0228\n\013vacuum_stmt\030\354\001 \001(\0132\024.pg_query.Vac" +
+      "uumStmtH\000R\nVacuumStmt\022D\n\017vacuum_relation" +
+      "\030\355\001 \001(\0132\030.pg_query.VacuumRelationH\000R\016Vac" +
+      "uumRelation\022;\n\014explain_stmt\030\356\001 \001(\0132\025.pg_" +
+      "query.ExplainStmtH\000R\013ExplainStmt\022O\n\024crea" +
+      "te_table_as_stmt\030\357\001 \001(\0132\033.pg_query.Creat" +
+      "eTableAsStmtH\000R\021CreateTableAsStmt\022R\n\025ref" +
+      "resh_mat_view_stmt\030\360\001 \001(\0132\034.pg_query.Ref" +
+      "reshMatViewStmtH\000R\022RefreshMatViewStmt\022E\n" +
+      "\020check_point_stmt\030\361\001 \001(\0132\030.pg_query.Chec" +
+      "kPointStmtH\000R\016CheckPointStmt\022;\n\014discard_" +
+      "stmt\030\362\001 \001(\0132\025.pg_query.DiscardStmtH\000R\013Di" +
+      "scardStmt\0222\n\tlock_stmt\030\363\001 \001(\0132\022.pg_query" +
+      ".LockStmtH\000R\010LockStmt\022Q\n\024constraints_set" +
+      "_stmt\030\364\001 \001(\0132\034.pg_query.ConstraintsSetSt" +
+      "mtH\000R\022ConstraintsSetStmt\022;\n\014reindex_stmt" +
+      "\030\365\001 \001(\0132\025.pg_query.ReindexStmtH\000R\013Reinde" +
+      "xStmt\022W\n\026create_conversion_stmt\030\366\001 \001(\0132\036" +
+      ".pg_query.CreateConversionStmtH\000R\024Create" +
+      "ConversionStmt\022E\n\020create_cast_stmt\030\367\001 \001(" +
+      "\0132\030.pg_query.CreateCastStmtH\000R\016CreateCas" +
+      "tStmt\022T\n\025create_transform_stmt\030\370\001 \001(\0132\035." +
+      "pg_query.CreateTransformStmtH\000R\023CreateTr" +
+      "ansformStmt\022;\n\014prepare_stmt\030\371\001 \001(\0132\025.pg_" +
+      "query.PrepareStmtH\000R\013PrepareStmt\022;\n\014exec" +
+      "ute_stmt\030\372\001 \001(\0132\025.pg_query.ExecuteStmtH\000" +
+      "R\013ExecuteStmt\022D\n\017deallocate_stmt\030\373\001 \001(\0132" +
+      "\030.pg_query.DeallocateStmtH\000R\016DeallocateS" +
+      "tmt\022B\n\017drop_owned_stmt\030\374\001 \001(\0132\027.pg_query" +
+      ".DropOwnedStmtH\000R\rDropOwnedStmt\022N\n\023reass" +
+      "ign_owned_stmt\030\375\001 \001(\0132\033.pg_query.Reassig" +
+      "nOwnedStmtH\000R\021ReassignOwnedStmt\022Z\n\027alter" +
+      "_tsdictionary_stmt\030\376\001 \001(\0132\037.pg_query.Alt" +
+      "erTSDictionaryStmtH\000R\025AlterTSDictionaryS" +
+      "tmt\022c\n\032alter_tsconfiguration_stmt\030\377\001 \001(\013" +
+      "2\".pg_query.AlterTSConfigurationStmtH\000R\030" +
+      "AlterTSConfigurationStmt\022J\n\021publication_" +
+      "table\030\200\002 \001(\0132\032.pg_query.PublicationTable" +
+      "H\000R\020PublicationTable\022Q\n\024publication_obj_" +
+      "spec\030\201\002 \001(\0132\034.pg_query.PublicationObjSpe" +
+      "cH\000R\022PublicationObjSpec\022Z\n\027create_public" +
+      "ation_stmt\030\202\002 \001(\0132\037.pg_query.CreatePubli" +
+      "cationStmtH\000R\025CreatePublicationStmt\022W\n\026a" +
+      "lter_publication_stmt\030\203\002 \001(\0132\036.pg_query." +
+      "AlterPublicationStmtH\000R\024AlterPublication" +
+      "Stmt\022]\n\030create_subscription_stmt\030\204\002 \001(\0132" +
+      " .pg_query.CreateSubscriptionStmtH\000R\026Cre" +
+      "ateSubscriptionStmt\022Z\n\027alter_subscriptio" +
+      "n_stmt\030\205\002 \001(\0132\037.pg_query.AlterSubscripti" +
+      "onStmtH\000R\025AlterSubscriptionStmt\022W\n\026drop_" +
+      "subscription_stmt\030\206\002 \001(\0132\036.pg_query.Drop" +
+      "SubscriptionStmtH\000R\024DropSubscriptionStmt" +
+      "\022.\n\007integer\030\207\002 \001(\0132\021.pg_query.IntegerH\000R" +
+      "\007Integer\022(\n\005float\030\210\002 \001(\0132\017.pg_query.Floa" +
+      "tH\000R\005Float\022.\n\007boolean\030\211\002 \001(\0132\021.pg_query." +
+      "BooleanH\000R\007Boolean\022+\n\006string\030\212\002 \001(\0132\020.pg" +
+      "_query.StringH\000R\006String\0225\n\nbit_string\030\213\002" +
+      " \001(\0132\023.pg_query.BitStringH\000R\tBitString\022%" +
+      "\n\004list\030\214\002 \001(\0132\016.pg_query.ListH\000R\004List\022/\n" +
+      "\010int_list\030\215\002 \001(\0132\021.pg_query.IntListH\000R\007I" +
+      "ntList\022/\n\010oid_list\030\216\002 \001(\0132\021.pg_query.Oid" +
+      "ListH\000R\007OidList\022.\n\007a_const\030\217\002 \001(\0132\021.pg_q" +
+      "uery.A_ConstH\000R\007A_ConstB\006\n\004node\"\027\n\007Integ" +
+      "er\022\014\n\004ival\030\001 \001(\005\"\025\n\005Float\022\014\n\004fval\030\001 \001(\t\"" +
+      "\032\n\007Boolean\022\017\n\007boolval\030\001 \001(\010\"\026\n\006String\022\014\n" +
+      "\004sval\030\001 \001(\t\"\032\n\tBitString\022\r\n\005bsval\030\001 \001(\t\"" +
+      "%\n\004List\022\035\n\005items\030\001 \003(\0132\016.pg_query.Node\"(" +
+      "\n\007OidList\022\035\n\005items\030\001 \003(\0132\016.pg_query.Node" +
+      "\"(\n\007IntList\022\035\n\005items\030\001 \003(\0132\016.pg_query.No" +
+      "de\"\344\001\n\007A_Const\022!\n\004ival\030\001 \001(\0132\021.pg_query." +
+      "IntegerH\000\022\037\n\004fval\030\002 \001(\0132\017.pg_query.Float" +
+      "H\000\022$\n\007boolval\030\003 \001(\0132\021.pg_query.BooleanH\000" +
+      "\022 \n\004sval\030\004 \001(\0132\020.pg_query.StringH\000\022$\n\005bs" +
+      "val\030\005 \001(\0132\023.pg_query.BitStringH\000\022\016\n\006isnu" +
+      "ll\030\n \001(\010\022\020\n\010location\030\013 \001(\005B\005\n\003val\"Q\n\005Ali" +
+      "as\022\034\n\taliasname\030\001 \001(\tR\taliasname\022*\n\010coln" +
+      "ames\030\002 \003(\0132\016.pg_query.NodeR\010colnames\"\343\001\n" +
+      "\010RangeVar\022 \n\013catalogname\030\001 \001(\tR\013catalogn" +
+      "ame\022\036\n\nschemaname\030\002 \001(\tR\nschemaname\022\030\n\007r" +
+      "elname\030\003 \001(\tR\007relname\022\020\n\003inh\030\004 \001(\010R\003inh\022" +
+      "&\n\016relpersistence\030\005 \001(\tR\016relpersistence\022" +
+      "%\n\005alias\030\006 \001(\0132\017.pg_query.AliasR\005alias\022\032" +
+      "\n\010location\030\007 \001(\005R\010location\"\364\005\n\tTableFunc" +
+      "\0223\n\010functype\030\001 \001(\0162\027.pg_query.TableFuncT" +
+      "ypeR\010functype\022(\n\007ns_uris\030\002 \003(\0132\016.pg_quer" +
+      "y.NodeR\007ns_uris\022*\n\010ns_names\030\003 \003(\0132\016.pg_q" +
+      "uery.NodeR\010ns_names\022(\n\007docexpr\030\004 \001(\0132\016.p" +
+      "g_query.NodeR\007docexpr\022(\n\007rowexpr\030\005 \001(\0132\016" +
+      ".pg_query.NodeR\007rowexpr\022*\n\010colnames\030\006 \003(" +
+      "\0132\016.pg_query.NodeR\010colnames\022*\n\010coltypes\030" +
+      "\007 \003(\0132\016.pg_query.NodeR\010coltypes\022.\n\ncolty" +
+      "pmods\030\010 \003(\0132\016.pg_query.NodeR\ncoltypmods\022" +
+      "4\n\rcolcollations\030\t \003(\0132\016.pg_query.NodeR\r" +
+      "colcollations\022*\n\010colexprs\030\n \003(\0132\016.pg_que" +
+      "ry.NodeR\010colexprs\0220\n\013coldefexprs\030\013 \003(\0132\016" +
+      ".pg_query.NodeR\013coldefexprs\0220\n\013colvalexp" +
+      "rs\030\014 \003(\0132\016.pg_query.NodeR\013colvalexprs\0228\n" +
+      "\017passingvalexprs\030\r \003(\0132\016.pg_query.NodeR\017" +
+      "passingvalexprs\022\032\n\010notnulls\030\016 \003(\004R\010notnu" +
+      "lls\022\"\n\004plan\030\017 \001(\0132\016.pg_query.NodeR\004plan\022" +
+      "$\n\rordinalitycol\030\020 \001(\005R\rordinalitycol\022\032\n" +
+      "\010location\030\021 \001(\005R\010location\"\334\002\n\nIntoClause" +
+      "\022$\n\003rel\030\001 \001(\0132\022.pg_query.RangeVarR\003rel\022+" +
+      "\n\tcol_names\030\002 \003(\0132\016.pg_query.NodeR\010colNa" +
+      "mes\022#\n\raccess_method\030\003 \001(\tR\014accessMethod" +
+      "\022(\n\007options\030\004 \003(\0132\016.pg_query.NodeR\007optio" +
+      "ns\0225\n\ton_commit\030\005 \001(\0162\030.pg_query.OnCommi" +
+      "tActionR\010onCommit\022(\n\020table_space_name\030\006 " +
+      "\001(\tR\016tableSpaceName\022.\n\nview_query\030\007 \001(\0132" +
+      "\017.pg_query.QueryR\tviewQuery\022\033\n\tskip_data" +
+      "\030\010 \001(\010R\010skipData\"\335\002\n\003Var\022 \n\003xpr\030\001 \001(\0132\016." +
+      "pg_query.NodeR\003xpr\022\024\n\005varno\030\002 \001(\005R\005varno" +
+      "\022\032\n\010varattno\030\003 \001(\005R\010varattno\022\030\n\007vartype\030" +
+      "\004 \001(\rR\007vartype\022\034\n\tvartypmod\030\005 \001(\005R\tvarty" +
+      "pmod\022\034\n\tvarcollid\030\006 \001(\rR\tvarcollid\022&\n\016va" +
+      "rnullingrels\030\007 \003(\004R\016varnullingrels\022 \n\013va" +
+      "rlevelsup\030\010 \001(\rR\013varlevelsup\022F\n\020varretur" +
+      "ningtype\030\t \001(\0162\032.pg_query.VarReturningTy" +
+      "peR\020varreturningtype\022\032\n\010location\030\n \001(\005R\010" +
+      "location\"\364\001\n\005Param\022 \n\003xpr\030\001 \001(\0132\016.pg_que" +
+      "ry.NodeR\003xpr\0221\n\tparamkind\030\002 \001(\0162\023.pg_que" +
+      "ry.ParamKindR\tparamkind\022\030\n\007paramid\030\003 \001(\005" +
+      "R\007paramid\022\034\n\tparamtype\030\004 \001(\rR\tparamtype\022" +
+      " \n\013paramtypmod\030\005 \001(\005R\013paramtypmod\022 \n\013par" +
+      "amcollid\030\006 \001(\rR\013paramcollid\022\032\n\010location\030" +
+      "\007 \001(\005R\010location\"\262\005\n\006Aggref\022 \n\003xpr\030\001 \001(\0132" +
+      "\016.pg_query.NodeR\003xpr\022\032\n\010aggfnoid\030\002 \001(\rR\010" +
+      "aggfnoid\022\030\n\007aggtype\030\003 \001(\rR\007aggtype\022\034\n\tag" +
+      "gcollid\030\004 \001(\rR\taggcollid\022 \n\013inputcollid\030" +
+      "\005 \001(\rR\013inputcollid\0220\n\013aggargtypes\030\006 \003(\0132" +
+      "\016.pg_query.NodeR\013aggargtypes\0224\n\raggdirec" +
+      "targs\030\007 \003(\0132\016.pg_query.NodeR\raggdirectar" +
+      "gs\022\"\n\004args\030\010 \003(\0132\016.pg_query.NodeR\004args\022*" +
+      "\n\010aggorder\030\t \003(\0132\016.pg_query.NodeR\010aggord" +
+      "er\0220\n\013aggdistinct\030\n \003(\0132\016.pg_query.NodeR" +
+      "\013aggdistinct\022,\n\taggfilter\030\013 \001(\0132\016.pg_que" +
+      "ry.NodeR\taggfilter\022\030\n\007aggstar\030\014 \001(\010R\007agg" +
+      "star\022 \n\013aggvariadic\030\r \001(\010R\013aggvariadic\022\030" +
+      "\n\007aggkind\030\016 \001(\tR\007aggkind\022 \n\013agglevelsup\030" +
+      "\017 \001(\rR\013agglevelsup\022.\n\010aggsplit\030\020 \001(\0162\022.p" +
+      "g_query.AggSplitR\010aggsplit\022\024\n\005aggno\030\021 \001(" +
+      "\005R\005aggno\022\036\n\naggtransno\030\022 \001(\005R\naggtransno" +
+      "\022\032\n\010location\030\023 \001(\005R\010location\"\266\001\n\014Groupin" +
+      "gFunc\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022" +
+      "\"\n\004args\030\002 \003(\0132\016.pg_query.NodeR\004args\022\"\n\004r" +
+      "efs\030\003 \003(\0132\016.pg_query.NodeR\004refs\022 \n\013aggle" +
+      "velsup\030\004 \001(\rR\013agglevelsup\022\032\n\010location\030\005 " +
+      "\001(\005R\010location\"\221\003\n\nWindowFunc\022 \n\003xpr\030\001 \001(" +
+      "\0132\016.pg_query.NodeR\003xpr\022\032\n\010winfnoid\030\002 \001(\r" +
+      "R\010winfnoid\022\030\n\007wintype\030\003 \001(\rR\007wintype\022\034\n\t" +
+      "wincollid\030\004 \001(\rR\twincollid\022 \n\013inputcolli" +
+      "d\030\005 \001(\rR\013inputcollid\022\"\n\004args\030\006 \003(\0132\016.pg_" +
+      "query.NodeR\004args\022,\n\taggfilter\030\007 \001(\0132\016.pg" +
+      "_query.NodeR\taggfilter\0223\n\rrun_condition\030" +
+      "\010 \003(\0132\016.pg_query.NodeR\014runCondition\022\026\n\006w" +
+      "inref\030\t \001(\rR\006winref\022\030\n\007winstar\030\n \001(\010R\007wi" +
+      "nstar\022\026\n\006winagg\030\013 \001(\010R\006winagg\022\032\n\010locatio" +
+      "n\030\014 \001(\005R\010location\"\262\001\n\026WindowFuncRunCondi" +
+      "tion\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\022" +
+      "\n\004opno\030\002 \001(\rR\004opno\022 \n\013inputcollid\030\003 \001(\rR" +
+      "\013inputcollid\022\036\n\nwfunc_left\030\004 \001(\010R\nwfunc_" +
+      "left\022 \n\003arg\030\005 \001(\0132\016.pg_query.NodeR\003arg\"\210" +
+      "\001\n\020MergeSupportFunc\022 \n\003xpr\030\001 \001(\0132\016.pg_qu" +
+      "ery.NodeR\003xpr\022\030\n\007msftype\030\002 \001(\rR\007msftype\022" +
+      "\034\n\tmsfcollid\030\003 \001(\rR\tmsfcollid\022\032\n\010locatio" +
+      "n\030\004 \001(\005R\010location\"\257\003\n\017SubscriptingRef\022 \n" +
+      "\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022*\n\020refco" +
+      "ntainertype\030\002 \001(\rR\020refcontainertype\022 \n\013r" +
+      "efelemtype\030\003 \001(\rR\013refelemtype\022\036\n\nrefrest" +
+      "ype\030\004 \001(\rR\nrefrestype\022\034\n\treftypmod\030\005 \001(\005" +
+      "R\treftypmod\022\034\n\trefcollid\030\006 \001(\rR\trefcolli" +
+      "d\0228\n\017refupperindexpr\030\007 \003(\0132\016.pg_query.No" +
+      "deR\017refupperindexpr\0228\n\017reflowerindexpr\030\010" +
+      " \003(\0132\016.pg_query.NodeR\017reflowerindexpr\022(\n" +
+      "\007refexpr\030\t \001(\0132\016.pg_query.NodeR\007refexpr\022" +
+      "2\n\014refassgnexpr\030\n \001(\0132\016.pg_query.NodeR\014r" +
+      "efassgnexpr\"\352\002\n\010FuncExpr\022 \n\003xpr\030\001 \001(\0132\016." +
+      "pg_query.NodeR\003xpr\022\026\n\006funcid\030\002 \001(\rR\006func" +
+      "id\022&\n\016funcresulttype\030\003 \001(\rR\016funcresultty" +
+      "pe\022\036\n\nfuncretset\030\004 \001(\010R\nfuncretset\022\"\n\014fu" +
+      "ncvariadic\030\005 \001(\010R\014funcvariadic\0226\n\nfuncfo" +
+      "rmat\030\006 \001(\0162\026.pg_query.CoercionFormR\nfunc" +
+      "format\022\036\n\nfunccollid\030\007 \001(\rR\nfunccollid\022 " +
+      "\n\013inputcollid\030\010 \001(\rR\013inputcollid\022\"\n\004args" +
+      "\030\t \003(\0132\016.pg_query.NodeR\004args\022\032\n\010location" +
+      "\030\n \001(\005R\010location\"\240\001\n\014NamedArgExpr\022 \n\003xpr" +
+      "\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 \n\003arg\030\002 \001(\013" +
+      "2\016.pg_query.NodeR\003arg\022\022\n\004name\030\003 \001(\tR\004nam" +
+      "e\022\034\n\targnumber\030\004 \001(\005R\targnumber\022\032\n\010locat" +
+      "ion\030\005 \001(\005R\010location\"\374\001\n\006OpExpr\022 \n\003xpr\030\001 " +
+      "\001(\0132\016.pg_query.NodeR\003xpr\022\022\n\004opno\030\002 \001(\rR\004" +
+      "opno\022\"\n\014opresulttype\030\003 \001(\rR\014opresulttype" +
+      "\022\032\n\010opretset\030\004 \001(\010R\010opretset\022\032\n\010opcollid" +
+      "\030\005 \001(\rR\010opcollid\022 \n\013inputcollid\030\006 \001(\rR\013i" +
+      "nputcollid\022\"\n\004args\030\007 \003(\0132\016.pg_query.Node" +
+      "R\004args\022\032\n\010location\030\010 \001(\005R\010location\"\202\002\n\014D" +
+      "istinctExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.Node" +
+      "R\003xpr\022\022\n\004opno\030\002 \001(\rR\004opno\022\"\n\014opresulttyp" +
+      "e\030\003 \001(\rR\014opresulttype\022\032\n\010opretset\030\004 \001(\010R" +
+      "\010opretset\022\032\n\010opcollid\030\005 \001(\rR\010opcollid\022 \n" +
+      "\013inputcollid\030\006 \001(\rR\013inputcollid\022\"\n\004args\030" +
+      "\007 \003(\0132\016.pg_query.NodeR\004args\022\032\n\010location\030" +
+      "\010 \001(\005R\010location\"\200\002\n\nNullIfExpr\022 \n\003xpr\030\001 " +
+      "\001(\0132\016.pg_query.NodeR\003xpr\022\022\n\004opno\030\002 \001(\rR\004" +
+      "opno\022\"\n\014opresulttype\030\003 \001(\rR\014opresulttype" +
+      "\022\032\n\010opretset\030\004 \001(\010R\010opretset\022\032\n\010opcollid" +
+      "\030\005 \001(\rR\010opcollid\022 \n\013inputcollid\030\006 \001(\rR\013i" +
+      "nputcollid\022\"\n\004args\030\007 \003(\0132\016.pg_query.Node" +
+      "R\004args\022\032\n\010location\030\010 \001(\005R\010location\"\302\001\n\021S" +
+      "calarArrayOpExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query" +
+      ".NodeR\003xpr\022\022\n\004opno\030\002 \001(\rR\004opno\022\025\n\006use_or" +
+      "\030\003 \001(\010R\005useOr\022 \n\013inputcollid\030\004 \001(\rR\013inpu" +
+      "tcollid\022\"\n\004args\030\005 \003(\0132\016.pg_query.NodeR\004a" +
+      "rgs\022\032\n\010location\030\006 \001(\005R\010location\"\234\001\n\010Bool" +
+      "Expr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022." +
+      "\n\006boolop\030\002 \001(\0162\026.pg_query.BoolExprTypeR\006" +
+      "boolop\022\"\n\004args\030\003 \003(\0132\016.pg_query.NodeR\004ar" +
+      "gs\022\032\n\010location\030\004 \001(\005R\010location\"\251\002\n\007SubLi" +
+      "nk\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\0229\n\r" +
+      "sub_link_type\030\002 \001(\0162\025.pg_query.SubLinkTy" +
+      "peR\013subLinkType\022\036\n\013sub_link_id\030\003 \001(\005R\tsu" +
+      "bLinkId\022*\n\010testexpr\030\004 \001(\0132\016.pg_query.Nod" +
+      "eR\010testexpr\022+\n\toper_name\030\005 \003(\0132\016.pg_quer" +
+      "y.NodeR\010operName\022,\n\tsubselect\030\006 \001(\0132\016.pg" +
+      "_query.NodeR\tsubselect\022\032\n\010location\030\007 \001(\005" +
+      "R\010location\"\265\005\n\007SubPlan\022 \n\003xpr\030\001 \001(\0132\016.pg" +
+      "_query.NodeR\003xpr\0229\n\rsub_link_type\030\002 \001(\0162" +
+      "\025.pg_query.SubLinkTypeR\013subLinkType\022*\n\010t" +
+      "estexpr\030\003 \001(\0132\016.pg_query.NodeR\010testexpr\022" +
+      "+\n\tparam_ids\030\004 \003(\0132\016.pg_query.NodeR\010para" +
+      "mIds\022\030\n\007plan_id\030\005 \001(\005R\007plan_id\022\034\n\tplan_n" +
+      "ame\030\006 \001(\tR\tplan_name\022$\n\016first_col_type\030\007" +
+      " \001(\rR\014firstColType\022(\n\020first_col_typmod\030\010" +
+      " \001(\005R\016firstColTypmod\022.\n\023first_col_collat" +
+      "ion\030\t \001(\rR\021firstColCollation\022$\n\016use_hash" +
+      "_table\030\n \001(\010R\014useHashTable\022(\n\020unknown_eq" +
+      "_false\030\013 \001(\010R\016unknownEqFalse\022$\n\rparallel" +
+      "_safe\030\014 \001(\010R\rparallel_safe\022+\n\tset_param\030" +
+      "\r \003(\0132\016.pg_query.NodeR\010setParam\022+\n\tpar_p" +
+      "aram\030\016 \003(\0132\016.pg_query.NodeR\010parParam\022\"\n\004" +
+      "args\030\017 \003(\0132\016.pg_query.NodeR\004args\022\"\n\014star" +
+      "tup_cost\030\020 \001(\001R\014startup_cost\022$\n\rper_call" +
+      "_cost\030\021 \001(\001R\rper_call_cost\"b\n\022Alternativ" +
+      "eSubPlan\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003x" +
+      "pr\022*\n\010subplans\030\002 \003(\0132\016.pg_query.NodeR\010su" +
+      "bplans\"\325\001\n\013FieldSelect\022 \n\003xpr\030\001 \001(\0132\016.pg" +
+      "_query.NodeR\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg_query" +
+      ".NodeR\003arg\022\032\n\010fieldnum\030\003 \001(\005R\010fieldnum\022\036" +
+      "\n\nresulttype\030\004 \001(\rR\nresulttype\022\"\n\014result" +
+      "typmod\030\005 \001(\005R\014resulttypmod\022\"\n\014resultcoll" +
+      "id\030\006 \001(\rR\014resultcollid\"\310\001\n\nFieldStore\022 \n" +
+      "\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 \n\003arg\030\002" +
+      " \001(\0132\016.pg_query.NodeR\003arg\022(\n\007newvals\030\003 \003" +
+      "(\0132\016.pg_query.NodeR\007newvals\022,\n\tfieldnums" +
+      "\030\004 \003(\0132\016.pg_query.NodeR\tfieldnums\022\036\n\nres" +
+      "ulttype\030\005 \001(\rR\nresulttype\"\223\002\n\013RelabelTyp" +
+      "e\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 \n\003a" +
+      "rg\030\002 \001(\0132\016.pg_query.NodeR\003arg\022\036\n\nresultt" +
+      "ype\030\003 \001(\rR\nresulttype\022\"\n\014resulttypmod\030\004 " +
+      "\001(\005R\014resulttypmod\022\"\n\014resultcollid\030\005 \001(\rR" +
+      "\014resultcollid\022<\n\rrelabelformat\030\006 \001(\0162\026.p" +
+      "g_query.CoercionFormR\rrelabelformat\022\032\n\010l" +
+      "ocation\030\007 \001(\005R\010location\"\355\001\n\013CoerceViaIO\022" +
+      " \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 \n\003arg" +
+      "\030\002 \001(\0132\016.pg_query.NodeR\003arg\022\036\n\nresulttyp" +
+      "e\030\003 \001(\rR\nresulttype\022\"\n\014resultcollid\030\004 \001(" +
+      "\rR\014resultcollid\022:\n\014coerceformat\030\005 \001(\0162\026." +
+      "pg_query.CoercionFormR\014coerceformat\022\032\n\010l" +
+      "ocation\030\006 \001(\005R\010location\"\301\002\n\017ArrayCoerceE" +
+      "xpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 \n" +
+      "\003arg\030\002 \001(\0132\016.pg_query.NodeR\003arg\022*\n\010eleme" +
+      "xpr\030\003 \001(\0132\016.pg_query.NodeR\010elemexpr\022\036\n\nr" +
+      "esulttype\030\004 \001(\rR\nresulttype\022\"\n\014resulttyp" +
+      "mod\030\005 \001(\005R\014resulttypmod\022\"\n\014resultcollid\030" +
+      "\006 \001(\rR\014resultcollid\022:\n\014coerceformat\030\007 \001(" +
+      "\0162\026.pg_query.CoercionFormR\014coerceformat\022" +
+      "\032\n\010location\030\010 \001(\005R\010location\"\322\001\n\022ConvertR" +
+      "owtypeExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR" +
+      "\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg_query.NodeR\003arg\022\036" +
+      "\n\nresulttype\030\003 \001(\rR\nresulttype\022<\n\rconver" +
+      "tformat\030\004 \001(\0162\026.pg_query.CoercionFormR\rc" +
+      "onvertformat\022\032\n\010location\030\005 \001(\005R\010location" +
+      "\"\210\001\n\013CollateExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query" +
+      ".NodeR\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg_query.NodeR" +
+      "\003arg\022\031\n\010coll_oid\030\003 \001(\rR\007collOid\022\032\n\010locat" +
+      "ion\030\004 \001(\005R\010location\"\370\001\n\010CaseExpr\022 \n\003xpr\030" +
+      "\001 \001(\0132\016.pg_query.NodeR\003xpr\022\032\n\010casetype\030\002" +
+      " \001(\rR\010casetype\022\036\n\ncasecollid\030\003 \001(\rR\ncase" +
+      "collid\022 \n\003arg\030\004 \001(\0132\016.pg_query.NodeR\003arg" +
+      "\022\"\n\004args\030\005 \003(\0132\016.pg_query.NodeR\004args\022,\n\t" +
+      "defresult\030\006 \001(\0132\016.pg_query.NodeR\tdefresu" +
+      "lt\022\032\n\010location\030\007 \001(\005R\010location\"\224\001\n\010CaseW" +
+      "hen\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\"\n" +
+      "\004expr\030\002 \001(\0132\016.pg_query.NodeR\004expr\022&\n\006res" +
+      "ult\030\003 \001(\0132\016.pg_query.NodeR\006result\022\032\n\010loc" +
+      "ation\030\004 \001(\005R\010location\"\202\001\n\014CaseTestExpr\022 " +
+      "\n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\027\n\007type" +
+      "_id\030\002 \001(\rR\006typeId\022\031\n\010type_mod\030\003 \001(\005R\007typ" +
+      "eMod\022\034\n\tcollation\030\004 \001(\rR\tcollation\"\277\002\n\tA" +
+      "rrayExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003x" +
+      "pr\022\"\n\014array_typeid\030\002 \001(\rR\014array_typeid\022\"" +
+      "\n\014array_collid\030\003 \001(\rR\014array_collid\022&\n\016el" +
+      "ement_typeid\030\004 \001(\rR\016element_typeid\022*\n\010el" +
+      "ements\030\005 \003(\0132\016.pg_query.NodeR\010elements\022\034" +
+      "\n\tmultidims\030\006 \001(\010R\tmultidims\022\036\n\nlist_sta" +
+      "rt\030\007 \001(\005R\nlist_start\022\032\n\010list_end\030\010 \001(\005R\010" +
+      "list_end\022\032\n\010location\030\t \001(\005R\010location\"\357\001\n" +
+      "\007RowExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003x" +
+      "pr\022\"\n\004args\030\002 \003(\0132\016.pg_query.NodeR\004args\022\036" +
+      "\n\nrow_typeid\030\003 \001(\rR\nrow_typeid\0226\n\nrow_fo" +
+      "rmat\030\004 \001(\0162\026.pg_query.CoercionFormR\nrow_" +
+      "format\022*\n\010colnames\030\005 \003(\0132\016.pg_query.Node" +
+      "R\010colnames\022\032\n\010location\030\006 \001(\005R\010location\"\271" +
+      "\002\n\016RowCompareExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_quer" +
+      "y.NodeR\003xpr\022/\n\007cmptype\030\002 \001(\0162\025.pg_query." +
+      "CompareTypeR\007cmptype\022$\n\005opnos\030\003 \003(\0132\016.pg" +
+      "_query.NodeR\005opnos\022.\n\nopfamilies\030\004 \003(\0132\016" +
+      ".pg_query.NodeR\nopfamilies\0222\n\014inputcolli" +
+      "ds\030\005 \003(\0132\016.pg_query.NodeR\014inputcollids\022$" +
+      "\n\005largs\030\006 \003(\0132\016.pg_query.NodeR\005largs\022$\n\005" +
+      "rargs\030\007 \003(\0132\016.pg_query.NodeR\005rargs\"\274\001\n\014C" +
+      "oalesceExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.Node" +
+      "R\003xpr\022\"\n\014coalescetype\030\002 \001(\rR\014coalescetyp" +
+      "e\022&\n\016coalescecollid\030\003 \001(\rR\016coalescecolli" +
+      "d\022\"\n\004args\030\004 \003(\0132\016.pg_query.NodeR\004args\022\032\n" +
+      "\010location\030\005 \001(\005R\010location\"\370\001\n\nMinMaxExpr" +
+      "\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\036\n\nmi" +
+      "nmaxtype\030\002 \001(\rR\nminmaxtype\022\"\n\014minmaxcoll" +
+      "id\030\003 \001(\rR\014minmaxcollid\022 \n\013inputcollid\030\004 " +
+      "\001(\rR\013inputcollid\022\"\n\002op\030\005 \001(\0162\022.pg_query." +
+      "MinMaxOpR\002op\022\"\n\004args\030\006 \003(\0132\016.pg_query.No" +
+      "deR\004args\022\032\n\010location\030\007 \001(\005R\010location\"\252\001\n" +
+      "\020SQLValueFunction\022 \n\003xpr\030\001 \001(\0132\016.pg_quer" +
+      "y.NodeR\003xpr\022,\n\002op\030\002 \001(\0162\034.pg_query.SQLVa" +
+      "lueFunctionOpR\002op\022\022\n\004type\030\003 \001(\rR\004type\022\026\n" +
+      "\006typmod\030\004 \001(\005R\006typmod\022\032\n\010location\030\005 \001(\005R" +
+      "\010location\"\375\002\n\007XmlExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_" +
+      "query.NodeR\003xpr\022#\n\002op\030\002 \001(\0162\023.pg_query.X" +
+      "mlExprOpR\002op\022\022\n\004name\030\003 \001(\tR\004name\022.\n\nname" +
+      "d_args\030\004 \003(\0132\016.pg_query.NodeR\nnamed_args" +
+      "\022,\n\targ_names\030\005 \003(\0132\016.pg_query.NodeR\targ" +
+      "_names\022\"\n\004args\030\006 \003(\0132\016.pg_query.NodeR\004ar" +
+      "gs\0225\n\txmloption\030\007 \001(\0162\027.pg_query.XmlOpti" +
+      "onTypeR\txmloption\022\026\n\006indent\030\010 \001(\010R\006inden" +
+      "t\022\022\n\004type\030\t \001(\rR\004type\022\026\n\006typmod\030\n \001(\005R\006t" +
+      "ypmod\022\032\n\010location\030\013 \001(\005R\010location\"\230\001\n\nJs" +
+      "onFormat\022:\n\013format_type\030\001 \001(\0162\030.pg_query" +
+      ".JsonFormatTypeR\013format_type\0222\n\010encoding" +
+      "\030\002 \001(\0162\026.pg_query.JsonEncodingR\010encoding" +
+      "\022\032\n\010location\030\003 \001(\005R\010location\"k\n\rJsonRetu" +
+      "rning\022,\n\006format\030\001 \001(\0132\024.pg_query.JsonFor" +
+      "matR\006format\022\024\n\005typid\030\002 \001(\rR\005typid\022\026\n\006typ" +
+      "mod\030\003 \001(\005R\006typmod\"\241\001\n\rJsonValueExpr\022*\n\010r" +
+      "aw_expr\030\001 \001(\0132\016.pg_query.NodeR\010raw_expr\022" +
+      "6\n\016formatted_expr\030\002 \001(\0132\016.pg_query.NodeR" +
+      "\016formatted_expr\022,\n\006format\030\003 \001(\0132\024.pg_que" +
+      "ry.JsonFormatR\006format\"\361\002\n\023JsonConstructo" +
+      "rExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022" +
+      "1\n\004type\030\002 \001(\0162\035.pg_query.JsonConstructor" +
+      "TypeR\004type\022\"\n\004args\030\003 \003(\0132\016.pg_query.Node" +
+      "R\004args\022\"\n\004func\030\004 \001(\0132\016.pg_query.NodeR\004fu" +
+      "nc\022*\n\010coercion\030\005 \001(\0132\016.pg_query.NodeR\010co" +
+      "ercion\0225\n\treturning\030\006 \001(\0132\027.pg_query.Jso" +
+      "nReturningR\treturning\022&\n\016absent_on_null\030" +
+      "\007 \001(\010R\016absent_on_null\022\026\n\006unique\030\010 \001(\010R\006u" +
+      "nique\022\032\n\010location\030\t \001(\005R\010location\"\330\001\n\017Js" +
+      "onIsPredicate\022\"\n\004expr\030\001 \001(\0132\016.pg_query.N" +
+      "odeR\004expr\022,\n\006format\030\002 \001(\0132\024.pg_query.Jso" +
+      "nFormatR\006format\0225\n\titem_type\030\003 \001(\0162\027.pg_" +
+      "query.JsonValueTypeR\titem_type\022 \n\013unique" +
+      "_keys\030\004 \001(\010R\013unique_keys\022\032\n\010location\030\005 \001" +
+      "(\005R\010location\"\230\001\n\014JsonBehavior\0220\n\005btype\030\001" +
+      " \001(\0162\032.pg_query.JsonBehaviorTypeR\005btype\022" +
+      "\"\n\004expr\030\002 \001(\0132\016.pg_query.NodeR\004expr\022\026\n\006c" +
+      "oerce\030\003 \001(\010R\006coerce\022\032\n\010location\030\004 \001(\005R\010l" +
+      "ocation\"\372\005\n\010JsonExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_q" +
+      "uery.NodeR\003xpr\022$\n\002op\030\002 \001(\0162\024.pg_query.Js" +
+      "onExprOpR\002op\022 \n\013column_name\030\003 \001(\tR\013colum" +
+      "n_name\0226\n\016formatted_expr\030\004 \001(\0132\016.pg_quer" +
+      "y.NodeR\016formatted_expr\022,\n\006format\030\005 \001(\0132\024" +
+      ".pg_query.JsonFormatR\006format\022,\n\tpath_spe" +
+      "c\030\006 \001(\0132\016.pg_query.NodeR\tpath_spec\0225\n\tre" +
+      "turning\030\007 \001(\0132\027.pg_query.JsonReturningR\t" +
+      "returning\0224\n\rpassing_names\030\010 \003(\0132\016.pg_qu" +
+      "ery.NodeR\rpassing_names\0226\n\016passing_value" +
+      "s\030\t \003(\0132\016.pg_query.NodeR\016passing_values\022" +
+      "2\n\010on_empty\030\n \001(\0132\026.pg_query.JsonBehavio" +
+      "rR\010on_empty\0222\n\010on_error\030\013 \001(\0132\026.pg_query" +
+      ".JsonBehaviorR\010on_error\022(\n\017use_io_coerci" +
+      "on\030\014 \001(\010R\017use_io_coercion\022,\n\021use_json_co" +
+      "ercion\030\r \001(\010R\021use_json_coercion\022/\n\007wrapp" +
+      "er\030\016 \001(\0162\025.pg_query.JsonWrapperR\007wrapper" +
+      "\022 \n\013omit_quotes\030\017 \001(\010R\013omit_quotes\022\034\n\tco" +
+      "llation\030\020 \001(\rR\tcollation\022\032\n\010location\030\021 \001" +
+      "(\005R\010location\"#\n\rJsonTablePath\022\022\n\004name\030\001 " +
+      "\001(\tR\004name\"\342\001\n\021JsonTablePathScan\022\"\n\004plan\030" +
+      "\001 \001(\0132\016.pg_query.NodeR\004plan\022+\n\004path\030\002 \001(",
+      "\0132\027.pg_query.JsonTablePathR\004path\022$\n\016erro" +
+      "r_on_error\030\003 \001(\010R\014errorOnError\022$\n\005child\030" +
+      "\004 \001(\0132\016.pg_query.NodeR\005child\022\027\n\007col_min\030" +
+      "\005 \001(\005R\006colMin\022\027\n\007col_max\030\006 \001(\005R\006colMax\"\206" +
+      "\001\n\024JsonTableSiblingJoin\022\"\n\004plan\030\001 \001(\0132\016." +
+      "pg_query.NodeR\004plan\022$\n\005lplan\030\002 \001(\0132\016.pg_" +
+      "query.NodeR\005lplan\022$\n\005rplan\030\003 \001(\0132\016.pg_qu" +
+      "ery.NodeR\005rplan\"\302\001\n\010NullTest\022 \n\003xpr\030\001 \001(" +
+      "\0132\016.pg_query.NodeR\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg" +
+      "_query.NodeR\003arg\022:\n\014nulltesttype\030\003 \001(\0162\026" +
+      ".pg_query.NullTestTypeR\014nulltesttype\022\032\n\010" +
+      "argisrow\030\004 \001(\010R\010argisrow\022\032\n\010location\030\005 \001" +
+      "(\005R\010location\"\251\001\n\013BooleanTest\022 \n\003xpr\030\001 \001(" +
+      "\0132\016.pg_query.NodeR\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg" +
+      "_query.NodeR\003arg\022:\n\014booltesttype\030\003 \001(\0162\026" +
+      ".pg_query.BoolTestTypeR\014booltesttype\022\032\n\010" +
+      "location\030\004 \001(\005R\010location\"\274\002\n\013MergeAction" +
+      "\0227\n\nmatch_kind\030\001 \001(\0162\030.pg_query.MergeMat" +
+      "chKindR\tmatchKind\0224\n\014command_type\030\002 \001(\0162" +
+      "\021.pg_query.CmdTypeR\013commandType\0224\n\010overr" +
+      "ide\030\003 \001(\0162\030.pg_query.OverridingKindR\010ove" +
+      "rride\022\"\n\004qual\030\004 \001(\0132\016.pg_query.NodeR\004qua" +
+      "l\022/\n\013target_list\030\005 \003(\0132\016.pg_query.NodeR\n" +
+      "targetList\0223\n\rupdate_colnos\030\006 \003(\0132\016.pg_q" +
+      "uery.NodeR\014updateColnos\"\230\002\n\016CoerceToDoma" +
+      "in\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 \n\003" +
       "arg\030\002 \001(\0132\016.pg_query.NodeR\003arg\022\036\n\nresult" +
       "type\030\003 \001(\rR\nresulttype\022\"\n\014resulttypmod\030\004" +
       " \001(\005R\014resulttypmod\022\"\n\014resultcollid\030\005 \001(\r" +
-      "R\014resultcollid\022<\n\rrelabelformat\030\006 \001(\0162\026." +
-      "pg_query.CoercionFormR\rrelabelformat\022\032\n\010" +
-      "location\030\007 \001(\005R\010location\"\355\001\n\013CoerceViaIO" +
-      "\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 \n\003ar" +
-      "g\030\002 \001(\0132\016.pg_query.NodeR\003arg\022\036\n\nresultty" +
-      "pe\030\003 \001(\rR\nresulttype\022\"\n\014resultcollid\030\004 \001" +
-      "(\rR\014resultcollid\022:\n\014coerceformat\030\005 \001(\0162\026" +
-      ".pg_query.CoercionFormR\014coerceformat\022\032\n\010" +
-      "location\030\006 \001(\005R\010location\"\301\002\n\017ArrayCoerce" +
-      "Expr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022 " +
-      "\n\003arg\030\002 \001(\0132\016.pg_query.NodeR\003arg\022*\n\010elem" +
-      "expr\030\003 \001(\0132\016.pg_query.NodeR\010elemexpr\022\036\n\n" +
-      "resulttype\030\004 \001(\rR\nresulttype\022\"\n\014resultty" +
-      "pmod\030\005 \001(\005R\014resulttypmod\022\"\n\014resultcollid" +
-      "\030\006 \001(\rR\014resultcollid\022:\n\014coerceformat\030\007 \001" +
-      "(\0162\026.pg_query.CoercionFormR\014coerceformat" +
-      "\022\032\n\010location\030\010 \001(\005R\010location\"\322\001\n\022Convert" +
-      "RowtypeExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.Node" +
-      "R\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg_query.NodeR\003arg\022" +
-      "\036\n\nresulttype\030\003 \001(\rR\nresulttype\022<\n\rconve" +
-      "rtformat\030\004 \001(\0162\026.pg_query.CoercionFormR\r" +
-      "convertformat\022\032\n\010location\030\005 \001(\005R\010locatio" +
-      "n\"\210\001\n\013CollateExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_quer" +
-      "y.NodeR\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg_query.Node" +
-      "R\003arg\022\031\n\010coll_oid\030\003 \001(\rR\007collOid\022\032\n\010loca" +
-      "tion\030\004 \001(\005R\010location\"\370\001\n\010CaseExpr\022 \n\003xpr" +
-      "\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\032\n\010casetype\030" +
-      "\002 \001(\rR\010casetype\022\036\n\ncasecollid\030\003 \001(\rR\ncas" +
-      "ecollid\022 \n\003arg\030\004 \001(\0132\016.pg_query.NodeR\003ar" +
-      "g\022\"\n\004args\030\005 \003(\0132\016.pg_query.NodeR\004args\022,\n" +
-      "\tdefresult\030\006 \001(\0132\016.pg_query.NodeR\tdefres" +
-      "ult\022\032\n\010location\030\007 \001(\005R\010location\"\224\001\n\010Case" +
-      "When\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\"" +
-      "\n\004expr\030\002 \001(\0132\016.pg_query.NodeR\004expr\022&\n\006re" +
-      "sult\030\003 \001(\0132\016.pg_query.NodeR\006result\022\032\n\010lo" +
-      "cation\030\004 \001(\005R\010location\"\202\001\n\014CaseTestExpr\022" +
-      " \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\027\n\007typ" +
-      "e_id\030\002 \001(\rR\006typeId\022\031\n\010type_mod\030\003 \001(\005R\007ty" +
-      "peMod\022\034\n\tcollation\030\004 \001(\rR\tcollation\"\203\002\n\t" +
-      "ArrayExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003" +
-      "xpr\022\"\n\014array_typeid\030\002 \001(\rR\014array_typeid\022" +
-      "\"\n\014array_collid\030\003 \001(\rR\014array_collid\022&\n\016e" +
-      "lement_typeid\030\004 \001(\rR\016element_typeid\022*\n\010e" +
-      "lements\030\005 \003(\0132\016.pg_query.NodeR\010elements\022" +
-      "\034\n\tmultidims\030\006 \001(\010R\tmultidims\022\032\n\010locatio" +
-      "n\030\007 \001(\005R\010location\"\357\001\n\007RowExpr\022 \n\003xpr\030\001 \001" +
-      "(\0132\016.pg_query.NodeR\003xpr\022\"\n\004args\030\002 \003(\0132\016." +
-      "pg_query.NodeR\004args\022\036\n\nrow_typeid\030\003 \001(\rR" +
-      "\nrow_typeid\0226\n\nrow_format\030\004 \001(\0162\026.pg_que" +
-      "ry.CoercionFormR\nrow_format\022*\n\010colnames\030" +
-      "\005 \003(\0132\016.pg_query.NodeR\010colnames\022\032\n\010locat" +
-      "ion\030\006 \001(\005R\010location\"\272\002\n\016RowCompareExpr\022 " +
-      "\n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\0220\n\006rcty" +
-      "pe\030\002 \001(\0162\030.pg_query.RowCompareTypeR\006rcty" +
-      "pe\022$\n\005opnos\030\003 \003(\0132\016.pg_query.NodeR\005opnos" +
-      "\022.\n\nopfamilies\030\004 \003(\0132\016.pg_query.NodeR\nop" +
-      "families\0222\n\014inputcollids\030\005 \003(\0132\016.pg_quer" +
-      "y.NodeR\014inputcollids\022$\n\005largs\030\006 \003(\0132\016.pg" +
-      "_query.NodeR\005largs\022$\n\005rargs\030\007 \003(\0132\016.pg_q" +
-      "uery.NodeR\005rargs\"\274\001\n\014CoalesceExpr\022 \n\003xpr" +
-      "\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\"\n\014coalescet" +
-      "ype\030\002 \001(\rR\014coalescetype\022&\n\016coalescecolli" +
-      "d\030\003 \001(\rR\016coalescecollid\022\"\n\004args\030\004 \003(\0132\016." +
-      "pg_query.NodeR\004args\022\032\n\010location\030\005 \001(\005R\010l" +
-      "ocation\"\370\001\n\nMinMaxExpr\022 \n\003xpr\030\001 \001(\0132\016.pg" +
-      "_query.NodeR\003xpr\022\036\n\nminmaxtype\030\002 \001(\rR\nmi" +
-      "nmaxtype\022\"\n\014minmaxcollid\030\003 \001(\rR\014minmaxco" +
-      "llid\022 \n\013inputcollid\030\004 \001(\rR\013inputcollid\022\"" +
-      "\n\002op\030\005 \001(\0162\022.pg_query.MinMaxOpR\002op\022\"\n\004ar" +
-      "gs\030\006 \003(\0132\016.pg_query.NodeR\004args\022\032\n\010locati" +
-      "on\030\007 \001(\005R\010location\"\252\001\n\020SQLValueFunction\022" +
-      " \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022,\n\002op\030" +
-      "\002 \001(\0162\034.pg_query.SQLValueFunctionOpR\002op\022" +
-      "\022\n\004type\030\003 \001(\rR\004type\022\026\n\006typmod\030\004 \001(\005R\006typ" +
-      "mod\022\032\n\010location\030\005 \001(\005R\010location\"\375\002\n\007XmlE" +
-      "xpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022#\n" +
-      "\002op\030\002 \001(\0162\023.pg_query.XmlExprOpR\002op\022\022\n\004na" +
-      "me\030\003 \001(\tR\004name\022.\n\nnamed_args\030\004 \003(\0132\016.pg_" +
-      "query.NodeR\nnamed_args\022,\n\targ_names\030\005 \003(" +
-      "\0132\016.pg_query.NodeR\targ_names\022\"\n\004args\030\006 \003" +
-      "(\0132\016.pg_query.NodeR\004args\0225\n\txmloption\030\007 " +
-      "\001(\0162\027.pg_query.XmlOptionTypeR\txmloption\022" +
-      "\026\n\006indent\030\010 \001(\010R\006indent\022\022\n\004type\030\t \001(\rR\004t" +
-      "ype\022\026\n\006typmod\030\n \001(\005R\006typmod\022\032\n\010location\030" +
-      "\013 \001(\005R\010location\"\230\001\n\nJsonFormat\022:\n\013format" +
-      "_type\030\001 \001(\0162\030.pg_query.JsonFormatTypeR\013f" +
-      "ormat_type\0222\n\010encoding\030\002 \001(\0162\026.pg_query." +
-      "JsonEncodingR\010encoding\022\032\n\010location\030\003 \001(\005" +
-      "R\010location\"k\n\rJsonReturning\022,\n\006format\030\001 " +
-      "\001(\0132\024.pg_query.JsonFormatR\006format\022\024\n\005typ" +
-      "id\030\002 \001(\rR\005typid\022\026\n\006typmod\030\003 \001(\005R\006typmod\"" +
-      "\241\001\n\rJsonValueExpr\022*\n\010raw_expr\030\001 \001(\0132\016.pg" +
-      "_query.NodeR\010raw_expr\0226\n\016formatted_expr\030" +
-      "\002 \001(\0132\016.pg_query.NodeR\016formatted_expr\022,\n" +
-      "\006format\030\003 \001(\0132\024.pg_query.JsonFormatR\006for" +
-      "mat\"\361\002\n\023JsonConstructorExpr\022 \n\003xpr\030\001 \001(\013" +
-      "2\016.pg_query.NodeR\003xpr\0221\n\004type\030\002 \001(\0162\035.pg" +
-      "_query.JsonConstructorTypeR\004type\022\"\n\004args" +
-      "\030\003 \003(\0132\016.pg_query.NodeR\004args\022\"\n\004func\030\004 \001" +
-      "(\0132\016.pg_query.NodeR\004func\022*\n\010coercion\030\005 \001" +
-      "(\0132\016.pg_query.NodeR\010coercion\0225\n\treturnin" +
-      "g\030\006 \001(\0132\027.pg_query.JsonReturningR\treturn" +
-      "ing\022&\n\016absent_on_null\030\007 \001(\010R\016absent_on_n" +
-      "ull\022\026\n\006unique\030\010 \001(\010R\006unique\022\032\n\010location\030" +
-      "\t \001(\005R\010location\"\330\001\n\017JsonIsPredicate\022\"\n\004e" +
-      "xpr\030\001 \001(\0132\016.pg_query.NodeR\004expr\022,\n\006forma" +
-      "t\030\002 \001(\0132\024.pg_query.JsonFormatR\006format\0225\n" +
-      "\titem_type\030\003 \001(\0162\027.pg_query.JsonValueTyp" +
-      "eR\titem_type\022 \n\013unique_keys\030\004 \001(\010R\013uniqu" +
-      "e_keys\022\032\n\010location\030\005 \001(\005R\010location\"\230\001\n\014J" +
-      "sonBehavior\0220\n\005btype\030\001 \001(\0162\032.pg_query.Js" +
-      "onBehaviorTypeR\005btype\022\"\n\004expr\030\002 \001(\0132\016.pg" +
-      "_query.NodeR\004expr\022\026\n\006coerce\030\003 \001(\010R\006coerc" +
-      "e\022\032\n\010location\030\004 \001(\005R\010location\"\372\005\n\010JsonEx" +
-      "pr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022$\n\002" +
-      "op\030\002 \001(\0162\024.pg_query.JsonExprOpR\002op\022 \n\013co" +
-      "lumn_name\030\003 \001(\tR\013column_name\0226\n\016formatte" +
-      "d_expr\030\004 \001(\0132\016.pg_query.NodeR\016formatted_" +
-      "expr\022,\n\006format\030\005 \001(\0132\024.pg_query.JsonForm" +
-      "atR\006format\022,\n\tpath_spec\030\006 \001(\0132\016.pg_query" +
-      ".NodeR\tpath_spec\0225\n\treturning\030\007 \001(\0132\027.pg" +
-      "_query.JsonReturningR\treturning\0224\n\rpassi" +
-      "ng_names\030\010 \003(\0132\016.pg_query.NodeR\rpassing_" +
-      "names\0226\n\016passing_values\030\t \003(\0132\016.pg_query" +
-      ".NodeR\016passing_values\0222\n\010on_empty\030\n \001(\0132" +
+      "R\014resultcollid\022>\n\016coercionformat\030\006 \001(\0162\026" +
+      ".pg_query.CoercionFormR\016coercionformat\022\032" +
+      "\n\010location\030\007 \001(\005R\010location\"\245\001\n\023CoerceToD" +
+      "omainValue\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR" +
+      "\003xpr\022\027\n\007type_id\030\002 \001(\rR\006typeId\022\031\n\010type_mo" +
+      "d\030\003 \001(\005R\007typeMod\022\034\n\tcollation\030\004 \001(\rR\tcol" +
+      "lation\022\032\n\010location\030\005 \001(\005R\010location\"\236\001\n\014S" +
+      "etToDefault\022 \n\003xpr\030\001 \001(\0132\016.pg_query.Node" +
+      "R\003xpr\022\027\n\007type_id\030\002 \001(\rR\006typeId\022\031\n\010type_m" +
+      "od\030\003 \001(\005R\007typeMod\022\034\n\tcollation\030\004 \001(\rR\tco" +
+      "llation\022\032\n\010location\030\005 \001(\005R\010location\"\217\001\n\r" +
+      "CurrentOfExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query.No" +
+      "deR\003xpr\022\026\n\006cvarno\030\002 \001(\rR\006cvarno\022 \n\013curso" +
+      "r_name\030\003 \001(\tR\013cursor_name\022\"\n\014cursor_para" +
+      "m\030\004 \001(\005R\014cursor_param\"`\n\rNextValueExpr\022 " +
+      "\n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\024\n\005seqi" +
+      "d\030\002 \001(\rR\005seqid\022\027\n\007type_id\030\003 \001(\rR\006typeId\"" +
+      "\233\001\n\rInferenceElem\022 \n\003xpr\030\001 \001(\0132\016.pg_quer" +
+      "y.NodeR\003xpr\022\"\n\004expr\030\002 \001(\0132\016.pg_query.Nod" +
+      "eR\004expr\022 \n\013infercollid\030\003 \001(\rR\013infercolli" +
+      "d\022\"\n\014inferopclass\030\004 \001(\rR\014inferopclass\"\225\001" +
+      "\n\rReturningExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_query." +
+      "NodeR\003xpr\022 \n\013retlevelsup\030\002 \001(\005R\013retlevel" +
+      "sup\022\026\n\006retold\030\003 \001(\010R\006retold\022(\n\007retexpr\030\004" +
+      " \001(\0132\016.pg_query.NodeR\007retexpr\"\207\002\n\013Target" +
+      "Entry\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022" +
+      "\"\n\004expr\030\002 \001(\0132\016.pg_query.NodeR\004expr\022\024\n\005r" +
+      "esno\030\003 \001(\005R\005resno\022\030\n\007resname\030\004 \001(\tR\007resn" +
+      "ame\022(\n\017ressortgroupref\030\005 \001(\rR\017ressortgro" +
+      "upref\022\036\n\nresorigtbl\030\006 \001(\rR\nresorigtbl\022\036\n" +
+      "\nresorigcol\030\007 \001(\005R\nresorigcol\022\030\n\007resjunk" +
+      "\030\010 \001(\010R\007resjunk\"\'\n\013RangeTblRef\022\030\n\007rtinde" +
+      "x\030\001 \001(\005R\007rtindex\"\370\002\n\010JoinExpr\022.\n\010jointyp" +
+      "e\030\001 \001(\0162\022.pg_query.JoinTypeR\010jointype\022\035\n" +
+      "\nis_natural\030\002 \001(\010R\tisNatural\022\"\n\004larg\030\003 \001" +
+      "(\0132\016.pg_query.NodeR\004larg\022\"\n\004rarg\030\004 \001(\0132\016" +
+      ".pg_query.NodeR\004rarg\0221\n\014using_clause\030\005 \003" +
+      "(\0132\016.pg_query.NodeR\013usingClause\022;\n\020join_" +
+      "using_alias\030\006 \001(\0132\017.pg_query.AliasR\020join" +
+      "_using_alias\022$\n\005quals\030\007 \001(\0132\016.pg_query.N" +
+      "odeR\005quals\022%\n\005alias\030\010 \001(\0132\017.pg_query.Ali" +
+      "asR\005alias\022\030\n\007rtindex\030\t \001(\005R\007rtindex\"\\\n\010F" +
+      "romExpr\022*\n\010fromlist\030\001 \003(\0132\016.pg_query.Nod" +
+      "eR\010fromlist\022$\n\005quals\030\002 \001(\0132\016.pg_query.No" +
+      "deR\005quals\"\236\003\n\016OnConflictExpr\0222\n\006action\030\001" +
+      " \001(\0162\032.pg_query.OnConflictActionR\006action" +
+      "\0223\n\rarbiter_elems\030\002 \003(\0132\016.pg_query.NodeR" +
+      "\014arbiterElems\0223\n\rarbiter_where\030\003 \001(\0132\016.p" +
+      "g_query.NodeR\014arbiterWhere\022\036\n\nconstraint" +
+      "\030\004 \001(\rR\nconstraint\0226\n\017on_conflict_set\030\005 " +
+      "\003(\0132\016.pg_query.NodeR\ronConflictSet\022:\n\021on" +
+      "_conflict_where\030\006 \001(\0132\016.pg_query.NodeR\017o" +
+      "nConflictWhere\022$\n\016excl_rel_index\030\007 \001(\005R\014" +
+      "exclRelIndex\0224\n\016excl_rel_tlist\030\010 \003(\0132\016.p" +
+      "g_query.NodeR\014exclRelTlist\"\312\020\n\005Query\0224\n\014" +
+      "command_type\030\001 \001(\0162\021.pg_query.CmdTypeR\013c" +
+      "ommandType\0228\n\014query_source\030\002 \001(\0162\025.pg_qu" +
+      "ery.QuerySourceR\013querySource\022\036\n\013can_set_" +
+      "tag\030\003 \001(\010R\tcanSetTag\0221\n\014utility_stmt\030\004 \001" +
+      "(\0132\016.pg_query.NodeR\013utilityStmt\022\'\n\017resul" +
+      "t_relation\030\005 \001(\005R\016resultRelation\022\031\n\010has_" +
+      "aggs\030\006 \001(\010R\007hasAggs\022(\n\020has_window_funcs\030" +
+      "\007 \001(\010R\016hasWindowFuncs\022&\n\017has_target_srfs" +
+      "\030\010 \001(\010R\rhasTargetSRFs\022\"\n\rhas_sub_links\030\t" +
+      " \001(\010R\013hasSubLinks\022&\n\017has_distinct_on\030\n \001" +
+      "(\010R\rhasDistinctOn\022#\n\rhas_recursive\030\013 \001(\010" +
+      "R\014hasRecursive\022*\n\021has_modifying_cte\030\014 \001(" +
+      "\010R\017hasModifyingCTE\022$\n\016has_for_update\030\r \001" +
+      "(\010R\014hasForUpdate\022(\n\020has_row_security\030\016 \001" +
+      "(\010R\016hasRowSecurity\022\"\n\rhas_group_rte\030\017 \001(" +
+      "\010R\013hasGroupRTE\022\033\n\tis_return\030\020 \001(\010R\010isRet" +
+      "urn\022)\n\010cte_list\030\021 \003(\0132\016.pg_query.NodeR\007c" +
+      "teList\022&\n\006rtable\030\022 \003(\0132\016.pg_query.NodeR\006" +
+      "rtable\0222\n\014rteperminfos\030\023 \003(\0132\016.pg_query." +
+      "NodeR\014rteperminfos\022.\n\010jointree\030\024 \001(\0132\022.p" +
+      "g_query.FromExprR\010jointree\022:\n\021merge_acti" +
+      "on_list\030\025 \003(\0132\016.pg_query.NodeR\017mergeActi" +
+      "onList\0222\n\025merge_target_relation\030\026 \001(\005R\023m" +
+      "ergeTargetRelation\022@\n\024merge_join_conditi" +
+      "on\030\027 \001(\0132\016.pg_query.NodeR\022mergeJoinCondi" +
+      "tion\022/\n\013target_list\030\030 \003(\0132\016.pg_query.Nod" +
+      "eR\ntargetList\0224\n\010override\030\031 \001(\0162\030.pg_que" +
+      "ry.OverridingKindR\010override\0229\n\013on_confli" +
+      "ct\030\032 \001(\0132\030.pg_query.OnConflictExprR\nonCo" +
+      "nflict\022.\n\023returning_old_alias\030\033 \001(\tR\021ret" +
+      "urningOldAlias\022.\n\023returning_new_alias\030\034 " +
+      "\001(\tR\021returningNewAlias\0225\n\016returning_list" +
+      "\030\035 \003(\0132\016.pg_query.NodeR\rreturningList\0221\n" +
+      "\014group_clause\030\036 \003(\0132\016.pg_query.NodeR\013gro" +
+      "upClause\022%\n\016group_distinct\030\037 \001(\010R\rgroupD" +
+      "istinct\0223\n\rgrouping_sets\030  \003(\0132\016.pg_quer" +
+      "y.NodeR\014groupingSets\022/\n\013having_qual\030! \001(" +
+      "\0132\016.pg_query.NodeR\nhavingQual\0223\n\rwindow_" +
+      "clause\030\" \003(\0132\016.pg_query.NodeR\014windowClau" +
+      "se\0227\n\017distinct_clause\030# \003(\0132\016.pg_query.N" +
+      "odeR\016distinctClause\022/\n\013sort_clause\030$ \003(\013" +
+      "2\016.pg_query.NodeR\nsortClause\0221\n\014limit_of" +
+      "fset\030% \001(\0132\016.pg_query.NodeR\013limitOffset\022" +
+      "/\n\013limit_count\030& \001(\0132\016.pg_query.NodeR\nli" +
+      "mitCount\0228\n\014limit_option\030\' \001(\0162\025.pg_quer" +
+      "y.LimitOptionR\013limitOption\022+\n\trow_marks\030" +
+      "( \003(\0132\016.pg_query.NodeR\010rowMarks\0225\n\016set_o" +
+      "perations\030) \001(\0132\016.pg_query.NodeR\rsetOper" +
+      "ations\0227\n\017constraint_deps\030* \003(\0132\016.pg_que" +
+      "ry.NodeR\016constraintDeps\022<\n\022with_check_op" +
+      "tions\030+ \003(\0132\016.pg_query.NodeR\020withCheckOp" +
+      "tions\022$\n\rstmt_location\030, \001(\005R\rstmt_locat" +
+      "ion\022\032\n\010stmt_len\030- \001(\005R\010stmt_len\"\220\002\n\010Type" +
+      "Name\022$\n\005names\030\001 \003(\0132\016.pg_query.NodeR\005nam" +
+      "es\022\031\n\010type_oid\030\002 \001(\rR\007typeOid\022\024\n\005setof\030\003" +
+      " \001(\010R\005setof\022\032\n\010pct_type\030\004 \001(\010R\010pct_type\022" +
+      "(\n\007typmods\030\005 \003(\0132\016.pg_query.NodeR\007typmod" +
+      "s\022\030\n\007typemod\030\006 \001(\005R\007typemod\0221\n\014array_bou" +
+      "nds\030\007 \003(\0132\016.pg_query.NodeR\013arrayBounds\022\032" +
+      "\n\010location\030\010 \001(\005R\010location\"O\n\tColumnRef\022" +
+      "&\n\006fields\030\001 \003(\0132\016.pg_query.NodeR\006fields\022" +
+      "\032\n\010location\030\002 \001(\005R\010location\">\n\010ParamRef\022" +
+      "\026\n\006number\030\001 \001(\005R\006number\022\032\n\010location\030\002 \001(" +
+      "\005R\010location\"\223\002\n\006A_Expr\022)\n\004kind\030\001 \001(\0162\025.p" +
+      "g_query.A_Expr_KindR\004kind\022\"\n\004name\030\002 \003(\0132" +
+      "\016.pg_query.NodeR\004name\022$\n\005lexpr\030\003 \001(\0132\016.p" +
+      "g_query.NodeR\005lexpr\022$\n\005rexpr\030\004 \001(\0132\016.pg_" +
+      "query.NodeR\005rexpr\022*\n\020rexpr_list_start\030\005 " +
+      "\001(\005R\020rexpr_list_start\022&\n\016rexpr_list_end\030" +
+      "\006 \001(\005R\016rexpr_list_end\022\032\n\010location\030\007 \001(\005R" +
+      "\010location\"y\n\010TypeCast\022 \n\003arg\030\001 \001(\0132\016.pg_" +
+      "query.NodeR\003arg\022/\n\ttype_name\030\002 \001(\0132\022.pg_" +
+      "query.TypeNameR\010typeName\022\032\n\010location\030\003 \001" +
+      "(\005R\010location\"y\n\rCollateClause\022 \n\003arg\030\001 \001" +
+      "(\0132\016.pg_query.NodeR\003arg\022*\n\010collname\030\002 \003(" +
+      "\0132\016.pg_query.NodeR\010collname\022\032\n\010location\030" +
+      "\003 \001(\005R\010location\"v\n\010RoleSpec\0222\n\010roletype\030" +
+      "\001 \001(\0162\026.pg_query.RoleSpecTypeR\010roletype\022" +
+      "\032\n\010rolename\030\002 \001(\tR\010rolename\022\032\n\010location\030" +
+      "\003 \001(\005R\010location\"\307\003\n\010FuncCall\022*\n\010funcname" +
+      "\030\001 \003(\0132\016.pg_query.NodeR\010funcname\022\"\n\004args" +
+      "\030\002 \003(\0132\016.pg_query.NodeR\004args\022,\n\tagg_orde" +
+      "r\030\003 \003(\0132\016.pg_query.NodeR\tagg_order\022.\n\nag" +
+      "g_filter\030\004 \001(\0132\016.pg_query.NodeR\nagg_filt" +
+      "er\022\'\n\004over\030\005 \001(\0132\023.pg_query.WindowDefR\004o" +
+      "ver\022*\n\020agg_within_group\030\006 \001(\010R\020agg_withi" +
+      "n_group\022\032\n\010agg_star\030\007 \001(\010R\010agg_star\022\"\n\014a" +
+      "gg_distinct\030\010 \001(\010R\014agg_distinct\022$\n\rfunc_" +
+      "variadic\030\t \001(\010R\rfunc_variadic\0226\n\nfuncfor" +
+      "mat\030\n \001(\0162\026.pg_query.CoercionFormR\nfuncf" +
+      "ormat\022\032\n\010location\030\013 \001(\005R\010location\"\010\n\006A_S" +
+      "tar\"o\n\tA_Indices\022\032\n\010is_slice\030\001 \001(\010R\010is_s" +
+      "lice\022\"\n\004lidx\030\002 \001(\0132\016.pg_query.NodeR\004lidx" +
+      "\022\"\n\004uidx\030\003 \001(\0132\016.pg_query.NodeR\004uidx\"c\n\r" +
+      "A_Indirection\022 \n\003arg\030\001 \001(\0132\016.pg_query.No" +
+      "deR\003arg\0220\n\013indirection\030\002 \003(\0132\016.pg_query." +
+      "NodeR\013indirection\"\221\001\n\013A_ArrayExpr\022*\n\010ele" +
+      "ments\030\001 \003(\0132\016.pg_query.NodeR\010elements\022\036\n" +
+      "\nlist_start\030\002 \001(\005R\nlist_start\022\032\n\010list_en" +
+      "d\030\003 \001(\005R\010list_end\022\032\n\010location\030\004 \001(\005R\010loc" +
+      "ation\"\217\001\n\tResTarget\022\022\n\004name\030\001 \001(\tR\004name\022" +
+      "0\n\013indirection\030\002 \003(\0132\016.pg_query.NodeR\013in" +
+      "direction\022 \n\003val\030\003 \001(\0132\016.pg_query.NodeR\003" +
+      "val\022\032\n\010location\030\004 \001(\005R\010location\"j\n\016Multi" +
+      "AssignRef\022&\n\006source\030\001 \001(\0132\016.pg_query.Nod" +
+      "eR\006source\022\024\n\005colno\030\002 \001(\005R\005colno\022\032\n\010ncolu" +
+      "mns\030\003 \001(\005R\010ncolumns\"\337\001\n\006SortBy\022\"\n\004node\030\001" +
+      " \001(\0132\016.pg_query.NodeR\004node\0223\n\nsortby_dir" +
+      "\030\002 \001(\0162\023.pg_query.SortByDirR\nsortby_dir\022" +
+      "9\n\014sortby_nulls\030\003 \001(\0162\025.pg_query.SortByN" +
+      "ullsR\014sortby_nulls\022%\n\006use_op\030\004 \003(\0132\016.pg_" +
+      "query.NodeR\005useOp\022\032\n\010location\030\005 \001(\005R\010loc" +
+      "ation\"\312\002\n\tWindowDef\022\022\n\004name\030\001 \001(\tR\004name\022" +
+      "\030\n\007refname\030\002 \001(\tR\007refname\0229\n\020partition_c" +
+      "lause\030\003 \003(\0132\016.pg_query.NodeR\017partitionCl" +
+      "ause\0221\n\014order_clause\030\004 \003(\0132\016.pg_query.No" +
+      "deR\013orderClause\022#\n\rframe_options\030\005 \001(\005R\014" +
+      "frameOptions\0221\n\014start_offset\030\006 \001(\0132\016.pg_" +
+      "query.NodeR\013startOffset\022-\n\nend_offset\030\007 " +
+      "\001(\0132\016.pg_query.NodeR\tendOffset\022\032\n\010locati" +
+      "on\030\010 \001(\005R\010location\"}\n\016RangeSubselect\022\030\n\007" +
+      "lateral\030\001 \001(\010R\007lateral\022*\n\010subquery\030\002 \001(\013" +
+      "2\016.pg_query.NodeR\010subquery\022%\n\005alias\030\003 \001(" +
+      "\0132\017.pg_query.AliasR\005alias\"\360\001\n\rRangeFunct" +
+      "ion\022\030\n\007lateral\030\001 \001(\010R\007lateral\022\036\n\nordinal" +
+      "ity\030\002 \001(\010R\nordinality\022 \n\013is_rowsfrom\030\003 \001" +
+      "(\010R\013is_rowsfrom\022,\n\tfunctions\030\004 \003(\0132\016.pg_" +
+      "query.NodeR\tfunctions\022%\n\005alias\030\005 \001(\0132\017.p" +
+      "g_query.AliasR\005alias\022.\n\ncoldeflist\030\006 \003(\013" +
+      "2\016.pg_query.NodeR\ncoldeflist\"\233\002\n\016RangeTa" +
+      "bleFunc\022\030\n\007lateral\030\001 \001(\010R\007lateral\022(\n\007doc" +
+      "expr\030\002 \001(\0132\016.pg_query.NodeR\007docexpr\022(\n\007r" +
+      "owexpr\030\003 \001(\0132\016.pg_query.NodeR\007rowexpr\022.\n" +
+      "\nnamespaces\030\004 \003(\0132\016.pg_query.NodeR\nnames" +
+      "paces\022(\n\007columns\030\005 \003(\0132\016.pg_query.NodeR\007" +
+      "columns\022%\n\005alias\030\006 \001(\0132\017.pg_query.AliasR" +
+      "\005alias\022\032\n\010location\030\007 \001(\005R\010location\"\236\002\n\021R" +
+      "angeTableFuncCol\022\030\n\007colname\030\001 \001(\tR\007colna" +
+      "me\022/\n\ttype_name\030\002 \001(\0132\022.pg_query.TypeNam" +
+      "eR\010typeName\022&\n\016for_ordinality\030\003 \001(\010R\016for" +
+      "_ordinality\022 \n\013is_not_null\030\004 \001(\010R\013is_not" +
+      "_null\022(\n\007colexpr\030\005 \001(\0132\016.pg_query.NodeR\007" +
+      "colexpr\022.\n\ncoldefexpr\030\006 \001(\0132\016.pg_query.N" +
+      "odeR\ncoldefexpr\022\032\n\010location\030\007 \001(\005R\010locat" +
+      "ion\"\326\001\n\020RangeTableSample\022*\n\010relation\030\001 \001" +
+      "(\0132\016.pg_query.NodeR\010relation\022&\n\006method\030\002" +
+      " \003(\0132\016.pg_query.NodeR\006method\022\"\n\004args\030\003 \003" +
+      "(\0132\016.pg_query.NodeR\004args\022.\n\nrepeatable\030\004" +
+      " \001(\0132\016.pg_query.NodeR\nrepeatable\022\032\n\010loca" +
+      "tion\030\005 \001(\005R\010location\"\354\005\n\tColumnDef\022\030\n\007co" +
+      "lname\030\001 \001(\tR\007colname\022/\n\ttype_name\030\002 \001(\0132" +
+      "\022.pg_query.TypeNameR\010typeName\022 \n\013compres" +
+      "sion\030\003 \001(\tR\013compression\022\032\n\010inhcount\030\004 \001(" +
+      "\005R\010inhcount\022\032\n\010is_local\030\005 \001(\010R\010is_local\022" +
+      " \n\013is_not_null\030\006 \001(\010R\013is_not_null\022\"\n\014is_" +
+      "from_type\030\007 \001(\010R\014is_from_type\022\030\n\007storage" +
+      "\030\010 \001(\tR\007storage\022\"\n\014storage_name\030\t \001(\tR\014s" +
+      "torage_name\0220\n\013raw_default\030\n \001(\0132\016.pg_qu" +
+      "ery.NodeR\013raw_default\0226\n\016cooked_default\030" +
+      "\013 \001(\0132\016.pg_query.NodeR\016cooked_default\022\032\n" +
+      "\010identity\030\014 \001(\tR\010identity\022?\n\021identity_se" +
+      "quence\030\r \001(\0132\022.pg_query.RangeVarR\020identi" +
+      "tySequence\022\034\n\tgenerated\030\016 \001(\tR\tgenerated" +
+      "\0228\n\013coll_clause\030\017 \001(\0132\027.pg_query.Collate" +
+      "ClauseR\ncollClause\022\031\n\010coll_oid\030\020 \001(\rR\007co" +
+      "llOid\0220\n\013constraints\030\021 \003(\0132\016.pg_query.No" +
+      "deR\013constraints\022.\n\nfdwoptions\030\022 \003(\0132\016.pg" +
+      "_query.NodeR\nfdwoptions\022\032\n\010location\030\023 \001(" +
+      "\005R\010location\"~\n\017TableLikeClause\022.\n\010relati" +
+      "on\030\001 \001(\0132\022.pg_query.RangeVarR\010relation\022\030" +
+      "\n\007options\030\002 \001(\rR\007options\022!\n\014relation_oid" +
+      "\030\003 \001(\rR\013relationOid\"\341\002\n\tIndexElem\022\022\n\004nam" +
+      "e\030\001 \001(\tR\004name\022\"\n\004expr\030\002 \001(\0132\016.pg_query.N" +
+      "odeR\004expr\022\"\n\014indexcolname\030\003 \001(\tR\014indexco" +
+      "lname\022,\n\tcollation\030\004 \003(\0132\016.pg_query.Node" +
+      "R\tcollation\022(\n\007opclass\030\005 \003(\0132\016.pg_query." +
+      "NodeR\007opclass\0220\n\013opclassopts\030\006 \003(\0132\016.pg_" +
+      "query.NodeR\013opclassopts\022/\n\010ordering\030\007 \001(" +
+      "\0162\023.pg_query.SortByDirR\010ordering\022=\n\016null" +
+      "s_ordering\030\010 \001(\0162\025.pg_query.SortByNullsR" +
+      "\016nulls_ordering\"\274\001\n\007DefElem\022\"\n\014defnamesp" +
+      "ace\030\001 \001(\tR\014defnamespace\022\030\n\007defname\030\002 \001(\t" +
+      "R\007defname\022 \n\003arg\030\003 \001(\0132\016.pg_query.NodeR\003" +
+      "arg\0225\n\tdefaction\030\004 \001(\0162\027.pg_query.DefEle" +
+      "mActionR\tdefaction\022\032\n\010location\030\005 \001(\005R\010lo" +
+      "cation\"\265\001\n\rLockingClause\022/\n\013locked_rels\030" +
+      "\001 \003(\0132\016.pg_query.NodeR\nlockedRels\0228\n\010str" +
+      "ength\030\002 \001(\0162\034.pg_query.LockClauseStrengt" +
+      "hR\010strength\0229\n\013wait_policy\030\003 \001(\0162\030.pg_qu" +
+      "ery.LockWaitPolicyR\nwaitPolicy\"\316\001\n\014XmlSe" +
+      "rialize\0225\n\txmloption\030\001 \001(\0162\027.pg_query.Xm" +
+      "lOptionTypeR\txmloption\022\"\n\004expr\030\002 \001(\0132\016.p" +
+      "g_query.NodeR\004expr\022/\n\ttype_name\030\003 \001(\0132\022." +
+      "pg_query.TypeNameR\010typeName\022\026\n\006indent\030\004 " +
+      "\001(\010R\006indent\022\032\n\010location\030\005 \001(\005R\010location\"" +
+      "\273\001\n\rPartitionElem\022\022\n\004name\030\001 \001(\tR\004name\022\"\n" +
+      "\004expr\030\002 \001(\0132\016.pg_query.NodeR\004expr\022,\n\tcol" +
+      "lation\030\003 \003(\0132\016.pg_query.NodeR\tcollation\022" +
+      "(\n\007opclass\030\004 \003(\0132\016.pg_query.NodeR\007opclas" +
+      "s\022\032\n\010location\030\005 \001(\005R\010location\"\225\001\n\rPartit" +
+      "ionSpec\0227\n\010strategy\030\001 \001(\0162\033.pg_query.Par" +
+      "titionStrategyR\010strategy\022/\n\013part_params\030" +
+      "\002 \003(\0132\016.pg_query.NodeR\npartParams\022\032\n\010loc" +
+      "ation\030\003 \001(\005R\010location\"\270\002\n\022PartitionBound" +
+      "Spec\022\032\n\010strategy\030\001 \001(\tR\010strategy\022\036\n\nis_d" +
+      "efault\030\002 \001(\010R\nis_default\022\030\n\007modulus\030\003 \001(" +
+      "\005R\007modulus\022\034\n\tremainder\030\004 \001(\005R\tremainder" +
+      "\022.\n\nlistdatums\030\005 \003(\0132\016.pg_query.NodeR\nli" +
+      "stdatums\0220\n\013lowerdatums\030\006 \003(\0132\016.pg_query" +
+      ".NodeR\013lowerdatums\0220\n\013upperdatums\030\007 \003(\0132" +
+      "\016.pg_query.NodeR\013upperdatums\022\032\n\010location" +
+      "\030\010 \001(\005R\010location\"\216\001\n\023PartitionRangeDatum" +
+      "\0225\n\004kind\030\001 \001(\0162!.pg_query.PartitionRange" +
+      "DatumKindR\004kind\022$\n\005value\030\002 \001(\0132\016.pg_quer" +
+      "y.NodeR\005value\022\032\n\010location\030\003 \001(\005R\010locatio" +
+      "n\"\212\001\n\014PartitionCmd\022&\n\004name\030\001 \001(\0132\022.pg_qu" +
+      "ery.RangeVarR\004name\0222\n\005bound\030\002 \001(\0132\034.pg_q" +
+      "uery.PartitionBoundSpecR\005bound\022\036\n\nconcur" +
+      "rent\030\003 \001(\010R\nconcurrent\"\351\n\n\rRangeTblEntry" +
+      "\022%\n\005alias\030\001 \001(\0132\017.pg_query.AliasR\005alias\022" +
+      "#\n\004eref\030\002 \001(\0132\017.pg_query.AliasR\004eref\022+\n\007" +
+      "rtekind\030\003 \001(\0162\021.pg_query.RTEKindR\007rtekin" +
+      "d\022\024\n\005relid\030\004 \001(\rR\005relid\022\020\n\003inh\030\005 \001(\010R\003in" +
+      "h\022\030\n\007relkind\030\006 \001(\tR\007relkind\022 \n\013rellockmo" +
+      "de\030\007 \001(\005R\013rellockmode\022$\n\rperminfoindex\030\010" +
+      " \001(\rR\rperminfoindex\022=\n\013tablesample\030\t \001(\013" +
+      "2\033.pg_query.TableSampleClauseR\013tablesamp" +
+      "le\022+\n\010subquery\030\n \001(\0132\017.pg_query.QueryR\010s" +
+      "ubquery\022*\n\020security_barrier\030\013 \001(\010R\020secur" +
+      "ity_barrier\022.\n\010jointype\030\014 \001(\0162\022.pg_query" +
+      ".JoinTypeR\010jointype\022&\n\016joinmergedcols\030\r " +
+      "\001(\005R\016joinmergedcols\0224\n\rjoinaliasvars\030\016 \003" +
+      "(\0132\016.pg_query.NodeR\rjoinaliasvars\0222\n\014joi" +
+      "nleftcols\030\017 \003(\0132\016.pg_query.NodeR\014joinlef" +
+      "tcols\0224\n\rjoinrightcols\030\020 \003(\0132\016.pg_query." +
+      "NodeR\rjoinrightcols\022;\n\020join_using_alias\030" +
+      "\021 \001(\0132\017.pg_query.AliasR\020join_using_alias" +
+      "\022,\n\tfunctions\030\022 \003(\0132\016.pg_query.NodeR\tfun" +
+      "ctions\022&\n\016funcordinality\030\023 \001(\010R\016funcordi" +
+      "nality\0221\n\ttablefunc\030\024 \001(\0132\023.pg_query.Tab" +
+      "leFuncR\ttablefunc\0222\n\014values_lists\030\025 \003(\0132" +
+      "\016.pg_query.NodeR\014values_lists\022\030\n\007ctename" +
+      "\030\026 \001(\tR\007ctename\022 \n\013ctelevelsup\030\027 \001(\rR\013ct" +
+      "elevelsup\022&\n\016self_reference\030\030 \001(\010R\016self_" +
+      "reference\022*\n\010coltypes\030\031 \003(\0132\016.pg_query.N" +
+      "odeR\010coltypes\022.\n\ncoltypmods\030\032 \003(\0132\016.pg_q" +
+      "uery.NodeR\ncoltypmods\0224\n\rcolcollations\030\033" +
+      " \003(\0132\016.pg_query.NodeR\rcolcollations\022\030\n\007e" +
+      "nrname\030\034 \001(\tR\007enrname\022\034\n\tenrtuples\030\035 \001(\001" +
+      "R\tenrtuples\022.\n\ngroupexprs\030\036 \003(\0132\016.pg_que" +
+      "ry.NodeR\ngroupexprs\022\030\n\007lateral\030\037 \001(\010R\007la" +
+      "teral\022\034\n\nin_from_cl\030  \001(\010R\010inFromCl\0225\n\016s" +
+      "ecurity_quals\030! \003(\0132\016.pg_query.NodeR\rsec" +
+      "urityQuals\"\363\001\n\021RTEPermissionInfo\022\024\n\005reli" +
+      "d\030\001 \001(\rR\005relid\022\020\n\003inh\030\002 \001(\010R\003inh\022%\n\016requ" +
+      "ired_perms\030\003 \001(\004R\rrequiredPerms\022\"\n\rcheck" +
+      "_as_user\030\004 \001(\rR\013checkAsUser\022#\n\rselected_" +
+      "cols\030\005 \003(\004R\014selectedCols\022#\n\rinserted_col" +
+      "s\030\006 \003(\004R\014insertedCols\022!\n\014updated_cols\030\007 " +
+      "\003(\004R\013updatedCols\"\340\002\n\020RangeTblFunction\022*\n" +
+      "\010funcexpr\030\001 \001(\0132\016.pg_query.NodeR\010funcexp" +
+      "r\022\"\n\014funccolcount\030\002 \001(\005R\014funccolcount\0222\n" +
+      "\014funccolnames\030\003 \003(\0132\016.pg_query.NodeR\014fun" +
+      "ccolnames\0222\n\014funccoltypes\030\004 \003(\0132\016.pg_que" +
+      "ry.NodeR\014funccoltypes\0226\n\016funccoltypmods\030" +
+      "\005 \003(\0132\016.pg_query.NodeR\016funccoltypmods\022<\n" +
+      "\021funccolcollations\030\006 \003(\0132\016.pg_query.Node" +
+      "R\021funccolcollations\022\036\n\nfuncparams\030\007 \003(\004R" +
+      "\nfuncparams\"\207\001\n\021TableSampleClause\022\036\n\ntsm" +
+      "handler\030\001 \001(\rR\ntsmhandler\022\"\n\004args\030\002 \003(\0132" +
+      "\016.pg_query.NodeR\004args\022.\n\nrepeatable\030\003 \001(" +
+      "\0132\016.pg_query.NodeR\nrepeatable\"\254\001\n\017WithCh" +
+      "eckOption\022%\n\004kind\030\001 \001(\0162\021.pg_query.WCOKi" +
+      "ndR\004kind\022\030\n\007relname\030\002 \001(\tR\007relname\022\030\n\007po" +
+      "lname\030\003 \001(\tR\007polname\022\"\n\004qual\030\004 \001(\0132\016.pg_" +
+      "query.NodeR\004qual\022\032\n\010cascaded\030\005 \001(\010R\010casc" +
+      "aded\"\314\001\n\017SortGroupClause\022+\n\022tle_sort_gro" +
+      "up_ref\030\001 \001(\rR\017tleSortGroupRef\022\022\n\004eqop\030\002 " +
+      "\001(\rR\004eqop\022\026\n\006sortop\030\003 \001(\rR\006sortop\022\"\n\014rev" +
+      "erse_sort\030\004 \001(\010R\014reverse_sort\022 \n\013nulls_f" +
+      "irst\030\005 \001(\010R\013nulls_first\022\032\n\010hashable\030\006 \001(" +
+      "\010R\010hashable\"\202\001\n\013GroupingSet\022-\n\004kind\030\001 \001(" +
+      "\0162\031.pg_query.GroupingSetKindR\004kind\022(\n\007co" +
+      "ntent\030\002 \003(\0132\016.pg_query.NodeR\007content\022\032\n\010" +
+      "location\030\003 \001(\005R\010location\"\275\004\n\014WindowClaus" +
+      "e\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007refname\030\002 \001(\tR\007" +
+      "refname\0229\n\020partition_clause\030\003 \003(\0132\016.pg_q" +
+      "uery.NodeR\017partitionClause\0221\n\014order_clau" +
+      "se\030\004 \003(\0132\016.pg_query.NodeR\013orderClause\022#\n" +
+      "\rframe_options\030\005 \001(\005R\014frameOptions\0221\n\014st" +
+      "art_offset\030\006 \001(\0132\016.pg_query.NodeR\013startO" +
+      "ffset\022-\n\nend_offset\030\007 \001(\0132\016.pg_query.Nod" +
+      "eR\tendOffset\022-\n\023start_in_range_func\030\010 \001(" +
+      "\rR\020startInRangeFunc\022)\n\021end_in_range_func" +
+      "\030\t \001(\rR\016endInRangeFunc\022\"\n\rin_range_coll\030" +
+      "\n \001(\rR\013inRangeColl\022 \n\014in_range_asc\030\013 \001(\010" +
+      "R\ninRangeAsc\022/\n\024in_range_nulls_first\030\014 \001" +
+      "(\010R\021inRangeNullsFirst\022\026\n\006winref\030\r \001(\rR\006w" +
+      "inref\022!\n\014copied_order\030\016 \001(\010R\013copiedOrder" +
+      "\"\267\001\n\rRowMarkClause\022\020\n\003rti\030\001 \001(\rR\003rti\0228\n\010" +
+      "strength\030\002 \001(\0162\034.pg_query.LockClauseStre" +
+      "ngthR\010strength\0229\n\013wait_policy\030\003 \001(\0162\030.pg" +
+      "_query.LockWaitPolicyR\nwaitPolicy\022\037\n\013pus" +
+      "hed_down\030\004 \001(\010R\npushedDown\"j\n\nWithClause" +
+      "\022\"\n\004ctes\030\001 \003(\0132\016.pg_query.NodeR\004ctes\022\034\n\t" +
+      "recursive\030\002 \001(\010R\trecursive\022\032\n\010location\030\003" +
+      " \001(\005R\010location\"\247\001\n\013InferClause\022/\n\013index_" +
+      "elems\030\001 \003(\0132\016.pg_query.NodeR\nindexElems\022" +
+      "1\n\014where_clause\030\002 \001(\0132\016.pg_query.NodeR\013w" +
+      "hereClause\022\030\n\007conname\030\003 \001(\tR\007conname\022\032\n\010" +
+      "location\030\004 \001(\005R\010location\"\363\001\n\020OnConflictC" +
+      "lause\0222\n\006action\030\001 \001(\0162\032.pg_query.OnConfl" +
+      "ictActionR\006action\022+\n\005infer\030\002 \001(\0132\025.pg_qu" +
+      "ery.InferClauseR\005infer\022/\n\013target_list\030\003 " +
+      "\003(\0132\016.pg_query.NodeR\ntargetList\0221\n\014where" +
+      "_clause\030\004 \001(\0132\016.pg_query.NodeR\013whereClau",
+      "se\022\032\n\010location\030\005 \001(\005R\010location\"\311\001\n\017CTESe" +
+      "archClause\0228\n\017search_col_list\030\001 \003(\0132\016.pg" +
+      "_query.NodeR\017search_col_list\0222\n\024search_b" +
+      "readth_first\030\002 \001(\010R\024search_breadth_first" +
+      "\022,\n\021search_seq_column\030\003 \001(\tR\021search_seq_" +
+      "column\022\032\n\010location\030\004 \001(\005R\010location\"\362\003\n\016C" +
+      "TECycleClause\0226\n\016cycle_col_list\030\001 \003(\0132\016." +
+      "pg_query.NodeR\016cycle_col_list\022,\n\021cycle_m" +
+      "ark_column\030\002 \001(\tR\021cycle_mark_column\022:\n\020c" +
+      "ycle_mark_value\030\003 \001(\0132\016.pg_query.NodeR\020c" +
+      "ycle_mark_value\022>\n\022cycle_mark_default\030\004 " +
+      "\001(\0132\016.pg_query.NodeR\022cycle_mark_default\022" +
+      ",\n\021cycle_path_column\030\005 \001(\tR\021cycle_path_c" +
+      "olumn\022\032\n\010location\030\006 \001(\005R\010location\022(\n\017cyc" +
+      "le_mark_type\030\007 \001(\rR\017cycle_mark_type\022,\n\021c" +
+      "ycle_mark_typmod\030\010 \001(\005R\021cycle_mark_typmo" +
+      "d\0222\n\024cycle_mark_collation\030\t \001(\rR\024cycle_m" +
+      "ark_collation\022(\n\017cycle_mark_neop\030\n \001(\rR\017" +
+      "cycle_mark_neop\"\210\005\n\017CommonTableExpr\022\030\n\007c" +
+      "tename\030\001 \001(\tR\007ctename\0224\n\raliascolnames\030\002" +
+      " \003(\0132\016.pg_query.NodeR\raliascolnames\022B\n\017c" +
+      "tematerialized\030\003 \001(\0162\030.pg_query.CTEMater" +
+      "ializeR\017ctematerialized\022*\n\010ctequery\030\004 \001(" +
+      "\0132\016.pg_query.NodeR\010ctequery\022?\n\rsearch_cl" +
+      "ause\030\005 \001(\0132\031.pg_query.CTESearchClauseR\rs" +
+      "earch_clause\022<\n\014cycle_clause\030\006 \001(\0132\030.pg_" +
+      "query.CTECycleClauseR\014cycle_clause\022\032\n\010lo" +
+      "cation\030\007 \001(\005R\010location\022\"\n\014cterecursive\030\010" +
+      " \001(\010R\014cterecursive\022 \n\013cterefcount\030\t \001(\005R" +
+      "\013cterefcount\0220\n\013ctecolnames\030\n \003(\0132\016.pg_q" +
+      "uery.NodeR\013ctecolnames\0220\n\013ctecoltypes\030\013 " +
+      "\003(\0132\016.pg_query.NodeR\013ctecoltypes\0224\n\rctec" +
+      "oltypmods\030\014 \003(\0132\016.pg_query.NodeR\rctecolt" +
+      "ypmods\022:\n\020ctecolcollations\030\r \003(\0132\016.pg_qu" +
+      "ery.NodeR\020ctecolcollations\"\275\002\n\017MergeWhen" +
+      "Clause\0227\n\nmatch_kind\030\001 \001(\0162\030.pg_query.Me" +
+      "rgeMatchKindR\tmatchKind\0224\n\014command_type\030" +
+      "\002 \001(\0162\021.pg_query.CmdTypeR\013commandType\0224\n" +
+      "\010override\030\003 \001(\0162\030.pg_query.OverridingKin" +
+      "dR\010override\022,\n\tcondition\030\004 \001(\0132\016.pg_quer" +
+      "y.NodeR\tcondition\022/\n\013target_list\030\005 \003(\0132\016" +
+      ".pg_query.NodeR\ntargetList\022&\n\006values\030\006 \003" +
+      "(\0132\016.pg_query.NodeR\006values\"z\n\017ReturningO" +
+      "ption\0225\n\006option\030\001 \001(\0162\035.pg_query.Returni" +
+      "ngOptionKindR\006option\022\024\n\005value\030\002 \001(\tR\005val" +
+      "ue\022\032\n\010location\030\003 \001(\005R\010location\"a\n\017Return" +
+      "ingClause\022(\n\007options\030\001 \003(\0132\016.pg_query.No" +
+      "deR\007options\022$\n\005exprs\030\002 \003(\0132\016.pg_query.No" +
+      "deR\005exprs\"Y\n\021TriggerTransition\022\022\n\004name\030\001" +
+      " \001(\tR\004name\022\025\n\006is_new\030\002 \001(\010R\005isNew\022\031\n\010is_" +
+      "table\030\003 \001(\010R\007isTable\"t\n\nJsonOutput\022/\n\tty" +
+      "pe_name\030\001 \001(\0132\022.pg_query.TypeNameR\010typeN" +
+      "ame\0225\n\treturning\030\002 \001(\0132\027.pg_query.JsonRe" +
+      "turningR\treturning\"M\n\014JsonArgument\022)\n\003va" +
+      "l\030\001 \001(\0132\027.pg_query.JsonValueExprR\003val\022\022\n" +
+      "\004name\030\002 \001(\tR\004name\"\372\003\n\014JsonFuncExpr\022$\n\002op" +
+      "\030\001 \001(\0162\024.pg_query.JsonExprOpR\002op\022 \n\013colu" +
+      "mn_name\030\002 \001(\tR\013column_name\022;\n\014context_it" +
+      "em\030\003 \001(\0132\027.pg_query.JsonValueExprR\014conte" +
+      "xt_item\022*\n\010pathspec\030\004 \001(\0132\016.pg_query.Nod" +
+      "eR\010pathspec\022(\n\007passing\030\005 \003(\0132\016.pg_query." +
+      "NodeR\007passing\022,\n\006output\030\006 \001(\0132\024.pg_query" +
+      ".JsonOutputR\006output\0222\n\010on_empty\030\007 \001(\0132\026." +
+      "pg_query.JsonBehaviorR\010on_empty\0222\n\010on_er" +
+      "ror\030\010 \001(\0132\026.pg_query.JsonBehaviorR\010on_er" +
+      "ror\022/\n\007wrapper\030\t \001(\0162\025.pg_query.JsonWrap" +
+      "perR\007wrapper\022,\n\006quotes\030\n \001(\0162\024.pg_query." +
+      "JsonQuotesR\006quotes\022\032\n\010location\030\013 \001(\005R\010lo" +
+      "cation\"\221\001\n\021JsonTablePathSpec\022&\n\006string\030\001" +
+      " \001(\0132\016.pg_query.NodeR\006string\022\022\n\004name\030\002 \001" +
+      "(\tR\004name\022$\n\rname_location\030\003 \001(\005R\rname_lo" +
+      "cation\022\032\n\010location\030\004 \001(\005R\010location\"\346\002\n\tJ" +
+      "sonTable\022;\n\014context_item\030\001 \001(\0132\027.pg_quer" +
+      "y.JsonValueExprR\014context_item\0227\n\010pathspe" +
+      "c\030\002 \001(\0132\033.pg_query.JsonTablePathSpecR\010pa" +
+      "thspec\022(\n\007passing\030\003 \003(\0132\016.pg_query.NodeR" +
+      "\007passing\022(\n\007columns\030\004 \003(\0132\016.pg_query.Nod" +
+      "eR\007columns\0222\n\010on_error\030\005 \001(\0132\026.pg_query." +
+      "JsonBehaviorR\010on_error\022%\n\005alias\030\006 \001(\0132\017." +
+      "pg_query.AliasR\005alias\022\030\n\007lateral\030\007 \001(\010R\007" +
+      "lateral\022\032\n\010location\030\010 \001(\005R\010location\"\203\004\n\017" +
+      "JsonTableColumn\0227\n\007coltype\030\001 \001(\0162\035.pg_qu" +
+      "ery.JsonTableColumnTypeR\007coltype\022\022\n\004name" +
+      "\030\002 \001(\tR\004name\022/\n\ttype_name\030\003 \001(\0132\022.pg_que" +
+      "ry.TypeNameR\010typeName\0227\n\010pathspec\030\004 \001(\0132" +
+      "\033.pg_query.JsonTablePathSpecR\010pathspec\022," +
+      "\n\006format\030\005 \001(\0132\024.pg_query.JsonFormatR\006fo" +
+      "rmat\022/\n\007wrapper\030\006 \001(\0162\025.pg_query.JsonWra" +
+      "pperR\007wrapper\022,\n\006quotes\030\007 \001(\0162\024.pg_query" +
+      ".JsonQuotesR\006quotes\022(\n\007columns\030\010 \003(\0132\016.p" +
+      "g_query.NodeR\007columns\0222\n\010on_empty\030\t \001(\0132" +
       "\026.pg_query.JsonBehaviorR\010on_empty\0222\n\010on_" +
-      "error\030\013 \001(\0132\026.pg_query.JsonBehaviorR\010on_" +
-      "error\022(\n\017use_io_coercion\030\014 \001(\010R\017use_io_c" +
-      "oercion\022,\n\021use_json_coercion\030\r \001(\010R\021use_" +
-      "json_coercion\022/\n\007wrapper\030\016 \001(\0162\025.pg_quer" +
-      "y.JsonWrapperR\007wrapper\022 \n\013omit_quotes\030\017 " +
-      "\001(\010R\013omit_quotes\022\034\n\tcollation\030\020 \001(\rR\tcol" +
-      "lation\022\032\n\010location\030\021 \001(\005R\010location\"#\n\rJs" +
-      "onTablePath\022\022\n\004name\030\001 \001(\tR\004name\"\342\001\n\021Json" +
-      "TablePathScan\022\"\n\004plan\030\001 \001(\0132\016.pg_query.N" +
-      "odeR\004plan\022+\n\004path\030\002 \001(\0132\027.pg_query.JsonT" +
-      "ablePathR\004path\022$\n\016error_on_error\030\003 \001(\010R\014" +
-      "errorOnError\022$\n\005child\030\004 \001(\0132\016.pg_query.N" +
-      "odeR\005child\022\027\n\007col_min\030\005 \001(\005R\006colMin\022\027\n\007c" +
-      "ol_max\030\006 \001(\005R\006colMax\"\206\001\n\024JsonTableSiblin" +
-      "gJoin\022\"\n\004plan\030\001 \001(\0132\016.pg_query.NodeR\004pla" +
-      "n\022$\n\005lplan\030\002 \001(\0132\016.pg_query.NodeR\005lplan\022" +
-      "$\n\005rplan\030\003 \001(\0132\016.pg_query.NodeR\005rplan\"\302\001" +
-      "\n\010NullTest\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR",
-      "\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg_query.NodeR\003arg\022:" +
-      "\n\014nulltesttype\030\003 \001(\0162\026.pg_query.NullTest" +
-      "TypeR\014nulltesttype\022\032\n\010argisrow\030\004 \001(\010R\010ar" +
-      "gisrow\022\032\n\010location\030\005 \001(\005R\010location\"\251\001\n\013B" +
-      "ooleanTest\022 \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR" +
-      "\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg_query.NodeR\003arg\022:" +
-      "\n\014booltesttype\030\003 \001(\0162\026.pg_query.BoolTest" +
-      "TypeR\014booltesttype\022\032\n\010location\030\004 \001(\005R\010lo" +
-      "cation\"\274\002\n\013MergeAction\0227\n\nmatch_kind\030\001 \001" +
-      "(\0162\030.pg_query.MergeMatchKindR\tmatchKind\022" +
-      "4\n\014command_type\030\002 \001(\0162\021.pg_query.CmdType" +
-      "R\013commandType\0224\n\010override\030\003 \001(\0162\030.pg_que" +
-      "ry.OverridingKindR\010override\022\"\n\004qual\030\004 \001(" +
-      "\0132\016.pg_query.NodeR\004qual\022/\n\013target_list\030\005" +
-      " \003(\0132\016.pg_query.NodeR\ntargetList\0223\n\rupda" +
-      "te_colnos\030\006 \003(\0132\016.pg_query.NodeR\014updateC" +
-      "olnos\"\230\002\n\016CoerceToDomain\022 \n\003xpr\030\001 \001(\0132\016." +
-      "pg_query.NodeR\003xpr\022 \n\003arg\030\002 \001(\0132\016.pg_que" +
-      "ry.NodeR\003arg\022\036\n\nresulttype\030\003 \001(\rR\nresult" +
-      "type\022\"\n\014resulttypmod\030\004 \001(\005R\014resulttypmod" +
-      "\022\"\n\014resultcollid\030\005 \001(\rR\014resultcollid\022>\n\016" +
-      "coercionformat\030\006 \001(\0162\026.pg_query.Coercion" +
-      "FormR\016coercionformat\022\032\n\010location\030\007 \001(\005R\010" +
-      "location\"\245\001\n\023CoerceToDomainValue\022 \n\003xpr\030" +
-      "\001 \001(\0132\016.pg_query.NodeR\003xpr\022\027\n\007type_id\030\002 " +
-      "\001(\rR\006typeId\022\031\n\010type_mod\030\003 \001(\005R\007typeMod\022\034" +
-      "\n\tcollation\030\004 \001(\rR\tcollation\022\032\n\010location" +
-      "\030\005 \001(\005R\010location\"\236\001\n\014SetToDefault\022 \n\003xpr" +
-      "\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\027\n\007type_id\030\002" +
-      " \001(\rR\006typeId\022\031\n\010type_mod\030\003 \001(\005R\007typeMod\022" +
-      "\034\n\tcollation\030\004 \001(\rR\tcollation\022\032\n\010locatio" +
-      "n\030\005 \001(\005R\010location\"\217\001\n\rCurrentOfExpr\022 \n\003x" +
-      "pr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\026\n\006cvarno\030" +
-      "\002 \001(\rR\006cvarno\022 \n\013cursor_name\030\003 \001(\tR\013curs" +
-      "or_name\022\"\n\014cursor_param\030\004 \001(\005R\014cursor_pa" +
-      "ram\"`\n\rNextValueExpr\022 \n\003xpr\030\001 \001(\0132\016.pg_q" +
-      "uery.NodeR\003xpr\022\024\n\005seqid\030\002 \001(\rR\005seqid\022\027\n\007" +
-      "type_id\030\003 \001(\rR\006typeId\"\233\001\n\rInferenceElem\022" +
-      " \n\003xpr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\"\n\004exp" +
-      "r\030\002 \001(\0132\016.pg_query.NodeR\004expr\022 \n\013inferco" +
-      "llid\030\003 \001(\rR\013infercollid\022\"\n\014inferopclass\030" +
-      "\004 \001(\rR\014inferopclass\"\207\002\n\013TargetEntry\022 \n\003x" +
-      "pr\030\001 \001(\0132\016.pg_query.NodeR\003xpr\022\"\n\004expr\030\002 " +
-      "\001(\0132\016.pg_query.NodeR\004expr\022\024\n\005resno\030\003 \001(\005" +
-      "R\005resno\022\030\n\007resname\030\004 \001(\tR\007resname\022(\n\017res" +
-      "sortgroupref\030\005 \001(\rR\017ressortgroupref\022\036\n\nr" +
-      "esorigtbl\030\006 \001(\rR\nresorigtbl\022\036\n\nresorigco" +
-      "l\030\007 \001(\005R\nresorigcol\022\030\n\007resjunk\030\010 \001(\010R\007re" +
-      "sjunk\"\'\n\013RangeTblRef\022\030\n\007rtindex\030\001 \001(\005R\007r" +
-      "tindex\"\370\002\n\010JoinExpr\022.\n\010jointype\030\001 \001(\0162\022." +
-      "pg_query.JoinTypeR\010jointype\022\035\n\nis_natura" +
-      "l\030\002 \001(\010R\tisNatural\022\"\n\004larg\030\003 \001(\0132\016.pg_qu" +
-      "ery.NodeR\004larg\022\"\n\004rarg\030\004 \001(\0132\016.pg_query." +
-      "NodeR\004rarg\0221\n\014using_clause\030\005 \003(\0132\016.pg_qu" +
-      "ery.NodeR\013usingClause\022;\n\020join_using_alia" +
-      "s\030\006 \001(\0132\017.pg_query.AliasR\020join_using_ali" +
-      "as\022$\n\005quals\030\007 \001(\0132\016.pg_query.NodeR\005quals" +
-      "\022%\n\005alias\030\010 \001(\0132\017.pg_query.AliasR\005alias\022" +
-      "\030\n\007rtindex\030\t \001(\005R\007rtindex\"\\\n\010FromExpr\022*\n" +
-      "\010fromlist\030\001 \003(\0132\016.pg_query.NodeR\010fromlis" +
-      "t\022$\n\005quals\030\002 \001(\0132\016.pg_query.NodeR\005quals\"" +
-      "\236\003\n\016OnConflictExpr\0222\n\006action\030\001 \001(\0162\032.pg_" +
-      "query.OnConflictActionR\006action\0223\n\rarbite" +
-      "r_elems\030\002 \003(\0132\016.pg_query.NodeR\014arbiterEl" +
-      "ems\0223\n\rarbiter_where\030\003 \001(\0132\016.pg_query.No" +
-      "deR\014arbiterWhere\022\036\n\nconstraint\030\004 \001(\rR\nco" +
-      "nstraint\0226\n\017on_conflict_set\030\005 \003(\0132\016.pg_q" +
-      "uery.NodeR\ronConflictSet\022:\n\021on_conflict_" +
-      "where\030\006 \001(\0132\016.pg_query.NodeR\017onConflictW" +
-      "here\022$\n\016excl_rel_index\030\007 \001(\005R\014exclRelInd" +
-      "ex\0224\n\016excl_rel_tlist\030\010 \003(\0132\016.pg_query.No" +
-      "deR\014exclRelTlist\"\306\017\n\005Query\0224\n\014command_ty" +
-      "pe\030\001 \001(\0162\021.pg_query.CmdTypeR\013commandType" +
-      "\0228\n\014query_source\030\002 \001(\0162\025.pg_query.QueryS" +
-      "ourceR\013querySource\022\036\n\013can_set_tag\030\003 \001(\010R" +
-      "\tcanSetTag\0221\n\014utility_stmt\030\004 \001(\0132\016.pg_qu" +
-      "ery.NodeR\013utilityStmt\022\'\n\017result_relation" +
-      "\030\005 \001(\005R\016resultRelation\022\031\n\010has_aggs\030\006 \001(\010" +
-      "R\007hasAggs\022(\n\020has_window_funcs\030\007 \001(\010R\016has" +
-      "WindowFuncs\022&\n\017has_target_srfs\030\010 \001(\010R\rha" +
-      "sTargetSRFs\022\"\n\rhas_sub_links\030\t \001(\010R\013hasS" +
-      "ubLinks\022&\n\017has_distinct_on\030\n \001(\010R\rhasDis" +
-      "tinctOn\022#\n\rhas_recursive\030\013 \001(\010R\014hasRecur" +
-      "sive\022*\n\021has_modifying_cte\030\014 \001(\010R\017hasModi" +
-      "fyingCTE\022$\n\016has_for_update\030\r \001(\010R\014hasFor" +
-      "Update\022(\n\020has_row_security\030\016 \001(\010R\016hasRow" +
-      "Security\022\033\n\tis_return\030\017 \001(\010R\010isReturn\022)\n" +
-      "\010cte_list\030\020 \003(\0132\016.pg_query.NodeR\007cteList" +
-      "\022&\n\006rtable\030\021 \003(\0132\016.pg_query.NodeR\006rtable" +
-      "\0222\n\014rteperminfos\030\022 \003(\0132\016.pg_query.NodeR\014" +
-      "rteperminfos\022.\n\010jointree\030\023 \001(\0132\022.pg_quer" +
-      "y.FromExprR\010jointree\022:\n\021merge_action_lis" +
-      "t\030\024 \003(\0132\016.pg_query.NodeR\017mergeActionList" +
-      "\0222\n\025merge_target_relation\030\025 \001(\005R\023mergeTa" +
-      "rgetRelation\022@\n\024merge_join_condition\030\026 \001" +
-      "(\0132\016.pg_query.NodeR\022mergeJoinCondition\022/" +
-      "\n\013target_list\030\027 \003(\0132\016.pg_query.NodeR\ntar" +
-      "getList\0224\n\010override\030\030 \001(\0162\030.pg_query.Ove" +
-      "rridingKindR\010override\0229\n\013on_conflict\030\031 \001" +
-      "(\0132\030.pg_query.OnConflictExprR\nonConflict" +
-      "\0225\n\016returning_list\030\032 \003(\0132\016.pg_query.Node" +
-      "R\rreturningList\0221\n\014group_clause\030\033 \003(\0132\016." +
-      "pg_query.NodeR\013groupClause\022%\n\016group_dist" +
-      "inct\030\034 \001(\010R\rgroupDistinct\0223\n\rgrouping_se" +
-      "ts\030\035 \003(\0132\016.pg_query.NodeR\014groupingSets\022/" +
-      "\n\013having_qual\030\036 \001(\0132\016.pg_query.NodeR\nhav" +
-      "ingQual\0223\n\rwindow_clause\030\037 \003(\0132\016.pg_quer" +
-      "y.NodeR\014windowClause\0227\n\017distinct_clause\030" +
-      "  \003(\0132\016.pg_query.NodeR\016distinctClause\022/\n" +
-      "\013sort_clause\030! \003(\0132\016.pg_query.NodeR\nsort" +
-      "Clause\0221\n\014limit_offset\030\" \001(\0132\016.pg_query." +
-      "NodeR\013limitOffset\022/\n\013limit_count\030# \001(\0132\016" +
-      ".pg_query.NodeR\nlimitCount\0228\n\014limit_opti" +
-      "on\030$ \001(\0162\025.pg_query.LimitOptionR\013limitOp" +
-      "tion\022+\n\trow_marks\030% \003(\0132\016.pg_query.NodeR" +
-      "\010rowMarks\0225\n\016set_operations\030& \001(\0132\016.pg_q" +
-      "uery.NodeR\rsetOperations\0227\n\017constraint_d" +
-      "eps\030\' \003(\0132\016.pg_query.NodeR\016constraintDep" +
-      "s\022<\n\022with_check_options\030( \003(\0132\016.pg_query" +
-      ".NodeR\020withCheckOptions\022$\n\rstmt_location" +
-      "\030) \001(\005R\rstmt_location\022\032\n\010stmt_len\030* \001(\005R" +
-      "\010stmt_len\"\220\002\n\010TypeName\022$\n\005names\030\001 \003(\0132\016." +
-      "pg_query.NodeR\005names\022\031\n\010type_oid\030\002 \001(\rR\007" +
-      "typeOid\022\024\n\005setof\030\003 \001(\010R\005setof\022\032\n\010pct_typ" +
-      "e\030\004 \001(\010R\010pct_type\022(\n\007typmods\030\005 \003(\0132\016.pg_" +
-      "query.NodeR\007typmods\022\030\n\007typemod\030\006 \001(\005R\007ty" +
-      "pemod\0221\n\014array_bounds\030\007 \003(\0132\016.pg_query.N" +
-      "odeR\013arrayBounds\022\032\n\010location\030\010 \001(\005R\010loca" +
-      "tion\"O\n\tColumnRef\022&\n\006fields\030\001 \003(\0132\016.pg_q" +
-      "uery.NodeR\006fields\022\032\n\010location\030\002 \001(\005R\010loc" +
-      "ation\">\n\010ParamRef\022\026\n\006number\030\001 \001(\005R\006numbe" +
-      "r\022\032\n\010location\030\002 \001(\005R\010location\"\277\001\n\006A_Expr" +
-      "\022)\n\004kind\030\001 \001(\0162\025.pg_query.A_Expr_KindR\004k" +
-      "ind\022\"\n\004name\030\002 \003(\0132\016.pg_query.NodeR\004name\022" +
-      "$\n\005lexpr\030\003 \001(\0132\016.pg_query.NodeR\005lexpr\022$\n" +
-      "\005rexpr\030\004 \001(\0132\016.pg_query.NodeR\005rexpr\022\032\n\010l" +
-      "ocation\030\005 \001(\005R\010location\"y\n\010TypeCast\022 \n\003a" +
-      "rg\030\001 \001(\0132\016.pg_query.NodeR\003arg\022/\n\ttype_na" +
-      "me\030\002 \001(\0132\022.pg_query.TypeNameR\010typeName\022\032" +
-      "\n\010location\030\003 \001(\005R\010location\"y\n\rCollateCla" +
-      "use\022 \n\003arg\030\001 \001(\0132\016.pg_query.NodeR\003arg\022*\n" +
-      "\010collname\030\002 \003(\0132\016.pg_query.NodeR\010collnam" +
-      "e\022\032\n\010location\030\003 \001(\005R\010location\"v\n\010RoleSpe" +
-      "c\0222\n\010roletype\030\001 \001(\0162\026.pg_query.RoleSpecT" +
-      "ypeR\010roletype\022\032\n\010rolename\030\002 \001(\tR\010rolenam" +
-      "e\022\032\n\010location\030\003 \001(\005R\010location\"\307\003\n\010FuncCa" +
-      "ll\022*\n\010funcname\030\001 \003(\0132\016.pg_query.NodeR\010fu" +
-      "ncname\022\"\n\004args\030\002 \003(\0132\016.pg_query.NodeR\004ar" +
-      "gs\022,\n\tagg_order\030\003 \003(\0132\016.pg_query.NodeR\ta" +
-      "gg_order\022.\n\nagg_filter\030\004 \001(\0132\016.pg_query." +
-      "NodeR\nagg_filter\022\'\n\004over\030\005 \001(\0132\023.pg_quer" +
-      "y.WindowDefR\004over\022*\n\020agg_within_group\030\006 " +
-      "\001(\010R\020agg_within_group\022\032\n\010agg_star\030\007 \001(\010R" +
-      "\010agg_star\022\"\n\014agg_distinct\030\010 \001(\010R\014agg_dis" +
-      "tinct\022$\n\rfunc_variadic\030\t \001(\010R\rfunc_varia" +
-      "dic\0226\n\nfuncformat\030\n \001(\0162\026.pg_query.Coerc" +
-      "ionFormR\nfuncformat\022\032\n\010location\030\013 \001(\005R\010l" +
-      "ocation\"\010\n\006A_Star\"o\n\tA_Indices\022\032\n\010is_sli" +
-      "ce\030\001 \001(\010R\010is_slice\022\"\n\004lidx\030\002 \001(\0132\016.pg_qu" +
-      "ery.NodeR\004lidx\022\"\n\004uidx\030\003 \001(\0132\016.pg_query." +
-      "NodeR\004uidx\"c\n\rA_Indirection\022 \n\003arg\030\001 \001(\013" +
-      "2\016.pg_query.NodeR\003arg\0220\n\013indirection\030\002 \003" +
-      "(\0132\016.pg_query.NodeR\013indirection\"U\n\013A_Arr" +
-      "ayExpr\022*\n\010elements\030\001 \003(\0132\016.pg_query.Node" +
-      "R\010elements\022\032\n\010location\030\002 \001(\005R\010location\"\217" +
-      "\001\n\tResTarget\022\022\n\004name\030\001 \001(\tR\004name\0220\n\013indi" +
-      "rection\030\002 \003(\0132\016.pg_query.NodeR\013indirecti" +
-      "on\022 \n\003val\030\003 \001(\0132\016.pg_query.NodeR\003val\022\032\n\010" +
-      "location\030\004 \001(\005R\010location\"j\n\016MultiAssignR" +
-      "ef\022&\n\006source\030\001 \001(\0132\016.pg_query.NodeR\006sour" +
-      "ce\022\024\n\005colno\030\002 \001(\005R\005colno\022\032\n\010ncolumns\030\003 \001" +
-      "(\005R\010ncolumns\"\337\001\n\006SortBy\022\"\n\004node\030\001 \001(\0132\016." +
-      "pg_query.NodeR\004node\0223\n\nsortby_dir\030\002 \001(\0162" +
-      "\023.pg_query.SortByDirR\nsortby_dir\0229\n\014sort" +
-      "by_nulls\030\003 \001(\0162\025.pg_query.SortByNullsR\014s" +
-      "ortby_nulls\022%\n\006use_op\030\004 \003(\0132\016.pg_query.N" +
-      "odeR\005useOp\022\032\n\010location\030\005 \001(\005R\010location\"\312" +
-      "\002\n\tWindowDef\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007refn" +
-      "ame\030\002 \001(\tR\007refname\0229\n\020partition_clause\030\003" +
-      " \003(\0132\016.pg_query.NodeR\017partitionClause\0221\n" +
-      "\014order_clause\030\004 \003(\0132\016.pg_query.NodeR\013ord" +
-      "erClause\022#\n\rframe_options\030\005 \001(\005R\014frameOp" +
-      "tions\0221\n\014start_offset\030\006 \001(\0132\016.pg_query.N" +
-      "odeR\013startOffset\022-\n\nend_offset\030\007 \001(\0132\016.p" +
-      "g_query.NodeR\tendOffset\022\032\n\010location\030\010 \001(" +
-      "\005R\010location\"}\n\016RangeSubselect\022\030\n\007lateral" +
-      "\030\001 \001(\010R\007lateral\022*\n\010subquery\030\002 \001(\0132\016.pg_q" +
-      "uery.NodeR\010subquery\022%\n\005alias\030\003 \001(\0132\017.pg_" +
-      "query.AliasR\005alias\"\360\001\n\rRangeFunction\022\030\n\007" +
-      "lateral\030\001 \001(\010R\007lateral\022\036\n\nordinality\030\002 \001" +
-      "(\010R\nordinality\022 \n\013is_rowsfrom\030\003 \001(\010R\013is_" +
-      "rowsfrom\022,\n\tfunctions\030\004 \003(\0132\016.pg_query.N" +
-      "odeR\tfunctions\022%\n\005alias\030\005 \001(\0132\017.pg_query" +
-      ".AliasR\005alias\022.\n\ncoldeflist\030\006 \003(\0132\016.pg_q" +
-      "uery.NodeR\ncoldeflist\"\233\002\n\016RangeTableFunc" +
-      "\022\030\n\007lateral\030\001 \001(\010R\007lateral\022(\n\007docexpr\030\002 " +
-      "\001(\0132\016.pg_query.NodeR\007docexpr\022(\n\007rowexpr\030" +
-      "\003 \001(\0132\016.pg_query.NodeR\007rowexpr\022.\n\nnamesp" +
-      "aces\030\004 \003(\0132\016.pg_query.NodeR\nnamespaces\022(" +
-      "\n\007columns\030\005 \003(\0132\016.pg_query.NodeR\007columns" +
-      "\022%\n\005alias\030\006 \001(\0132\017.pg_query.AliasR\005alias\022" +
-      "\032\n\010location\030\007 \001(\005R\010location\"\236\002\n\021RangeTab" +
-      "leFuncCol\022\030\n\007colname\030\001 \001(\tR\007colname\022/\n\tt" +
-      "ype_name\030\002 \001(\0132\022.pg_query.TypeNameR\010type" +
-      "Name\022&\n\016for_ordinality\030\003 \001(\010R\016for_ordina" +
-      "lity\022 \n\013is_not_null\030\004 \001(\010R\013is_not_null\022(" +
-      "\n\007colexpr\030\005 \001(\0132\016.pg_query.NodeR\007colexpr" +
-      "\022.\n\ncoldefexpr\030\006 \001(\0132\016.pg_query.NodeR\nco" +
-      "ldefexpr\022\032\n\010location\030\007 \001(\005R\010location\"\326\001\n" +
-      "\020RangeTableSample\022*\n\010relation\030\001 \001(\0132\016.pg" +
-      "_query.NodeR\010relation\022&\n\006method\030\002 \003(\0132\016." +
-      "pg_query.NodeR\006method\022\"\n\004args\030\003 \003(\0132\016.pg" +
-      "_query.NodeR\004args\022.\n\nrepeatable\030\004 \001(\0132\016." +
-      "pg_query.NodeR\nrepeatable\022\032\n\010location\030\005 " +
-      "\001(\005R\010location\"\354\005\n\tColumnDef\022\030\n\007colname\030\001" +
-      " \001(\tR\007colname\022/\n\ttype_name\030\002 \001(\0132\022.pg_qu" +
-      "ery.TypeNameR\010typeName\022 \n\013compression\030\003 " +
-      "\001(\tR\013compression\022\032\n\010inhcount\030\004 \001(\005R\010inhc" +
-      "ount\022\032\n\010is_local\030\005 \001(\010R\010is_local\022 \n\013is_n" +
-      "ot_null\030\006 \001(\010R\013is_not_null\022\"\n\014is_from_ty" +
-      "pe\030\007 \001(\010R\014is_from_type\022\030\n\007storage\030\010 \001(\tR" +
-      "\007storage\022\"\n\014storage_name\030\t \001(\tR\014storage_" +
-      "name\0220\n\013raw_default\030\n \001(\0132\016.pg_query.Nod" +
-      "eR\013raw_default\0226\n\016cooked_default\030\013 \001(\0132\016" +
-      ".pg_query.NodeR\016cooked_default\022\032\n\010identi" +
-      "ty\030\014 \001(\tR\010identity\022?\n\021identity_sequence\030" +
-      "\r \001(\0132\022.pg_query.RangeVarR\020identitySeque" +
-      "nce\022\034\n\tgenerated\030\016 \001(\tR\tgenerated\0228\n\013col" +
-      "l_clause\030\017 \001(\0132\027.pg_query.CollateClauseR" +
-      "\ncollClause\022\031\n\010coll_oid\030\020 \001(\rR\007collOid\0220" +
-      "\n\013constraints\030\021 \003(\0132\016.pg_query.NodeR\013con" +
-      "straints\022.\n\nfdwoptions\030\022 \003(\0132\016.pg_query." +
-      "NodeR\nfdwoptions\022\032\n\010location\030\023 \001(\005R\010loca" +
-      "tion\"~\n\017TableLikeClause\022.\n\010relation\030\001 \001(" +
-      "\0132\022.pg_query.RangeVarR\010relation\022\030\n\007optio" +
-      "ns\030\002 \001(\rR\007options\022!\n\014relation_oid\030\003 \001(\rR" +
-      "\013relationOid\"\341\002\n\tIndexElem\022\022\n\004name\030\001 \001(\t" +
-      "R\004name\022\"\n\004expr\030\002 \001(\0132\016.pg_query.NodeR\004ex" +
-      "pr\022\"\n\014indexcolname\030\003 \001(\tR\014indexcolname\022," +
-      "\n\tcollation\030\004 \003(\0132\016.pg_query.NodeR\tcolla" +
-      "tion\022(\n\007opclass\030\005 \003(\0132\016.pg_query.NodeR\007o" +
-      "pclass\0220\n\013opclassopts\030\006 \003(\0132\016.pg_query.N" +
-      "odeR\013opclassopts\022/\n\010ordering\030\007 \001(\0162\023.pg_" +
-      "query.SortByDirR\010ordering\022=\n\016nulls_order" +
-      "ing\030\010 \001(\0162\025.pg_query.SortByNullsR\016nulls_" +
-      "ordering\"\274\001\n\007DefElem\022\"\n\014defnamespace\030\001 \001" +
-      "(\tR\014defnamespace\022\030\n\007defname\030\002 \001(\tR\007defna" +
-      "me\022 \n\003arg\030\003 \001(\0132\016.pg_query.NodeR\003arg\0225\n\t" +
-      "defaction\030\004 \001(\0162\027.pg_query.DefElemAction" +
-      "R\tdefaction\022\032\n\010location\030\005 \001(\005R\010location\"" +
-      "\265\001\n\rLockingClause\022/\n\013locked_rels\030\001 \003(\0132\016" +
-      ".pg_query.NodeR\nlockedRels\0228\n\010strength\030\002" +
-      " \001(\0162\034.pg_query.LockClauseStrengthR\010stre" +
-      "ngth\0229\n\013wait_policy\030\003 \001(\0162\030.pg_query.Loc" +
-      "kWaitPolicyR\nwaitPolicy\"\316\001\n\014XmlSerialize" +
-      "\0225\n\txmloption\030\001 \001(\0162\027.pg_query.XmlOption" +
-      "TypeR\txmloption\022\"\n\004expr\030\002 \001(\0132\016.pg_query" +
-      ".NodeR\004expr\022/\n\ttype_name\030\003 \001(\0132\022.pg_quer" +
-      "y.TypeNameR\010typeName\022\026\n\006indent\030\004 \001(\010R\006in" +
-      "dent\022\032\n\010location\030\005 \001(\005R\010location\"\273\001\n\rPar" +
-      "titionElem\022\022\n\004name\030\001 \001(\tR\004name\022\"\n\004expr\030\002" +
-      " \001(\0132\016.pg_query.NodeR\004expr\022,\n\tcollation\030" +
-      "\003 \003(\0132\016.pg_query.NodeR\tcollation\022(\n\007opcl" +
-      "ass\030\004 \003(\0132\016.pg_query.NodeR\007opclass\022\032\n\010lo" +
-      "cation\030\005 \001(\005R\010location\"\225\001\n\rPartitionSpec" +
-      "\0227\n\010strategy\030\001 \001(\0162\033.pg_query.PartitionS" +
-      "trategyR\010strategy\022/\n\013part_params\030\002 \003(\0132\016" +
-      ".pg_query.NodeR\npartParams\022\032\n\010location\030\003" +
-      " \001(\005R\010location\"\270\002\n\022PartitionBoundSpec\022\032\n" +
-      "\010strategy\030\001 \001(\tR\010strategy\022\036\n\nis_default\030" +
-      "\002 \001(\010R\nis_default\022\030\n\007modulus\030\003 \001(\005R\007modu" +
-      "lus\022\034\n\tremainder\030\004 \001(\005R\tremainder\022.\n\nlis" +
-      "tdatums\030\005 \003(\0132\016.pg_query.NodeR\nlistdatum" +
-      "s\0220\n\013lowerdatums\030\006 \003(\0132\016.pg_query.NodeR\013" +
-      "lowerdatums\0220\n\013upperdatums\030\007 \003(\0132\016.pg_qu" +
-      "ery.NodeR\013upperdatums\022\032\n\010location\030\010 \001(\005R" +
-      "\010location\"\216\001\n\023PartitionRangeDatum\0225\n\004kin" +
-      "d\030\001 \001(\0162!.pg_query.PartitionRangeDatumKi" +
-      "ndR\004kind\022$\n\005value\030\002 \001(\0132\016.pg_query.NodeR" +
-      "\005value\022\032\n\010location\030\003 \001(\005R\010location\"\025\n\023Si" +
-      "nglePartitionSpec\"\212\001\n\014PartitionCmd\022&\n\004na" +
-      "me\030\001 \001(\0132\022.pg_query.RangeVarR\004name\0222\n\005bo" +
-      "und\030\002 \001(\0132\034.pg_query.PartitionBoundSpecR" +
-      "\005bound\022\036\n\nconcurrent\030\003 \001(\010R\nconcurrent\"\271" +
-      "\n\n\rRangeTblEntry\022%\n\005alias\030\001 \001(\0132\017.pg_que" +
-      "ry.AliasR\005alias\022#\n\004eref\030\002 \001(\0132\017.pg_query" +
-      ".AliasR\004eref\022+\n\007rtekind\030\003 \001(\0162\021.pg_query" +
-      ".RTEKindR\007rtekind\022\024\n\005relid\030\004 \001(\rR\005relid\022" +
-      "\020\n\003inh\030\005 \001(\010R\003inh\022\030\n\007relkind\030\006 \001(\tR\007relk" +
-      "ind\022 \n\013rellockmode\030\007 \001(\005R\013rellockmode\022$\n" +
-      "\rperminfoindex\030\010 \001(\rR\rperminfoindex\022=\n\013t" +
-      "ablesample\030\t \001(\0132\033.pg_query.TableSampleC" +
-      "lauseR\013tablesample\022+\n\010subquery\030\n \001(\0132\017.p" +
-      "g_query.QueryR\010subquery\022*\n\020security_barr" +
-      "ier\030\013 \001(\010R\020security_barrier\022.\n\010jointype\030" +
-      "\014 \001(\0162\022.pg_query.JoinTypeR\010jointype\022&\n\016j" +
-      "oinmergedcols\030\r \001(\005R\016joinmergedcols\0224\n\rj" +
-      "oinaliasvars\030\016 \003(\0132\016.pg_query.NodeR\rjoin" +
-      "aliasvars\0222\n\014joinleftcols\030\017 \003(\0132\016.pg_que" +
-      "ry.NodeR\014joinleftcols\0224\n\rjoinrightcols\030\020" +
-      " \003(\0132\016.pg_query.NodeR\rjoinrightcols\022;\n\020j" +
-      "oin_using_alias\030\021 \001(\0132\017.pg_query.AliasR\020" +
-      "join_using_alias\022,\n\tfunctions\030\022 \003(\0132\016.pg" +
-      "_query.NodeR\tfunctions\022&\n\016funcordinality" +
-      "\030\023 \001(\010R\016funcordinality\0221\n\ttablefunc\030\024 \001(" +
-      "\0132\023.pg_query.TableFuncR\ttablefunc\0222\n\014val" +
-      "ues_lists\030\025 \003(\0132\016.pg_query.NodeR\014values_" +
-      "lists\022\030\n\007ctename\030\026 \001(\tR\007ctename\022 \n\013ctele" +
-      "velsup\030\027 \001(\rR\013ctelevelsup\022&\n\016self_refere" +
-      "nce\030\030 \001(\010R\016self_reference\022*\n\010coltypes\030\031 " +
-      "\003(\0132\016.pg_query.NodeR\010coltypes\022.\n\ncoltypm" +
-      "ods\030\032 \003(\0132\016.pg_query.NodeR\ncoltypmods\0224\n" +
-      "\rcolcollations\030\033 \003(\0132\016.pg_query.NodeR\rco" +
-      "lcollations\022\030\n\007enrname\030\034 \001(\tR\007enrname\022\034\n" +
-      "\tenrtuples\030\035 \001(\001R\tenrtuples\022\030\n\007lateral\030\036" +
-      " \001(\010R\007lateral\022\034\n\nin_from_cl\030\037 \001(\010R\010inFro" +
-      "mCl\0225\n\016security_quals\030  \003(\0132\016.pg_query.N" +
-      "odeR\rsecurityQuals\"\363\001\n\021RTEPermissionInfo" +
-      "\022\024\n\005relid\030\001 \001(\rR\005relid\022\020\n\003inh\030\002 \001(\010R\003inh" +
-      "\022%\n\016required_perms\030\003 \001(\004R\rrequiredPerms\022" +
-      "\"\n\rcheck_as_user\030\004 \001(\rR\013checkAsUser\022#\n\rs" +
-      "elected_cols\030\005 \003(\004R\014selectedCols\022#\n\rinse" +
-      "rted_cols\030\006 \003(\004R\014insertedCols\022!\n\014updated" +
-      "_cols\030\007 \003(\004R\013updatedCols\"\340\002\n\020RangeTblFun" +
-      "ction\022*\n\010funcexpr\030\001 \001(\0132\016.pg_query.NodeR" +
-      "\010funcexpr\022\"\n\014funccolcount\030\002 \001(\005R\014funccol" +
-      "count\0222\n\014funccolnames\030\003 \003(\0132\016.pg_query.N" +
-      "odeR\014funccolnames\0222\n\014funccoltypes\030\004 \003(\0132" +
-      "\016.pg_query.NodeR\014funccoltypes\0226\n\016funccol" +
-      "typmods\030\005 \003(\0132\016.pg_query.NodeR\016funccolty" +
-      "pmods\022<\n\021funccolcollations\030\006 \003(\0132\016.pg_qu" +
-      "ery.NodeR\021funccolcollations\022\036\n\nfuncparam" +
-      "s\030\007 \003(\004R\nfuncparams\"\207\001\n\021TableSampleClaus" +
-      "e\022\036\n\ntsmhandler\030\001 \001(\rR\ntsmhandler\022\"\n\004arg" +
-      "s\030\002 \003(\0132\016.pg_query.NodeR\004args\022.\n\nrepeata" +
-      "ble\030\003 \001(\0132\016.pg_query.NodeR\nrepeatable\"\254\001" +
-      "\n\017WithCheckOption\022%\n\004kind\030\001 \001(\0162\021.pg_que" +
-      "ry.WCOKindR\004kind\022\030\n\007relname\030\002 \001(\tR\007relna" +
-      "me\022\030\n\007polname\030\003 \001(\tR\007polname\022\"\n\004qual\030\004 \001" +
-      "(\0132\016.pg_query.NodeR\004qual\022\032\n\010cascaded\030\005 \001" +
-      "(\010R\010cascaded\"\250\001\n\017SortGroupClause\022+\n\022tle_" +
-      "sort_group_ref\030\001 \001(\rR\017tleSortGroupRef\022\022\n" +
-      "\004eqop\030\002 \001(\rR\004eqop\022\026\n\006sortop\030\003 \001(\rR\006sorto" +
-      "p\022 \n\013nulls_first\030\004 \001(\010R\013nulls_first\022\032\n\010h" +
-      "ashable\030\005 \001(\010R\010hashable\"\202\001\n\013GroupingSet\022" +
-      "-\n\004kind\030\001 \001(\0162\031.pg_query.GroupingSetKind" +
-      "R\004kind\022(\n\007content\030\002 \003(\0132\016.pg_query.NodeR" +
-      "\007content\022\032\n\010location\030\003 \001(\005R\010location\"\275\004\n" +
-      "\014WindowClause\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007ref" +
-      "name\030\002 \001(\tR\007refname\0229\n\020partition_clause\030" +
-      "\003 \003(\0132\016.pg_query.NodeR\017partitionClause\0221" +
-      "\n\014order_clause\030\004 \003(\0132\016.pg_query.NodeR\013or" +
-      "derClause\022#\n\rframe_options\030\005 \001(\005R\014frameO" +
-      "ptions\0221\n\014start_offset\030\006 \001(\0132\016.pg_query." +
-      "NodeR\013startOffset\022-\n\nend_offset\030\007 \001(\0132\016." +
-      "pg_query.NodeR\tendOffset\022-\n\023start_in_ran" +
-      "ge_func\030\010 \001(\rR\020startInRangeFunc\022)\n\021end_i" +
-      "n_range_func\030\t \001(\rR\016endInRangeFunc\022\"\n\rin" +
-      "_range_coll\030\n \001(\rR\013inRangeColl\022 \n\014in_ran" +
-      "ge_asc\030\013 \001(\010R\ninRangeAsc\022/\n\024in_range_nul" +
-      "ls_first\030\014 \001(\010R\021inRangeNullsFirst\022\026\n\006win" +
-      "ref\030\r \001(\rR\006winref\022!\n\014copied_order\030\016 \001(\010R" +
-      "\013copiedOrder\"\267\001\n\rRowMarkClause\022\020\n\003rti\030\001 " +
-      "\001(\rR\003rti\0228\n\010strength\030\002 \001(\0162\034.pg_query.Lo" +
-      "ckClauseStrengthR\010strength\0229\n\013wait_polic" +
-      "y\030\003 \001(\0162\030.pg_query.LockWaitPolicyR\nwaitP" +
-      "olicy\022\037\n\013pushed_down\030\004 \001(\010R\npushedDown\"j" +
-      "\n\nWithClause\022\"\n\004ctes\030\001 \003(\0132\016.pg_query.No" +
-      "deR\004ctes\022\034\n\trecursive\030\002 \001(\010R\trecursive\022\032" +
-      "\n\010location\030\003 \001(\005R\010location\"\247\001\n\013InferClau" +
-      "se\022/\n\013index_elems\030\001 \003(\0132\016.pg_query.NodeR" +
-      "\nindexElems\0221\n\014where_clause\030\002 \001(\0132\016.pg_q" +
-      "uery.NodeR\013whereClause\022\030\n\007conname\030\003 \001(\tR" +
-      "\007conname\022\032\n\010location\030\004 \001(\005R\010location\"\363\001\n" +
-      "\020OnConflictClause\0222\n\006action\030\001 \001(\0162\032.pg_q" +
-      "uery.OnConflictActionR\006action\022+\n\005infer\030\002" +
-      " \001(\0132\025.pg_query.InferClauseR\005infer\022/\n\013ta" +
-      "rget_list\030\003 \003(\0132\016.pg_query.NodeR\ntargetL" +
-      "ist\0221\n\014where_clause\030\004 \001(\0132\016.pg_query.Nod" +
-      "eR\013whereClause\022\032\n\010location\030\005 \001(\005R\010locati" +
-      "on\"\311\001\n\017CTESearchClause\0228\n\017search_col_lis" +
-      "t\030\001 \003(\0132\016.pg_query.NodeR\017search_col_list" +
-      "\0222\n\024search_breadth_first\030\002 \001(\010R\024search_b" +
-      "readth_first\022,\n\021search_seq_column\030\003 \001(\tR" +
-      "\021search_seq_column\022\032\n\010location\030\004 \001(\005R\010lo" +
-      "cation\"\362\003\n\016CTECycleClause\0226\n\016cycle_col_l" +
-      "ist\030\001 \003(\0132\016.pg_query.NodeR\016cycle_col_lis" +
-      "t\022,\n\021cycle_mark_column\030\002 \001(\tR\021cycle_mark" +
-      "_column\022:\n\020cycle_mark_value\030\003 \001(\0132\016.pg_q" +
-      "uery.NodeR\020cycle_mark_value\022>\n\022cycle_mar" +
-      "k_default\030\004 \001(\0132\016.pg_query.NodeR\022cycle_m" +
-      "ark_default\022,\n\021cycle_path_column\030\005 \001(\tR\021" +
-      "cycle_path_column\022\032\n\010location\030\006 \001(\005R\010loc" +
-      "ation\022(\n\017cycle_mark_type\030\007 \001(\rR\017cycle_ma" +
-      "rk_type\022,\n\021cycle_mark_typmod\030\010 \001(\005R\021cycl" +
-      "e_mark_typmod\0222\n\024cycle_mark_collation\030\t " +
-      "\001(\rR\024cycle_mark_collation\022(\n\017cycle_mark_" +
-      "neop\030\n \001(\rR\017cycle_mark_neop\"\210\005\n\017CommonTa" +
-      "bleExpr\022\030\n\007ctename\030\001 \001(\tR\007ctename\0224\n\rali" +
-      "ascolnames\030\002 \003(\0132\016.pg_query.NodeR\raliasc",
-      "olnames\022B\n\017ctematerialized\030\003 \001(\0162\030.pg_qu" +
-      "ery.CTEMaterializeR\017ctematerialized\022*\n\010c" +
-      "tequery\030\004 \001(\0132\016.pg_query.NodeR\010ctequery\022" +
-      "?\n\rsearch_clause\030\005 \001(\0132\031.pg_query.CTESea" +
-      "rchClauseR\rsearch_clause\022<\n\014cycle_clause" +
-      "\030\006 \001(\0132\030.pg_query.CTECycleClauseR\014cycle_" +
-      "clause\022\032\n\010location\030\007 \001(\005R\010location\022\"\n\014ct" +
-      "erecursive\030\010 \001(\010R\014cterecursive\022 \n\013cteref" +
-      "count\030\t \001(\005R\013cterefcount\0220\n\013ctecolnames\030" +
-      "\n \003(\0132\016.pg_query.NodeR\013ctecolnames\0220\n\013ct" +
-      "ecoltypes\030\013 \003(\0132\016.pg_query.NodeR\013ctecolt" +
-      "ypes\0224\n\rctecoltypmods\030\014 \003(\0132\016.pg_query.N" +
-      "odeR\rctecoltypmods\022:\n\020ctecolcollations\030\r" +
-      " \003(\0132\016.pg_query.NodeR\020ctecolcollations\"\275" +
-      "\002\n\017MergeWhenClause\0227\n\nmatch_kind\030\001 \001(\0162\030" +
-      ".pg_query.MergeMatchKindR\tmatchKind\0224\n\014c" +
-      "ommand_type\030\002 \001(\0162\021.pg_query.CmdTypeR\013co" +
-      "mmandType\0224\n\010override\030\003 \001(\0162\030.pg_query.O" +
-      "verridingKindR\010override\022,\n\tcondition\030\004 \001" +
-      "(\0132\016.pg_query.NodeR\tcondition\022/\n\013target_" +
-      "list\030\005 \003(\0132\016.pg_query.NodeR\ntargetList\022&" +
-      "\n\006values\030\006 \003(\0132\016.pg_query.NodeR\006values\"Y" +
-      "\n\021TriggerTransition\022\022\n\004name\030\001 \001(\tR\004name\022" +
-      "\025\n\006is_new\030\002 \001(\010R\005isNew\022\031\n\010is_table\030\003 \001(\010" +
-      "R\007isTable\"t\n\nJsonOutput\022/\n\ttype_name\030\001 \001" +
-      "(\0132\022.pg_query.TypeNameR\010typeName\0225\n\tretu" +
-      "rning\030\002 \001(\0132\027.pg_query.JsonReturningR\tre" +
-      "turning\"M\n\014JsonArgument\022)\n\003val\030\001 \001(\0132\027.p" +
-      "g_query.JsonValueExprR\003val\022\022\n\004name\030\002 \001(\t" +
-      "R\004name\"\372\003\n\014JsonFuncExpr\022$\n\002op\030\001 \001(\0162\024.pg" +
-      "_query.JsonExprOpR\002op\022 \n\013column_name\030\002 \001" +
-      "(\tR\013column_name\022;\n\014context_item\030\003 \001(\0132\027." +
-      "pg_query.JsonValueExprR\014context_item\022*\n\010" +
-      "pathspec\030\004 \001(\0132\016.pg_query.NodeR\010pathspec" +
-      "\022(\n\007passing\030\005 \003(\0132\016.pg_query.NodeR\007passi" +
-      "ng\022,\n\006output\030\006 \001(\0132\024.pg_query.JsonOutput" +
-      "R\006output\0222\n\010on_empty\030\007 \001(\0132\026.pg_query.Js" +
-      "onBehaviorR\010on_empty\0222\n\010on_error\030\010 \001(\0132\026" +
-      ".pg_query.JsonBehaviorR\010on_error\022/\n\007wrap" +
-      "per\030\t \001(\0162\025.pg_query.JsonWrapperR\007wrappe" +
-      "r\022,\n\006quotes\030\n \001(\0162\024.pg_query.JsonQuotesR" +
-      "\006quotes\022\032\n\010location\030\013 \001(\005R\010location\"\221\001\n\021" +
-      "JsonTablePathSpec\022&\n\006string\030\001 \001(\0132\016.pg_q" +
-      "uery.NodeR\006string\022\022\n\004name\030\002 \001(\tR\004name\022$\n" +
-      "\rname_location\030\003 \001(\005R\rname_location\022\032\n\010l" +
-      "ocation\030\004 \001(\005R\010location\"\346\002\n\tJsonTable\022;\n" +
-      "\014context_item\030\001 \001(\0132\027.pg_query.JsonValue" +
-      "ExprR\014context_item\0227\n\010pathspec\030\002 \001(\0132\033.p" +
-      "g_query.JsonTablePathSpecR\010pathspec\022(\n\007p" +
-      "assing\030\003 \003(\0132\016.pg_query.NodeR\007passing\022(\n" +
-      "\007columns\030\004 \003(\0132\016.pg_query.NodeR\007columns\022" +
-      "2\n\010on_error\030\005 \001(\0132\026.pg_query.JsonBehavio" +
-      "rR\010on_error\022%\n\005alias\030\006 \001(\0132\017.pg_query.Al" +
-      "iasR\005alias\022\030\n\007lateral\030\007 \001(\010R\007lateral\022\032\n\010" +
-      "location\030\010 \001(\005R\010location\"\203\004\n\017JsonTableCo" +
-      "lumn\0227\n\007coltype\030\001 \001(\0162\035.pg_query.JsonTab" +
-      "leColumnTypeR\007coltype\022\022\n\004name\030\002 \001(\tR\004nam" +
-      "e\022/\n\ttype_name\030\003 \001(\0132\022.pg_query.TypeName" +
-      "R\010typeName\0227\n\010pathspec\030\004 \001(\0132\033.pg_query." +
-      "JsonTablePathSpecR\010pathspec\022,\n\006format\030\005 " +
-      "\001(\0132\024.pg_query.JsonFormatR\006format\022/\n\007wra" +
-      "pper\030\006 \001(\0162\025.pg_query.JsonWrapperR\007wrapp" +
-      "er\022,\n\006quotes\030\007 \001(\0162\024.pg_query.JsonQuotes" +
-      "R\006quotes\022(\n\007columns\030\010 \003(\0132\016.pg_query.Nod" +
-      "eR\007columns\0222\n\010on_empty\030\t \001(\0132\026.pg_query." +
-      "JsonBehaviorR\010on_empty\0222\n\010on_error\030\n \001(\013" +
-      "2\026.pg_query.JsonBehaviorR\010on_error\022\032\n\010lo" +
-      "cation\030\013 \001(\005R\010location\"_\n\014JsonKeyValue\022 " +
-      "\n\003key\030\001 \001(\0132\016.pg_query.NodeR\003key\022-\n\005valu" +
-      "e\030\002 \001(\0132\027.pg_query.JsonValueExprR\005value\"" +
-      "\250\001\n\rJsonParseExpr\022+\n\004expr\030\001 \001(\0132\027.pg_que" +
-      "ry.JsonValueExprR\004expr\022,\n\006output\030\002 \001(\0132\024" +
-      ".pg_query.JsonOutputR\006output\022 \n\013unique_k" +
-      "eys\030\003 \001(\010R\013unique_keys\022\032\n\010location\030\004 \001(\005" +
-      "R\010location\"~\n\016JsonScalarExpr\022\"\n\004expr\030\001 \001" +
-      "(\0132\016.pg_query.NodeR\004expr\022,\n\006output\030\002 \001(\013" +
-      "2\024.pg_query.JsonOutputR\006output\022\032\n\010locati" +
-      "on\030\003 \001(\005R\010location\"\212\001\n\021JsonSerializeExpr" +
-      "\022+\n\004expr\030\001 \001(\0132\027.pg_query.JsonValueExprR" +
-      "\004expr\022,\n\006output\030\002 \001(\0132\024.pg_query.JsonOut" +
-      "putR\006output\022\032\n\010location\030\003 \001(\005R\010location\"" +
-      "\307\001\n\025JsonObjectConstructor\022$\n\005exprs\030\001 \003(\013" +
-      "2\016.pg_query.NodeR\005exprs\022,\n\006output\030\002 \001(\0132" +
-      "\024.pg_query.JsonOutputR\006output\022&\n\016absent_" +
-      "on_null\030\003 \001(\010R\016absent_on_null\022\026\n\006unique\030" +
-      "\004 \001(\010R\006unique\022\032\n\010location\030\005 \001(\005R\010locatio" +
-      "n\"\256\001\n\024JsonArrayConstructor\022$\n\005exprs\030\001 \003(" +
-      "\0132\016.pg_query.NodeR\005exprs\022,\n\006output\030\002 \001(\013" +
-      "2\024.pg_query.JsonOutputR\006output\022&\n\016absent" +
-      "_on_null\030\003 \001(\010R\016absent_on_null\022\032\n\010locati" +
-      "on\030\004 \001(\005R\010location\"\341\001\n\031JsonArrayQueryCon" +
-      "structor\022$\n\005query\030\001 \001(\0132\016.pg_query.NodeR" +
-      "\005query\022,\n\006output\030\002 \001(\0132\024.pg_query.JsonOu" +
-      "tputR\006output\022,\n\006format\030\003 \001(\0132\024.pg_query." +
-      "JsonFormatR\006format\022&\n\016absent_on_null\030\004 \001" +
-      "(\010R\016absent_on_null\022\032\n\010location\030\005 \001(\005R\010lo" +
-      "cation\"\345\001\n\022JsonAggConstructor\022,\n\006output\030" +
-      "\001 \001(\0132\024.pg_query.JsonOutputR\006output\022.\n\na" +
-      "gg_filter\030\002 \001(\0132\016.pg_query.NodeR\nagg_fil" +
-      "ter\022,\n\tagg_order\030\003 \003(\0132\016.pg_query.NodeR\t" +
-      "agg_order\022\'\n\004over\030\004 \001(\0132\023.pg_query.Windo" +
-      "wDefR\004over\022\032\n\010location\030\005 \001(\005R\010location\"\271" +
-      "\001\n\rJsonObjectAgg\022>\n\013constructor\030\001 \001(\0132\034." +
-      "pg_query.JsonAggConstructorR\013constructor" +
-      "\022(\n\003arg\030\002 \001(\0132\026.pg_query.JsonKeyValueR\003a" +
-      "rg\022&\n\016absent_on_null\030\003 \001(\010R\016absent_on_nu" +
-      "ll\022\026\n\006unique\030\004 \001(\010R\006unique\"\241\001\n\014JsonArray" +
-      "Agg\022>\n\013constructor\030\001 \001(\0132\034.pg_query.Json" +
-      "AggConstructorR\013constructor\022)\n\003arg\030\002 \001(\013" +
-      "2\027.pg_query.JsonValueExprR\003arg\022&\n\016absent" +
-      "_on_null\030\003 \001(\010R\016absent_on_null\"o\n\007RawStm" +
-      "t\022\"\n\004stmt\030\001 \001(\0132\016.pg_query.NodeR\004stmt\022$\n" +
-      "\rstmt_location\030\002 \001(\005R\rstmt_location\022\032\n\010s" +
-      "tmt_len\030\003 \001(\005R\010stmt_len\"\377\002\n\nInsertStmt\022." +
-      "\n\010relation\030\001 \001(\0132\022.pg_query.RangeVarR\010re" +
-      "lation\022\"\n\004cols\030\002 \003(\0132\016.pg_query.NodeR\004co" +
-      "ls\022/\n\013select_stmt\030\003 \001(\0132\016.pg_query.NodeR" +
-      "\nselectStmt\022H\n\022on_conflict_clause\030\004 \001(\0132" +
-      "\032.pg_query.OnConflictClauseR\020onConflictC" +
-      "lause\0225\n\016returning_list\030\005 \003(\0132\016.pg_query" +
-      ".NodeR\rreturningList\0225\n\013with_clause\030\006 \001(" +
-      "\0132\024.pg_query.WithClauseR\nwithClause\0224\n\010o" +
-      "verride\030\007 \001(\0162\030.pg_query.OverridingKindR" +
-      "\010override\"\220\002\n\nDeleteStmt\022.\n\010relation\030\001 \001" +
-      "(\0132\022.pg_query.RangeVarR\010relation\0221\n\014usin" +
-      "g_clause\030\002 \003(\0132\016.pg_query.NodeR\013usingCla" +
-      "use\0221\n\014where_clause\030\003 \001(\0132\016.pg_query.Nod" +
-      "eR\013whereClause\0225\n\016returning_list\030\004 \003(\0132\016" +
-      ".pg_query.NodeR\rreturningList\0225\n\013with_cl" +
-      "ause\030\005 \001(\0132\024.pg_query.WithClauseR\nwithCl" +
-      "ause\"\277\002\n\nUpdateStmt\022.\n\010relation\030\001 \001(\0132\022." +
-      "pg_query.RangeVarR\010relation\022/\n\013target_li" +
-      "st\030\002 \003(\0132\016.pg_query.NodeR\ntargetList\0221\n\014" +
-      "where_clause\030\003 \001(\0132\016.pg_query.NodeR\013wher" +
-      "eClause\022/\n\013from_clause\030\004 \003(\0132\016.pg_query." +
-      "NodeR\nfromClause\0225\n\016returning_list\030\005 \003(\013" +
-      "2\016.pg_query.NodeR\rreturningList\0225\n\013with_" +
-      "clause\030\006 \001(\0132\024.pg_query.WithClauseR\nwith" +
-      "Clause\"\327\002\n\tMergeStmt\022.\n\010relation\030\001 \001(\0132\022" +
-      ".pg_query.RangeVarR\010relation\0227\n\017source_r" +
-      "elation\030\002 \001(\0132\016.pg_query.NodeR\016sourceRel" +
-      "ation\0225\n\016join_condition\030\003 \001(\0132\016.pg_query" +
-      ".NodeR\rjoinCondition\022<\n\022merge_when_claus" +
-      "es\030\004 \003(\0132\016.pg_query.NodeR\020mergeWhenClaus" +
-      "es\0225\n\016returning_list\030\005 \003(\0132\016.pg_query.No" +
-      "deR\rreturningList\0225\n\013with_clause\030\006 \001(\0132\024" +
-      ".pg_query.WithClauseR\nwithClause\"\323\007\n\nSel" +
-      "ectStmt\0227\n\017distinct_clause\030\001 \003(\0132\016.pg_qu" +
-      "ery.NodeR\016distinctClause\0225\n\013into_clause\030" +
-      "\002 \001(\0132\024.pg_query.IntoClauseR\nintoClause\022" +
-      "/\n\013target_list\030\003 \003(\0132\016.pg_query.NodeR\nta" +
-      "rgetList\022/\n\013from_clause\030\004 \003(\0132\016.pg_query" +
-      ".NodeR\nfromClause\0221\n\014where_clause\030\005 \001(\0132" +
-      "\016.pg_query.NodeR\013whereClause\0221\n\014group_cl" +
-      "ause\030\006 \003(\0132\016.pg_query.NodeR\013groupClause\022" +
-      "%\n\016group_distinct\030\007 \001(\010R\rgroupDistinct\0223" +
-      "\n\rhaving_clause\030\010 \001(\0132\016.pg_query.NodeR\014h" +
-      "avingClause\0223\n\rwindow_clause\030\t \003(\0132\016.pg_" +
-      "query.NodeR\014windowClause\0221\n\014values_lists" +
-      "\030\n \003(\0132\016.pg_query.NodeR\013valuesLists\022/\n\013s" +
-      "ort_clause\030\013 \003(\0132\016.pg_query.NodeR\nsortCl" +
-      "ause\0221\n\014limit_offset\030\014 \001(\0132\016.pg_query.No" +
-      "deR\013limitOffset\022/\n\013limit_count\030\r \001(\0132\016.p" +
-      "g_query.NodeR\nlimitCount\0228\n\014limit_option" +
-      "\030\016 \001(\0162\025.pg_query.LimitOptionR\013limitOpti" +
-      "on\0225\n\016locking_clause\030\017 \003(\0132\016.pg_query.No" +
-      "deR\rlockingClause\0225\n\013with_clause\030\020 \001(\0132\024" +
-      ".pg_query.WithClauseR\nwithClause\022&\n\002op\030\021" +
-      " \001(\0162\026.pg_query.SetOperationR\002op\022\020\n\003all\030" +
-      "\022 \001(\010R\003all\022(\n\004larg\030\023 \001(\0132\024.pg_query.Sele" +
-      "ctStmtR\004larg\022(\n\004rarg\030\024 \001(\0132\024.pg_query.Se" +
-      "lectStmtR\004rarg\"\336\002\n\020SetOperationStmt\022&\n\002o" +
-      "p\030\001 \001(\0162\026.pg_query.SetOperationR\002op\022\020\n\003a" +
-      "ll\030\002 \001(\010R\003all\022\"\n\004larg\030\003 \001(\0132\016.pg_query.N" +
-      "odeR\004larg\022\"\n\004rarg\030\004 \001(\0132\016.pg_query.NodeR" +
-      "\004rarg\022+\n\tcol_types\030\005 \003(\0132\016.pg_query.Node" +
-      "R\010colTypes\022/\n\013col_typmods\030\006 \003(\0132\016.pg_que" +
-      "ry.NodeR\ncolTypmods\0225\n\016col_collations\030\007 " +
-      "\003(\0132\016.pg_query.NodeR\rcolCollations\0223\n\rgr" +
-      "oup_clauses\030\010 \003(\0132\016.pg_query.NodeR\014group" +
-      "Clauses\":\n\nReturnStmt\022,\n\treturnval\030\001 \001(\013" +
-      "2\016.pg_query.NodeR\treturnval\"\260\001\n\014PLAssign" +
-      "Stmt\022\022\n\004name\030\001 \001(\tR\004name\0220\n\013indirection\030" +
-      "\002 \003(\0132\016.pg_query.NodeR\013indirection\022\026\n\006nn" +
-      "ames\030\003 \001(\005R\006nnames\022&\n\003val\030\004 \001(\0132\024.pg_que" +
-      "ry.SelectStmtR\003val\022\032\n\010location\030\005 \001(\005R\010lo" +
-      "cation\"\271\001\n\020CreateSchemaStmt\022\036\n\nschemanam" +
-      "e\030\001 \001(\tR\nschemaname\022.\n\010authrole\030\002 \001(\0132\022." +
-      "pg_query.RoleSpecR\010authrole\022/\n\013schema_el" +
-      "ts\030\003 \003(\0132\016.pg_query.NodeR\nschemaElts\022$\n\r" +
-      "if_not_exists\030\004 \001(\010R\rif_not_exists\"\264\001\n\016A" +
-      "lterTableStmt\022.\n\010relation\030\001 \001(\0132\022.pg_que" +
-      "ry.RangeVarR\010relation\022\"\n\004cmds\030\002 \003(\0132\016.pg" +
-      "_query.NodeR\004cmds\022.\n\007objtype\030\003 \001(\0162\024.pg_" +
-      "query.ObjectTypeR\007objtype\022\036\n\nmissing_ok\030" +
-      "\004 \001(\010R\nmissing_ok\"O\n\023ReplicaIdentityStmt" +
-      "\022$\n\ridentity_type\030\001 \001(\tR\ridentity_type\022\022" +
-      "\n\004name\030\002 \001(\tR\004name\"\251\002\n\rAlterTableCmd\0222\n\007" +
-      "subtype\030\001 \001(\0162\030.pg_query.AlterTableTypeR" +
-      "\007subtype\022\022\n\004name\030\002 \001(\tR\004name\022\020\n\003num\030\003 \001(" +
-      "\005R\003num\022.\n\010newowner\030\004 \001(\0132\022.pg_query.Role" +
-      "SpecR\010newowner\022 \n\003def\030\005 \001(\0132\016.pg_query.N" +
-      "odeR\003def\0222\n\010behavior\030\006 \001(\0162\026.pg_query.Dr" +
-      "opBehaviorR\010behavior\022\036\n\nmissing_ok\030\007 \001(\010" +
-      "R\nmissing_ok\022\030\n\007recurse\030\010 \001(\010R\007recurse\"@" +
-      "\n\022AlterCollationStmt\022*\n\010collname\030\001 \003(\0132\016" +
-      ".pg_query.NodeR\010collname\"\342\001\n\017AlterDomain" +
-      "Stmt\022\030\n\007subtype\030\001 \001(\tR\007subtype\022+\n\ttype_n" +
-      "ame\030\002 \003(\0132\016.pg_query.NodeR\010typeName\022\022\n\004n" +
-      "ame\030\003 \001(\tR\004name\022 \n\003def\030\004 \001(\0132\016.pg_query." +
-      "NodeR\003def\0222\n\010behavior\030\005 \001(\0162\026.pg_query.D" +
-      "ropBehaviorR\010behavior\022\036\n\nmissing_ok\030\006 \001(" +
-      "\010R\nmissing_ok\"\232\003\n\tGrantStmt\022\032\n\010is_grant\030" +
-      "\001 \001(\010R\010is_grant\0225\n\010targtype\030\002 \001(\0162\031.pg_q" +
-      "uery.GrantTargetTypeR\010targtype\022.\n\007objtyp" +
-      "e\030\003 \001(\0162\024.pg_query.ObjectTypeR\007objtype\022(" +
-      "\n\007objects\030\004 \003(\0132\016.pg_query.NodeR\007objects" +
-      "\022.\n\nprivileges\030\005 \003(\0132\016.pg_query.NodeR\npr" +
-      "ivileges\022*\n\010grantees\030\006 \003(\0132\016.pg_query.No" +
-      "deR\010grantees\022\"\n\014grant_option\030\007 \001(\010R\014gran" +
-      "t_option\022,\n\007grantor\030\010 \001(\0132\022.pg_query.Rol" +
-      "eSpecR\007grantor\0222\n\010behavior\030\t \001(\0162\026.pg_qu" +
-      "ery.DropBehaviorR\010behavior\"\302\001\n\016ObjectWit" +
-      "hArgs\022(\n\007objname\030\001 \003(\0132\016.pg_query.NodeR\007" +
-      "objname\022(\n\007objargs\030\002 \003(\0132\016.pg_query.Node" +
-      "R\007objargs\0220\n\013objfuncargs\030\003 \003(\0132\016.pg_quer" +
-      "y.NodeR\013objfuncargs\022*\n\020args_unspecified\030" +
-      "\004 \001(\010R\020args_unspecified\"N\n\nAccessPriv\022\034\n" +
-      "\tpriv_name\030\001 \001(\tR\tpriv_name\022\"\n\004cols\030\002 \003(" +
-      "\0132\016.pg_query.NodeR\004cols\"\233\002\n\rGrantRoleStm" +
-      "t\0224\n\rgranted_roles\030\001 \003(\0132\016.pg_query.Node" +
-      "R\rgranted_roles\0224\n\rgrantee_roles\030\002 \003(\0132\016" +
-      ".pg_query.NodeR\rgrantee_roles\022\032\n\010is_gran" +
-      "t\030\003 \001(\010R\010is_grant\022 \n\003opt\030\004 \003(\0132\016.pg_quer" +
-      "y.NodeR\003opt\022,\n\007grantor\030\005 \001(\0132\022.pg_query." +
-      "RoleSpecR\007grantor\0222\n\010behavior\030\006 \001(\0162\026.pg" +
-      "_query.DropBehaviorR\010behavior\"s\n\032AlterDe" +
-      "faultPrivilegesStmt\022(\n\007options\030\001 \003(\0132\016.p" +
-      "g_query.NodeR\007options\022+\n\006action\030\002 \001(\0132\023." +
-      "pg_query.GrantStmtR\006action\"\275\002\n\010CopyStmt\022" +
-      ".\n\010relation\030\001 \001(\0132\022.pg_query.RangeVarR\010r" +
-      "elation\022$\n\005query\030\002 \001(\0132\016.pg_query.NodeR\005" +
-      "query\022(\n\007attlist\030\003 \003(\0132\016.pg_query.NodeR\007" +
-      "attlist\022\030\n\007is_from\030\004 \001(\010R\007is_from\022\036\n\nis_" +
-      "program\030\005 \001(\010R\nis_program\022\032\n\010filename\030\006 " +
-      "\001(\tR\010filename\022(\n\007options\030\007 \003(\0132\016.pg_quer" +
-      "y.NodeR\007options\0221\n\014where_clause\030\010 \001(\0132\016." +
-      "pg_query.NodeR\013whereClause\"\224\001\n\017VariableS" +
-      "etStmt\022-\n\004kind\030\001 \001(\0162\031.pg_query.Variable" +
-      "SetKindR\004kind\022\022\n\004name\030\002 \001(\tR\004name\022\"\n\004arg" +
-      "s\030\003 \003(\0132\016.pg_query.NodeR\004args\022\032\n\010is_loca" +
-      "l\030\004 \001(\010R\010is_local\"&\n\020VariableShowStmt\022\022\n" +
-      "\004name\030\001 \001(\tR\004name\"\313\004\n\nCreateStmt\022.\n\010rela" +
-      "tion\030\001 \001(\0132\022.pg_query.RangeVarR\010relation" +
-      "\022-\n\ntable_elts\030\002 \003(\0132\016.pg_query.NodeR\tta" +
-      "bleElts\0223\n\rinh_relations\030\003 \003(\0132\016.pg_quer" +
-      "y.NodeR\014inhRelations\022:\n\tpartbound\030\004 \001(\0132" +
-      "\034.pg_query.PartitionBoundSpecR\tpartbound" +
-      "\0223\n\010partspec\030\005 \001(\0132\027.pg_query.PartitionS" +
-      "pecR\010partspec\0223\n\013of_typename\030\006 \001(\0132\022.pg_" +
-      "query.TypeNameR\nofTypename\0220\n\013constraint" +
-      "s\030\007 \003(\0132\016.pg_query.NodeR\013constraints\022(\n\007" +
-      "options\030\010 \003(\0132\016.pg_query.NodeR\007options\0224" +
-      "\n\010oncommit\030\t \001(\0162\030.pg_query.OnCommitActi" +
-      "onR\010oncommit\022&\n\016tablespacename\030\n \001(\tR\016ta" +
-      "blespacename\022#\n\raccess_method\030\013 \001(\tR\014acc" +
-      "essMethod\022$\n\rif_not_exists\030\014 \001(\010R\rif_not" +
-      "_exists\"\372\t\n\nConstraint\022.\n\007contype\030\001 \001(\0162" +
-      "\024.pg_query.ConstrTypeR\007contype\022\030\n\007connam" +
-      "e\030\002 \001(\tR\007conname\022\036\n\ndeferrable\030\003 \001(\010R\nde" +
-      "ferrable\022\"\n\014initdeferred\030\004 \001(\010R\014initdefe" +
-      "rred\022(\n\017skip_validation\030\005 \001(\010R\017skip_vali" +
-      "dation\022(\n\017initially_valid\030\006 \001(\010R\017initial" +
-      "ly_valid\022$\n\ris_no_inherit\030\007 \001(\010R\ris_no_i" +
-      "nherit\022*\n\010raw_expr\030\010 \001(\0132\016.pg_query.Node" +
-      "R\010raw_expr\022 \n\013cooked_expr\030\t \001(\tR\013cooked_" +
-      "expr\022&\n\016generated_when\030\n \001(\tR\016generated_" +
-      "when\022\032\n\010inhcount\030\013 \001(\005R\010inhcount\022.\n\022null" +
-      "s_not_distinct\030\014 \001(\010R\022nulls_not_distinct" +
-      "\022\"\n\004keys\030\r \003(\0132\016.pg_query.NodeR\004keys\022,\n\t" +
-      "including\030\016 \003(\0132\016.pg_query.NodeR\tincludi" +
-      "ng\022.\n\nexclusions\030\017 \003(\0132\016.pg_query.NodeR\n" +
-      "exclusions\022(\n\007options\030\020 \003(\0132\016.pg_query.N" +
-      "odeR\007options\022\034\n\tindexname\030\021 \001(\tR\tindexna" +
-      "me\022\036\n\nindexspace\030\022 \001(\tR\nindexspace\0222\n\024re" +
-      "set_default_tblspc\030\023 \001(\010R\024reset_default_" +
-      "tblspc\022$\n\raccess_method\030\024 \001(\tR\raccess_me" +
-      "thod\0222\n\014where_clause\030\025 \001(\0132\016.pg_query.No" +
-      "deR\014where_clause\022,\n\007pktable\030\026 \001(\0132\022.pg_q" +
-      "uery.RangeVarR\007pktable\022*\n\010fk_attrs\030\027 \003(\013" +
-      "2\016.pg_query.NodeR\010fk_attrs\022*\n\010pk_attrs\030\030" +
-      " \003(\0132\016.pg_query.NodeR\010pk_attrs\022\"\n\014fk_mat" +
-      "chtype\030\031 \001(\tR\014fk_matchtype\022$\n\rfk_upd_act" +
-      "ion\030\032 \001(\tR\rfk_upd_action\022$\n\rfk_del_actio" +
-      "n\030\033 \001(\tR\rfk_del_action\0228\n\017fk_del_set_col" +
-      "s\030\034 \003(\0132\016.pg_query.NodeR\017fk_del_set_cols" +
-      "\0224\n\rold_conpfeqop\030\035 \003(\0132\016.pg_query.NodeR" +
-      "\rold_conpfeqop\022(\n\017old_pktable_oid\030\036 \001(\rR" +
-      "\017old_pktable_oid\022\032\n\010location\030\037 \001(\005R\010loca" +
-      "tion\"\256\001\n\024CreateTableSpaceStmt\022&\n\016tablesp" +
-      "acename\030\001 \001(\tR\016tablespacename\022(\n\005owner\030\002" +
-      " \001(\0132\022.pg_query.RoleSpecR\005owner\022\032\n\010locat" +
-      "ion\030\003 \001(\tR\010location\022(\n\007options\030\004 \003(\0132\016.p" +
-      "g_query.NodeR\007options\"\\\n\022DropTableSpaceS" +
-      "tmt\022&\n\016tablespacename\030\001 \001(\tR\016tablespacen" +
-      "ame\022\036\n\nmissing_ok\030\002 \001(\010R\nmissing_ok\"\211\001\n\032" +
-      "AlterTableSpaceOptionsStmt\022&\n\016tablespace" +
-      "name\030\001 \001(\tR\016tablespacename\022(\n\007options\030\002 " +
-      "\003(\0132\016.pg_query.NodeR\007options\022\031\n\010is_reset" +
-      "\030\003 \001(\010R\007isReset\"\347\001\n\025AlterTableMoveAllStm" +
-      "t\0220\n\023orig_tablespacename\030\001 \001(\tR\023orig_tab" +
-      "lespacename\022.\n\007objtype\030\002 \001(\0162\024.pg_query." +
-      "ObjectTypeR\007objtype\022$\n\005roles\030\003 \003(\0132\016.pg_" +
-      "query.NodeR\005roles\022.\n\022new_tablespacename\030" +
-      "\004 \001(\tR\022new_tablespacename\022\026\n\006nowait\030\005 \001(" +
-      "\010R\006nowait\"\177\n\023CreateExtensionStmt\022\030\n\007extn" +
-      "ame\030\001 \001(\tR\007extname\022$\n\rif_not_exists\030\002 \001(" +
-      "\010R\rif_not_exists\022(\n\007options\030\003 \003(\0132\016.pg_q" +
-      "uery.NodeR\007options\"X\n\022AlterExtensionStmt" +
-      "\022\030\n\007extname\030\001 \001(\tR\007extname\022(\n\007options\030\002 " +
-      "\003(\0132\016.pg_query.NodeR\007options\"\246\001\n\032AlterEx" +
-      "tensionContentsStmt\022\030\n\007extname\030\001 \001(\tR\007ex" +
-      "tname\022\026\n\006action\030\002 \001(\005R\006action\022.\n\007objtype" +
-      "\030\003 \001(\0162\024.pg_query.ObjectTypeR\007objtype\022&\n" +
-      "\006object\030\004 \001(\0132\016.pg_query.NodeR\006object\"\207\001" +
-      "\n\rCreateFdwStmt\022\030\n\007fdwname\030\001 \001(\tR\007fdwnam" +
-      "e\0222\n\014func_options\030\002 \003(\0132\016.pg_query.NodeR" +
-      "\014func_options\022(\n\007options\030\003 \003(\0132\016.pg_quer" +
-      "y.NodeR\007options\"\206\001\n\014AlterFdwStmt\022\030\n\007fdwn" +
-      "ame\030\001 \001(\tR\007fdwname\0222\n\014func_options\030\002 \003(\013" +
-      "2\016.pg_query.NodeR\014func_options\022(\n\007option" +
-      "s\030\003 \003(\0132\016.pg_query.NodeR\007options\"\335\001\n\027Cre" +
-      "ateForeignServerStmt\022\036\n\nservername\030\001 \001(\t" +
-      "R\nservername\022\036\n\nservertype\030\002 \001(\tR\nserver" +
-      "type\022\030\n\007version\030\003 \001(\tR\007version\022\030\n\007fdwnam" +
-      "e\030\004 \001(\tR\007fdwname\022$\n\rif_not_exists\030\005 \001(\010R" +
-      "\rif_not_exists\022(\n\007options\030\006 \003(\0132\016.pg_que" +
-      "ry.NodeR\007options\"\236\001\n\026AlterForeignServerS" +
-      "tmt\022\036\n\nservername\030\001 \001(\tR\nservername\022\030\n\007v" +
-      "ersion\030\002 \001(\tR\007version\022(\n\007options\030\003 \003(\0132\016" +
-      ".pg_query.NodeR\007options\022 \n\013has_version\030\004" +
-      " \001(\010R\013has_version\"\221\001\n\026CreateForeignTable" +
-      "Stmt\022-\n\tbase_stmt\030\001 \001(\0132\024.pg_query.Creat" +
-      "eStmtR\004base\022\036\n\nservername\030\002 \001(\tR\nservern" +
-      "ame\022(\n\007options\030\003 \003(\0132\016.pg_query.NodeR\007op" +
-      "tions\"\257\001\n\025CreateUserMappingStmt\022&\n\004user\030" +
-      "\001 \001(\0132\022.pg_query.RoleSpecR\004user\022\036\n\nserve" +
-      "rname\030\002 \001(\tR\nservername\022$\n\rif_not_exists" +
-      "\030\003 \001(\010R\rif_not_exists\022(\n\007options\030\004 \003(\0132\016" +
-      ".pg_query.NodeR\007options\"\210\001\n\024AlterUserMap" +
-      "pingStmt\022&\n\004user\030\001 \001(\0132\022.pg_query.RoleSp" +
-      "ecR\004user\022\036\n\nservername\030\002 \001(\tR\nservername" +
-      "\022(\n\007options\030\003 \003(\0132\016.pg_query.NodeR\007optio" +
-      "ns\"}\n\023DropUserMappingStmt\022&\n\004user\030\001 \001(\0132" +
-      "\022.pg_query.RoleSpecR\004user\022\036\n\nservername\030" +
-      "\002 \001(\tR\nservername\022\036\n\nmissing_ok\030\003 \001(\010R\nm" +
-      "issing_ok\"\240\002\n\027ImportForeignSchemaStmt\022 \n" +
-      "\013server_name\030\001 \001(\tR\013server_name\022$\n\rremot" +
-      "e_schema\030\002 \001(\tR\rremote_schema\022\"\n\014local_s" +
-      "chema\030\003 \001(\tR\014local_schema\022?\n\tlist_type\030\004" +
-      " \001(\0162!.pg_query.ImportForeignSchemaTypeR" +
-      "\tlist_type\022.\n\ntable_list\030\005 \003(\0132\016.pg_quer" +
-      "y.NodeR\ntable_list\022(\n\007options\030\006 \003(\0132\016.pg" +
-      "_query.NodeR\007options\"\224\002\n\020CreatePolicyStm" +
-      "t\022 \n\013policy_name\030\001 \001(\tR\013policy_name\022(\n\005t" +
-      "able\030\002 \001(\0132\022.pg_query.RangeVarR\005table\022\032\n" +
-      "\010cmd_name\030\003 \001(\tR\010cmd_name\022\036\n\npermissive\030" +
-      "\004 \001(\010R\npermissive\022$\n\005roles\030\005 \003(\0132\016.pg_qu" +
-      "ery.NodeR\005roles\022\"\n\004qual\030\006 \001(\0132\016.pg_query" +
-      ".NodeR\004qual\022.\n\nwith_check\030\007 \001(\0132\016.pg_que" +
-      "ry.NodeR\nwith_check\"\327\001\n\017AlterPolicyStmt\022" +
-      " \n\013policy_name\030\001 \001(\tR\013policy_name\022(\n\005tab" +
-      "le\030\002 \001(\0132\022.pg_query.RangeVarR\005table\022$\n\005r" +
-      "oles\030\003 \003(\0132\016.pg_query.NodeR\005roles\022\"\n\004qua" +
-      "l\030\004 \001(\0132\016.pg_query.NodeR\004qual\022.\n\nwith_ch" +
-      "eck\030\005 \001(\0132\016.pg_query.NodeR\nwith_check\"r\n" +
-      "\014CreateAmStmt\022\026\n\006amname\030\001 \001(\tR\006amname\0222\n" +
-      "\014handler_name\030\002 \003(\0132\016.pg_query.NodeR\014han" +
-      "dler_name\022\026\n\006amtype\030\003 \001(\tR\006amtype\"\266\004\n\016Cr" +
-      "eateTrigStmt\022\030\n\007replace\030\001 \001(\010R\007replace\022\"" +
-      "\n\014isconstraint\030\002 \001(\010R\014isconstraint\022\032\n\010tr" +
-      "igname\030\003 \001(\tR\010trigname\022.\n\010relation\030\004 \001(\013" +
-      "2\022.pg_query.RangeVarR\010relation\022*\n\010funcna" +
-      "me\030\005 \003(\0132\016.pg_query.NodeR\010funcname\022\"\n\004ar" +
-      "gs\030\006 \003(\0132\016.pg_query.NodeR\004args\022\020\n\003row\030\007 " +
-      "\001(\010R\003row\022\026\n\006timing\030\010 \001(\005R\006timing\022\026\n\006even" +
-      "ts\030\t \001(\005R\006events\022(\n\007columns\030\n \003(\0132\016.pg_q" +
-      "uery.NodeR\007columns\022/\n\013when_clause\030\013 \001(\0132" +
-      "\016.pg_query.NodeR\nwhenClause\0227\n\017transitio" +
-      "n_rels\030\014 \003(\0132\016.pg_query.NodeR\016transition" +
-      "Rels\022\036\n\ndeferrable\030\r \001(\010R\ndeferrable\022\"\n\014" +
-      "initdeferred\030\016 \001(\010R\014initdeferred\0220\n\tcons" +
-      "trrel\030\017 \001(\0132\022.pg_query.RangeVarR\tconstrr" +
-      "el\"\253\001\n\023CreateEventTrigStmt\022\032\n\010trigname\030\001" +
-      " \001(\tR\010trigname\022\034\n\teventname\030\002 \001(\tR\tevent" +
-      "name\022.\n\nwhenclause\030\003 \003(\0132\016.pg_query.Node" +
-      "R\nwhenclause\022*\n\010funcname\030\004 \003(\0132\016.pg_quer" +
-      "y.NodeR\010funcname\"N\n\022AlterEventTrigStmt\022\032" +
-      "\n\010trigname\030\001 \001(\tR\010trigname\022\034\n\ttgenabled\030" +
-      "\002 \001(\tR\ttgenabled\"\355\001\n\017CreatePLangStmt\022\030\n\007",
-      "replace\030\001 \001(\010R\007replace\022\026\n\006plname\030\002 \001(\tR\006" +
-      "plname\022,\n\tplhandler\030\003 \003(\0132\016.pg_query.Nod" +
-      "eR\tplhandler\022*\n\010plinline\030\004 \003(\0132\016.pg_quer" +
-      "y.NodeR\010plinline\0220\n\013plvalidator\030\005 \003(\0132\016." +
-      "pg_query.NodeR\013plvalidator\022\034\n\tpltrusted\030" +
-      "\006 \001(\010R\tpltrusted\"\204\001\n\016CreateRoleStmt\0224\n\ts" +
-      "tmt_type\030\001 \001(\0162\026.pg_query.RoleStmtTypeR\t" +
-      "stmt_type\022\022\n\004role\030\002 \001(\tR\004role\022(\n\007options" +
-      "\030\003 \003(\0132\016.pg_query.NodeR\007options\"y\n\rAlter" +
-      "RoleStmt\022&\n\004role\030\001 \001(\0132\022.pg_query.RoleSp" +
-      "ecR\004role\022(\n\007options\030\002 \003(\0132\016.pg_query.Nod" +
-      "eR\007options\022\026\n\006action\030\003 \001(\005R\006action\"\213\001\n\020A" +
-      "lterRoleSetStmt\022&\n\004role\030\001 \001(\0132\022.pg_query" +
-      ".RoleSpecR\004role\022\032\n\010database\030\002 \001(\tR\010datab" +
-      "ase\0223\n\007setstmt\030\003 \001(\0132\031.pg_query.Variable" +
-      "SetStmtR\007setstmt\"T\n\014DropRoleStmt\022$\n\005role" +
-      "s\030\001 \003(\0132\016.pg_query.NodeR\005roles\022\036\n\nmissin" +
-      "g_ok\030\002 \001(\010R\nmissing_ok\"\316\001\n\rCreateSeqStmt" +
-      "\022.\n\010sequence\030\001 \001(\0132\022.pg_query.RangeVarR\010" +
-      "sequence\022(\n\007options\030\002 \003(\0132\016.pg_query.Nod" +
-      "eR\007options\022\031\n\010owner_id\030\003 \001(\rR\007ownerId\022\"\n" +
-      "\014for_identity\030\004 \001(\010R\014for_identity\022$\n\rif_" +
-      "not_exists\030\005 \001(\010R\rif_not_exists\"\254\001\n\014Alte" +
-      "rSeqStmt\022.\n\010sequence\030\001 \001(\0132\022.pg_query.Ra" +
-      "ngeVarR\010sequence\022(\n\007options\030\002 \003(\0132\016.pg_q" +
-      "uery.NodeR\007options\022\"\n\014for_identity\030\003 \001(\010" +
-      "R\014for_identity\022\036\n\nmissing_ok\030\004 \001(\010R\nmiss" +
-      "ing_ok\"\222\002\n\nDefineStmt\022(\n\004kind\030\001 \001(\0162\024.pg" +
-      "_query.ObjectTypeR\004kind\022\032\n\010oldstyle\030\002 \001(" +
-      "\010R\010oldstyle\022*\n\010defnames\030\003 \003(\0132\016.pg_query" +
-      ".NodeR\010defnames\022\"\n\004args\030\004 \003(\0132\016.pg_query" +
-      ".NodeR\004args\022.\n\ndefinition\030\005 \003(\0132\016.pg_que" +
-      "ry.NodeR\ndefinition\022$\n\rif_not_exists\030\006 \001" +
-      "(\010R\rif_not_exists\022\030\n\007replace\030\007 \001(\010R\007repl" +
-      "ace\"\337\001\n\020CreateDomainStmt\022.\n\ndomainname\030\001" +
-      " \003(\0132\016.pg_query.NodeR\ndomainname\022/\n\ttype" +
-      "_name\030\002 \001(\0132\022.pg_query.TypeNameR\010typeNam" +
-      "e\0228\n\013coll_clause\030\003 \001(\0132\027.pg_query.Collat" +
-      "eClauseR\ncollClause\0220\n\013constraints\030\004 \003(\013" +
-      "2\016.pg_query.NodeR\013constraints\"\206\002\n\021Create" +
-      "OpClassStmt\0220\n\013opclassname\030\001 \003(\0132\016.pg_qu" +
-      "ery.NodeR\013opclassname\0222\n\014opfamilyname\030\002 " +
-      "\003(\0132\016.pg_query.NodeR\014opfamilyname\022\026\n\006amn" +
-      "ame\030\003 \001(\tR\006amname\022.\n\010datatype\030\004 \001(\0132\022.pg" +
-      "_query.TypeNameR\010datatype\022$\n\005items\030\005 \003(\013" +
-      "2\016.pg_query.NodeR\005items\022\035\n\nis_default\030\006 " +
-      "\001(\010R\tisDefault\"\215\002\n\021CreateOpClassItem\022\032\n\010" +
-      "itemtype\030\001 \001(\005R\010itemtype\022,\n\004name\030\002 \001(\0132\030" +
-      ".pg_query.ObjectWithArgsR\004name\022\026\n\006number" +
-      "\030\003 \001(\005R\006number\0222\n\014order_family\030\004 \003(\0132\016.p" +
-      "g_query.NodeR\014order_family\022.\n\nclass_args" +
-      "\030\005 \003(\0132\016.pg_query.NodeR\nclass_args\0222\n\nst" +
-      "oredtype\030\006 \001(\0132\022.pg_query.TypeNameR\nstor" +
-      "edtype\"`\n\022CreateOpFamilyStmt\0222\n\014opfamily" +
-      "name\030\001 \003(\0132\016.pg_query.NodeR\014opfamilyname" +
-      "\022\026\n\006amname\030\002 \001(\tR\006amname\"\236\001\n\021AlterOpFami" +
-      "lyStmt\0222\n\014opfamilyname\030\001 \003(\0132\016.pg_query." +
-      "NodeR\014opfamilyname\022\026\n\006amname\030\002 \001(\tR\006amna" +
-      "me\022\027\n\007is_drop\030\003 \001(\010R\006isDrop\022$\n\005items\030\004 \003" +
-      "(\0132\016.pg_query.NodeR\005items\"\337\001\n\010DropStmt\022(" +
-      "\n\007objects\030\001 \003(\0132\016.pg_query.NodeR\007objects" +
-      "\0225\n\013remove_type\030\002 \001(\0162\024.pg_query.ObjectT" +
-      "ypeR\nremoveType\0222\n\010behavior\030\003 \001(\0162\026.pg_q" +
-      "uery.DropBehaviorR\010behavior\022\036\n\nmissing_o" +
-      "k\030\004 \001(\010R\nmissing_ok\022\036\n\nconcurrent\030\005 \001(\010R" +
-      "\nconcurrent\"\224\001\n\014TruncateStmt\022,\n\trelation" +
-      "s\030\001 \003(\0132\016.pg_query.NodeR\trelations\022\"\n\014re" +
-      "start_seqs\030\002 \001(\010R\014restart_seqs\0222\n\010behavi" +
-      "or\030\003 \001(\0162\026.pg_query.DropBehaviorR\010behavi" +
-      "or\"\177\n\013CommentStmt\022.\n\007objtype\030\001 \001(\0162\024.pg_" +
-      "query.ObjectTypeR\007objtype\022&\n\006object\030\002 \001(" +
-      "\0132\016.pg_query.NodeR\006object\022\030\n\007comment\030\003 \001" +
-      "(\tR\007comment\"\230\001\n\014SecLabelStmt\022.\n\007objtype\030" +
-      "\001 \001(\0162\024.pg_query.ObjectTypeR\007objtype\022&\n\006" +
-      "object\030\002 \001(\0132\016.pg_query.NodeR\006object\022\032\n\010" +
-      "provider\030\003 \001(\tR\010provider\022\024\n\005label\030\004 \001(\tR" +
-      "\005label\"s\n\021DeclareCursorStmt\022\036\n\nportalnam" +
-      "e\030\001 \001(\tR\nportalname\022\030\n\007options\030\002 \001(\005R\007op" +
-      "tions\022$\n\005query\030\003 \001(\0132\016.pg_query.NodeR\005qu" +
-      "ery\"1\n\017ClosePortalStmt\022\036\n\nportalname\030\001 \001" +
-      "(\tR\nportalname\"\226\001\n\tFetchStmt\0226\n\tdirectio" +
-      "n\030\001 \001(\0162\030.pg_query.FetchDirectionR\tdirec" +
-      "tion\022\031\n\010how_many\030\002 \001(\003R\007howMany\022\036\n\nporta" +
-      "lname\030\003 \001(\tR\nportalname\022\026\n\006ismove\030\004 \001(\010R" +
-      "\006ismove\"\334\007\n\tIndexStmt\022\030\n\007idxname\030\001 \001(\tR\007" +
-      "idxname\022.\n\010relation\030\002 \001(\0132\022.pg_query.Ran" +
-      "geVarR\010relation\022#\n\raccess_method\030\003 \001(\tR\014" +
-      "accessMethod\022\037\n\013table_space\030\004 \001(\tR\ntable" +
-      "Space\0221\n\014index_params\030\005 \003(\0132\016.pg_query.N" +
-      "odeR\013indexParams\022D\n\026index_including_para" +
-      "ms\030\006 \003(\0132\016.pg_query.NodeR\024indexIncluding" +
-      "Params\022(\n\007options\030\007 \003(\0132\016.pg_query.NodeR" +
-      "\007options\0221\n\014where_clause\030\010 \001(\0132\016.pg_quer" +
-      "y.NodeR\013whereClause\0228\n\020exclude_op_names\030" +
-      "\t \003(\0132\016.pg_query.NodeR\016excludeOpNames\022\036\n" +
-      "\nidxcomment\030\n \001(\tR\nidxcomment\022\033\n\tindex_o" +
-      "id\030\013 \001(\rR\010indexOid\022\035\n\nold_number\030\014 \001(\rR\t" +
-      "oldNumber\022(\n\020old_create_subid\030\r \001(\rR\016old" +
-      "CreateSubid\022C\n\036old_first_relfilelocator_" +
-      "subid\030\016 \001(\rR\033oldFirstRelfilelocatorSubid" +
-      "\022\026\n\006unique\030\017 \001(\010R\006unique\022.\n\022nulls_not_di" +
-      "stinct\030\020 \001(\010R\022nulls_not_distinct\022\030\n\007prim" +
-      "ary\030\021 \001(\010R\007primary\022\"\n\014isconstraint\030\022 \001(\010" +
-      "R\014isconstraint\022\036\n\ndeferrable\030\023 \001(\010R\ndefe" +
-      "rrable\022\"\n\014initdeferred\030\024 \001(\010R\014initdeferr" +
-      "ed\022 \n\013transformed\030\025 \001(\010R\013transformed\022\036\n\n" +
-      "concurrent\030\026 \001(\010R\nconcurrent\022$\n\rif_not_e" +
-      "xists\030\027 \001(\010R\rif_not_exists\0222\n\024reset_defa" +
-      "ult_tblspc\030\030 \001(\010R\024reset_default_tblspc\"\251" +
-      "\002\n\017CreateStatsStmt\022*\n\010defnames\030\001 \003(\0132\016.p" +
-      "g_query.NodeR\010defnames\022.\n\nstat_types\030\002 \003" +
-      "(\0132\016.pg_query.NodeR\nstat_types\022$\n\005exprs\030" +
-      "\003 \003(\0132\016.pg_query.NodeR\005exprs\022,\n\trelation" +
-      "s\030\004 \003(\0132\016.pg_query.NodeR\trelations\022\036\n\nst" +
-      "xcomment\030\005 \001(\tR\nstxcomment\022 \n\013transforme" +
-      "d\030\006 \001(\010R\013transformed\022$\n\rif_not_exists\030\007 " +
-      "\001(\010R\rif_not_exists\"C\n\tStatsElem\022\022\n\004name\030" +
-      "\001 \001(\tR\004name\022\"\n\004expr\030\002 \001(\0132\016.pg_query.Nod" +
-      "eR\004expr\"\222\001\n\016AlterStatsStmt\022*\n\010defnames\030\001" +
-      " \003(\0132\016.pg_query.NodeR\010defnames\0224\n\rstxsta" +
-      "ttarget\030\002 \001(\0132\016.pg_query.NodeR\rstxstatta" +
-      "rget\022\036\n\nmissing_ok\030\003 \001(\010R\nmissing_ok\"\271\002\n" +
-      "\022CreateFunctionStmt\022\"\n\014is_procedure\030\001 \001(" +
-      "\010R\014is_procedure\022\030\n\007replace\030\002 \001(\010R\007replac" +
-      "e\022*\n\010funcname\030\003 \003(\0132\016.pg_query.NodeR\010fun" +
-      "cname\022.\n\nparameters\030\004 \003(\0132\016.pg_query.Nod" +
-      "eR\nparameters\0223\n\013return_type\030\005 \001(\0132\022.pg_" +
-      "query.TypeNameR\nreturnType\022(\n\007options\030\006 " +
-      "\003(\0132\016.pg_query.NodeR\007options\022*\n\010sql_body" +
-      "\030\007 \001(\0132\016.pg_query.NodeR\010sql_body\"\265\001\n\021Fun" +
-      "ctionParameter\022\022\n\004name\030\001 \001(\tR\004name\022-\n\010ar" +
-      "g_type\030\002 \001(\0132\022.pg_query.TypeNameR\007argTyp" +
-      "e\0223\n\004mode\030\003 \001(\0162\037.pg_query.FunctionParam" +
-      "eterModeR\004mode\022(\n\007defexpr\030\004 \001(\0132\016.pg_que" +
-      "ry.NodeR\007defexpr\"\233\001\n\021AlterFunctionStmt\022." +
-      "\n\007objtype\030\001 \001(\0162\024.pg_query.ObjectTypeR\007o" +
-      "bjtype\022,\n\004func\030\002 \001(\0132\030.pg_query.ObjectWi" +
-      "thArgsR\004func\022(\n\007actions\030\003 \003(\0132\016.pg_query" +
-      ".NodeR\007actions\",\n\006DoStmt\022\"\n\004args\030\001 \003(\0132\016" +
-      ".pg_query.NodeR\004args\"\216\001\n\017InlineCodeBlock" +
-      "\022 \n\013source_text\030\001 \001(\tR\013source_text\022\031\n\010la" +
-      "ng_oid\030\002 \001(\rR\007langOid\022&\n\017lang_is_trusted" +
-      "\030\003 \001(\010R\rlangIsTrusted\022\026\n\006atomic\030\004 \001(\010R\006a" +
-      "tomic\"\224\001\n\010CallStmt\022.\n\010funccall\030\001 \001(\0132\022.p" +
-      "g_query.FuncCallR\010funccall\022.\n\010funcexpr\030\002" +
-      " \001(\0132\022.pg_query.FuncExprR\010funcexpr\022(\n\007ou" +
-      "targs\030\003 \003(\0132\016.pg_query.NodeR\007outargs\"%\n\013" +
-      "CallContext\022\026\n\006atomic\030\001 \001(\010R\006atomic\"\336\002\n\n" +
-      "RenameStmt\0225\n\013rename_type\030\001 \001(\0162\024.pg_que" +
-      "ry.ObjectTypeR\nrenameType\0229\n\rrelation_ty" +
-      "pe\030\002 \001(\0162\024.pg_query.ObjectTypeR\014relation" +
-      "Type\022.\n\010relation\030\003 \001(\0132\022.pg_query.RangeV" +
-      "arR\010relation\022&\n\006object\030\004 \001(\0132\016.pg_query." +
-      "NodeR\006object\022\030\n\007subname\030\005 \001(\tR\007subname\022\030" +
-      "\n\007newname\030\006 \001(\tR\007newname\0222\n\010behavior\030\007 \001" +
-      "(\0162\026.pg_query.DropBehaviorR\010behavior\022\036\n\n" +
-      "missing_ok\030\010 \001(\010R\nmissing_ok\"\353\001\n\026AlterOb" +
-      "jectDependsStmt\0225\n\013object_type\030\001 \001(\0162\024.p" +
-      "g_query.ObjectTypeR\nobjectType\022.\n\010relati" +
-      "on\030\002 \001(\0132\022.pg_query.RangeVarR\010relation\022&" +
-      "\n\006object\030\003 \001(\0132\016.pg_query.NodeR\006object\022*" +
-      "\n\007extname\030\004 \001(\0132\020.pg_query.StringR\007extna" +
-      "me\022\026\n\006remove\030\005 \001(\010R\006remove\"\344\001\n\025AlterObje" +
-      "ctSchemaStmt\0225\n\013object_type\030\001 \001(\0162\024.pg_q" +
-      "uery.ObjectTypeR\nobjectType\022.\n\010relation\030" +
-      "\002 \001(\0132\022.pg_query.RangeVarR\010relation\022&\n\006o" +
-      "bject\030\003 \001(\0132\016.pg_query.NodeR\006object\022\034\n\tn" +
-      "ewschema\030\004 \001(\tR\tnewschema\022\036\n\nmissing_ok\030" +
-      "\005 \001(\010R\nmissing_ok\"\317\001\n\016AlterOwnerStmt\0225\n\013" +
-      "object_type\030\001 \001(\0162\024.pg_query.ObjectTypeR" +
-      "\nobjectType\022.\n\010relation\030\002 \001(\0132\022.pg_query" +
-      ".RangeVarR\010relation\022&\n\006object\030\003 \001(\0132\016.pg" +
-      "_query.NodeR\006object\022.\n\010newowner\030\004 \001(\0132\022." +
-      "pg_query.RoleSpecR\010newowner\"s\n\021AlterOper" +
-      "atorStmt\0224\n\010opername\030\001 \001(\0132\030.pg_query.Ob" +
-      "jectWithArgsR\010opername\022(\n\007options\030\002 \003(\0132" +
-      "\016.pg_query.NodeR\007options\"f\n\rAlterTypeStm" +
-      "t\022+\n\ttype_name\030\001 \003(\0132\016.pg_query.NodeR\010ty" +
-      "peName\022(\n\007options\030\002 \003(\0132\016.pg_query.NodeR" +
-      "\007options\"\220\002\n\010RuleStmt\022.\n\010relation\030\001 \001(\0132" +
-      "\022.pg_query.RangeVarR\010relation\022\032\n\010rulenam" +
-      "e\030\002 \001(\tR\010rulename\0221\n\014where_clause\030\003 \001(\0132" +
-      "\016.pg_query.NodeR\013whereClause\022\'\n\005event\030\004 " +
-      "\001(\0162\021.pg_query.CmdTypeR\005event\022\030\n\007instead" +
-      "\030\005 \001(\010R\007instead\022(\n\007actions\030\006 \003(\0132\016.pg_qu" +
-      "ery.NodeR\007actions\022\030\n\007replace\030\007 \001(\010R\007repl" +
-      "ace\"L\n\nNotifyStmt\022$\n\rconditionname\030\001 \001(\t" +
-      "R\rconditionname\022\030\n\007payload\030\002 \001(\tR\007payloa" +
-      "d\"2\n\nListenStmt\022$\n\rconditionname\030\001 \001(\tR\r" +
-      "conditionname\"4\n\014UnlistenStmt\022$\n\rconditi" +
-      "onname\030\001 \001(\tR\rconditionname\"\332\001\n\017Transact" +
-      "ionStmt\0221\n\004kind\030\001 \001(\0162\035.pg_query.Transac" +
-      "tionStmtKindR\004kind\022(\n\007options\030\002 \003(\0132\016.pg" +
-      "_query.NodeR\007options\022&\n\016savepoint_name\030\003" +
-      " \001(\tR\016savepoint_name\022\020\n\003gid\030\004 \001(\tR\003gid\022\024" +
-      "\n\005chain\030\005 \001(\010R\005chain\022\032\n\010location\030\006 \001(\005R\010" +
-      "location\"q\n\021CompositeTypeStmt\022,\n\007typevar" +
-      "\030\001 \001(\0132\022.pg_query.RangeVarR\007typevar\022.\n\nc" +
-      "oldeflist\030\002 \003(\0132\016.pg_query.NodeR\ncoldefl" +
-      "ist\"a\n\016CreateEnumStmt\022+\n\ttype_name\030\001 \003(\013" +
-      "2\016.pg_query.NodeR\010typeName\022\"\n\004vals\030\002 \003(\013" +
-      "2\016.pg_query.NodeR\004vals\"f\n\017CreateRangeStm" +
-      "t\022+\n\ttype_name\030\001 \003(\0132\016.pg_query.NodeR\010ty" +
-      "peName\022&\n\006params\030\002 \003(\0132\016.pg_query.NodeR\006" +
-      "params\"\365\001\n\rAlterEnumStmt\022+\n\ttype_name\030\001 " +
-      "\003(\0132\016.pg_query.NodeR\010typeName\022\027\n\007old_val" +
-      "\030\002 \001(\tR\006oldVal\022\027\n\007new_val\030\003 \001(\tR\006newVal\022" +
-      "(\n\020new_val_neighbor\030\004 \001(\tR\016newValNeighbo" +
-      "r\022\'\n\020new_val_is_after\030\005 \001(\010R\rnewValIsAft" +
-      "er\0222\n\026skip_if_new_val_exists\030\006 \001(\010R\022skip" +
-      "IfNewValExists\"\215\002\n\010ViewStmt\022&\n\004view\030\001 \001(" +
-      "\0132\022.pg_query.RangeVarR\004view\022(\n\007aliases\030\002" +
-      " \003(\0132\016.pg_query.NodeR\007aliases\022$\n\005query\030\003" +
-      " \001(\0132\016.pg_query.NodeR\005query\022\030\n\007replace\030\004" +
-      " \001(\010R\007replace\022(\n\007options\030\005 \003(\0132\016.pg_quer" +
-      "y.NodeR\007options\022E\n\021with_check_option\030\006 \001" +
-      "(\0162\031.pg_query.ViewCheckOptionR\017withCheck" +
-      "Option\"&\n\010LoadStmt\022\032\n\010filename\030\001 \001(\tR\010fi" +
-      "lename\"P\n\014CreatedbStmt\022\026\n\006dbname\030\001 \001(\tR\006" +
-      "dbname\022(\n\007options\030\002 \003(\0132\016.pg_query.NodeR" +
-      "\007options\"U\n\021AlterDatabaseStmt\022\026\n\006dbname\030" +
-      "\001 \001(\tR\006dbname\022(\n\007options\030\002 \003(\0132\016.pg_quer" +
-      "y.NodeR\007options\"6\n\034AlterDatabaseRefreshC" +
-      "ollStmt\022\026\n\006dbname\030\001 \001(\tR\006dbname\"c\n\024Alter" +
-      "DatabaseSetStmt\022\026\n\006dbname\030\001 \001(\tR\006dbname\022" +
-      "3\n\007setstmt\030\002 \001(\0132\031.pg_query.VariableSetS" +
-      "tmtR\007setstmt\"n\n\nDropdbStmt\022\026\n\006dbname\030\001 \001" +
-      "(\tR\006dbname\022\036\n\nmissing_ok\030\002 \001(\010R\nmissing_" +
-      "ok\022(\n\007options\030\003 \003(\0132\016.pg_query.NodeR\007opt" +
-      "ions\"F\n\017AlterSystemStmt\0223\n\007setstmt\030\001 \001(\013" +
-      "2\031.pg_query.VariableSetStmtR\007setstmt\"\203\001\n" +
-      "\013ClusterStmt\022.\n\010relation\030\001 \001(\0132\022.pg_quer" +
-      "y.RangeVarR\010relation\022\034\n\tindexname\030\002 \001(\tR" +
-      "\tindexname\022&\n\006params\030\003 \003(\0132\016.pg_query.No" +
-      "deR\006params\"~\n\nVacuumStmt\022(\n\007options\030\001 \003(" +
-      "\0132\016.pg_query.NodeR\007options\022\"\n\004rels\030\002 \003(\013" +
-      "2\016.pg_query.NodeR\004rels\022\"\n\014is_vacuumcmd\030\003" +
-      " \001(\010R\014is_vacuumcmd\"|\n\016VacuumRelation\022.\n\010" +
+      "error\030\n \001(\0132\026.pg_query.JsonBehaviorR\010on_" +
+      "error\022\032\n\010location\030\013 \001(\005R\010location\"_\n\014Jso" +
+      "nKeyValue\022 \n\003key\030\001 \001(\0132\016.pg_query.NodeR\003" +
+      "key\022-\n\005value\030\002 \001(\0132\027.pg_query.JsonValueE" +
+      "xprR\005value\"\250\001\n\rJsonParseExpr\022+\n\004expr\030\001 \001" +
+      "(\0132\027.pg_query.JsonValueExprR\004expr\022,\n\006out" +
+      "put\030\002 \001(\0132\024.pg_query.JsonOutputR\006output\022" +
+      " \n\013unique_keys\030\003 \001(\010R\013unique_keys\022\032\n\010loc" +
+      "ation\030\004 \001(\005R\010location\"~\n\016JsonScalarExpr\022" +
+      "\"\n\004expr\030\001 \001(\0132\016.pg_query.NodeR\004expr\022,\n\006o" +
+      "utput\030\002 \001(\0132\024.pg_query.JsonOutputR\006outpu" +
+      "t\022\032\n\010location\030\003 \001(\005R\010location\"\212\001\n\021JsonSe" +
+      "rializeExpr\022+\n\004expr\030\001 \001(\0132\027.pg_query.Jso" +
+      "nValueExprR\004expr\022,\n\006output\030\002 \001(\0132\024.pg_qu" +
+      "ery.JsonOutputR\006output\022\032\n\010location\030\003 \001(\005" +
+      "R\010location\"\307\001\n\025JsonObjectConstructor\022$\n\005" +
+      "exprs\030\001 \003(\0132\016.pg_query.NodeR\005exprs\022,\n\006ou" +
+      "tput\030\002 \001(\0132\024.pg_query.JsonOutputR\006output" +
+      "\022&\n\016absent_on_null\030\003 \001(\010R\016absent_on_null" +
+      "\022\026\n\006unique\030\004 \001(\010R\006unique\022\032\n\010location\030\005 \001" +
+      "(\005R\010location\"\256\001\n\024JsonArrayConstructor\022$\n" +
+      "\005exprs\030\001 \003(\0132\016.pg_query.NodeR\005exprs\022,\n\006o" +
+      "utput\030\002 \001(\0132\024.pg_query.JsonOutputR\006outpu" +
+      "t\022&\n\016absent_on_null\030\003 \001(\010R\016absent_on_nul" +
+      "l\022\032\n\010location\030\004 \001(\005R\010location\"\341\001\n\031JsonAr" +
+      "rayQueryConstructor\022$\n\005query\030\001 \001(\0132\016.pg_" +
+      "query.NodeR\005query\022,\n\006output\030\002 \001(\0132\024.pg_q" +
+      "uery.JsonOutputR\006output\022,\n\006format\030\003 \001(\0132" +
+      "\024.pg_query.JsonFormatR\006format\022&\n\016absent_" +
+      "on_null\030\004 \001(\010R\016absent_on_null\022\032\n\010locatio" +
+      "n\030\005 \001(\005R\010location\"\345\001\n\022JsonAggConstructor" +
+      "\022,\n\006output\030\001 \001(\0132\024.pg_query.JsonOutputR\006" +
+      "output\022.\n\nagg_filter\030\002 \001(\0132\016.pg_query.No" +
+      "deR\nagg_filter\022,\n\tagg_order\030\003 \003(\0132\016.pg_q" +
+      "uery.NodeR\tagg_order\022\'\n\004over\030\004 \001(\0132\023.pg_" +
+      "query.WindowDefR\004over\022\032\n\010location\030\005 \001(\005R" +
+      "\010location\"\271\001\n\rJsonObjectAgg\022>\n\013construct" +
+      "or\030\001 \001(\0132\034.pg_query.JsonAggConstructorR\013" +
+      "constructor\022(\n\003arg\030\002 \001(\0132\026.pg_query.Json" +
+      "KeyValueR\003arg\022&\n\016absent_on_null\030\003 \001(\010R\016a" +
+      "bsent_on_null\022\026\n\006unique\030\004 \001(\010R\006unique\"\241\001" +
+      "\n\014JsonArrayAgg\022>\n\013constructor\030\001 \001(\0132\034.pg" +
+      "_query.JsonAggConstructorR\013constructor\022)" +
+      "\n\003arg\030\002 \001(\0132\027.pg_query.JsonValueExprR\003ar" +
+      "g\022&\n\016absent_on_null\030\003 \001(\010R\016absent_on_nul" +
+      "l\"o\n\007RawStmt\022\"\n\004stmt\030\001 \001(\0132\016.pg_query.No" +
+      "deR\004stmt\022$\n\rstmt_location\030\002 \001(\005R\rstmt_lo" +
+      "cation\022\032\n\010stmt_len\030\003 \001(\005R\010stmt_len\"\216\003\n\nI" +
+      "nsertStmt\022.\n\010relation\030\001 \001(\0132\022.pg_query.R" +
+      "angeVarR\010relation\022\"\n\004cols\030\002 \003(\0132\016.pg_que" +
+      "ry.NodeR\004cols\022/\n\013select_stmt\030\003 \001(\0132\016.pg_" +
+      "query.NodeR\nselectStmt\022H\n\022on_conflict_cl" +
+      "ause\030\004 \001(\0132\032.pg_query.OnConflictClauseR\020" +
+      "onConflictClause\022D\n\020returning_clause\030\005 \001" +
+      "(\0132\031.pg_query.ReturningClauseR\017returning" +
+      "Clause\0225\n\013with_clause\030\006 \001(\0132\024.pg_query.W" +
+      "ithClauseR\nwithClause\0224\n\010override\030\007 \001(\0162" +
+      "\030.pg_query.OverridingKindR\010override\"\237\002\n\n" +
+      "DeleteStmt\022.\n\010relation\030\001 \001(\0132\022.pg_query." +
+      "RangeVarR\010relation\0221\n\014using_clause\030\002 \003(\013" +
+      "2\016.pg_query.NodeR\013usingClause\0221\n\014where_c" +
+      "lause\030\003 \001(\0132\016.pg_query.NodeR\013whereClause" +
+      "\022D\n\020returning_clause\030\004 \001(\0132\031.pg_query.Re" +
+      "turningClauseR\017returningClause\0225\n\013with_c" +
+      "lause\030\005 \001(\0132\024.pg_query.WithClauseR\nwithC" +
+      "lause\"\316\002\n\nUpdateStmt\022.\n\010relation\030\001 \001(\0132\022" +
+      ".pg_query.RangeVarR\010relation\022/\n\013target_l" +
+      "ist\030\002 \003(\0132\016.pg_query.NodeR\ntargetList\0221\n" +
+      "\014where_clause\030\003 \001(\0132\016.pg_query.NodeR\013whe" +
+      "reClause\022/\n\013from_clause\030\004 \003(\0132\016.pg_query" +
+      ".NodeR\nfromClause\022D\n\020returning_clause\030\005 " +
+      "\001(\0132\031.pg_query.ReturningClauseR\017returnin" +
+      "gClause\0225\n\013with_clause\030\006 \001(\0132\024.pg_query." +
+      "WithClauseR\nwithClause\"\346\002\n\tMergeStmt\022.\n\010" +
       "relation\030\001 \001(\0132\022.pg_query.RangeVarR\010rela" +
-      "tion\022\020\n\003oid\030\002 \001(\rR\003oid\022(\n\007va_cols\030\003 \003(\0132" +
-      "\016.pg_query.NodeR\007va_cols\"]\n\013ExplainStmt\022" +
-      "$\n\005query\030\001 \001(\0132\016.pg_query.NodeR\005query\022(\n" +
-      "\007options\030\002 \003(\0132\016.pg_query.NodeR\007options\"" +
-      "\341\001\n\021CreateTableAsStmt\022$\n\005query\030\001 \001(\0132\016.p" +
-      "g_query.NodeR\005query\022(\n\004into\030\002 \001(\0132\024.pg_q" +
-      "uery.IntoClauseR\004into\022.\n\007objtype\030\003 \001(\0162\024" +
-      ".pg_query.ObjectTypeR\007objtype\022&\n\016is_sele" +
-      "ct_into\030\004 \001(\010R\016is_select_into\022$\n\rif_not_" +
-      "exists\030\005 \001(\010R\rif_not_exists\"\201\001\n\022RefreshM" +
-      "atViewStmt\022\036\n\nconcurrent\030\001 \001(\010R\nconcurre" +
-      "nt\022\033\n\tskip_data\030\002 \001(\010R\010skipData\022.\n\010relat" +
-      "ion\030\003 \001(\0132\022.pg_query.RangeVarR\010relation\"" +
-      "\020\n\016CheckPointStmt\"<\n\013DiscardStmt\022-\n\006targ" +
-      "et\030\001 \001(\0162\025.pg_query.DiscardModeR\006target\"" +
-      "d\n\010LockStmt\022,\n\trelations\030\001 \003(\0132\016.pg_quer" +
-      "y.NodeR\trelations\022\022\n\004mode\030\002 \001(\005R\004mode\022\026\n" +
-      "\006nowait\030\003 \001(\010R\006nowait\"b\n\022ConstraintsSetS" +
-      "tmt\0220\n\013constraints\030\001 \003(\0132\016.pg_query.Node" +
-      "R\013constraints\022\032\n\010deferred\030\002 \001(\010R\010deferre" +
-      "d\"\252\001\n\013ReindexStmt\022/\n\004kind\030\001 \001(\0162\033.pg_que" +
-      "ry.ReindexObjectTypeR\004kind\022.\n\010relation\030\002" +
-      " \001(\0132\022.pg_query.RangeVarR\010relation\022\022\n\004na" +
-      "me\030\003 \001(\tR\004name\022&\n\006params\030\004 \003(\0132\016.pg_quer" +
-      "y.NodeR\006params\"\352\001\n\024CreateConversionStmt\022" +
-      "8\n\017conversion_name\030\001 \003(\0132\016.pg_query.Node" +
-      "R\017conversion_name\022,\n\021for_encoding_name\030\002" +
-      " \001(\tR\021for_encoding_name\022*\n\020to_encoding_n" +
-      "ame\030\003 \001(\tR\020to_encoding_name\022,\n\tfunc_name" +
-      "\030\004 \003(\0132\016.pg_query.NodeR\tfunc_name\022\020\n\003def" +
-      "\030\005 \001(\010R\003def\"\361\001\n\016CreateCastStmt\0222\n\nsource" +
-      "type\030\001 \001(\0132\022.pg_query.TypeNameR\nsourcety" +
-      "pe\0222\n\ntargettype\030\002 \001(\0132\022.pg_query.TypeNa" +
-      "meR\ntargettype\022,\n\004func\030\003 \001(\0132\030.pg_query." +
-      "ObjectWithArgsR\004func\0223\n\007context\030\004 \001(\0162\031." +
-      "pg_query.CoercionContextR\007context\022\024\n\005ino" +
-      "ut\030\005 \001(\010R\005inout\"\331\001\n\023CreateTransformStmt\022" +
-      "\030\n\007replace\030\001 \001(\010R\007replace\0220\n\ttype_name\030\002" +
-      " \001(\0132\022.pg_query.TypeNameR\ttype_name\022\022\n\004l" +
-      "ang\030\003 \001(\tR\004lang\0222\n\007fromsql\030\004 \001(\0132\030.pg_qu" +
-      "ery.ObjectWithArgsR\007fromsql\022.\n\005tosql\030\005 \001" +
-      "(\0132\030.pg_query.ObjectWithArgsR\005tosql\"s\n\013P" +
-      "repareStmt\022\022\n\004name\030\001 \001(\tR\004name\022*\n\010argtyp" +
-      "es\030\002 \003(\0132\016.pg_query.NodeR\010argtypes\022$\n\005qu" +
-      "ery\030\003 \001(\0132\016.pg_query.NodeR\005query\"I\n\013Exec" +
-      "uteStmt\022\022\n\004name\030\001 \001(\tR\004name\022&\n\006params\030\002 " +
-      "\003(\0132\016.pg_query.NodeR\006params\"V\n\016Deallocat" +
-      "eStmt\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005isall\030\002 \001(\010" +
-      "R\005isall\022\032\n\010location\030\003 \001(\005R\010location\"i\n\rD" +
-      "ropOwnedStmt\022$\n\005roles\030\001 \003(\0132\016.pg_query.N" +
-      "odeR\005roles\0222\n\010behavior\030\002 \001(\0162\026.pg_query." +
-      "DropBehaviorR\010behavior\"g\n\021ReassignOwnedS" +
-      "tmt\022$\n\005roles\030\001 \003(\0132\016.pg_query.NodeR\005role" +
-      "s\022,\n\007newrole\030\002 \001(\0132\022.pg_query.RoleSpecR\007" +
-      "newrole\"m\n\025AlterTSDictionaryStmt\022*\n\010dict" +
-      "name\030\001 \003(\0132\016.pg_query.NodeR\010dictname\022(\n\007" +
-      "options\030\002 \003(\0132\016.pg_query.NodeR\007options\"\237" +
-      "\002\n\030AlterTSConfigurationStmt\022/\n\004kind\030\001 \001(" +
-      "\0162\033.pg_query.AlterTSConfigTypeR\004kind\022(\n\007" +
-      "cfgname\030\002 \003(\0132\016.pg_query.NodeR\007cfgname\022," +
-      "\n\ttokentype\030\003 \003(\0132\016.pg_query.NodeR\ttoken" +
-      "type\022$\n\005dicts\030\004 \003(\0132\016.pg_query.NodeR\005dic" +
-      "ts\022\032\n\010override\030\005 \001(\010R\010override\022\030\n\007replac" +
-      "e\030\006 \001(\010R\007replace\022\036\n\nmissing_ok\030\007 \001(\010R\nmi" +
-      "ssing_ok\"\237\001\n\020PublicationTable\022.\n\010relatio" +
-      "n\030\001 \001(\0132\022.pg_query.RangeVarR\010relation\0221\n" +
-      "\014where_clause\030\002 \001(\0132\016.pg_query.NodeR\013whe" +
-      "reClause\022(\n\007columns\030\003 \003(\0132\016.pg_query.Nod" +
-      "eR\007columns\"\276\001\n\022PublicationObjSpec\022@\n\npub" +
-      "objtype\030\001 \001(\0162 .pg_query.PublicationObjS" +
-      "pecTypeR\npubobjtype\022\022\n\004name\030\002 \001(\tR\004name\022" +
-      "6\n\010pubtable\030\003 \001(\0132\032.pg_query.Publication" +
-      "TableR\010pubtable\022\032\n\010location\030\004 \001(\005R\010locat" +
-      "ion\"\263\001\n\025CreatePublicationStmt\022\030\n\007pubname" +
-      "\030\001 \001(\tR\007pubname\022(\n\007options\030\002 \003(\0132\016.pg_qu" +
-      "ery.NodeR\007options\022.\n\npubobjects\030\003 \003(\0132\016." +
-      "pg_query.NodeR\npubobjects\022&\n\016for_all_tab" +
-      "les\030\004 \001(\010R\016for_all_tables\"\354\001\n\024AlterPubli" +
-      "cationStmt\022\030\n\007pubname\030\001 \001(\tR\007pubname\022(\n\007" +
-      "options\030\002 \003(\0132\016.pg_query.NodeR\007options\022." +
-      "\n\npubobjects\030\003 \003(\0132\016.pg_query.NodeR\npubo" +
-      "bjects\022&\n\016for_all_tables\030\004 \001(\010R\016for_all_" +
-      "tables\0228\n\006action\030\005 \001(\0162 .pg_query.AlterP" +
-      "ublicationActionR\006action\"\252\001\n\026CreateSubsc" +
-      "riptionStmt\022\030\n\007subname\030\001 \001(\tR\007subname\022\032\n" +
-      "\010conninfo\030\002 \001(\tR\010conninfo\0220\n\013publication" +
-      "\030\003 \003(\0132\016.pg_query.NodeR\013publication\022(\n\007o" +
-      "ptions\030\004 \003(\0132\016.pg_query.NodeR\007options\"\336\001" +
-      "\n\025AlterSubscriptionStmt\0223\n\004kind\030\001 \001(\0162\037." +
-      "pg_query.AlterSubscriptionTypeR\004kind\022\030\n\007" +
-      "subname\030\002 \001(\tR\007subname\022\032\n\010conninfo\030\003 \001(\t" +
-      "R\010conninfo\0220\n\013publication\030\004 \003(\0132\016.pg_que" +
-      "ry.NodeR\013publication\022(\n\007options\030\005 \003(\0132\016." +
-      "pg_query.NodeR\007options\"\204\001\n\024DropSubscript" +
-      "ionStmt\022\030\n\007subname\030\001 \001(\tR\007subname\022\036\n\nmis" +
-      "sing_ok\030\002 \001(\010R\nmissing_ok\0222\n\010behavior\030\003 " +
-      "\001(\0162\026.pg_query.DropBehaviorR\010behavior\"t\n" +
-      "\tScanToken\022\r\n\005start\030\001 \001(\005\022\013\n\003end\030\002 \001(\005\022\036" +
-      "\n\005token\030\004 \001(\0162\017.pg_query.Token\022+\n\014keywor" +
-      "d_kind\030\005 \001(\0162\025.pg_query.KeywordKind\"\315\005\n\r" +
-      "SummaryResult\022-\n\006tables\030\001 \003(\0132\035.pg_query" +
-      ".SummaryResult.Table\0225\n\007aliases\030\002 \003(\0132$." +
-      "pg_query.SummaryResult.AliasesEntry\022\021\n\tc" +
-      "te_names\030\003 \003(\t\0223\n\tfunctions\030\004 \003(\0132 .pg_q" +
-      "uery.SummaryResult.Function\022<\n\016filter_co" +
-      "lumns\030\005 \003(\0132$.pg_query.SummaryResult.Fil" +
-      "terColumn\022\027\n\017statement_types\030\006 \003(\t\022\027\n\017tr" +
-      "uncated_query\030\007 \001(\t\032p\n\005Table\022\014\n\004name\030\001 \001" +
-      "(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_name\030\003 " +
-      "\001(\t\0220\n\007context\030\004 \001(\0162\037.pg_query.SummaryR" +
-      "esult.Context\032.\n\014AliasesEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032v\n\010Function\022\014\n\004nam" +
-      "e\030\001 \001(\t\022\025\n\rfunction_name\030\002 \001(\t\022\023\n\013schema" +
-      "_name\030\003 \001(\t\0220\n\007context\030\004 \001(\0162\037.pg_query." +
-      "SummaryResult.Context\032G\n\014FilterColumn\022\023\n" +
-      "\013schema_name\030\001 \001(\t\022\022\n\ntable_name\030\002 \001(\t\022\016" +
-      "\n\006column\030\003 \001(\t\";\n\007Context\022\010\n\004None\020\000\022\n\n\006S" +
-      "elect\020\001\022\007\n\003DML\020\002\022\007\n\003DDL\020\003\022\010\n\004Call\020\004*\233\001\n\013" +
-      "QuerySource\022\032\n\026QUERY_SOURCE_UNDEFINED\020\000\022" +
-      "\021\n\rQSRC_ORIGINAL\020\001\022\017\n\013QSRC_PARSER\020\002\022\025\n\021Q" +
-      "SRC_INSTEAD_RULE\020\003\022\032\n\026QSRC_QUAL_INSTEAD_" +
-      "RULE\020\004\022\031\n\025QSRC_NON_INSTEAD_RULE\020\005*m\n\tSor" +
-      "tByDir\022\031\n\025SORT_BY_DIR_UNDEFINED\020\000\022\022\n\016SOR" +
-      "TBY_DEFAULT\020\001\022\016\n\nSORTBY_ASC\020\002\022\017\n\013SORTBY_" +
-      "DESC\020\003\022\020\n\014SORTBY_USING\020\004*s\n\013SortByNulls\022" +
-      "\033\n\027SORT_BY_NULLS_UNDEFINED\020\000\022\030\n\024SORTBY_N" +
-      "ULLS_DEFAULT\020\001\022\026\n\022SORTBY_NULLS_FIRST\020\002\022\025" +
-      "\n\021SORTBY_NULLS_LAST\020\003*~\n\rSetQuantifier\022\034" +
-      "\n\030SET_QUANTIFIER_UNDEFINED\020\000\022\032\n\026SET_QUAN" +
-      "TIFIER_DEFAULT\020\001\022\026\n\022SET_QUANTIFIER_ALL\020\002" +
-      "\022\033\n\027SET_QUANTIFIER_DISTINCT\020\003*\266\002\n\013A_Expr" +
-      "_Kind\022\031\n\025A_EXPR_KIND_UNDEFINED\020\000\022\014\n\010AEXP" +
-      "R_OP\020\001\022\020\n\014AEXPR_OP_ANY\020\002\022\020\n\014AEXPR_OP_ALL" +
-      "\020\003\022\022\n\016AEXPR_DISTINCT\020\004\022\026\n\022AEXPR_NOT_DIST" +
-      "INCT\020\005\022\020\n\014AEXPR_NULLIF\020\006\022\014\n\010AEXPR_IN\020\007\022\016" +
-      "\n\nAEXPR_LIKE\020\010\022\017\n\013AEXPR_ILIKE\020\t\022\021\n\rAEXPR" +
-      "_SIMILAR\020\n\022\021\n\rAEXPR_BETWEEN\020\013\022\025\n\021AEXPR_N" +
-      "OT_BETWEEN\020\014\022\025\n\021AEXPR_BETWEEN_SYM\020\r\022\031\n\025A" +
-      "EXPR_NOT_BETWEEN_SYM\020\016*\250\001\n\014RoleSpecType\022" +
-      "\034\n\030ROLE_SPEC_TYPE_UNDEFINED\020\000\022\024\n\020ROLESPE" +
-      "C_CSTRING\020\001\022\031\n\025ROLESPEC_CURRENT_ROLE\020\002\022\031" +
-      "\n\025ROLESPEC_CURRENT_USER\020\003\022\031\n\025ROLESPEC_SE" +
-      "SSION_USER\020\004\022\023\n\017ROLESPEC_PUBLIC\020\005*\364\002\n\017Ta" +
-      "bleLikeOption\022\037\n\033TABLE_LIKE_OPTION_UNDEF" +
-      "INED\020\000\022\036\n\032CREATE_TABLE_LIKE_COMMENTS\020\001\022!" +
-      "\n\035CREATE_TABLE_LIKE_COMPRESSION\020\002\022!\n\035CRE" +
-      "ATE_TABLE_LIKE_CONSTRAINTS\020\003\022\036\n\032CREATE_T" +
-      "ABLE_LIKE_DEFAULTS\020\004\022\037\n\033CREATE_TABLE_LIK" +
-      "E_GENERATED\020\005\022\036\n\032CREATE_TABLE_LIKE_IDENT" +
-      "ITY\020\006\022\035\n\031CREATE_TABLE_LIKE_INDEXES\020\007\022 \n\034" +
-      "CREATE_TABLE_LIKE_STATISTICS\020\010\022\035\n\031CREATE" +
-      "_TABLE_LIKE_STORAGE\020\t\022\031\n\025CREATE_TABLE_LI" +
-      "KE_ALL\020\n*v\n\rDefElemAction\022\035\n\031DEF_ELEM_AC" +
-      "TION_UNDEFINED\020\000\022\022\n\016DEFELEM_UNSPEC\020\001\022\017\n\013" +
-      "DEFELEM_SET\020\002\022\017\n\013DEFELEM_ADD\020\003\022\020\n\014DEFELE" +
-      "M_DROP\020\004*\215\001\n\021PartitionStrategy\022 \n\034PARTIT" +
-      "ION_STRATEGY_UNDEFINED\020\000\022\033\n\027PARTITION_ST" +
-      "RATEGY_LIST\020\001\022\034\n\030PARTITION_STRATEGY_RANG" +
-      "E\020\002\022\033\n\027PARTITION_STRATEGY_HASH\020\003*\254\001\n\027Par" +
-      "titionRangeDatumKind\022(\n$PARTITION_RANGE_" +
-      "DATUM_KIND_UNDEFINED\020\000\022\"\n\036PARTITION_RANG",
-      "E_DATUM_MINVALUE\020\001\022\037\n\033PARTITION_RANGE_DA" +
-      "TUM_VALUE\020\002\022\"\n\036PARTITION_RANGE_DATUM_MAX" +
-      "VALUE\020\003*\275\001\n\007RTEKind\022\025\n\021RTEKIND_UNDEFINED" +
-      "\020\000\022\020\n\014RTE_RELATION\020\001\022\020\n\014RTE_SUBQUERY\020\002\022\014" +
-      "\n\010RTE_JOIN\020\003\022\020\n\014RTE_FUNCTION\020\004\022\021\n\rRTE_TA" +
-      "BLEFUNC\020\005\022\016\n\nRTE_VALUES\020\006\022\013\n\007RTE_CTE\020\007\022\027" +
-      "\n\023RTE_NAMEDTUPLESTORE\020\010\022\016\n\nRTE_RESULT\020\t*" +
-      "\304\001\n\007WCOKind\022\025\n\021WCOKIND_UNDEFINED\020\000\022\022\n\016WC" +
-      "O_VIEW_CHECK\020\001\022\030\n\024WCO_RLS_INSERT_CHECK\020\002" +
-      "\022\030\n\024WCO_RLS_UPDATE_CHECK\020\003\022\032\n\026WCO_RLS_CO" +
-      "NFLICT_CHECK\020\004\022\036\n\032WCO_RLS_MERGE_UPDATE_C" +
-      "HECK\020\005\022\036\n\032WCO_RLS_MERGE_DELETE_CHECK\020\006*\252" +
-      "\001\n\017GroupingSetKind\022\037\n\033GROUPING_SET_KIND_" +
-      "UNDEFINED\020\000\022\026\n\022GROUPING_SET_EMPTY\020\001\022\027\n\023G" +
-      "ROUPING_SET_SIMPLE\020\002\022\027\n\023GROUPING_SET_ROL" +
-      "LUP\020\003\022\025\n\021GROUPING_SET_CUBE\020\004\022\025\n\021GROUPING" +
-      "_SET_SETS\020\005*|\n\016CTEMaterialize\022\034\n\030CTEMATE" +
-      "RIALIZE_UNDEFINED\020\000\022\031\n\025CTEMaterializeDef" +
-      "ault\020\001\022\030\n\024CTEMaterializeAlways\020\002\022\027\n\023CTEM" +
-      "aterializeNever\020\003*e\n\nJsonQuotes\022\031\n\025JSON_" +
-      "QUOTES_UNDEFINED\020\000\022\024\n\020JS_QUOTES_UNSPEC\020\001" +
-      "\022\022\n\016JS_QUOTES_KEEP\020\002\022\022\n\016JS_QUOTES_OMIT\020\003" +
-      "*\227\001\n\023JsonTableColumnType\022$\n JSON_TABLE_C" +
-      "OLUMN_TYPE_UNDEFINED\020\000\022\026\n\022JTC_FOR_ORDINA" +
-      "LITY\020\001\022\017\n\013JTC_REGULAR\020\002\022\016\n\nJTC_EXISTS\020\003\022" +
-      "\021\n\rJTC_FORMATTED\020\004\022\016\n\nJTC_NESTED\020\005*s\n\014Se" +
-      "tOperation\022\033\n\027SET_OPERATION_UNDEFINED\020\000\022" +
-      "\016\n\nSETOP_NONE\020\001\022\017\n\013SETOP_UNION\020\002\022\023\n\017SETO" +
-      "P_INTERSECT\020\003\022\020\n\014SETOP_EXCEPT\020\004*\231\t\n\nObje" +
-      "ctType\022\031\n\025OBJECT_TYPE_UNDEFINED\020\000\022\030\n\024OBJ" +
-      "ECT_ACCESS_METHOD\020\001\022\024\n\020OBJECT_AGGREGATE\020" +
-      "\002\022\017\n\013OBJECT_AMOP\020\003\022\021\n\rOBJECT_AMPROC\020\004\022\024\n" +
-      "\020OBJECT_ATTRIBUTE\020\005\022\017\n\013OBJECT_CAST\020\006\022\021\n\r" +
-      "OBJECT_COLUMN\020\007\022\024\n\020OBJECT_COLLATION\020\010\022\025\n" +
-      "\021OBJECT_CONVERSION\020\t\022\023\n\017OBJECT_DATABASE\020" +
-      "\n\022\022\n\016OBJECT_DEFAULT\020\013\022\021\n\rOBJECT_DEFACL\020\014" +
-      "\022\021\n\rOBJECT_DOMAIN\020\r\022\030\n\024OBJECT_DOMCONSTRA" +
-      "INT\020\016\022\030\n\024OBJECT_EVENT_TRIGGER\020\017\022\024\n\020OBJEC" +
-      "T_EXTENSION\020\020\022\016\n\nOBJECT_FDW\020\021\022\031\n\025OBJECT_" +
-      "FOREIGN_SERVER\020\022\022\030\n\024OBJECT_FOREIGN_TABLE" +
-      "\020\023\022\023\n\017OBJECT_FUNCTION\020\024\022\020\n\014OBJECT_INDEX\020" +
-      "\025\022\023\n\017OBJECT_LANGUAGE\020\026\022\026\n\022OBJECT_LARGEOB" +
-      "JECT\020\027\022\022\n\016OBJECT_MATVIEW\020\030\022\022\n\016OBJECT_OPC" +
-      "LASS\020\031\022\023\n\017OBJECT_OPERATOR\020\032\022\023\n\017OBJECT_OP" +
-      "FAMILY\020\033\022\030\n\024OBJECT_PARAMETER_ACL\020\034\022\021\n\rOB" +
-      "JECT_POLICY\020\035\022\024\n\020OBJECT_PROCEDURE\020\036\022\026\n\022O" +
-      "BJECT_PUBLICATION\020\037\022 \n\034OBJECT_PUBLICATIO" +
-      "N_NAMESPACE\020 \022\032\n\026OBJECT_PUBLICATION_REL\020" +
-      "!\022\017\n\013OBJECT_ROLE\020\"\022\022\n\016OBJECT_ROUTINE\020#\022\017" +
-      "\n\013OBJECT_RULE\020$\022\021\n\rOBJECT_SCHEMA\020%\022\023\n\017OB" +
-      "JECT_SEQUENCE\020&\022\027\n\023OBJECT_SUBSCRIPTION\020\'" +
-      "\022\030\n\024OBJECT_STATISTIC_EXT\020(\022\030\n\024OBJECT_TAB" +
-      "CONSTRAINT\020)\022\020\n\014OBJECT_TABLE\020*\022\025\n\021OBJECT" +
-      "_TABLESPACE\020+\022\024\n\020OBJECT_TRANSFORM\020,\022\022\n\016O" +
-      "BJECT_TRIGGER\020-\022\032\n\026OBJECT_TSCONFIGURATIO" +
-      "N\020.\022\027\n\023OBJECT_TSDICTIONARY\020/\022\023\n\017OBJECT_T" +
-      "SPARSER\0200\022\025\n\021OBJECT_TSTEMPLATE\0201\022\017\n\013OBJE" +
-      "CT_TYPE\0202\022\027\n\023OBJECT_USER_MAPPING\0203\022\017\n\013OB" +
-      "JECT_VIEW\0204*P\n\014DropBehavior\022\033\n\027DROP_BEHA" +
-      "VIOR_UNDEFINED\020\000\022\021\n\rDROP_RESTRICT\020\001\022\020\n\014D" +
-      "ROP_CASCADE\020\002*\214\014\n\016AlterTableType\022\036\n\032ALTE" +
-      "R_TABLE_TYPE_UNDEFINED\020\000\022\020\n\014AT_AddColumn" +
-      "\020\001\022\026\n\022AT_AddColumnToView\020\002\022\024\n\020AT_ColumnD" +
-      "efault\020\003\022\032\n\026AT_CookedColumnDefault\020\004\022\022\n\016" +
-      "AT_DropNotNull\020\005\022\021\n\rAT_SetNotNull\020\006\022\024\n\020A" +
-      "T_SetExpression\020\007\022\025\n\021AT_DropExpression\020\010" +
-      "\022\023\n\017AT_CheckNotNull\020\t\022\024\n\020AT_SetStatistic" +
-      "s\020\n\022\021\n\rAT_SetOptions\020\013\022\023\n\017AT_ResetOption" +
-      "s\020\014\022\021\n\rAT_SetStorage\020\r\022\025\n\021AT_SetCompress" +
-      "ion\020\016\022\021\n\rAT_DropColumn\020\017\022\017\n\013AT_AddIndex\020" +
-      "\020\022\021\n\rAT_ReAddIndex\020\021\022\024\n\020AT_AddConstraint" +
-      "\020\022\022\026\n\022AT_ReAddConstraint\020\023\022\034\n\030AT_ReAddDo" +
-      "mainConstraint\020\024\022\026\n\022AT_AlterConstraint\020\025" +
-      "\022\031\n\025AT_ValidateConstraint\020\026\022\031\n\025AT_AddInd" +
-      "exConstraint\020\027\022\025\n\021AT_DropConstraint\020\030\022\023\n" +
-      "\017AT_ReAddComment\020\031\022\026\n\022AT_AlterColumnType" +
-      "\020\032\022 \n\034AT_AlterColumnGenericOptions\020\033\022\022\n\016" +
-      "AT_ChangeOwner\020\034\022\020\n\014AT_ClusterOn\020\035\022\022\n\016AT" +
-      "_DropCluster\020\036\022\020\n\014AT_SetLogged\020\037\022\022\n\016AT_S" +
-      "etUnLogged\020 \022\017\n\013AT_DropOids\020!\022\026\n\022AT_SetA" +
-      "ccessMethod\020\"\022\024\n\020AT_SetTableSpace\020#\022\024\n\020A" +
-      "T_SetRelOptions\020$\022\026\n\022AT_ResetRelOptions\020" +
-      "%\022\030\n\024AT_ReplaceRelOptions\020&\022\021\n\rAT_Enable" +
-      "Trig\020\'\022\027\n\023AT_EnableAlwaysTrig\020(\022\030\n\024AT_En" +
-      "ableReplicaTrig\020)\022\022\n\016AT_DisableTrig\020*\022\024\n" +
-      "\020AT_EnableTrigAll\020+\022\025\n\021AT_DisableTrigAll" +
-      "\020,\022\025\n\021AT_EnableTrigUser\020-\022\026\n\022AT_DisableT" +
-      "rigUser\020.\022\021\n\rAT_EnableRule\020/\022\027\n\023AT_Enabl" +
-      "eAlwaysRule\0200\022\030\n\024AT_EnableReplicaRule\0201\022" +
-      "\022\n\016AT_DisableRule\0202\022\021\n\rAT_AddInherit\0203\022\022" +
-      "\n\016AT_DropInherit\0204\022\014\n\010AT_AddOf\0205\022\r\n\tAT_D" +
-      "ropOf\0206\022\026\n\022AT_ReplicaIdentity\0207\022\030\n\024AT_En" +
-      "ableRowSecurity\0208\022\031\n\025AT_DisableRowSecuri" +
-      "ty\0209\022\027\n\023AT_ForceRowSecurity\020:\022\031\n\025AT_NoFo" +
-      "rceRowSecurity\020;\022\025\n\021AT_GenericOptions\020<\022" +
-      "\026\n\022AT_AttachPartition\020=\022\026\n\022AT_DetachPart" +
-      "ition\020>\022\036\n\032AT_DetachPartitionFinalize\020?\022" +
-      "\022\n\016AT_AddIdentity\020@\022\022\n\016AT_SetIdentity\020A\022" +
-      "\023\n\017AT_DropIdentity\020B\022\026\n\022AT_ReAddStatisti" +
-      "cs\020C*\200\001\n\017GrantTargetType\022\037\n\033GRANT_TARGET" +
-      "_TYPE_UNDEFINED\020\000\022\025\n\021ACL_TARGET_OBJECT\020\001" +
-      "\022\034\n\030ACL_TARGET_ALL_IN_SCHEMA\020\002\022\027\n\023ACL_TA" +
-      "RGET_DEFAULTS\020\003*\244\001\n\017VariableSetKind\022\037\n\033V" +
-      "ARIABLE_SET_KIND_UNDEFINED\020\000\022\021\n\rVAR_SET_" +
-      "VALUE\020\001\022\023\n\017VAR_SET_DEFAULT\020\002\022\023\n\017VAR_SET_" +
-      "CURRENT\020\003\022\021\n\rVAR_SET_MULTI\020\004\022\r\n\tVAR_RESE" +
-      "T\020\005\022\021\n\rVAR_RESET_ALL\020\006*\337\002\n\nConstrType\022\031\n" +
-      "\025CONSTR_TYPE_UNDEFINED\020\000\022\017\n\013CONSTR_NULL\020" +
-      "\001\022\022\n\016CONSTR_NOTNULL\020\002\022\022\n\016CONSTR_DEFAULT\020" +
-      "\003\022\023\n\017CONSTR_IDENTITY\020\004\022\024\n\020CONSTR_GENERAT" +
-      "ED\020\005\022\020\n\014CONSTR_CHECK\020\006\022\022\n\016CONSTR_PRIMARY" +
-      "\020\007\022\021\n\rCONSTR_UNIQUE\020\010\022\024\n\020CONSTR_EXCLUSIO" +
-      "N\020\t\022\022\n\016CONSTR_FOREIGN\020\n\022\032\n\026CONSTR_ATTR_D" +
-      "EFERRABLE\020\013\022\036\n\032CONSTR_ATTR_NOT_DEFERRABL" +
-      "E\020\014\022\030\n\024CONSTR_ATTR_DEFERRED\020\r\022\031\n\025CONSTR_" +
-      "ATTR_IMMEDIATE\020\016*\234\001\n\027ImportForeignSchema" +
-      "Type\022(\n$IMPORT_FOREIGN_SCHEMA_TYPE_UNDEF" +
-      "INED\020\000\022\031\n\025FDW_IMPORT_SCHEMA_ALL\020\001\022\036\n\032FDW" +
-      "_IMPORT_SCHEMA_LIMIT_TO\020\002\022\034\n\030FDW_IMPORT_" +
-      "SCHEMA_EXCEPT\020\003*f\n\014RoleStmtType\022\034\n\030ROLE_" +
-      "STMT_TYPE_UNDEFINED\020\000\022\021\n\rROLESTMT_ROLE\020\001" +
-      "\022\021\n\rROLESTMT_USER\020\002\022\022\n\016ROLESTMT_GROUP\020\003*" +
-      "~\n\016FetchDirection\022\035\n\031FETCH_DIRECTION_UND" +
-      "EFINED\020\000\022\021\n\rFETCH_FORWARD\020\001\022\022\n\016FETCH_BAC" +
-      "KWARD\020\002\022\022\n\016FETCH_ABSOLUTE\020\003\022\022\n\016FETCH_REL" +
-      "ATIVE\020\004*\302\001\n\025FunctionParameterMode\022%\n!FUN" +
-      "CTION_PARAMETER_MODE_UNDEFINED\020\000\022\021\n\rFUNC" +
-      "_PARAM_IN\020\001\022\022\n\016FUNC_PARAM_OUT\020\002\022\024\n\020FUNC_" +
-      "PARAM_INOUT\020\003\022\027\n\023FUNC_PARAM_VARIADIC\020\004\022\024" +
-      "\n\020FUNC_PARAM_TABLE\020\005\022\026\n\022FUNC_PARAM_DEFAU" +
-      "LT\020\006*\276\002\n\023TransactionStmtKind\022#\n\037TRANSACT" +
-      "ION_STMT_KIND_UNDEFINED\020\000\022\024\n\020TRANS_STMT_" +
-      "BEGIN\020\001\022\024\n\020TRANS_STMT_START\020\002\022\025\n\021TRANS_S" +
-      "TMT_COMMIT\020\003\022\027\n\023TRANS_STMT_ROLLBACK\020\004\022\030\n" +
-      "\024TRANS_STMT_SAVEPOINT\020\005\022\026\n\022TRANS_STMT_RE" +
-      "LEASE\020\006\022\032\n\026TRANS_STMT_ROLLBACK_TO\020\007\022\026\n\022T" +
-      "RANS_STMT_PREPARE\020\010\022\036\n\032TRANS_STMT_COMMIT" +
-      "_PREPARED\020\t\022 \n\034TRANS_STMT_ROLLBACK_PREPA" +
-      "RED\020\n*z\n\017ViewCheckOption\022\037\n\033VIEW_CHECK_O" +
-      "PTION_UNDEFINED\020\000\022\023\n\017NO_CHECK_OPTION\020\001\022\026" +
-      "\n\022LOCAL_CHECK_OPTION\020\002\022\031\n\025CASCADED_CHECK" +
-      "_OPTION\020\003*v\n\013DiscardMode\022\032\n\026DISCARD_MODE" +
-      "_UNDEFINED\020\000\022\017\n\013DISCARD_ALL\020\001\022\021\n\rDISCARD" +
-      "_PLANS\020\002\022\025\n\021DISCARD_SEQUENCES\020\003\022\020\n\014DISCA" +
-      "RD_TEMP\020\004*\275\001\n\021ReindexObjectType\022!\n\035REIND" +
-      "EX_OBJECT_TYPE_UNDEFINED\020\000\022\030\n\024REINDEX_OB" +
-      "JECT_INDEX\020\001\022\030\n\024REINDEX_OBJECT_TABLE\020\002\022\031" +
-      "\n\025REINDEX_OBJECT_SCHEMA\020\003\022\031\n\025REINDEX_OBJ" +
-      "ECT_SYSTEM\020\004\022\033\n\027REINDEX_OBJECT_DATABASE\020" +
-      "\005*\357\001\n\021AlterTSConfigType\022!\n\035ALTER_TSCONFI" +
-      "G_TYPE_UNDEFINED\020\000\022\036\n\032ALTER_TSCONFIG_ADD" +
-      "_MAPPING\020\001\022*\n&ALTER_TSCONFIG_ALTER_MAPPI" +
-      "NG_FOR_TOKEN\020\002\022\037\n\033ALTER_TSCONFIG_REPLACE" +
-      "_DICT\020\003\022)\n%ALTER_TSCONFIG_REPLACE_DICT_F" +
-      "OR_TOKEN\020\004\022\037\n\033ALTER_TSCONFIG_DROP_MAPPIN" +
-      "G\020\005*\312\001\n\026PublicationObjSpecType\022\'\n#PUBLIC" +
-      "ATION_OBJ_SPEC_TYPE_UNDEFINED\020\000\022\030\n\024PUBLI" +
-      "CATIONOBJ_TABLE\020\001\022#\n\037PUBLICATIONOBJ_TABL" +
-      "ES_IN_SCHEMA\020\002\022\'\n#PUBLICATIONOBJ_TABLES_" +
-      "IN_CUR_SCHEMA\020\003\022\037\n\033PUBLICATIONOBJ_CONTIN" +
-      "UATION\020\004*z\n\026AlterPublicationAction\022&\n\"AL" +
-      "TER_PUBLICATION_ACTION_UNDEFINED\020\000\022\021\n\rAP" +
-      "_AddObjects\020\001\022\022\n\016AP_DropObjects\020\002\022\021\n\rAP_" +
-      "SetObjects\020\003*\327\002\n\025AlterSubscriptionType\022%" +
-      "\n!ALTER_SUBSCRIPTION_TYPE_UNDEFINED\020\000\022\036\n" +
-      "\032ALTER_SUBSCRIPTION_OPTIONS\020\001\022!\n\035ALTER_S" +
-      "UBSCRIPTION_CONNECTION\020\002\022&\n\"ALTER_SUBSCR" +
-      "IPTION_SET_PUBLICATION\020\003\022&\n\"ALTER_SUBSCR" +
-      "IPTION_ADD_PUBLICATION\020\004\022\'\n#ALTER_SUBSCR" +
-      "IPTION_DROP_PUBLICATION\020\005\022\036\n\032ALTER_SUBSC" +
-      "RIPTION_REFRESH\020\006\022\036\n\032ALTER_SUBSCRIPTION_" +
-      "ENABLED\020\007\022\033\n\027ALTER_SUBSCRIPTION_SKIP\020\010*\177" +
-      "\n\016OverridingKind\022\035\n\031OVERRIDING_KIND_UNDE" +
-      "FINED\020\000\022\026\n\022OVERRIDING_NOT_SET\020\001\022\031\n\025OVERR" +
-      "IDING_USER_VALUE\020\002\022\033\n\027OVERRIDING_SYSTEM_" +
-      "VALUE\020\003*\214\001\n\016OnCommitAction\022\036\n\032ON_COMMIT_" +
-      "ACTION_UNDEFINED\020\000\022\021\n\rONCOMMIT_NOOP\020\001\022\032\n" +
-      "\026ONCOMMIT_PRESERVE_ROWS\020\002\022\030\n\024ONCOMMIT_DE" +
-      "LETE_ROWS\020\003\022\021\n\rONCOMMIT_DROP\020\004*T\n\rTableF" +
-      "uncType\022\035\n\031TABLE_FUNC_TYPE_UNDEFINED\020\000\022\020" +
-      "\n\014TFT_XMLTABLE\020\001\022\022\n\016TFT_JSON_TABLE\020\002*o\n\t" +
-      "ParamKind\022\030\n\024PARAM_KIND_UNDEFINED\020\000\022\020\n\014P" +
-      "ARAM_EXTERN\020\001\022\016\n\nPARAM_EXEC\020\002\022\021\n\rPARAM_S" +
-      "UBLINK\020\003\022\023\n\017PARAM_MULTIEXPR\020\004*\216\001\n\017Coerci" +
-      "onContext\022\036\n\032COERCION_CONTEXT_UNDEFINED\020" +
-      "\000\022\025\n\021COERCION_IMPLICIT\020\001\022\027\n\023COERCION_ASS" +
-      "IGNMENT\020\002\022\024\n\020COERCION_PLPGSQL\020\003\022\025\n\021COERC" +
-      "ION_EXPLICIT\020\004*\220\001\n\014CoercionForm\022\033\n\027COERC" +
-      "ION_FORM_UNDEFINED\020\000\022\030\n\024COERCE_EXPLICIT_" +
-      "CALL\020\001\022\030\n\024COERCE_EXPLICIT_CAST\020\002\022\030\n\024COER" +
-      "CE_IMPLICIT_CAST\020\003\022\025\n\021COERCE_SQL_SYNTAX\020" +
-      "\004*U\n\014BoolExprType\022\034\n\030BOOL_EXPR_TYPE_UNDE" +
-      "FINED\020\000\022\014\n\010AND_EXPR\020\001\022\013\n\007OR_EXPR\020\002\022\014\n\010NO" +
-      "T_EXPR\020\003*\305\001\n\013SubLinkType\022\033\n\027SUB_LINK_TYP" +
-      "E_UNDEFINED\020\000\022\022\n\016EXISTS_SUBLINK\020\001\022\017\n\013ALL" +
-      "_SUBLINK\020\002\022\017\n\013ANY_SUBLINK\020\003\022\026\n\022ROWCOMPAR" +
-      "E_SUBLINK\020\004\022\020\n\014EXPR_SUBLINK\020\005\022\025\n\021MULTIEX" +
-      "PR_SUBLINK\020\006\022\021\n\rARRAY_SUBLINK\020\007\022\017\n\013CTE_S" +
-      "UBLINK\020\010*\242\001\n\016RowCompareType\022\036\n\032ROW_COMPA" +
-      "RE_TYPE_UNDEFINED\020\000\022\021\n\rROWCOMPARE_LT\020\001\022\021" +
-      "\n\rROWCOMPARE_LE\020\002\022\021\n\rROWCOMPARE_EQ\020\003\022\021\n\r" +
-      "ROWCOMPARE_GE\020\004\022\021\n\rROWCOMPARE_GT\020\005\022\021\n\rRO" +
-      "WCOMPARE_NE\020\006*C\n\010MinMaxOp\022\030\n\024MIN_MAX_OP_" +
-      "UNDEFINED\020\000\022\017\n\013IS_GREATEST\020\001\022\014\n\010IS_LEAST" +
-      "\020\002*\255\003\n\022SQLValueFunctionOp\022\"\n\036SQLVALUE_FU" +
-      "NCTION_OP_UNDEFINED\020\000\022\026\n\022SVFOP_CURRENT_D" +
-      "ATE\020\001\022\026\n\022SVFOP_CURRENT_TIME\020\002\022\030\n\024SVFOP_C" +
-      "URRENT_TIME_N\020\003\022\033\n\027SVFOP_CURRENT_TIMESTA" +
-      "MP\020\004\022\035\n\031SVFOP_CURRENT_TIMESTAMP_N\020\005\022\023\n\017S" +
-      "VFOP_LOCALTIME\020\006\022\025\n\021SVFOP_LOCALTIME_N\020\007\022" +
-      "\030\n\024SVFOP_LOCALTIMESTAMP\020\010\022\032\n\026SVFOP_LOCAL" +
-      "TIMESTAMP_N\020\t\022\026\n\022SVFOP_CURRENT_ROLE\020\n\022\026\n" +
-      "\022SVFOP_CURRENT_USER\020\013\022\016\n\nSVFOP_USER\020\014\022\026\n" +
-      "\022SVFOP_SESSION_USER\020\r\022\031\n\025SVFOP_CURRENT_C" +
-      "ATALOG\020\016\022\030\n\024SVFOP_CURRENT_SCHEMA\020\017*\262\001\n\tX" +
-      "mlExprOp\022\031\n\025XML_EXPR_OP_UNDEFINED\020\000\022\020\n\014I" +
-      "S_XMLCONCAT\020\001\022\021\n\rIS_XMLELEMENT\020\002\022\020\n\014IS_X" +
-      "MLFOREST\020\003\022\017\n\013IS_XMLPARSE\020\004\022\014\n\010IS_XMLPI\020" +
-      "\005\022\016\n\nIS_XMLROOT\020\006\022\023\n\017IS_XMLSERIALIZE\020\007\022\017" +
-      "\n\013IS_DOCUMENT\020\010*]\n\rXmlOptionType\022\035\n\031XML_" +
-      "OPTION_TYPE_UNDEFINED\020\000\022\026\n\022XMLOPTION_DOC" +
-      "UMENT\020\001\022\025\n\021XMLOPTION_CONTENT\020\002*t\n\014JsonEn" +
-      "coding\022\033\n\027JSON_ENCODING_UNDEFINED\020\000\022\022\n\016J" +
-      "S_ENC_DEFAULT\020\001\022\017\n\013JS_ENC_UTF8\020\002\022\020\n\014JS_E" +
-      "NC_UTF16\020\003\022\020\n\014JS_ENC_UTF32\020\004*p\n\016JsonForm" +
-      "atType\022\036\n\032JSON_FORMAT_TYPE_UNDEFINED\020\000\022\025" +
-      "\n\021JS_FORMAT_DEFAULT\020\001\022\022\n\016JS_FORMAT_JSON\020" +
-      "\002\022\023\n\017JS_FORMAT_JSONB\020\003*\350\001\n\023JsonConstruct" +
-      "orType\022#\n\037JSON_CONSTRUCTOR_TYPE_UNDEFINE" +
-      "D\020\000\022\026\n\022JSCTOR_JSON_OBJECT\020\001\022\025\n\021JSCTOR_JS" +
-      "ON_ARRAY\020\002\022\031\n\025JSCTOR_JSON_OBJECTAGG\020\003\022\030\n" +
-      "\024JSCTOR_JSON_ARRAYAGG\020\004\022\025\n\021JSCTOR_JSON_P" +
-      "ARSE\020\005\022\026\n\022JSCTOR_JSON_SCALAR\020\006\022\031\n\025JSCTOR" +
-      "_JSON_SERIALIZE\020\007*z\n\rJsonValueType\022\035\n\031JS" +
-      "ON_VALUE_TYPE_UNDEFINED\020\000\022\017\n\013JS_TYPE_ANY" +
-      "\020\001\022\022\n\016JS_TYPE_OBJECT\020\002\022\021\n\rJS_TYPE_ARRAY\020" +
-      "\003\022\022\n\016JS_TYPE_SCALAR\020\004*s\n\013JsonWrapper\022\032\n\026" +
-      "JSON_WRAPPER_UNDEFINED\020\000\022\016\n\nJSW_UNSPEC\020\001" +
-      "\022\014\n\010JSW_NONE\020\002\022\023\n\017JSW_CONDITIONAL\020\003\022\025\n\021J" +
-      "SW_UNCONDITIONAL\020\004*\244\002\n\020JsonBehaviorType\022" +
-      " \n\034JSON_BEHAVIOR_TYPE_UNDEFINED\020\000\022\026\n\022JSO" +
-      "N_BEHAVIOR_NULL\020\001\022\027\n\023JSON_BEHAVIOR_ERROR" +
-      "\020\002\022\027\n\023JSON_BEHAVIOR_EMPTY\020\003\022\026\n\022JSON_BEHA" +
-      "VIOR_TRUE\020\004\022\027\n\023JSON_BEHAVIOR_FALSE\020\005\022\031\n\025" +
-      "JSON_BEHAVIOR_UNKNOWN\020\006\022\035\n\031JSON_BEHAVIOR" +
-      "_EMPTY_ARRAY\020\007\022\036\n\032JSON_BEHAVIOR_EMPTY_OB" +
-      "JECT\020\010\022\031\n\025JSON_BEHAVIOR_DEFAULT\020\t*u\n\nJso" +
-      "nExprOp\022\032\n\026JSON_EXPR_OP_UNDEFINED\020\000\022\022\n\016J" +
-      "SON_EXISTS_OP\020\001\022\021\n\rJSON_QUERY_OP\020\002\022\021\n\rJS" +
-      "ON_VALUE_OP\020\003\022\021\n\rJSON_TABLE_OP\020\004*J\n\014Null" +
-      "TestType\022\034\n\030NULL_TEST_TYPE_UNDEFINED\020\000\022\013" +
-      "\n\007IS_NULL\020\001\022\017\n\013IS_NOT_NULL\020\002*\216\001\n\014BoolTes" +
-      "tType\022\034\n\030BOOL_TEST_TYPE_UNDEFINED\020\000\022\013\n\007I" +
-      "S_TRUE\020\001\022\017\n\013IS_NOT_TRUE\020\002\022\014\n\010IS_FALSE\020\003\022" +
-      "\020\n\014IS_NOT_FALSE\020\004\022\016\n\nIS_UNKNOWN\020\005\022\022\n\016IS_" +
-      "NOT_UNKNOWN\020\006*\224\001\n\016MergeMatchKind\022\036\n\032MERG" +
-      "E_MATCH_KIND_UNDEFINED\020\000\022\026\n\022MERGE_WHEN_M" +
-      "ATCHED\020\001\022$\n MERGE_WHEN_NOT_MATCHED_BY_SO" +
-      "URCE\020\002\022$\n MERGE_WHEN_NOT_MATCHED_BY_TARG" +
-      "ET\020\003*\243\001\n\007CmdType\022\026\n\022CMD_TYPE_UNDEFINED\020\000" +
-      "\022\017\n\013CMD_UNKNOWN\020\001\022\016\n\nCMD_SELECT\020\002\022\016\n\nCMD" +
-      "_UPDATE\020\003\022\016\n\nCMD_INSERT\020\004\022\016\n\nCMD_DELETE\020" +
-      "\005\022\r\n\tCMD_MERGE\020\006\022\017\n\013CMD_UTILITY\020\007\022\017\n\013CMD" +
-      "_NOTHING\020\010*\302\001\n\010JoinType\022\027\n\023JOIN_TYPE_UND" +
-      "EFINED\020\000\022\016\n\nJOIN_INNER\020\001\022\r\n\tJOIN_LEFT\020\002\022" +
-      "\r\n\tJOIN_FULL\020\003\022\016\n\nJOIN_RIGHT\020\004\022\r\n\tJOIN_S" +
-      "EMI\020\005\022\r\n\tJOIN_ANTI\020\006\022\023\n\017JOIN_RIGHT_ANTI\020" +
-      "\007\022\025\n\021JOIN_UNIQUE_OUTER\020\010\022\025\n\021JOIN_UNIQUE_" +
-      "INNER\020\t*g\n\013AggStrategy\022\032\n\026AGG_STRATEGY_U" +
-      "NDEFINED\020\000\022\r\n\tAGG_PLAIN\020\001\022\016\n\nAGG_SORTED\020" +
-      "\002\022\016\n\nAGG_HASHED\020\003\022\r\n\tAGG_MIXED\020\004*r\n\010AggS" +
-      "plit\022\027\n\023AGG_SPLIT_UNDEFINED\020\000\022\023\n\017AGGSPLI" +
-      "T_SIMPLE\020\001\022\033\n\027AGGSPLIT_INITIAL_SERIAL\020\002\022" +
-      "\033\n\027AGGSPLIT_FINAL_DESERIAL\020\003*\206\001\n\010SetOpCm" +
-      "d\022\030\n\024SET_OP_CMD_UNDEFINED\020\000\022\026\n\022SETOPCMD_" +
-      "INTERSECT\020\001\022\032\n\026SETOPCMD_INTERSECT_ALL\020\002\022" +
-      "\023\n\017SETOPCMD_EXCEPT\020\003\022\027\n\023SETOPCMD_EXCEPT_" +
-      "ALL\020\004*R\n\rSetOpStrategy\022\035\n\031SET_OP_STRATEG" +
-      "Y_UNDEFINED\020\000\022\020\n\014SETOP_SORTED\020\001\022\020\n\014SETOP" +
-      "_HASHED\020\002*x\n\020OnConflictAction\022 \n\034ON_CONF" +
-      "LICT_ACTION_UNDEFINED\020\000\022\023\n\017ONCONFLICT_NO" +
-      "NE\020\001\022\026\n\022ONCONFLICT_NOTHING\020\002\022\025\n\021ONCONFLI" +
-      "CT_UPDATE\020\003*w\n\013LimitOption\022\032\n\026LIMIT_OPTI" +
-      "ON_UNDEFINED\020\000\022\030\n\024LIMIT_OPTION_DEFAULT\020\001" +
-      "\022\026\n\022LIMIT_OPTION_COUNT\020\002\022\032\n\026LIMIT_OPTION" +
-      "_WITH_TIES\020\003*\230\001\n\022LockClauseStrength\022\"\n\036L" +
-      "OCK_CLAUSE_STRENGTH_UNDEFINED\020\000\022\014\n\010LCS_N" +
-      "ONE\020\001\022\023\n\017LCS_FORKEYSHARE\020\002\022\020\n\014LCS_FORSHA" +
-      "RE\020\003\022\026\n\022LCS_FORNOKEYUPDATE\020\004\022\021\n\rLCS_FORU" +
-      "PDATE\020\005*h\n\016LockWaitPolicy\022\036\n\032LOCK_WAIT_P" +
-      "OLICY_UNDEFINED\020\000\022\021\n\rLockWaitBlock\020\001\022\020\n\014" +
-      "LockWaitSkip\020\002\022\021\n\rLockWaitError\020\003*\216\001\n\rLo" +
-      "ckTupleMode\022\035\n\031LOCK_TUPLE_MODE_UNDEFINED" +
-      "\020\000\022\025\n\021LockTupleKeyShare\020\001\022\022\n\016LockTupleSh" +
-      "are\020\002\022\033\n\027LockTupleNoKeyExclusive\020\003\022\026\n\022Lo" +
-      "ckTupleExclusive\020\004*}\n\013KeywordKind\022\016\n\nNO_" +
-      "KEYWORD\020\000\022\026\n\022UNRESERVED_KEYWORD\020\001\022\024\n\020COL" +
-      "_NAME_KEYWORD\020\002\022\032\n\026TYPE_FUNC_NAME_KEYWOR" +
-      "D\020\003\022\024\n\020RESERVED_KEYWORD\020\004*\350;\n\005Token\022\007\n\003N" +
-      "UL\020\000\022\014\n\010ASCII_36\020$\022\014\n\010ASCII_37\020%\022\014\n\010ASCI" +
-      "I_40\020(\022\014\n\010ASCII_41\020)\022\014\n\010ASCII_42\020*\022\014\n\010AS" +
-      "CII_43\020+\022\014\n\010ASCII_44\020,\022\014\n\010ASCII_45\020-\022\014\n\010" +
-      "ASCII_46\020.\022\014\n\010ASCII_47\020/\022\014\n\010ASCII_58\020:\022\014" +
-      "\n\010ASCII_59\020;\022\014\n\010ASCII_60\020<\022\014\n\010ASCII_61\020=" +
-      "\022\014\n\010ASCII_62\020>\022\014\n\010ASCII_63\020?\022\014\n\010ASCII_91" +
-      "\020[\022\014\n\010ASCII_92\020\\\022\014\n\010ASCII_93\020]\022\014\n\010ASCII_" +
-      "94\020^\022\n\n\005IDENT\020\202\002\022\013\n\006UIDENT\020\203\002\022\013\n\006FCONST\020" +
-      "\204\002\022\013\n\006SCONST\020\205\002\022\014\n\007USCONST\020\206\002\022\013\n\006BCONST\020" +
-      "\207\002\022\013\n\006XCONST\020\210\002\022\007\n\002Op\020\211\002\022\013\n\006ICONST\020\212\002\022\n\n" +
-      "\005PARAM\020\213\002\022\r\n\010TYPECAST\020\214\002\022\014\n\007DOT_DOT\020\215\002\022\021" +
-      "\n\014COLON_EQUALS\020\216\002\022\023\n\016EQUALS_GREATER\020\217\002\022\020" +
-      "\n\013LESS_EQUALS\020\220\002\022\023\n\016GREATER_EQUALS\020\221\002\022\017\n" +
-      "\nNOT_EQUALS\020\222\002\022\020\n\013SQL_COMMENT\020\223\002\022\016\n\tC_CO" +
-      "MMENT\020\224\002\022\014\n\007ABORT_P\020\225\002\022\013\n\006ABSENT\020\226\002\022\017\n\nA" +
-      "BSOLUTE_P\020\227\002\022\013\n\006ACCESS\020\230\002\022\013\n\006ACTION\020\231\002\022\n" +
-      "\n\005ADD_P\020\232\002\022\n\n\005ADMIN\020\233\002\022\n\n\005AFTER\020\234\002\022\016\n\tAG" +
-      "GREGATE\020\235\002\022\010\n\003ALL\020\236\002\022\t\n\004ALSO\020\237\002\022\n\n\005ALTER" +
-      "\020\240\002\022\013\n\006ALWAYS\020\241\002\022\014\n\007ANALYSE\020\242\002\022\014\n\007ANALYZ" +
-      "E\020\243\002\022\010\n\003AND\020\244\002\022\010\n\003ANY\020\245\002\022\n\n\005ARRAY\020\246\002\022\007\n\002" +
-      "AS\020\247\002\022\010\n\003ASC\020\250\002\022\017\n\nASENSITIVE\020\251\002\022\016\n\tASSE" +
-      "RTION\020\252\002\022\017\n\nASSIGNMENT\020\253\002\022\017\n\nASYMMETRIC\020" +
-      "\254\002\022\013\n\006ATOMIC\020\255\002\022\007\n\002AT\020\256\002\022\013\n\006ATTACH\020\257\002\022\016\n" +
-      "\tATTRIBUTE\020\260\002\022\022\n\rAUTHORIZATION\020\261\002\022\r\n\010BAC" +
-      "KWARD\020\262\002\022\013\n\006BEFORE\020\263\002\022\014\n\007BEGIN_P\020\264\002\022\014\n\007B" +
-      "ETWEEN\020\265\002\022\013\n\006BIGINT\020\266\002\022\013\n\006BINARY\020\267\002\022\010\n\003B" +
-      "IT\020\270\002\022\016\n\tBOOLEAN_P\020\271\002\022\t\n\004BOTH\020\272\002\022\014\n\007BREA" +
-      "DTH\020\273\002\022\007\n\002BY\020\274\002\022\n\n\005CACHE\020\275\002\022\t\n\004CALL\020\276\002\022\013" +
-      "\n\006CALLED\020\277\002\022\014\n\007CASCADE\020\300\002\022\r\n\010CASCADED\020\301\002" +
-      "\022\t\n\004CASE\020\302\002\022\t\n\004CAST\020\303\002\022\016\n\tCATALOG_P\020\304\002\022\n" +
-      "\n\005CHAIN\020\305\002\022\013\n\006CHAR_P\020\306\002\022\016\n\tCHARACTER\020\307\002\022" +
-      "\024\n\017CHARACTERISTICS\020\310\002\022\n\n\005CHECK\020\311\002\022\017\n\nCHE" +
-      "CKPOINT\020\312\002\022\n\n\005CLASS\020\313\002\022\n\n\005CLOSE\020\314\002\022\014\n\007CL" +
-      "USTER\020\315\002\022\r\n\010COALESCE\020\316\002\022\014\n\007COLLATE\020\317\002\022\016\n" +
-      "\tCOLLATION\020\320\002\022\013\n\006COLUMN\020\321\002\022\014\n\007COLUMNS\020\322\002" +
-      "\022\014\n\007COMMENT\020\323\002\022\r\n\010COMMENTS\020\324\002\022\013\n\006COMMIT\020" +
-      "\325\002\022\016\n\tCOMMITTED\020\326\002\022\020\n\013COMPRESSION\020\327\002\022\021\n\014" +
-      "CONCURRENTLY\020\330\002\022\020\n\013CONDITIONAL\020\331\002\022\022\n\rCON" +
-      "FIGURATION\020\332\002\022\r\n\010CONFLICT\020\333\002\022\017\n\nCONNECTI" +
-      "ON\020\334\002\022\017\n\nCONSTRAINT\020\335\002\022\020\n\013CONSTRAINTS\020\336\002" +
-      "\022\016\n\tCONTENT_P\020\337\002\022\017\n\nCONTINUE_P\020\340\002\022\021\n\014CON" +
-      "VERSION_P\020\341\002\022\t\n\004COPY\020\342\002\022\t\n\004COST\020\343\002\022\013\n\006CR" +
-      "EATE\020\344\002\022\n\n\005CROSS\020\345\002\022\010\n\003CSV\020\346\002\022\t\n\004CUBE\020\347\002" +
-      "\022\016\n\tCURRENT_P\020\350\002\022\024\n\017CURRENT_CATALOG\020\351\002\022\021" +
-      "\n\014CURRENT_DATE\020\352\002\022\021\n\014CURRENT_ROLE\020\353\002\022\023\n\016" +
-      "CURRENT_SCHEMA\020\354\002\022\021\n\014CURRENT_TIME\020\355\002\022\026\n\021" +
-      "CURRENT_TIMESTAMP\020\356\002\022\021\n\014CURRENT_USER\020\357\002\022" +
-      "\013\n\006CURSOR\020\360\002\022\n\n\005CYCLE\020\361\002\022\013\n\006DATA_P\020\362\002\022\r\n" +
-      "\010DATABASE\020\363\002\022\n\n\005DAY_P\020\364\002\022\017\n\nDEALLOCATE\020\365" +
-      "\002\022\010\n\003DEC\020\366\002\022\016\n\tDECIMAL_P\020\367\002\022\014\n\007DECLARE\020\370" +
-      "\002\022\014\n\007DEFAULT\020\371\002\022\r\n\010DEFAULTS\020\372\002\022\017\n\nDEFERR" +
-      "ABLE\020\373\002\022\r\n\010DEFERRED\020\374\002\022\014\n\007DEFINER\020\375\002\022\r\n\010" +
-      "DELETE_P\020\376\002\022\016\n\tDELIMITER\020\377\002\022\017\n\nDELIMITER" +
-      "S\020\200\003\022\014\n\007DEPENDS\020\201\003\022\n\n\005DEPTH\020\202\003\022\t\n\004DESC\020\203" +
-      "\003\022\013\n\006DETACH\020\204\003\022\017\n\nDICTIONARY\020\205\003\022\016\n\tDISAB" +
-      "LE_P\020\206\003\022\014\n\007DISCARD\020\207\003\022\r\n\010DISTINCT\020\210\003\022\007\n\002" +
-      "DO\020\211\003\022\017\n\nDOCUMENT_P\020\212\003\022\r\n\010DOMAIN_P\020\213\003\022\r\n" +
-      "\010DOUBLE_P\020\214\003\022\t\n\004DROP\020\215\003\022\t\n\004EACH\020\216\003\022\t\n\004EL" +
-      "SE\020\217\003\022\014\n\007EMPTY_P\020\220\003\022\r\n\010ENABLE_P\020\221\003\022\r\n\010EN" +
-      "CODING\020\222\003\022\016\n\tENCRYPTED\020\223\003\022\n\n\005END_P\020\224\003\022\013\n" +
-      "\006ENUM_P\020\225\003\022\014\n\007ERROR_P\020\226\003\022\013\n\006ESCAPE\020\227\003\022\n\n" +
-      "\005EVENT\020\230\003\022\013\n\006EXCEPT\020\231\003\022\014\n\007EXCLUDE\020\232\003\022\016\n\t" +
-      "EXCLUDING\020\233\003\022\016\n\tEXCLUSIVE\020\234\003\022\014\n\007EXECUTE\020" +
-      "\235\003\022\013\n\006EXISTS\020\236\003\022\014\n\007EXPLAIN\020\237\003\022\017\n\nEXPRESS" +
-      "ION\020\240\003\022\016\n\tEXTENSION\020\241\003\022\r\n\010EXTERNAL\020\242\003\022\014\n" +
-      "\007EXTRACT\020\243\003\022\014\n\007FALSE_P\020\244\003\022\013\n\006FAMILY\020\245\003\022\n" +
-      "\n\005FETCH\020\246\003\022\013\n\006FILTER\020\247\003\022\r\n\010FINALIZE\020\250\003\022\014" +
-      "\n\007FIRST_P\020\251\003\022\014\n\007FLOAT_P\020\252\003\022\016\n\tFOLLOWING\020" +
-      "\253\003\022\010\n\003FOR\020\254\003\022\n\n\005FORCE\020\255\003\022\014\n\007FOREIGN\020\256\003\022\013" +
-      "\n\006FORMAT\020\257\003\022\014\n\007FORWARD\020\260\003\022\013\n\006FREEZE\020\261\003\022\t" +
-      "\n\004FROM\020\262\003\022\t\n\004FULL\020\263\003\022\r\n\010FUNCTION\020\264\003\022\016\n\tF" +
-      "UNCTIONS\020\265\003\022\016\n\tGENERATED\020\266\003\022\013\n\006GLOBAL\020\267\003" +
-      "\022\n\n\005GRANT\020\270\003\022\014\n\007GRANTED\020\271\003\022\r\n\010GREATEST\020\272" +
-      "\003\022\014\n\007GROUP_P\020\273\003\022\r\n\010GROUPING\020\274\003\022\013\n\006GROUPS" +
-      "\020\275\003\022\014\n\007HANDLER\020\276\003\022\013\n\006HAVING\020\277\003\022\r\n\010HEADER" +
-      "_P\020\300\003\022\t\n\004HOLD\020\301\003\022\013\n\006HOUR_P\020\302\003\022\017\n\nIDENTIT" +
-      "Y_P\020\303\003\022\t\n\004IF_P\020\304\003\022\n\n\005ILIKE\020\305\003\022\016\n\tIMMEDIA" +
-      "TE\020\306\003\022\016\n\tIMMUTABLE\020\307\003\022\017\n\nIMPLICIT_P\020\310\003\022\r" +
-      "\n\010IMPORT_P\020\311\003\022\t\n\004IN_P\020\312\003\022\014\n\007INCLUDE\020\313\003\022\016" +
-      "\n\tINCLUDING\020\314\003\022\016\n\tINCREMENT\020\315\003\022\013\n\006INDENT" +
-      "\020\316\003\022\n\n\005INDEX\020\317\003\022\014\n\007INDEXES\020\320\003\022\014\n\007INHERIT" +
-      "\020\321\003\022\r\n\010INHERITS\020\322\003\022\016\n\tINITIALLY\020\323\003\022\r\n\010IN" +
-      "LINE_P\020\324\003\022\014\n\007INNER_P\020\325\003\022\n\n\005INOUT\020\326\003\022\014\n\007I" +
-      "NPUT_P\020\327\003\022\020\n\013INSENSITIVE\020\330\003\022\013\n\006INSERT\020\331\003" +
-      "\022\014\n\007INSTEAD\020\332\003\022\n\n\005INT_P\020\333\003\022\014\n\007INTEGER\020\334\003" +
-      "\022\016\n\tINTERSECT\020\335\003\022\r\n\010INTERVAL\020\336\003\022\t\n\004INTO\020" +
-      "\337\003\022\014\n\007INVOKER\020\340\003\022\007\n\002IS\020\341\003\022\013\n\006ISNULL\020\342\003\022\016" +
-      "\n\tISOLATION\020\343\003\022\t\n\004JOIN\020\344\003\022\t\n\004JSON\020\345\003\022\017\n\n" +
-      "JSON_ARRAY\020\346\003\022\022\n\rJSON_ARRAYAGG\020\347\003\022\020\n\013JSO" +
-      "N_EXISTS\020\350\003\022\020\n\013JSON_OBJECT\020\351\003\022\023\n\016JSON_OB" +
-      "JECTAGG\020\352\003\022\017\n\nJSON_QUERY\020\353\003\022\020\n\013JSON_SCAL" +
-      "AR\020\354\003\022\023\n\016JSON_SERIALIZE\020\355\003\022\017\n\nJSON_TABLE" +
-      "\020\356\003\022\017\n\nJSON_VALUE\020\357\003\022\t\n\004KEEP\020\360\003\022\010\n\003KEY\020\361" +
-      "\003\022\t\n\004KEYS\020\362\003\022\n\n\005LABEL\020\363\003\022\r\n\010LANGUAGE\020\364\003\022" +
-      "\014\n\007LARGE_P\020\365\003\022\013\n\006LAST_P\020\366\003\022\016\n\tLATERAL_P\020" +
-      "\367\003\022\014\n\007LEADING\020\370\003\022\016\n\tLEAKPROOF\020\371\003\022\n\n\005LEAS" +
-      "T\020\372\003\022\t\n\004LEFT\020\373\003\022\n\n\005LEVEL\020\374\003\022\t\n\004LIKE\020\375\003\022\n" +
-      "\n\005LIMIT\020\376\003\022\013\n\006LISTEN\020\377\003\022\t\n\004LOAD\020\200\004\022\n\n\005LO" +
-      "CAL\020\201\004\022\016\n\tLOCALTIME\020\202\004\022\023\n\016LOCALTIMESTAMP" +
-      "\020\203\004\022\r\n\010LOCATION\020\204\004\022\013\n\006LOCK_P\020\205\004\022\013\n\006LOCKE" +
-      "D\020\206\004\022\013\n\006LOGGED\020\207\004\022\014\n\007MAPPING\020\210\004\022\n\n\005MATCH",
-      "\020\211\004\022\014\n\007MATCHED\020\212\004\022\021\n\014MATERIALIZED\020\213\004\022\r\n\010" +
-      "MAXVALUE\020\214\004\022\n\n\005MERGE\020\215\004\022\021\n\014MERGE_ACTION\020" +
-      "\216\004\022\013\n\006METHOD\020\217\004\022\r\n\010MINUTE_P\020\220\004\022\r\n\010MINVAL" +
-      "UE\020\221\004\022\t\n\004MODE\020\222\004\022\014\n\007MONTH_P\020\223\004\022\t\n\004MOVE\020\224" +
-      "\004\022\013\n\006NAME_P\020\225\004\022\n\n\005NAMES\020\226\004\022\r\n\010NATIONAL\020\227" +
-      "\004\022\014\n\007NATURAL\020\230\004\022\n\n\005NCHAR\020\231\004\022\013\n\006NESTED\020\232\004" +
-      "\022\010\n\003NEW\020\233\004\022\t\n\004NEXT\020\234\004\022\010\n\003NFC\020\235\004\022\010\n\003NFD\020\236" +
-      "\004\022\t\n\004NFKC\020\237\004\022\t\n\004NFKD\020\240\004\022\007\n\002NO\020\241\004\022\t\n\004NONE" +
-      "\020\242\004\022\016\n\tNORMALIZE\020\243\004\022\017\n\nNORMALIZED\020\244\004\022\010\n\003" +
-      "NOT\020\245\004\022\014\n\007NOTHING\020\246\004\022\013\n\006NOTIFY\020\247\004\022\014\n\007NOT" +
-      "NULL\020\250\004\022\013\n\006NOWAIT\020\251\004\022\013\n\006NULL_P\020\252\004\022\013\n\006NUL" +
-      "LIF\020\253\004\022\014\n\007NULLS_P\020\254\004\022\014\n\007NUMERIC\020\255\004\022\r\n\010OB" +
-      "JECT_P\020\256\004\022\007\n\002OF\020\257\004\022\010\n\003OFF\020\260\004\022\013\n\006OFFSET\020\261" +
-      "\004\022\t\n\004OIDS\020\262\004\022\010\n\003OLD\020\263\004\022\t\n\004OMIT\020\264\004\022\007\n\002ON\020" +
-      "\265\004\022\t\n\004ONLY\020\266\004\022\r\n\010OPERATOR\020\267\004\022\013\n\006OPTION\020\270" +
-      "\004\022\014\n\007OPTIONS\020\271\004\022\007\n\002OR\020\272\004\022\n\n\005ORDER\020\273\004\022\017\n\n" +
-      "ORDINALITY\020\274\004\022\013\n\006OTHERS\020\275\004\022\n\n\005OUT_P\020\276\004\022\014" +
-      "\n\007OUTER_P\020\277\004\022\t\n\004OVER\020\300\004\022\r\n\010OVERLAPS\020\301\004\022\014" +
-      "\n\007OVERLAY\020\302\004\022\017\n\nOVERRIDING\020\303\004\022\n\n\005OWNED\020\304" +
-      "\004\022\n\n\005OWNER\020\305\004\022\r\n\010PARALLEL\020\306\004\022\016\n\tPARAMETE" +
-      "R\020\307\004\022\013\n\006PARSER\020\310\004\022\014\n\007PARTIAL\020\311\004\022\016\n\tPARTI" +
-      "TION\020\312\004\022\014\n\007PASSING\020\313\004\022\r\n\010PASSWORD\020\314\004\022\t\n\004" +
-      "PATH\020\315\004\022\014\n\007PLACING\020\316\004\022\t\n\004PLAN\020\317\004\022\n\n\005PLAN" +
-      "S\020\320\004\022\013\n\006POLICY\020\321\004\022\r\n\010POSITION\020\322\004\022\016\n\tPREC" +
-      "EDING\020\323\004\022\016\n\tPRECISION\020\324\004\022\r\n\010PRESERVE\020\325\004\022" +
-      "\014\n\007PREPARE\020\326\004\022\r\n\010PREPARED\020\327\004\022\014\n\007PRIMARY\020" +
-      "\330\004\022\n\n\005PRIOR\020\331\004\022\017\n\nPRIVILEGES\020\332\004\022\017\n\nPROCE" +
-      "DURAL\020\333\004\022\016\n\tPROCEDURE\020\334\004\022\017\n\nPROCEDURES\020\335" +
-      "\004\022\014\n\007PROGRAM\020\336\004\022\020\n\013PUBLICATION\020\337\004\022\n\n\005QUO" +
-      "TE\020\340\004\022\013\n\006QUOTES\020\341\004\022\n\n\005RANGE\020\342\004\022\t\n\004READ\020\343" +
-      "\004\022\t\n\004REAL\020\344\004\022\r\n\010REASSIGN\020\345\004\022\014\n\007RECHECK\020\346" +
-      "\004\022\016\n\tRECURSIVE\020\347\004\022\n\n\005REF_P\020\350\004\022\017\n\nREFEREN" +
-      "CES\020\351\004\022\020\n\013REFERENCING\020\352\004\022\014\n\007REFRESH\020\353\004\022\014" +
-      "\n\007REINDEX\020\354\004\022\017\n\nRELATIVE_P\020\355\004\022\014\n\007RELEASE" +
-      "\020\356\004\022\013\n\006RENAME\020\357\004\022\017\n\nREPEATABLE\020\360\004\022\014\n\007REP" +
-      "LACE\020\361\004\022\014\n\007REPLICA\020\362\004\022\n\n\005RESET\020\363\004\022\014\n\007RES" +
-      "TART\020\364\004\022\r\n\010RESTRICT\020\365\004\022\013\n\006RETURN\020\366\004\022\016\n\tR" +
-      "ETURNING\020\367\004\022\014\n\007RETURNS\020\370\004\022\013\n\006REVOKE\020\371\004\022\n" +
-      "\n\005RIGHT\020\372\004\022\t\n\004ROLE\020\373\004\022\r\n\010ROLLBACK\020\374\004\022\013\n\006" +
-      "ROLLUP\020\375\004\022\014\n\007ROUTINE\020\376\004\022\r\n\010ROUTINES\020\377\004\022\010" +
-      "\n\003ROW\020\200\005\022\t\n\004ROWS\020\201\005\022\t\n\004RULE\020\202\005\022\016\n\tSAVEPO" +
-      "INT\020\203\005\022\013\n\006SCALAR\020\204\005\022\013\n\006SCHEMA\020\205\005\022\014\n\007SCHE" +
-      "MAS\020\206\005\022\013\n\006SCROLL\020\207\005\022\013\n\006SEARCH\020\210\005\022\r\n\010SECO" +
-      "ND_P\020\211\005\022\r\n\010SECURITY\020\212\005\022\013\n\006SELECT\020\213\005\022\r\n\010S" +
-      "EQUENCE\020\214\005\022\016\n\tSEQUENCES\020\215\005\022\021\n\014SERIALIZAB" +
-      "LE\020\216\005\022\013\n\006SERVER\020\217\005\022\014\n\007SESSION\020\220\005\022\021\n\014SESS" +
-      "ION_USER\020\221\005\022\010\n\003SET\020\222\005\022\t\n\004SETS\020\223\005\022\n\n\005SETO" +
-      "F\020\224\005\022\n\n\005SHARE\020\225\005\022\t\n\004SHOW\020\226\005\022\014\n\007SIMILAR\020\227" +
-      "\005\022\013\n\006SIMPLE\020\230\005\022\t\n\004SKIP\020\231\005\022\r\n\010SMALLINT\020\232\005" +
-      "\022\r\n\010SNAPSHOT\020\233\005\022\t\n\004SOME\020\234\005\022\013\n\006SOURCE\020\235\005\022" +
-      "\n\n\005SQL_P\020\236\005\022\013\n\006STABLE\020\237\005\022\021\n\014STANDALONE_P" +
-      "\020\240\005\022\n\n\005START\020\241\005\022\016\n\tSTATEMENT\020\242\005\022\017\n\nSTATI" +
-      "STICS\020\243\005\022\n\n\005STDIN\020\244\005\022\013\n\006STDOUT\020\245\005\022\014\n\007STO" +
-      "RAGE\020\246\005\022\013\n\006STORED\020\247\005\022\r\n\010STRICT_P\020\250\005\022\r\n\010S" +
-      "TRING_P\020\251\005\022\014\n\007STRIP_P\020\252\005\022\021\n\014SUBSCRIPTION" +
-      "\020\253\005\022\016\n\tSUBSTRING\020\254\005\022\014\n\007SUPPORT\020\255\005\022\016\n\tSYM" +
-      "METRIC\020\256\005\022\n\n\005SYSID\020\257\005\022\r\n\010SYSTEM_P\020\260\005\022\020\n\013" +
-      "SYSTEM_USER\020\261\005\022\n\n\005TABLE\020\262\005\022\013\n\006TABLES\020\263\005\022" +
-      "\020\n\013TABLESAMPLE\020\264\005\022\017\n\nTABLESPACE\020\265\005\022\013\n\006TA" +
-      "RGET\020\266\005\022\t\n\004TEMP\020\267\005\022\r\n\010TEMPLATE\020\270\005\022\016\n\tTEM" +
-      "PORARY\020\271\005\022\013\n\006TEXT_P\020\272\005\022\t\n\004THEN\020\273\005\022\t\n\004TIE" +
-      "S\020\274\005\022\t\n\004TIME\020\275\005\022\016\n\tTIMESTAMP\020\276\005\022\007\n\002TO\020\277\005" +
-      "\022\r\n\010TRAILING\020\300\005\022\020\n\013TRANSACTION\020\301\005\022\016\n\tTRA" +
-      "NSFORM\020\302\005\022\n\n\005TREAT\020\303\005\022\014\n\007TRIGGER\020\304\005\022\t\n\004T" +
-      "RIM\020\305\005\022\013\n\006TRUE_P\020\306\005\022\r\n\010TRUNCATE\020\307\005\022\014\n\007TR" +
-      "USTED\020\310\005\022\013\n\006TYPE_P\020\311\005\022\014\n\007TYPES_P\020\312\005\022\014\n\007U" +
-      "ESCAPE\020\313\005\022\016\n\tUNBOUNDED\020\314\005\022\022\n\rUNCONDITION" +
-      "AL\020\315\005\022\020\n\013UNCOMMITTED\020\316\005\022\020\n\013UNENCRYPTED\020\317" +
-      "\005\022\n\n\005UNION\020\320\005\022\013\n\006UNIQUE\020\321\005\022\014\n\007UNKNOWN\020\322\005" +
-      "\022\r\n\010UNLISTEN\020\323\005\022\r\n\010UNLOGGED\020\324\005\022\n\n\005UNTIL\020" +
-      "\325\005\022\013\n\006UPDATE\020\326\005\022\t\n\004USER\020\327\005\022\n\n\005USING\020\330\005\022\013" +
-      "\n\006VACUUM\020\331\005\022\n\n\005VALID\020\332\005\022\r\n\010VALIDATE\020\333\005\022\016" +
-      "\n\tVALIDATOR\020\334\005\022\014\n\007VALUE_P\020\335\005\022\013\n\006VALUES\020\336" +
-      "\005\022\014\n\007VARCHAR\020\337\005\022\r\n\010VARIADIC\020\340\005\022\014\n\007VARYIN" +
-      "G\020\341\005\022\014\n\007VERBOSE\020\342\005\022\016\n\tVERSION_P\020\343\005\022\t\n\004VI" +
-      "EW\020\344\005\022\n\n\005VIEWS\020\345\005\022\r\n\010VOLATILE\020\346\005\022\t\n\004WHEN" +
-      "\020\347\005\022\n\n\005WHERE\020\350\005\022\021\n\014WHITESPACE_P\020\351\005\022\013\n\006WI" +
-      "NDOW\020\352\005\022\t\n\004WITH\020\353\005\022\013\n\006WITHIN\020\354\005\022\014\n\007WITHO" +
-      "UT\020\355\005\022\t\n\004WORK\020\356\005\022\014\n\007WRAPPER\020\357\005\022\n\n\005WRITE\020" +
-      "\360\005\022\n\n\005XML_P\020\361\005\022\022\n\rXMLATTRIBUTES\020\362\005\022\016\n\tXM" +
-      "LCONCAT\020\363\005\022\017\n\nXMLELEMENT\020\364\005\022\016\n\tXMLEXISTS" +
-      "\020\365\005\022\016\n\tXMLFOREST\020\366\005\022\022\n\rXMLNAMESPACES\020\367\005\022" +
-      "\r\n\010XMLPARSE\020\370\005\022\n\n\005XMLPI\020\371\005\022\014\n\007XMLROOT\020\372\005" +
-      "\022\021\n\014XMLSERIALIZE\020\373\005\022\r\n\010XMLTABLE\020\374\005\022\013\n\006YE" +
-      "AR_P\020\375\005\022\n\n\005YES_P\020\376\005\022\t\n\004ZONE\020\377\005\022\016\n\tFORMAT" +
-      "_LA\020\200\006\022\013\n\006NOT_LA\020\201\006\022\r\n\010NULLS_LA\020\202\006\022\014\n\007WI" +
-      "TH_LA\020\203\006\022\017\n\nWITHOUT_LA\020\204\006\022\023\n\016MODE_TYPE_N" +
-      "AME\020\205\006\022\026\n\021MODE_PLPGSQL_EXPR\020\206\006\022\031\n\024MODE_P" +
-      "LPGSQL_ASSIGN1\020\207\006\022\031\n\024MODE_PLPGSQL_ASSIGN" +
-      "2\020\210\006\022\031\n\024MODE_PLPGSQL_ASSIGN3\020\211\006\022\013\n\006UMINU" +
-      "S\020\212\006B,\n(com.premiumminds.sonar.postgres." +
-      "protobufP\001b\006proto3"
+      "tion\0227\n\017source_relation\030\002 \001(\0132\016.pg_query" +
+      ".NodeR\016sourceRelation\0225\n\016join_condition\030" +
+      "\003 \001(\0132\016.pg_query.NodeR\rjoinCondition\022<\n\022" +
+      "merge_when_clauses\030\004 \003(\0132\016.pg_query.Node" +
+      "R\020mergeWhenClauses\022D\n\020returning_clause\030\005" +
+      " \001(\0132\031.pg_query.ReturningClauseR\017returni" +
+      "ngClause\0225\n\013with_clause\030\006 \001(\0132\024.pg_query" +
+      ".WithClauseR\nwithClause\"\323\007\n\nSelectStmt\0227" +
+      "\n\017distinct_clause\030\001 \003(\0132\016.pg_query.NodeR" +
+      "\016distinctClause\0225\n\013into_clause\030\002 \001(\0132\024.p" +
+      "g_query.IntoClauseR\nintoClause\022/\n\013target" +
+      "_list\030\003 \003(\0132\016.pg_query.NodeR\ntargetList\022" +
+      "/\n\013from_clause\030\004 \003(\0132\016.pg_query.NodeR\nfr" +
+      "omClause\0221\n\014where_clause\030\005 \001(\0132\016.pg_quer" +
+      "y.NodeR\013whereClause\0221\n\014group_clause\030\006 \003(" +
+      "\0132\016.pg_query.NodeR\013groupClause\022%\n\016group_" +
+      "distinct\030\007 \001(\010R\rgroupDistinct\0223\n\rhaving_" +
+      "clause\030\010 \001(\0132\016.pg_query.NodeR\014havingClau" +
+      "se\0223\n\rwindow_clause\030\t \003(\0132\016.pg_query.Nod" +
+      "eR\014windowClause\0221\n\014values_lists\030\n \003(\0132\016." +
+      "pg_query.NodeR\013valuesLists\022/\n\013sort_claus" +
+      "e\030\013 \003(\0132\016.pg_query.NodeR\nsortClause\0221\n\014l" +
+      "imit_offset\030\014 \001(\0132\016.pg_query.NodeR\013limit" +
+      "Offset\022/\n\013limit_count\030\r \001(\0132\016.pg_query.N" +
+      "odeR\nlimitCount\0228\n\014limit_option\030\016 \001(\0162\025." +
+      "pg_query.LimitOptionR\013limitOption\0225\n\016loc" +
+      "king_clause\030\017 \003(\0132\016.pg_query.NodeR\rlocki" +
+      "ngClause\0225\n\013with_clause\030\020 \001(\0132\024.pg_query" +
+      ".WithClauseR\nwithClause\022&\n\002op\030\021 \001(\0162\026.pg" +
+      "_query.SetOperationR\002op\022\020\n\003all\030\022 \001(\010R\003al" +
+      "l\022(\n\004larg\030\023 \001(\0132\024.pg_query.SelectStmtR\004l" +
+      "arg\022(\n\004rarg\030\024 \001(\0132\024.pg_query.SelectStmtR" +
+      "\004rarg\"\336\002\n\020SetOperationStmt\022&\n\002op\030\001 \001(\0162\026" +
+      ".pg_query.SetOperationR\002op\022\020\n\003all\030\002 \001(\010R" +
+      "\003all\022\"\n\004larg\030\003 \001(\0132\016.pg_query.NodeR\004larg" +
+      "\022\"\n\004rarg\030\004 \001(\0132\016.pg_query.NodeR\004rarg\022+\n\t" +
+      "col_types\030\005 \003(\0132\016.pg_query.NodeR\010colType" +
+      "s\022/\n\013col_typmods\030\006 \003(\0132\016.pg_query.NodeR\n" +
+      "colTypmods\0225\n\016col_collations\030\007 \003(\0132\016.pg_" +
+      "query.NodeR\rcolCollations\0223\n\rgroup_claus" +
+      "es\030\010 \003(\0132\016.pg_query.NodeR\014groupClauses\":" +
+      "\n\nReturnStmt\022,\n\treturnval\030\001 \001(\0132\016.pg_que" +
+      "ry.NodeR\treturnval\"\260\001\n\014PLAssignStmt\022\022\n\004n" +
+      "ame\030\001 \001(\tR\004name\0220\n\013indirection\030\002 \003(\0132\016.p" +
+      "g_query.NodeR\013indirection\022\026\n\006nnames\030\003 \001(" +
+      "\005R\006nnames\022&\n\003val\030\004 \001(\0132\024.pg_query.Select" +
+      "StmtR\003val\022\032\n\010location\030\005 \001(\005R\010location\"\271\001" +
+      "\n\020CreateSchemaStmt\022\036\n\nschemaname\030\001 \001(\tR\n" +
+      "schemaname\022.\n\010authrole\030\002 \001(\0132\022.pg_query." +
+      "RoleSpecR\010authrole\022/\n\013schema_elts\030\003 \003(\0132" +
+      "\016.pg_query.NodeR\nschemaElts\022$\n\rif_not_ex" +
+      "ists\030\004 \001(\010R\rif_not_exists\"\264\001\n\016AlterTable" +
+      "Stmt\022.\n\010relation\030\001 \001(\0132\022.pg_query.RangeV" +
+      "arR\010relation\022\"\n\004cmds\030\002 \003(\0132\016.pg_query.No" +
+      "deR\004cmds\022.\n\007objtype\030\003 \001(\0162\024.pg_query.Obj" +
+      "ectTypeR\007objtype\022\036\n\nmissing_ok\030\004 \001(\010R\nmi" +
+      "ssing_ok\"\251\002\n\rAlterTableCmd\0222\n\007subtype\030\001 " +
+      "\001(\0162\030.pg_query.AlterTableTypeR\007subtype\022\022" +
+      "\n\004name\030\002 \001(\tR\004name\022\020\n\003num\030\003 \001(\005R\003num\022.\n\010" +
+      "newowner\030\004 \001(\0132\022.pg_query.RoleSpecR\010newo" +
+      "wner\022 \n\003def\030\005 \001(\0132\016.pg_query.NodeR\003def\0222" +
+      "\n\010behavior\030\006 \001(\0162\026.pg_query.DropBehavior" +
+      "R\010behavior\022\036\n\nmissing_ok\030\007 \001(\010R\nmissing_" +
+      "ok\022\030\n\007recurse\030\010 \001(\010R\007recurse\"\310\002\n\021ATAlter" +
+      "Constraint\022\030\n\007conname\030\001 \001(\tR\007conname\0221\n\024" +
+      "alter_enforceability\030\002 \001(\010R\023alterEnforce" +
+      "ability\022 \n\013is_enforced\030\003 \001(\010R\013is_enforce" +
+      "d\022/\n\023alter_deferrability\030\004 \001(\010R\022alterDef" +
+      "errability\022\036\n\ndeferrable\030\005 \001(\010R\ndeferrab" +
+      "le\022\"\n\014initdeferred\030\006 \001(\010R\014initdeferred\0221" +
+      "\n\024alter_inheritability\030\007 \001(\010R\023alterInher" +
+      "itability\022\034\n\tnoinherit\030\010 \001(\010R\tnoinherit\"" +
+      "O\n\023ReplicaIdentityStmt\022$\n\ridentity_type\030" +
+      "\001 \001(\tR\ridentity_type\022\022\n\004name\030\002 \001(\tR\004name" +
+      "\"@\n\022AlterCollationStmt\022*\n\010collname\030\001 \003(\013" +
+      "2\016.pg_query.NodeR\010collname\"\342\001\n\017AlterDoma" +
+      "inStmt\022\030\n\007subtype\030\001 \001(\tR\007subtype\022+\n\ttype" +
+      "_name\030\002 \003(\0132\016.pg_query.NodeR\010typeName\022\022\n" +
+      "\004name\030\003 \001(\tR\004name\022 \n\003def\030\004 \001(\0132\016.pg_quer" +
+      "y.NodeR\003def\0222\n\010behavior\030\005 \001(\0162\026.pg_query" +
+      ".DropBehaviorR\010behavior\022\036\n\nmissing_ok\030\006 " +
+      "\001(\010R\nmissing_ok\"\232\003\n\tGrantStmt\022\032\n\010is_gran" +
+      "t\030\001 \001(\010R\010is_grant\0225\n\010targtype\030\002 \001(\0162\031.pg" +
+      "_query.GrantTargetTypeR\010targtype\022.\n\007objt" +
+      "ype\030\003 \001(\0162\024.pg_query.ObjectTypeR\007objtype" +
+      "\022(\n\007objects\030\004 \003(\0132\016.pg_query.NodeR\007objec" +
+      "ts\022.\n\nprivileges\030\005 \003(\0132\016.pg_query.NodeR\n" +
+      "privileges\022*\n\010grantees\030\006 \003(\0132\016.pg_query." +
+      "NodeR\010grantees\022\"\n\014grant_option\030\007 \001(\010R\014gr" +
+      "ant_option\022,\n\007grantor\030\010 \001(\0132\022.pg_query.R" +
+      "oleSpecR\007grantor\0222\n\010behavior\030\t \001(\0162\026.pg_" +
+      "query.DropBehaviorR\010behavior\"\302\001\n\016ObjectW" +
+      "ithArgs\022(\n\007objname\030\001 \003(\0132\016.pg_query.Node" +
+      "R\007objname\022(\n\007objargs\030\002 \003(\0132\016.pg_query.No" +
+      "deR\007objargs\0220\n\013objfuncargs\030\003 \003(\0132\016.pg_qu" +
+      "ery.NodeR\013objfuncargs\022*\n\020args_unspecifie" +
+      "d\030\004 \001(\010R\020args_unspecified\"N\n\nAccessPriv\022" +
+      "\034\n\tpriv_name\030\001 \001(\tR\tpriv_name\022\"\n\004cols\030\002 " +
+      "\003(\0132\016.pg_query.NodeR\004cols\"\233\002\n\rGrantRoleS" +
+      "tmt\0224\n\rgranted_roles\030\001 \003(\0132\016.pg_query.No" +
+      "deR\rgranted_roles\0224\n\rgrantee_roles\030\002 \003(\013" +
+      "2\016.pg_query.NodeR\rgrantee_roles\022\032\n\010is_gr" +
+      "ant\030\003 \001(\010R\010is_grant\022 \n\003opt\030\004 \003(\0132\016.pg_qu" +
+      "ery.NodeR\003opt\022,\n\007grantor\030\005 \001(\0132\022.pg_quer" +
+      "y.RoleSpecR\007grantor\0222\n\010behavior\030\006 \001(\0162\026." +
+      "pg_query.DropBehaviorR\010behavior\"s\n\032Alter" +
+      "DefaultPrivilegesStmt\022(\n\007options\030\001 \003(\0132\016" +
+      ".pg_query.NodeR\007options\022+\n\006action\030\002 \001(\0132" +
+      "\023.pg_query.GrantStmtR\006action\"\275\002\n\010CopyStm" +
+      "t\022.\n\010relation\030\001 \001(\0132\022.pg_query.RangeVarR" +
+      "\010relation\022$\n\005query\030\002 \001(\0132\016.pg_query.Node" +
+      "R\005query\022(\n\007attlist\030\003 \003(\0132\016.pg_query.Node" +
+      "R\007attlist\022\030\n\007is_from\030\004 \001(\010R\007is_from\022\036\n\ni" +
+      "s_program\030\005 \001(\010R\nis_program\022\032\n\010filename\030" +
+      "\006 \001(\tR\010filename\022(\n\007options\030\007 \003(\0132\016.pg_qu" +
+      "ery.NodeR\007options\0221\n\014where_clause\030\010 \001(\0132" +
+      "\016.pg_query.NodeR\013whereClause\"\322\001\n\017Variabl" +
+      "eSetStmt\022-\n\004kind\030\001 \001(\0162\031.pg_query.Variab" +
+      "leSetKindR\004kind\022\022\n\004name\030\002 \001(\tR\004name\022\"\n\004a" +
+      "rgs\030\003 \003(\0132\016.pg_query.NodeR\004args\022 \n\013jumbl" +
+      "e_args\030\004 \001(\010R\013jumble_args\022\032\n\010is_local\030\005 " +
+      "\001(\010R\010is_local\022\032\n\010location\030\006 \001(\005R\010locatio" +
+      "n\"&\n\020VariableShowStmt\022\022\n\004name\030\001 \001(\tR\004nam" +
+      "e\"\201\005\n\nCreateStmt\022.\n\010relation\030\001 \001(\0132\022.pg_" +
+      "query.RangeVarR\010relation\022-\n\ntable_elts\030\002" +
+      " \003(\0132\016.pg_query.NodeR\ttableElts\0223\n\rinh_r" +
+      "elations\030\003 \003(\0132\016.pg_query.NodeR\014inhRelat" +
+      "ions\022:\n\tpartbound\030\004 \001(\0132\034.pg_query.Parti" +
+      "tionBoundSpecR\tpartbound\0223\n\010partspec\030\005 \001" +
+      "(\0132\027.pg_query.PartitionSpecR\010partspec\0223\n" +
+      "\013of_typename\030\006 \001(\0132\022.pg_query.TypeNameR\n" +
+      "ofTypename\0220\n\013constraints\030\007 \003(\0132\016.pg_que" +
+      "ry.NodeR\013constraints\0224\n\rnnconstraints\030\010 " +
+      "\003(\0132\016.pg_query.NodeR\rnnconstraints\022(\n\007op" +
+      "tions\030\t \003(\0132\016.pg_query.NodeR\007options\0224\n\010" +
+      "oncommit\030\n \001(\0162\030.pg_query.OnCommitAction" +
+      "R\010oncommit\022&\n\016tablespacename\030\013 \001(\tR\016tabl" +
+      "espacename\022#\n\raccess_method\030\014 \001(\tR\014acces" +
+      "sMethod\022$\n\rif_not_exists\030\r \001(\010R\rif_not_e" +
+      "xists\"\244\013\n\nConstraint\022.\n\007contype\030\001 \001(\0162\024." +
+      "pg_query.ConstrTypeR\007contype\022\030\n\007conname\030" +
+      "\002 \001(\tR\007conname\022\036\n\ndeferrable\030\003 \001(\010R\ndefe" +
+      "rrable\022\"\n\014initdeferred\030\004 \001(\010R\014initdeferr" +
+      "ed\022 \n\013is_enforced\030\005 \001(\010R\013is_enforced\022(\n\017" +
+      "skip_validation\030\006 \001(\010R\017skip_validation\022(" +
+      "\n\017initially_valid\030\007 \001(\010R\017initially_valid" +
+      "\022$\n\ris_no_inherit\030\010 \001(\010R\ris_no_inherit\022*" +
+      "\n\010raw_expr\030\t \001(\0132\016.pg_query.NodeR\010raw_ex" +
+      "pr\022 \n\013cooked_expr\030\n \001(\tR\013cooked_expr\022&\n\016" +
+      "generated_when\030\013 \001(\tR\016generated_when\022&\n\016" +
+      "generated_kind\030\014 \001(\tR\016generated_kind\022.\n\022" +
+      "nulls_not_distinct\030\r \001(\010R\022nulls_not_dist" +
+      "inct\022\"\n\004keys\030\016 \003(\0132\016.pg_query.NodeR\004keys" +
+      "\022*\n\020without_overlaps\030\017 \001(\010R\020without_over" +
+      "laps\022,\n\tincluding\030\020 \003(\0132\016.pg_query.NodeR" +
+      "\tincluding\022.\n\nexclusions\030\021 \003(\0132\016.pg_quer" +
+      "y.NodeR\nexclusions\022(\n\007options\030\022 \003(\0132\016.pg" +
+      "_query.NodeR\007options\022\034\n\tindexname\030\023 \001(\tR" +
+      "\tindexname\022\036\n\nindexspace\030\024 \001(\tR\nindexspa" +
+      "ce\0222\n\024reset_default_tblspc\030\025 \001(\010R\024reset_" +
+      "default_tblspc\022$\n\raccess_method\030\026 \001(\tR\ra" +
+      "ccess_method\0222\n\014where_clause\030\027 \001(\0132\016.pg_" +
+      "query.NodeR\014where_clause\022,\n\007pktable\030\030 \001(" +
+      "\0132\022.pg_query.RangeVarR\007pktable\022*\n\010fk_att" +
+      "rs\030\031 \003(\0132\016.pg_query.NodeR\010fk_attrs\022*\n\010pk" +
+      "_attrs\030\032 \003(\0132\016.pg_query.NodeR\010pk_attrs\022&" +
+      "\n\016fk_with_period\030\033 \001(\010R\016fk_with_period\022&" +
+      "\n\016pk_with_period\030\034 \001(\010R\016pk_with_period\022\"" +
+      "\n\014fk_matchtype\030\035 \001(\tR\014fk_matchtype\022$\n\rfk" +
+      "_upd_action\030\036 \001(\tR\rfk_upd_action\022$\n\rfk_d" +
+      "el_action\030\037 \001(\tR\rfk_del_action\0228\n\017fk_del" +
+      "_set_cols\030  \003(\0132\016.pg_query.NodeR\017fk_del_" +
+      "set_cols\0224\n\rold_conpfeqop\030! \003(\0132\016.pg_que" +
+      "ry.NodeR\rold_conpfeqop\022(\n\017old_pktable_oi" +
+      "d\030\" \001(\rR\017old_pktable_oid\022\032\n\010location\030# \001" +
+      "(\005R\010location\"\256\001\n\024CreateTableSpaceStmt\022&\n" +
+      "\016tablespacename\030\001 \001(\tR\016tablespacename\022(\n" +
+      "\005owner\030\002 \001(\0132\022.pg_query.RoleSpecR\005owner\022" +
+      "\032\n\010location\030\003 \001(\tR\010location\022(\n\007options\030\004" +
+      " \003(\0132\016.pg_query.NodeR\007options\"\\\n\022DropTab" +
+      "leSpaceStmt\022&\n\016tablespacename\030\001 \001(\tR\016tab" +
+      "lespacename\022\036\n\nmissing_ok\030\002 \001(\010R\nmissing" +
+      "_ok\"\211\001\n\032AlterTableSpaceOptionsStmt\022&\n\016ta" +
+      "blespacename\030\001 \001(\tR\016tablespacename\022(\n\007op" +
+      "tions\030\002 \003(\0132\016.pg_query.NodeR\007options\022\031\n\010" +
+      "is_reset\030\003 \001(\010R\007isReset\"\347\001\n\025AlterTableMo" +
+      "veAllStmt\0220\n\023orig_tablespacename\030\001 \001(\tR\023" +
+      "orig_tablespacename\022.\n\007objtype\030\002 \001(\0162\024.p" +
+      "g_query.ObjectTypeR\007objtype\022$\n\005roles\030\003 \003" +
+      "(\0132\016.pg_query.NodeR\005roles\022.\n\022new_tablesp" +
+      "acename\030\004 \001(\tR\022new_tablespacename\022\026\n\006now" +
+      "ait\030\005 \001(\010R\006nowait\"\177\n\023CreateExtensionStmt" +
+      "\022\030\n\007extname\030\001 \001(\tR\007extname\022$\n\rif_not_exi" +
+      "sts\030\002 \001(\010R\rif_not_exists\022(\n\007options\030\003 \003(" +
+      "\0132\016.pg_query.NodeR\007options\"X\n\022AlterExten" +
+      "sionStmt\022\030\n\007extname\030\001 \001(\tR\007extname\022(\n\007op" +
+      "tions\030\002 \003(\0132\016.pg_query.NodeR\007options\"\246\001\n" +
+      "\032AlterExtensionContentsStmt\022\030\n\007extname\030\001" +
+      " \001(\tR\007extname\022\026\n\006action\030\002 \001(\005R\006action\022.\n" +
+      "\007objtype\030\003 \001(\0162\024.pg_query.ObjectTypeR\007ob" +
+      "jtype\022&\n\006object\030\004 \001(\0132\016.pg_query.NodeR\006o" +
+      "bject\"\207\001\n\rCreateFdwStmt\022\030\n\007fdwname\030\001 \001(\t" +
+      "R\007fdwname\0222\n\014func_options\030\002 \003(\0132\016.pg_que" +
+      "ry.NodeR\014func_options\022(\n\007options\030\003 \003(\0132\016" +
+      ".pg_query.NodeR\007options\"\206\001\n\014AlterFdwStmt" +
+      "\022\030\n\007fdwname\030\001 \001(\tR\007fdwname\0222\n\014func_optio" +
+      "ns\030\002 \003(\0132\016.pg_query.NodeR\014func_options\022(" +
+      "\n\007options\030\003 \003(\0132\016.pg_query.NodeR\007options" +
+      "\"\335\001\n\027CreateForeignServerStmt\022\036\n\nserverna" +
+      "me\030\001 \001(\tR\nservername\022\036\n\nservertype\030\002 \001(\t" +
+      "R\nservertype\022\030\n\007version\030\003 \001(\tR\007version\022\030" +
+      "\n\007fdwname\030\004 \001(\tR\007fdwname\022$\n\rif_not_exist" +
+      "s\030\005 \001(\010R\rif_not_exists\022(\n\007options\030\006 \003(\0132" +
+      "\016.pg_query.NodeR\007options\"\236\001\n\026AlterForeig" +
+      "nServerStmt\022\036\n\nservername\030\001 \001(\tR\nservern" +
+      "ame\022\030\n\007version\030\002 \001(\tR\007version\022(\n\007options" +
+      "\030\003 \003(\0132\016.pg_query.NodeR\007options\022 \n\013has_v" +
+      "ersion\030\004 \001(\010R\013has_version\"\221\001\n\026CreateFore" +
+      "ignTableStmt\022-\n\tbase_stmt\030\001 \001(\0132\024.pg_que" +
+      "ry.CreateStmtR\004base\022\036\n\nservername\030\002 \001(\tR" +
+      "\nservername\022(\n\007options\030\003 \003(\0132\016.pg_query." +
+      "NodeR\007options\"\257\001\n\025CreateUserMappingStmt\022" +
+      "&\n\004user\030\001 \001(\0132\022.pg_query.RoleSpecR\004user\022" +
+      "\036\n\nservername\030\002 \001(\tR\nservername\022$\n\rif_no" +
+      "t_exists\030\003 \001(\010R\rif_not_exists\022(\n\007options" +
+      "\030\004 \003(\0132\016.pg_query.NodeR\007options\"\210\001\n\024Alte" +
+      "rUserMappingStmt\022&\n\004user\030\001 \001(\0132\022.pg_quer" +
+      "y.RoleSpecR\004user\022\036\n\nservername\030\002 \001(\tR\nse" +
+      "rvername\022(\n\007options\030\003 \003(\0132\016.pg_query.Nod" +
+      "eR\007options\"}\n\023DropUserMappingStmt\022&\n\004use" +
+      "r\030\001 \001(\0132\022.pg_query.RoleSpecR\004user\022\036\n\nser" +
+      "vername\030\002 \001(\tR\nservername\022\036\n\nmissing_ok\030" +
+      "\003 \001(\010R\nmissing_ok\"\240\002\n\027ImportForeignSchem",
+      "aStmt\022 \n\013server_name\030\001 \001(\tR\013server_name\022" +
+      "$\n\rremote_schema\030\002 \001(\tR\rremote_schema\022\"\n" +
+      "\014local_schema\030\003 \001(\tR\014local_schema\022?\n\tlis" +
+      "t_type\030\004 \001(\0162!.pg_query.ImportForeignSch" +
+      "emaTypeR\tlist_type\022.\n\ntable_list\030\005 \003(\0132\016" +
+      ".pg_query.NodeR\ntable_list\022(\n\007options\030\006 " +
+      "\003(\0132\016.pg_query.NodeR\007options\"\224\002\n\020CreateP" +
+      "olicyStmt\022 \n\013policy_name\030\001 \001(\tR\013policy_n" +
+      "ame\022(\n\005table\030\002 \001(\0132\022.pg_query.RangeVarR\005" +
+      "table\022\032\n\010cmd_name\030\003 \001(\tR\010cmd_name\022\036\n\nper" +
+      "missive\030\004 \001(\010R\npermissive\022$\n\005roles\030\005 \003(\013" +
+      "2\016.pg_query.NodeR\005roles\022\"\n\004qual\030\006 \001(\0132\016." +
+      "pg_query.NodeR\004qual\022.\n\nwith_check\030\007 \001(\0132" +
+      "\016.pg_query.NodeR\nwith_check\"\327\001\n\017AlterPol" +
+      "icyStmt\022 \n\013policy_name\030\001 \001(\tR\013policy_nam" +
+      "e\022(\n\005table\030\002 \001(\0132\022.pg_query.RangeVarR\005ta" +
+      "ble\022$\n\005roles\030\003 \003(\0132\016.pg_query.NodeR\005role" +
+      "s\022\"\n\004qual\030\004 \001(\0132\016.pg_query.NodeR\004qual\022.\n" +
+      "\nwith_check\030\005 \001(\0132\016.pg_query.NodeR\nwith_" +
+      "check\"r\n\014CreateAmStmt\022\026\n\006amname\030\001 \001(\tR\006a" +
+      "mname\0222\n\014handler_name\030\002 \003(\0132\016.pg_query.N" +
+      "odeR\014handler_name\022\026\n\006amtype\030\003 \001(\tR\006amtyp" +
+      "e\"\266\004\n\016CreateTrigStmt\022\030\n\007replace\030\001 \001(\010R\007r" +
+      "eplace\022\"\n\014isconstraint\030\002 \001(\010R\014isconstrai" +
+      "nt\022\032\n\010trigname\030\003 \001(\tR\010trigname\022.\n\010relati" +
+      "on\030\004 \001(\0132\022.pg_query.RangeVarR\010relation\022*" +
+      "\n\010funcname\030\005 \003(\0132\016.pg_query.NodeR\010funcna" +
+      "me\022\"\n\004args\030\006 \003(\0132\016.pg_query.NodeR\004args\022\020" +
+      "\n\003row\030\007 \001(\010R\003row\022\026\n\006timing\030\010 \001(\005R\006timing" +
+      "\022\026\n\006events\030\t \001(\005R\006events\022(\n\007columns\030\n \003(" +
+      "\0132\016.pg_query.NodeR\007columns\022/\n\013when_claus" +
+      "e\030\013 \001(\0132\016.pg_query.NodeR\nwhenClause\0227\n\017t" +
+      "ransition_rels\030\014 \003(\0132\016.pg_query.NodeR\016tr" +
+      "ansitionRels\022\036\n\ndeferrable\030\r \001(\010R\ndeferr" +
+      "able\022\"\n\014initdeferred\030\016 \001(\010R\014initdeferred" +
+      "\0220\n\tconstrrel\030\017 \001(\0132\022.pg_query.RangeVarR" +
+      "\tconstrrel\"\253\001\n\023CreateEventTrigStmt\022\032\n\010tr" +
+      "igname\030\001 \001(\tR\010trigname\022\034\n\teventname\030\002 \001(" +
+      "\tR\teventname\022.\n\nwhenclause\030\003 \003(\0132\016.pg_qu" +
+      "ery.NodeR\nwhenclause\022*\n\010funcname\030\004 \003(\0132\016" +
+      ".pg_query.NodeR\010funcname\"N\n\022AlterEventTr" +
+      "igStmt\022\032\n\010trigname\030\001 \001(\tR\010trigname\022\034\n\ttg" +
+      "enabled\030\002 \001(\tR\ttgenabled\"\355\001\n\017CreatePLang" +
+      "Stmt\022\030\n\007replace\030\001 \001(\010R\007replace\022\026\n\006plname" +
+      "\030\002 \001(\tR\006plname\022,\n\tplhandler\030\003 \003(\0132\016.pg_q" +
+      "uery.NodeR\tplhandler\022*\n\010plinline\030\004 \003(\0132\016" +
+      ".pg_query.NodeR\010plinline\0220\n\013plvalidator\030" +
+      "\005 \003(\0132\016.pg_query.NodeR\013plvalidator\022\034\n\tpl" +
+      "trusted\030\006 \001(\010R\tpltrusted\"\204\001\n\016CreateRoleS" +
+      "tmt\0224\n\tstmt_type\030\001 \001(\0162\026.pg_query.RoleSt" +
+      "mtTypeR\tstmt_type\022\022\n\004role\030\002 \001(\tR\004role\022(\n" +
+      "\007options\030\003 \003(\0132\016.pg_query.NodeR\007options\"" +
+      "y\n\rAlterRoleStmt\022&\n\004role\030\001 \001(\0132\022.pg_quer" +
+      "y.RoleSpecR\004role\022(\n\007options\030\002 \003(\0132\016.pg_q" +
+      "uery.NodeR\007options\022\026\n\006action\030\003 \001(\005R\006acti" +
+      "on\"\213\001\n\020AlterRoleSetStmt\022&\n\004role\030\001 \001(\0132\022." +
+      "pg_query.RoleSpecR\004role\022\032\n\010database\030\002 \001(" +
+      "\tR\010database\0223\n\007setstmt\030\003 \001(\0132\031.pg_query." +
+      "VariableSetStmtR\007setstmt\"T\n\014DropRoleStmt" +
+      "\022$\n\005roles\030\001 \003(\0132\016.pg_query.NodeR\005roles\022\036" +
+      "\n\nmissing_ok\030\002 \001(\010R\nmissing_ok\"\316\001\n\rCreat" +
+      "eSeqStmt\022.\n\010sequence\030\001 \001(\0132\022.pg_query.Ra" +
+      "ngeVarR\010sequence\022(\n\007options\030\002 \003(\0132\016.pg_q" +
+      "uery.NodeR\007options\022\031\n\010owner_id\030\003 \001(\rR\007ow" +
+      "nerId\022\"\n\014for_identity\030\004 \001(\010R\014for_identit" +
+      "y\022$\n\rif_not_exists\030\005 \001(\010R\rif_not_exists\"" +
+      "\254\001\n\014AlterSeqStmt\022.\n\010sequence\030\001 \001(\0132\022.pg_" +
+      "query.RangeVarR\010sequence\022(\n\007options\030\002 \003(" +
+      "\0132\016.pg_query.NodeR\007options\022\"\n\014for_identi" +
+      "ty\030\003 \001(\010R\014for_identity\022\036\n\nmissing_ok\030\004 \001" +
+      "(\010R\nmissing_ok\"\222\002\n\nDefineStmt\022(\n\004kind\030\001 " +
+      "\001(\0162\024.pg_query.ObjectTypeR\004kind\022\032\n\010oldst" +
+      "yle\030\002 \001(\010R\010oldstyle\022*\n\010defnames\030\003 \003(\0132\016." +
+      "pg_query.NodeR\010defnames\022\"\n\004args\030\004 \003(\0132\016." +
+      "pg_query.NodeR\004args\022.\n\ndefinition\030\005 \003(\0132" +
+      "\016.pg_query.NodeR\ndefinition\022$\n\rif_not_ex" +
+      "ists\030\006 \001(\010R\rif_not_exists\022\030\n\007replace\030\007 \001" +
+      "(\010R\007replace\"\337\001\n\020CreateDomainStmt\022.\n\ndoma" +
+      "inname\030\001 \003(\0132\016.pg_query.NodeR\ndomainname" +
+      "\022/\n\ttype_name\030\002 \001(\0132\022.pg_query.TypeNameR" +
+      "\010typeName\0228\n\013coll_clause\030\003 \001(\0132\027.pg_quer" +
+      "y.CollateClauseR\ncollClause\0220\n\013constrain" +
+      "ts\030\004 \003(\0132\016.pg_query.NodeR\013constraints\"\206\002" +
+      "\n\021CreateOpClassStmt\0220\n\013opclassname\030\001 \003(\013" +
+      "2\016.pg_query.NodeR\013opclassname\0222\n\014opfamil" +
+      "yname\030\002 \003(\0132\016.pg_query.NodeR\014opfamilynam" +
+      "e\022\026\n\006amname\030\003 \001(\tR\006amname\022.\n\010datatype\030\004 " +
+      "\001(\0132\022.pg_query.TypeNameR\010datatype\022$\n\005ite" +
+      "ms\030\005 \003(\0132\016.pg_query.NodeR\005items\022\035\n\nis_de" +
+      "fault\030\006 \001(\010R\tisDefault\"\215\002\n\021CreateOpClass" +
+      "Item\022\032\n\010itemtype\030\001 \001(\005R\010itemtype\022,\n\004name" +
+      "\030\002 \001(\0132\030.pg_query.ObjectWithArgsR\004name\022\026" +
+      "\n\006number\030\003 \001(\005R\006number\0222\n\014order_family\030\004" +
+      " \003(\0132\016.pg_query.NodeR\014order_family\022.\n\ncl" +
+      "ass_args\030\005 \003(\0132\016.pg_query.NodeR\nclass_ar" +
+      "gs\0222\n\nstoredtype\030\006 \001(\0132\022.pg_query.TypeNa" +
+      "meR\nstoredtype\"`\n\022CreateOpFamilyStmt\0222\n\014" +
+      "opfamilyname\030\001 \003(\0132\016.pg_query.NodeR\014opfa" +
+      "milyname\022\026\n\006amname\030\002 \001(\tR\006amname\"\236\001\n\021Alt" +
+      "erOpFamilyStmt\0222\n\014opfamilyname\030\001 \003(\0132\016.p" +
+      "g_query.NodeR\014opfamilyname\022\026\n\006amname\030\002 \001" +
+      "(\tR\006amname\022\027\n\007is_drop\030\003 \001(\010R\006isDrop\022$\n\005i" +
+      "tems\030\004 \003(\0132\016.pg_query.NodeR\005items\"\337\001\n\010Dr" +
+      "opStmt\022(\n\007objects\030\001 \003(\0132\016.pg_query.NodeR" +
+      "\007objects\0225\n\013remove_type\030\002 \001(\0162\024.pg_query" +
+      ".ObjectTypeR\nremoveType\0222\n\010behavior\030\003 \001(" +
+      "\0162\026.pg_query.DropBehaviorR\010behavior\022\036\n\nm" +
+      "issing_ok\030\004 \001(\010R\nmissing_ok\022\036\n\nconcurren" +
+      "t\030\005 \001(\010R\nconcurrent\"\224\001\n\014TruncateStmt\022,\n\t" +
+      "relations\030\001 \003(\0132\016.pg_query.NodeR\trelatio" +
+      "ns\022\"\n\014restart_seqs\030\002 \001(\010R\014restart_seqs\0222" +
+      "\n\010behavior\030\003 \001(\0162\026.pg_query.DropBehavior" +
+      "R\010behavior\"\177\n\013CommentStmt\022.\n\007objtype\030\001 \001" +
+      "(\0162\024.pg_query.ObjectTypeR\007objtype\022&\n\006obj" +
+      "ect\030\002 \001(\0132\016.pg_query.NodeR\006object\022\030\n\007com" +
+      "ment\030\003 \001(\tR\007comment\"\230\001\n\014SecLabelStmt\022.\n\007" +
+      "objtype\030\001 \001(\0162\024.pg_query.ObjectTypeR\007obj" +
+      "type\022&\n\006object\030\002 \001(\0132\016.pg_query.NodeR\006ob" +
+      "ject\022\032\n\010provider\030\003 \001(\tR\010provider\022\024\n\005labe" +
+      "l\030\004 \001(\tR\005label\"s\n\021DeclareCursorStmt\022\036\n\np" +
+      "ortalname\030\001 \001(\tR\nportalname\022\030\n\007options\030\002" +
+      " \001(\005R\007options\022$\n\005query\030\003 \001(\0132\016.pg_query." +
+      "NodeR\005query\"1\n\017ClosePortalStmt\022\036\n\nportal" +
+      "name\030\001 \001(\tR\nportalname\"\226\001\n\tFetchStmt\0226\n\t" +
+      "direction\030\001 \001(\0162\030.pg_query.FetchDirectio" +
+      "nR\tdirection\022\031\n\010how_many\030\002 \001(\003R\007howMany\022" +
+      "\036\n\nportalname\030\003 \001(\tR\nportalname\022\026\n\006ismov" +
+      "e\030\004 \001(\010R\006ismove\"\212\010\n\tIndexStmt\022\030\n\007idxname" +
+      "\030\001 \001(\tR\007idxname\022.\n\010relation\030\002 \001(\0132\022.pg_q" +
+      "uery.RangeVarR\010relation\022#\n\raccess_method" +
+      "\030\003 \001(\tR\014accessMethod\022\037\n\013table_space\030\004 \001(" +
+      "\tR\ntableSpace\0221\n\014index_params\030\005 \003(\0132\016.pg" +
+      "_query.NodeR\013indexParams\022D\n\026index_includ" +
+      "ing_params\030\006 \003(\0132\016.pg_query.NodeR\024indexI" +
+      "ncludingParams\022(\n\007options\030\007 \003(\0132\016.pg_que" +
+      "ry.NodeR\007options\0221\n\014where_clause\030\010 \001(\0132\016" +
+      ".pg_query.NodeR\013whereClause\0228\n\020exclude_o" +
+      "p_names\030\t \003(\0132\016.pg_query.NodeR\016excludeOp" +
+      "Names\022\036\n\nidxcomment\030\n \001(\tR\nidxcomment\022\033\n" +
+      "\tindex_oid\030\013 \001(\rR\010indexOid\022\035\n\nold_number" +
+      "\030\014 \001(\rR\toldNumber\022(\n\020old_create_subid\030\r " +
+      "\001(\rR\016oldCreateSubid\022C\n\036old_first_relfile" +
+      "locator_subid\030\016 \001(\rR\033oldFirstRelfileloca" +
+      "torSubid\022\026\n\006unique\030\017 \001(\010R\006unique\022.\n\022null" +
+      "s_not_distinct\030\020 \001(\010R\022nulls_not_distinct" +
+      "\022\030\n\007primary\030\021 \001(\010R\007primary\022\"\n\014isconstrai" +
+      "nt\030\022 \001(\010R\014isconstraint\022,\n\021iswithoutoverl" +
+      "aps\030\023 \001(\010R\021iswithoutoverlaps\022\036\n\ndeferrab" +
+      "le\030\024 \001(\010R\ndeferrable\022\"\n\014initdeferred\030\025 \001" +
+      "(\010R\014initdeferred\022 \n\013transformed\030\026 \001(\010R\013t" +
+      "ransformed\022\036\n\nconcurrent\030\027 \001(\010R\nconcurre" +
+      "nt\022$\n\rif_not_exists\030\030 \001(\010R\rif_not_exists" +
+      "\0222\n\024reset_default_tblspc\030\031 \001(\010R\024reset_de" +
+      "fault_tblspc\"\251\002\n\017CreateStatsStmt\022*\n\010defn" +
+      "ames\030\001 \003(\0132\016.pg_query.NodeR\010defnames\022.\n\n" +
+      "stat_types\030\002 \003(\0132\016.pg_query.NodeR\nstat_t" +
+      "ypes\022$\n\005exprs\030\003 \003(\0132\016.pg_query.NodeR\005exp" +
+      "rs\022,\n\trelations\030\004 \003(\0132\016.pg_query.NodeR\tr" +
+      "elations\022\036\n\nstxcomment\030\005 \001(\tR\nstxcomment" +
+      "\022 \n\013transformed\030\006 \001(\010R\013transformed\022$\n\rif" +
+      "_not_exists\030\007 \001(\010R\rif_not_exists\"C\n\tStat" +
+      "sElem\022\022\n\004name\030\001 \001(\tR\004name\022\"\n\004expr\030\002 \001(\0132" +
+      "\016.pg_query.NodeR\004expr\"\222\001\n\016AlterStatsStmt" +
+      "\022*\n\010defnames\030\001 \003(\0132\016.pg_query.NodeR\010defn" +
+      "ames\0224\n\rstxstattarget\030\002 \001(\0132\016.pg_query.N" +
+      "odeR\rstxstattarget\022\036\n\nmissing_ok\030\003 \001(\010R\n" +
+      "missing_ok\"\271\002\n\022CreateFunctionStmt\022\"\n\014is_" +
+      "procedure\030\001 \001(\010R\014is_procedure\022\030\n\007replace" +
+      "\030\002 \001(\010R\007replace\022*\n\010funcname\030\003 \003(\0132\016.pg_q" +
+      "uery.NodeR\010funcname\022.\n\nparameters\030\004 \003(\0132" +
+      "\016.pg_query.NodeR\nparameters\0223\n\013return_ty" +
+      "pe\030\005 \001(\0132\022.pg_query.TypeNameR\nreturnType" +
+      "\022(\n\007options\030\006 \003(\0132\016.pg_query.NodeR\007optio" +
+      "ns\022*\n\010sql_body\030\007 \001(\0132\016.pg_query.NodeR\010sq" +
+      "l_body\"\321\001\n\021FunctionParameter\022\022\n\004name\030\001 \001" +
+      "(\tR\004name\022-\n\010arg_type\030\002 \001(\0132\022.pg_query.Ty" +
+      "peNameR\007argType\0223\n\004mode\030\003 \001(\0162\037.pg_query" +
+      ".FunctionParameterModeR\004mode\022(\n\007defexpr\030" +
+      "\004 \001(\0132\016.pg_query.NodeR\007defexpr\022\032\n\010locati" +
+      "on\030\005 \001(\005R\010location\"\233\001\n\021AlterFunctionStmt" +
+      "\022.\n\007objtype\030\001 \001(\0162\024.pg_query.ObjectTypeR" +
+      "\007objtype\022,\n\004func\030\002 \001(\0132\030.pg_query.Object" +
+      "WithArgsR\004func\022(\n\007actions\030\003 \003(\0132\016.pg_que" +
+      "ry.NodeR\007actions\",\n\006DoStmt\022\"\n\004args\030\001 \003(\013" +
+      "2\016.pg_query.NodeR\004args\"\216\001\n\017InlineCodeBlo" +
+      "ck\022 \n\013source_text\030\001 \001(\tR\013source_text\022\031\n\010" +
+      "lang_oid\030\002 \001(\rR\007langOid\022&\n\017lang_is_trust" +
+      "ed\030\003 \001(\010R\rlangIsTrusted\022\026\n\006atomic\030\004 \001(\010R" +
+      "\006atomic\"\224\001\n\010CallStmt\022.\n\010funccall\030\001 \001(\0132\022" +
+      ".pg_query.FuncCallR\010funccall\022.\n\010funcexpr" +
+      "\030\002 \001(\0132\022.pg_query.FuncExprR\010funcexpr\022(\n\007" +
+      "outargs\030\003 \003(\0132\016.pg_query.NodeR\007outargs\"%" +
+      "\n\013CallContext\022\026\n\006atomic\030\001 \001(\010R\006atomic\"\336\002" +
+      "\n\nRenameStmt\0225\n\013rename_type\030\001 \001(\0162\024.pg_q" +
+      "uery.ObjectTypeR\nrenameType\0229\n\rrelation_" +
+      "type\030\002 \001(\0162\024.pg_query.ObjectTypeR\014relati" +
+      "onType\022.\n\010relation\030\003 \001(\0132\022.pg_query.Rang" +
+      "eVarR\010relation\022&\n\006object\030\004 \001(\0132\016.pg_quer" +
+      "y.NodeR\006object\022\030\n\007subname\030\005 \001(\tR\007subname" +
+      "\022\030\n\007newname\030\006 \001(\tR\007newname\0222\n\010behavior\030\007" +
+      " \001(\0162\026.pg_query.DropBehaviorR\010behavior\022\036" +
+      "\n\nmissing_ok\030\010 \001(\010R\nmissing_ok\"\353\001\n\026Alter" +
+      "ObjectDependsStmt\0225\n\013object_type\030\001 \001(\0162\024" +
+      ".pg_query.ObjectTypeR\nobjectType\022.\n\010rela" +
+      "tion\030\002 \001(\0132\022.pg_query.RangeVarR\010relation" +
+      "\022&\n\006object\030\003 \001(\0132\016.pg_query.NodeR\006object" +
+      "\022*\n\007extname\030\004 \001(\0132\020.pg_query.StringR\007ext" +
+      "name\022\026\n\006remove\030\005 \001(\010R\006remove\"\344\001\n\025AlterOb" +
+      "jectSchemaStmt\0225\n\013object_type\030\001 \001(\0162\024.pg" +
+      "_query.ObjectTypeR\nobjectType\022.\n\010relatio" +
+      "n\030\002 \001(\0132\022.pg_query.RangeVarR\010relation\022&\n" +
+      "\006object\030\003 \001(\0132\016.pg_query.NodeR\006object\022\034\n" +
+      "\tnewschema\030\004 \001(\tR\tnewschema\022\036\n\nmissing_o" +
+      "k\030\005 \001(\010R\nmissing_ok\"\317\001\n\016AlterOwnerStmt\0225" +
+      "\n\013object_type\030\001 \001(\0162\024.pg_query.ObjectTyp" +
+      "eR\nobjectType\022.\n\010relation\030\002 \001(\0132\022.pg_que" +
+      "ry.RangeVarR\010relation\022&\n\006object\030\003 \001(\0132\016." +
+      "pg_query.NodeR\006object\022.\n\010newowner\030\004 \001(\0132" +
+      "\022.pg_query.RoleSpecR\010newowner\"s\n\021AlterOp" +
+      "eratorStmt\0224\n\010opername\030\001 \001(\0132\030.pg_query." +
+      "ObjectWithArgsR\010opername\022(\n\007options\030\002 \003(" +
+      "\0132\016.pg_query.NodeR\007options\"f\n\rAlterTypeS" +
+      "tmt\022+\n\ttype_name\030\001 \003(\0132\016.pg_query.NodeR\010" +
+      "typeName\022(\n\007options\030\002 \003(\0132\016.pg_query.Nod" +
+      "eR\007options\"\220\002\n\010RuleStmt\022.\n\010relation\030\001 \001(" +
+      "\0132\022.pg_query.RangeVarR\010relation\022\032\n\010rulen" +
+      "ame\030\002 \001(\tR\010rulename\0221\n\014where_clause\030\003 \001(" +
+      "\0132\016.pg_query.NodeR\013whereClause\022\'\n\005event\030" +
+      "\004 \001(\0162\021.pg_query.CmdTypeR\005event\022\030\n\007inste" +
+      "ad\030\005 \001(\010R\007instead\022(\n\007actions\030\006 \003(\0132\016.pg_" +
+      "query.NodeR\007actions\022\030\n\007replace\030\007 \001(\010R\007re" +
+      "place\"L\n\nNotifyStmt\022$\n\rconditionname\030\001 \001" +
+      "(\tR\rconditionname\022\030\n\007payload\030\002 \001(\tR\007payl" +
+      "oad\"2\n\nListenStmt\022$\n\rconditionname\030\001 \001(\t" +
+      "R\rconditionname\"4\n\014UnlistenStmt\022$\n\rcondi" +
+      "tionname\030\001 \001(\tR\rconditionname\"\332\001\n\017Transa" +
+      "ctionStmt\0221\n\004kind\030\001 \001(\0162\035.pg_query.Trans" +
+      "actionStmtKindR\004kind\022(\n\007options\030\002 \003(\0132\016." +
+      "pg_query.NodeR\007options\022&\n\016savepoint_name" +
+      "\030\003 \001(\tR\016savepoint_name\022\020\n\003gid\030\004 \001(\tR\003gid" +
+      "\022\024\n\005chain\030\005 \001(\010R\005chain\022\032\n\010location\030\006 \001(\005" +
+      "R\010location\"q\n\021CompositeTypeStmt\022,\n\007typev" +
+      "ar\030\001 \001(\0132\022.pg_query.RangeVarR\007typevar\022.\n" +
+      "\ncoldeflist\030\002 \003(\0132\016.pg_query.NodeR\ncolde" +
+      "flist\"a\n\016CreateEnumStmt\022+\n\ttype_name\030\001 \003" +
+      "(\0132\016.pg_query.NodeR\010typeName\022\"\n\004vals\030\002 \003" +
+      "(\0132\016.pg_query.NodeR\004vals\"f\n\017CreateRangeS" +
+      "tmt\022+\n\ttype_name\030\001 \003(\0132\016.pg_query.NodeR\010" +
+      "typeName\022&\n\006params\030\002 \003(\0132\016.pg_query.Node" +
+      "R\006params\"\365\001\n\rAlterEnumStmt\022+\n\ttype_name\030" +
+      "\001 \003(\0132\016.pg_query.NodeR\010typeName\022\027\n\007old_v" +
+      "al\030\002 \001(\tR\006oldVal\022\027\n\007new_val\030\003 \001(\tR\006newVa" +
+      "l\022(\n\020new_val_neighbor\030\004 \001(\tR\016newValNeigh" +
+      "bor\022\'\n\020new_val_is_after\030\005 \001(\010R\rnewValIsA" +
+      "fter\0222\n\026skip_if_new_val_exists\030\006 \001(\010R\022sk" +
+      "ipIfNewValExists\"\215\002\n\010ViewStmt\022&\n\004view\030\001 " +
+      "\001(\0132\022.pg_query.RangeVarR\004view\022(\n\007aliases" +
+      "\030\002 \003(\0132\016.pg_query.NodeR\007aliases\022$\n\005query" +
+      "\030\003 \001(\0132\016.pg_query.NodeR\005query\022\030\n\007replace" +
+      "\030\004 \001(\010R\007replace\022(\n\007options\030\005 \003(\0132\016.pg_qu" +
+      "ery.NodeR\007options\022E\n\021with_check_option\030\006" +
+      " \001(\0162\031.pg_query.ViewCheckOptionR\017withChe" +
+      "ckOption\"&\n\010LoadStmt\022\032\n\010filename\030\001 \001(\tR\010" +
+      "filename\"P\n\014CreatedbStmt\022\026\n\006dbname\030\001 \001(\t" +
+      "R\006dbname\022(\n\007options\030\002 \003(\0132\016.pg_query.Nod" +
+      "eR\007options\"U\n\021AlterDatabaseStmt\022\026\n\006dbnam" +
+      "e\030\001 \001(\tR\006dbname\022(\n\007options\030\002 \003(\0132\016.pg_qu" +
+      "ery.NodeR\007options\"6\n\034AlterDatabaseRefres" +
+      "hCollStmt\022\026\n\006dbname\030\001 \001(\tR\006dbname\"c\n\024Alt" +
+      "erDatabaseSetStmt\022\026\n\006dbname\030\001 \001(\tR\006dbnam" +
+      "e\0223\n\007setstmt\030\002 \001(\0132\031.pg_query.VariableSe" +
+      "tStmtR\007setstmt\"n\n\nDropdbStmt\022\026\n\006dbname\030\001" +
+      " \001(\tR\006dbname\022\036\n\nmissing_ok\030\002 \001(\010R\nmissin" +
+      "g_ok\022(\n\007options\030\003 \003(\0132\016.pg_query.NodeR\007o" +
+      "ptions\"F\n\017AlterSystemStmt\0223\n\007setstmt\030\001 \001" +
+      "(\0132\031.pg_query.VariableSetStmtR\007setstmt\"\203" +
+      "\001\n\013ClusterStmt\022.\n\010relation\030\001 \001(\0132\022.pg_qu" +
+      "ery.RangeVarR\010relation\022\034\n\tindexname\030\002 \001(" +
+      "\tR\tindexname\022&\n\006params\030\003 \003(\0132\016.pg_query." +
+      "NodeR\006params\"~\n\nVacuumStmt\022(\n\007options\030\001 " +
+      "\003(\0132\016.pg_query.NodeR\007options\022\"\n\004rels\030\002 \003" +
+      "(\0132\016.pg_query.NodeR\004rels\022\"\n\014is_vacuumcmd" +
+      "\030\003 \001(\010R\014is_vacuumcmd\"|\n\016VacuumRelation\022." +
+      "\n\010relation\030\001 \001(\0132\022.pg_query.RangeVarR\010re" +
+      "lation\022\020\n\003oid\030\002 \001(\rR\003oid\022(\n\007va_cols\030\003 \003(" +
+      "\0132\016.pg_query.NodeR\007va_cols\"]\n\013ExplainStm" +
+      "t\022$\n\005query\030\001 \001(\0132\016.pg_query.NodeR\005query\022" +
+      "(\n\007options\030\002 \003(\0132\016.pg_query.NodeR\007option" +
+      "s\"\341\001\n\021CreateTableAsStmt\022$\n\005query\030\001 \001(\0132\016" +
+      ".pg_query.NodeR\005query\022(\n\004into\030\002 \001(\0132\024.pg" +
+      "_query.IntoClauseR\004into\022.\n\007objtype\030\003 \001(\016" +
+      "2\024.pg_query.ObjectTypeR\007objtype\022&\n\016is_se" +
+      "lect_into\030\004 \001(\010R\016is_select_into\022$\n\rif_no" +
+      "t_exists\030\005 \001(\010R\rif_not_exists\"\201\001\n\022Refres" +
+      "hMatViewStmt\022\036\n\nconcurrent\030\001 \001(\010R\nconcur" +
+      "rent\022\033\n\tskip_data\030\002 \001(\010R\010skipData\022.\n\010rel" +
+      "ation\030\003 \001(\0132\022.pg_query.RangeVarR\010relatio" +
+      "n\"\020\n\016CheckPointStmt\"<\n\013DiscardStmt\022-\n\006ta" +
+      "rget\030\001 \001(\0162\025.pg_query.DiscardModeR\006targe" +
+      "t\"d\n\010LockStmt\022,\n\trelations\030\001 \003(\0132\016.pg_qu" +
+      "ery.NodeR\trelations\022\022\n\004mode\030\002 \001(\005R\004mode\022" +
+      "\026\n\006nowait\030\003 \001(\010R\006nowait\"b\n\022ConstraintsSe" +
+      "tStmt\0220\n\013constraints\030\001 \003(\0132\016.pg_query.No" +
+      "deR\013constraints\022\032\n\010deferred\030\002 \001(\010R\010defer" +
+      "red\"\252\001\n\013ReindexStmt\022/\n\004kind\030\001 \001(\0162\033.pg_q" +
+      "uery.ReindexObjectTypeR\004kind\022.\n\010relation" +
+      "\030\002 \001(\0132\022.pg_query.RangeVarR\010relation\022\022\n\004" +
+      "name\030\003 \001(\tR\004name\022&\n\006params\030\004 \003(\0132\016.pg_qu" +
+      "ery.NodeR\006params\"\352\001\n\024CreateConversionStm" +
+      "t\0228\n\017conversion_name\030\001 \003(\0132\016.pg_query.No" +
+      "deR\017conversion_name\022,\n\021for_encoding_name" +
+      "\030\002 \001(\tR\021for_encoding_name\022*\n\020to_encoding" +
+      "_name\030\003 \001(\tR\020to_encoding_name\022,\n\tfunc_na" +
+      "me\030\004 \003(\0132\016.pg_query.NodeR\tfunc_name\022\020\n\003d" +
+      "ef\030\005 \001(\010R\003def\"\361\001\n\016CreateCastStmt\0222\n\nsour" +
+      "cetype\030\001 \001(\0132\022.pg_query.TypeNameR\nsource" +
+      "type\0222\n\ntargettype\030\002 \001(\0132\022.pg_query.Type" +
+      "NameR\ntargettype\022,\n\004func\030\003 \001(\0132\030.pg_quer" +
+      "y.ObjectWithArgsR\004func\0223\n\007context\030\004 \001(\0162" +
+      "\031.pg_query.CoercionContextR\007context\022\024\n\005i" +
+      "nout\030\005 \001(\010R\005inout\"\331\001\n\023CreateTransformStm" +
+      "t\022\030\n\007replace\030\001 \001(\010R\007replace\0220\n\ttype_name" +
+      "\030\002 \001(\0132\022.pg_query.TypeNameR\ttype_name\022\022\n" +
+      "\004lang\030\003 \001(\tR\004lang\0222\n\007fromsql\030\004 \001(\0132\030.pg_" +
+      "query.ObjectWithArgsR\007fromsql\022.\n\005tosql\030\005" +
+      " \001(\0132\030.pg_query.ObjectWithArgsR\005tosql\"s\n" +
+      "\013PrepareStmt\022\022\n\004name\030\001 \001(\tR\004name\022*\n\010argt" +
+      "ypes\030\002 \003(\0132\016.pg_query.NodeR\010argtypes\022$\n\005" +
+      "query\030\003 \001(\0132\016.pg_query.NodeR\005query\"I\n\013Ex" +
+      "ecuteStmt\022\022\n\004name\030\001 \001(\tR\004name\022&\n\006params\030" +
+      "\002 \003(\0132\016.pg_query.NodeR\006params\"V\n\016Dealloc" +
+      "ateStmt\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005isall\030\002 \001" +
+      "(\010R\005isall\022\032\n\010location\030\003 \001(\005R\010location\"i\n" +
+      "\rDropOwnedStmt\022$\n\005roles\030\001 \003(\0132\016.pg_query" +
+      ".NodeR\005roles\0222\n\010behavior\030\002 \001(\0162\026.pg_quer" +
+      "y.DropBehaviorR\010behavior\"g\n\021ReassignOwne" +
+      "dStmt\022$\n\005roles\030\001 \003(\0132\016.pg_query.NodeR\005ro" +
+      "les\022,\n\007newrole\030\002 \001(\0132\022.pg_query.RoleSpec" +
+      "R\007newrole\"m\n\025AlterTSDictionaryStmt\022*\n\010di" +
+      "ctname\030\001 \003(\0132\016.pg_query.NodeR\010dictname\022(" +
+      "\n\007options\030\002 \003(\0132\016.pg_query.NodeR\007options" +
+      "\"\237\002\n\030AlterTSConfigurationStmt\022/\n\004kind\030\001 " +
+      "\001(\0162\033.pg_query.AlterTSConfigTypeR\004kind\022(" +
+      "\n\007cfgname\030\002 \003(\0132\016.pg_query.NodeR\007cfgname" +
+      "\022,\n\ttokentype\030\003 \003(\0132\016.pg_query.NodeR\ttok" +
+      "entype\022$\n\005dicts\030\004 \003(\0132\016.pg_query.NodeR\005d" +
+      "icts\022\032\n\010override\030\005 \001(\010R\010override\022\030\n\007repl" +
+      "ace\030\006 \001(\010R\007replace\022\036\n\nmissing_ok\030\007 \001(\010R\n" +
+      "missing_ok\"\237\001\n\020PublicationTable\022.\n\010relat" +
+      "ion\030\001 \001(\0132\022.pg_query.RangeVarR\010relation\022" +
+      "1\n\014where_clause\030\002 \001(\0132\016.pg_query.NodeR\013w" +
+      "hereClause\022(\n\007columns\030\003 \003(\0132\016.pg_query.N" +
+      "odeR\007columns\"\276\001\n\022PublicationObjSpec\022@\n\np" +
+      "ubobjtype\030\001 \001(\0162 .pg_query.PublicationOb" +
+      "jSpecTypeR\npubobjtype\022\022\n\004name\030\002 \001(\tR\004nam" +
+      "e\0226\n\010pubtable\030\003 \001(\0132\032.pg_query.Publicati" +
+      "onTableR\010pubtable\022\032\n\010location\030\004 \001(\005R\010loc" +
+      "ation\"\263\001\n\025CreatePublicationStmt\022\030\n\007pubna" +
+      "me\030\001 \001(\tR\007pubname\022(\n\007options\030\002 \003(\0132\016.pg_" +
+      "query.NodeR\007options\022.\n\npubobjects\030\003 \003(\0132" +
+      "\016.pg_query.NodeR\npubobjects\022&\n\016for_all_t" +
+      "ables\030\004 \001(\010R\016for_all_tables\"\354\001\n\024AlterPub" +
+      "licationStmt\022\030\n\007pubname\030\001 \001(\tR\007pubname\022(" +
+      "\n\007options\030\002 \003(\0132\016.pg_query.NodeR\007options" +
+      "\022.\n\npubobjects\030\003 \003(\0132\016.pg_query.NodeR\npu" +
+      "bobjects\022&\n\016for_all_tables\030\004 \001(\010R\016for_al" +
+      "l_tables\0228\n\006action\030\005 \001(\0162 .pg_query.Alte" +
+      "rPublicationActionR\006action\"\252\001\n\026CreateSub" +
+      "scriptionStmt\022\030\n\007subname\030\001 \001(\tR\007subname\022" +
+      "\032\n\010conninfo\030\002 \001(\tR\010conninfo\0220\n\013publicati" +
+      "on\030\003 \003(\0132\016.pg_query.NodeR\013publication\022(\n" +
+      "\007options\030\004 \003(\0132\016.pg_query.NodeR\007options\"" +
+      "\336\001\n\025AlterSubscriptionStmt\0223\n\004kind\030\001 \001(\0162" +
+      "\037.pg_query.AlterSubscriptionTypeR\004kind\022\030" +
+      "\n\007subname\030\002 \001(\tR\007subname\022\032\n\010conninfo\030\003 \001" +
+      "(\tR\010conninfo\0220\n\013publication\030\004 \003(\0132\016.pg_q" +
+      "uery.NodeR\013publication\022(\n\007options\030\005 \003(\0132" +
+      "\016.pg_query.NodeR\007options\"\204\001\n\024DropSubscri" +
+      "ptionStmt\022\030\n\007subname\030\001 \001(\tR\007subname\022\036\n\nm" +
+      "issing_ok\030\002 \001(\010R\nmissing_ok\0222\n\010behavior\030" +
+      "\003 \001(\0162\026.pg_query.DropBehaviorR\010behavior\"" +
+      "t\n\tScanToken\022\r\n\005start\030\001 \001(\005\022\013\n\003end\030\002 \001(\005" +
+      "\022\036\n\005token\030\004 \001(\0162\017.pg_query.Token\022+\n\014keyw" +
+      "ord_kind\030\005 \001(\0162\025.pg_query.KeywordKind\"\315\005" +
+      "\n\rSummaryResult\022-\n\006tables\030\001 \003(\0132\035.pg_que" +
+      "ry.SummaryResult.Table\0225\n\007aliases\030\002 \003(\0132" +
+      "$.pg_query.SummaryResult.AliasesEntry\022\021\n" +
+      "\tcte_names\030\003 \003(\t\0223\n\tfunctions\030\004 \003(\0132 .pg" +
+      "_query.SummaryResult.Function\022<\n\016filter_" +
+      "columns\030\005 \003(\0132$.pg_query.SummaryResult.F" +
+      "ilterColumn\022\027\n\017statement_types\030\006 \003(\t\022\027\n\017" +
+      "truncated_query\030\007 \001(\t\032p\n\005Table\022\014\n\004name\030\001" +
+      " \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_name\030" +
+      "\003 \001(\t\0220\n\007context\030\004 \001(\0162\037.pg_query.Summar" +
+      "yResult.Context\032.\n\014AliasesEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032v\n\010Function\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\025\n\rfunction_name\030\002 \001(\t\022\023\n\013sche" +
+      "ma_name\030\003 \001(\t\0220\n\007context\030\004 \001(\0162\037.pg_quer" +
+      "y.SummaryResult.Context\032G\n\014FilterColumn\022" +
+      "\023\n\013schema_name\030\001 \001(\t\022\022\n\ntable_name\030\002 \001(\t",
+      "\022\016\n\006column\030\003 \001(\t\";\n\007Context\022\010\n\004None\020\000\022\n\n" +
+      "\006Select\020\001\022\007\n\003DML\020\002\022\007\n\003DDL\020\003\022\010\n\004Call\020\004*\233\001" +
+      "\n\013QuerySource\022\032\n\026QUERY_SOURCE_UNDEFINED\020" +
+      "\000\022\021\n\rQSRC_ORIGINAL\020\001\022\017\n\013QSRC_PARSER\020\002\022\025\n" +
+      "\021QSRC_INSTEAD_RULE\020\003\022\032\n\026QSRC_QUAL_INSTEA" +
+      "D_RULE\020\004\022\031\n\025QSRC_NON_INSTEAD_RULE\020\005*m\n\tS" +
+      "ortByDir\022\031\n\025SORT_BY_DIR_UNDEFINED\020\000\022\022\n\016S" +
+      "ORTBY_DEFAULT\020\001\022\016\n\nSORTBY_ASC\020\002\022\017\n\013SORTB" +
+      "Y_DESC\020\003\022\020\n\014SORTBY_USING\020\004*s\n\013SortByNull" +
+      "s\022\033\n\027SORT_BY_NULLS_UNDEFINED\020\000\022\030\n\024SORTBY" +
+      "_NULLS_DEFAULT\020\001\022\026\n\022SORTBY_NULLS_FIRST\020\002" +
+      "\022\025\n\021SORTBY_NULLS_LAST\020\003*~\n\rSetQuantifier" +
+      "\022\034\n\030SET_QUANTIFIER_UNDEFINED\020\000\022\032\n\026SET_QU" +
+      "ANTIFIER_DEFAULT\020\001\022\026\n\022SET_QUANTIFIER_ALL" +
+      "\020\002\022\033\n\027SET_QUANTIFIER_DISTINCT\020\003*\266\002\n\013A_Ex" +
+      "pr_Kind\022\031\n\025A_EXPR_KIND_UNDEFINED\020\000\022\014\n\010AE" +
+      "XPR_OP\020\001\022\020\n\014AEXPR_OP_ANY\020\002\022\020\n\014AEXPR_OP_A" +
+      "LL\020\003\022\022\n\016AEXPR_DISTINCT\020\004\022\026\n\022AEXPR_NOT_DI" +
+      "STINCT\020\005\022\020\n\014AEXPR_NULLIF\020\006\022\014\n\010AEXPR_IN\020\007" +
+      "\022\016\n\nAEXPR_LIKE\020\010\022\017\n\013AEXPR_ILIKE\020\t\022\021\n\rAEX" +
+      "PR_SIMILAR\020\n\022\021\n\rAEXPR_BETWEEN\020\013\022\025\n\021AEXPR" +
+      "_NOT_BETWEEN\020\014\022\025\n\021AEXPR_BETWEEN_SYM\020\r\022\031\n" +
+      "\025AEXPR_NOT_BETWEEN_SYM\020\016*\250\001\n\014RoleSpecTyp" +
+      "e\022\034\n\030ROLE_SPEC_TYPE_UNDEFINED\020\000\022\024\n\020ROLES" +
+      "PEC_CSTRING\020\001\022\031\n\025ROLESPEC_CURRENT_ROLE\020\002" +
+      "\022\031\n\025ROLESPEC_CURRENT_USER\020\003\022\031\n\025ROLESPEC_" +
+      "SESSION_USER\020\004\022\023\n\017ROLESPEC_PUBLIC\020\005*\364\002\n\017" +
+      "TableLikeOption\022\037\n\033TABLE_LIKE_OPTION_UND" +
+      "EFINED\020\000\022\036\n\032CREATE_TABLE_LIKE_COMMENTS\020\001" +
+      "\022!\n\035CREATE_TABLE_LIKE_COMPRESSION\020\002\022!\n\035C" +
+      "REATE_TABLE_LIKE_CONSTRAINTS\020\003\022\036\n\032CREATE" +
+      "_TABLE_LIKE_DEFAULTS\020\004\022\037\n\033CREATE_TABLE_L" +
+      "IKE_GENERATED\020\005\022\036\n\032CREATE_TABLE_LIKE_IDE" +
+      "NTITY\020\006\022\035\n\031CREATE_TABLE_LIKE_INDEXES\020\007\022 " +
+      "\n\034CREATE_TABLE_LIKE_STATISTICS\020\010\022\035\n\031CREA" +
+      "TE_TABLE_LIKE_STORAGE\020\t\022\031\n\025CREATE_TABLE_" +
+      "LIKE_ALL\020\n*v\n\rDefElemAction\022\035\n\031DEF_ELEM_" +
+      "ACTION_UNDEFINED\020\000\022\022\n\016DEFELEM_UNSPEC\020\001\022\017" +
+      "\n\013DEFELEM_SET\020\002\022\017\n\013DEFELEM_ADD\020\003\022\020\n\014DEFE" +
+      "LEM_DROP\020\004*\215\001\n\021PartitionStrategy\022 \n\034PART" +
+      "ITION_STRATEGY_UNDEFINED\020\000\022\033\n\027PARTITION_" +
+      "STRATEGY_LIST\020\001\022\034\n\030PARTITION_STRATEGY_RA" +
+      "NGE\020\002\022\033\n\027PARTITION_STRATEGY_HASH\020\003*\254\001\n\027P" +
+      "artitionRangeDatumKind\022(\n$PARTITION_RANG" +
+      "E_DATUM_KIND_UNDEFINED\020\000\022\"\n\036PARTITION_RA" +
+      "NGE_DATUM_MINVALUE\020\001\022\037\n\033PARTITION_RANGE_" +
+      "DATUM_VALUE\020\002\022\"\n\036PARTITION_RANGE_DATUM_M" +
+      "AXVALUE\020\003*\314\001\n\007RTEKind\022\025\n\021RTEKIND_UNDEFIN" +
+      "ED\020\000\022\020\n\014RTE_RELATION\020\001\022\020\n\014RTE_SUBQUERY\020\002" +
+      "\022\014\n\010RTE_JOIN\020\003\022\020\n\014RTE_FUNCTION\020\004\022\021\n\rRTE_" +
+      "TABLEFUNC\020\005\022\016\n\nRTE_VALUES\020\006\022\013\n\007RTE_CTE\020\007" +
+      "\022\027\n\023RTE_NAMEDTUPLESTORE\020\010\022\016\n\nRTE_RESULT\020" +
+      "\t\022\r\n\tRTE_GROUP\020\n*\304\001\n\007WCOKind\022\025\n\021WCOKIND_" +
+      "UNDEFINED\020\000\022\022\n\016WCO_VIEW_CHECK\020\001\022\030\n\024WCO_R" +
+      "LS_INSERT_CHECK\020\002\022\030\n\024WCO_RLS_UPDATE_CHEC" +
+      "K\020\003\022\032\n\026WCO_RLS_CONFLICT_CHECK\020\004\022\036\n\032WCO_R" +
+      "LS_MERGE_UPDATE_CHECK\020\005\022\036\n\032WCO_RLS_MERGE" +
+      "_DELETE_CHECK\020\006*\252\001\n\017GroupingSetKind\022\037\n\033G" +
+      "ROUPING_SET_KIND_UNDEFINED\020\000\022\026\n\022GROUPING" +
+      "_SET_EMPTY\020\001\022\027\n\023GROUPING_SET_SIMPLE\020\002\022\027\n" +
+      "\023GROUPING_SET_ROLLUP\020\003\022\025\n\021GROUPING_SET_C" +
+      "UBE\020\004\022\025\n\021GROUPING_SET_SETS\020\005*|\n\016CTEMater" +
+      "ialize\022\034\n\030CTEMATERIALIZE_UNDEFINED\020\000\022\031\n\025" +
+      "CTEMaterializeDefault\020\001\022\030\n\024CTEMaterializ" +
+      "eAlways\020\002\022\027\n\023CTEMaterializeNever\020\003*n\n\023Re" +
+      "turningOptionKind\022#\n\037RETURNING_OPTION_KI" +
+      "ND_UNDEFINED\020\000\022\030\n\024RETURNING_OPTION_OLD\020\001" +
+      "\022\030\n\024RETURNING_OPTION_NEW\020\002*e\n\nJsonQuotes" +
+      "\022\031\n\025JSON_QUOTES_UNDEFINED\020\000\022\024\n\020JS_QUOTES" +
+      "_UNSPEC\020\001\022\022\n\016JS_QUOTES_KEEP\020\002\022\022\n\016JS_QUOT" +
+      "ES_OMIT\020\003*\227\001\n\023JsonTableColumnType\022$\n JSO" +
+      "N_TABLE_COLUMN_TYPE_UNDEFINED\020\000\022\026\n\022JTC_F" +
+      "OR_ORDINALITY\020\001\022\017\n\013JTC_REGULAR\020\002\022\016\n\nJTC_" +
+      "EXISTS\020\003\022\021\n\rJTC_FORMATTED\020\004\022\016\n\nJTC_NESTE" +
+      "D\020\005*s\n\014SetOperation\022\033\n\027SET_OPERATION_UND" +
+      "EFINED\020\000\022\016\n\nSETOP_NONE\020\001\022\017\n\013SETOP_UNION\020" +
+      "\002\022\023\n\017SETOP_INTERSECT\020\003\022\020\n\014SETOP_EXCEPT\020\004" +
+      "*\231\t\n\nObjectType\022\031\n\025OBJECT_TYPE_UNDEFINED" +
+      "\020\000\022\030\n\024OBJECT_ACCESS_METHOD\020\001\022\024\n\020OBJECT_A" +
+      "GGREGATE\020\002\022\017\n\013OBJECT_AMOP\020\003\022\021\n\rOBJECT_AM" +
+      "PROC\020\004\022\024\n\020OBJECT_ATTRIBUTE\020\005\022\017\n\013OBJECT_C" +
+      "AST\020\006\022\021\n\rOBJECT_COLUMN\020\007\022\024\n\020OBJECT_COLLA" +
+      "TION\020\010\022\025\n\021OBJECT_CONVERSION\020\t\022\023\n\017OBJECT_" +
+      "DATABASE\020\n\022\022\n\016OBJECT_DEFAULT\020\013\022\021\n\rOBJECT" +
+      "_DEFACL\020\014\022\021\n\rOBJECT_DOMAIN\020\r\022\030\n\024OBJECT_D" +
+      "OMCONSTRAINT\020\016\022\030\n\024OBJECT_EVENT_TRIGGER\020\017" +
+      "\022\024\n\020OBJECT_EXTENSION\020\020\022\016\n\nOBJECT_FDW\020\021\022\031" +
+      "\n\025OBJECT_FOREIGN_SERVER\020\022\022\030\n\024OBJECT_FORE" +
+      "IGN_TABLE\020\023\022\023\n\017OBJECT_FUNCTION\020\024\022\020\n\014OBJE" +
+      "CT_INDEX\020\025\022\023\n\017OBJECT_LANGUAGE\020\026\022\026\n\022OBJEC" +
+      "T_LARGEOBJECT\020\027\022\022\n\016OBJECT_MATVIEW\020\030\022\022\n\016O" +
+      "BJECT_OPCLASS\020\031\022\023\n\017OBJECT_OPERATOR\020\032\022\023\n\017" +
+      "OBJECT_OPFAMILY\020\033\022\030\n\024OBJECT_PARAMETER_AC" +
+      "L\020\034\022\021\n\rOBJECT_POLICY\020\035\022\024\n\020OBJECT_PROCEDU" +
+      "RE\020\036\022\026\n\022OBJECT_PUBLICATION\020\037\022 \n\034OBJECT_P" +
+      "UBLICATION_NAMESPACE\020 \022\032\n\026OBJECT_PUBLICA" +
+      "TION_REL\020!\022\017\n\013OBJECT_ROLE\020\"\022\022\n\016OBJECT_RO" +
+      "UTINE\020#\022\017\n\013OBJECT_RULE\020$\022\021\n\rOBJECT_SCHEM" +
+      "A\020%\022\023\n\017OBJECT_SEQUENCE\020&\022\027\n\023OBJECT_SUBSC" +
+      "RIPTION\020\'\022\030\n\024OBJECT_STATISTIC_EXT\020(\022\030\n\024O" +
+      "BJECT_TABCONSTRAINT\020)\022\020\n\014OBJECT_TABLE\020*\022" +
+      "\025\n\021OBJECT_TABLESPACE\020+\022\024\n\020OBJECT_TRANSFO" +
+      "RM\020,\022\022\n\016OBJECT_TRIGGER\020-\022\032\n\026OBJECT_TSCON" +
+      "FIGURATION\020.\022\027\n\023OBJECT_TSDICTIONARY\020/\022\023\n" +
+      "\017OBJECT_TSPARSER\0200\022\025\n\021OBJECT_TSTEMPLATE\020" +
+      "1\022\017\n\013OBJECT_TYPE\0202\022\027\n\023OBJECT_USER_MAPPIN" +
+      "G\0203\022\017\n\013OBJECT_VIEW\0204*P\n\014DropBehavior\022\033\n\027" +
+      "DROP_BEHAVIOR_UNDEFINED\020\000\022\021\n\rDROP_RESTRI" +
+      "CT\020\001\022\020\n\014DROP_CASCADE\020\002*\367\013\n\016AlterTableTyp" +
+      "e\022\036\n\032ALTER_TABLE_TYPE_UNDEFINED\020\000\022\020\n\014AT_" +
+      "AddColumn\020\001\022\026\n\022AT_AddColumnToView\020\002\022\024\n\020A" +
+      "T_ColumnDefault\020\003\022\032\n\026AT_CookedColumnDefa" +
+      "ult\020\004\022\022\n\016AT_DropNotNull\020\005\022\021\n\rAT_SetNotNu" +
+      "ll\020\006\022\024\n\020AT_SetExpression\020\007\022\025\n\021AT_DropExp" +
+      "ression\020\010\022\024\n\020AT_SetStatistics\020\t\022\021\n\rAT_Se" +
+      "tOptions\020\n\022\023\n\017AT_ResetOptions\020\013\022\021\n\rAT_Se" +
+      "tStorage\020\014\022\025\n\021AT_SetCompression\020\r\022\021\n\rAT_" +
+      "DropColumn\020\016\022\017\n\013AT_AddIndex\020\017\022\021\n\rAT_ReAd" +
+      "dIndex\020\020\022\024\n\020AT_AddConstraint\020\021\022\026\n\022AT_ReA" +
+      "ddConstraint\020\022\022\034\n\030AT_ReAddDomainConstrai" +
+      "nt\020\023\022\026\n\022AT_AlterConstraint\020\024\022\031\n\025AT_Valid" +
+      "ateConstraint\020\025\022\031\n\025AT_AddIndexConstraint" +
+      "\020\026\022\025\n\021AT_DropConstraint\020\027\022\023\n\017AT_ReAddCom" +
+      "ment\020\030\022\026\n\022AT_AlterColumnType\020\031\022 \n\034AT_Alt" +
+      "erColumnGenericOptions\020\032\022\022\n\016AT_ChangeOwn" +
+      "er\020\033\022\020\n\014AT_ClusterOn\020\034\022\022\n\016AT_DropCluster" +
+      "\020\035\022\020\n\014AT_SetLogged\020\036\022\022\n\016AT_SetUnLogged\020\037" +
+      "\022\017\n\013AT_DropOids\020 \022\026\n\022AT_SetAccessMethod\020" +
+      "!\022\024\n\020AT_SetTableSpace\020\"\022\024\n\020AT_SetRelOpti" +
+      "ons\020#\022\026\n\022AT_ResetRelOptions\020$\022\030\n\024AT_Repl" +
+      "aceRelOptions\020%\022\021\n\rAT_EnableTrig\020&\022\027\n\023AT" +
+      "_EnableAlwaysTrig\020\'\022\030\n\024AT_EnableReplicaT" +
+      "rig\020(\022\022\n\016AT_DisableTrig\020)\022\024\n\020AT_EnableTr" +
+      "igAll\020*\022\025\n\021AT_DisableTrigAll\020+\022\025\n\021AT_Ena" +
+      "bleTrigUser\020,\022\026\n\022AT_DisableTrigUser\020-\022\021\n" +
+      "\rAT_EnableRule\020.\022\027\n\023AT_EnableAlwaysRule\020" +
+      "/\022\030\n\024AT_EnableReplicaRule\0200\022\022\n\016AT_Disabl" +
+      "eRule\0201\022\021\n\rAT_AddInherit\0202\022\022\n\016AT_DropInh" +
+      "erit\0203\022\014\n\010AT_AddOf\0204\022\r\n\tAT_DropOf\0205\022\026\n\022A" +
+      "T_ReplicaIdentity\0206\022\030\n\024AT_EnableRowSecur" +
+      "ity\0207\022\031\n\025AT_DisableRowSecurity\0208\022\027\n\023AT_F" +
+      "orceRowSecurity\0209\022\031\n\025AT_NoForceRowSecuri" +
+      "ty\020:\022\025\n\021AT_GenericOptions\020;\022\026\n\022AT_Attach" +
+      "Partition\020<\022\026\n\022AT_DetachPartition\020=\022\036\n\032A" +
+      "T_DetachPartitionFinalize\020>\022\022\n\016AT_AddIde" +
+      "ntity\020?\022\022\n\016AT_SetIdentity\020@\022\023\n\017AT_DropId" +
+      "entity\020A\022\026\n\022AT_ReAddStatistics\020B*\200\001\n\017Gra" +
+      "ntTargetType\022\037\n\033GRANT_TARGET_TYPE_UNDEFI" +
+      "NED\020\000\022\025\n\021ACL_TARGET_OBJECT\020\001\022\034\n\030ACL_TARG" +
+      "ET_ALL_IN_SCHEMA\020\002\022\027\n\023ACL_TARGET_DEFAULT" +
+      "S\020\003*\244\001\n\017VariableSetKind\022\037\n\033VARIABLE_SET_" +
+      "KIND_UNDEFINED\020\000\022\021\n\rVAR_SET_VALUE\020\001\022\023\n\017V" +
+      "AR_SET_DEFAULT\020\002\022\023\n\017VAR_SET_CURRENT\020\003\022\021\n" +
+      "\rVAR_SET_MULTI\020\004\022\r\n\tVAR_RESET\020\005\022\021\n\rVAR_R" +
+      "ESET_ALL\020\006*\227\003\n\nConstrType\022\031\n\025CONSTR_TYPE" +
+      "_UNDEFINED\020\000\022\017\n\013CONSTR_NULL\020\001\022\022\n\016CONSTR_" +
+      "NOTNULL\020\002\022\022\n\016CONSTR_DEFAULT\020\003\022\023\n\017CONSTR_" +
+      "IDENTITY\020\004\022\024\n\020CONSTR_GENERATED\020\005\022\020\n\014CONS" +
+      "TR_CHECK\020\006\022\022\n\016CONSTR_PRIMARY\020\007\022\021\n\rCONSTR" +
+      "_UNIQUE\020\010\022\024\n\020CONSTR_EXCLUSION\020\t\022\022\n\016CONST" +
+      "R_FOREIGN\020\n\022\032\n\026CONSTR_ATTR_DEFERRABLE\020\013\022" +
+      "\036\n\032CONSTR_ATTR_NOT_DEFERRABLE\020\014\022\030\n\024CONST" +
+      "R_ATTR_DEFERRED\020\r\022\031\n\025CONSTR_ATTR_IMMEDIA" +
+      "TE\020\016\022\030\n\024CONSTR_ATTR_ENFORCED\020\017\022\034\n\030CONSTR" +
+      "_ATTR_NOT_ENFORCED\020\020*\234\001\n\027ImportForeignSc" +
+      "hemaType\022(\n$IMPORT_FOREIGN_SCHEMA_TYPE_U" +
+      "NDEFINED\020\000\022\031\n\025FDW_IMPORT_SCHEMA_ALL\020\001\022\036\n" +
+      "\032FDW_IMPORT_SCHEMA_LIMIT_TO\020\002\022\034\n\030FDW_IMP" +
+      "ORT_SCHEMA_EXCEPT\020\003*f\n\014RoleStmtType\022\034\n\030R" +
+      "OLE_STMT_TYPE_UNDEFINED\020\000\022\021\n\rROLESTMT_RO" +
+      "LE\020\001\022\021\n\rROLESTMT_USER\020\002\022\022\n\016ROLESTMT_GROU" +
+      "P\020\003*~\n\016FetchDirection\022\035\n\031FETCH_DIRECTION" +
+      "_UNDEFINED\020\000\022\021\n\rFETCH_FORWARD\020\001\022\022\n\016FETCH" +
+      "_BACKWARD\020\002\022\022\n\016FETCH_ABSOLUTE\020\003\022\022\n\016FETCH" +
+      "_RELATIVE\020\004*\302\001\n\025FunctionParameterMode\022%\n" +
+      "!FUNCTION_PARAMETER_MODE_UNDEFINED\020\000\022\021\n\r" +
+      "FUNC_PARAM_IN\020\001\022\022\n\016FUNC_PARAM_OUT\020\002\022\024\n\020F" +
+      "UNC_PARAM_INOUT\020\003\022\027\n\023FUNC_PARAM_VARIADIC" +
+      "\020\004\022\024\n\020FUNC_PARAM_TABLE\020\005\022\026\n\022FUNC_PARAM_D" +
+      "EFAULT\020\006*\276\002\n\023TransactionStmtKind\022#\n\037TRAN" +
+      "SACTION_STMT_KIND_UNDEFINED\020\000\022\024\n\020TRANS_S" +
+      "TMT_BEGIN\020\001\022\024\n\020TRANS_STMT_START\020\002\022\025\n\021TRA" +
+      "NS_STMT_COMMIT\020\003\022\027\n\023TRANS_STMT_ROLLBACK\020" +
+      "\004\022\030\n\024TRANS_STMT_SAVEPOINT\020\005\022\026\n\022TRANS_STM" +
+      "T_RELEASE\020\006\022\032\n\026TRANS_STMT_ROLLBACK_TO\020\007\022" +
+      "\026\n\022TRANS_STMT_PREPARE\020\010\022\036\n\032TRANS_STMT_CO" +
+      "MMIT_PREPARED\020\t\022 \n\034TRANS_STMT_ROLLBACK_P" +
+      "REPARED\020\n*z\n\017ViewCheckOption\022\037\n\033VIEW_CHE" +
+      "CK_OPTION_UNDEFINED\020\000\022\023\n\017NO_CHECK_OPTION" +
+      "\020\001\022\026\n\022LOCAL_CHECK_OPTION\020\002\022\031\n\025CASCADED_C" +
+      "HECK_OPTION\020\003*v\n\013DiscardMode\022\032\n\026DISCARD_" +
+      "MODE_UNDEFINED\020\000\022\017\n\013DISCARD_ALL\020\001\022\021\n\rDIS" +
+      "CARD_PLANS\020\002\022\025\n\021DISCARD_SEQUENCES\020\003\022\020\n\014D" +
+      "ISCARD_TEMP\020\004*\275\001\n\021ReindexObjectType\022!\n\035R" +
+      "EINDEX_OBJECT_TYPE_UNDEFINED\020\000\022\030\n\024REINDE" +
+      "X_OBJECT_INDEX\020\001\022\030\n\024REINDEX_OBJECT_TABLE" +
+      "\020\002\022\031\n\025REINDEX_OBJECT_SCHEMA\020\003\022\031\n\025REINDEX" +
+      "_OBJECT_SYSTEM\020\004\022\033\n\027REINDEX_OBJECT_DATAB" +
+      "ASE\020\005*\357\001\n\021AlterTSConfigType\022!\n\035ALTER_TSC" +
+      "ONFIG_TYPE_UNDEFINED\020\000\022\036\n\032ALTER_TSCONFIG" +
+      "_ADD_MAPPING\020\001\022*\n&ALTER_TSCONFIG_ALTER_M" +
+      "APPING_FOR_TOKEN\020\002\022\037\n\033ALTER_TSCONFIG_REP" +
+      "LACE_DICT\020\003\022)\n%ALTER_TSCONFIG_REPLACE_DI" +
+      "CT_FOR_TOKEN\020\004\022\037\n\033ALTER_TSCONFIG_DROP_MA" +
+      "PPING\020\005*\312\001\n\026PublicationObjSpecType\022\'\n#PU" +
+      "BLICATION_OBJ_SPEC_TYPE_UNDEFINED\020\000\022\030\n\024P" +
+      "UBLICATIONOBJ_TABLE\020\001\022#\n\037PUBLICATIONOBJ_" +
+      "TABLES_IN_SCHEMA\020\002\022\'\n#PUBLICATIONOBJ_TAB" +
+      "LES_IN_CUR_SCHEMA\020\003\022\037\n\033PUBLICATIONOBJ_CO" +
+      "NTINUATION\020\004*z\n\026AlterPublicationAction\022&" +
+      "\n\"ALTER_PUBLICATION_ACTION_UNDEFINED\020\000\022\021" +
+      "\n\rAP_AddObjects\020\001\022\022\n\016AP_DropObjects\020\002\022\021\n" +
+      "\rAP_SetObjects\020\003*\327\002\n\025AlterSubscriptionTy" +
+      "pe\022%\n!ALTER_SUBSCRIPTION_TYPE_UNDEFINED\020" +
+      "\000\022\036\n\032ALTER_SUBSCRIPTION_OPTIONS\020\001\022!\n\035ALT" +
+      "ER_SUBSCRIPTION_CONNECTION\020\002\022&\n\"ALTER_SU" +
+      "BSCRIPTION_SET_PUBLICATION\020\003\022&\n\"ALTER_SU" +
+      "BSCRIPTION_ADD_PUBLICATION\020\004\022\'\n#ALTER_SU" +
+      "BSCRIPTION_DROP_PUBLICATION\020\005\022\036\n\032ALTER_S" +
+      "UBSCRIPTION_REFRESH\020\006\022\036\n\032ALTER_SUBSCRIPT" +
+      "ION_ENABLED\020\007\022\033\n\027ALTER_SUBSCRIPTION_SKIP" +
+      "\020\010*\177\n\016OverridingKind\022\035\n\031OVERRIDING_KIND_" +
+      "UNDEFINED\020\000\022\026\n\022OVERRIDING_NOT_SET\020\001\022\031\n\025O" +
+      "VERRIDING_USER_VALUE\020\002\022\033\n\027OVERRIDING_SYS" +
+      "TEM_VALUE\020\003*\214\001\n\016OnCommitAction\022\036\n\032ON_COM" +
+      "MIT_ACTION_UNDEFINED\020\000\022\021\n\rONCOMMIT_NOOP\020" +
+      "\001\022\032\n\026ONCOMMIT_PRESERVE_ROWS\020\002\022\030\n\024ONCOMMI" +
+      "T_DELETE_ROWS\020\003\022\021\n\rONCOMMIT_DROP\020\004*T\n\rTa" +
+      "bleFuncType\022\035\n\031TABLE_FUNC_TYPE_UNDEFINED" +
+      "\020\000\022\020\n\014TFT_XMLTABLE\020\001\022\022\n\016TFT_JSON_TABLE\020\002" +
+      "*}\n\020VarReturningType\022 \n\034VAR_RETURNING_TY" +
+      "PE_UNDEFINED\020\000\022\031\n\025VAR_RETURNING_DEFAULT\020" +
+      "\001\022\025\n\021VAR_RETURNING_OLD\020\002\022\025\n\021VAR_RETURNIN" +
+      "G_NEW\020\003*o\n\tParamKind\022\030\n\024PARAM_KIND_UNDEF" +
+      "INED\020\000\022\020\n\014PARAM_EXTERN\020\001\022\016\n\nPARAM_EXEC\020\002" +
+      "\022\021\n\rPARAM_SUBLINK\020\003\022\023\n\017PARAM_MULTIEXPR\020\004" +
+      "*\216\001\n\017CoercionContext\022\036\n\032COERCION_CONTEXT" +
+      "_UNDEFINED\020\000\022\025\n\021COERCION_IMPLICIT\020\001\022\027\n\023C" +
+      "OERCION_ASSIGNMENT\020\002\022\024\n\020COERCION_PLPGSQL" +
+      "\020\003\022\025\n\021COERCION_EXPLICIT\020\004*\220\001\n\014CoercionFo" +
+      "rm\022\033\n\027COERCION_FORM_UNDEFINED\020\000\022\030\n\024COERC" +
+      "E_EXPLICIT_CALL\020\001\022\030\n\024COERCE_EXPLICIT_CAS" +
+      "T\020\002\022\030\n\024COERCE_IMPLICIT_CAST\020\003\022\025\n\021COERCE_" +
+      "SQL_SYNTAX\020\004*U\n\014BoolExprType\022\034\n\030BOOL_EXP" +
+      "R_TYPE_UNDEFINED\020\000\022\014\n\010AND_EXPR\020\001\022\013\n\007OR_E" +
+      "XPR\020\002\022\014\n\010NOT_EXPR\020\003*\305\001\n\013SubLinkType\022\033\n\027S" +
+      "UB_LINK_TYPE_UNDEFINED\020\000\022\022\n\016EXISTS_SUBLI" +
+      "NK\020\001\022\017\n\013ALL_SUBLINK\020\002\022\017\n\013ANY_SUBLINK\020\003\022\026" +
+      "\n\022ROWCOMPARE_SUBLINK\020\004\022\020\n\014EXPR_SUBLINK\020\005" +
+      "\022\025\n\021MULTIEXPR_SUBLINK\020\006\022\021\n\rARRAY_SUBLINK" +
+      "\020\007\022\017\n\013CTE_SUBLINK\020\010*C\n\010MinMaxOp\022\030\n\024MIN_M" +
+      "AX_OP_UNDEFINED\020\000\022\017\n\013IS_GREATEST\020\001\022\014\n\010IS" +
+      "_LEAST\020\002*\255\003\n\022SQLValueFunctionOp\022\"\n\036SQLVA" +
+      "LUE_FUNCTION_OP_UNDEFINED\020\000\022\026\n\022SVFOP_CUR" +
+      "RENT_DATE\020\001\022\026\n\022SVFOP_CURRENT_TIME\020\002\022\030\n\024S" +
+      "VFOP_CURRENT_TIME_N\020\003\022\033\n\027SVFOP_CURRENT_T" +
+      "IMESTAMP\020\004\022\035\n\031SVFOP_CURRENT_TIMESTAMP_N\020" +
+      "\005\022\023\n\017SVFOP_LOCALTIME\020\006\022\025\n\021SVFOP_LOCALTIM" +
+      "E_N\020\007\022\030\n\024SVFOP_LOCALTIMESTAMP\020\010\022\032\n\026SVFOP" +
+      "_LOCALTIMESTAMP_N\020\t\022\026\n\022SVFOP_CURRENT_ROL" +
+      "E\020\n\022\026\n\022SVFOP_CURRENT_USER\020\013\022\016\n\nSVFOP_USE" +
+      "R\020\014\022\026\n\022SVFOP_SESSION_USER\020\r\022\031\n\025SVFOP_CUR" +
+      "RENT_CATALOG\020\016\022\030\n\024SVFOP_CURRENT_SCHEMA\020\017" +
+      "*\262\001\n\tXmlExprOp\022\031\n\025XML_EXPR_OP_UNDEFINED\020" +
+      "\000\022\020\n\014IS_XMLCONCAT\020\001\022\021\n\rIS_XMLELEMENT\020\002\022\020" +
+      "\n\014IS_XMLFOREST\020\003\022\017\n\013IS_XMLPARSE\020\004\022\014\n\010IS_" +
+      "XMLPI\020\005\022\016\n\nIS_XMLROOT\020\006\022\023\n\017IS_XMLSERIALI" +
+      "ZE\020\007\022\017\n\013IS_DOCUMENT\020\010*]\n\rXmlOptionType\022\035" +
+      "\n\031XML_OPTION_TYPE_UNDEFINED\020\000\022\026\n\022XMLOPTI" +
+      "ON_DOCUMENT\020\001\022\025\n\021XMLOPTION_CONTENT\020\002*t\n\014" +
+      "JsonEncoding\022\033\n\027JSON_ENCODING_UNDEFINED\020" +
+      "\000\022\022\n\016JS_ENC_DEFAULT\020\001\022\017\n\013JS_ENC_UTF8\020\002\022\020" +
+      "\n\014JS_ENC_UTF16\020\003\022\020\n\014JS_ENC_UTF32\020\004*p\n\016Js" +
+      "onFormatType\022\036\n\032JSON_FORMAT_TYPE_UNDEFIN" +
+      "ED\020\000\022\025\n\021JS_FORMAT_DEFAULT\020\001\022\022\n\016JS_FORMAT" +
+      "_JSON\020\002\022\023\n\017JS_FORMAT_JSONB\020\003*\350\001\n\023JsonCon" +
+      "structorType\022#\n\037JSON_CONSTRUCTOR_TYPE_UN" +
+      "DEFINED\020\000\022\026\n\022JSCTOR_JSON_OBJECT\020\001\022\025\n\021JSC" +
+      "TOR_JSON_ARRAY\020\002\022\031\n\025JSCTOR_JSON_OBJECTAG" +
+      "G\020\003\022\030\n\024JSCTOR_JSON_ARRAYAGG\020\004\022\025\n\021JSCTOR_" +
+      "JSON_PARSE\020\005\022\026\n\022JSCTOR_JSON_SCALAR\020\006\022\031\n\025" +
+      "JSCTOR_JSON_SERIALIZE\020\007*z\n\rJsonValueType" +
+      "\022\035\n\031JSON_VALUE_TYPE_UNDEFINED\020\000\022\017\n\013JS_TY" +
+      "PE_ANY\020\001\022\022\n\016JS_TYPE_OBJECT\020\002\022\021\n\rJS_TYPE_" +
+      "ARRAY\020\003\022\022\n\016JS_TYPE_SCALAR\020\004*s\n\013JsonWrapp" +
+      "er\022\032\n\026JSON_WRAPPER_UNDEFINED\020\000\022\016\n\nJSW_UN" +
+      "SPEC\020\001\022\014\n\010JSW_NONE\020\002\022\023\n\017JSW_CONDITIONAL\020" +
+      "\003\022\025\n\021JSW_UNCONDITIONAL\020\004*\244\002\n\020JsonBehavio" +
+      "rType\022 \n\034JSON_BEHAVIOR_TYPE_UNDEFINED\020\000\022" +
+      "\026\n\022JSON_BEHAVIOR_NULL\020\001\022\027\n\023JSON_BEHAVIOR" +
+      "_ERROR\020\002\022\027\n\023JSON_BEHAVIOR_EMPTY\020\003\022\026\n\022JSO" +
+      "N_BEHAVIOR_TRUE\020\004\022\027\n\023JSON_BEHAVIOR_FALSE" +
+      "\020\005\022\031\n\025JSON_BEHAVIOR_UNKNOWN\020\006\022\035\n\031JSON_BE" +
+      "HAVIOR_EMPTY_ARRAY\020\007\022\036\n\032JSON_BEHAVIOR_EM" +
+      "PTY_OBJECT\020\010\022\031\n\025JSON_BEHAVIOR_DEFAULT\020\t*" +
+      "u\n\nJsonExprOp\022\032\n\026JSON_EXPR_OP_UNDEFINED\020" +
+      "\000\022\022\n\016JSON_EXISTS_OP\020\001\022\021\n\rJSON_QUERY_OP\020\002" +
+      "\022\021\n\rJSON_VALUE_OP\020\003\022\021\n\rJSON_TABLE_OP\020\004*J" +
+      "\n\014NullTestType\022\034\n\030NULL_TEST_TYPE_UNDEFIN" +
+      "ED\020\000\022\013\n\007IS_NULL\020\001\022\017\n\013IS_NOT_NULL\020\002*\216\001\n\014B" +
+      "oolTestType\022\034\n\030BOOL_TEST_TYPE_UNDEFINED\020" +
+      "\000\022\013\n\007IS_TRUE\020\001\022\017\n\013IS_NOT_TRUE\020\002\022\014\n\010IS_FA" +
+      "LSE\020\003\022\020\n\014IS_NOT_FALSE\020\004\022\016\n\nIS_UNKNOWN\020\005\022" +
+      "\022\n\016IS_NOT_UNKNOWN\020\006*\224\001\n\016MergeMatchKind\022\036" +
+      "\n\032MERGE_MATCH_KIND_UNDEFINED\020\000\022\026\n\022MERGE_" +
+      "WHEN_MATCHED\020\001\022$\n MERGE_WHEN_NOT_MATCHED" +
+      "_BY_SOURCE\020\002\022$\n MERGE_WHEN_NOT_MATCHED_B" +
+      "Y_TARGET\020\003*\243\001\n\007CmdType\022\026\n\022CMD_TYPE_UNDEF" +
+      "INED\020\000\022\017\n\013CMD_UNKNOWN\020\001\022\016\n\nCMD_SELECT\020\002\022" +
+      "\016\n\nCMD_UPDATE\020\003\022\016\n\nCMD_INSERT\020\004\022\016\n\nCMD_D" +
+      "ELETE\020\005\022\r\n\tCMD_MERGE\020\006\022\017\n\013CMD_UTILITY\020\007\022" +
+      "\017\n\013CMD_NOTHING\020\010*\327\001\n\010JoinType\022\027\n\023JOIN_TY" +
+      "PE_UNDEFINED\020\000\022\016\n\nJOIN_INNER\020\001\022\r\n\tJOIN_L" +
+      "EFT\020\002\022\r\n\tJOIN_FULL\020\003\022\016\n\nJOIN_RIGHT\020\004\022\r\n\t" +
+      "JOIN_SEMI\020\005\022\r\n\tJOIN_ANTI\020\006\022\023\n\017JOIN_RIGHT" +
+      "_SEMI\020\007\022\023\n\017JOIN_RIGHT_ANTI\020\010\022\025\n\021JOIN_UNI" +
+      "QUE_OUTER\020\t\022\025\n\021JOIN_UNIQUE_INNER\020\n*g\n\013Ag" +
+      "gStrategy\022\032\n\026AGG_STRATEGY_UNDEFINED\020\000\022\r\n" +
+      "\tAGG_PLAIN\020\001\022\016\n\nAGG_SORTED\020\002\022\016\n\nAGG_HASH" +
+      "ED\020\003\022\r\n\tAGG_MIXED\020\004*r\n\010AggSplit\022\027\n\023AGG_S" +
+      "PLIT_UNDEFINED\020\000\022\023\n\017AGGSPLIT_SIMPLE\020\001\022\033\n" +
+      "\027AGGSPLIT_INITIAL_SERIAL\020\002\022\033\n\027AGGSPLIT_F" +
+      "INAL_DESERIAL\020\003*\206\001\n\010SetOpCmd\022\030\n\024SET_OP_C" +
+      "MD_UNDEFINED\020\000\022\026\n\022SETOPCMD_INTERSECT\020\001\022\032" +
+      "\n\026SETOPCMD_INTERSECT_ALL\020\002\022\023\n\017SETOPCMD_E" +
+      "XCEPT\020\003\022\027\n\023SETOPCMD_EXCEPT_ALL\020\004*R\n\rSetO" +
+      "pStrategy\022\035\n\031SET_OP_STRATEGY_UNDEFINED\020\000" +
+      "\022\020\n\014SETOP_SORTED\020\001\022\020\n\014SETOP_HASHED\020\002*x\n\020" +
+      "OnConflictAction\022 \n\034ON_CONFLICT_ACTION_U" +
+      "NDEFINED\020\000\022\023\n\017ONCONFLICT_NONE\020\001\022\026\n\022ONCON" +
+      "FLICT_NOTHING\020\002\022\025\n\021ONCONFLICT_UPDATE\020\003*w" +
+      "\n\013LimitOption\022\032\n\026LIMIT_OPTION_UNDEFINED\020" +
+      "\000\022\030\n\024LIMIT_OPTION_DEFAULT\020\001\022\026\n\022LIMIT_OPT" +
+      "ION_COUNT\020\002\022\032\n\026LIMIT_OPTION_WITH_TIES\020\003*" +
+      "\230\001\n\022LockClauseStrength\022\"\n\036LOCK_CLAUSE_ST" +
+      "RENGTH_UNDEFINED\020\000\022\014\n\010LCS_NONE\020\001\022\023\n\017LCS_" +
+      "FORKEYSHARE\020\002\022\020\n\014LCS_FORSHARE\020\003\022\026\n\022LCS_F" +
+      "ORNOKEYUPDATE\020\004\022\021\n\rLCS_FORUPDATE\020\005*h\n\016Lo" +
+      "ckWaitPolicy\022\036\n\032LOCK_WAIT_POLICY_UNDEFIN" +
+      "ED\020\000\022\021\n\rLockWaitBlock\020\001\022\020\n\014LockWaitSkip\020" +
+      "\002\022\021\n\rLockWaitError\020\003*\216\001\n\rLockTupleMode\022\035" +
+      "\n\031LOCK_TUPLE_MODE_UNDEFINED\020\000\022\025\n\021LockTup" +
+      "leKeyShare\020\001\022\022\n\016LockTupleShare\020\002\022\033\n\027Lock" +
+      "TupleNoKeyExclusive\020\003\022\026\n\022LockTupleExclus" +
+      "ive\020\004*\315\001\n\013CompareType\022\032\n\026COMPARE_TYPE_UN" +
+      "DEFINED\020\000\022\023\n\017COMPARE_INVALID\020\001\022\016\n\nCOMPAR" +
+      "E_LT\020\002\022\016\n\nCOMPARE_LE\020\003\022\016\n\nCOMPARE_EQ\020\004\022\016" +
+      "\n\nCOMPARE_GE\020\005\022\016\n\nCOMPARE_GT\020\006\022\016\n\nCOMPAR" +
+      "E_NE\020\007\022\023\n\017COMPARE_OVERLAP\020\010\022\030\n\024COMPARE_C" +
+      "ONTAINED_BY\020\t*}\n\013KeywordKind\022\016\n\nNO_KEYWO" +
+      "RD\020\000\022\026\n\022UNRESERVED_KEYWORD\020\001\022\024\n\020COL_NAME" +
+      "_KEYWORD\020\002\022\032\n\026TYPE_FUNC_NAME_KEYWORD\020\003\022\024" +
+      "\n\020RESERVED_KEYWORD\020\004*\224<\n\005Token\022\007\n\003NUL\020\000\022" +
+      "\014\n\010ASCII_36\020$\022\014\n\010ASCII_37\020%\022\014\n\010ASCII_40\020" +
+      "(\022\014\n\010ASCII_41\020)\022\014\n\010ASCII_42\020*\022\014\n\010ASCII_4" +
+      "3\020+\022\014\n\010ASCII_44\020,\022\014\n\010ASCII_45\020-\022\014\n\010ASCII" +
+      "_46\020.\022\014\n\010ASCII_47\020/\022\014\n\010ASCII_58\020:\022\014\n\010ASC" +
+      "II_59\020;\022\014\n\010ASCII_60\020<\022\014\n\010ASCII_61\020=\022\014\n\010A" +
+      "SCII_62\020>\022\014\n\010ASCII_63\020?\022\014\n\010ASCII_91\020[\022\014\n" +
+      "\010ASCII_92\020\\\022\014\n\010ASCII_93\020]\022\014\n\010ASCII_94\020^\022" +
+      "\n\n\005IDENT\020\202\002\022\013\n\006UIDENT\020\203\002\022\013\n\006FCONST\020\204\002\022\013\n" +
+      "\006SCONST\020\205\002\022\014\n\007USCONST\020\206\002\022\013\n\006BCONST\020\207\002\022\013\n" +
+      "\006XCONST\020\210\002\022\007\n\002Op\020\211\002\022\013\n\006ICONST\020\212\002\022\n\n\005PARA" +
+      "M\020\213\002\022\r\n\010TYPECAST\020\214\002\022\014\n\007DOT_DOT\020\215\002\022\021\n\014COL" +
+      "ON_EQUALS\020\216\002\022\023\n\016EQUALS_GREATER\020\217\002\022\020\n\013LES" +
+      "S_EQUALS\020\220\002\022\023\n\016GREATER_EQUALS\020\221\002\022\017\n\nNOT_" +
+      "EQUALS\020\222\002\022\020\n\013SQL_COMMENT\020\223\002\022\016\n\tC_COMMENT" +
+      "\020\224\002\022\014\n\007ABORT_P\020\225\002\022\013\n\006ABSENT\020\226\002\022\017\n\nABSOLU" +
+      "TE_P\020\227\002\022\013\n\006ACCESS\020\230\002\022\013\n\006ACTION\020\231\002\022\n\n\005ADD" +
+      "_P\020\232\002\022\n\n\005ADMIN\020\233\002\022\n\n\005AFTER\020\234\002\022\016\n\tAGGREGA" +
+      "TE\020\235\002\022\010\n\003ALL\020\236\002\022\t\n\004ALSO\020\237\002\022\n\n\005ALTER\020\240\002\022\013" +
+      "\n\006ALWAYS\020\241\002\022\014\n\007ANALYSE\020\242\002\022\014\n\007ANALYZE\020\243\002\022" +
+      "\010\n\003AND\020\244\002\022\010\n\003ANY\020\245\002\022\n\n\005ARRAY\020\246\002\022\007\n\002AS\020\247\002" +
+      "\022\010\n\003ASC\020\250\002\022\017\n\nASENSITIVE\020\251\002\022\016\n\tASSERTION" +
+      "\020\252\002\022\017\n\nASSIGNMENT\020\253\002\022\017\n\nASYMMETRIC\020\254\002\022\013\n" +
+      "\006ATOMIC\020\255\002\022\007\n\002AT\020\256\002\022\013\n\006ATTACH\020\257\002\022\016\n\tATTR" +
+      "IBUTE\020\260\002\022\022\n\rAUTHORIZATION\020\261\002\022\r\n\010BACKWARD" +
+      "\020\262\002\022\013\n\006BEFORE\020\263\002\022\014\n\007BEGIN_P\020\264\002\022\014\n\007BETWEE" +
+      "N\020\265\002\022\013\n\006BIGINT\020\266\002\022\013\n\006BINARY\020\267\002\022\010\n\003BIT\020\270\002" +
+      "\022\016\n\tBOOLEAN_P\020\271\002\022\t\n\004BOTH\020\272\002\022\014\n\007BREADTH\020\273" +
+      "\002\022\007\n\002BY\020\274\002\022\n\n\005CACHE\020\275\002\022\t\n\004CALL\020\276\002\022\013\n\006CAL" +
+      "LED\020\277\002\022\014\n\007CASCADE\020\300\002\022\r\n\010CASCADED\020\301\002\022\t\n\004C" +
+      "ASE\020\302\002\022\t\n\004CAST\020\303\002\022\016\n\tCATALOG_P\020\304\002\022\n\n\005CHA" +
+      "IN\020\305\002\022\013\n\006CHAR_P\020\306\002\022\016\n\tCHARACTER\020\307\002\022\024\n\017CH" +
+      "ARACTERISTICS\020\310\002\022\n\n\005CHECK\020\311\002\022\017\n\nCHECKPOI" +
+      "NT\020\312\002\022\n\n\005CLASS\020\313\002\022\n\n\005CLOSE\020\314\002\022\014\n\007CLUSTER" +
+      "\020\315\002\022\r\n\010COALESCE\020\316\002\022\014\n\007COLLATE\020\317\002\022\016\n\tCOLL" +
+      "ATION\020\320\002\022\013\n\006COLUMN\020\321\002\022\014\n\007COLUMNS\020\322\002\022\014\n\007C" +
+      "OMMENT\020\323\002\022\r\n\010COMMENTS\020\324\002\022\013\n\006COMMIT\020\325\002\022\016\n" +
+      "\tCOMMITTED\020\326\002\022\020\n\013COMPRESSION\020\327\002\022\021\n\014CONCU" +
+      "RRENTLY\020\330\002\022\020\n\013CONDITIONAL\020\331\002\022\022\n\rCONFIGUR" +
+      "ATION\020\332\002\022\r\n\010CONFLICT\020\333\002\022\017\n\nCONNECTION\020\334\002" +
+      "\022\017\n\nCONSTRAINT\020\335\002\022\020\n\013CONSTRAINTS\020\336\002\022\016\n\tC" +
+      "ONTENT_P\020\337\002\022\017\n\nCONTINUE_P\020\340\002\022\021\n\014CONVERSI" +
+      "ON_P\020\341\002\022\t\n\004COPY\020\342\002\022\t\n\004COST\020\343\002\022\013\n\006CREATE\020" +
+      "\344\002\022\n\n\005CROSS\020\345\002\022\010\n\003CSV\020\346\002\022\t\n\004CUBE\020\347\002\022\016\n\tC" +
+      "URRENT_P\020\350\002\022\024\n\017CURRENT_CATALOG\020\351\002\022\021\n\014CUR" +
+      "RENT_DATE\020\352\002\022\021\n\014CURRENT_ROLE\020\353\002\022\023\n\016CURRE" +
+      "NT_SCHEMA\020\354\002\022\021\n\014CURRENT_TIME\020\355\002\022\026\n\021CURRE" +
+      "NT_TIMESTAMP\020\356\002\022\021\n\014CURRENT_USER\020\357\002\022\013\n\006CU",
+      "RSOR\020\360\002\022\n\n\005CYCLE\020\361\002\022\013\n\006DATA_P\020\362\002\022\r\n\010DATA" +
+      "BASE\020\363\002\022\n\n\005DAY_P\020\364\002\022\017\n\nDEALLOCATE\020\365\002\022\010\n\003" +
+      "DEC\020\366\002\022\016\n\tDECIMAL_P\020\367\002\022\014\n\007DECLARE\020\370\002\022\014\n\007" +
+      "DEFAULT\020\371\002\022\r\n\010DEFAULTS\020\372\002\022\017\n\nDEFERRABLE\020" +
+      "\373\002\022\r\n\010DEFERRED\020\374\002\022\014\n\007DEFINER\020\375\002\022\r\n\010DELET" +
+      "E_P\020\376\002\022\016\n\tDELIMITER\020\377\002\022\017\n\nDELIMITERS\020\200\003\022" +
+      "\014\n\007DEPENDS\020\201\003\022\n\n\005DEPTH\020\202\003\022\t\n\004DESC\020\203\003\022\013\n\006" +
+      "DETACH\020\204\003\022\017\n\nDICTIONARY\020\205\003\022\016\n\tDISABLE_P\020" +
+      "\206\003\022\014\n\007DISCARD\020\207\003\022\r\n\010DISTINCT\020\210\003\022\007\n\002DO\020\211\003" +
+      "\022\017\n\nDOCUMENT_P\020\212\003\022\r\n\010DOMAIN_P\020\213\003\022\r\n\010DOUB" +
+      "LE_P\020\214\003\022\t\n\004DROP\020\215\003\022\t\n\004EACH\020\216\003\022\t\n\004ELSE\020\217\003" +
+      "\022\014\n\007EMPTY_P\020\220\003\022\r\n\010ENABLE_P\020\221\003\022\r\n\010ENCODIN" +
+      "G\020\222\003\022\016\n\tENCRYPTED\020\223\003\022\n\n\005END_P\020\224\003\022\r\n\010ENFO" +
+      "RCED\020\225\003\022\013\n\006ENUM_P\020\226\003\022\014\n\007ERROR_P\020\227\003\022\013\n\006ES" +
+      "CAPE\020\230\003\022\n\n\005EVENT\020\231\003\022\013\n\006EXCEPT\020\232\003\022\014\n\007EXCL" +
+      "UDE\020\233\003\022\016\n\tEXCLUDING\020\234\003\022\016\n\tEXCLUSIVE\020\235\003\022\014" +
+      "\n\007EXECUTE\020\236\003\022\013\n\006EXISTS\020\237\003\022\014\n\007EXPLAIN\020\240\003\022" +
+      "\017\n\nEXPRESSION\020\241\003\022\016\n\tEXTENSION\020\242\003\022\r\n\010EXTE" +
+      "RNAL\020\243\003\022\014\n\007EXTRACT\020\244\003\022\014\n\007FALSE_P\020\245\003\022\013\n\006F" +
+      "AMILY\020\246\003\022\n\n\005FETCH\020\247\003\022\013\n\006FILTER\020\250\003\022\r\n\010FIN" +
+      "ALIZE\020\251\003\022\014\n\007FIRST_P\020\252\003\022\014\n\007FLOAT_P\020\253\003\022\016\n\t" +
+      "FOLLOWING\020\254\003\022\010\n\003FOR\020\255\003\022\n\n\005FORCE\020\256\003\022\014\n\007FO" +
+      "REIGN\020\257\003\022\013\n\006FORMAT\020\260\003\022\014\n\007FORWARD\020\261\003\022\013\n\006F" +
+      "REEZE\020\262\003\022\t\n\004FROM\020\263\003\022\t\n\004FULL\020\264\003\022\r\n\010FUNCTI" +
+      "ON\020\265\003\022\016\n\tFUNCTIONS\020\266\003\022\016\n\tGENERATED\020\267\003\022\013\n" +
+      "\006GLOBAL\020\270\003\022\n\n\005GRANT\020\271\003\022\014\n\007GRANTED\020\272\003\022\r\n\010" +
+      "GREATEST\020\273\003\022\014\n\007GROUP_P\020\274\003\022\r\n\010GROUPING\020\275\003" +
+      "\022\013\n\006GROUPS\020\276\003\022\014\n\007HANDLER\020\277\003\022\013\n\006HAVING\020\300\003" +
+      "\022\r\n\010HEADER_P\020\301\003\022\t\n\004HOLD\020\302\003\022\013\n\006HOUR_P\020\303\003\022" +
+      "\017\n\nIDENTITY_P\020\304\003\022\t\n\004IF_P\020\305\003\022\n\n\005ILIKE\020\306\003\022" +
+      "\016\n\tIMMEDIATE\020\307\003\022\016\n\tIMMUTABLE\020\310\003\022\017\n\nIMPLI" +
+      "CIT_P\020\311\003\022\r\n\010IMPORT_P\020\312\003\022\t\n\004IN_P\020\313\003\022\014\n\007IN" +
+      "CLUDE\020\314\003\022\016\n\tINCLUDING\020\315\003\022\016\n\tINCREMENT\020\316\003" +
+      "\022\013\n\006INDENT\020\317\003\022\n\n\005INDEX\020\320\003\022\014\n\007INDEXES\020\321\003\022" +
+      "\014\n\007INHERIT\020\322\003\022\r\n\010INHERITS\020\323\003\022\016\n\tINITIALL" +
+      "Y\020\324\003\022\r\n\010INLINE_P\020\325\003\022\014\n\007INNER_P\020\326\003\022\n\n\005INO" +
+      "UT\020\327\003\022\014\n\007INPUT_P\020\330\003\022\020\n\013INSENSITIVE\020\331\003\022\013\n" +
+      "\006INSERT\020\332\003\022\014\n\007INSTEAD\020\333\003\022\n\n\005INT_P\020\334\003\022\014\n\007" +
+      "INTEGER\020\335\003\022\016\n\tINTERSECT\020\336\003\022\r\n\010INTERVAL\020\337" +
+      "\003\022\t\n\004INTO\020\340\003\022\014\n\007INVOKER\020\341\003\022\007\n\002IS\020\342\003\022\013\n\006I" +
+      "SNULL\020\343\003\022\016\n\tISOLATION\020\344\003\022\t\n\004JOIN\020\345\003\022\t\n\004J" +
+      "SON\020\346\003\022\017\n\nJSON_ARRAY\020\347\003\022\022\n\rJSON_ARRAYAGG" +
+      "\020\350\003\022\020\n\013JSON_EXISTS\020\351\003\022\020\n\013JSON_OBJECT\020\352\003\022" +
+      "\023\n\016JSON_OBJECTAGG\020\353\003\022\017\n\nJSON_QUERY\020\354\003\022\020\n" +
+      "\013JSON_SCALAR\020\355\003\022\023\n\016JSON_SERIALIZE\020\356\003\022\017\n\n" +
+      "JSON_TABLE\020\357\003\022\017\n\nJSON_VALUE\020\360\003\022\t\n\004KEEP\020\361" +
+      "\003\022\010\n\003KEY\020\362\003\022\t\n\004KEYS\020\363\003\022\n\n\005LABEL\020\364\003\022\r\n\010LA" +
+      "NGUAGE\020\365\003\022\014\n\007LARGE_P\020\366\003\022\013\n\006LAST_P\020\367\003\022\016\n\t" +
+      "LATERAL_P\020\370\003\022\014\n\007LEADING\020\371\003\022\016\n\tLEAKPROOF\020" +
+      "\372\003\022\n\n\005LEAST\020\373\003\022\t\n\004LEFT\020\374\003\022\n\n\005LEVEL\020\375\003\022\t\n" +
+      "\004LIKE\020\376\003\022\n\n\005LIMIT\020\377\003\022\013\n\006LISTEN\020\200\004\022\t\n\004LOA" +
+      "D\020\201\004\022\n\n\005LOCAL\020\202\004\022\016\n\tLOCALTIME\020\203\004\022\023\n\016LOCA" +
+      "LTIMESTAMP\020\204\004\022\r\n\010LOCATION\020\205\004\022\013\n\006LOCK_P\020\206" +
+      "\004\022\013\n\006LOCKED\020\207\004\022\013\n\006LOGGED\020\210\004\022\014\n\007MAPPING\020\211" +
+      "\004\022\n\n\005MATCH\020\212\004\022\014\n\007MATCHED\020\213\004\022\021\n\014MATERIALI" +
+      "ZED\020\214\004\022\r\n\010MAXVALUE\020\215\004\022\n\n\005MERGE\020\216\004\022\021\n\014MER" +
+      "GE_ACTION\020\217\004\022\013\n\006METHOD\020\220\004\022\r\n\010MINUTE_P\020\221\004" +
+      "\022\r\n\010MINVALUE\020\222\004\022\t\n\004MODE\020\223\004\022\014\n\007MONTH_P\020\224\004" +
+      "\022\t\n\004MOVE\020\225\004\022\013\n\006NAME_P\020\226\004\022\n\n\005NAMES\020\227\004\022\r\n\010" +
+      "NATIONAL\020\230\004\022\014\n\007NATURAL\020\231\004\022\n\n\005NCHAR\020\232\004\022\013\n" +
+      "\006NESTED\020\233\004\022\010\n\003NEW\020\234\004\022\t\n\004NEXT\020\235\004\022\010\n\003NFC\020\236" +
+      "\004\022\010\n\003NFD\020\237\004\022\t\n\004NFKC\020\240\004\022\t\n\004NFKD\020\241\004\022\007\n\002NO\020" +
+      "\242\004\022\t\n\004NONE\020\243\004\022\016\n\tNORMALIZE\020\244\004\022\017\n\nNORMALI" +
+      "ZED\020\245\004\022\010\n\003NOT\020\246\004\022\014\n\007NOTHING\020\247\004\022\013\n\006NOTIFY" +
+      "\020\250\004\022\014\n\007NOTNULL\020\251\004\022\013\n\006NOWAIT\020\252\004\022\013\n\006NULL_P" +
+      "\020\253\004\022\013\n\006NULLIF\020\254\004\022\014\n\007NULLS_P\020\255\004\022\014\n\007NUMERI" +
+      "C\020\256\004\022\r\n\010OBJECT_P\020\257\004\022\016\n\tOBJECTS_P\020\260\004\022\007\n\002O" +
+      "F\020\261\004\022\010\n\003OFF\020\262\004\022\013\n\006OFFSET\020\263\004\022\t\n\004OIDS\020\264\004\022\010" +
+      "\n\003OLD\020\265\004\022\t\n\004OMIT\020\266\004\022\007\n\002ON\020\267\004\022\t\n\004ONLY\020\270\004\022" +
+      "\r\n\010OPERATOR\020\271\004\022\013\n\006OPTION\020\272\004\022\014\n\007OPTIONS\020\273" +
+      "\004\022\007\n\002OR\020\274\004\022\n\n\005ORDER\020\275\004\022\017\n\nORDINALITY\020\276\004\022" +
+      "\013\n\006OTHERS\020\277\004\022\n\n\005OUT_P\020\300\004\022\014\n\007OUTER_P\020\301\004\022\t" +
+      "\n\004OVER\020\302\004\022\r\n\010OVERLAPS\020\303\004\022\014\n\007OVERLAY\020\304\004\022\017" +
+      "\n\nOVERRIDING\020\305\004\022\n\n\005OWNED\020\306\004\022\n\n\005OWNER\020\307\004\022" +
+      "\r\n\010PARALLEL\020\310\004\022\016\n\tPARAMETER\020\311\004\022\013\n\006PARSER" +
+      "\020\312\004\022\014\n\007PARTIAL\020\313\004\022\016\n\tPARTITION\020\314\004\022\014\n\007PAS" +
+      "SING\020\315\004\022\r\n\010PASSWORD\020\316\004\022\t\n\004PATH\020\317\004\022\013\n\006PER" +
+      "IOD\020\320\004\022\014\n\007PLACING\020\321\004\022\t\n\004PLAN\020\322\004\022\n\n\005PLANS" +
+      "\020\323\004\022\013\n\006POLICY\020\324\004\022\r\n\010POSITION\020\325\004\022\016\n\tPRECE" +
+      "DING\020\326\004\022\016\n\tPRECISION\020\327\004\022\r\n\010PRESERVE\020\330\004\022\014" +
+      "\n\007PREPARE\020\331\004\022\r\n\010PREPARED\020\332\004\022\014\n\007PRIMARY\020\333" +
+      "\004\022\n\n\005PRIOR\020\334\004\022\017\n\nPRIVILEGES\020\335\004\022\017\n\nPROCED" +
+      "URAL\020\336\004\022\016\n\tPROCEDURE\020\337\004\022\017\n\nPROCEDURES\020\340\004" +
+      "\022\014\n\007PROGRAM\020\341\004\022\020\n\013PUBLICATION\020\342\004\022\n\n\005QUOT" +
+      "E\020\343\004\022\013\n\006QUOTES\020\344\004\022\n\n\005RANGE\020\345\004\022\t\n\004READ\020\346\004" +
+      "\022\t\n\004REAL\020\347\004\022\r\n\010REASSIGN\020\350\004\022\016\n\tRECURSIVE\020" +
+      "\351\004\022\n\n\005REF_P\020\352\004\022\017\n\nREFERENCES\020\353\004\022\020\n\013REFER" +
+      "ENCING\020\354\004\022\014\n\007REFRESH\020\355\004\022\014\n\007REINDEX\020\356\004\022\017\n" +
+      "\nRELATIVE_P\020\357\004\022\014\n\007RELEASE\020\360\004\022\013\n\006RENAME\020\361" +
+      "\004\022\017\n\nREPEATABLE\020\362\004\022\014\n\007REPLACE\020\363\004\022\014\n\007REPL" +
+      "ICA\020\364\004\022\n\n\005RESET\020\365\004\022\014\n\007RESTART\020\366\004\022\r\n\010REST" +
+      "RICT\020\367\004\022\013\n\006RETURN\020\370\004\022\016\n\tRETURNING\020\371\004\022\014\n\007" +
+      "RETURNS\020\372\004\022\013\n\006REVOKE\020\373\004\022\n\n\005RIGHT\020\374\004\022\t\n\004R" +
+      "OLE\020\375\004\022\r\n\010ROLLBACK\020\376\004\022\013\n\006ROLLUP\020\377\004\022\014\n\007RO" +
+      "UTINE\020\200\005\022\r\n\010ROUTINES\020\201\005\022\010\n\003ROW\020\202\005\022\t\n\004ROW" +
+      "S\020\203\005\022\t\n\004RULE\020\204\005\022\016\n\tSAVEPOINT\020\205\005\022\013\n\006SCALA" +
+      "R\020\206\005\022\013\n\006SCHEMA\020\207\005\022\014\n\007SCHEMAS\020\210\005\022\013\n\006SCROL" +
+      "L\020\211\005\022\013\n\006SEARCH\020\212\005\022\r\n\010SECOND_P\020\213\005\022\r\n\010SECU" +
+      "RITY\020\214\005\022\013\n\006SELECT\020\215\005\022\r\n\010SEQUENCE\020\216\005\022\016\n\tS" +
+      "EQUENCES\020\217\005\022\021\n\014SERIALIZABLE\020\220\005\022\013\n\006SERVER" +
+      "\020\221\005\022\014\n\007SESSION\020\222\005\022\021\n\014SESSION_USER\020\223\005\022\010\n\003" +
+      "SET\020\224\005\022\t\n\004SETS\020\225\005\022\n\n\005SETOF\020\226\005\022\n\n\005SHARE\020\227" +
+      "\005\022\t\n\004SHOW\020\230\005\022\014\n\007SIMILAR\020\231\005\022\013\n\006SIMPLE\020\232\005\022" +
+      "\t\n\004SKIP\020\233\005\022\r\n\010SMALLINT\020\234\005\022\r\n\010SNAPSHOT\020\235\005" +
+      "\022\t\n\004SOME\020\236\005\022\013\n\006SOURCE\020\237\005\022\n\n\005SQL_P\020\240\005\022\013\n\006" +
+      "STABLE\020\241\005\022\021\n\014STANDALONE_P\020\242\005\022\n\n\005START\020\243\005" +
+      "\022\016\n\tSTATEMENT\020\244\005\022\017\n\nSTATISTICS\020\245\005\022\n\n\005STD" +
+      "IN\020\246\005\022\013\n\006STDOUT\020\247\005\022\014\n\007STORAGE\020\250\005\022\013\n\006STOR" +
+      "ED\020\251\005\022\r\n\010STRICT_P\020\252\005\022\r\n\010STRING_P\020\253\005\022\014\n\007S" +
+      "TRIP_P\020\254\005\022\021\n\014SUBSCRIPTION\020\255\005\022\016\n\tSUBSTRIN" +
+      "G\020\256\005\022\014\n\007SUPPORT\020\257\005\022\016\n\tSYMMETRIC\020\260\005\022\n\n\005SY" +
+      "SID\020\261\005\022\r\n\010SYSTEM_P\020\262\005\022\020\n\013SYSTEM_USER\020\263\005\022" +
+      "\n\n\005TABLE\020\264\005\022\013\n\006TABLES\020\265\005\022\020\n\013TABLESAMPLE\020" +
+      "\266\005\022\017\n\nTABLESPACE\020\267\005\022\013\n\006TARGET\020\270\005\022\t\n\004TEMP" +
+      "\020\271\005\022\r\n\010TEMPLATE\020\272\005\022\016\n\tTEMPORARY\020\273\005\022\013\n\006TE" +
+      "XT_P\020\274\005\022\t\n\004THEN\020\275\005\022\t\n\004TIES\020\276\005\022\t\n\004TIME\020\277\005" +
+      "\022\016\n\tTIMESTAMP\020\300\005\022\007\n\002TO\020\301\005\022\r\n\010TRAILING\020\302\005" +
+      "\022\020\n\013TRANSACTION\020\303\005\022\016\n\tTRANSFORM\020\304\005\022\n\n\005TR" +
+      "EAT\020\305\005\022\014\n\007TRIGGER\020\306\005\022\t\n\004TRIM\020\307\005\022\013\n\006TRUE_" +
+      "P\020\310\005\022\r\n\010TRUNCATE\020\311\005\022\014\n\007TRUSTED\020\312\005\022\013\n\006TYP" +
+      "E_P\020\313\005\022\014\n\007TYPES_P\020\314\005\022\014\n\007UESCAPE\020\315\005\022\016\n\tUN" +
+      "BOUNDED\020\316\005\022\022\n\rUNCONDITIONAL\020\317\005\022\020\n\013UNCOMM" +
+      "ITTED\020\320\005\022\020\n\013UNENCRYPTED\020\321\005\022\n\n\005UNION\020\322\005\022\013" +
+      "\n\006UNIQUE\020\323\005\022\014\n\007UNKNOWN\020\324\005\022\r\n\010UNLISTEN\020\325\005" +
+      "\022\r\n\010UNLOGGED\020\326\005\022\n\n\005UNTIL\020\327\005\022\013\n\006UPDATE\020\330\005" +
+      "\022\t\n\004USER\020\331\005\022\n\n\005USING\020\332\005\022\013\n\006VACUUM\020\333\005\022\n\n\005" +
+      "VALID\020\334\005\022\r\n\010VALIDATE\020\335\005\022\016\n\tVALIDATOR\020\336\005\022" +
+      "\014\n\007VALUE_P\020\337\005\022\013\n\006VALUES\020\340\005\022\014\n\007VARCHAR\020\341\005" +
+      "\022\r\n\010VARIADIC\020\342\005\022\014\n\007VARYING\020\343\005\022\014\n\007VERBOSE" +
+      "\020\344\005\022\016\n\tVERSION_P\020\345\005\022\t\n\004VIEW\020\346\005\022\n\n\005VIEWS\020" +
+      "\347\005\022\014\n\007VIRTUAL\020\350\005\022\r\n\010VOLATILE\020\351\005\022\t\n\004WHEN\020" +
+      "\352\005\022\n\n\005WHERE\020\353\005\022\021\n\014WHITESPACE_P\020\354\005\022\013\n\006WIN" +
+      "DOW\020\355\005\022\t\n\004WITH\020\356\005\022\013\n\006WITHIN\020\357\005\022\014\n\007WITHOU" +
+      "T\020\360\005\022\t\n\004WORK\020\361\005\022\014\n\007WRAPPER\020\362\005\022\n\n\005WRITE\020\363" +
+      "\005\022\n\n\005XML_P\020\364\005\022\022\n\rXMLATTRIBUTES\020\365\005\022\016\n\tXML" +
+      "CONCAT\020\366\005\022\017\n\nXMLELEMENT\020\367\005\022\016\n\tXMLEXISTS\020" +
+      "\370\005\022\016\n\tXMLFOREST\020\371\005\022\022\n\rXMLNAMESPACES\020\372\005\022\r" +
+      "\n\010XMLPARSE\020\373\005\022\n\n\005XMLPI\020\374\005\022\014\n\007XMLROOT\020\375\005\022" +
+      "\021\n\014XMLSERIALIZE\020\376\005\022\r\n\010XMLTABLE\020\377\005\022\013\n\006YEA" +
+      "R_P\020\200\006\022\n\n\005YES_P\020\201\006\022\t\n\004ZONE\020\202\006\022\016\n\tFORMAT_" +
+      "LA\020\203\006\022\013\n\006NOT_LA\020\204\006\022\r\n\010NULLS_LA\020\205\006\022\014\n\007WIT" +
+      "H_LA\020\206\006\022\017\n\nWITHOUT_LA\020\207\006\022\023\n\016MODE_TYPE_NA" +
+      "ME\020\210\006\022\026\n\021MODE_PLPGSQL_EXPR\020\211\006\022\031\n\024MODE_PL" +
+      "PGSQL_ASSIGN1\020\212\006\022\031\n\024MODE_PLPGSQL_ASSIGN2" +
+      "\020\213\006\022\031\n\024MODE_PLPGSQL_ASSIGN3\020\214\006\022\013\n\006UMINUS" +
+      "\020\215\006B,\n(com.premiumminds.sonar.postgres.p" +
+      "rotobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3923,7 +3993,7 @@ public final class PgQuery {
     internal_static_pg_query_Node_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_Node_descriptor,
-        new java.lang.String[] { "Alias", "RangeVar", "TableFunc", "IntoClause", "Var", "Param", "Aggref", "GroupingFunc", "WindowFunc", "WindowFuncRunCondition", "MergeSupportFunc", "SubscriptingRef", "FuncExpr", "NamedArgExpr", "OpExpr", "DistinctExpr", "NullIfExpr", "ScalarArrayOpExpr", "BoolExpr", "SubLink", "SubPlan", "AlternativeSubPlan", "FieldSelect", "FieldStore", "RelabelType", "CoerceViaIo", "ArrayCoerceExpr", "ConvertRowtypeExpr", "CollateExpr", "CaseExpr", "CaseWhen", "CaseTestExpr", "ArrayExpr", "RowExpr", "RowCompareExpr", "CoalesceExpr", "MinMaxExpr", "SqlvalueFunction", "XmlExpr", "JsonFormat", "JsonReturning", "JsonValueExpr", "JsonConstructorExpr", "JsonIsPredicate", "JsonBehavior", "JsonExpr", "JsonTablePath", "JsonTablePathScan", "JsonTableSiblingJoin", "NullTest", "BooleanTest", "MergeAction", "CoerceToDomain", "CoerceToDomainValue", "SetToDefault", "CurrentOfExpr", "NextValueExpr", "InferenceElem", "TargetEntry", "RangeTblRef", "JoinExpr", "FromExpr", "OnConflictExpr", "Query", "TypeName", "ColumnRef", "ParamRef", "AExpr", "TypeCast", "CollateClause", "RoleSpec", "FuncCall", "AStar", "AIndices", "AIndirection", "AArrayExpr", "ResTarget", "MultiAssignRef", "SortBy", "WindowDef", "RangeSubselect", "RangeFunction", "RangeTableFunc", "RangeTableFuncCol", "RangeTableSample", "ColumnDef", "TableLikeClause", "IndexElem", "DefElem", "LockingClause", "XmlSerialize", "PartitionElem", "PartitionSpec", "PartitionBoundSpec", "PartitionRangeDatum", "SinglePartitionSpec", "PartitionCmd", "RangeTblEntry", "RtepermissionInfo", "RangeTblFunction", "TableSampleClause", "WithCheckOption", "SortGroupClause", "GroupingSet", "WindowClause", "RowMarkClause", "WithClause", "InferClause", "OnConflictClause", "CtesearchClause", "CtecycleClause", "CommonTableExpr", "MergeWhenClause", "TriggerTransition", "JsonOutput", "JsonArgument", "JsonFuncExpr", "JsonTablePathSpec", "JsonTable", "JsonTableColumn", "JsonKeyValue", "JsonParseExpr", "JsonScalarExpr", "JsonSerializeExpr", "JsonObjectConstructor", "JsonArrayConstructor", "JsonArrayQueryConstructor", "JsonAggConstructor", "JsonObjectAgg", "JsonArrayAgg", "RawStmt", "InsertStmt", "DeleteStmt", "UpdateStmt", "MergeStmt", "SelectStmt", "SetOperationStmt", "ReturnStmt", "PlassignStmt", "CreateSchemaStmt", "AlterTableStmt", "ReplicaIdentityStmt", "AlterTableCmd", "AlterCollationStmt", "AlterDomainStmt", "GrantStmt", "ObjectWithArgs", "AccessPriv", "GrantRoleStmt", "AlterDefaultPrivilegesStmt", "CopyStmt", "VariableSetStmt", "VariableShowStmt", "CreateStmt", "Constraint", "CreateTableSpaceStmt", "DropTableSpaceStmt", "AlterTableSpaceOptionsStmt", "AlterTableMoveAllStmt", "CreateExtensionStmt", "AlterExtensionStmt", "AlterExtensionContentsStmt", "CreateFdwStmt", "AlterFdwStmt", "CreateForeignServerStmt", "AlterForeignServerStmt", "CreateForeignTableStmt", "CreateUserMappingStmt", "AlterUserMappingStmt", "DropUserMappingStmt", "ImportForeignSchemaStmt", "CreatePolicyStmt", "AlterPolicyStmt", "CreateAmStmt", "CreateTrigStmt", "CreateEventTrigStmt", "AlterEventTrigStmt", "CreatePlangStmt", "CreateRoleStmt", "AlterRoleStmt", "AlterRoleSetStmt", "DropRoleStmt", "CreateSeqStmt", "AlterSeqStmt", "DefineStmt", "CreateDomainStmt", "CreateOpClassStmt", "CreateOpClassItem", "CreateOpFamilyStmt", "AlterOpFamilyStmt", "DropStmt", "TruncateStmt", "CommentStmt", "SecLabelStmt", "DeclareCursorStmt", "ClosePortalStmt", "FetchStmt", "IndexStmt", "CreateStatsStmt", "StatsElem", "AlterStatsStmt", "CreateFunctionStmt", "FunctionParameter", "AlterFunctionStmt", "DoStmt", "InlineCodeBlock", "CallStmt", "CallContext", "RenameStmt", "AlterObjectDependsStmt", "AlterObjectSchemaStmt", "AlterOwnerStmt", "AlterOperatorStmt", "AlterTypeStmt", "RuleStmt", "NotifyStmt", "ListenStmt", "UnlistenStmt", "TransactionStmt", "CompositeTypeStmt", "CreateEnumStmt", "CreateRangeStmt", "AlterEnumStmt", "ViewStmt", "LoadStmt", "CreatedbStmt", "AlterDatabaseStmt", "AlterDatabaseRefreshCollStmt", "AlterDatabaseSetStmt", "DropdbStmt", "AlterSystemStmt", "ClusterStmt", "VacuumStmt", "VacuumRelation", "ExplainStmt", "CreateTableAsStmt", "RefreshMatViewStmt", "CheckPointStmt", "DiscardStmt", "LockStmt", "ConstraintsSetStmt", "ReindexStmt", "CreateConversionStmt", "CreateCastStmt", "CreateTransformStmt", "PrepareStmt", "ExecuteStmt", "DeallocateStmt", "DropOwnedStmt", "ReassignOwnedStmt", "AlterTsdictionaryStmt", "AlterTsconfigurationStmt", "PublicationTable", "PublicationObjSpec", "CreatePublicationStmt", "AlterPublicationStmt", "CreateSubscriptionStmt", "AlterSubscriptionStmt", "DropSubscriptionStmt", "Integer", "Float", "Boolean", "String", "BitString", "List", "IntList", "OidList", "AConst", "Node", });
+        new java.lang.String[] { "Alias", "RangeVar", "TableFunc", "IntoClause", "Var", "Param", "Aggref", "GroupingFunc", "WindowFunc", "WindowFuncRunCondition", "MergeSupportFunc", "SubscriptingRef", "FuncExpr", "NamedArgExpr", "OpExpr", "DistinctExpr", "NullIfExpr", "ScalarArrayOpExpr", "BoolExpr", "SubLink", "SubPlan", "AlternativeSubPlan", "FieldSelect", "FieldStore", "RelabelType", "CoerceViaIo", "ArrayCoerceExpr", "ConvertRowtypeExpr", "CollateExpr", "CaseExpr", "CaseWhen", "CaseTestExpr", "ArrayExpr", "RowExpr", "RowCompareExpr", "CoalesceExpr", "MinMaxExpr", "SqlvalueFunction", "XmlExpr", "JsonFormat", "JsonReturning", "JsonValueExpr", "JsonConstructorExpr", "JsonIsPredicate", "JsonBehavior", "JsonExpr", "JsonTablePath", "JsonTablePathScan", "JsonTableSiblingJoin", "NullTest", "BooleanTest", "MergeAction", "CoerceToDomain", "CoerceToDomainValue", "SetToDefault", "CurrentOfExpr", "NextValueExpr", "InferenceElem", "ReturningExpr", "TargetEntry", "RangeTblRef", "JoinExpr", "FromExpr", "OnConflictExpr", "Query", "TypeName", "ColumnRef", "ParamRef", "AExpr", "TypeCast", "CollateClause", "RoleSpec", "FuncCall", "AStar", "AIndices", "AIndirection", "AArrayExpr", "ResTarget", "MultiAssignRef", "SortBy", "WindowDef", "RangeSubselect", "RangeFunction", "RangeTableFunc", "RangeTableFuncCol", "RangeTableSample", "ColumnDef", "TableLikeClause", "IndexElem", "DefElem", "LockingClause", "XmlSerialize", "PartitionElem", "PartitionSpec", "PartitionBoundSpec", "PartitionRangeDatum", "PartitionCmd", "RangeTblEntry", "RtepermissionInfo", "RangeTblFunction", "TableSampleClause", "WithCheckOption", "SortGroupClause", "GroupingSet", "WindowClause", "RowMarkClause", "WithClause", "InferClause", "OnConflictClause", "CtesearchClause", "CtecycleClause", "CommonTableExpr", "MergeWhenClause", "ReturningOption", "ReturningClause", "TriggerTransition", "JsonOutput", "JsonArgument", "JsonFuncExpr", "JsonTablePathSpec", "JsonTable", "JsonTableColumn", "JsonKeyValue", "JsonParseExpr", "JsonScalarExpr", "JsonSerializeExpr", "JsonObjectConstructor", "JsonArrayConstructor", "JsonArrayQueryConstructor", "JsonAggConstructor", "JsonObjectAgg", "JsonArrayAgg", "RawStmt", "InsertStmt", "DeleteStmt", "UpdateStmt", "MergeStmt", "SelectStmt", "SetOperationStmt", "ReturnStmt", "PlassignStmt", "CreateSchemaStmt", "AlterTableStmt", "AlterTableCmd", "AtalterConstraint", "ReplicaIdentityStmt", "AlterCollationStmt", "AlterDomainStmt", "GrantStmt", "ObjectWithArgs", "AccessPriv", "GrantRoleStmt", "AlterDefaultPrivilegesStmt", "CopyStmt", "VariableSetStmt", "VariableShowStmt", "CreateStmt", "Constraint", "CreateTableSpaceStmt", "DropTableSpaceStmt", "AlterTableSpaceOptionsStmt", "AlterTableMoveAllStmt", "CreateExtensionStmt", "AlterExtensionStmt", "AlterExtensionContentsStmt", "CreateFdwStmt", "AlterFdwStmt", "CreateForeignServerStmt", "AlterForeignServerStmt", "CreateForeignTableStmt", "CreateUserMappingStmt", "AlterUserMappingStmt", "DropUserMappingStmt", "ImportForeignSchemaStmt", "CreatePolicyStmt", "AlterPolicyStmt", "CreateAmStmt", "CreateTrigStmt", "CreateEventTrigStmt", "AlterEventTrigStmt", "CreatePlangStmt", "CreateRoleStmt", "AlterRoleStmt", "AlterRoleSetStmt", "DropRoleStmt", "CreateSeqStmt", "AlterSeqStmt", "DefineStmt", "CreateDomainStmt", "CreateOpClassStmt", "CreateOpClassItem", "CreateOpFamilyStmt", "AlterOpFamilyStmt", "DropStmt", "TruncateStmt", "CommentStmt", "SecLabelStmt", "DeclareCursorStmt", "ClosePortalStmt", "FetchStmt", "IndexStmt", "CreateStatsStmt", "StatsElem", "AlterStatsStmt", "CreateFunctionStmt", "FunctionParameter", "AlterFunctionStmt", "DoStmt", "InlineCodeBlock", "CallStmt", "CallContext", "RenameStmt", "AlterObjectDependsStmt", "AlterObjectSchemaStmt", "AlterOwnerStmt", "AlterOperatorStmt", "AlterTypeStmt", "RuleStmt", "NotifyStmt", "ListenStmt", "UnlistenStmt", "TransactionStmt", "CompositeTypeStmt", "CreateEnumStmt", "CreateRangeStmt", "AlterEnumStmt", "ViewStmt", "LoadStmt", "CreatedbStmt", "AlterDatabaseStmt", "AlterDatabaseRefreshCollStmt", "AlterDatabaseSetStmt", "DropdbStmt", "AlterSystemStmt", "ClusterStmt", "VacuumStmt", "VacuumRelation", "ExplainStmt", "CreateTableAsStmt", "RefreshMatViewStmt", "CheckPointStmt", "DiscardStmt", "LockStmt", "ConstraintsSetStmt", "ReindexStmt", "CreateConversionStmt", "CreateCastStmt", "CreateTransformStmt", "PrepareStmt", "ExecuteStmt", "DeallocateStmt", "DropOwnedStmt", "ReassignOwnedStmt", "AlterTsdictionaryStmt", "AlterTsconfigurationStmt", "PublicationTable", "PublicationObjSpec", "CreatePublicationStmt", "AlterPublicationStmt", "CreateSubscriptionStmt", "AlterSubscriptionStmt", "DropSubscriptionStmt", "Integer", "Float", "Boolean", "String", "BitString", "List", "IntList", "OidList", "AConst", "Node", });
     internal_static_pg_query_Integer_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_pg_query_Integer_fieldAccessorTable = new
@@ -4007,7 +4077,7 @@ public final class PgQuery {
     internal_static_pg_query_Var_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_Var_descriptor,
-        new java.lang.String[] { "Xpr", "Varno", "Varattno", "Vartype", "Vartypmod", "Varcollid", "Varnullingrels", "Varlevelsup", "Location", });
+        new java.lang.String[] { "Xpr", "Varno", "Varattno", "Vartype", "Vartypmod", "Varcollid", "Varnullingrels", "Varlevelsup", "Varreturningtype", "Location", });
     internal_static_pg_query_Param_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_pg_query_Param_fieldAccessorTable = new
@@ -4175,7 +4245,7 @@ public final class PgQuery {
     internal_static_pg_query_ArrayExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ArrayExpr_descriptor,
-        new java.lang.String[] { "Xpr", "ArrayTypeid", "ArrayCollid", "ElementTypeid", "Elements", "Multidims", "Location", });
+        new java.lang.String[] { "Xpr", "ArrayTypeid", "ArrayCollid", "ElementTypeid", "Elements", "Multidims", "ListStart", "ListEnd", "Location", });
     internal_static_pg_query_RowExpr_descriptor =
       getDescriptor().getMessageTypes().get(45);
     internal_static_pg_query_RowExpr_fieldAccessorTable = new
@@ -4187,7 +4257,7 @@ public final class PgQuery {
     internal_static_pg_query_RowCompareExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RowCompareExpr_descriptor,
-        new java.lang.String[] { "Xpr", "Rctype", "Opnos", "Opfamilies", "Inputcollids", "Largs", "Rargs", });
+        new java.lang.String[] { "Xpr", "Cmptype", "Opnos", "Opfamilies", "Inputcollids", "Largs", "Rargs", });
     internal_static_pg_query_CoalesceExpr_descriptor =
       getDescriptor().getMessageTypes().get(47);
     internal_static_pg_query_CoalesceExpr_fieldAccessorTable = new
@@ -4326,234 +4396,234 @@ public final class PgQuery {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_InferenceElem_descriptor,
         new java.lang.String[] { "Xpr", "Expr", "Infercollid", "Inferopclass", });
-    internal_static_pg_query_TargetEntry_descriptor =
+    internal_static_pg_query_ReturningExpr_descriptor =
       getDescriptor().getMessageTypes().get(70);
+    internal_static_pg_query_ReturningExpr_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pg_query_ReturningExpr_descriptor,
+        new java.lang.String[] { "Xpr", "Retlevelsup", "Retold", "Retexpr", });
+    internal_static_pg_query_TargetEntry_descriptor =
+      getDescriptor().getMessageTypes().get(71);
     internal_static_pg_query_TargetEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_TargetEntry_descriptor,
         new java.lang.String[] { "Xpr", "Expr", "Resno", "Resname", "Ressortgroupref", "Resorigtbl", "Resorigcol", "Resjunk", });
     internal_static_pg_query_RangeTblRef_descriptor =
-      getDescriptor().getMessageTypes().get(71);
+      getDescriptor().getMessageTypes().get(72);
     internal_static_pg_query_RangeTblRef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RangeTblRef_descriptor,
         new java.lang.String[] { "Rtindex", });
     internal_static_pg_query_JoinExpr_descriptor =
-      getDescriptor().getMessageTypes().get(72);
+      getDescriptor().getMessageTypes().get(73);
     internal_static_pg_query_JoinExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JoinExpr_descriptor,
         new java.lang.String[] { "Jointype", "IsNatural", "Larg", "Rarg", "UsingClause", "JoinUsingAlias", "Quals", "Alias", "Rtindex", });
     internal_static_pg_query_FromExpr_descriptor =
-      getDescriptor().getMessageTypes().get(73);
+      getDescriptor().getMessageTypes().get(74);
     internal_static_pg_query_FromExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_FromExpr_descriptor,
         new java.lang.String[] { "Fromlist", "Quals", });
     internal_static_pg_query_OnConflictExpr_descriptor =
-      getDescriptor().getMessageTypes().get(74);
+      getDescriptor().getMessageTypes().get(75);
     internal_static_pg_query_OnConflictExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_OnConflictExpr_descriptor,
         new java.lang.String[] { "Action", "ArbiterElems", "ArbiterWhere", "Constraint", "OnConflictSet", "OnConflictWhere", "ExclRelIndex", "ExclRelTlist", });
     internal_static_pg_query_Query_descriptor =
-      getDescriptor().getMessageTypes().get(75);
+      getDescriptor().getMessageTypes().get(76);
     internal_static_pg_query_Query_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_Query_descriptor,
-        new java.lang.String[] { "CommandType", "QuerySource", "CanSetTag", "UtilityStmt", "ResultRelation", "HasAggs", "HasWindowFuncs", "HasTargetSrfs", "HasSubLinks", "HasDistinctOn", "HasRecursive", "HasModifyingCte", "HasForUpdate", "HasRowSecurity", "IsReturn", "CteList", "Rtable", "Rteperminfos", "Jointree", "MergeActionList", "MergeTargetRelation", "MergeJoinCondition", "TargetList", "Override", "OnConflict", "ReturningList", "GroupClause", "GroupDistinct", "GroupingSets", "HavingQual", "WindowClause", "DistinctClause", "SortClause", "LimitOffset", "LimitCount", "LimitOption", "RowMarks", "SetOperations", "ConstraintDeps", "WithCheckOptions", "StmtLocation", "StmtLen", });
+        new java.lang.String[] { "CommandType", "QuerySource", "CanSetTag", "UtilityStmt", "ResultRelation", "HasAggs", "HasWindowFuncs", "HasTargetSrfs", "HasSubLinks", "HasDistinctOn", "HasRecursive", "HasModifyingCte", "HasForUpdate", "HasRowSecurity", "HasGroupRte", "IsReturn", "CteList", "Rtable", "Rteperminfos", "Jointree", "MergeActionList", "MergeTargetRelation", "MergeJoinCondition", "TargetList", "Override", "OnConflict", "ReturningOldAlias", "ReturningNewAlias", "ReturningList", "GroupClause", "GroupDistinct", "GroupingSets", "HavingQual", "WindowClause", "DistinctClause", "SortClause", "LimitOffset", "LimitCount", "LimitOption", "RowMarks", "SetOperations", "ConstraintDeps", "WithCheckOptions", "StmtLocation", "StmtLen", });
     internal_static_pg_query_TypeName_descriptor =
-      getDescriptor().getMessageTypes().get(76);
+      getDescriptor().getMessageTypes().get(77);
     internal_static_pg_query_TypeName_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_TypeName_descriptor,
         new java.lang.String[] { "Names", "TypeOid", "Setof", "PctType", "Typmods", "Typemod", "ArrayBounds", "Location", });
     internal_static_pg_query_ColumnRef_descriptor =
-      getDescriptor().getMessageTypes().get(77);
+      getDescriptor().getMessageTypes().get(78);
     internal_static_pg_query_ColumnRef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ColumnRef_descriptor,
         new java.lang.String[] { "Fields", "Location", });
     internal_static_pg_query_ParamRef_descriptor =
-      getDescriptor().getMessageTypes().get(78);
+      getDescriptor().getMessageTypes().get(79);
     internal_static_pg_query_ParamRef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ParamRef_descriptor,
         new java.lang.String[] { "Number", "Location", });
     internal_static_pg_query_A_Expr_descriptor =
-      getDescriptor().getMessageTypes().get(79);
+      getDescriptor().getMessageTypes().get(80);
     internal_static_pg_query_A_Expr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_A_Expr_descriptor,
-        new java.lang.String[] { "Kind", "Name", "Lexpr", "Rexpr", "Location", });
+        new java.lang.String[] { "Kind", "Name", "Lexpr", "Rexpr", "RexprListStart", "RexprListEnd", "Location", });
     internal_static_pg_query_TypeCast_descriptor =
-      getDescriptor().getMessageTypes().get(80);
+      getDescriptor().getMessageTypes().get(81);
     internal_static_pg_query_TypeCast_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_TypeCast_descriptor,
         new java.lang.String[] { "Arg", "TypeName", "Location", });
     internal_static_pg_query_CollateClause_descriptor =
-      getDescriptor().getMessageTypes().get(81);
+      getDescriptor().getMessageTypes().get(82);
     internal_static_pg_query_CollateClause_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CollateClause_descriptor,
         new java.lang.String[] { "Arg", "Collname", "Location", });
     internal_static_pg_query_RoleSpec_descriptor =
-      getDescriptor().getMessageTypes().get(82);
+      getDescriptor().getMessageTypes().get(83);
     internal_static_pg_query_RoleSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RoleSpec_descriptor,
         new java.lang.String[] { "Roletype", "Rolename", "Location", });
     internal_static_pg_query_FuncCall_descriptor =
-      getDescriptor().getMessageTypes().get(83);
+      getDescriptor().getMessageTypes().get(84);
     internal_static_pg_query_FuncCall_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_FuncCall_descriptor,
         new java.lang.String[] { "Funcname", "Args", "AggOrder", "AggFilter", "Over", "AggWithinGroup", "AggStar", "AggDistinct", "FuncVariadic", "Funcformat", "Location", });
     internal_static_pg_query_A_Star_descriptor =
-      getDescriptor().getMessageTypes().get(84);
+      getDescriptor().getMessageTypes().get(85);
     internal_static_pg_query_A_Star_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_A_Star_descriptor,
         new java.lang.String[] { });
     internal_static_pg_query_A_Indices_descriptor =
-      getDescriptor().getMessageTypes().get(85);
+      getDescriptor().getMessageTypes().get(86);
     internal_static_pg_query_A_Indices_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_A_Indices_descriptor,
         new java.lang.String[] { "IsSlice", "Lidx", "Uidx", });
     internal_static_pg_query_A_Indirection_descriptor =
-      getDescriptor().getMessageTypes().get(86);
+      getDescriptor().getMessageTypes().get(87);
     internal_static_pg_query_A_Indirection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_A_Indirection_descriptor,
         new java.lang.String[] { "Arg", "Indirection", });
     internal_static_pg_query_A_ArrayExpr_descriptor =
-      getDescriptor().getMessageTypes().get(87);
+      getDescriptor().getMessageTypes().get(88);
     internal_static_pg_query_A_ArrayExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_A_ArrayExpr_descriptor,
-        new java.lang.String[] { "Elements", "Location", });
+        new java.lang.String[] { "Elements", "ListStart", "ListEnd", "Location", });
     internal_static_pg_query_ResTarget_descriptor =
-      getDescriptor().getMessageTypes().get(88);
+      getDescriptor().getMessageTypes().get(89);
     internal_static_pg_query_ResTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ResTarget_descriptor,
         new java.lang.String[] { "Name", "Indirection", "Val", "Location", });
     internal_static_pg_query_MultiAssignRef_descriptor =
-      getDescriptor().getMessageTypes().get(89);
+      getDescriptor().getMessageTypes().get(90);
     internal_static_pg_query_MultiAssignRef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_MultiAssignRef_descriptor,
         new java.lang.String[] { "Source", "Colno", "Ncolumns", });
     internal_static_pg_query_SortBy_descriptor =
-      getDescriptor().getMessageTypes().get(90);
+      getDescriptor().getMessageTypes().get(91);
     internal_static_pg_query_SortBy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_SortBy_descriptor,
         new java.lang.String[] { "Node", "SortbyDir", "SortbyNulls", "UseOp", "Location", });
     internal_static_pg_query_WindowDef_descriptor =
-      getDescriptor().getMessageTypes().get(91);
+      getDescriptor().getMessageTypes().get(92);
     internal_static_pg_query_WindowDef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_WindowDef_descriptor,
         new java.lang.String[] { "Name", "Refname", "PartitionClause", "OrderClause", "FrameOptions", "StartOffset", "EndOffset", "Location", });
     internal_static_pg_query_RangeSubselect_descriptor =
-      getDescriptor().getMessageTypes().get(92);
+      getDescriptor().getMessageTypes().get(93);
     internal_static_pg_query_RangeSubselect_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RangeSubselect_descriptor,
         new java.lang.String[] { "Lateral", "Subquery", "Alias", });
     internal_static_pg_query_RangeFunction_descriptor =
-      getDescriptor().getMessageTypes().get(93);
+      getDescriptor().getMessageTypes().get(94);
     internal_static_pg_query_RangeFunction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RangeFunction_descriptor,
         new java.lang.String[] { "Lateral", "Ordinality", "IsRowsfrom", "Functions", "Alias", "Coldeflist", });
     internal_static_pg_query_RangeTableFunc_descriptor =
-      getDescriptor().getMessageTypes().get(94);
+      getDescriptor().getMessageTypes().get(95);
     internal_static_pg_query_RangeTableFunc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RangeTableFunc_descriptor,
         new java.lang.String[] { "Lateral", "Docexpr", "Rowexpr", "Namespaces", "Columns", "Alias", "Location", });
     internal_static_pg_query_RangeTableFuncCol_descriptor =
-      getDescriptor().getMessageTypes().get(95);
+      getDescriptor().getMessageTypes().get(96);
     internal_static_pg_query_RangeTableFuncCol_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RangeTableFuncCol_descriptor,
         new java.lang.String[] { "Colname", "TypeName", "ForOrdinality", "IsNotNull", "Colexpr", "Coldefexpr", "Location", });
     internal_static_pg_query_RangeTableSample_descriptor =
-      getDescriptor().getMessageTypes().get(96);
+      getDescriptor().getMessageTypes().get(97);
     internal_static_pg_query_RangeTableSample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RangeTableSample_descriptor,
         new java.lang.String[] { "Relation", "Method", "Args", "Repeatable", "Location", });
     internal_static_pg_query_ColumnDef_descriptor =
-      getDescriptor().getMessageTypes().get(97);
+      getDescriptor().getMessageTypes().get(98);
     internal_static_pg_query_ColumnDef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ColumnDef_descriptor,
         new java.lang.String[] { "Colname", "TypeName", "Compression", "Inhcount", "IsLocal", "IsNotNull", "IsFromType", "Storage", "StorageName", "RawDefault", "CookedDefault", "Identity", "IdentitySequence", "Generated", "CollClause", "CollOid", "Constraints", "Fdwoptions", "Location", });
     internal_static_pg_query_TableLikeClause_descriptor =
-      getDescriptor().getMessageTypes().get(98);
+      getDescriptor().getMessageTypes().get(99);
     internal_static_pg_query_TableLikeClause_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_TableLikeClause_descriptor,
         new java.lang.String[] { "Relation", "Options", "RelationOid", });
     internal_static_pg_query_IndexElem_descriptor =
-      getDescriptor().getMessageTypes().get(99);
+      getDescriptor().getMessageTypes().get(100);
     internal_static_pg_query_IndexElem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_IndexElem_descriptor,
         new java.lang.String[] { "Name", "Expr", "Indexcolname", "Collation", "Opclass", "Opclassopts", "Ordering", "NullsOrdering", });
     internal_static_pg_query_DefElem_descriptor =
-      getDescriptor().getMessageTypes().get(100);
+      getDescriptor().getMessageTypes().get(101);
     internal_static_pg_query_DefElem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DefElem_descriptor,
         new java.lang.String[] { "Defnamespace", "Defname", "Arg", "Defaction", "Location", });
     internal_static_pg_query_LockingClause_descriptor =
-      getDescriptor().getMessageTypes().get(101);
+      getDescriptor().getMessageTypes().get(102);
     internal_static_pg_query_LockingClause_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_LockingClause_descriptor,
         new java.lang.String[] { "LockedRels", "Strength", "WaitPolicy", });
     internal_static_pg_query_XmlSerialize_descriptor =
-      getDescriptor().getMessageTypes().get(102);
+      getDescriptor().getMessageTypes().get(103);
     internal_static_pg_query_XmlSerialize_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_XmlSerialize_descriptor,
         new java.lang.String[] { "Xmloption", "Expr", "TypeName", "Indent", "Location", });
     internal_static_pg_query_PartitionElem_descriptor =
-      getDescriptor().getMessageTypes().get(103);
+      getDescriptor().getMessageTypes().get(104);
     internal_static_pg_query_PartitionElem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_PartitionElem_descriptor,
         new java.lang.String[] { "Name", "Expr", "Collation", "Opclass", "Location", });
     internal_static_pg_query_PartitionSpec_descriptor =
-      getDescriptor().getMessageTypes().get(104);
+      getDescriptor().getMessageTypes().get(105);
     internal_static_pg_query_PartitionSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_PartitionSpec_descriptor,
         new java.lang.String[] { "Strategy", "PartParams", "Location", });
     internal_static_pg_query_PartitionBoundSpec_descriptor =
-      getDescriptor().getMessageTypes().get(105);
+      getDescriptor().getMessageTypes().get(106);
     internal_static_pg_query_PartitionBoundSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_PartitionBoundSpec_descriptor,
         new java.lang.String[] { "Strategy", "IsDefault", "Modulus", "Remainder", "Listdatums", "Lowerdatums", "Upperdatums", "Location", });
     internal_static_pg_query_PartitionRangeDatum_descriptor =
-      getDescriptor().getMessageTypes().get(106);
+      getDescriptor().getMessageTypes().get(107);
     internal_static_pg_query_PartitionRangeDatum_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_PartitionRangeDatum_descriptor,
         new java.lang.String[] { "Kind", "Value", "Location", });
-    internal_static_pg_query_SinglePartitionSpec_descriptor =
-      getDescriptor().getMessageTypes().get(107);
-    internal_static_pg_query_SinglePartitionSpec_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_pg_query_SinglePartitionSpec_descriptor,
-        new java.lang.String[] { });
     internal_static_pg_query_PartitionCmd_descriptor =
       getDescriptor().getMessageTypes().get(108);
     internal_static_pg_query_PartitionCmd_fieldAccessorTable = new
@@ -4565,7 +4635,7 @@ public final class PgQuery {
     internal_static_pg_query_RangeTblEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RangeTblEntry_descriptor,
-        new java.lang.String[] { "Alias", "Eref", "Rtekind", "Relid", "Inh", "Relkind", "Rellockmode", "Perminfoindex", "Tablesample", "Subquery", "SecurityBarrier", "Jointype", "Joinmergedcols", "Joinaliasvars", "Joinleftcols", "Joinrightcols", "JoinUsingAlias", "Functions", "Funcordinality", "Tablefunc", "ValuesLists", "Ctename", "Ctelevelsup", "SelfReference", "Coltypes", "Coltypmods", "Colcollations", "Enrname", "Enrtuples", "Lateral", "InFromCl", "SecurityQuals", });
+        new java.lang.String[] { "Alias", "Eref", "Rtekind", "Relid", "Inh", "Relkind", "Rellockmode", "Perminfoindex", "Tablesample", "Subquery", "SecurityBarrier", "Jointype", "Joinmergedcols", "Joinaliasvars", "Joinleftcols", "Joinrightcols", "JoinUsingAlias", "Functions", "Funcordinality", "Tablefunc", "ValuesLists", "Ctename", "Ctelevelsup", "SelfReference", "Coltypes", "Coltypmods", "Colcollations", "Enrname", "Enrtuples", "Groupexprs", "Lateral", "InFromCl", "SecurityQuals", });
     internal_static_pg_query_RTEPermissionInfo_descriptor =
       getDescriptor().getMessageTypes().get(110);
     internal_static_pg_query_RTEPermissionInfo_fieldAccessorTable = new
@@ -4595,7 +4665,7 @@ public final class PgQuery {
     internal_static_pg_query_SortGroupClause_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_SortGroupClause_descriptor,
-        new java.lang.String[] { "TleSortGroupRef", "Eqop", "Sortop", "NullsFirst", "Hashable", });
+        new java.lang.String[] { "TleSortGroupRef", "Eqop", "Sortop", "ReverseSort", "NullsFirst", "Hashable", });
     internal_static_pg_query_GroupingSet_descriptor =
       getDescriptor().getMessageTypes().get(115);
     internal_static_pg_query_GroupingSet_fieldAccessorTable = new
@@ -4656,890 +4726,908 @@ public final class PgQuery {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_MergeWhenClause_descriptor,
         new java.lang.String[] { "MatchKind", "CommandType", "Override", "Condition", "TargetList", "Values", });
-    internal_static_pg_query_TriggerTransition_descriptor =
+    internal_static_pg_query_ReturningOption_descriptor =
       getDescriptor().getMessageTypes().get(125);
+    internal_static_pg_query_ReturningOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pg_query_ReturningOption_descriptor,
+        new java.lang.String[] { "Option", "Value", "Location", });
+    internal_static_pg_query_ReturningClause_descriptor =
+      getDescriptor().getMessageTypes().get(126);
+    internal_static_pg_query_ReturningClause_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pg_query_ReturningClause_descriptor,
+        new java.lang.String[] { "Options", "Exprs", });
+    internal_static_pg_query_TriggerTransition_descriptor =
+      getDescriptor().getMessageTypes().get(127);
     internal_static_pg_query_TriggerTransition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_TriggerTransition_descriptor,
         new java.lang.String[] { "Name", "IsNew", "IsTable", });
     internal_static_pg_query_JsonOutput_descriptor =
-      getDescriptor().getMessageTypes().get(126);
+      getDescriptor().getMessageTypes().get(128);
     internal_static_pg_query_JsonOutput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonOutput_descriptor,
         new java.lang.String[] { "TypeName", "Returning", });
     internal_static_pg_query_JsonArgument_descriptor =
-      getDescriptor().getMessageTypes().get(127);
+      getDescriptor().getMessageTypes().get(129);
     internal_static_pg_query_JsonArgument_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonArgument_descriptor,
         new java.lang.String[] { "Val", "Name", });
     internal_static_pg_query_JsonFuncExpr_descriptor =
-      getDescriptor().getMessageTypes().get(128);
+      getDescriptor().getMessageTypes().get(130);
     internal_static_pg_query_JsonFuncExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonFuncExpr_descriptor,
         new java.lang.String[] { "Op", "ColumnName", "ContextItem", "Pathspec", "Passing", "Output", "OnEmpty", "OnError", "Wrapper", "Quotes", "Location", });
     internal_static_pg_query_JsonTablePathSpec_descriptor =
-      getDescriptor().getMessageTypes().get(129);
+      getDescriptor().getMessageTypes().get(131);
     internal_static_pg_query_JsonTablePathSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonTablePathSpec_descriptor,
         new java.lang.String[] { "String", "Name", "NameLocation", "Location", });
     internal_static_pg_query_JsonTable_descriptor =
-      getDescriptor().getMessageTypes().get(130);
+      getDescriptor().getMessageTypes().get(132);
     internal_static_pg_query_JsonTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonTable_descriptor,
         new java.lang.String[] { "ContextItem", "Pathspec", "Passing", "Columns", "OnError", "Alias", "Lateral", "Location", });
     internal_static_pg_query_JsonTableColumn_descriptor =
-      getDescriptor().getMessageTypes().get(131);
+      getDescriptor().getMessageTypes().get(133);
     internal_static_pg_query_JsonTableColumn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonTableColumn_descriptor,
         new java.lang.String[] { "Coltype", "Name", "TypeName", "Pathspec", "Format", "Wrapper", "Quotes", "Columns", "OnEmpty", "OnError", "Location", });
     internal_static_pg_query_JsonKeyValue_descriptor =
-      getDescriptor().getMessageTypes().get(132);
+      getDescriptor().getMessageTypes().get(134);
     internal_static_pg_query_JsonKeyValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonKeyValue_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_pg_query_JsonParseExpr_descriptor =
-      getDescriptor().getMessageTypes().get(133);
+      getDescriptor().getMessageTypes().get(135);
     internal_static_pg_query_JsonParseExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonParseExpr_descriptor,
         new java.lang.String[] { "Expr", "Output", "UniqueKeys", "Location", });
     internal_static_pg_query_JsonScalarExpr_descriptor =
-      getDescriptor().getMessageTypes().get(134);
+      getDescriptor().getMessageTypes().get(136);
     internal_static_pg_query_JsonScalarExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonScalarExpr_descriptor,
         new java.lang.String[] { "Expr", "Output", "Location", });
     internal_static_pg_query_JsonSerializeExpr_descriptor =
-      getDescriptor().getMessageTypes().get(135);
+      getDescriptor().getMessageTypes().get(137);
     internal_static_pg_query_JsonSerializeExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonSerializeExpr_descriptor,
         new java.lang.String[] { "Expr", "Output", "Location", });
     internal_static_pg_query_JsonObjectConstructor_descriptor =
-      getDescriptor().getMessageTypes().get(136);
+      getDescriptor().getMessageTypes().get(138);
     internal_static_pg_query_JsonObjectConstructor_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonObjectConstructor_descriptor,
         new java.lang.String[] { "Exprs", "Output", "AbsentOnNull", "Unique", "Location", });
     internal_static_pg_query_JsonArrayConstructor_descriptor =
-      getDescriptor().getMessageTypes().get(137);
+      getDescriptor().getMessageTypes().get(139);
     internal_static_pg_query_JsonArrayConstructor_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonArrayConstructor_descriptor,
         new java.lang.String[] { "Exprs", "Output", "AbsentOnNull", "Location", });
     internal_static_pg_query_JsonArrayQueryConstructor_descriptor =
-      getDescriptor().getMessageTypes().get(138);
+      getDescriptor().getMessageTypes().get(140);
     internal_static_pg_query_JsonArrayQueryConstructor_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonArrayQueryConstructor_descriptor,
         new java.lang.String[] { "Query", "Output", "Format", "AbsentOnNull", "Location", });
     internal_static_pg_query_JsonAggConstructor_descriptor =
-      getDescriptor().getMessageTypes().get(139);
+      getDescriptor().getMessageTypes().get(141);
     internal_static_pg_query_JsonAggConstructor_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonAggConstructor_descriptor,
         new java.lang.String[] { "Output", "AggFilter", "AggOrder", "Over", "Location", });
     internal_static_pg_query_JsonObjectAgg_descriptor =
-      getDescriptor().getMessageTypes().get(140);
+      getDescriptor().getMessageTypes().get(142);
     internal_static_pg_query_JsonObjectAgg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonObjectAgg_descriptor,
         new java.lang.String[] { "Constructor", "Arg", "AbsentOnNull", "Unique", });
     internal_static_pg_query_JsonArrayAgg_descriptor =
-      getDescriptor().getMessageTypes().get(141);
+      getDescriptor().getMessageTypes().get(143);
     internal_static_pg_query_JsonArrayAgg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_JsonArrayAgg_descriptor,
         new java.lang.String[] { "Constructor", "Arg", "AbsentOnNull", });
     internal_static_pg_query_RawStmt_descriptor =
-      getDescriptor().getMessageTypes().get(142);
+      getDescriptor().getMessageTypes().get(144);
     internal_static_pg_query_RawStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RawStmt_descriptor,
         new java.lang.String[] { "Stmt", "StmtLocation", "StmtLen", });
     internal_static_pg_query_InsertStmt_descriptor =
-      getDescriptor().getMessageTypes().get(143);
+      getDescriptor().getMessageTypes().get(145);
     internal_static_pg_query_InsertStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_InsertStmt_descriptor,
-        new java.lang.String[] { "Relation", "Cols", "SelectStmt", "OnConflictClause", "ReturningList", "WithClause", "Override", });
+        new java.lang.String[] { "Relation", "Cols", "SelectStmt", "OnConflictClause", "ReturningClause", "WithClause", "Override", });
     internal_static_pg_query_DeleteStmt_descriptor =
-      getDescriptor().getMessageTypes().get(144);
+      getDescriptor().getMessageTypes().get(146);
     internal_static_pg_query_DeleteStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DeleteStmt_descriptor,
-        new java.lang.String[] { "Relation", "UsingClause", "WhereClause", "ReturningList", "WithClause", });
+        new java.lang.String[] { "Relation", "UsingClause", "WhereClause", "ReturningClause", "WithClause", });
     internal_static_pg_query_UpdateStmt_descriptor =
-      getDescriptor().getMessageTypes().get(145);
+      getDescriptor().getMessageTypes().get(147);
     internal_static_pg_query_UpdateStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_UpdateStmt_descriptor,
-        new java.lang.String[] { "Relation", "TargetList", "WhereClause", "FromClause", "ReturningList", "WithClause", });
+        new java.lang.String[] { "Relation", "TargetList", "WhereClause", "FromClause", "ReturningClause", "WithClause", });
     internal_static_pg_query_MergeStmt_descriptor =
-      getDescriptor().getMessageTypes().get(146);
+      getDescriptor().getMessageTypes().get(148);
     internal_static_pg_query_MergeStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_MergeStmt_descriptor,
-        new java.lang.String[] { "Relation", "SourceRelation", "JoinCondition", "MergeWhenClauses", "ReturningList", "WithClause", });
+        new java.lang.String[] { "Relation", "SourceRelation", "JoinCondition", "MergeWhenClauses", "ReturningClause", "WithClause", });
     internal_static_pg_query_SelectStmt_descriptor =
-      getDescriptor().getMessageTypes().get(147);
+      getDescriptor().getMessageTypes().get(149);
     internal_static_pg_query_SelectStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_SelectStmt_descriptor,
         new java.lang.String[] { "DistinctClause", "IntoClause", "TargetList", "FromClause", "WhereClause", "GroupClause", "GroupDistinct", "HavingClause", "WindowClause", "ValuesLists", "SortClause", "LimitOffset", "LimitCount", "LimitOption", "LockingClause", "WithClause", "Op", "All", "Larg", "Rarg", });
     internal_static_pg_query_SetOperationStmt_descriptor =
-      getDescriptor().getMessageTypes().get(148);
+      getDescriptor().getMessageTypes().get(150);
     internal_static_pg_query_SetOperationStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_SetOperationStmt_descriptor,
         new java.lang.String[] { "Op", "All", "Larg", "Rarg", "ColTypes", "ColTypmods", "ColCollations", "GroupClauses", });
     internal_static_pg_query_ReturnStmt_descriptor =
-      getDescriptor().getMessageTypes().get(149);
+      getDescriptor().getMessageTypes().get(151);
     internal_static_pg_query_ReturnStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ReturnStmt_descriptor,
         new java.lang.String[] { "Returnval", });
     internal_static_pg_query_PLAssignStmt_descriptor =
-      getDescriptor().getMessageTypes().get(150);
+      getDescriptor().getMessageTypes().get(152);
     internal_static_pg_query_PLAssignStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_PLAssignStmt_descriptor,
         new java.lang.String[] { "Name", "Indirection", "Nnames", "Val", "Location", });
     internal_static_pg_query_CreateSchemaStmt_descriptor =
-      getDescriptor().getMessageTypes().get(151);
+      getDescriptor().getMessageTypes().get(153);
     internal_static_pg_query_CreateSchemaStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateSchemaStmt_descriptor,
         new java.lang.String[] { "Schemaname", "Authrole", "SchemaElts", "IfNotExists", });
     internal_static_pg_query_AlterTableStmt_descriptor =
-      getDescriptor().getMessageTypes().get(152);
+      getDescriptor().getMessageTypes().get(154);
     internal_static_pg_query_AlterTableStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterTableStmt_descriptor,
         new java.lang.String[] { "Relation", "Cmds", "Objtype", "MissingOk", });
-    internal_static_pg_query_ReplicaIdentityStmt_descriptor =
-      getDescriptor().getMessageTypes().get(153);
-    internal_static_pg_query_ReplicaIdentityStmt_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_pg_query_ReplicaIdentityStmt_descriptor,
-        new java.lang.String[] { "IdentityType", "Name", });
     internal_static_pg_query_AlterTableCmd_descriptor =
-      getDescriptor().getMessageTypes().get(154);
+      getDescriptor().getMessageTypes().get(155);
     internal_static_pg_query_AlterTableCmd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterTableCmd_descriptor,
         new java.lang.String[] { "Subtype", "Name", "Num", "Newowner", "Def", "Behavior", "MissingOk", "Recurse", });
+    internal_static_pg_query_ATAlterConstraint_descriptor =
+      getDescriptor().getMessageTypes().get(156);
+    internal_static_pg_query_ATAlterConstraint_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pg_query_ATAlterConstraint_descriptor,
+        new java.lang.String[] { "Conname", "AlterEnforceability", "IsEnforced", "AlterDeferrability", "Deferrable", "Initdeferred", "AlterInheritability", "Noinherit", });
+    internal_static_pg_query_ReplicaIdentityStmt_descriptor =
+      getDescriptor().getMessageTypes().get(157);
+    internal_static_pg_query_ReplicaIdentityStmt_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pg_query_ReplicaIdentityStmt_descriptor,
+        new java.lang.String[] { "IdentityType", "Name", });
     internal_static_pg_query_AlterCollationStmt_descriptor =
-      getDescriptor().getMessageTypes().get(155);
+      getDescriptor().getMessageTypes().get(158);
     internal_static_pg_query_AlterCollationStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterCollationStmt_descriptor,
         new java.lang.String[] { "Collname", });
     internal_static_pg_query_AlterDomainStmt_descriptor =
-      getDescriptor().getMessageTypes().get(156);
+      getDescriptor().getMessageTypes().get(159);
     internal_static_pg_query_AlterDomainStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterDomainStmt_descriptor,
         new java.lang.String[] { "Subtype", "TypeName", "Name", "Def", "Behavior", "MissingOk", });
     internal_static_pg_query_GrantStmt_descriptor =
-      getDescriptor().getMessageTypes().get(157);
+      getDescriptor().getMessageTypes().get(160);
     internal_static_pg_query_GrantStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_GrantStmt_descriptor,
         new java.lang.String[] { "IsGrant", "Targtype", "Objtype", "Objects", "Privileges", "Grantees", "GrantOption", "Grantor", "Behavior", });
     internal_static_pg_query_ObjectWithArgs_descriptor =
-      getDescriptor().getMessageTypes().get(158);
+      getDescriptor().getMessageTypes().get(161);
     internal_static_pg_query_ObjectWithArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ObjectWithArgs_descriptor,
         new java.lang.String[] { "Objname", "Objargs", "Objfuncargs", "ArgsUnspecified", });
     internal_static_pg_query_AccessPriv_descriptor =
-      getDescriptor().getMessageTypes().get(159);
+      getDescriptor().getMessageTypes().get(162);
     internal_static_pg_query_AccessPriv_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AccessPriv_descriptor,
         new java.lang.String[] { "PrivName", "Cols", });
     internal_static_pg_query_GrantRoleStmt_descriptor =
-      getDescriptor().getMessageTypes().get(160);
+      getDescriptor().getMessageTypes().get(163);
     internal_static_pg_query_GrantRoleStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_GrantRoleStmt_descriptor,
         new java.lang.String[] { "GrantedRoles", "GranteeRoles", "IsGrant", "Opt", "Grantor", "Behavior", });
     internal_static_pg_query_AlterDefaultPrivilegesStmt_descriptor =
-      getDescriptor().getMessageTypes().get(161);
+      getDescriptor().getMessageTypes().get(164);
     internal_static_pg_query_AlterDefaultPrivilegesStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterDefaultPrivilegesStmt_descriptor,
         new java.lang.String[] { "Options", "Action", });
     internal_static_pg_query_CopyStmt_descriptor =
-      getDescriptor().getMessageTypes().get(162);
+      getDescriptor().getMessageTypes().get(165);
     internal_static_pg_query_CopyStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CopyStmt_descriptor,
         new java.lang.String[] { "Relation", "Query", "Attlist", "IsFrom", "IsProgram", "Filename", "Options", "WhereClause", });
     internal_static_pg_query_VariableSetStmt_descriptor =
-      getDescriptor().getMessageTypes().get(163);
+      getDescriptor().getMessageTypes().get(166);
     internal_static_pg_query_VariableSetStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_VariableSetStmt_descriptor,
-        new java.lang.String[] { "Kind", "Name", "Args", "IsLocal", });
+        new java.lang.String[] { "Kind", "Name", "Args", "JumbleArgs", "IsLocal", "Location", });
     internal_static_pg_query_VariableShowStmt_descriptor =
-      getDescriptor().getMessageTypes().get(164);
+      getDescriptor().getMessageTypes().get(167);
     internal_static_pg_query_VariableShowStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_VariableShowStmt_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_pg_query_CreateStmt_descriptor =
-      getDescriptor().getMessageTypes().get(165);
+      getDescriptor().getMessageTypes().get(168);
     internal_static_pg_query_CreateStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateStmt_descriptor,
-        new java.lang.String[] { "Relation", "TableElts", "InhRelations", "Partbound", "Partspec", "OfTypename", "Constraints", "Options", "Oncommit", "Tablespacename", "AccessMethod", "IfNotExists", });
+        new java.lang.String[] { "Relation", "TableElts", "InhRelations", "Partbound", "Partspec", "OfTypename", "Constraints", "Nnconstraints", "Options", "Oncommit", "Tablespacename", "AccessMethod", "IfNotExists", });
     internal_static_pg_query_Constraint_descriptor =
-      getDescriptor().getMessageTypes().get(166);
+      getDescriptor().getMessageTypes().get(169);
     internal_static_pg_query_Constraint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_Constraint_descriptor,
-        new java.lang.String[] { "Contype", "Conname", "Deferrable", "Initdeferred", "SkipValidation", "InitiallyValid", "IsNoInherit", "RawExpr", "CookedExpr", "GeneratedWhen", "Inhcount", "NullsNotDistinct", "Keys", "Including", "Exclusions", "Options", "Indexname", "Indexspace", "ResetDefaultTblspc", "AccessMethod", "WhereClause", "Pktable", "FkAttrs", "PkAttrs", "FkMatchtype", "FkUpdAction", "FkDelAction", "FkDelSetCols", "OldConpfeqop", "OldPktableOid", "Location", });
+        new java.lang.String[] { "Contype", "Conname", "Deferrable", "Initdeferred", "IsEnforced", "SkipValidation", "InitiallyValid", "IsNoInherit", "RawExpr", "CookedExpr", "GeneratedWhen", "GeneratedKind", "NullsNotDistinct", "Keys", "WithoutOverlaps", "Including", "Exclusions", "Options", "Indexname", "Indexspace", "ResetDefaultTblspc", "AccessMethod", "WhereClause", "Pktable", "FkAttrs", "PkAttrs", "FkWithPeriod", "PkWithPeriod", "FkMatchtype", "FkUpdAction", "FkDelAction", "FkDelSetCols", "OldConpfeqop", "OldPktableOid", "Location", });
     internal_static_pg_query_CreateTableSpaceStmt_descriptor =
-      getDescriptor().getMessageTypes().get(167);
+      getDescriptor().getMessageTypes().get(170);
     internal_static_pg_query_CreateTableSpaceStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateTableSpaceStmt_descriptor,
         new java.lang.String[] { "Tablespacename", "Owner", "Location", "Options", });
     internal_static_pg_query_DropTableSpaceStmt_descriptor =
-      getDescriptor().getMessageTypes().get(168);
+      getDescriptor().getMessageTypes().get(171);
     internal_static_pg_query_DropTableSpaceStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DropTableSpaceStmt_descriptor,
         new java.lang.String[] { "Tablespacename", "MissingOk", });
     internal_static_pg_query_AlterTableSpaceOptionsStmt_descriptor =
-      getDescriptor().getMessageTypes().get(169);
+      getDescriptor().getMessageTypes().get(172);
     internal_static_pg_query_AlterTableSpaceOptionsStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterTableSpaceOptionsStmt_descriptor,
         new java.lang.String[] { "Tablespacename", "Options", "IsReset", });
     internal_static_pg_query_AlterTableMoveAllStmt_descriptor =
-      getDescriptor().getMessageTypes().get(170);
+      getDescriptor().getMessageTypes().get(173);
     internal_static_pg_query_AlterTableMoveAllStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterTableMoveAllStmt_descriptor,
         new java.lang.String[] { "OrigTablespacename", "Objtype", "Roles", "NewTablespacename", "Nowait", });
     internal_static_pg_query_CreateExtensionStmt_descriptor =
-      getDescriptor().getMessageTypes().get(171);
+      getDescriptor().getMessageTypes().get(174);
     internal_static_pg_query_CreateExtensionStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateExtensionStmt_descriptor,
         new java.lang.String[] { "Extname", "IfNotExists", "Options", });
     internal_static_pg_query_AlterExtensionStmt_descriptor =
-      getDescriptor().getMessageTypes().get(172);
+      getDescriptor().getMessageTypes().get(175);
     internal_static_pg_query_AlterExtensionStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterExtensionStmt_descriptor,
         new java.lang.String[] { "Extname", "Options", });
     internal_static_pg_query_AlterExtensionContentsStmt_descriptor =
-      getDescriptor().getMessageTypes().get(173);
+      getDescriptor().getMessageTypes().get(176);
     internal_static_pg_query_AlterExtensionContentsStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterExtensionContentsStmt_descriptor,
         new java.lang.String[] { "Extname", "Action", "Objtype", "Object", });
     internal_static_pg_query_CreateFdwStmt_descriptor =
-      getDescriptor().getMessageTypes().get(174);
+      getDescriptor().getMessageTypes().get(177);
     internal_static_pg_query_CreateFdwStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateFdwStmt_descriptor,
         new java.lang.String[] { "Fdwname", "FuncOptions", "Options", });
     internal_static_pg_query_AlterFdwStmt_descriptor =
-      getDescriptor().getMessageTypes().get(175);
+      getDescriptor().getMessageTypes().get(178);
     internal_static_pg_query_AlterFdwStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterFdwStmt_descriptor,
         new java.lang.String[] { "Fdwname", "FuncOptions", "Options", });
     internal_static_pg_query_CreateForeignServerStmt_descriptor =
-      getDescriptor().getMessageTypes().get(176);
+      getDescriptor().getMessageTypes().get(179);
     internal_static_pg_query_CreateForeignServerStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateForeignServerStmt_descriptor,
         new java.lang.String[] { "Servername", "Servertype", "Version", "Fdwname", "IfNotExists", "Options", });
     internal_static_pg_query_AlterForeignServerStmt_descriptor =
-      getDescriptor().getMessageTypes().get(177);
+      getDescriptor().getMessageTypes().get(180);
     internal_static_pg_query_AlterForeignServerStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterForeignServerStmt_descriptor,
         new java.lang.String[] { "Servername", "Version", "Options", "HasVersion", });
     internal_static_pg_query_CreateForeignTableStmt_descriptor =
-      getDescriptor().getMessageTypes().get(178);
+      getDescriptor().getMessageTypes().get(181);
     internal_static_pg_query_CreateForeignTableStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateForeignTableStmt_descriptor,
         new java.lang.String[] { "BaseStmt", "Servername", "Options", });
     internal_static_pg_query_CreateUserMappingStmt_descriptor =
-      getDescriptor().getMessageTypes().get(179);
+      getDescriptor().getMessageTypes().get(182);
     internal_static_pg_query_CreateUserMappingStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateUserMappingStmt_descriptor,
         new java.lang.String[] { "User", "Servername", "IfNotExists", "Options", });
     internal_static_pg_query_AlterUserMappingStmt_descriptor =
-      getDescriptor().getMessageTypes().get(180);
+      getDescriptor().getMessageTypes().get(183);
     internal_static_pg_query_AlterUserMappingStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterUserMappingStmt_descriptor,
         new java.lang.String[] { "User", "Servername", "Options", });
     internal_static_pg_query_DropUserMappingStmt_descriptor =
-      getDescriptor().getMessageTypes().get(181);
+      getDescriptor().getMessageTypes().get(184);
     internal_static_pg_query_DropUserMappingStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DropUserMappingStmt_descriptor,
         new java.lang.String[] { "User", "Servername", "MissingOk", });
     internal_static_pg_query_ImportForeignSchemaStmt_descriptor =
-      getDescriptor().getMessageTypes().get(182);
+      getDescriptor().getMessageTypes().get(185);
     internal_static_pg_query_ImportForeignSchemaStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ImportForeignSchemaStmt_descriptor,
         new java.lang.String[] { "ServerName", "RemoteSchema", "LocalSchema", "ListType", "TableList", "Options", });
     internal_static_pg_query_CreatePolicyStmt_descriptor =
-      getDescriptor().getMessageTypes().get(183);
+      getDescriptor().getMessageTypes().get(186);
     internal_static_pg_query_CreatePolicyStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreatePolicyStmt_descriptor,
         new java.lang.String[] { "PolicyName", "Table", "CmdName", "Permissive", "Roles", "Qual", "WithCheck", });
     internal_static_pg_query_AlterPolicyStmt_descriptor =
-      getDescriptor().getMessageTypes().get(184);
+      getDescriptor().getMessageTypes().get(187);
     internal_static_pg_query_AlterPolicyStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterPolicyStmt_descriptor,
         new java.lang.String[] { "PolicyName", "Table", "Roles", "Qual", "WithCheck", });
     internal_static_pg_query_CreateAmStmt_descriptor =
-      getDescriptor().getMessageTypes().get(185);
+      getDescriptor().getMessageTypes().get(188);
     internal_static_pg_query_CreateAmStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateAmStmt_descriptor,
         new java.lang.String[] { "Amname", "HandlerName", "Amtype", });
     internal_static_pg_query_CreateTrigStmt_descriptor =
-      getDescriptor().getMessageTypes().get(186);
+      getDescriptor().getMessageTypes().get(189);
     internal_static_pg_query_CreateTrigStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateTrigStmt_descriptor,
         new java.lang.String[] { "Replace", "Isconstraint", "Trigname", "Relation", "Funcname", "Args", "Row", "Timing", "Events", "Columns", "WhenClause", "TransitionRels", "Deferrable", "Initdeferred", "Constrrel", });
     internal_static_pg_query_CreateEventTrigStmt_descriptor =
-      getDescriptor().getMessageTypes().get(187);
+      getDescriptor().getMessageTypes().get(190);
     internal_static_pg_query_CreateEventTrigStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateEventTrigStmt_descriptor,
         new java.lang.String[] { "Trigname", "Eventname", "Whenclause", "Funcname", });
     internal_static_pg_query_AlterEventTrigStmt_descriptor =
-      getDescriptor().getMessageTypes().get(188);
+      getDescriptor().getMessageTypes().get(191);
     internal_static_pg_query_AlterEventTrigStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterEventTrigStmt_descriptor,
         new java.lang.String[] { "Trigname", "Tgenabled", });
     internal_static_pg_query_CreatePLangStmt_descriptor =
-      getDescriptor().getMessageTypes().get(189);
+      getDescriptor().getMessageTypes().get(192);
     internal_static_pg_query_CreatePLangStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreatePLangStmt_descriptor,
         new java.lang.String[] { "Replace", "Plname", "Plhandler", "Plinline", "Plvalidator", "Pltrusted", });
     internal_static_pg_query_CreateRoleStmt_descriptor =
-      getDescriptor().getMessageTypes().get(190);
+      getDescriptor().getMessageTypes().get(193);
     internal_static_pg_query_CreateRoleStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateRoleStmt_descriptor,
         new java.lang.String[] { "StmtType", "Role", "Options", });
     internal_static_pg_query_AlterRoleStmt_descriptor =
-      getDescriptor().getMessageTypes().get(191);
+      getDescriptor().getMessageTypes().get(194);
     internal_static_pg_query_AlterRoleStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterRoleStmt_descriptor,
         new java.lang.String[] { "Role", "Options", "Action", });
     internal_static_pg_query_AlterRoleSetStmt_descriptor =
-      getDescriptor().getMessageTypes().get(192);
+      getDescriptor().getMessageTypes().get(195);
     internal_static_pg_query_AlterRoleSetStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterRoleSetStmt_descriptor,
         new java.lang.String[] { "Role", "Database", "Setstmt", });
     internal_static_pg_query_DropRoleStmt_descriptor =
-      getDescriptor().getMessageTypes().get(193);
+      getDescriptor().getMessageTypes().get(196);
     internal_static_pg_query_DropRoleStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DropRoleStmt_descriptor,
         new java.lang.String[] { "Roles", "MissingOk", });
     internal_static_pg_query_CreateSeqStmt_descriptor =
-      getDescriptor().getMessageTypes().get(194);
+      getDescriptor().getMessageTypes().get(197);
     internal_static_pg_query_CreateSeqStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateSeqStmt_descriptor,
         new java.lang.String[] { "Sequence", "Options", "OwnerId", "ForIdentity", "IfNotExists", });
     internal_static_pg_query_AlterSeqStmt_descriptor =
-      getDescriptor().getMessageTypes().get(195);
+      getDescriptor().getMessageTypes().get(198);
     internal_static_pg_query_AlterSeqStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterSeqStmt_descriptor,
         new java.lang.String[] { "Sequence", "Options", "ForIdentity", "MissingOk", });
     internal_static_pg_query_DefineStmt_descriptor =
-      getDescriptor().getMessageTypes().get(196);
+      getDescriptor().getMessageTypes().get(199);
     internal_static_pg_query_DefineStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DefineStmt_descriptor,
         new java.lang.String[] { "Kind", "Oldstyle", "Defnames", "Args", "Definition", "IfNotExists", "Replace", });
     internal_static_pg_query_CreateDomainStmt_descriptor =
-      getDescriptor().getMessageTypes().get(197);
+      getDescriptor().getMessageTypes().get(200);
     internal_static_pg_query_CreateDomainStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateDomainStmt_descriptor,
         new java.lang.String[] { "Domainname", "TypeName", "CollClause", "Constraints", });
     internal_static_pg_query_CreateOpClassStmt_descriptor =
-      getDescriptor().getMessageTypes().get(198);
+      getDescriptor().getMessageTypes().get(201);
     internal_static_pg_query_CreateOpClassStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateOpClassStmt_descriptor,
         new java.lang.String[] { "Opclassname", "Opfamilyname", "Amname", "Datatype", "Items", "IsDefault", });
     internal_static_pg_query_CreateOpClassItem_descriptor =
-      getDescriptor().getMessageTypes().get(199);
+      getDescriptor().getMessageTypes().get(202);
     internal_static_pg_query_CreateOpClassItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateOpClassItem_descriptor,
         new java.lang.String[] { "Itemtype", "Name", "Number", "OrderFamily", "ClassArgs", "Storedtype", });
     internal_static_pg_query_CreateOpFamilyStmt_descriptor =
-      getDescriptor().getMessageTypes().get(200);
+      getDescriptor().getMessageTypes().get(203);
     internal_static_pg_query_CreateOpFamilyStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateOpFamilyStmt_descriptor,
         new java.lang.String[] { "Opfamilyname", "Amname", });
     internal_static_pg_query_AlterOpFamilyStmt_descriptor =
-      getDescriptor().getMessageTypes().get(201);
+      getDescriptor().getMessageTypes().get(204);
     internal_static_pg_query_AlterOpFamilyStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterOpFamilyStmt_descriptor,
         new java.lang.String[] { "Opfamilyname", "Amname", "IsDrop", "Items", });
     internal_static_pg_query_DropStmt_descriptor =
-      getDescriptor().getMessageTypes().get(202);
+      getDescriptor().getMessageTypes().get(205);
     internal_static_pg_query_DropStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DropStmt_descriptor,
         new java.lang.String[] { "Objects", "RemoveType", "Behavior", "MissingOk", "Concurrent", });
     internal_static_pg_query_TruncateStmt_descriptor =
-      getDescriptor().getMessageTypes().get(203);
+      getDescriptor().getMessageTypes().get(206);
     internal_static_pg_query_TruncateStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_TruncateStmt_descriptor,
         new java.lang.String[] { "Relations", "RestartSeqs", "Behavior", });
     internal_static_pg_query_CommentStmt_descriptor =
-      getDescriptor().getMessageTypes().get(204);
+      getDescriptor().getMessageTypes().get(207);
     internal_static_pg_query_CommentStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CommentStmt_descriptor,
         new java.lang.String[] { "Objtype", "Object", "Comment", });
     internal_static_pg_query_SecLabelStmt_descriptor =
-      getDescriptor().getMessageTypes().get(205);
+      getDescriptor().getMessageTypes().get(208);
     internal_static_pg_query_SecLabelStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_SecLabelStmt_descriptor,
         new java.lang.String[] { "Objtype", "Object", "Provider", "Label", });
     internal_static_pg_query_DeclareCursorStmt_descriptor =
-      getDescriptor().getMessageTypes().get(206);
+      getDescriptor().getMessageTypes().get(209);
     internal_static_pg_query_DeclareCursorStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DeclareCursorStmt_descriptor,
         new java.lang.String[] { "Portalname", "Options", "Query", });
     internal_static_pg_query_ClosePortalStmt_descriptor =
-      getDescriptor().getMessageTypes().get(207);
+      getDescriptor().getMessageTypes().get(210);
     internal_static_pg_query_ClosePortalStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ClosePortalStmt_descriptor,
         new java.lang.String[] { "Portalname", });
     internal_static_pg_query_FetchStmt_descriptor =
-      getDescriptor().getMessageTypes().get(208);
+      getDescriptor().getMessageTypes().get(211);
     internal_static_pg_query_FetchStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_FetchStmt_descriptor,
         new java.lang.String[] { "Direction", "HowMany", "Portalname", "Ismove", });
     internal_static_pg_query_IndexStmt_descriptor =
-      getDescriptor().getMessageTypes().get(209);
+      getDescriptor().getMessageTypes().get(212);
     internal_static_pg_query_IndexStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_IndexStmt_descriptor,
-        new java.lang.String[] { "Idxname", "Relation", "AccessMethod", "TableSpace", "IndexParams", "IndexIncludingParams", "Options", "WhereClause", "ExcludeOpNames", "Idxcomment", "IndexOid", "OldNumber", "OldCreateSubid", "OldFirstRelfilelocatorSubid", "Unique", "NullsNotDistinct", "Primary", "Isconstraint", "Deferrable", "Initdeferred", "Transformed", "Concurrent", "IfNotExists", "ResetDefaultTblspc", });
+        new java.lang.String[] { "Idxname", "Relation", "AccessMethod", "TableSpace", "IndexParams", "IndexIncludingParams", "Options", "WhereClause", "ExcludeOpNames", "Idxcomment", "IndexOid", "OldNumber", "OldCreateSubid", "OldFirstRelfilelocatorSubid", "Unique", "NullsNotDistinct", "Primary", "Isconstraint", "Iswithoutoverlaps", "Deferrable", "Initdeferred", "Transformed", "Concurrent", "IfNotExists", "ResetDefaultTblspc", });
     internal_static_pg_query_CreateStatsStmt_descriptor =
-      getDescriptor().getMessageTypes().get(210);
+      getDescriptor().getMessageTypes().get(213);
     internal_static_pg_query_CreateStatsStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateStatsStmt_descriptor,
         new java.lang.String[] { "Defnames", "StatTypes", "Exprs", "Relations", "Stxcomment", "Transformed", "IfNotExists", });
     internal_static_pg_query_StatsElem_descriptor =
-      getDescriptor().getMessageTypes().get(211);
+      getDescriptor().getMessageTypes().get(214);
     internal_static_pg_query_StatsElem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_StatsElem_descriptor,
         new java.lang.String[] { "Name", "Expr", });
     internal_static_pg_query_AlterStatsStmt_descriptor =
-      getDescriptor().getMessageTypes().get(212);
+      getDescriptor().getMessageTypes().get(215);
     internal_static_pg_query_AlterStatsStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterStatsStmt_descriptor,
         new java.lang.String[] { "Defnames", "Stxstattarget", "MissingOk", });
     internal_static_pg_query_CreateFunctionStmt_descriptor =
-      getDescriptor().getMessageTypes().get(213);
+      getDescriptor().getMessageTypes().get(216);
     internal_static_pg_query_CreateFunctionStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateFunctionStmt_descriptor,
         new java.lang.String[] { "IsProcedure", "Replace", "Funcname", "Parameters", "ReturnType", "Options", "SqlBody", });
     internal_static_pg_query_FunctionParameter_descriptor =
-      getDescriptor().getMessageTypes().get(214);
+      getDescriptor().getMessageTypes().get(217);
     internal_static_pg_query_FunctionParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_FunctionParameter_descriptor,
-        new java.lang.String[] { "Name", "ArgType", "Mode", "Defexpr", });
+        new java.lang.String[] { "Name", "ArgType", "Mode", "Defexpr", "Location", });
     internal_static_pg_query_AlterFunctionStmt_descriptor =
-      getDescriptor().getMessageTypes().get(215);
+      getDescriptor().getMessageTypes().get(218);
     internal_static_pg_query_AlterFunctionStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterFunctionStmt_descriptor,
         new java.lang.String[] { "Objtype", "Func", "Actions", });
     internal_static_pg_query_DoStmt_descriptor =
-      getDescriptor().getMessageTypes().get(216);
+      getDescriptor().getMessageTypes().get(219);
     internal_static_pg_query_DoStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DoStmt_descriptor,
         new java.lang.String[] { "Args", });
     internal_static_pg_query_InlineCodeBlock_descriptor =
-      getDescriptor().getMessageTypes().get(217);
+      getDescriptor().getMessageTypes().get(220);
     internal_static_pg_query_InlineCodeBlock_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_InlineCodeBlock_descriptor,
         new java.lang.String[] { "SourceText", "LangOid", "LangIsTrusted", "Atomic", });
     internal_static_pg_query_CallStmt_descriptor =
-      getDescriptor().getMessageTypes().get(218);
+      getDescriptor().getMessageTypes().get(221);
     internal_static_pg_query_CallStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CallStmt_descriptor,
         new java.lang.String[] { "Funccall", "Funcexpr", "Outargs", });
     internal_static_pg_query_CallContext_descriptor =
-      getDescriptor().getMessageTypes().get(219);
+      getDescriptor().getMessageTypes().get(222);
     internal_static_pg_query_CallContext_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CallContext_descriptor,
         new java.lang.String[] { "Atomic", });
     internal_static_pg_query_RenameStmt_descriptor =
-      getDescriptor().getMessageTypes().get(220);
+      getDescriptor().getMessageTypes().get(223);
     internal_static_pg_query_RenameStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RenameStmt_descriptor,
         new java.lang.String[] { "RenameType", "RelationType", "Relation", "Object", "Subname", "Newname", "Behavior", "MissingOk", });
     internal_static_pg_query_AlterObjectDependsStmt_descriptor =
-      getDescriptor().getMessageTypes().get(221);
+      getDescriptor().getMessageTypes().get(224);
     internal_static_pg_query_AlterObjectDependsStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterObjectDependsStmt_descriptor,
         new java.lang.String[] { "ObjectType", "Relation", "Object", "Extname", "Remove", });
     internal_static_pg_query_AlterObjectSchemaStmt_descriptor =
-      getDescriptor().getMessageTypes().get(222);
+      getDescriptor().getMessageTypes().get(225);
     internal_static_pg_query_AlterObjectSchemaStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterObjectSchemaStmt_descriptor,
         new java.lang.String[] { "ObjectType", "Relation", "Object", "Newschema", "MissingOk", });
     internal_static_pg_query_AlterOwnerStmt_descriptor =
-      getDescriptor().getMessageTypes().get(223);
+      getDescriptor().getMessageTypes().get(226);
     internal_static_pg_query_AlterOwnerStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterOwnerStmt_descriptor,
         new java.lang.String[] { "ObjectType", "Relation", "Object", "Newowner", });
     internal_static_pg_query_AlterOperatorStmt_descriptor =
-      getDescriptor().getMessageTypes().get(224);
+      getDescriptor().getMessageTypes().get(227);
     internal_static_pg_query_AlterOperatorStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterOperatorStmt_descriptor,
         new java.lang.String[] { "Opername", "Options", });
     internal_static_pg_query_AlterTypeStmt_descriptor =
-      getDescriptor().getMessageTypes().get(225);
+      getDescriptor().getMessageTypes().get(228);
     internal_static_pg_query_AlterTypeStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterTypeStmt_descriptor,
         new java.lang.String[] { "TypeName", "Options", });
     internal_static_pg_query_RuleStmt_descriptor =
-      getDescriptor().getMessageTypes().get(226);
+      getDescriptor().getMessageTypes().get(229);
     internal_static_pg_query_RuleStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RuleStmt_descriptor,
         new java.lang.String[] { "Relation", "Rulename", "WhereClause", "Event", "Instead", "Actions", "Replace", });
     internal_static_pg_query_NotifyStmt_descriptor =
-      getDescriptor().getMessageTypes().get(227);
+      getDescriptor().getMessageTypes().get(230);
     internal_static_pg_query_NotifyStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_NotifyStmt_descriptor,
         new java.lang.String[] { "Conditionname", "Payload", });
     internal_static_pg_query_ListenStmt_descriptor =
-      getDescriptor().getMessageTypes().get(228);
+      getDescriptor().getMessageTypes().get(231);
     internal_static_pg_query_ListenStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ListenStmt_descriptor,
         new java.lang.String[] { "Conditionname", });
     internal_static_pg_query_UnlistenStmt_descriptor =
-      getDescriptor().getMessageTypes().get(229);
+      getDescriptor().getMessageTypes().get(232);
     internal_static_pg_query_UnlistenStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_UnlistenStmt_descriptor,
         new java.lang.String[] { "Conditionname", });
     internal_static_pg_query_TransactionStmt_descriptor =
-      getDescriptor().getMessageTypes().get(230);
+      getDescriptor().getMessageTypes().get(233);
     internal_static_pg_query_TransactionStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_TransactionStmt_descriptor,
         new java.lang.String[] { "Kind", "Options", "SavepointName", "Gid", "Chain", "Location", });
     internal_static_pg_query_CompositeTypeStmt_descriptor =
-      getDescriptor().getMessageTypes().get(231);
+      getDescriptor().getMessageTypes().get(234);
     internal_static_pg_query_CompositeTypeStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CompositeTypeStmt_descriptor,
         new java.lang.String[] { "Typevar", "Coldeflist", });
     internal_static_pg_query_CreateEnumStmt_descriptor =
-      getDescriptor().getMessageTypes().get(232);
+      getDescriptor().getMessageTypes().get(235);
     internal_static_pg_query_CreateEnumStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateEnumStmt_descriptor,
         new java.lang.String[] { "TypeName", "Vals", });
     internal_static_pg_query_CreateRangeStmt_descriptor =
-      getDescriptor().getMessageTypes().get(233);
+      getDescriptor().getMessageTypes().get(236);
     internal_static_pg_query_CreateRangeStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateRangeStmt_descriptor,
         new java.lang.String[] { "TypeName", "Params", });
     internal_static_pg_query_AlterEnumStmt_descriptor =
-      getDescriptor().getMessageTypes().get(234);
+      getDescriptor().getMessageTypes().get(237);
     internal_static_pg_query_AlterEnumStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterEnumStmt_descriptor,
         new java.lang.String[] { "TypeName", "OldVal", "NewVal", "NewValNeighbor", "NewValIsAfter", "SkipIfNewValExists", });
     internal_static_pg_query_ViewStmt_descriptor =
-      getDescriptor().getMessageTypes().get(235);
+      getDescriptor().getMessageTypes().get(238);
     internal_static_pg_query_ViewStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ViewStmt_descriptor,
         new java.lang.String[] { "View", "Aliases", "Query", "Replace", "Options", "WithCheckOption", });
     internal_static_pg_query_LoadStmt_descriptor =
-      getDescriptor().getMessageTypes().get(236);
+      getDescriptor().getMessageTypes().get(239);
     internal_static_pg_query_LoadStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_LoadStmt_descriptor,
         new java.lang.String[] { "Filename", });
     internal_static_pg_query_CreatedbStmt_descriptor =
-      getDescriptor().getMessageTypes().get(237);
+      getDescriptor().getMessageTypes().get(240);
     internal_static_pg_query_CreatedbStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreatedbStmt_descriptor,
         new java.lang.String[] { "Dbname", "Options", });
     internal_static_pg_query_AlterDatabaseStmt_descriptor =
-      getDescriptor().getMessageTypes().get(238);
+      getDescriptor().getMessageTypes().get(241);
     internal_static_pg_query_AlterDatabaseStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterDatabaseStmt_descriptor,
         new java.lang.String[] { "Dbname", "Options", });
     internal_static_pg_query_AlterDatabaseRefreshCollStmt_descriptor =
-      getDescriptor().getMessageTypes().get(239);
+      getDescriptor().getMessageTypes().get(242);
     internal_static_pg_query_AlterDatabaseRefreshCollStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterDatabaseRefreshCollStmt_descriptor,
         new java.lang.String[] { "Dbname", });
     internal_static_pg_query_AlterDatabaseSetStmt_descriptor =
-      getDescriptor().getMessageTypes().get(240);
+      getDescriptor().getMessageTypes().get(243);
     internal_static_pg_query_AlterDatabaseSetStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterDatabaseSetStmt_descriptor,
         new java.lang.String[] { "Dbname", "Setstmt", });
     internal_static_pg_query_DropdbStmt_descriptor =
-      getDescriptor().getMessageTypes().get(241);
+      getDescriptor().getMessageTypes().get(244);
     internal_static_pg_query_DropdbStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DropdbStmt_descriptor,
         new java.lang.String[] { "Dbname", "MissingOk", "Options", });
     internal_static_pg_query_AlterSystemStmt_descriptor =
-      getDescriptor().getMessageTypes().get(242);
+      getDescriptor().getMessageTypes().get(245);
     internal_static_pg_query_AlterSystemStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterSystemStmt_descriptor,
         new java.lang.String[] { "Setstmt", });
     internal_static_pg_query_ClusterStmt_descriptor =
-      getDescriptor().getMessageTypes().get(243);
+      getDescriptor().getMessageTypes().get(246);
     internal_static_pg_query_ClusterStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ClusterStmt_descriptor,
         new java.lang.String[] { "Relation", "Indexname", "Params", });
     internal_static_pg_query_VacuumStmt_descriptor =
-      getDescriptor().getMessageTypes().get(244);
+      getDescriptor().getMessageTypes().get(247);
     internal_static_pg_query_VacuumStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_VacuumStmt_descriptor,
         new java.lang.String[] { "Options", "Rels", "IsVacuumcmd", });
     internal_static_pg_query_VacuumRelation_descriptor =
-      getDescriptor().getMessageTypes().get(245);
+      getDescriptor().getMessageTypes().get(248);
     internal_static_pg_query_VacuumRelation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_VacuumRelation_descriptor,
         new java.lang.String[] { "Relation", "Oid", "VaCols", });
     internal_static_pg_query_ExplainStmt_descriptor =
-      getDescriptor().getMessageTypes().get(246);
+      getDescriptor().getMessageTypes().get(249);
     internal_static_pg_query_ExplainStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ExplainStmt_descriptor,
         new java.lang.String[] { "Query", "Options", });
     internal_static_pg_query_CreateTableAsStmt_descriptor =
-      getDescriptor().getMessageTypes().get(247);
+      getDescriptor().getMessageTypes().get(250);
     internal_static_pg_query_CreateTableAsStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateTableAsStmt_descriptor,
         new java.lang.String[] { "Query", "Into", "Objtype", "IsSelectInto", "IfNotExists", });
     internal_static_pg_query_RefreshMatViewStmt_descriptor =
-      getDescriptor().getMessageTypes().get(248);
+      getDescriptor().getMessageTypes().get(251);
     internal_static_pg_query_RefreshMatViewStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_RefreshMatViewStmt_descriptor,
         new java.lang.String[] { "Concurrent", "SkipData", "Relation", });
     internal_static_pg_query_CheckPointStmt_descriptor =
-      getDescriptor().getMessageTypes().get(249);
+      getDescriptor().getMessageTypes().get(252);
     internal_static_pg_query_CheckPointStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CheckPointStmt_descriptor,
         new java.lang.String[] { });
     internal_static_pg_query_DiscardStmt_descriptor =
-      getDescriptor().getMessageTypes().get(250);
+      getDescriptor().getMessageTypes().get(253);
     internal_static_pg_query_DiscardStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DiscardStmt_descriptor,
         new java.lang.String[] { "Target", });
     internal_static_pg_query_LockStmt_descriptor =
-      getDescriptor().getMessageTypes().get(251);
+      getDescriptor().getMessageTypes().get(254);
     internal_static_pg_query_LockStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_LockStmt_descriptor,
         new java.lang.String[] { "Relations", "Mode", "Nowait", });
     internal_static_pg_query_ConstraintsSetStmt_descriptor =
-      getDescriptor().getMessageTypes().get(252);
+      getDescriptor().getMessageTypes().get(255);
     internal_static_pg_query_ConstraintsSetStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ConstraintsSetStmt_descriptor,
         new java.lang.String[] { "Constraints", "Deferred", });
     internal_static_pg_query_ReindexStmt_descriptor =
-      getDescriptor().getMessageTypes().get(253);
+      getDescriptor().getMessageTypes().get(256);
     internal_static_pg_query_ReindexStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ReindexStmt_descriptor,
         new java.lang.String[] { "Kind", "Relation", "Name", "Params", });
     internal_static_pg_query_CreateConversionStmt_descriptor =
-      getDescriptor().getMessageTypes().get(254);
+      getDescriptor().getMessageTypes().get(257);
     internal_static_pg_query_CreateConversionStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateConversionStmt_descriptor,
         new java.lang.String[] { "ConversionName", "ForEncodingName", "ToEncodingName", "FuncName", "Def", });
     internal_static_pg_query_CreateCastStmt_descriptor =
-      getDescriptor().getMessageTypes().get(255);
+      getDescriptor().getMessageTypes().get(258);
     internal_static_pg_query_CreateCastStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateCastStmt_descriptor,
         new java.lang.String[] { "Sourcetype", "Targettype", "Func", "Context", "Inout", });
     internal_static_pg_query_CreateTransformStmt_descriptor =
-      getDescriptor().getMessageTypes().get(256);
+      getDescriptor().getMessageTypes().get(259);
     internal_static_pg_query_CreateTransformStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateTransformStmt_descriptor,
         new java.lang.String[] { "Replace", "TypeName", "Lang", "Fromsql", "Tosql", });
     internal_static_pg_query_PrepareStmt_descriptor =
-      getDescriptor().getMessageTypes().get(257);
+      getDescriptor().getMessageTypes().get(260);
     internal_static_pg_query_PrepareStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_PrepareStmt_descriptor,
         new java.lang.String[] { "Name", "Argtypes", "Query", });
     internal_static_pg_query_ExecuteStmt_descriptor =
-      getDescriptor().getMessageTypes().get(258);
+      getDescriptor().getMessageTypes().get(261);
     internal_static_pg_query_ExecuteStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ExecuteStmt_descriptor,
         new java.lang.String[] { "Name", "Params", });
     internal_static_pg_query_DeallocateStmt_descriptor =
-      getDescriptor().getMessageTypes().get(259);
+      getDescriptor().getMessageTypes().get(262);
     internal_static_pg_query_DeallocateStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DeallocateStmt_descriptor,
         new java.lang.String[] { "Name", "Isall", "Location", });
     internal_static_pg_query_DropOwnedStmt_descriptor =
-      getDescriptor().getMessageTypes().get(260);
+      getDescriptor().getMessageTypes().get(263);
     internal_static_pg_query_DropOwnedStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DropOwnedStmt_descriptor,
         new java.lang.String[] { "Roles", "Behavior", });
     internal_static_pg_query_ReassignOwnedStmt_descriptor =
-      getDescriptor().getMessageTypes().get(261);
+      getDescriptor().getMessageTypes().get(264);
     internal_static_pg_query_ReassignOwnedStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ReassignOwnedStmt_descriptor,
         new java.lang.String[] { "Roles", "Newrole", });
     internal_static_pg_query_AlterTSDictionaryStmt_descriptor =
-      getDescriptor().getMessageTypes().get(262);
+      getDescriptor().getMessageTypes().get(265);
     internal_static_pg_query_AlterTSDictionaryStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterTSDictionaryStmt_descriptor,
         new java.lang.String[] { "Dictname", "Options", });
     internal_static_pg_query_AlterTSConfigurationStmt_descriptor =
-      getDescriptor().getMessageTypes().get(263);
+      getDescriptor().getMessageTypes().get(266);
     internal_static_pg_query_AlterTSConfigurationStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterTSConfigurationStmt_descriptor,
         new java.lang.String[] { "Kind", "Cfgname", "Tokentype", "Dicts", "Override", "Replace", "MissingOk", });
     internal_static_pg_query_PublicationTable_descriptor =
-      getDescriptor().getMessageTypes().get(264);
+      getDescriptor().getMessageTypes().get(267);
     internal_static_pg_query_PublicationTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_PublicationTable_descriptor,
         new java.lang.String[] { "Relation", "WhereClause", "Columns", });
     internal_static_pg_query_PublicationObjSpec_descriptor =
-      getDescriptor().getMessageTypes().get(265);
+      getDescriptor().getMessageTypes().get(268);
     internal_static_pg_query_PublicationObjSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_PublicationObjSpec_descriptor,
         new java.lang.String[] { "Pubobjtype", "Name", "Pubtable", "Location", });
     internal_static_pg_query_CreatePublicationStmt_descriptor =
-      getDescriptor().getMessageTypes().get(266);
+      getDescriptor().getMessageTypes().get(269);
     internal_static_pg_query_CreatePublicationStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreatePublicationStmt_descriptor,
         new java.lang.String[] { "Pubname", "Options", "Pubobjects", "ForAllTables", });
     internal_static_pg_query_AlterPublicationStmt_descriptor =
-      getDescriptor().getMessageTypes().get(267);
+      getDescriptor().getMessageTypes().get(270);
     internal_static_pg_query_AlterPublicationStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterPublicationStmt_descriptor,
         new java.lang.String[] { "Pubname", "Options", "Pubobjects", "ForAllTables", "Action", });
     internal_static_pg_query_CreateSubscriptionStmt_descriptor =
-      getDescriptor().getMessageTypes().get(268);
+      getDescriptor().getMessageTypes().get(271);
     internal_static_pg_query_CreateSubscriptionStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_CreateSubscriptionStmt_descriptor,
         new java.lang.String[] { "Subname", "Conninfo", "Publication", "Options", });
     internal_static_pg_query_AlterSubscriptionStmt_descriptor =
-      getDescriptor().getMessageTypes().get(269);
+      getDescriptor().getMessageTypes().get(272);
     internal_static_pg_query_AlterSubscriptionStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_AlterSubscriptionStmt_descriptor,
         new java.lang.String[] { "Kind", "Subname", "Conninfo", "Publication", "Options", });
     internal_static_pg_query_DropSubscriptionStmt_descriptor =
-      getDescriptor().getMessageTypes().get(270);
+      getDescriptor().getMessageTypes().get(273);
     internal_static_pg_query_DropSubscriptionStmt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_DropSubscriptionStmt_descriptor,
         new java.lang.String[] { "Subname", "MissingOk", "Behavior", });
     internal_static_pg_query_ScanToken_descriptor =
-      getDescriptor().getMessageTypes().get(271);
+      getDescriptor().getMessageTypes().get(274);
     internal_static_pg_query_ScanToken_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_ScanToken_descriptor,
         new java.lang.String[] { "Start", "End", "Token", "KeywordKind", });
     internal_static_pg_query_SummaryResult_descriptor =
-      getDescriptor().getMessageTypes().get(272);
+      getDescriptor().getMessageTypes().get(275);
     internal_static_pg_query_SummaryResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pg_query_SummaryResult_descriptor,

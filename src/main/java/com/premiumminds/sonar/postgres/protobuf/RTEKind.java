@@ -49,6 +49,10 @@ public enum RTEKind
    * <code>RTE_RESULT = 9;</code>
    */
   RTE_RESULT(9),
+  /**
+   * <code>RTE_GROUP = 10;</code>
+   */
+  RTE_GROUP(10),
   UNRECOGNIZED(-1),
   ;
 
@@ -92,6 +96,10 @@ public enum RTEKind
    * <code>RTE_RESULT = 9;</code>
    */
   public static final int RTE_RESULT_VALUE = 9;
+  /**
+   * <code>RTE_GROUP = 10;</code>
+   */
+  public static final int RTE_GROUP_VALUE = 10;
 
 
   public final int getNumber() {
@@ -128,6 +136,7 @@ public enum RTEKind
       case 7: return RTE_CTE;
       case 8: return RTE_NAMEDTUPLESTORE;
       case 9: return RTE_RESULT;
+      case 10: return RTE_GROUP;
       default: return null;
     }
   }
