@@ -17,7 +17,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private RowCompareExpr() {
-    rctype_ = 0;
+    cmptype_ = 0;
     opnos_ = java.util.Collections.emptyList();
     opfamilies_ = java.util.Collections.emptyList();
     inputcollids_ = java.util.Collections.emptyList();
@@ -72,22 +72,22 @@ private static final long serialVersionUID = 0L;
     return xpr_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : xpr_;
   }
 
-  public static final int RCTYPE_FIELD_NUMBER = 2;
-  private int rctype_ = 0;
+  public static final int CMPTYPE_FIELD_NUMBER = 2;
+  private int cmptype_ = 0;
   /**
-   * <code>.pg_query.RowCompareType rctype = 2 [json_name = "rctype"];</code>
-   * @return The enum numeric value on the wire for rctype.
+   * <code>.pg_query.CompareType cmptype = 2 [json_name = "cmptype"];</code>
+   * @return The enum numeric value on the wire for cmptype.
    */
-  @java.lang.Override public int getRctypeValue() {
-    return rctype_;
+  @java.lang.Override public int getCmptypeValue() {
+    return cmptype_;
   }
   /**
-   * <code>.pg_query.RowCompareType rctype = 2 [json_name = "rctype"];</code>
-   * @return The rctype.
+   * <code>.pg_query.CompareType cmptype = 2 [json_name = "cmptype"];</code>
+   * @return The cmptype.
    */
-  @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.RowCompareType getRctype() {
-    com.premiumminds.sonar.postgres.protobuf.RowCompareType result = com.premiumminds.sonar.postgres.protobuf.RowCompareType.forNumber(rctype_);
-    return result == null ? com.premiumminds.sonar.postgres.protobuf.RowCompareType.UNRECOGNIZED : result;
+  @java.lang.Override public com.premiumminds.sonar.postgres.protobuf.CompareType getCmptype() {
+    com.premiumminds.sonar.postgres.protobuf.CompareType result = com.premiumminds.sonar.postgres.protobuf.CompareType.forNumber(cmptype_);
+    return result == null ? com.premiumminds.sonar.postgres.protobuf.CompareType.UNRECOGNIZED : result;
   }
 
   public static final int OPNOS_FIELD_NUMBER = 3;
@@ -312,8 +312,8 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getXpr());
     }
-    if (rctype_ != com.premiumminds.sonar.postgres.protobuf.RowCompareType.ROW_COMPARE_TYPE_UNDEFINED.getNumber()) {
-      output.writeEnum(2, rctype_);
+    if (cmptype_ != com.premiumminds.sonar.postgres.protobuf.CompareType.COMPARE_TYPE_UNDEFINED.getNumber()) {
+      output.writeEnum(2, cmptype_);
     }
     for (int i = 0; i < opnos_.size(); i++) {
       output.writeMessage(3, opnos_.get(i));
@@ -343,9 +343,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getXpr());
     }
-    if (rctype_ != com.premiumminds.sonar.postgres.protobuf.RowCompareType.ROW_COMPARE_TYPE_UNDEFINED.getNumber()) {
+    if (cmptype_ != com.premiumminds.sonar.postgres.protobuf.CompareType.COMPARE_TYPE_UNDEFINED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, rctype_);
+        .computeEnumSize(2, cmptype_);
     }
     for (int i = 0; i < opnos_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -387,7 +387,7 @@ private static final long serialVersionUID = 0L;
       if (!getXpr()
           .equals(other.getXpr())) return false;
     }
-    if (rctype_ != other.rctype_) return false;
+    if (cmptype_ != other.cmptype_) return false;
     if (!getOpnosList()
         .equals(other.getOpnosList())) return false;
     if (!getOpfamiliesList()
@@ -413,8 +413,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + XPR_FIELD_NUMBER;
       hash = (53 * hash) + getXpr().hashCode();
     }
-    hash = (37 * hash) + RCTYPE_FIELD_NUMBER;
-    hash = (53 * hash) + rctype_;
+    hash = (37 * hash) + CMPTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + cmptype_;
     if (getOpnosCount() > 0) {
       hash = (37 * hash) + OPNOS_FIELD_NUMBER;
       hash = (53 * hash) + getOpnosList().hashCode();
@@ -582,7 +582,7 @@ private static final long serialVersionUID = 0L;
         xprBuilder_.dispose();
         xprBuilder_ = null;
       }
-      rctype_ = 0;
+      cmptype_ = 0;
       if (opnosBuilder_ == null) {
         opnos_ = java.util.Collections.emptyList();
       } else {
@@ -708,7 +708,7 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.rctype_ = rctype_;
+        result.cmptype_ = cmptype_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -760,8 +760,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasXpr()) {
         mergeXpr(other.getXpr());
       }
-      if (other.rctype_ != 0) {
-        setRctypeValue(other.getRctypeValue());
+      if (other.cmptype_ != 0) {
+        setCmptypeValue(other.getCmptypeValue());
       }
       if (opnosBuilder_ == null) {
         if (!other.opnos_.isEmpty()) {
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 16: {
-              rctype_ = input.readEnum();
+              cmptype_ = input.readEnum();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
@@ -1134,55 +1134,55 @@ private static final long serialVersionUID = 0L;
       return xprBuilder_;
     }
 
-    private int rctype_ = 0;
+    private int cmptype_ = 0;
     /**
-     * <code>.pg_query.RowCompareType rctype = 2 [json_name = "rctype"];</code>
-     * @return The enum numeric value on the wire for rctype.
+     * <code>.pg_query.CompareType cmptype = 2 [json_name = "cmptype"];</code>
+     * @return The enum numeric value on the wire for cmptype.
      */
-    @java.lang.Override public int getRctypeValue() {
-      return rctype_;
+    @java.lang.Override public int getCmptypeValue() {
+      return cmptype_;
     }
     /**
-     * <code>.pg_query.RowCompareType rctype = 2 [json_name = "rctype"];</code>
-     * @param value The enum numeric value on the wire for rctype to set.
+     * <code>.pg_query.CompareType cmptype = 2 [json_name = "cmptype"];</code>
+     * @param value The enum numeric value on the wire for cmptype to set.
      * @return This builder for chaining.
      */
-    public Builder setRctypeValue(int value) {
-      rctype_ = value;
+    public Builder setCmptypeValue(int value) {
+      cmptype_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>.pg_query.RowCompareType rctype = 2 [json_name = "rctype"];</code>
-     * @return The rctype.
+     * <code>.pg_query.CompareType cmptype = 2 [json_name = "cmptype"];</code>
+     * @return The cmptype.
      */
     @java.lang.Override
-    public com.premiumminds.sonar.postgres.protobuf.RowCompareType getRctype() {
-      com.premiumminds.sonar.postgres.protobuf.RowCompareType result = com.premiumminds.sonar.postgres.protobuf.RowCompareType.forNumber(rctype_);
-      return result == null ? com.premiumminds.sonar.postgres.protobuf.RowCompareType.UNRECOGNIZED : result;
+    public com.premiumminds.sonar.postgres.protobuf.CompareType getCmptype() {
+      com.premiumminds.sonar.postgres.protobuf.CompareType result = com.premiumminds.sonar.postgres.protobuf.CompareType.forNumber(cmptype_);
+      return result == null ? com.premiumminds.sonar.postgres.protobuf.CompareType.UNRECOGNIZED : result;
     }
     /**
-     * <code>.pg_query.RowCompareType rctype = 2 [json_name = "rctype"];</code>
-     * @param value The rctype to set.
+     * <code>.pg_query.CompareType cmptype = 2 [json_name = "cmptype"];</code>
+     * @param value The cmptype to set.
      * @return This builder for chaining.
      */
-    public Builder setRctype(com.premiumminds.sonar.postgres.protobuf.RowCompareType value) {
+    public Builder setCmptype(com.premiumminds.sonar.postgres.protobuf.CompareType value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000002;
-      rctype_ = value.getNumber();
+      cmptype_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.pg_query.RowCompareType rctype = 2 [json_name = "rctype"];</code>
+     * <code>.pg_query.CompareType cmptype = 2 [json_name = "cmptype"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearRctype() {
+    public Builder clearCmptype() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      rctype_ = 0;
+      cmptype_ = 0;
       onChanged();
       return this;
     }

@@ -78,28 +78,19 @@ public interface MergeStmtOrBuilder extends
       int index);
 
   /**
-   * <code>repeated .pg_query.Node returning_list = 5 [json_name = "returningList"];</code>
+   * <code>.pg_query.ReturningClause returning_clause = 5 [json_name = "returningClause"];</code>
+   * @return Whether the returningClause field is set.
    */
-  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
-      getReturningListList();
+  boolean hasReturningClause();
   /**
-   * <code>repeated .pg_query.Node returning_list = 5 [json_name = "returningList"];</code>
+   * <code>.pg_query.ReturningClause returning_clause = 5 [json_name = "returningClause"];</code>
+   * @return The returningClause.
    */
-  com.premiumminds.sonar.postgres.protobuf.Node getReturningList(int index);
+  com.premiumminds.sonar.postgres.protobuf.ReturningClause getReturningClause();
   /**
-   * <code>repeated .pg_query.Node returning_list = 5 [json_name = "returningList"];</code>
+   * <code>.pg_query.ReturningClause returning_clause = 5 [json_name = "returningClause"];</code>
    */
-  int getReturningListCount();
-  /**
-   * <code>repeated .pg_query.Node returning_list = 5 [json_name = "returningList"];</code>
-   */
-  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
-      getReturningListOrBuilderList();
-  /**
-   * <code>repeated .pg_query.Node returning_list = 5 [json_name = "returningList"];</code>
-   */
-  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getReturningListOrBuilder(
-      int index);
+  com.premiumminds.sonar.postgres.protobuf.ReturningClauseOrBuilder getReturningClauseOrBuilder();
 
   /**
    * <code>.pg_query.WithClause with_clause = 6 [json_name = "withClause"];</code>

@@ -38,17 +38,21 @@ public enum JoinType
    */
   JOIN_ANTI(6),
   /**
-   * <code>JOIN_RIGHT_ANTI = 7;</code>
+   * <code>JOIN_RIGHT_SEMI = 7;</code>
    */
-  JOIN_RIGHT_ANTI(7),
+  JOIN_RIGHT_SEMI(7),
   /**
-   * <code>JOIN_UNIQUE_OUTER = 8;</code>
+   * <code>JOIN_RIGHT_ANTI = 8;</code>
    */
-  JOIN_UNIQUE_OUTER(8),
+  JOIN_RIGHT_ANTI(8),
   /**
-   * <code>JOIN_UNIQUE_INNER = 9;</code>
+   * <code>JOIN_UNIQUE_OUTER = 9;</code>
    */
-  JOIN_UNIQUE_INNER(9),
+  JOIN_UNIQUE_OUTER(9),
+  /**
+   * <code>JOIN_UNIQUE_INNER = 10;</code>
+   */
+  JOIN_UNIQUE_INNER(10),
   UNRECOGNIZED(-1),
   ;
 
@@ -81,17 +85,21 @@ public enum JoinType
    */
   public static final int JOIN_ANTI_VALUE = 6;
   /**
-   * <code>JOIN_RIGHT_ANTI = 7;</code>
+   * <code>JOIN_RIGHT_SEMI = 7;</code>
    */
-  public static final int JOIN_RIGHT_ANTI_VALUE = 7;
+  public static final int JOIN_RIGHT_SEMI_VALUE = 7;
   /**
-   * <code>JOIN_UNIQUE_OUTER = 8;</code>
+   * <code>JOIN_RIGHT_ANTI = 8;</code>
    */
-  public static final int JOIN_UNIQUE_OUTER_VALUE = 8;
+  public static final int JOIN_RIGHT_ANTI_VALUE = 8;
   /**
-   * <code>JOIN_UNIQUE_INNER = 9;</code>
+   * <code>JOIN_UNIQUE_OUTER = 9;</code>
    */
-  public static final int JOIN_UNIQUE_INNER_VALUE = 9;
+  public static final int JOIN_UNIQUE_OUTER_VALUE = 9;
+  /**
+   * <code>JOIN_UNIQUE_INNER = 10;</code>
+   */
+  public static final int JOIN_UNIQUE_INNER_VALUE = 10;
 
 
   public final int getNumber() {
@@ -125,9 +133,10 @@ public enum JoinType
       case 4: return JOIN_RIGHT;
       case 5: return JOIN_SEMI;
       case 6: return JOIN_ANTI;
-      case 7: return JOIN_RIGHT_ANTI;
-      case 8: return JOIN_UNIQUE_OUTER;
-      case 9: return JOIN_UNIQUE_INNER;
+      case 7: return JOIN_RIGHT_SEMI;
+      case 8: return JOIN_RIGHT_ANTI;
+      case 9: return JOIN_UNIQUE_OUTER;
+      case 10: return JOIN_UNIQUE_INNER;
       default: return null;
     }
   }
@@ -158,7 +167,7 @@ public enum JoinType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(59);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(60);
   }
 
   private static final JoinType[] VALUES = values();

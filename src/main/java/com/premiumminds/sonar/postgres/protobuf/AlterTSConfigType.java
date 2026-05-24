@@ -122,7 +122,7 @@ public enum AlterTSConfigType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(31);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(32);
   }
 
   private static final AlterTSConfigType[] VALUES = values();

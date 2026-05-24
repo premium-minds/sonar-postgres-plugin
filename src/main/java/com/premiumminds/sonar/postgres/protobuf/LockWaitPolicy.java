@@ -104,7 +104,7 @@ public enum LockWaitPolicy
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(67);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(68);
   }
 
   private static final LockWaitPolicy[] VALUES = values();

@@ -24,15 +24,15 @@ public interface RowCompareExprOrBuilder extends
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getXprOrBuilder();
 
   /**
-   * <code>.pg_query.RowCompareType rctype = 2 [json_name = "rctype"];</code>
-   * @return The enum numeric value on the wire for rctype.
+   * <code>.pg_query.CompareType cmptype = 2 [json_name = "cmptype"];</code>
+   * @return The enum numeric value on the wire for cmptype.
    */
-  int getRctypeValue();
+  int getCmptypeValue();
   /**
-   * <code>.pg_query.RowCompareType rctype = 2 [json_name = "rctype"];</code>
-   * @return The rctype.
+   * <code>.pg_query.CompareType cmptype = 2 [json_name = "cmptype"];</code>
+   * @return The cmptype.
    */
-  com.premiumminds.sonar.postgres.protobuf.RowCompareType getRctype();
+  com.premiumminds.sonar.postgres.protobuf.CompareType getCmptype();
 
   /**
    * <code>repeated .pg_query.Node opnos = 3 [json_name = "opnos"];</code>

@@ -140,15 +140,37 @@ private static final long serialVersionUID = 0L;
     return args_.get(index);
   }
 
-  public static final int IS_LOCAL_FIELD_NUMBER = 4;
+  public static final int JUMBLE_ARGS_FIELD_NUMBER = 4;
+  private boolean jumbleArgs_ = false;
+  /**
+   * <code>bool jumble_args = 4 [json_name = "jumble_args"];</code>
+   * @return The jumbleArgs.
+   */
+  @java.lang.Override
+  public boolean getJumbleArgs() {
+    return jumbleArgs_;
+  }
+
+  public static final int IS_LOCAL_FIELD_NUMBER = 5;
   private boolean isLocal_ = false;
   /**
-   * <code>bool is_local = 4 [json_name = "is_local"];</code>
+   * <code>bool is_local = 5 [json_name = "is_local"];</code>
    * @return The isLocal.
    */
   @java.lang.Override
   public boolean getIsLocal() {
     return isLocal_;
+  }
+
+  public static final int LOCATION_FIELD_NUMBER = 6;
+  private int location_ = 0;
+  /**
+   * <code>int32 location = 6 [json_name = "location"];</code>
+   * @return The location.
+   */
+  @java.lang.Override
+  public int getLocation() {
+    return location_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -174,8 +196,14 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < args_.size(); i++) {
       output.writeMessage(3, args_.get(i));
     }
+    if (jumbleArgs_ != false) {
+      output.writeBool(4, jumbleArgs_);
+    }
     if (isLocal_ != false) {
-      output.writeBool(4, isLocal_);
+      output.writeBool(5, isLocal_);
+    }
+    if (location_ != 0) {
+      output.writeInt32(6, location_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -197,9 +225,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, args_.get(i));
     }
+    if (jumbleArgs_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, jumbleArgs_);
+    }
     if (isLocal_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(4, isLocal_);
+        .computeBoolSize(5, isLocal_);
+    }
+    if (location_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -221,8 +257,12 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (!getArgsList()
         .equals(other.getArgsList())) return false;
+    if (getJumbleArgs()
+        != other.getJumbleArgs()) return false;
     if (getIsLocal()
         != other.getIsLocal()) return false;
+    if (getLocation()
+        != other.getLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -242,9 +282,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ARGS_FIELD_NUMBER;
       hash = (53 * hash) + getArgsList().hashCode();
     }
+    hash = (37 * hash) + JUMBLE_ARGS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getJumbleArgs());
     hash = (37 * hash) + IS_LOCAL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsLocal());
+    hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+    hash = (53 * hash) + getLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -385,7 +430,9 @@ private static final long serialVersionUID = 0L;
         argsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
+      jumbleArgs_ = false;
       isLocal_ = false;
+      location_ = 0;
       return this;
     }
 
@@ -439,7 +486,13 @@ private static final long serialVersionUID = 0L;
         result.name_ = name_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.jumbleArgs_ = jumbleArgs_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.isLocal_ = isLocal_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.location_ = location_;
       }
     }
 
@@ -521,8 +574,14 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getJumbleArgs() != false) {
+        setJumbleArgs(other.getJumbleArgs());
+      }
       if (other.getIsLocal() != false) {
         setIsLocal(other.getIsLocal());
+      }
+      if (other.getLocation() != 0) {
+        setLocation(other.getLocation());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -574,10 +633,20 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 32: {
-              isLocal_ = input.readBool();
+              jumbleArgs_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              isLocal_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -960,9 +1029,41 @@ private static final long serialVersionUID = 0L;
       return argsBuilder_;
     }
 
+    private boolean jumbleArgs_ ;
+    /**
+     * <code>bool jumble_args = 4 [json_name = "jumble_args"];</code>
+     * @return The jumbleArgs.
+     */
+    @java.lang.Override
+    public boolean getJumbleArgs() {
+      return jumbleArgs_;
+    }
+    /**
+     * <code>bool jumble_args = 4 [json_name = "jumble_args"];</code>
+     * @param value The jumbleArgs to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJumbleArgs(boolean value) {
+
+      jumbleArgs_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool jumble_args = 4 [json_name = "jumble_args"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearJumbleArgs() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      jumbleArgs_ = false;
+      onChanged();
+      return this;
+    }
+
     private boolean isLocal_ ;
     /**
-     * <code>bool is_local = 4 [json_name = "is_local"];</code>
+     * <code>bool is_local = 5 [json_name = "is_local"];</code>
      * @return The isLocal.
      */
     @java.lang.Override
@@ -970,24 +1071,56 @@ private static final long serialVersionUID = 0L;
       return isLocal_;
     }
     /**
-     * <code>bool is_local = 4 [json_name = "is_local"];</code>
+     * <code>bool is_local = 5 [json_name = "is_local"];</code>
      * @param value The isLocal to set.
      * @return This builder for chaining.
      */
     public Builder setIsLocal(boolean value) {
 
       isLocal_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>bool is_local = 4 [json_name = "is_local"];</code>
+     * <code>bool is_local = 5 [json_name = "is_local"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIsLocal() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       isLocal_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int location_ ;
+    /**
+     * <code>int32 location = 6 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public int getLocation() {
+      return location_;
+    }
+    /**
+     * <code>int32 location = 6 [json_name = "location"];</code>
+     * @param value The location to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLocation(int value) {
+
+      location_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 location = 6 [json_name = "location"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLocation() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      location_ = 0;
       onChanged();
       return this;
     }

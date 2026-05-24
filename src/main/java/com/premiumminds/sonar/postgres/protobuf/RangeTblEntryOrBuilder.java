@@ -409,37 +409,61 @@ public interface RangeTblEntryOrBuilder extends
   double getEnrtuples();
 
   /**
-   * <code>bool lateral = 30 [json_name = "lateral"];</code>
+   * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+   */
+  java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
+      getGroupexprsList();
+  /**
+   * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.Node getGroupexprs(int index);
+  /**
+   * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+   */
+  int getGroupexprsCount();
+  /**
+   * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+   */
+  java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+      getGroupexprsOrBuilderList();
+  /**
+   * <code>repeated .pg_query.Node groupexprs = 30 [json_name = "groupexprs"];</code>
+   */
+  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getGroupexprsOrBuilder(
+      int index);
+
+  /**
+   * <code>bool lateral = 31 [json_name = "lateral"];</code>
    * @return The lateral.
    */
   boolean getLateral();
 
   /**
-   * <code>bool in_from_cl = 31 [json_name = "inFromCl"];</code>
+   * <code>bool in_from_cl = 32 [json_name = "inFromCl"];</code>
    * @return The inFromCl.
    */
   boolean getInFromCl();
 
   /**
-   * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+   * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
    */
   java.util.List<com.premiumminds.sonar.postgres.protobuf.Node> 
       getSecurityQualsList();
   /**
-   * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+   * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.Node getSecurityQuals(int index);
   /**
-   * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+   * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
    */
   int getSecurityQualsCount();
   /**
-   * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+   * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
    */
   java.util.List<? extends com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
       getSecurityQualsOrBuilderList();
   /**
-   * <code>repeated .pg_query.Node security_quals = 32 [json_name = "securityQuals"];</code>
+   * <code>repeated .pg_query.Node security_quals = 33 [json_name = "securityQuals"];</code>
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getSecurityQualsOrBuilder(
       int index);

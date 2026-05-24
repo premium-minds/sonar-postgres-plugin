@@ -250,9 +250,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VIEW_QUERY_FIELD_NUMBER = 7;
-  private com.premiumminds.sonar.postgres.protobuf.Node viewQuery_;
+  private com.premiumminds.sonar.postgres.protobuf.Query viewQuery_;
   /**
-   * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+   * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
    * @return Whether the viewQuery field is set.
    */
   @java.lang.Override
@@ -260,19 +260,19 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+   * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
    * @return The viewQuery.
    */
   @java.lang.Override
-  public com.premiumminds.sonar.postgres.protobuf.Node getViewQuery() {
-    return viewQuery_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : viewQuery_;
+  public com.premiumminds.sonar.postgres.protobuf.Query getViewQuery() {
+    return viewQuery_ == null ? com.premiumminds.sonar.postgres.protobuf.Query.getDefaultInstance() : viewQuery_;
   }
   /**
-   * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+   * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
    */
   @java.lang.Override
-  public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getViewQueryOrBuilder() {
-    return viewQuery_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : viewQuery_;
+  public com.premiumminds.sonar.postgres.protobuf.QueryOrBuilder getViewQueryOrBuilder() {
+    return viewQuery_ == null ? com.premiumminds.sonar.postgres.protobuf.Query.getDefaultInstance() : viewQuery_;
   }
 
   public static final int SKIP_DATA_FIELD_NUMBER = 8;
@@ -1705,31 +1705,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.premiumminds.sonar.postgres.protobuf.Node viewQuery_;
+    private com.premiumminds.sonar.postgres.protobuf.Query viewQuery_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> viewQueryBuilder_;
+        com.premiumminds.sonar.postgres.protobuf.Query, com.premiumminds.sonar.postgres.protobuf.Query.Builder, com.premiumminds.sonar.postgres.protobuf.QueryOrBuilder> viewQueryBuilder_;
     /**
-     * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+     * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
      * @return Whether the viewQuery field is set.
      */
     public boolean hasViewQuery() {
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
-     * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+     * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
      * @return The viewQuery.
      */
-    public com.premiumminds.sonar.postgres.protobuf.Node getViewQuery() {
+    public com.premiumminds.sonar.postgres.protobuf.Query getViewQuery() {
       if (viewQueryBuilder_ == null) {
-        return viewQuery_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : viewQuery_;
+        return viewQuery_ == null ? com.premiumminds.sonar.postgres.protobuf.Query.getDefaultInstance() : viewQuery_;
       } else {
         return viewQueryBuilder_.getMessage();
       }
     }
     /**
-     * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+     * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
      */
-    public Builder setViewQuery(com.premiumminds.sonar.postgres.protobuf.Node value) {
+    public Builder setViewQuery(com.premiumminds.sonar.postgres.protobuf.Query value) {
       if (viewQueryBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1743,10 +1743,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+     * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
      */
     public Builder setViewQuery(
-        com.premiumminds.sonar.postgres.protobuf.Node.Builder builderForValue) {
+        com.premiumminds.sonar.postgres.protobuf.Query.Builder builderForValue) {
       if (viewQueryBuilder_ == null) {
         viewQuery_ = builderForValue.build();
       } else {
@@ -1757,13 +1757,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+     * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
      */
-    public Builder mergeViewQuery(com.premiumminds.sonar.postgres.protobuf.Node value) {
+    public Builder mergeViewQuery(com.premiumminds.sonar.postgres.protobuf.Query value) {
       if (viewQueryBuilder_ == null) {
         if (((bitField0_ & 0x00000040) != 0) &&
           viewQuery_ != null &&
-          viewQuery_ != com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance()) {
+          viewQuery_ != com.premiumminds.sonar.postgres.protobuf.Query.getDefaultInstance()) {
           getViewQueryBuilder().mergeFrom(value);
         } else {
           viewQuery_ = value;
@@ -1778,7 +1778,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+     * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
      */
     public Builder clearViewQuery() {
       bitField0_ = (bitField0_ & ~0x00000040);
@@ -1791,33 +1791,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+     * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
      */
-    public com.premiumminds.sonar.postgres.protobuf.Node.Builder getViewQueryBuilder() {
+    public com.premiumminds.sonar.postgres.protobuf.Query.Builder getViewQueryBuilder() {
       bitField0_ |= 0x00000040;
       onChanged();
       return getViewQueryFieldBuilder().getBuilder();
     }
     /**
-     * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+     * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
      */
-    public com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getViewQueryOrBuilder() {
+    public com.premiumminds.sonar.postgres.protobuf.QueryOrBuilder getViewQueryOrBuilder() {
       if (viewQueryBuilder_ != null) {
         return viewQueryBuilder_.getMessageOrBuilder();
       } else {
         return viewQuery_ == null ?
-            com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : viewQuery_;
+            com.premiumminds.sonar.postgres.protobuf.Query.getDefaultInstance() : viewQuery_;
       }
     }
     /**
-     * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+     * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder> 
+        com.premiumminds.sonar.postgres.protobuf.Query, com.premiumminds.sonar.postgres.protobuf.Query.Builder, com.premiumminds.sonar.postgres.protobuf.QueryOrBuilder> 
         getViewQueryFieldBuilder() {
       if (viewQueryBuilder_ == null) {
         viewQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.premiumminds.sonar.postgres.protobuf.Node, com.premiumminds.sonar.postgres.protobuf.Node.Builder, com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder>(
+            com.premiumminds.sonar.postgres.protobuf.Query, com.premiumminds.sonar.postgres.protobuf.Query.Builder, com.premiumminds.sonar.postgres.protobuf.QueryOrBuilder>(
                 getViewQuery(),
                 getParentForChildren(),
                 isClean());

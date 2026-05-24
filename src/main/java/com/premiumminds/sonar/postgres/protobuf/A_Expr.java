@@ -153,10 +153,32 @@ private static final long serialVersionUID = 0L;
     return rexpr_ == null ? com.premiumminds.sonar.postgres.protobuf.Node.getDefaultInstance() : rexpr_;
   }
 
-  public static final int LOCATION_FIELD_NUMBER = 5;
+  public static final int REXPR_LIST_START_FIELD_NUMBER = 5;
+  private int rexprListStart_ = 0;
+  /**
+   * <code>int32 rexpr_list_start = 5 [json_name = "rexpr_list_start"];</code>
+   * @return The rexprListStart.
+   */
+  @java.lang.Override
+  public int getRexprListStart() {
+    return rexprListStart_;
+  }
+
+  public static final int REXPR_LIST_END_FIELD_NUMBER = 6;
+  private int rexprListEnd_ = 0;
+  /**
+   * <code>int32 rexpr_list_end = 6 [json_name = "rexpr_list_end"];</code>
+   * @return The rexprListEnd.
+   */
+  @java.lang.Override
+  public int getRexprListEnd() {
+    return rexprListEnd_;
+  }
+
+  public static final int LOCATION_FIELD_NUMBER = 7;
   private int location_ = 0;
   /**
-   * <code>int32 location = 5 [json_name = "location"];</code>
+   * <code>int32 location = 7 [json_name = "location"];</code>
    * @return The location.
    */
   @java.lang.Override
@@ -190,8 +212,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getRexpr());
     }
+    if (rexprListStart_ != 0) {
+      output.writeInt32(5, rexprListStart_);
+    }
+    if (rexprListEnd_ != 0) {
+      output.writeInt32(6, rexprListEnd_);
+    }
     if (location_ != 0) {
-      output.writeInt32(5, location_);
+      output.writeInt32(7, location_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -218,9 +246,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getRexpr());
     }
+    if (rexprListStart_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(5, rexprListStart_);
+    }
+    if (rexprListEnd_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, rexprListEnd_);
+    }
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(5, location_);
+        .computeInt32Size(7, location_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -250,6 +286,10 @@ private static final long serialVersionUID = 0L;
       if (!getRexpr()
           .equals(other.getRexpr())) return false;
     }
+    if (getRexprListStart()
+        != other.getRexprListStart()) return false;
+    if (getRexprListEnd()
+        != other.getRexprListEnd()) return false;
     if (getLocation()
         != other.getLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -277,6 +317,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REXPR_FIELD_NUMBER;
       hash = (53 * hash) + getRexpr().hashCode();
     }
+    hash = (37 * hash) + REXPR_LIST_START_FIELD_NUMBER;
+    hash = (53 * hash) + getRexprListStart();
+    hash = (37 * hash) + REXPR_LIST_END_FIELD_NUMBER;
+    hash = (53 * hash) + getRexprListEnd();
     hash = (37 * hash) + LOCATION_FIELD_NUMBER;
     hash = (53 * hash) + getLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -436,6 +480,8 @@ private static final long serialVersionUID = 0L;
         rexprBuilder_.dispose();
         rexprBuilder_ = null;
       }
+      rexprListStart_ = 0;
+      rexprListEnd_ = 0;
       location_ = 0;
       return this;
     }
@@ -500,6 +546,12 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.rexprListStart_ = rexprListStart_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.rexprListEnd_ = rexprListEnd_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.location_ = location_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -584,6 +636,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasRexpr()) {
         mergeRexpr(other.getRexpr());
       }
+      if (other.getRexprListStart() != 0) {
+        setRexprListStart(other.getRexprListStart());
+      }
+      if (other.getRexprListEnd() != 0) {
+        setRexprListEnd(other.getRexprListEnd());
+      }
       if (other.getLocation() != 0) {
         setLocation(other.getLocation());
       }
@@ -646,10 +704,20 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 34
             case 40: {
-              location_ = input.readInt32();
+              rexprListStart_ = input.readInt32();
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 48: {
+              rexprListEnd_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              location_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1202,9 +1270,73 @@ private static final long serialVersionUID = 0L;
       return rexprBuilder_;
     }
 
+    private int rexprListStart_ ;
+    /**
+     * <code>int32 rexpr_list_start = 5 [json_name = "rexpr_list_start"];</code>
+     * @return The rexprListStart.
+     */
+    @java.lang.Override
+    public int getRexprListStart() {
+      return rexprListStart_;
+    }
+    /**
+     * <code>int32 rexpr_list_start = 5 [json_name = "rexpr_list_start"];</code>
+     * @param value The rexprListStart to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRexprListStart(int value) {
+
+      rexprListStart_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 rexpr_list_start = 5 [json_name = "rexpr_list_start"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRexprListStart() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      rexprListStart_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int rexprListEnd_ ;
+    /**
+     * <code>int32 rexpr_list_end = 6 [json_name = "rexpr_list_end"];</code>
+     * @return The rexprListEnd.
+     */
+    @java.lang.Override
+    public int getRexprListEnd() {
+      return rexprListEnd_;
+    }
+    /**
+     * <code>int32 rexpr_list_end = 6 [json_name = "rexpr_list_end"];</code>
+     * @param value The rexprListEnd to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRexprListEnd(int value) {
+
+      rexprListEnd_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 rexpr_list_end = 6 [json_name = "rexpr_list_end"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRexprListEnd() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      rexprListEnd_ = 0;
+      onChanged();
+      return this;
+    }
+
     private int location_ ;
     /**
-     * <code>int32 location = 5 [json_name = "location"];</code>
+     * <code>int32 location = 7 [json_name = "location"];</code>
      * @return The location.
      */
     @java.lang.Override
@@ -1212,23 +1344,23 @@ private static final long serialVersionUID = 0L;
       return location_;
     }
     /**
-     * <code>int32 location = 5 [json_name = "location"];</code>
+     * <code>int32 location = 7 [json_name = "location"];</code>
      * @param value The location to set.
      * @return This builder for chaining.
      */
     public Builder setLocation(int value) {
 
       location_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 location = 5 [json_name = "location"];</code>
+     * <code>int32 location = 7 [json_name = "location"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000040);
       location_ = 0;
       onChanged();
       return this;

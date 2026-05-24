@@ -107,19 +107,19 @@ public interface IntoClauseOrBuilder extends
       getTableSpaceNameBytes();
 
   /**
-   * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+   * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
    * @return Whether the viewQuery field is set.
    */
   boolean hasViewQuery();
   /**
-   * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+   * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
    * @return The viewQuery.
    */
-  com.premiumminds.sonar.postgres.protobuf.Node getViewQuery();
+  com.premiumminds.sonar.postgres.protobuf.Query getViewQuery();
   /**
-   * <code>.pg_query.Node view_query = 7 [json_name = "viewQuery"];</code>
+   * <code>.pg_query.Query view_query = 7 [json_name = "viewQuery"];</code>
    */
-  com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getViewQueryOrBuilder();
+  com.premiumminds.sonar.postgres.protobuf.QueryOrBuilder getViewQueryOrBuilder();
 
   /**
    * <code>bool skip_data = 8 [json_name = "skipData"];</code>

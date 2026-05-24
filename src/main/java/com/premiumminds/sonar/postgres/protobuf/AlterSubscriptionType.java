@@ -149,7 +149,7 @@ public enum AlterSubscriptionType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(34);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(35);
   }
 
   private static final AlterSubscriptionType[] VALUES = values();

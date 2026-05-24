@@ -158,7 +158,7 @@ public enum JsonBehaviorType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(53);
+    return com.premiumminds.sonar.postgres.protobuf.PgQuery.getDescriptor().getEnumTypes().get(54);
   }
 
   private static final JsonBehaviorType[] VALUES = values();

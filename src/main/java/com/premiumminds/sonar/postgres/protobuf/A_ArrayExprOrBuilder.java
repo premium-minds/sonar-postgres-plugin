@@ -33,7 +33,19 @@ public interface A_ArrayExprOrBuilder extends
       int index);
 
   /**
-   * <code>int32 location = 2 [json_name = "location"];</code>
+   * <code>int32 list_start = 2 [json_name = "list_start"];</code>
+   * @return The listStart.
+   */
+  int getListStart();
+
+  /**
+   * <code>int32 list_end = 3 [json_name = "list_end"];</code>
+   * @return The listEnd.
+   */
+  int getListEnd();
+
+  /**
+   * <code>int32 location = 4 [json_name = "location"];</code>
    * @return The location.
    */
   int getLocation();
