@@ -1,5 +1,9 @@
-FROM gcc:16.1
-RUN apt update
+# to make compiled artifacts compatible with GLIBC_2.31 used in Ubuntu 22.04
+FROM ubuntu:22.04
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+  --mount=type=cache,target=/var/lib/apt,sharing=locked \
+  apt-get update && apt-get install -y --no-install-recommends build-essential gcc-x86-64-linux-gnu
+
 WORKDIR /work
 ADD \
   --checksum=sha256:2d3486cf6a9d3955b53e66235db39d62b54216c820cd392ab66dc842c5b1316d \
