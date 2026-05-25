@@ -6,7 +6,7 @@ FROM --platform=$BUILDPLATFORM crazymax/osxcross:${OSXCROSS_VERSION}-ubuntu AS o
 FROM ubuntu:24.04
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
-  apt update && apt-get install -y clang build-essential
+  apt-get update && apt-get install -y --no-install-recommends clang build-essential
 ENV PATH="/osxcross/bin:$PATH"
 ENV LD_LIBRARY_PATH="/osxcross/lib:$LD_LIBRARY_PATH"
 COPY --link --from=osxcross /osxcross /osxcross
