@@ -49,29 +49,31 @@ docker run -d \
     -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true \
     -p 9000:9000 \
     -v $(pwd)/target/sonar-postgres-plugin-1.4-SNAPSHOT.jar:/opt/sonarqube/extensions/plugins/sonar-postgres-plugin-1.4-SNAPSHOT.jar \
-    sonarqube:24.12.0.100206-community
+    sonarqube:25.2.0.102705-community
 xdg-open http://localhost:9000/
 docker logs -f sonarqube
 ```
 
 ### SonarScanner for Maven
 
+ * Get token from http://localhost:9000/account/security
+
 ```shell
-mvn sonar:sonar \
-  -Dsonar.login=admin \
-  -Dsonar.password=admin1 \
+mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+  -Dsonar.token="<redacted>" \
   -Dsonar.host.url=http://localhost:9000/
 ```
 
 ### SonarScanner
+
+ * Get token from http://localhost:9000/account/security
 
 ```shell
 wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
 unzip sonar-scanner-cli-5.0.1.3006-linux.zip
 cd samples
 ../sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner \
-  -Dsonar.login=admin \
-  -Dsonar.password=admin1 \
+  -Dsonar.token="<redacted>" \
   -Dsonar.host.url=http://localhost:9000 \
   -Dsonar.projectKey=postgres-test
 ```
