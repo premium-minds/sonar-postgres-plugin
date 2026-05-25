@@ -21,7 +21,7 @@ public class AddFieldWithDefaultVisitorCheck extends AbstractVisitorCheck {
 
     /*
         Generated via the following Postgres query:
-            select proname from pg_proc where provolatile <> 'v';
+            select distinct proname from pg_proc where provolatile <> 'v' order by proname;
     */
     private static final String NON_VOLATILE_BUILT_IN_FUNCTIONS = "non_volatile_built_in_functions.txt";
     private static final List<String> nonVolatileFunctions;
