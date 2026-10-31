@@ -128,6 +128,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PAYLOAD_LOCATION_FIELD_NUMBER = 3;
+  private int payloadLocation_ = 0;
+  /**
+   * <code>int32 payload_location = 3 [json_name = "payload_location"];</code>
+   * @return The payloadLocation.
+   */
+  @java.lang.Override
+  public int getPayloadLocation() {
+    return payloadLocation_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -148,6 +159,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(payload_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, payload_);
     }
+    if (payloadLocation_ != 0) {
+      output.writeInt32(3, payloadLocation_);
+    }
     getUnknownFields().writeTo(output);
   }
   private int computeSerializedSize_0() {
@@ -157,6 +171,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(payload_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, payload_);
+    }
+    if (payloadLocation_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, payloadLocation_);
     }
     return size;
   }
@@ -186,6 +204,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getConditionname())) return false;
     if (!getPayload()
         .equals(other.getPayload())) return false;
+    if (getPayloadLocation()
+        != other.getPayloadLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -201,6 +221,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getConditionname().hashCode();
     hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
     hash = (53 * hash) + getPayload().hashCode();
+    hash = (37 * hash) + PAYLOAD_LOCATION_FIELD_NUMBER;
+    hash = (53 * hash) + getPayloadLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -334,6 +356,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       conditionname_ = "";
       payload_ = "";
+      payloadLocation_ = 0;
       return this;
     }
 
@@ -373,6 +396,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.payload_ = payload_;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.payloadLocation_ = payloadLocation_;
+      }
     }
 
     @java.lang.Override
@@ -396,6 +422,9 @@ private static final long serialVersionUID = 0L;
         payload_ = other.payload_;
         bitField0_ |= 0x00000002;
         onChanged();
+      }
+      if (other.getPayloadLocation() != 0) {
+        setPayloadLocation(other.getPayloadLocation());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -433,6 +462,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              payloadLocation_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -590,6 +624,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       payload_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private int payloadLocation_ ;
+    /**
+     * <code>int32 payload_location = 3 [json_name = "payload_location"];</code>
+     * @return The payloadLocation.
+     */
+    @java.lang.Override
+    public int getPayloadLocation() {
+      return payloadLocation_;
+    }
+    /**
+     * <code>int32 payload_location = 3 [json_name = "payload_location"];</code>
+     * @param value The payloadLocation to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPayloadLocation(int value) {
+
+      payloadLocation_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 payload_location = 3 [json_name = "payload_location"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPayloadLocation() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      payloadLocation_ = 0;
       onChanged();
       return this;
     }

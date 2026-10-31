@@ -41,10 +41,10 @@ LIBPG_QUERY_TEMP_DIR=$(mktemp --directory)
 
 pushd $LIBPG_QUERY_TEMP_DIR
 
-wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/18.0.0.tar.gz
-echo 6ad7783f272acfd116455c66a03298a0cac9a9168281df547969219112f0260f  18.0.0.tar.gz | sha256sum -c
-tar -zxf 18.0.0.tar.gz
-SOURCES_DIR=libpg_query-18.0.0
+wget -q https://github.com/pganalyze/libpg_query/archive/refs/tags/18.1.0.tar.gz
+echo 2d3486cf6a9d3955b53e66235db39d62b54216c820cd392ab66dc842c5b1316d  18.1.0.tar.gz | sha256sum -c
+tar -zxf 18.1.0.tar.gz
+SOURCES_DIR=libpg_query-18.1.0
 
 wget -q https://github.com/protocolbuffers/protobuf/releases/download/v35.0/protoc-35.0-linux-x86_64.zip
 echo a45cda0989c17dd950db55f6fbe1e5814c50fda08e87aa422980ac1f89dddbbc  protoc-35.0-linux-x86_64.zip | sha256sum -c

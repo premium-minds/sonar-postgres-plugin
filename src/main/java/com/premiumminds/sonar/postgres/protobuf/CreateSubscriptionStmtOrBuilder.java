@@ -81,4 +81,10 @@ public interface CreateSubscriptionStmtOrBuilder extends
    */
   com.premiumminds.sonar.postgres.protobuf.NodeOrBuilder getOptionsOrBuilder(
       int index);
+
+  /**
+   * <code>int32 conninfo_location = 5 [json_name = "conninfo_location"];</code>
+   * @return The conninfoLocation.
+   */
+  int getConninfoLocation();
 }

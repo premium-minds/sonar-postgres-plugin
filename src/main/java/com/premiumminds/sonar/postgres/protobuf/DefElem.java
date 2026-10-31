@@ -185,6 +185,17 @@ private static final long serialVersionUID = 0L;
     return location_;
   }
 
+  public static final int ARG_LOCATION_FIELD_NUMBER = 6;
+  private int argLocation_ = 0;
+  /**
+   * <code>int32 arg_location = 6 [json_name = "arg_location"];</code>
+   * @return The argLocation.
+   */
+  @java.lang.Override
+  public int getArgLocation() {
+    return argLocation_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -214,6 +225,9 @@ private static final long serialVersionUID = 0L;
     if (location_ != 0) {
       output.writeInt32(5, location_);
     }
+    if (argLocation_ != 0) {
+      output.writeInt32(6, argLocation_);
+    }
     getUnknownFields().writeTo(output);
   }
   private int computeSerializedSize_0() {
@@ -235,6 +249,10 @@ private static final long serialVersionUID = 0L;
     if (location_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, location_);
+    }
+    if (argLocation_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, argLocation_);
     }
     return size;
   }
@@ -272,6 +290,8 @@ private static final long serialVersionUID = 0L;
     if (defaction_ != other.defaction_) return false;
     if (getLocation()
         != other.getLocation()) return false;
+    if (getArgLocation()
+        != other.getArgLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -295,6 +315,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + defaction_;
     hash = (37 * hash) + LOCATION_FIELD_NUMBER;
     hash = (53 * hash) + getLocation();
+    hash = (37 * hash) + ARG_LOCATION_FIELD_NUMBER;
+    hash = (53 * hash) + getArgLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -441,6 +463,7 @@ private static final long serialVersionUID = 0L;
       }
       defaction_ = 0;
       location_ = 0;
+      argLocation_ = 0;
       return this;
     }
 
@@ -493,6 +516,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.location_ = location_;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.argLocation_ = argLocation_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -526,6 +552,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getLocation() != 0) {
         setLocation(other.getLocation());
+      }
+      if (other.getArgLocation() != 0) {
+        setArgLocation(other.getArgLocation());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -580,6 +609,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 48: {
+              argLocation_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -942,6 +976,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearLocation() {
       bitField0_ = (bitField0_ & ~0x00000010);
       location_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int argLocation_ ;
+    /**
+     * <code>int32 arg_location = 6 [json_name = "arg_location"];</code>
+     * @return The argLocation.
+     */
+    @java.lang.Override
+    public int getArgLocation() {
+      return argLocation_;
+    }
+    /**
+     * <code>int32 arg_location = 6 [json_name = "arg_location"];</code>
+     * @param value The argLocation to set.
+     * @return This builder for chaining.
+     */
+    public Builder setArgLocation(int value) {
+
+      argLocation_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 arg_location = 6 [json_name = "arg_location"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearArgLocation() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      argLocation_ = 0;
       onChanged();
       return this;
     }

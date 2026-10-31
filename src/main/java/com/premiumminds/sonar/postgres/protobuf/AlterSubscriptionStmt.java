@@ -231,6 +231,17 @@ private static final long serialVersionUID = 0L;
     return options_.get(index);
   }
 
+  public static final int CONNINFO_LOCATION_FIELD_NUMBER = 6;
+  private int conninfoLocation_ = 0;
+  /**
+   * <code>int32 conninfo_location = 6 [json_name = "conninfo_location"];</code>
+   * @return The conninfoLocation.
+   */
+  @java.lang.Override
+  public int getConninfoLocation() {
+    return conninfoLocation_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -259,6 +270,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < options_.size(); i++) {
       output.writeMessage(5, options_.get(i));
+    }
+    if (conninfoLocation_ != 0) {
+      output.writeInt32(6, conninfoLocation_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -292,6 +306,10 @@ private static final long serialVersionUID = 0L;
           }
           size += 1 * count;
         }
+    if (conninfoLocation_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, conninfoLocation_);
+    }
     return size;
   }
   @java.lang.Override
@@ -325,6 +343,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPublicationList())) return false;
     if (!getOptionsList()
         .equals(other.getOptionsList())) return false;
+    if (getConninfoLocation()
+        != other.getConninfoLocation()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -350,6 +370,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getOptionsList().hashCode();
     }
+    hash = (37 * hash) + CONNINFO_LOCATION_FIELD_NUMBER;
+    hash = (53 * hash) + getConninfoLocation();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -498,6 +520,7 @@ private static final long serialVersionUID = 0L;
         optionsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
+      conninfoLocation_ = 0;
       return this;
     }
 
@@ -561,6 +584,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.conninfo_ = conninfo_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.conninfoLocation_ = conninfoLocation_;
       }
     }
 
@@ -641,6 +667,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getConninfoLocation() != 0) {
+        setConninfoLocation(other.getConninfoLocation());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -708,6 +737,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 42
+            case 48: {
+              conninfoLocation_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1399,6 +1433,38 @@ private static final long serialVersionUID = 0L;
         options_ = null;
       }
       return optionsBuilder_;
+    }
+
+    private int conninfoLocation_ ;
+    /**
+     * <code>int32 conninfo_location = 6 [json_name = "conninfo_location"];</code>
+     * @return The conninfoLocation.
+     */
+    @java.lang.Override
+    public int getConninfoLocation() {
+      return conninfoLocation_;
+    }
+    /**
+     * <code>int32 conninfo_location = 6 [json_name = "conninfo_location"];</code>
+     * @param value The conninfoLocation to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConninfoLocation(int value) {
+
+      conninfoLocation_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 conninfo_location = 6 [json_name = "conninfo_location"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConninfoLocation() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      conninfoLocation_ = 0;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:pg_query.AlterSubscriptionStmt)
