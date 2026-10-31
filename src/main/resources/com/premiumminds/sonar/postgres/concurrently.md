@@ -22,7 +22,7 @@ Use:
 CREATE INDEX CONCURRENTLY "email_idx" ON "app_user" ("email");
 ``
 
-### drop index
+=== drop index
 
 Instead of:
 
