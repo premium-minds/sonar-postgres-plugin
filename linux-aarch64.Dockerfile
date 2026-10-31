@@ -2,8 +2,8 @@ FROM gcc:16.1
 RUN apt update
 WORKDIR /work
 ADD \
-  --checksum=sha256:6ad7783f272acfd116455c66a03298a0cac9a9168281df547969219112f0260f \
-  https://github.com/pganalyze/libpg_query/archive/refs/tags/18.0.0.tar.gz /work
-RUN tar -zx --strip-components=1 -f 18.0.0.tar.gz
+  --checksum=sha256:2d3486cf6a9d3955b53e66235db39d62b54216c820cd392ab66dc842c5b1316d \
+  https://github.com/pganalyze/libpg_query/archive/refs/tags/18.1.0.tar.gz /work
+RUN tar -zx --strip-components=1 -f 18.1.0.tar.gz
 RUN apt install -y gcc-aarch64-linux-gnu libc6-dev-arm64-cross
 RUN make CC=aarch64-linux-gnu-gcc -j build_shared

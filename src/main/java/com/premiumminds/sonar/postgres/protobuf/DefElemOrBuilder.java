@@ -65,4 +65,10 @@ public interface DefElemOrBuilder extends
    * @return The location.
    */
   int getLocation();
+
+  /**
+   * <code>int32 arg_location = 6 [json_name = "arg_location"];</code>
+   * @return The argLocation.
+   */
+  int getArgLocation();
 }

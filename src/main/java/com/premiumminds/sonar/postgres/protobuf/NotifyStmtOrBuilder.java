@@ -33,4 +33,10 @@ public interface NotifyStmtOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPayloadBytes();
+
+  /**
+   * <code>int32 payload_location = 3 [json_name = "payload_location"];</code>
+   * @return The payloadLocation.
+   */
+  int getPayloadLocation();
 }
