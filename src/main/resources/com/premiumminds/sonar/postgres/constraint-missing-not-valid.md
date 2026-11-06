@@ -6,7 +6,7 @@ By default, new constraints require a table scan and block writes to the table  
 
 Using ``NOT VALID`` with a later ``VALIDATE CONSTRAINT`` call prevents the table scan and results in the validation step only requiring a ``SHARE UPDATE EXCLUSIVE`` lock.
 
-https://www.postgresql.org/docs/current/sql-altertable.html#SQL-ALTERTABLE-NOTES
+[ALTER TABLE](https://www.postgresql.org/docs/current/sql-altertable.html#SQL-ALTERTABLE-NOTES)
 
 Instead of:
 

@@ -77,3 +77,7 @@ cd samples
   -Dsonar.host.url=http://localhost:9000 \
   -Dsonar.projectKey=postgres-test
 ```
+
+### Markdown
+
+Sonar Markdown syntax is available at: http://localhost:9000/formatting/help
