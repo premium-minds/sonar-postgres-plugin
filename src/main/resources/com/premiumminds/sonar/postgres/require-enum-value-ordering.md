@@ -44,5 +44,5 @@ ALTER TYPE status ADD VALUE 'pending_review' AFTER 'submitted';
 ``
 
 == links
-            
- * https://www.postgresql.org/docs/current/sql-altertype.html
+
+ - [ALTER TYPE](https://www.postgresql.org/docs/current/sql-altertype.html)

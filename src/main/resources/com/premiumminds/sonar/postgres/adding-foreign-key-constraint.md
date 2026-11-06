@@ -38,9 +38,9 @@ Run ``VALIDATE CONSTRAINT`` to scan the ``"email"`` table in the background whil
 
 === adding constraint to new table
 
-Both of these examples have the same amount of locking. Since the newly created table has no rows, you don't need to add a foreign key with `NOT VALID`.
+Both of these examples have the same amount of locking. Since the newly created table has no rows, you don't need to add a foreign key with ``NOT VALID``.
 
-Adding foreign key constraint in `create table` statement.
+Adding foreign key constraint in ``create table`` statement.
 
 ``sql
 -- blocks writes to "user" while Postgres updates table schema.
@@ -55,7 +55,7 @@ CREATE TABLE email (
 );
 ``
 
-Using `not valid...validate`:
+Using ``not valid...validate``:
 
 ``sql
 -- no references to lock.
@@ -73,4 +73,4 @@ ALTER TABLE "email" ADD CONSTRAINT "fk_user"
 ALTER TABLE "email" VALIDATE CONSTRAINT "fk_user";
 ``
 
-https://travisofthenorth.com/blog/2017/2/2/postgres-adding-foreign-keys-with-zero-downtime
+ - [Postgres: Adding Foreign Keys With Zero Downtime](https://travisofthenorth.com/blog/2017/2/2/postgres-adding-foreign-keys-with-zero-downtime)

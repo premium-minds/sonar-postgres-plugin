@@ -1,6 +1,6 @@
 == problem
 
-Using `TRUNCATE`'s `CASCADE` option will truncate any tables that are also foreign-keyed to the specified tables.
+Using ``TRUNCATE``'s ``CASCADE`` option will truncate any tables that are also foreign-keyed to the specified tables.
 
 So if you had tables with foreign-keys like:
 
@@ -14,7 +14,7 @@ and ran:
 truncate a cascade;
 ``
 
-You'd end up with `a`, `b`, & `c` all being truncated!
+You'd end up with ``a``, ``b``, & ``c`` all being truncated!
 
 === runnable example
 
@@ -54,13 +54,13 @@ NOTICE:  truncate cascades to table "c"
 Query 1 OK: TRUNCATE TABLE
 ``
 
-And now tables `a`, `b`, & `c` are empty!
+And now tables ``a``, ``b``, & ``c`` are empty!
 
 == solution
 
-Don't use the `CASCADE` option, instead manually specify the tables you want.
+Don't use the ``CASCADE`` option, instead manually specify the tables you want.
 
-So if you just wanted tables `a` and `b` from the example above:
+So if you just wanted tables ``a`` and ``b`` from the example above:
 
 ``sql
 truncate a, b;
@@ -68,5 +68,5 @@ truncate a, b;
 
 == links
 
- * https://www.postgresql.org/docs/current/sql-truncate.html
- * `CASCADE`'s recursive nature [caused Linear's 2024-01-24 incident](https://linear.app/blog/linear-incident-on-jan-24th-2024).
+ - [TRUNCATE](https://www.postgresql.org/docs/current/sql-truncate.html)
+ - ``CASCADE``'s recursive nature [caused Linear's 2024-01-24 incident](https://linear.app/blog/linear-incident-on-jan-24th-2024).

@@ -1,8 +1,8 @@
 == problem
 
-During a normal index creation, table updates are blocked, but reads are still allowed. `CONCURRENTLY` avoids locking the table against writes during index creation.
+During a normal index creation, table updates are blocked, but reads are still allowed. ``CONCURRENTLY`` avoids locking the table against writes during index creation.
 
-https://www.postgresql.org/docs/current/sql-createindex.html#SQL-CREATEINDEX-CONCURRENTLY
+[CREATE INDEX - Building Indexes Concurrently](https://www.postgresql.org/docs/current/sql-createindex.html#SQL-CREATEINDEX-CONCURRENTLY)
 
 == solution
 

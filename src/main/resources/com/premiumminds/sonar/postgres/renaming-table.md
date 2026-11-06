@@ -14,7 +14,7 @@ This is the simplest solution. If you're using an ORM (Object Relational Mapper)
 
 We have a table with the name ``user_stars`` that we want to rename to ``user_favorites``. Database [views](https://www.postgresql.org/docs/current/sql-createview.html) allow us to rename a table with temporary locking during the rename.
 
-1. Create a view with the name of your desired table using our original table``CREATE VIEW user_favorites as SELECT * FROM user_stars;``
+1. Create a view with the name of your desired table using our original table ``CREATE VIEW user_favorites as SELECT * FROM user_stars;``
 
 2. Deploy your new code that references ``user_favorites`` and remove your old deployment that references ``user_stars``
 

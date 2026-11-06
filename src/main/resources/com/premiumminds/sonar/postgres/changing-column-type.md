@@ -4,7 +4,7 @@ Changing a column type requires an ``ACCESS EXCLUSIVE`` lock on the table which 
 
 Changing the type of the column may also break other clients reading from the table.
 
-https://www.postgresql.org/docs/current/sql-altertable.html#SQL-ALTERTABLE-NOTES
+[ALTER TABLE](https://www.postgresql.org/docs/current/sql-altertable.html#SQL-ALTERTABLE-NOTES)
 
 
 == solution
@@ -31,11 +31,11 @@ It's a complicated, multi-step process to convert columns that are primary keys 
 
 == further reading
 
-Check `castmethod` column for `b` for "binary coercible" types:
+Check ``castmethod`` column for ``b`` for "binary coercible" types:
 ```
 SELECT castsource::regtype, casttarget::regtype, castfunc::regproc, castcontext, castmethod
 FROM pg_catalog.pg_cast
 ORDER BY castsource::regtype::TEXT, casttarget::regtype::text;
 ```
 
- https://www.postgresql.org/docs/current/catalog-pg-cast.html
+ - [pg_cast](https://www.postgresql.org/docs/current/catalog-pg-cast.html)
