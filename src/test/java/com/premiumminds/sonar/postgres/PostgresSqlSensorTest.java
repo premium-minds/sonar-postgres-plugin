@@ -27,6 +27,7 @@ import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BA
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_CHAR_FIELD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_CREATE_DOMAIN_WITH_CONSTRAINT;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_DROP_DATABASE;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_DUPLICATE_COLUMN;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_TRUNCATE_CASCADE;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_CHANGING_COLUMN_TYPE;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_CLUSTER;
@@ -115,7 +116,8 @@ class PostgresSqlSensorTest {
                 RULE_DISALLOWED_DO,
                 RULE_ONLY_SCHEMA_MIGRATIONS,
                 RULE_ONLY_LOWER_CASE_NAMES,
-                RULE_REQUIRE_ENUM_VALUE_ORDERING
+                RULE_REQUIRE_ENUM_VALUE_ORDERING,
+                RULE_BAN_DUPLICATE_COLUMN
         );
         sensor.execute(contextTester);
 
@@ -983,6 +985,90 @@ class PostgresSqlSensorTest {
                      fileMap.get(":file2.sql").primaryLocation().message());
 
         assertEquals(2, fileMap.size());
+    }
+
+    @Test
+    void banDuplicateColumn() {
+        createFile(contextTester, "file1.sql", "UPDATE foo SET a = 1, a = 2, b = 3;");
+        createFile(contextTester, "file2.sql", "UPDATE foo SET (a, b) = (1, 2), a = 3;");
+        createFile(contextTester, "file3.sql", "UPDATE foo SET a = row(1, 2), a.x = 1;");
+        createFile(contextTester, "file4.sql", "INSERT INTO foo VALUES (1) ON CONFLICT (id) DO UPDATE SET a = 1, a = 2;");
+        createFile(contextTester, "file5.sql", "INSERT INTO foo (a, a) VALUES (1, 2);");
+        createFile(contextTester, "file6.sql", "CREATE TABLE foo(a int, a int);");
+        createFile(contextTester, "file7.sql", "CREATE FOREIGN TABLE foo(a int, a int) SERVER s;");
+        createFile(contextTester, "file8.sql", "CREATE TABLE foo AS SELECT 1, 2;");
+        createFile(contextTester, "file9.sql", "CREATE TABLE foo (a, a) AS SELECT 1, 2;");
+        createFile(contextTester, "file10.sql", "CREATE TABLE foo (a, a) AS SELECT 1 AS b, 2 AS b;");
+        createFile(contextTester, "file11.sql", "CREATE TABLE foo AS SELECT 1 AS a, 2 AS a;");
+        createFile(contextTester, "file12.sql", "ALTER TABLE foo ADD COLUMN a int, ADD COLUMN a int;");
+        createFile(contextTester, "file13.sql", "CREATE VIEW vw_foo AS SELECT 1, 2;");
+        createFile(contextTester, "file14.sql", "CREATE VIEW vw_foo AS SELECT 1 AS a, 2 AS a;");
+        createFile(contextTester, "file15.sql", "CREATE VIEW vw_foo (a, a) AS SELECT 1 AS b, 2 AS b;");
+        createFile(contextTester, "file16.sql", "SELECT 1 a, 2 a INTO foo;");
+        createFile(contextTester, "file17.sql", "SELECT 1, 2 INTO foo;");
+        createFile(contextTester, "file18.sql", """
+                CREATE FUNCTION add(a integer, a integer) RETURNS integer
+                    LANGUAGE SQL
+                    IMMUTABLE
+                    RETURNS NULL ON NULL INPUT
+                    RETURN a + b;
+                """);
+        createFile(contextTester, "file19.sql", """
+                CREATE PROCEDURE insert_data(a integer, a integer)
+                LANGUAGE SQL
+                AS $$
+                select 1;
+                $$;
+                """);
+
+        final RuleKey rule = RULE_BAN_DUPLICATE_COLUMN;
+        PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
+        sensor.execute(contextTester);
+
+        final Map<RuleKey, Map<String, Issue>> issueMap = groupByRuleAndFile(contextTester.allIssues());
+
+        final Map<String, Issue> fileMap = issueMap.get(rule);
+
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file1.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file2.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file3.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file4.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file5.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file6.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file7.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: ?column?",
+                     fileMap.get(":file8.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file9.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file10.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file11.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file12.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: ?column?",
+                     fileMap.get(":file13.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file14.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file15.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: a",
+                     fileMap.get(":file16.sql").primaryLocation().message());
+        assertEquals("Duplicate columns found: ?column?",
+                     fileMap.get(":file17.sql").primaryLocation().message());
+        assertEquals("Duplicate arguments found: a",
+                     fileMap.get(":file18.sql").primaryLocation().message());
+        assertEquals("Duplicate arguments found: a",
+                     fileMap.get(":file19.sql").primaryLocation().message());
+
+        assertEquals(19, fileMap.size());
     }
 
     private PostgresSqlSensor getPostgresSqlSensor(RuleKey... ruleKey) {

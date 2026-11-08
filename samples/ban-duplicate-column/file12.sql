@@ -1,0 +1,1 @@
+ALTER TABLE foo ADD COLUMN a int, ADD COLUMN a int;

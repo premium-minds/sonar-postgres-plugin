@@ -1,0 +1,1 @@
+INSERT INTO foo VALUES (1) ON CONFLICT (id) DO UPDATE SET a = 1, a = 2;

@@ -10,6 +10,7 @@ import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BA
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_CHAR_FIELD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_CREATE_DOMAIN_WITH_CONSTRAINT;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_DROP_DATABASE;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_DUPLICATE_COLUMN;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_BAN_TRUNCATE_CASCADE;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_CHANGING_COLUMN_TYPE;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_CLUSTER;
@@ -66,6 +67,7 @@ public class PostgresSqlQualityProfile implements BuiltInQualityProfilesDefiniti
         activateRule(profile, RULE_ONLY_SCHEMA_MIGRATIONS);
         activateRule(profile, RULE_ONLY_LOWER_CASE_NAMES);
         activateRule(profile, RULE_REQUIRE_ENUM_VALUE_ORDERING);
+        activateRule(profile, RULE_BAN_DUPLICATE_COLUMN);
 
         profile.done();
     }

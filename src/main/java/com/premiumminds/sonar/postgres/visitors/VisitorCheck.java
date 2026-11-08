@@ -11,6 +11,7 @@ import com.premiumminds.sonar.postgres.protobuf.ColumnDef;
 import com.premiumminds.sonar.postgres.protobuf.Constraint;
 import com.premiumminds.sonar.postgres.protobuf.CreateDomainStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateExtensionStmt;
+import com.premiumminds.sonar.postgres.protobuf.CreateForeignTableStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateFunctionStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateSchemaStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateSeqStmt;
@@ -27,11 +28,14 @@ import com.premiumminds.sonar.postgres.protobuf.RawStmt;
 import com.premiumminds.sonar.postgres.protobuf.RefreshMatViewStmt;
 import com.premiumminds.sonar.postgres.protobuf.ReindexStmt;
 import com.premiumminds.sonar.postgres.protobuf.RenameStmt;
+import com.premiumminds.sonar.postgres.protobuf.SelectStmt;
 import com.premiumminds.sonar.postgres.protobuf.TruncateStmt;
 import com.premiumminds.sonar.postgres.protobuf.UpdateStmt;
 import com.premiumminds.sonar.postgres.protobuf.VacuumStmt;
 import com.premiumminds.sonar.postgres.protobuf.VariableSetStmt;
 import java.util.List;
+
+import com.premiumminds.sonar.postgres.protobuf.ViewStmt;
 import org.sonar.api.batch.sensor.SensorContext;
 
 public interface VisitorCheck {
@@ -68,6 +72,9 @@ public interface VisitorCheck {
     void visit(UpdateStmt updateStmt);
     void visit(DeleteStmt deleteStmt);
     void visit(TruncateStmt truncateStmt);
+    void visit(ViewStmt viewStmt);
+    void visit(CreateForeignTableStmt createForeignTableStmt);
+    void visit(SelectStmt selectStmt);
 
     void analyze(SensorContext context, PostgreSqlFile file, List<RawStmt> statements);
 
