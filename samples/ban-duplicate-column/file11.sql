@@ -1,0 +1,1 @@
+CREATE TABLE foo AS SELECT 1 AS a, 2 AS a;

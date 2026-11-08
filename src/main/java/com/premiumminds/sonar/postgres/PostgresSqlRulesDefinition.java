@@ -10,6 +10,7 @@ import com.premiumminds.sonar.postgres.visitors.BanAlterDomainWithConstraintChec
 import com.premiumminds.sonar.postgres.visitors.BanCharFieldVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.BanCreateDomainWithConstraintCheck;
 import com.premiumminds.sonar.postgres.visitors.BanDropDatabaseVisitorCheck;
+import com.premiumminds.sonar.postgres.visitors.BanDuplicateColumnCheck;
 import com.premiumminds.sonar.postgres.visitors.BanTruncateCascade;
 import com.premiumminds.sonar.postgres.visitors.ChangingColumnTypeVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.ClusterVisitorCheck;
@@ -66,6 +67,7 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
     public static final RuleKey RULE_ONLY_SCHEMA_MIGRATIONS = RuleKey.of(REPOSITORY, "only-schema-migrations");
     public static final RuleKey RULE_ONLY_LOWER_CASE_NAMES = RuleKey.of(REPOSITORY, "only-lower-case-names");
     public static final RuleKey RULE_REQUIRE_ENUM_VALUE_ORDERING = RuleKey.of(REPOSITORY, "require-enum-value-ordering");
+    public static final RuleKey RULE_BAN_DUPLICATE_COLUMN = RuleKey.of(REPOSITORY, "ban-duplicate-column");
 
     @Override
     public void define(Context context) {
@@ -213,6 +215,11 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
                   .setType(RuleType.BUG)
                   .setMarkdownDescription(getClass().getResource("require-enum-value-ordering.md"));
 
+        repository.createRule(RULE_BAN_DUPLICATE_COLUMN.rule())
+                  .setName("ban-duplicate-column rule")
+                  .setType(RuleType.BUG)
+                  .setMarkdownDescription(getClass().getResource("ban-duplicate-column.md"));
+
         repository.done();
     }
 
@@ -242,6 +249,7 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
                 new DisallowedDoVisitorCheck(),
                 new OneMigrationPerFileVisitorCheck(),
                 new OnlySchemaMigrationsVisitorCheck(),
-                new RequireEnumValueOrderingCheck());
+                new RequireEnumValueOrderingCheck(),
+                new BanDuplicateColumnCheck());
     }
 }

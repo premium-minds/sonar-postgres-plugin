@@ -11,8 +11,6 @@ public class RequireEnumValueOrderingCheck extends AbstractVisitorCheck {
 
     @Override
     public void visit(AlterEnumStmt alterEnumStmt) {
-
-        System.out.println(alterEnumStmt);
         if (alterEnumStmt.getNewValNeighbor() == null || alterEnumStmt.getNewValNeighbor().isBlank()){
             newIssue("ADD VALUE without BEFORE or AFTER appends the value to the end of the enum, which may result in unexpected ordering.");
         }

@@ -14,6 +14,7 @@ import com.premiumminds.sonar.postgres.protobuf.ColumnDef;
 import com.premiumminds.sonar.postgres.protobuf.Constraint;
 import com.premiumminds.sonar.postgres.protobuf.CreateDomainStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateExtensionStmt;
+import com.premiumminds.sonar.postgres.protobuf.CreateForeignTableStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateFunctionStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateSchemaStmt;
 import com.premiumminds.sonar.postgres.protobuf.CreateSeqStmt;
@@ -31,10 +32,12 @@ import com.premiumminds.sonar.postgres.protobuf.RawStmt;
 import com.premiumminds.sonar.postgres.protobuf.RefreshMatViewStmt;
 import com.premiumminds.sonar.postgres.protobuf.ReindexStmt;
 import com.premiumminds.sonar.postgres.protobuf.RenameStmt;
+import com.premiumminds.sonar.postgres.protobuf.SelectStmt;
 import com.premiumminds.sonar.postgres.protobuf.TruncateStmt;
 import com.premiumminds.sonar.postgres.protobuf.UpdateStmt;
 import com.premiumminds.sonar.postgres.protobuf.VacuumStmt;
 import com.premiumminds.sonar.postgres.protobuf.VariableSetStmt;
+import com.premiumminds.sonar.postgres.protobuf.ViewStmt;
 import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.fs.TextRange;
 import org.sonar.api.batch.sensor.SensorContext;
@@ -230,6 +233,21 @@ public abstract class AbstractVisitorCheck implements VisitorCheck {
     }
 
     @Override
+    public void visit(ViewStmt viewStmt) {
+
+    }
+
+    @Override
+    public void visit(CreateForeignTableStmt createForeignTableStmt) {
+
+    }
+
+    @Override
+    public void visit(SelectStmt selectStmt) {
+
+    }
+
+    @Override
     public void analyze(SensorContext context, PostgreSqlFile file, List<RawStmt> statements){
         this.context = context;
         this.file = file;
@@ -293,6 +311,12 @@ public abstract class AbstractVisitorCheck implements VisitorCheck {
             visit(stmt.getDeleteStmt());
         } else if (stmt.hasTruncateStmt()){
             visit(stmt.getTruncateStmt());
+        } else if (stmt.hasViewStmt()){
+            visit(stmt.getViewStmt());
+        } else if (stmt.hasCreateForeignTableStmt()){
+            visit(stmt.getCreateForeignTableStmt());
+        } else if (stmt.hasSelectStmt()){
+            visit(stmt.getSelectStmt());
         }
     }
 
