@@ -48,6 +48,7 @@ import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_RE
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_RENAMING_TABLE;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_REQUIRE_ENUM_VALUE_ORDERING;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_SETTING_NOT_NULLABLE_FIELD;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_UNIQUE_INDEX_METHOD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_VACUUM_FULL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -117,7 +118,8 @@ class PostgresSqlSensorTest {
                 RULE_ONLY_SCHEMA_MIGRATIONS,
                 RULE_ONLY_LOWER_CASE_NAMES,
                 RULE_REQUIRE_ENUM_VALUE_ORDERING,
-                RULE_BAN_DUPLICATE_COLUMN
+                RULE_BAN_DUPLICATE_COLUMN,
+                RULE_UNIQUE_INDEX_METHOD
         );
         sensor.execute(contextTester);
 
@@ -1069,6 +1071,27 @@ class PostgresSqlSensorTest {
                      fileMap.get(":file19.sql").primaryLocation().message());
 
         assertEquals(19, fileMap.size());
+    }
+
+    @Test
+    void uniqueIndexMethod() {
+        createFile(contextTester, "file1.sql", "CREATE UNIQUE INDEX CONCURRENTLY IF NOT EXISTS idx_foo_id_hash ON foo USING hash(id);");
+        createFile(contextTester, "file2.sql", "CREATE UNIQUE INDEX CONCURRENTLY IF NOT EXISTS idx_points_p_gist ON points USING GIST(p);");
+
+        final RuleKey rule = RULE_UNIQUE_INDEX_METHOD;
+        PostgresSqlSensor sensor = getPostgresSqlSensor(rule);
+        sensor.execute(contextTester);
+
+        final Map<RuleKey, Map<String, Issue>> issueMap = groupByRuleAndFile(contextTester.allIssues());
+
+        final Map<String, Issue> fileMap = issueMap.get(rule);
+
+        assertEquals("Index method hash does support unique indexes.",
+                     fileMap.get(":file1.sql").primaryLocation().message());
+        assertEquals("Index method GiST does support unique indexes.",
+                     fileMap.get(":file2.sql").primaryLocation().message());
+
+        assertEquals(2, fileMap.size());
     }
 
     private PostgresSqlSensor getPostgresSqlSensor(RuleKey... ruleKey) {

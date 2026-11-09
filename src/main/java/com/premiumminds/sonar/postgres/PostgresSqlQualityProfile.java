@@ -31,6 +31,7 @@ import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_RE
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_RENAMING_TABLE;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_REQUIRE_ENUM_VALUE_ORDERING;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_SETTING_NOT_NULLABLE_FIELD;
+import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_UNIQUE_INDEX_METHOD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_VACUUM_FULL;
 
 public class PostgresSqlQualityProfile implements BuiltInQualityProfilesDefinition {
@@ -68,6 +69,7 @@ public class PostgresSqlQualityProfile implements BuiltInQualityProfilesDefiniti
         activateRule(profile, RULE_ONLY_LOWER_CASE_NAMES);
         activateRule(profile, RULE_REQUIRE_ENUM_VALUE_ORDERING);
         activateRule(profile, RULE_BAN_DUPLICATE_COLUMN);
+        activateRule(profile, RULE_UNIQUE_INDEX_METHOD);
 
         profile.done();
     }
