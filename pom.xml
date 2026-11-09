@@ -4,7 +4,7 @@
 
     <groupId>com.premiumminds.sonar.postgres</groupId>
     <artifactId>sonar-postgres-plugin</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.4</version>
 
     <packaging>sonar-plugin</packaging>
 
@@ -14,7 +14,7 @@
         <connection>scm:git:git@github.com:premium-minds/sonar-postgres-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:premium-minds/sonar-postgres-plugin.git</developerConnection>
         <url>https://github.com/premium-minds/sonar-postgres-plugin</url>
-        <tag>HEAD</tag>
+        <tag>sonar-postgres-plugin-1.4</tag>
     </scm>
 
     <properties>
