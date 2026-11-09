@@ -28,6 +28,7 @@ import com.premiumminds.sonar.postgres.visitors.RenameTableVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.RequireEnumValueOrderingCheck;
 import com.premiumminds.sonar.postgres.visitors.RobustStatementsVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.SettingNotNullVisitorCheck;
+import com.premiumminds.sonar.postgres.visitors.UniqueIndexMethodCheck;
 import com.premiumminds.sonar.postgres.visitors.VacuumFullVisitorCheck;
 import com.premiumminds.sonar.postgres.visitors.VisitorCheck;
 import org.sonar.api.rule.RuleKey;
@@ -68,6 +69,7 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
     public static final RuleKey RULE_ONLY_LOWER_CASE_NAMES = RuleKey.of(REPOSITORY, "only-lower-case-names");
     public static final RuleKey RULE_REQUIRE_ENUM_VALUE_ORDERING = RuleKey.of(REPOSITORY, "require-enum-value-ordering");
     public static final RuleKey RULE_BAN_DUPLICATE_COLUMN = RuleKey.of(REPOSITORY, "ban-duplicate-column");
+    public static final RuleKey RULE_UNIQUE_INDEX_METHOD = RuleKey.of(REPOSITORY, "unique-index-method");
 
     @Override
     public void define(Context context) {
@@ -220,6 +222,11 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
                   .setType(RuleType.BUG)
                   .setMarkdownDescription(getClass().getResource("ban-duplicate-column.md"));
 
+        repository.createRule(RULE_UNIQUE_INDEX_METHOD.rule())
+                  .setName("unique-index-method rule")
+                  .setType(RuleType.BUG)
+                  .setMarkdownDescription(getClass().getResource("unique-index-method.md"));
+
         repository.done();
     }
 
@@ -250,6 +257,7 @@ public class PostgresSqlRulesDefinition implements RulesDefinition {
                 new OneMigrationPerFileVisitorCheck(),
                 new OnlySchemaMigrationsVisitorCheck(),
                 new RequireEnumValueOrderingCheck(),
-                new BanDuplicateColumnCheck());
+                new BanDuplicateColumnCheck(),
+                new UniqueIndexMethodCheck());
     }
 }
