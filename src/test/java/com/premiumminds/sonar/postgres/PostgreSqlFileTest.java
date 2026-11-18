@@ -154,7 +154,8 @@ class PostgreSqlFileTest {
     void preservesReadFailureCause() {
         InputFile input = (InputFile) Proxy.newProxyInstance(InputFile.class.getClassLoader(), new Class<?>[]{InputFile.class},
                 (proxy, method, arguments) -> { throw new IOException("read failure"); });
-        RuntimeException exception = assertThrows(RuntimeException.class, () -> new PostgreSqlFile(input).contents());
+        PostgreSqlFile file = new PostgreSqlFile(input);
+        RuntimeException exception = assertThrows(RuntimeException.class, file::contents);
         assertInstanceOf(IOException.class, exception.getCause());
     }
 

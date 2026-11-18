@@ -1139,9 +1139,10 @@ class PostgresSqlSensorTest {
         contextTester.settings().setProperty("sonar.internal.analysis.failFast", true);
         contextTester.settings().setProperty(PostgresSqlSensor.PROTOBUF_RECURSION_LIMIT_KEY, 0);
         createFile(contextTester, "simple.sql", "SELECT 1;");
+        PostgresSqlSensor sensor = getPostgresSqlSensor();
 
         IllegalStateException failure = assertThrows(IllegalStateException.class,
-                () -> getPostgresSqlSensor().execute(contextTester));
+                () -> sensor.execute(contextTester));
 
         assertInstanceOf(IllegalArgumentException.class, failure.getCause());
         assertTrue(failure.getCause().getMessage().contains(PostgresSqlSensor.PROTOBUF_RECURSION_LIMIT_KEY));

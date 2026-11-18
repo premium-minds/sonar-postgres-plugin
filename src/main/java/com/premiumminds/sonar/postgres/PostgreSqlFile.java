@@ -107,27 +107,31 @@ public class PostgreSqlFile {
             } else {
                 indexWithDecoder();
             }
+            this.lineStarts = indexLineStarts();
+        }
+
+        private int[] indexLineStarts() {
             int lineCount = 1;
-            for (int offset = 0; offset < contents.length(); offset++) {
-                if (contents.charAt(offset) == '\r'
-                        || (contents.charAt(offset) == '\n' && (offset == 0 || contents.charAt(offset - 1) != '\r'))) {
+            for (int offset = 1; offset <= contents.length(); offset++) {
+                if (isLineStart(offset)) {
                     lineCount++;
                 }
             }
-            this.lineStarts = new int[lineCount];
+            int[] starts = new int[lineCount];
             int line = 1;
-            for (int offset = 0; offset < contents.length(); offset++) {
-                if (contents.charAt(offset) == '\r') {
-                    // Sonar counts CRLF as one newline, but a standalone CR
-                    // (including the first CR in CR CR LF) is a newline too.
-                    if (offset + 1 < contents.length() && contents.charAt(offset + 1) == '\n') {
-                        offset++;
-                    }
-                    lineStarts[line++] = offset + 1;
-                } else if (contents.charAt(offset) == '\n') {
-                    lineStarts[line++] = offset + 1;
+            for (int offset = 1; offset <= contents.length(); offset++) {
+                if (isLineStart(offset)) {
+                    starts[line++] = offset;
                 }
             }
+            return starts;
+        }
+
+        private boolean isLineStart(int offset) {
+            char previous = contents.charAt(offset - 1);
+            // CRLF is one newline; a standalone CR is a newline on its own.
+            return previous == '\n' || (previous == '\r'
+                    && (offset == contents.length() || contents.charAt(offset) != '\n'));
         }
 
         private void indexUtf8() {
