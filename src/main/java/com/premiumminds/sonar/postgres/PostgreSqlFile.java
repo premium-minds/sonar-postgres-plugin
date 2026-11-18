@@ -109,14 +109,22 @@ public class PostgreSqlFile {
             }
             int lineCount = 1;
             for (int offset = 0; offset < contents.length(); offset++) {
-                if (contents.charAt(offset) == '\n') {
+                if (contents.charAt(offset) == '\r'
+                        || (contents.charAt(offset) == '\n' && (offset == 0 || contents.charAt(offset - 1) != '\r'))) {
                     lineCount++;
                 }
             }
             this.lineStarts = new int[lineCount];
             int line = 1;
             for (int offset = 0; offset < contents.length(); offset++) {
-                if (contents.charAt(offset) == '\n') {
+                if (contents.charAt(offset) == '\r') {
+                    // Sonar counts CRLF as one newline, but a standalone CR
+                    // (including the first CR in CR CR LF) is a newline too.
+                    if (offset + 1 < contents.length() && contents.charAt(offset + 1) == '\n') {
+                        offset++;
+                    }
+                    lineStarts[line++] = offset + 1;
+                } else if (contents.charAt(offset) == '\n') {
                     lineStarts[line++] = offset + 1;
                 }
             }

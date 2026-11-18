@@ -51,6 +51,8 @@ import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_SE
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_UNIQUE_INDEX_METHOD;
 import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_VACUUM_FULL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.sonar.api.measures.CoreMetrics.NCLOC;
 import static org.sonar.api.measures.CoreMetrics.NCLOC_DATA;
@@ -1092,6 +1094,57 @@ class PostgresSqlSensorTest {
                      fileMap.get(":file2.sql").primaryLocation().message());
 
         assertEquals(2, fileMap.size());
+    }
+
+    @Test
+    void handlesStandaloneCrBeforeCrLf() {
+        createFile(contextTester, "mixed.sql", "SELECT 1;\r\r\nCREATE TABLE foo(a char(10));");
+
+        getPostgresSqlSensor(RULE_BAN_CHAR_FIELD).execute(contextTester);
+
+        assertEquals(1, contextTester.allIssues().size());
+        Issue issue = contextTester.allIssues().iterator().next();
+        assertEquals(RULE_BAN_CHAR_FIELD, issue.ruleKey());
+        assertEquals(3, issue.primaryLocation().textRange().end().line());
+    }
+
+    @Test
+    void parsesDeepConcatenationWithDefaultRecursionLimit() {
+        contextTester.settings().setProperty("sonar.internal.analysis.failFast", true);
+        createFile(contextTester, "deep.sql", "SELECT 'start'" + " || 'part'".repeat(80) + ";");
+
+        getPostgresSqlSensor().execute(contextTester);
+
+        assertEquals(1, contextTester.measure(":deep.sql", NCLOC).value());
+        assertTrue(contextTester.allIssues().isEmpty());
+    }
+
+    @Test
+    void honorsConfiguredProtobufRecursionLimit() {
+        contextTester.settings().setProperty("sonar.internal.analysis.failFast", true);
+        contextTester.settings().setProperty(PostgresSqlSensor.PROTOBUF_RECURSION_LIMIT_KEY, 100);
+        createFile(contextTester, "deep.sql", "SELECT 'start'" + " || 'part'".repeat(80) + ";");
+        PostgresSqlSensor sensor = getPostgresSqlSensor();
+
+        IllegalStateException failure = assertThrows(IllegalStateException.class, () -> sensor.execute(contextTester));
+        assertInstanceOf(com.google.protobuf.InvalidProtocolBufferException.class, failure.getCause());
+
+        contextTester.settings().setProperty(PostgresSqlSensor.PROTOBUF_RECURSION_LIMIT_KEY, 1024);
+        sensor.execute(contextTester);
+        assertEquals(1, contextTester.measure(":deep.sql", NCLOC).value());
+    }
+
+    @Test
+    void rejectsNonPositiveProtobufRecursionLimit() {
+        contextTester.settings().setProperty("sonar.internal.analysis.failFast", true);
+        contextTester.settings().setProperty(PostgresSqlSensor.PROTOBUF_RECURSION_LIMIT_KEY, 0);
+        createFile(contextTester, "simple.sql", "SELECT 1;");
+
+        IllegalStateException failure = assertThrows(IllegalStateException.class,
+                () -> getPostgresSqlSensor().execute(contextTester));
+
+        assertInstanceOf(IllegalArgumentException.class, failure.getCause());
+        assertTrue(failure.getCause().getMessage().contains(PostgresSqlSensor.PROTOBUF_RECURSION_LIMIT_KEY));
     }
 
     private PostgresSqlSensor getPostgresSqlSensor(RuleKey... ruleKey) {

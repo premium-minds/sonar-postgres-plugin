@@ -122,6 +122,35 @@ class PostgreSqlFileTest {
     }
 
     @Test
+    void mapsStandaloneCrAndMixedLineEndings() {
+        for (String ending : List.of("\r", "\r\n", "\n", "\r\r\n", "\n\r")) {
+            String prefix = "SELECT 'ę😀';" + ending + "'\r\n";
+            String text = prefix + "  LANGUAGE plpgsql;";
+            CountingFile fixture = createFile(text, StandardCharsets.UTF_8);
+            PostgreSqlFile file = new PostgreSqlFile(fixture.input);
+            int start = prefix.getBytes(StandardCharsets.UTF_8).length;
+            TextRange range = file.convertAbsoluteOffsetsToTextRange(start, start + 2);
+            int expectedLine = prefix.split("\\r\\n|\\r|\\n", -1).length;
+            assertEquals(expectedLine, range.start().line(), "Line ending: " + ending);
+            assertEquals(0, range.start().lineOffset());
+            assertEquals(2, range.end().lineOffset());
+            assertEquals(expectedLine, file.convertAbsoluteOffsetToLine(start).start().line());
+            assertEquals(1, fixture.reads.get());
+        }
+    }
+
+    @Test
+    void mapsEofAfterStandaloneCr() {
+        for (String ending : List.of("\r", "\r\r", "\r\r\n", "\n\r", "\r\n\r")) {
+            String text = "SELECT 'ę';" + ending;
+            PostgreSqlFile file = new PostgreSqlFile(createFile(text, StandardCharsets.UTF_8).input);
+            TextRange range = file.convertAbsoluteOffsetsToTextRange(0, text.getBytes(StandardCharsets.UTF_8).length);
+            assertEquals(text.split("\\r\\n|\\r|\\n", -1).length, range.end().line());
+            assertEquals(0, range.end().lineOffset());
+        }
+    }
+
+    @Test
     void preservesReadFailureCause() {
         InputFile input = (InputFile) Proxy.newProxyInstance(InputFile.class.getClassLoader(), new Class<?>[]{InputFile.class},
                 (proxy, method, arguments) -> { throw new IOException("read failure"); });

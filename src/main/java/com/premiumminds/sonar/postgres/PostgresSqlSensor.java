@@ -1,5 +1,6 @@
 package com.premiumminds.sonar.postgres;
 
+import com.google.protobuf.CodedInputStream;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.premiumminds.sonar.postgres.libpg_query.PGQueryLibrary;
 import com.premiumminds.sonar.postgres.libpg_query.PgQueryProtobufParseResult;
@@ -9,6 +10,7 @@ import com.premiumminds.sonar.postgres.protobuf.ScanResult;
 import com.premiumminds.sonar.postgres.protobuf.Token;
 import com.premiumminds.sonar.postgres.visitors.VisitorCheck;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -36,6 +38,8 @@ import static com.premiumminds.sonar.postgres.PostgresSqlRulesDefinition.RULE_PA
 public class PostgresSqlSensor implements Sensor {
 
     private static final String FAIL_FAST_PROPERTY_NAME = "sonar.internal.analysis.failFast";
+    static final String PROTOBUF_RECURSION_LIMIT_KEY = "sonar.postgres.protobufRecursionLimit";
+    static final int DEFAULT_PROTOBUF_RECURSION_LIMIT = 1024;
 
     private final CheckFactory checkFactory;
 
@@ -165,24 +169,31 @@ public class PostgresSqlSensor implements Sensor {
         PGQueryLibrary.INSTANCE.pg_query_free_scan_result(result);
     }
 
-    private void parseContents(SensorContext context, PostgreSqlFile file) throws InvalidProtocolBufferException {
-        final PgQueryProtobufParseResult.ByValue result = PGQueryLibrary.INSTANCE.pg_query_parse_protobuf(file.contents());
-        if (result.error != null){
-            LOGGER.error("problem with file " + file.filename() + " at " + result.error.cursorpos + ": " + result.error.message.getString(0));
-
-            final TextRange textRange = file.convertAbsoluteOffsetToLine(result.error.cursorpos);
-            newIssue(context, file,"Failure to parse statement", textRange, RULE_PARSE_ERROR);
-
-            PGQueryLibrary.INSTANCE.pg_query_free_protobuf_parse_result(result);
-
-            return;
+    private void parseContents(SensorContext context, PostgreSqlFile file) throws IOException {
+        final int recursionLimit = context.config().getInt(PROTOBUF_RECURSION_LIMIT_KEY)
+                .orElse(DEFAULT_PROTOBUF_RECURSION_LIMIT);
+        if (recursionLimit <= 0) {
+            throw new IllegalArgumentException(PROTOBUF_RECURSION_LIMIT_KEY + " must be greater than zero");
         }
+        final PgQueryProtobufParseResult.ByValue result = PGQueryLibrary.INSTANCE.pg_query_parse_protobuf(file.contents());
+        final ParseResult parseResult;
+        try {
+            if (result.error != null) {
+                LOGGER.error("problem with file " + file.filename() + " at " + result.error.cursorpos + ": " + result.error.message.getString(0));
 
-        final ParseResult parseResult = ParseResult.parseFrom(result.parse_tree.data.getByteArray(0, result.parse_tree.len));
-
+                final TextRange textRange = file.convertAbsoluteOffsetToLine(result.error.cursorpos);
+                newIssue(context, file, "Failure to parse statement", textRange, RULE_PARSE_ERROR);
+                return;
+            }
+            final CodedInputStream input = CodedInputStream.newInstance(
+                    result.parse_tree.data.getByteArray(0, result.parse_tree.len));
+            input.setRecursionLimit(recursionLimit);
+            parseResult = ParseResult.parseFrom(input);
+        } finally {
+            // Native memory must also be released when Protobuf rejects a tree.
+            PGQueryLibrary.INSTANCE.pg_query_free_protobuf_parse_result(result);
+        }
         parseTree(context, file, parseResult);
-
-        PGQueryLibrary.INSTANCE.pg_query_free_protobuf_parse_result(result);
     }
 
     private void newIssue(SensorContext context, PostgreSqlFile file, String message, TextRange textRange, RuleKey rule) {
